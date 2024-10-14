@@ -592,7 +592,9 @@ Sticky Menu
   z-index: 9;
   top: 0px;
   box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8); /* Transparência no fundo */
 }
+
 
 /*---------------------------------------------------- */
 /*banner area*/
