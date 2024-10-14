@@ -577,7 +577,7 @@ theme.
 Sticky Menu
 -------------------------------- */
 .eisticky-menu-bg-overlay {
-  background-color: #9c00e2;
+  background-color: #000000;
   animation-duration: 0.7s;
   animation-fill-mode: both;
   animation-name: fadeInDown;
@@ -764,7 +764,7 @@ Sticky Menu
   height: 100%;
   bottom: -1px;
   background: #6d8cf8;
-  background: linear-gradient(to right, #c12dd1, #6d8cf8);
+  background: linear-gradient(to right, #6d8cf8, #c12dd1);
 }
 
 .bgTop {
