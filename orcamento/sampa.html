@@ -1,0 +1,553 @@
+<html><head><base href=""><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proposta Comercial - BOTECO DO SAMPA | e-Web Design</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+:root {
+  --primary: #2C3E50;
+  --secondary: #E67E22;
+  --light: #ECF0F1;
+  --dark: #2C3E50;
+  --success: #27ae60;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: var(--light);
+  color: var(--dark);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  background: var(--primary);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.proposal-section {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.price-tag {
+  font-size: 2.5rem;
+  color: var(--secondary);
+  font-weight: bold;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+}
+
+.feature-list li::before {
+  content: "✓";
+  color: var(--secondary);
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+.weakness-list li::before {
+  content: "⚠";
+  color: #e74c3c;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--secondary);
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 2rem 0;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+}
+
+.chart-container {
+  position: relative;
+  margin: 2rem 0;
+  height: 300px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  color: var(--secondary);
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: var(--secondary);
+}
+
+.timeline-item {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timeline-content {
+  width: 45%;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.progress-container {
+  width: 100%;
+  background: #f1f1f1;
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+
+.progress-bar {
+  width: 0;
+  height: 20px;
+  background: var(--success);
+  border-radius: 10px;
+  transition: width 1.5s ease-in-out;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.comparison-table th {
+  background: var(--primary);
+  color: white;
+}
+
+.highlight {
+  color: var(--secondary);
+  font-weight: bold;
+}
+
+.image-showcase {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.image-showcase img {
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>Proposta Comercial</h1>
+    <h2>BOTECO DO SAMPA</h2>
+    <p>Desenvolvimento de Website Profissional + SEO Local</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="proposal-section">
+    <h2>Desenvolvimento de Novo Website</h2>
+    <div class="price-tag">R$ 4.000,00</div>
+    
+    <div class="image-showcase">
+      <img alt="Mockup moderno de website responsivo em diferentes dispositivos, estilo clean e profissional" src="mockup.jpg" width="800" height="400" style="width: 100%; height: auto;">
+    </div>
+
+    <h3>Tecnologias Utilizadas</h3>
+    <ul class="feature-list">
+      <li>Next.js para performance excepcional e SEO otimizado</li>
+      <li>React.js para interface dinâmica e interativa</li>
+      <li>TailwindCSS para design responsivo e moderno</li>
+      <li>Node.js backend com API RESTful</li>
+      <li>MongoDB para gestão eficiente de dados</li>
+      <li>AWS CloudFront CDN para distribuição global</li>
+    </ul>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>Velocidade de Carregamento</h3>
+        <div class="stat-number">300%</div>
+        <p>mais rápido que o atual</p>
+      </div>
+      <div class="stat-card">
+        <h3>Conversão de Visitantes</h3>
+        <div class="stat-number">85%</div>
+        <p>taxa média de satisfação</p>
+      </div>
+      <div class="stat-card">
+        <h3>Responsividade</h3>
+        <div class="stat-number">100%</div>
+        <p>compatível com dispositivos</p>
+      </div>
+    </div>
+
+    <div class="chart-container">
+      <canvas id="performanceChart"></canvas>
+    </div>
+  </div>
+
+  <div class="proposal-section">
+    <h2>Comparativo: Site Atual vs Novo Site</h2>
+    <table class="comparison-table">
+      <tr>
+        <th>Característica</th>
+        <th>Site Atual</th>
+        <th>Novo Site</th>
+      </tr>
+      <tr>
+        <td>Tempo de Carregamento</td>
+        <td>8.5 segundos</td>
+        <td class="highlight">2.1 segundos</td>
+      </tr>
+      <tr>
+        <td>Responsividade Mobile</td>
+        <td>Parcial</td>
+        <td class="highlight">Total</td>
+      </tr>
+      <tr>
+        <td>Otimização SEO</td>
+        <td>Básica</td>
+        <td class="highlight">Avançada</td>
+      </tr>
+      <tr>
+        <td>Integração Redes Sociais</td>
+        <td>Não possui</td>
+        <td class="highlight">Completa</td>
+      </tr>
+      <tr>
+        <td>Infraestrutura Cloud</td>
+        <td>Hospedagem Compartilhada</td>
+        <td class="highlight">AWS Enterprise</td>
+      </tr>
+      <tr>
+        <td>Segurança</td>
+        <td>Básica</td>
+        <td class="highlight">Enterprise + WAF</td>
+      </tr>
+      <tr>
+        <td>Performance Mobile</td>
+        <td>Não otimizado</td>
+        <td class="highlight">AMP Ready</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="proposal-section">
+    <h2>Plano Mensal de SEO Local</h2>
+    <div class="price-tag">R$ 900,00/mês</div>
+    
+    <div class="progress-container">
+      <div class="progress-bar" id="seoProgress"></div>
+    </div>
+
+    <div class="chart-container">
+      <canvas id="seoChart"></canvas>
+    </div>
+  </div>
+
+  <div class="proposal-section">
+    <h2>Cronograma de Desenvolvimento</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Fase 1: Planejamento</h3>
+          <p>Análise de requisitos e design</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Fase 2: Desenvolvimento</h3>
+          <p>Codificação e otimização</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Fase 3: Testes</h3>
+          <p>Validação e ajustes</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Fase 4: Lançamento</h3>
+          <p>Publicação e monitoramento</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="proposal-section">
+    <h2>Diferenciais e-Web Design</h2>
+    
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>Experiência</h3>
+        <div class="stat-number">12+</div>
+        <p>anos no mercado</p>
+      </div>
+      <div class="stat-card">
+        <h3>Projetos</h3>
+        <div class="stat-number">500+</div>
+        <p>sites entregues</p>
+      </div>
+      <div class="stat-card">
+        <h3>Suporte</h3>
+        <div class="stat-number">24/7</div>
+        <p>atendimento</p>
+      </div>
+      <div class="stat-card">
+        <h3>Satisfação</h3>
+        <div class="stat-number">98%</div>
+        <p>clientes satisfeitos</p>
+      </div>
+    </div>
+
+    <h3>Benefícios Exclusivos</h3>
+    <ul class="feature-list">
+      <li>Hospedagem Premium AWS inclusa por 12 meses</li>
+      <li>Certificado SSL gratuito vitalício</li>
+      <li>Backups diários automatizados</li>
+      <li>Monitoramento 24/7 de uptime</li>
+      <li>Relatórios mensais de performance</li>
+      <li>Suporte prioritário via WhatsApp</li>
+    </ul>
+  </div>
+
+  <div class="proposal-section">
+    <h2>Otimizações Técnicas Garantidas</h2>
+    <ul class="feature-list">
+      <li>Core Web Vitals otimizado (LCP, FID, CLS)</li>
+      <li>Pontuação PageSpeed superior a 90</li>
+      <li>Compressão de imagens WebP automática</li>
+      <li>Lazy loading de recursos</li>
+      <li>Cache inteligente em múltiplas camadas</li>
+      <li>Minificação automática de código</li>
+    </ul>
+
+    <div class="image-showcase">
+      <img alt="Dashboard mostrando métricas de performance web, estilo analítico moderno" src="metrics.jpg" width="800" height="400" style="width: 100%; height: auto;">
+    </div>
+  </div>
+
+  <div class="proposal-section">
+    <h2>Projeção de Retorno sobre Investimento</h2>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>ROI Projetado</h3>
+        <div class="stat-number">400%</div>
+        <p>em 6 meses</p>
+      </div>
+      <div class="stat-card">
+        <h3>Tráfego Orgânico</h3>
+        <div class="stat-number">5x</div>
+        <p>aumento estimado</p>
+      </div>
+      <div class="stat-card">
+        <h3>Leads Qualificados</h3>
+        <div class="stat-number">3x</div>
+        <p>mais conversões</p>
+      </div>
+    </div>
+    
+    <div class="chart-container">
+      <canvas id="roiChart"></canvas>
+    </div>
+  </div>
+
+  <div class="proposal-section">
+    <h2>Infraestrutura Tecnológica Premium</h2>
+    <ul class="feature-list">
+      <li>CDN Multi-região para carregamento ultra-rápido</li>
+      <li>Auto-scaling para picos de tráfego</li>
+      <li>Proteção DDoS inclusa</li>
+      <li>WAF (Web Application Firewall) ativo</li>
+      <li>Monitoramento de uptime 99.9% garantido</li>
+      <li>Backups incrementais diários com retenção de 30 dias</li>
+    </ul>
+  </div>
+
+  <div class="proposal-section">
+    <h2>Processo de Desenvolvimento Ágil</h2>
+    <ul class="feature-list">
+      <li>Sprint Planning semanal com feedback do cliente</li>
+      <li>Ambiente de homologação para validação</li>
+      <li>Controle de versão Git</li>
+      <li>CI/CD automatizado</li>
+      <li>Testes automatizados de UI/UX</li>
+      <li>Code review por desenvolvedor sênior</li>
+    </ul>
+  </div>
+
+  <div class="proposal-section">
+    <h2>Plano SEO Local Premium</h2>
+    <div class="price-tag">R$ 900,00/mês</div>
+    
+    <h3>Ações Mensais Incluídas</h3>
+    <ul class="feature-list">
+      <li>Otimização on-page contínua</li>
+      <li>Gestão do Google Business Profile</li>
+      <li>Criação de conteúdo local otimizado</li>
+      <li>Link building com sites locais relevantes</li>
+      <li>Monitoramento de rankings locais</li>
+      <li>Otimização de reviews e reputação</li>
+      <li>Análise de concorrentes locais</li>
+      <li>Relatórios mensais detalhados</li>
+    </ul>
+
+    <div class="image-showcase">
+      <img alt="Gráfico de crescimento de presença local no Google Maps, estilo infográfico" src="local-seo.jpg" width="800" height="400" style="width: 100%; height: auto;">
+    </div>
+  </div>
+
+  <div class="proposal-section" style="text-align: center;">
+    <a href="https://wa.me/5541998205307" class="cta-button">Iniciar Projeto Whatsapp</a>
+  </div>
+</div>
+
+<script>
+// Performance Chart
+const perfCtx = document.getElementById('performanceChart').getContext('2d');
+new Chart(perfCtx, {
+    type: 'bar',
+    data: {
+        labels: ['Velocidade', 'SEO Score', 'Mobile Score', 'Usabilidade'],
+        datasets: [{
+            label: 'Site Atual',
+            data: [30, 45, 40, 35],
+            backgroundColor: '#bdc3c7'
+        }, {
+            label: 'Novo Site',
+            data: [90, 95, 100, 95],
+            backgroundColor: '#e67e22'
+        }]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true,
+                max: 100
+            }
+        }
+    }
+});
+
+// SEO Chart
+const seoCtx = document.getElementById('seoChart').getContext('2d');
+new Chart(seoCtx, {
+    type: 'line',
+    data: {
+        labels: ['Mês 1', 'Mês 2', 'Mês 3', 'Mês 4', 'Mês 5', 'Mês 6'],
+        datasets: [{
+            label: 'Visibilidade Local Esperada',
+            data: [20, 35, 55, 70, 85, 95],
+            borderColor: '#27ae60',
+            tension: 0.4
+        }]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true,
+                max: 100
+            }
+        }
+    }
+});
+
+// ROI Chart
+const roiCtx = document.getElementById('roiChart').getContext('2d');
+new Chart(roiCtx, {
+    type: 'line',
+    data: {
+        labels: ['Mês 1', 'Mês 2', 'Mês 3', 'Mês 4', 'Mês 5', 'Mês 6'],
+        datasets: [{
+            label: 'Retorno sobre Investimento (ROI)',
+            data: [0, 25, 75, 150, 250, 400],
+            borderColor: '#2ecc71',
+            backgroundColor: 'rgba(46, 204, 113, 0.1)',
+            fill: true,
+            tension: 0.4
+        }]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Retorno % sobre investimento inicial'
+                }
+            }
+        }
+    }
+});
+
+// Animate progress bar
+setTimeout(() => {
+    document.getElementById('seoProgress').style.width = '85%';
+}, 500);
+</script>
+
+</body></html>
