@@ -1,0 +1,287 @@
+<html><head><base href=""><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proposta Comercial - Músico e Aulas | e-Web Design</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+:root {
+  --primary: #2C3E50;
+  --secondary: #E67E22;
+  --light: #ECF0F1;
+  --dark: #2C3E50;
+  --success: #27ae60;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: var(--light);
+  color: var(--dark);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  background: var(--primary);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.proposal-section {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.price-tag {
+  font-size: 2.5rem;
+  color: var(--secondary);
+  font-weight: bold;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+}
+
+.feature-list li::before {
+  content: "✓";
+  color: var(--secondary);
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--secondary);
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 2rem 0;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+}
+
+.chart-container {
+  position: relative;
+  margin: 2rem 0;
+  height: auto;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  color: var(--secondary);
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.image-showcase {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.image-showcase img {
+  border-radius: 8px;
+  margin: 1rem 0;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-list li {
+    padding: 1rem 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>Proposta Comercial</h1>
+    <h2>Músico e Aulas</h2>
+    <p>Construção de Portfólio Digital + SEO</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="proposal-section">
+    <h2>Construção de Portfólio Digital</h2>
+    <div class="price-tag">R$ 3.000,00</div>
+    
+    <div class="image-showcase">
+      <img alt="Mockup de portfólio digital para músico, mostrando design profissional e moderno" src="portfolio-mockup.jpg" style="width: 100%; height: auto;">
+    </div>
+
+    <h3>Inclui</h3>
+    <ul class="feature-list">
+      <li>Design profissional para causar uma primeira impressão positiva</li>
+      <li>Conteúdo de qualidade com fotos e vídeos de alta resolução</li>
+      <li>Plataforma de website organizada e acessível</li>
+    </ul>
+  </div>
+
+  <div class="proposal-section">
+    <h2>Mensalidade para Divulgação SEO</h2>
+    <div class="price-tag">R$ 550,00/mês</div>
+
+    <h3>Inclui</h3>
+    <ul class="feature-list">
+      <li>Otimização de Conteúdo para garantir presença online consistente</li>
+      <li>Linkbuilding com sites relevantes para aumentar tráfego orgânico</li>
+      <li>Análise de Desempenho e ajustes constantes</li>
+    </ul>
+  </div>
+
+  <div class="proposal-section">
+    <h2>Descrição do Portfólio Digital</h2>
+
+    <h3>Destaques do Portfólio</h3>
+    <ul class="feature-list">
+      <li>Vídeos de apresentações ao vivo</li>
+      <li>Fotos de aulas e workshops</li>
+      <li>Informações detalhadas sobre seu currículo</li>
+    </ul>
+
+    <h3>Funcionalidades-Chave</h3>
+    <ul class="feature-list">
+      <li>Agendamento de aulas online</li>
+      <li>Formulário de contato para novos alunos</li>
+      <li>Integração com Mídias Sociais</li>
+    </ul>
+
+    <div class="image-showcase">
+      <img alt="Exemplo de portfólio digital de músico com funcionalidades interativas" src="portfolio-features.jpg" style="width: 100%; height: auto;">
+    </div>
+  </div>
+
+  <div class="proposal-section">
+    <h2>Benefícios da Presença Online</h2>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>Alcance Global</h3>
+        <p>Atinga uma audiência muito maior, sem limitações geográficas</p>
+      </div>
+      <div class="stat-card">
+        <h3>Credibilidade Profissional</h3>
+        <p>Transmita confiança e expertise para atrair novos clientes</p>
+      </div>
+      <div class="stat-card">
+        <h3>Oportunidades Expandidas</h3>
+        <p>Abra portas para aulas online e parcerias estratégicas</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="proposal-section">
+    <h2>Investimento em Conteúdo de Qualidade</h2>
+    <ul class="feature-list">
+      <li>Fotos atraentes de aulas e workshops</li>
+      <li>Produção de artigos e tutoriais relevantes</li>
+    </ul>
+
+    <div class="image-showcase">
+      <img alt="Músico em apresentação ao vivo, imagem de alta qualidade" src="live-performance.jpg" style="width: 100%; height: auto;">
+    </div>
+  </div>
+
+  <div class="proposal-section">
+    <h2>Métricas de Desempenho e Análise</h2>
+    <p>Acompanhamento de métricas como tráfego do site, tempo de permanência, taxa de conversão e posicionamento nos resultados de busca para avaliar o sucesso das iniciativas e realizar ajustes quando necessário.</p>
+
+    <div class="chart-container">
+      <canvas id="performanceChart"></canvas>
+    </div>
+  </div>
+
+  <div class="proposal-section">
+    <h2>Conclusão e Próximos Passos</h2>
+    <p>Este orçamento demonstra que o investimento em um portfólio digital e estratégias de SEO é fundamental para o sucesso de um músico nos dias de hoje. Com um investimento inicial de R$ 3.000 e uma mensalidade de R$ 550 para divulgação, você pode criar uma presença online robusta, atrair novos alunos e clientes, e destacar suas habilidades e experiência.</p>
+
+    <h3>Próximos Passos</h3>
+    <ul class="feature-list">
+      <li>Aprove o orçamento e inicie a construção de seu portfólio digital</li>
+      <li>Lançamento do Portfólio e divulgação nas redes sociais</li>
+      <li>Monitoramento e ajustes estratégicos conforme necessário</li>
+    </ul>
+  </div>
+
+  <div class="proposal-section" style="text-align: center;">
+    <a href="https://wa.me/5541998205307" class="cta-button">Iniciar Projeto via WhatsApp</a>
+  </div>
+</div>
+
+<script>
+// Performance Chart
+const perfCtx = document.getElementById('performanceChart').getContext('2d');
+new Chart(perfCtx, {
+    type: 'line',
+    data: {
+        labels: ['Mês 1', 'Mês 2', 'Mês 3', 'Mês 4', 'Mês 5', 'Mês 6'],
+        datasets: [{
+            label: 'Tráfego do Site',
+            data: [100, 200, 400, 600, 800, 1000],
+            borderColor: '#e67e22',
+            backgroundColor: 'rgba(230, 126, 34, 0.1)',
+            fill: true,
+            tension: 0.4
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Número de Visitantes'
+                }
+            }
+        }
+    }
+});
+</script>
+
+</body></html>
