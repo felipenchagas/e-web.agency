@@ -34,7 +34,7 @@
     font-weight: 700;
     line-height: 52px;
     color: var(--maroof-white);
-    text-transform: capitalize;
+    
     margin-bottom: 8px;
 }
 
@@ -55,7 +55,7 @@
     font-size: 18px;
     font-weight: 700;
     color: var(--maroof-white);
-    text-transform: capitalize;
+    
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;
 }

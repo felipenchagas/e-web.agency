@@ -125,7 +125,7 @@
     font-size: 26px;
     font-weight: 700;
     line-height: 36px;
-    text-transform: capitalize;
+    
 }
 
 .services-one__title a {
@@ -341,7 +341,7 @@
     font-size: 26px;
     font-weight: 700;
     line-height: 36px;
-    text-transform: capitalize;
+    
 }
 
 .service-two__title a {
@@ -372,7 +372,7 @@
     font-weight: 500;
     line-height: 26px;
     letter-spacing: 0.32px;
-    text-transform: capitalize;
+    
     color: var(--maroof-black);
 }
 
@@ -1117,7 +1117,7 @@
     font-size: 16px;
     color: var(--maroof-black);
     letter-spacing: 0.32px;
-    text-transform: capitalize;
+    
 }
 
 .service-details__read-more:hover {

@@ -197,7 +197,7 @@
 .we-serve__count-text {
     font-size: 12px;
     line-height: 12px;
-    text-transform: capitalize;
+    
     color: rgba(var(--maroof-black-rgb), .80);
     font-weight: 400;
 }

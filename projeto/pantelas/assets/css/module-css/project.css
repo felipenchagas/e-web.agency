@@ -83,7 +83,7 @@
     line-height: 18px;
     position: relative;
     display: inline-block;
-    text-transform: capitalize;
+    
     color: var(--maroof-white);
     background-color: var(--maroof-base);
     padding: 11px 30px 11px;
@@ -292,7 +292,7 @@
     line-height: 18px;
     position: relative;
     display: inline-block;
-    text-transform: capitalize;
+    
     color: var(--maroof-white);
     background-color: var(--maroof-base);
     padding: 11px 30px 11px;
@@ -471,7 +471,7 @@
     line-height: 18px;
     position: relative;
     display: inline-block;
-    text-transform: capitalize;
+    
     color: var(--maroof-white);
     background-color: var(--maroof-base);
     padding: 11px 30px 11px;

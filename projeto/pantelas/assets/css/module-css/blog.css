@@ -282,7 +282,7 @@
     line-height: 16px;
     letter-spacing: 0.32px;
     font-weight: 500;
-    text-transform: capitalize;
+    
     color: var(--maroof-black);
 }
 
@@ -725,7 +725,7 @@
     line-height: 16px;
     letter-spacing: 0.32px;
     font-weight: 500;
-    text-transform: capitalize;
+    
     color: var(--maroof-black);
 }
 
@@ -814,7 +814,7 @@
     font-weight: 700;
     line-height: 57px;
     letter-spacing: -1.2px;
-    text-transform: capitalize;
+    
     margin-top: 20px;
     margin-bottom: 21px;
 }
@@ -828,7 +828,7 @@
     font-size: 26px;
     font-weight: 700;
     line-height: 36px;
-    text-transform: capitalize;
+    
 }
 
 .blog-details__text-3 {
@@ -1477,7 +1477,7 @@
     font-weight: 700;
     line-height: 24px;
     margin-bottom: 6px;
-    text-transform: capitalize;
+    
 }
 
 .sidebar__post-content h3>a {
