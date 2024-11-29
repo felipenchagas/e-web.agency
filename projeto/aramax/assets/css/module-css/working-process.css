@@ -1,0 +1,414 @@
+/***
+=============================================
+Working Process One
+=============================================
+***/
+.working-process-one {
+    position: relative;
+    display: block;
+    background: var(--billdins-white);
+    padding: 120px 0px 120px;
+    z-index: 1;
+}
+
+.working-process-one__shape1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-position: center center;
+    background-repeat: repeat-x;
+    min-height: 37px;
+}
+
+.working-process-one__inner {
+    position: relative;
+    display: block;
+    padding-left: 80px;
+}
+
+.working-process-one__inner .shape1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 38px;
+    background-repeat: repeat-y;
+}
+
+.working-process-one__tab-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.working-process-one__tab-box .tab-buttons {
+    position: relative;
+    display: block;
+}
+
+.working-process-one__tab-box .tab-buttons li {
+    margin-bottom: 63px;
+}
+
+.working-process-one__tab-box .tab-buttons li:last-child {
+    margin-bottom: 0px;
+}
+
+.working-process-one__tab-box .tab-buttons .tab-btn {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.working-process-one__tab-box .tab-buttons .tab-btn h2 {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--billdins-gray);
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.working-process-one__tab-box .tab-buttons .tab-btn.active-btn h2 {
+    color: var(--billdins-base);
+    -webkit-text-stroke: 1px var(--billdins-base);
+}
+
+.working-process-one .tabs-content {
+    position: relative;
+}
+
+.working-process-one .tabs-content .tab {
+    display: none;
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+    -webkit-transition: all 900ms ease;
+    -moz-transition: all 900ms ease;
+    -ms-transition: all 900ms ease;
+    -o-transition: all 900ms ease;
+    transition: all 900ms ease;
+    z-index: 10;
+}
+
+.working-process-one .tabs-content .tab.active-tab {
+    display: block;
+    margin-top: 0px;
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+.working-process-one__single-tab {
+    position: relative;
+    display: block;
+    transition: all 0.7s ease;
+    opacity: 0;
+    transform: scaleY(0.9);
+    transform-origin: top bottom;
+}
+
+.working-process-one .tabs-content .tab.active-tab .working-process-one__single-tab {
+    opacity: 1.0;
+    transform: scaleY(1);
+    transform-origin: bottom top;
+}
+
+.working-process-one__single-tab-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.working-process-one__single-tab-inner .content-box {
+    position: relative;
+    display: block;
+    max-width: 280px;
+    padding: 43px 30px 45px;
+    text-align: center;
+    margin-right: -45px;
+    z-index: 1;
+}
+
+.working-process-one__single-tab-inner .content-box::before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background: var(--billdins-base);
+    content: "";
+    z-index: -1;
+}
+
+.working-process-one__single-tab-inner .content-box::after {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    bottom: -10px;
+    right: -10px;
+    background: var(--billdins-white);
+    content: "";
+    z-index: -2;
+}
+
+.working-process-one__single-tab-inner .content-box h2 {
+    color: var(--billdins-white);
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+.working-process-one__single-tab-inner .content-box p {
+    color: var(--billdins-white);
+}
+
+.working-process-one__single-tab-inner .img-box {
+    position: relative;
+    display: block;
+    flex: 1;
+}
+
+.working-process-one__single-tab-inner .img-box img {
+    width: 100%;
+}
+
+.quote-one .tab-content-box-item {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: auto;
+    visibility: hidden;
+}
+
+.quote-one .tab-content-box-item.tab-content-box-item-active {
+    position: relative;
+    visibility: visible;
+    z-index: 5;
+}
+
+.quote-one .tab-content-box-item .quote-tab-content-box-item {
+    transition: all 0.7s ease;
+    opacity: 0;
+    transform: scaleY(0.9);
+    transform-origin: top bottom;
+}
+
+.quote-one .tab-content-box-item.tab-content-box-item-active .quote-tab-content-box-item {
+    opacity: 1.0;
+    transform: scaleY(1);
+    transform-origin: bottom top;
+}
+
+
+
+/***
+=============================================
+Working Process Two
+=============================================
+***/
+.work-process-two {
+    position: relative;
+    display: block;
+}
+
+.work-process-two .container {
+    max-width: 1680px;
+    width: 100%;
+}
+
+.work-process-two__tab {
+    position: relative;
+    display: block;
+}
+
+
+.work-process-two__tab .tabs-button-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--billdins-black);
+    padding: 60px 0px 52px;
+}
+
+.work-process-two__tab .tabs-button-box li {
+    margin-right: 166px;
+}
+
+.work-process-two__tab .tabs-button-box li:last-child {
+    margin-right: 0px;
+}
+
+.work-process-two__tab .tabs-button-box .tab-btn-item {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.work-process-two__tab .tabs-button-box .tab-btn-item .icon-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85px;
+    height: 80px;
+    margin: 0 auto 23px;
+    border: 1px solid var(--billdins-white);
+    border-radius: 10px;
+}
+
+.work-process-two__tab .tabs-button-box .tab-btn-item .icon-box span::before {
+    position: relative;
+    display: inline-block;
+    color: var(--billdins-white);
+    font-size: 35px;
+    line-height: 35px;
+}
+
+.work-process-two__tab .tabs-button-box .tab-btn-item h3 {
+    color: var(--billdins-white);
+    font-size: 19px;
+    line-height: 29px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.work-process-two .tabs-content {
+    position: relative;
+    display: block;
+}
+
+.work-process-two .tabs-content .tab {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: auto;
+    visibility: hidden;
+}
+
+.work-process-two .tabs-content .tab.tab-active {
+    position: relative;
+    visibility: visible;
+    z-index: 5;
+}
+
+.work-process-two__single-tab {
+    transition: all 0.7s ease;
+    opacity: 0;
+    transform: scaleY(0.9);
+    transform-origin: top bottom;
+    background: var(--billdins-gray-bg);
+}
+
+.work-process-two .tabs-content .tab.tab-active .work-process-two__single-tab {
+    opacity: 1.0;
+    transform: scaleY(1);
+    transform-origin: bottom top;
+}
+
+.work-process-two__single-tab-inner {
+    position: relative;
+    display: block;
+}
+
+.work-process-two__single-img {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.work-process-two__single-img img {
+    width: 100%;
+}
+
+.work-process-two__single-content {
+    position: relative;
+    display: block;
+    padding: 60px 0px 114px;
+}
+
+.work-process-two__single-content .container {
+    max-width: 1350px;
+    width: 100%;
+}
+
+.work-process-two__single-content .row {
+    align-items: center;
+}
+
+.work-process-two__single-content-left {
+    position: relative;
+    display: block;
+}
+
+.work-process-two__single-content-left .sec-title {
+    padding-bottom: 23px;
+}
+
+.work-process-two__single-content-list {
+    position: relative;
+    display: block;
+}
+
+.work-process-two__single-content-list li {
+    position: relative;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.work-process-two__single-content-list li:last-child {
+    margin-bottom: 0px;
+}
+
+.work-process-two__single-content-list li p {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+.work-process-two__single-content-list li p span {
+    position: relative;
+    display: inline-block;
+    color: var(--billdins-base);
+    font-size: 18px;
+    line-height: 18px;
+    top: 1px;
+    margin-right: 3px;
+}
+
+.work-process-two__single-content-right {
+    position: relative;
+    display: block;
+}
+
+.work-process-two__single-content-right-text {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.work-process-two__single-content-right-text p {
+    margin: 0;
+}
+
+/***
+=============================================
+Working Process One About
+=============================================
+***/
+.working-process-one--about {
+    position: relative;
+    display: block;
+    padding-top: 157px;
+    padding-bottom: 0px;
+}

@@ -1,0 +1,110 @@
+/*==============================================
+    Counter One
+===============================================*/
+.counter-one {
+    position: relative;
+    display: block;
+    margin-bottom: -110px;
+    z-index: 2;
+}
+
+.counter-one__inner {
+    position: relative;
+    display: block;
+    padding: 75px 60px 75px;
+    padding-right: 0px;
+    z-index: 1;
+}
+
+.counter-one__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.counter-one__bg::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(var(--billdins-base-rgb), 0.8);
+    border-radius: 10px;
+    content: "";
+}
+
+.counter-one__single {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.counter-one__single .icon-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: var(--billdins-white);
+    border-radius: 5px;
+}
+
+.counter-one__single .icon-box span::before {
+    position: relative;
+    display: inline-block;
+    color: var(--billdins-base);
+    font-size: 40px;
+    line-height: 40px;
+    transition-delay: 0.1s;
+    transition: all 500ms ease;
+}
+
+.counter-one__single:hover .icon-box span::before {
+    transform: rotateY(180deg);
+    transition-delay: 0.1s;
+}
+
+.counter-one__single .content-box {
+    position: relative;
+    display: block;
+    flex: 1;
+    margin-left: 20px;
+}
+
+.counter-one__single .content-box .count-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.counter-one__single .content-box .count-box h2 {
+    color: var(--billdins-white);
+    font-size: 48px;
+    line-height: 54px;
+    font-weight: 700;
+}
+
+.counter-one__single .content-box .count-box span {
+    position: relative;
+    display: inline-block;
+    color: var(--billdins-white);
+    font-size: 44px;
+    font-weight: 700;
+}
+
+.counter-one__single .content-box p {
+    color: var(--billdins-white);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    text-transform: capitalize;
+}

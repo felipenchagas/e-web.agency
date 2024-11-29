@@ -1,0 +1,158 @@
+body,
+body.boxed-wrapper .page-wrapper,
+.main-header-one__bottom,
+.about-one,
+.services-one::before,
+.services-one,
+.team-one__right-single-inner,
+.pricing-one,
+.appoinment-one__contact-list ul li,
+.appoinment-one__form,
+.working-process-one,
+.faq-one-accrodion .accrodion {
+    background-color: var(--billdins-black);
+}
+
+.main-header-one__top,
+.about-one,
+.services-one__single-inner,
+.team-one,
+.pricing-one__single,
+.appoinment-one,
+.faq-one,
+.site-footer {
+    background: #000000;
+}
+
+.team-one {
+    padding-top: 120px;
+}
+
+
+
+.sec-title__title {
+    color: var(--billdins-white);
+}
+
+.services-one__single-content h3 a {
+    color: var(--billdins-white);
+}
+
+.pricing-one__single .table-header h2 {
+    color: var(--billdins-white);
+}
+
+.blog-one__single-content h2 a {
+    color: var(--billdins-white);
+}
+
+
+
+.main-menu .main-menu__list>li>a,
+.stricky-header .main-menu__list>li>a,
+.main-menu .main-menu__list>li.dropdown>a:after,
+.main-menu__search,
+.main-header__shop .icon-box a,
+.about-one__counter-box li .text p,
+.about-one__content-text p,
+.about-one__content-list li p,
+.about-one__content-author .content-box h2,
+.about-one__content-author .content-box p,
+.services-one__single-content p,
+.team-one__left-text p,
+.team-one__right-single-inner .author-box h2,
+.pricing-one__single .table-header p,
+.pricing-one__single .table-content ul li .text-box p,
+.testimonial-one__single-text p,
+.testimonial-one__single-author .content-box h2,
+.testimonial-one__single-author .content-box p,
+.testimonial-one__left-bottom-text h3,
+.appoinment-one__contact-list ul li .inner .content-box h2,
+.appoinment-one__contact-list ul li .inner .content-box p,
+.appoinment-one__contact-list ul li .inner .content-box p a,
+.appoinment-one__form .title-box h2,
+.faq-one-accrodion .accrodion-title h4,
+.faq-one-accrodion .accrodion-content p,
+.faq-one-accrodion .accrodion-title h4::before,
+.blog-one__single-img .date-box h3,
+.blog-one__single-content .meta-box li p a,
+.blog-one__single-content p {
+    color: rgba(255, 255, 255, 0.80);
+}
+
+
+.main-menu .main-menu__list>li.current>a::after,
+.main-menu .main-menu__list>li:hover>a::after,
+.stricky-header .main-menu__list>li.current>a::after,
+.stricky-header .main-menu__list>li:hover>a::after {
+    color: var(--billdins-base);
+}
+
+.stricky-header.main-menu {
+    background-color: var(--billdins-black);
+}
+
+.about-one .shape2 {
+    display: none;
+}
+
+.services-one__single .icon-box {
+    background: #0c0c0e;
+}
+
+.services-one__single .icon-box::before {
+    border-bottom: 35px solid rgb(24 26 30 / 90%);
+}
+
+.about-one__counter-box li {
+    border-bottom: 1px solid rgba(var(--billdins-white-rgb), 0.15);
+}
+
+.pricing-one__bg::before {
+    background: rgba(var(--billdins-black-rgb), 0.92);
+}
+
+.pricing-one__single .table-content ul li.style2 .text-box p {
+    color: rgba(var(--billdins-white-rgb), 0.5);
+}
+
+.pricing-one__single .table-header {
+    border-bottom: 1px solid rgba(var(--billdins-white-rgb), 0.15);
+}
+
+.testimonial-one__right::before {
+    background: rgba(var(--billdins-white-rgb), 0.15);
+}
+
+
+.owl-dot-style1.owl-theme .owl-dots .owl-dot span {
+    background: var(--billdins-white);
+}
+
+.appoinment-one__form form .form-group input[type="text"],
+.appoinment-one__form form .form-group input[type="email"],
+.appoinment-one__form form .form-group input[type="tel"],
+.appoinment-one__form form .form-group input[type="url"],
+.appoinment-one__form form .form-group textarea {
+    color: var(--billdins-white);
+    background-color: rgba(var(--billdins-white-rgb), 0.06);
+}
+
+.working-process-one__inner .shape1 {
+    opacity: 0.5;
+}
+
+.pricing-one__single .shape1 {
+    opacity: 0.6;
+}
+
+
+
+.team-one__right-single-inner .text-box p {
+    color: rgba(255, 255, 255, 0.70);
+}
+
+
+
+
+/* The End */

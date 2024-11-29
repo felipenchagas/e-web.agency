@@ -1,0 +1,115 @@
+/*==============================================
+    Feature One
+===============================================*/
+.features-one {
+    position: relative;
+    display: block;
+    padding: 120px 0px 80px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.features-one .shape1 {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.features-one__single {
+    position: relative;
+    display: block;
+    padding-top: 40px;
+    margin-bottom: 40px;
+}
+
+.features-one__single .icon-box {
+    position: absolute;
+    left: 35px;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--billdins-base);
+    z-index: 2;
+}
+
+.features-one__single .icon-box::before {
+    position: absolute;
+    top: 0px;
+    left: -35px;
+    width: 30px;
+    border-bottom: 40px solid rgba(var(--billdins-base-rgb), 0.9);
+    border-left: 35px solid transparent;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+    content: "";
+}
+
+.features-one__single .icon-box span::before {
+    position: relative;
+    display: inline-block;
+    color: var(--billdins-white);
+    font-size: 40px;
+    line-height: 40px;
+    transition-delay: 0.1s;
+    transition: all 500ms ease;
+}
+
+.features-one__single:hover .icon-box span::before {
+    transform: rotateY(180deg);
+    transition-delay: 0.1s;
+}
+
+.features-one__single-inner {
+    position: relative;
+    display: block;
+    border: 1px solid rgba(var(--billdins-black-rgb), 0.2);
+    padding: 72px 35px 33px;
+}
+
+.features-one__single-inner h2 {
+    font-size: 25px;
+    line-height: 35px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+
+.features-one__single-inner h2 a {
+    color: var(--billdins-black);
+}
+
+.features-one__single-inner h2 a:hover {
+    color: var(--billdins-base);
+}
+
+.features-one__single-inner .btn-box {
+    position: relative;
+    display: block;
+    margin-top: 25px;
+}
+
+.features-one__single-inner .btn-box a {
+    color: var(--billdins-black);
+    font-size: 17px;
+    line-height: 27px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.features-one__single-inner .btn-box a:hover {
+    color: var(--billdins-base);
+}
+
+.features-one__single-inner .btn-box a span {
+    position: relative;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    top: 2px;
+    padding-left: 2px;
+}
