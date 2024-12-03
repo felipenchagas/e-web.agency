@@ -1,0 +1,283 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Proposta Comercial - TAJ Jardinagem | e-Web Design</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root {
+      --primary: #2C3E50;
+      --secondary: #27ae60;
+      --light: #ECF0F1;
+      --dark: #2C3E50;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: var(--light);
+      color: var(--dark);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .header {
+      background: var(--primary);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    .proposal-section {
+      background: white;
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .price-tag {
+      font-size: 2.5rem;
+      color: var(--secondary);
+      font-weight: bold;
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .feature-list li {
+      padding: 1rem 0;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+    }
+
+    .feature-list li::before {
+      content: "✓";
+      color: var(--secondary);
+      margin-right: 1rem;
+      font-weight: bold;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--secondary);
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin: 2rem 0;
+      transition: transform 0.3s ease;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.05);
+    }
+
+    .chart-container {
+      position: relative;
+      margin: 2rem 0;
+      height: auto;
+    }
+
+    .timeline {
+      position: relative;
+      padding: 2rem 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+      background: var(--secondary);
+    }
+
+    .timeline-item {
+      margin: 2rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .timeline-content {
+      width: 45%;
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="container">
+    <h1>Proposta Comercial</h1>
+    <h2>TAJ Jardinagem</h2>
+    <p>Desenvolvimento de Website Profissional + SEO Local</p>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Desenvolvimento do Website -->
+  <div class="proposal-section">
+    <h2>Desenvolvimento de Novo Website</h2>
+    <div class="price-tag">R$ 2.000,00</div>
+    <p>Pagamento: 50% na entrada e 50% no fechamento.</p>
+
+    <h3>Detalhes do Projeto:</h3>
+    <ul class="feature-list">
+      <li>Site responsivo, otimizado para dispositivos móveis</li>
+      <li>Design moderno alinhado à identidade visual da TAJ Jardinagem</li>
+      <li>Formulário de contato com integração ao WhatsApp</li>
+      <li>SEO inicial focado no ramo de jardinagem e paisagismo</li>
+      <li>Criação de seções personalizadas para serviços, portfólio e contato</li>
+    </ul>
+  </div>
+
+  <!-- Gráficos de Impacto -->
+  <div class="proposal-section">
+    <h2>Impacto Esperado</h2>
+    <div class="chart-container">
+      <canvas id="impactChart"></canvas>
+    </div>
+  </div>
+
+  <!-- Plano Mensal de SEO Local -->
+  <div class="proposal-section">
+    <h2>Plano Mensal de SEO Local</h2>
+    <div class="price-tag">R$ 600,00/mês</div>
+
+    <h3>Inclui:</h3>
+    <ul class="feature-list">
+      <li>Criação de conteúdo otimizado para jardinagem e paisagismo</li>
+      <li>Gestão do Google Meu Negócio</li>
+      <li>Link building estratégico com sites relevantes</li>
+      <li>Monitoramento de palavras-chave locais</li>
+      <li>Relatórios detalhados de performance</li>
+    </ul>
+
+    <div class="chart-container">
+      <canvas id="seoChart"></canvas>
+    </div>
+  </div>
+
+  <!-- Cronograma de Desenvolvimento -->
+  <div class="proposal-section">
+    <h2>Cronograma de Desenvolvimento</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Fase 1: Planejamento</h3>
+          <p>Reunião inicial e levantamento de requisitos</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Fase 2: Design</h3>
+          <p>Criação de layout responsivo e identidade visual</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Fase 3: Desenvolvimento</h3>
+          <p>Construção do site com tecnologias modernas</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content">
+          <h3>Fase 4: Testes e Lançamento</h3>
+          <p>Testes de qualidade e publicação online</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dados da Empresa -->
+  <div class="proposal-section">
+    <h2>Sobre a TAJ Jardinagem</h2>
+    <p>A TAJ Jardinagem é especialista em jardinagem e paisagismo, oferecendo serviços de:</p>
+    <ul>
+      <li>Corte de grama, podas e limpeza de terrenos</li>
+      <li>Projetos de paisagismo e manutenção de jardins</li>
+      <li>Aplicação de veneno e plantio de grama</li>
+    </ul>
+    <p><strong>Contato:</strong></p>
+    <ul>
+      <li>WhatsApp: (41) 98833-2844</li>
+      <li>Instagram: @taj_jardinagem</li>
+      <li>Facebook: tajjardinagemepaisagismo</li>
+    </ul>
+  </div>
+
+  <div class="proposal-section" style="text-align: center;">
+    <a href="https://wa.me/5541988332844" class="cta-button">Iniciar Projeto pelo WhatsApp</a>
+  </div>
+</div>
+
+<script>
+  // Impacto Chart
+  const impactCtx = document.getElementById('impactChart').getContext('2d');
+  new Chart(impactCtx, {
+      type: 'bar',
+      data: {
+          labels: ['Visibilidade', 'Tráfego', 'Conversões', 'Clientes'],
+          datasets: [{
+              label: 'Antes do Website',
+              data: [20, 10, 5, 3],
+              backgroundColor: '#bdc3c7'
+          }, {
+              label: 'Após o Website',
+              data: [80, 60, 50, 40],
+              backgroundColor: '#27ae60'
+          }]
+      },
+      options: {
+          responsive: true,
+          scales: {
+              y: {
+                  beginAtZero: true
+              }
+          }
+      }
+  });
+
+  // SEO Chart
+  const seoCtx = document.getElementById('seoChart').getContext('2d');
+  new Chart(seoCtx, {
+      type: 'line',
+      data: {
+          labels: ['Mês 1', 'Mês 2', 'Mês 3', 'Mês 4', 'Mês 5', 'Mês 6'],
+          datasets: [{
+              label: 'Tráfego Orgânico Estimado',
+              data: [10, 30, 50, 70, 90, 100],
+              borderColor: '#27ae60',
+              tension: 0.4
+          }]
+      },
+      options: {
+          responsive: true,
+          scales: {
+              y: {
+                  beginAtZero: true
+              }
+          }
+      }
+  });
+</script>
+
+</body>
+</html>
