@@ -561,7 +561,7 @@ Portfolio Two
     color: var(--billdins-base);
     font-size: 14px;
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 .portfolio-two__single .content-box h2 {

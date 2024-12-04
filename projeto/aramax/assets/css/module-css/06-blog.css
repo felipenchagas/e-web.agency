@@ -192,7 +192,7 @@
     font-size: 15px;
     line-height: 20px;
     font-weight: 600;
-    text-transform: uppercase;
+    text-transform: none;
     font-family: var(--billdins-font-two);
 }
 
@@ -1134,7 +1134,7 @@ Blog Details
     font-size: 14px;
     line-height: 20px;
     font-weight: 600;
-    text-transform: uppercase;
+    text-transform: none;
     background: var(--billdins-black);
     padding: 7px 20px 4px;
     font-family: var(--billdins-font-two);

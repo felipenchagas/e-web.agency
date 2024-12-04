@@ -338,7 +338,7 @@ Sec Title Css
   font-size: 18px;
   line-height: 25px;
   font-weight: 600;
-  text-transform: uppercase;
+  text-transform: none;
   font-family: var(--billdins-font-two);
 }
 
@@ -401,7 +401,7 @@ Sec Title Css
   padding: 0px 35px 0px;
   overflow: hidden;
   font-family: var(--billdins-font);
-  text-transform: uppercase;
+  text-transform: none;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -681,7 +681,7 @@ Scroll To Top Css
 .scroll-to-top__text {
   display: inline;
   font-size: 12px;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 0.1em;
   font-weight: 700;
   margin-left: 10px;
@@ -1719,7 +1719,7 @@ Main Header One Css
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
   font-weight: 600;
-  text-transform: uppercase;
+  text-transform: none;
   font-family: var(--billdins-font-two);
 }
 

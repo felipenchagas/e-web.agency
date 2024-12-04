@@ -145,7 +145,7 @@ Product
     font-size: 12px;
     font-weight: 700;
     margin-top: 0;
-    text-transform: uppercase;
+    text-transform: none;
     cursor: pointer;
     padding: 5px 20px;
     border-radius: 20px;
@@ -351,7 +351,7 @@ Product
     margin-left: 5px;
     font-weight: 700;
     border-radius: 20px;
-    text-transform: uppercase;
+    text-transform: none;
     letter-spacing: 0.1em;
 }
 

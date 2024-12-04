@@ -241,7 +241,7 @@ Main Slider One
     font-size: 18px;
     line-height: 25px;
     font-weight: 600;
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 .main-slider-one__content .title-box {
@@ -720,7 +720,7 @@ Main Slider Two
     font-size: 18px;
     line-height: 25px;
     font-weight: 600;
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 .main-slider-two__content .title-box {
@@ -1026,7 +1026,7 @@ Main Slider Three
     font-size: 18px;
     line-height: 25px;
     font-weight: 600;
-    text-transform: uppercase;
+    text-transform: none;
 }
 
 .main-slider-three__content .title-box {

@@ -76,7 +76,7 @@
     line-height: 1.1em;
     font-family: var(--billdins-font-2);
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: none;
     color: var(--billdins-base);
     word-spacing: 15px;
 }
@@ -122,7 +122,7 @@
     font-size: 18px;
     line-height: 20px;
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: none;
     margin-top: 11px;
     font-family: var(--billdins-font);
 }
