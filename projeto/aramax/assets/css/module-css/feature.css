@@ -75,7 +75,7 @@
     font-size: 25px;
     line-height: 35px;
     font-weight: 700;
-    text-transform: capitalize;
+    text-transform: none;
     margin-bottom: 15px;
 }
 
@@ -98,7 +98,7 @@
     font-size: 17px;
     line-height: 27px;
     font-weight: 500;
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 .features-one__single-inner .btn-box a:hover {

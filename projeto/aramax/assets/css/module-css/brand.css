@@ -63,7 +63,7 @@ Brand One
     font-size: 16px;
     line-height: 25px;
     font-weight: 600;
-    text-transform: none;
+    text-transform: none !important;
     font-family: var(--billdins-font-two);
 }
 

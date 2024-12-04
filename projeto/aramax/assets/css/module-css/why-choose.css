@@ -324,7 +324,7 @@ Why Choose Two
     font-size: 20px;
     line-height: 30px;
     font-weight: 700;
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 .why-choose-two__progress-single .bar {

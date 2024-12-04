@@ -139,7 +139,7 @@
     font-size: 14px;
     line-height: 20px;
     font-weight: 600;
-    text-transform: capitalize;
+    text-transform: none;
     font-family: var(--billdins-font-two);
 }
 
@@ -192,7 +192,7 @@
     font-size: 15px;
     line-height: 20px;
     font-weight: 600;
-    text-transform: none;
+    text-transform: none !important;
     font-family: var(--billdins-font-two);
 }
 
@@ -348,7 +348,7 @@
     font-size: 30px;
     line-height: 40px;
     font-weight: 700;
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 .sidebar__services {
@@ -384,7 +384,7 @@
     font-size: 18px;
     line-height: 25px;
     font-weight: 600;
-    text-transform: capitalize;
+    text-transform: none;
     padding: 20px 25px 19px;
     transition: all 200ms linear;
     transition-delay: 0.1s;
@@ -427,7 +427,7 @@
     font-size: 28px;
     line-height: 38px;
     font-weight: 700;
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 .sidebar__emergency-services-inner .icon-box {
@@ -454,7 +454,7 @@
     font-size: 16px;
     line-height: 26px;
     font-weight: 400;
-    text-transform: capitalize;
+    text-transform: none;
     margin-bottom: 3px;
 }
 
@@ -758,7 +758,7 @@ Blog Standard
     font-size: 14px;
     line-height: 20px;
     font-weight: 600;
-    text-transform: capitalize;
+    text-transform: none;
     font-family: var(--billdins-font-two);
 }
 
@@ -877,7 +877,7 @@ Blog Details
     font-size: 30px;
     line-height: 40px;
     font-weight: 700;
-    text-transform: capitalize;
+    text-transform: none;
     margin-bottom: 14px;
 }
 
@@ -938,7 +938,7 @@ Blog Details
     font-size: 24px;
     line-height: 34px;
     font-weight: 600;
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 .blog-details__content-text3-tag ul {
@@ -963,7 +963,7 @@ Blog Details
     font-size: 16px;
     line-height: 20px;
     font-weight: 600;
-    text-transform: capitalize;
+    text-transform: none;
     background: var(--billdins-gray-bg);
     padding: 9px 20px 8px;
 }
@@ -989,7 +989,7 @@ Blog Details
     font-size: 24px;
     line-height: 34px;
     font-weight: 600;
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 .blog-details__content-text3-share ul {
@@ -1050,7 +1050,7 @@ Blog Details
     font-size: 30px;
     line-height: 40px;
     font-weight: 700;
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 .comment-one__single {
@@ -1106,7 +1106,7 @@ Blog Details
     font-size: 20px;
     line-height: 28px;
     font-weight: 600;
-    text-transform: capitalize;
+    text-transform: none;
     margin-bottom: 8px;
 }
 
@@ -1134,7 +1134,7 @@ Blog Details
     font-size: 14px;
     line-height: 20px;
     font-weight: 600;
-    text-transform: none;
+    text-transform: none !important;
     background: var(--billdins-black);
     padding: 7px 20px 4px;
     font-family: var(--billdins-font-two);

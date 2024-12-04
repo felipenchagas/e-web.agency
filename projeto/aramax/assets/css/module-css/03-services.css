@@ -107,7 +107,7 @@
     font-size: 22px;
     line-height: 28px;
     font-weight: 600;
-    text-transform: capitalize;
+    text-transform: none;
     margin-bottom: 17px;
 }
 
@@ -315,7 +315,7 @@
     font-size: 20px;
     line-height: 28px;
     font-weight: 600;
-    text-transform: capitalize;
+    text-transform: none;
     transition: all 200ms linear;
     transition-delay: 0.1s;
 }
@@ -444,7 +444,7 @@
     font-size: 22px;
     line-height: 28px;
     font-weight: 600;
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 .services-two__single-tab-inner .content-box .text h3 a {
@@ -611,7 +611,7 @@ Services Details
     font-size: 30px;
     line-height: 40px;
     font-weight: 700;
-    text-transform: capitalize;
+    text-transform: none;
     margin-top: 25px;
     margin-bottom: 15px;
 }

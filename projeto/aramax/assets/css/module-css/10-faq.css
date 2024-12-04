@@ -110,7 +110,7 @@ Faq One
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
-    text-transform: capitalize;
+    text-transform: none;
     margin: 0;
     -webkit-transition: all 500ms ease;
     transition: all 500ms ease;

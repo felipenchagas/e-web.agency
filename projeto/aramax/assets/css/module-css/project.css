@@ -137,7 +137,7 @@ Portfolio One
     font-size: 20px;
     line-height: 28px;
     font-weight: 600;
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 .portfolio-one__single-content .text-box h3 a {
@@ -386,7 +386,7 @@ Portfolio Two
     font-size: 16px;
     font-weight: 500;
     line-height: 26px;
-    text-transform: capitalize;
+    text-transform: none;
     background: var(--billdins-gray-bg);
     cursor: pointer;
     transition: all .4s ease;
@@ -561,14 +561,14 @@ Portfolio Two
     color: var(--billdins-base);
     font-size: 14px;
     font-weight: 700;
-    text-transform: none;
+    text-transform: none !important;
 }
 
 .portfolio-two__single .content-box h2 {
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
-    text-transform: capitalize;
+    text-transform: none;
     margin-top: 5px;
 }
 
@@ -764,7 +764,7 @@ Portfolio Details
     font-size: 18px;
     line-height: 25px;
     font-weight: 600;
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 .portfolio-details__sidebar-list li .text-box {

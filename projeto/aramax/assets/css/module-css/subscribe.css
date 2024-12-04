@@ -61,7 +61,7 @@ Subscribe One
     font-size: 50px;
     line-height: 60px;
     font-weight: 700;
-    text-transform: capitalize;
+    text-transform: none;
     margin-bottom: 21px;
 }
 
@@ -96,7 +96,7 @@ Subscribe One
     border-radius: 5px;
     transition: all 500ms ease;
     font-family: var(--billdins-font);
-    text-transform: none;
+    text-transform: none !important;
     outline: none;
     width: 100%;
 }

@@ -580,7 +580,7 @@ progress {
 
 .initialism {
     font-size: .875em;
-    text-transform: uppercase
+    text-transform: none
 }
 
 .blockquote {
@@ -6272,7 +6272,7 @@ fieldset:disabled .btn {
     text-align: start;
     text-decoration: none;
     text-shadow: none;
-    text-transform: none;
+    text-transform: none !important;
     letter-spacing: normal;
     word-break: normal;
     word-spacing: normal;
@@ -6397,7 +6397,7 @@ fieldset:disabled .btn {
     text-align: start;
     text-decoration: none;
     text-shadow: none;
-    text-transform: none;
+    text-transform: none !important;
     letter-spacing: normal;
     word-break: normal;
     word-spacing: normal;
@@ -8156,11 +8156,11 @@ fieldset:disabled .btn {
 }
 
 .text-uppercase {
-    text-transform: uppercase !important
+    text-transform: none !important
 }
 
 .text-capitalize {
-    text-transform: capitalize !important
+    text-transform: none !important
 }
 
 .text-wrap {
