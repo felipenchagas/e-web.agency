@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Services || Billdins || Billdins HTML 5 Template </title>
+    <title> Cart || Billdins || Billdins HTML 5 Template </title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
@@ -156,20 +156,7 @@
                                 <ul class="main-menu__list">
                                     <li><a href="https://advstephani.com.br/">Início</a></li>
                                     <li><a href="#">Empresa</a></li>
-<li class="dropdown">
-<a href="produtos-servicos" title="Produtos e Serviços">
-Produtos & Serviços <span class="icon-down"></span>
-</a>
-<ul class="dropdown-menu">
-<li><a href="concertinas-em-aco-galvanizado-aramax-300" title="Concertina Aramax 300">Concertina Aramax 300 <span>»</span></a></li>
-<li><a href="concertinas-em-aco-galvanizado-aramax-450" title="Concertina Aramax 450">Concertina Aramax 450 <span>»</span></a></li>
-<li><a href="concertinas-em-aco-galvanizado-aramax-750" title="Concertina Aramax 750">Concertina Aramax 750 <span>»</span></a></li>
-<li><a href="concertina-aramax-flat" title="Concertina Flat">Concertina Flat <span>»</span></a></li>
-<li><a href="redes-laminadas" title="Rede Laminada">Rede Laminada <span>»</span></a></li>
-<li><a href="concertina-aramax-clipada" title="Concertina Clipada">Concertina Clipada <span>»</span></a></li>
-<li><a href="concertina-aramax-simples" title="Concertina Simples">Concertina Simples <span>»</span></a></li>
-</ul>
-</li>
+                                    <li><a href="opcoes-de-laminas">Produtos & serviços</a></li>
                                     <li><a href="#">Especificações técnicas</a></li>
                                     <li><a href="contato">Contato</a></li>
                                 </ul>
@@ -212,150 +199,141 @@ Produtos & Serviços <span class="icon-down"></span>
             <div class="shape5 float-bob-x"><img src="assets/images/shapes/page-header-shape1.png" alt=""></div>
             <div class="container">
                 <div class="page-header__inner">
-                    <h2 class="wow fadeInDown" data-wow-duration="1500ms">Services</h2>
+                    <h2 class="wow fadeInDown" data-wow-duration="1500ms">Cart</h2>
                     <ul class="thm-breadcrumb wow fadeInUp" data-wow-duration="1500ms">
                         <li><a href="https://advstephani.com.br/">Home</a></li>
                         <li><span class="icon-right"></span></li>
-                        <li>Services</li>
+                        <li>Cart</li>
                     </ul>
                 </div>
             </div>
         </section>
         <!--End Page Header-->
 
-        <!--Start Services One-->
-        <section class="services-one services-one--services">
+        <!--Start Cart Page-->
+        <section class="cart-page">
             <div class="container">
+                <div class="table-responsive">
+                    <table class="table cart-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                                <th>Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr>
+                                <td>
+                                    <div class="product-box">
+                                        <div class="img-box">
+                                            <img src="assets/images/shop/cart-page-img-1.jpg" alt="">
+                                        </div>
+                                        <h3><a href="product-details">Comfy chair</a></h3>
+                                    </div>
+                                </td>
+                                <td>$10.99</td>
+                                <td>
+                                    <div class="quantity-box">
+                                        <button type="button" class="sub"><i class="fa fa-minus"></i></button>
+                                        <input type="number" id="product-1" value="1">
+                                        <button type="button" class="add"><i class="fa fa-plus"></i></button>
+                                    </div>
+                                </td>
+                                <td>
+                                    $10.99
+                                </td>
+                                <td>
+                                    <div class="cross-icon">
+                                        <i class="fas fa-times"></i>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div class="product-box">
+                                        <div class="img-box">
+                                            <img src="assets/images/shop/cart-page-img-2.jpg" alt="">
+                                        </div>
+                                        <h3><a href="product-details">Classic chair</a></h3>
+                                    </div>
+                                </td>
+                                <td>$10.99</td>
+                                <td>
+                                    <div class="quantity-box">
+                                        <button type="button" class="sub"><i class="fa fa-minus"></i></button>
+                                        <input type="number" id="product-2" value="1">
+                                        <button type="button" class="add"><i class="fa fa-plus"></i></button>
+                                    </div>
+                                </td>
+                                <td>
+                                    $10.99
+                                </td>
+                                <td>
+                                    <div class="cross-icon">
+                                        <i class="fas fa-times"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
                 <div class="row">
-                    <!--Start Services One Single-->
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="services-one__single">
-                            <div class="icon-box">
-                                <span class="icon-building"></span>
+                    <div class="col-xl-8 col-lg-7">
+                        <form action="#" class="default-form cart-cupon__form">
+                            <input type="text" placeholder="Enter Coupon Code" class="cart-cupon__input">
+                            <button class="thm-btn" type="submit">
+                                Apply Coupon
+                                <span class="hover-btn hover-bx"></span>
+                                <span class="hover-btn hover-bx2"></span>
+                                <span class="hover-btn hover-bx3"></span>
+                                <span class="hover-btn hover-bx4"></span>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="col-xl-4 col-lg-5">
+                        <ul class="cart-total list-unstyled">
+                            <li>
+                                <span>Subtotal</span>
+                                <span>$20.98 USD </span>
+                            </li>
+                            <li>
+                                <span>Shipping Cost</span>
+                                <span>$0.00 USD</span>
+                            </li>
+                            <li>
+                                <span>Total</span>
+                                <span class="cart-total-amount">$20.98 USD</span>
+                            </li>
+                        </ul>
+                        <div class="cart-page__buttons">
+                            <div class="cart-page__buttons-1">
+                                <a class="thm-btn" href="#">Update
+                                    <span class="hover-btn hover-bx"></span>
+                                    <span class="hover-btn hover-bx2"></span>
+                                    <span class="hover-btn hover-bx3"></span>
+                                    <span class="hover-btn hover-bx4"></span>
+                                </a>
                             </div>
-                            <div class="services-one__single-inner">
-                                <div class="services-one__single-content">
-                                    <h3><a href="structural-mastery">Building Monstrance</a></h3>
-                                    <p>We offer a wide range of construction services including custom home kinds
-                                        building management</p>
-                                </div>
-
-                                <div class="services-one__single-img">
-                                    <img src="assets/images/services/services-v1-img1.jpg" alt="">
-                                </div>
+                            <div class="cart-page__buttons-2">
+                                <a href="checkout" class="thm-btn">Checkout
+                                    <span class="hover-btn hover-bx"></span>
+                                    <span class="hover-btn hover-bx2"></span>
+                                    <span class="hover-btn hover-bx3"></span>
+                                    <span class="hover-btn hover-bx4"></span>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <!--End Services One Single-->
-
-                    <!--Start Services One Single-->
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="services-one__single">
-                            <div class="icon-box">
-                                <span class="icon-helmet"></span>
-                            </div>
-                            <div class="services-one__single-inner">
-                                <div class="services-one__single-content">
-                                    <h3><a href="structural-mastery">Building Renovation</a></h3>
-                                    <p>We offer a wide range of construction services including custom home kinds
-                                        building management</p>
-                                </div>
-
-                                <div class="services-one__single-img">
-                                    <img src="assets/images/services/services-v1-img2.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Services One Single-->
-
-                    <!--Start Services One Single-->
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="services-one__single">
-                            <div class="icon-box">
-                                <span class="icon-home"></span>
-                            </div>
-                            <div class="services-one__single-inner">
-                                <div class="services-one__single-content">
-                                    <h3><a href="structural-mastery">General Contracting</a></h3>
-                                    <p>We offer a wide range of construction services including custom home kinds
-                                        building management</p>
-                                </div>
-
-                                <div class="services-one__single-img">
-                                    <img src="assets/images/services/services-v1-img3.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Services One Single-->
-
-                    <!--Start Services One Single-->
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="services-one__single">
-                            <div class="icon-box">
-                                <span class="icon-architect"></span>
-                            </div>
-                            <div class="services-one__single-inner">
-                                <div class="services-one__single-content">
-                                    <h3><a href="structural-mastery">Apex Remodeling</a></h3>
-                                    <p>We offer a wide range of construction services including custom home kinds
-                                        building management</p>
-                                </div>
-
-                                <div class="services-one__single-img">
-                                    <img src="assets/images/services/services-v1-img5.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Services One Single-->
-
-                    <!--Start Services One Single-->
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="services-one__single">
-                            <div class="icon-box">
-                                <span class="icon-construction-2"></span>
-                            </div>
-                            <div class="services-one__single-inner">
-                                <div class="services-one__single-content">
-                                    <h3><a href="structural-mastery">Quality Assurance Builds</a></h3>
-                                    <p>We offer a wide range of construction services including custom home kinds
-                                        building management</p>
-                                </div>
-
-                                <div class="services-one__single-img">
-                                    <img src="assets/images/services/services-v1-img6.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Services One Single-->
-
-                    <!--Start Services One Single-->
-                    <div class="col-xl-4 col-lg-6 col-md-6">
-                        <div class="services-one__single">
-                            <div class="icon-box">
-                                <span class="icon-interior-design"></span>
-                            </div>
-                            <div class="services-one__single-inner">
-                                <div class="services-one__single-content">
-                                    <h3><a href="structural-mastery">Urban Development</a></h3>
-                                    <p>We offer a wide range of construction services including custom home kinds
-                                        building management</p>
-                                </div>
-
-                                <div class="services-one__single-img">
-                                    <img src="assets/images/services/services-v1-img7.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Services One Single-->
                 </div>
             </div>
         </section>
-        <!--End Services One-->
+        <!--End Cart Page-->
 
         <!--Start Site Footer-->
         <footer class="site-footer">
@@ -577,6 +555,7 @@ Produtos & Serviços <span class="icon-down"></span>
     <!--End Site Footer Bottom-->
 </footer>
         <!--End Site Footer-->
+
     </div><!-- /.page-wrapper -->
 
 
