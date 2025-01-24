@@ -101,7 +101,9 @@ h6 {
 
 p {
   margin: 0;
+  text-align: justify;
 }
+
 
 dl,
 ol,
