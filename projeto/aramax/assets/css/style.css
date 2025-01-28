@@ -102,6 +102,7 @@ h6 {
 p {
   margin: 0;
   text-align: justify;
+    text-indent: 40px; /* Ajuste o valor conforme necessário */
 }
 
 
