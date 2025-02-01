@@ -4,7 +4,7 @@
 .page-header {
     position: relative;
     display: block;
-    padding: 235px 0 215px;
+    padding: 30px 0 30px;
     background-color: var(--maroof-black);
     overflow: hidden;
     z-index: 1;
