@@ -99,8 +99,10 @@ h6 {
 
 p {
   margin: 0;
-  text-indent: 30px; /* Ajuste o valor conforme necessário */
+  text-indent: 30px; /* Recuo na primeira linha */
+  text-align: justify; /* Justifica o texto */
 }
+
 
 dl,
 ol,
