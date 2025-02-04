@@ -1040,11 +1040,7 @@ ul {
   }
 }
 
-.stricky-header.stricky-fixed {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  visibility: visible;
-}
+
 
 .mobile-nav__buttons {
   display: -webkit-box;
