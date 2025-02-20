@@ -457,7 +457,7 @@
     transition-property: all;
     transform-origin: bottom;
     transform-style: preserve-3d;
-    transform: scaleY(0);
+
     z-index: 2;
 }
 
