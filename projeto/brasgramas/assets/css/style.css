@@ -212,6 +212,10 @@ h6 {
 
 p {
   margin: 0px;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto; /* opcional, ajuda a dividir palavras grandes */
+	text-indent: 20px; /* espaço inicial do parágrafo */
 }
 
 .img,
