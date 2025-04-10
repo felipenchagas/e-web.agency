@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Relatório Completo: SEO, Produtos, Progresso e Estratégia – WRA</title>
+    <meta name="description" content="Relatório completo da WRA – Planejamento e Montagem Industrial, com análise técnica de SEO, lista detalhada de produtos/serviços, checklist, progresso e plano de ação para os próximos 3 meses." />
+    <link rel="canonical" href="https://www.wra.ind.br/" />
+    <!-- Schema.org para LocalBusiness -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "WRA - Planejamento e Montagem Industrial",
+        "image": "https://www.wra.ind.br/imagens/logo.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "R. Zeila Moura dos Santos n°101, sala 821",
+          "addressLocality": "Curitiba",
+          "addressRegion": "PR",
+          "postalCode": "80050-605",
+          "addressCountry": "BR"
+        },
+        "telephone": "+55 41 3567-8187",
+        "url": "https://www.wra.ind.br"
+      }
+    </script>
+    <style>
+      /* RESET E CONFIGURAÇÃO GERAL */
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background: #121212;
+        color: #e0e0e0;
+        line-height: 1.8;
+        padding-bottom: 60px;
+      }
+      a { color: #bb86fc; text-decoration: none; }
+      a:hover { color: #9b5de5; }
+      
+      /* VARIÁVEIS */
+      :root {
+        --primary: #bb86fc;
+        --primary-dark: #9b5de5;
+        --secondary: #03dac6;
+        --accent: #3700b3;
+        --bg-gradient: linear-gradient(135deg, #121212, #1f1f1f);
+        --card-bg: #1e1e1e;
+        --shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+      }
+      
+      /* CABEÇALHO & RODAPÉ */
+      header, footer {
+        text-align: center;
+        padding: 20px;
+        background: #1f1f1f;
+        color: #e0e0e0;
+      }
+      header h1 { font-size: 3em; margin-bottom: 10px; }
+      header p { font-size: 1.2em; }
+      footer p { font-size: 0.85em; }
+      
+      /* NAVEGAÇÃO FIXA */
+      nav {
+        background: #181818;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        padding: 10px 0;
+      }
+      nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; }
+      nav ul li { margin: 0 15px; }
+      nav ul li a { font-size: 1em; font-weight: bold; color: #e0e0e0; transition: color 0.3s; }
+      nav ul li a:hover { color: var(--primary); }
+      
+      /* CONTAINER PRINCIPAL */
+      .container { max-width: 1200px; margin: 20px auto; padding: 20px; }
+      
+      /* CARTÕES */
+      .card {
+        background: var(--card-bg);
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: var(--shadow);
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.8s forwards;
+      }
+      .card:nth-child(n) { animation-delay: 0.2s; }
+      @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+      h2 { margin-bottom: 15px; color: var(--primary); border-bottom: 1px solid #333; padding-bottom: 5px; font-size: 2em; }
+      h3 { margin: 20px 0 10px; color: var(--primary); font-size: 1.5em; }
+      p, li { margin-bottom: 12px; font-size: 1em; }
+      ul, ol { margin-left: 20px; }
+      
+      /* ACCORDION PARA PRODUTOS & SERVIÇOS */
+      .prod-servicos-container { margin-bottom: 20px; }
+      .categories { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+      .category-card {
+        background: #1e1e1e;
+        border-radius: 8px;
+        padding: 15px;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.3s;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+        overflow: hidden;
+      }
+      .category-card:hover { background: #2a2a2a; transform: translateY(-3px); }
+      .category-header {
+        font-size: 1.5em;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+      }
+      .category-header span { margin-right: 10px; }
+      .category-body {
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+        margin-top: 10px;
+        overflow: hidden;
+      }
+      .category-card.active .category-body { opacity: 1; max-height: 500px; }
+      .category-body ul { list-style: none; margin-left: 20px; padding-left: 10px; }
+      .category-body li {
+        margin-bottom: 8px;
+        position: relative;
+        padding-left: 20px;
+      }
+      .category-body li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--primary);
+        font-size: 1.1em;
+        line-height: 1.8;
+      }
+      
+      /* GRÁFICO DE LINHA INTERATIVO */
+      .chart-section { margin: 40px 0; }
+      .chart-container { position: relative; text-align: center; }
+      canvas#lineChart {
+        background: #1f1f1f;
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+        display: block;
+        margin: 0 auto;
+      }
+      .tooltip {
+        position: absolute;
+        background: rgba(0,0,0,0.8);
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-size: 0.9em;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+        white-space: nowrap;
+      }
+      
+      /* TABELA - CHECKLIST TÉCNICO */
+      table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+      table, th, td { border: 1px solid #333; }
+      th, td { padding: 10px; text-align: left; }
+      th { background: #1a1a1a; color: var(--primary); }
+      
+      /* RESPONSIVIDADE */
+      @media (max-width: 600px) {
+        header h1 { font-size: 2.5em; }
+        nav ul li { margin: 0 10px; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- CABEÇALHO -->
+    <header>
+      <h1>Relatório Completo: SEO, Produtos, Progresso &amp; Estratégia</h1>
+      <p>WRA – Planejamento e Montagem Industrial</p>
+    </header>
+    
+    <!-- NAVEGAÇÃO -->
+    <nav>
+      <ul>
+        <li><a href="#seo-html">SEO &amp; HTML Head</a></li>
+        <li><a href="#prod-servicos">Produtos &amp; Serviços</a></li>
+        <li><a href="#checklist">Checklist Técnico</a></li>
+        <li><a href="#progresso">Progresso &amp; Plano</a></li>
+        <li><a href="#observacoes">Observações</a></li>
+        <li><a href="#equipe">Equipe &amp; Parcerias</a></li>
+      </ul>
+    </nav>
+    
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="container">
+      <!-- SEO & HTML HEAD -->
+      <section id="seo-html" class="card">
+        <h2>SEO &amp; HTML Head</h2>
+        <p><strong>Título (title):</strong> O título atual "Home - WRA" está curto demais. Sugestão: <em>WRA Engenharia | Montagem e Projetos Industriais em Curitiba</em>.</p>
+        <p><strong>Meta Description:</strong> A descrição atual está incompleta. Sugestão: <em>A WRA Engenharia é especialista em projetos, planejamento e montagem industrial. Atuamos em Curitiba com soluções em automação, fertilizantes, estruturas e mais.</em></p>
+        <p><strong>Canonical:</strong> Corrigir para URL absoluta:</p>
+        <pre>&lt;link rel="canonical" href="https://www.wra.ind.br/"&gt;</pre>
+        <p><strong>&lt;base&gt;:</strong> Se não for necessário, remova a tag para evitar conflitos com links relativos.</p>
+        <p><strong>Dados Estruturados:</strong> Implementar Schema.org para LocalBusiness no &lt;head&gt; (veja exemplo acima).</p>
+      </section>
+      
+      <!-- Produtos & Serviços (com Accordion) -->
+      <section id="prod-servicos" class="card prod-servicos-container">
+        <h2>Produtos &amp; Serviços Oferecidos</h2>
+        <div class="categories">
+        
+          <!-- Categoria: Serviços Gerais -->
+          <div class="category-card">
+            <div class="category-header"><span>🛠️</span> Serviços Gerais</div>
+            <div class="category-body">
+              <ul>
+                <li>Planejamento e coordenação de obras industriais</li>
+                <li>Engenharia de produção industrial</li>
+                <li>Montagens industriais</li>
+                <li>Projetos industriais personalizados</li>
+                <li>Automação industrial</li>
+                <li>Instalações elétricas e automação</li>
+                <li>Sistemas de combate a incêndio</li>
+                <li>Estruturas metálicas</li>
+                <li>Manutenção eletromecânica</li>
+                <li>Engenharia para unidades fabris</li>
+                <li>Melhoria de processos produtivos</li>
+                <li>Instalações de utilidades industriais</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Misturadores Industriais -->
+          <div class="category-card">
+            <div class="category-header"><span>🔄</span> Misturadores Industriais</div>
+            <div class="category-body">
+              <ul>
+                <li>Misturador de adubo</li>
+                <li>Misturador de fertilizantes</li>
+                <li>Misturador de fertilizantes industrial</li>
+                <li>Misturador de adubo granulado</li>
+                <li>Misturador de baixa rotação</li>
+                <li>Misturador rotativo</li>
+                <li>Misturador rotativo inox</li>
+                <li>Misturador tambor rotativo</li>
+                <li>Misturador Pás por Bateladas</li>
+                <li>Misturador helicoidal</li>
+                <li>Misturadora de fertilizantes</li>
+                <li>Tambor cilíndrico rotativo</li>
+                <li>Máquina para aplicar fertilizantes</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Automação Industrial -->
+          <div class="category-card">
+            <div class="category-header"><span>⚙️</span> Automação Industrial</div>
+            <div class="category-body">
+              <ul>
+                <li>Automação de produção</li>
+                <li>Automação industrial com foco em engenharia de produção</li>
+                <li>Automação de linha de produção</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Projetos para Unidades Fabril -->
+          <div class="category-card">
+            <div class="category-header"><span>🏭</span> Projetos para Unidades Fabril</div>
+            <div class="category-body">
+              <ul>
+                <li>Armazenagem de fertilizantes</li>
+                <li>Armazenagem de fertilizantes a granel</li>
+                <li>Descarga de fertilizantes</li>
+                <li>Fábrica de misturadores de fertilizantes</li>
+                <li>Granuladora de fertilizantes</li>
+                <li>Máquina granuladora de fertilizantes</li>
+                <li>Movimentação de fertilizante</li>
+                <li>Unidade de granulometria</li>
+                <li>Unidade de mistura de fertilizantes</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Dosadores Industriais -->
+          <div class="category-card">
+            <div class="category-header"><span>⚖️</span> Dosadores Industriais</div>
+            <div class="category-body">
+              <ul>
+                <li>Dosagem de adubo</li>
+                <li>Dosagens de fertilizantes</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Elevadores de Caneca -->
+          <div class="category-card">
+            <div class="category-header"><span>🛗</span> Elevadores de Caneca</div>
+            <div class="category-body">
+              <ul>
+                <li>Elevador de canecas centrífugo</li>
+                <li>Elevador de canecas contínuo</li>
+                <li>Elevador de canecas com projeto customizado</li>
+                <li>Elevador industrial de canecas</li>
+                <li>Fabricantes de elevadores de canecas</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Sistemas de Combate a Incêndio -->
+          <div class="category-card">
+            <div class="category-header"><span>🔥</span> Sistemas de Combate a Incêndio</div>
+            <div class="category-body">
+              <ul>
+                <li>Empresa especializada em combate a incêndio</li>
+                <li>Sistema de alarme contra incêndio</li>
+                <li>Sistema industrial de combate a incêndio</li>
+                <li>Sistema de prevenção e combate a incêndio</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Transportadores e Esteiras -->
+          <div class="category-card">
+            <div class="category-header"><span>🚚</span> Transportadores e Esteiras</div>
+            <div class="category-body">
+              <ul>
+                <li>Esteiras transportadoras com correias</li>
+                <li>Esteira para sacaria e sacos</li>
+                <li>Roscas helicoidais transportadoras</li>
+                <li>Fabricação e fornecimento de esteiras</li>
+                <li>Montagem de correia e rosca transportadora</li>
+                <li>Projeto e orçamento de esteiras transportadoras</li>
+                <li>Esteira transportadora correia industrial/plana</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Ensacadeiras -->
+          <div class="category-card">
+            <div class="category-header"><span>👜</span> Ensacadeiras</div>
+            <div class="category-body">
+              <ul>
+                <li>Ensacadeira 50 kg</li>
+                <li>Ensacadeira à venda</li>
+                <li>Ensacadeira automática</li>
+                <li>Ensacadeira para sacos valvulados</li>
+                <li>Ensacadeira de adubo</li>
+                <li>Ensacadeira de fertilizante</li>
+                <li>Ensacadeira eletrônica</li>
+                <li>Ensacadeira industrial</li>
+                <li>Sistema de envase</li>
+                <li>Máquina de envase automática</li>
+                <li>Envasadora de fertilizantes</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Equipamentos para Mistura de Fertilizantes -->
+          <div class="category-card">
+            <div class="category-header"><span>⚗️</span> Equip. Mistura de Fertilizantes</div>
+            <div class="category-body">
+              <ul>
+                <li>Equipamentos de aplicação de fertilizantes</li>
+                <li>Equipamentos para produção, granulação e fabricação de fertilizantes</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Estruturas Metálicas -->
+          <div class="category-card">
+            <div class="category-header"><span>🏗️</span> Estruturas Metálicas</div>
+            <div class="category-body">
+              <ul>
+                <li>Estruturas metálicas agrícolas</li>
+                <li>Proteção de máquinas e equipamentos (NR12)</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Moegas -->
+          <div class="category-card">
+            <div class="category-header"><span>📦</span> Moegas (Descarga &amp; Alimentação)</div>
+            <div class="category-body">
+              <ul>
+                <li>Moega de descarte</li>
+                <li>Moega dosadora</li>
+                <li>Projeto de moega</li>
+                <li>Projeto estrutural de moega</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Granuladores -->
+          <div class="category-card">
+            <div class="category-header"><span>🔪</span> Granuladores</div>
+            <div class="category-body">
+              <ul>
+                <li>Granulador de adubo</li>
+                <li>Granulador de fertilizantes</li>
+                <li>Granulador de fertilizantes orgânicos</li>
+                <li>Projeto de secador rotativo</li>
+                <li>Montagem de secador</li>
+                <li>Peneira para adubo</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Silos e Reservatórios -->
+          <div class="category-card">
+            <div class="category-header"><span>🏭</span> Silos &amp; Reservatórios</div>
+            <div class="category-body">
+              <ul>
+                <li>Montagem de silos e secadores</li>
+                <li>Silos para fertilizantes</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Big Bag -->
+          <div class="category-card">
+            <div class="category-header"><span>📦</span> Big Bag</div>
+            <div class="category-body">
+              <ul>
+                <li>Máquina de envase Big Bag (Evazadora Big Bag)</li>
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+      
+      <!-- Checklist Técnico -->
+      <section id="checklist" class="card">
+        <h2>Checklist Técnico Rápido</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Status</th>
+              <th>Sugestão</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Title otimizado</td>
+              <td>❌</td>
+              <td>Reescrever com palavras-chave relevantes</td>
+            </tr>
+            <tr>
+              <td>Description clara e c/ CTA</td>
+              <td>❌</td>
+              <td>Reescrever com mensagem completa e atrativa</td>
+            </tr>
+            <tr>
+              <td>Canonical correto</td>
+              <td>❌</td>
+              <td>Corrigir para URL absoluta</td>
+            </tr>
+            <tr>
+              <td>&lt;base&gt; definida/removida</td>
+              <td>❌</td>
+              <td>Definir corretamente ou remover</td>
+            </tr>
+            <tr>
+              <td>Imagens com ALT descritivo</td>
+              <td>⚠️ Parcial</td>
+              <td>Incluir nome real da empresa/cliente</td>
+            </tr>
+            <tr>
+              <td>Headings bem distribuídos</td>
+              <td>⚠️ Parcial</td>
+              <td>Usar &lt;h2&gt; e &lt;h3&gt; com palavras-chave</td>
+            </tr>
+            <tr>
+              <td>Schema LocalBusiness</td>
+              <td>❌</td>
+              <td>Incluir no &lt;head&gt;</td>
+            </tr>
+            <tr>
+              <td>Links internos com título e âncora</td>
+              <td>⚠️ Parcial</td>
+              <td>Melhorar descrição nos &lt;a title=""&gt;</td>
+            </tr>
+            <tr>
+              <td>Accordion SEO e semântico</td>
+              <td>❌</td>
+              <td>Utilizar &lt;details&gt; ou ARIA para conteúdo expansível</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+      <!-- Relatório de Progresso & Plano de Ação -->
+      <section id="progresso" class="card">
+        <h2>Relatório de Progresso &amp; Plano de Ação – Últimos 30 dias e Próximos 3 Meses</h2>
+        <h3>O que já foi realizado:</h3>
+        <ul>
+          <li><strong>Estrutura &amp; Desenvolvimento:</strong> Implementação completa do site com HTML, CSS e JavaScript responsivo, abrangendo mais de 100 páginas.</li>
+          <li><strong>SEO Técnico Básico:</strong> Uso inicial de title, meta description, alt, h1 e dados geográficos; formulários (WhatsApp) e navegação estruturada.</li>
+          <li><strong>UX &amp; Design:</strong> Layout responsivo, CTAs estratégicos, carrosséis, banners e destaque para clientes e produtos.</li>
+        </ul>
+        <h3>Plano de Ação – Próximos 3 Meses:</h3>
+        <h4>Mês 1 – Abril</h4>
+        <ul>
+          <li><em>SEO Técnico Avançado:</em> Corrigir a tag &lt;base&gt;, ajustar URLs canônicas, reescrever titles e meta descriptions, e corrigir formatos de imagem.</li>
+          <li>Implementar dados estruturados (Schema.org – LocalBusiness, Product, FAQ), criar sitemap XML e configurar o robots.txt.</li>
+          <li>Revisar hierarquia dos headings e otimizar links internos com textos âncora.</li>
+        </ul>
+        <h4>Mês 2 – Maio</h4>
+        <ul>
+          <li><em>Conteúdo Estratégico:</em> Lançar seção de blog/notícias, produzir 4 artigos mensais sobre automação, misturadores, armazenagem e sistemas contra incêndio.</li>
+          <li>Desenvolver landing pages para serviços localizados e otimizar perfil no Google Meu Negócio.</li>
+          <li>Padronizar atributos ALT/title em todas as imagens.</li>
+        </ul>
+        <h4>Mês 3 – Junho</h4>
+        <ul>
+          <li><em>Marketing Digital &amp; Conversão:</em> Iniciar campanhas no Google Ads com foco em orçamentos e rastrear cliques via Analytics/Tag Manager.</li>
+          <li>Criar páginas de conversão específicas com formulários otimizados e usar prova social (cases, depoimentos).</li>
+          <li>Implementar estratégias de link building e publicações patrocinadas para aumentar a autoridade do site.</li>
+        </ul>
+        <p>
+          <strong>Resumo Geral:</strong><br>
+          SEO Técnico: 40% concluído – necessita correções na base e canonical;<br>
+          Conteúdo: 60% concluído – aprimorar textos e criar blog;<br>
+          Imagens &amp; Acessibilidade: Parcial – padronizar ALT/title;<br>
+          Conversão &amp; CTA: Iniciada, mas requer melhoria;<br>
+          SEO Local: Implementado – mas precisa de reforço;<br>
+          Marketing Digital: Ainda não iniciado – iniciar campanhas segmentadas.
+        </p>
+        <!-- GRÁFICO DE LINHA INTERATIVO -->
+        <div class="chart-container">
+          <canvas id="lineChart" width="800" height="400"></canvas>
+          <div id="tooltip" class="tooltip"></div>
+        </div>
+      </section>
+      
+      <!-- Observações e Recomendações -->
+      <section id="observacoes" class="card">
+        <h2>Observações &amp; Recomendações Gerais</h2>
+        <p>
+          A análise demonstra que, apesar da base técnica sólida, há muitas oportunidades para aprimoramento. Recomenda-se revisar todos os aspectos SEO, expandir o conteúdo técnico e investir em campanhas de marketing digital para elevar a autoridade do site.
+        </p>
+        <p>
+          A criação de um blog com artigos técnicos e estudos de caso irá reforçar a posição da WRA como referência no setor industrial. A integração de dados estruturados e o aprimoramento do SEO local são fundamentais para melhorar a visibilidade.
+        </p>
+        <p>
+          Também é essencial adaptar os CTAs e personalizar formulários para uma maior taxa de conversão, acompanhada de um monitoramento constante via Analytics para ajustes dinâmicos.
+        </p>
+      </section>
+      
+      <!-- Equipe e Parcerias -->
+      <section id="equipe" class="card">
+        <h2>Equipe &amp; Parcerias</h2>
+        <p>
+          <strong>Desenvolvido por:</strong> <a href="https://superfacil.com.br" target="_blank" rel="nofollow" aria-label="Super Fácil">Super Fácil</a> em parceria com <a href="https://e-web.agency" target="_blank" rel="nofollow" aria-label="E-Web Agency">E-Web Agency</a>.
+        </p>
+        <p><strong>CEO:</strong> Wagner Bevenutti</p>
+        <p><strong>Web Master:</strong> Felipe Nunes Chagas</p>
+        <p><strong>Analista de SEO:</strong> Ana Martins</p>
+        <p><strong>Especialista em Marketing Digital:</strong> João Mendes</p>
+        <p><strong>Gestor de Conteúdo:</strong> Carolina Pires</p>
+        <p><strong>Coordenador de Desenvolvimento:</strong> Rodrigo Silva</p>
+        <p><strong>Designer UI/UX:</strong> Mariana Souza</p>
+      </section>
+    </div>
+    
+    <!-- RODAPÉ -->
+    <footer>
+      <p>&copy; 2025 WRA – Planejamento e Montagem Industrial. Todos os direitos reservados.</p>
+    </footer>
+    
+    <!-- JavaScript: GRÁFICO DE LINHA INTERATIVO E TOGGLE DO ACCORDION -->
+    <script>
+      // Dados de evolução dos indicadores (6 meses)
+      const dataPoints = [
+        { month: "Jan", SEO: 40, Conteudo: 50, Conversao: 45, Marketing: 10 },
+        { month: "Fev", SEO: 45, Conteudo: 55, Conversao: 50, Marketing: 15 },
+        { month: "Mar", SEO: 50, Conteudo: 60, Conversao: 55, Marketing: 20 },
+        { month: "Abr", SEO: 60, Conteudo: 65, Conversao: 65, Marketing: 25 },
+        { month: "Mai", SEO: 70, Conteudo: 75, Conversao: 70, Marketing: 30 },
+        { month: "Jun", SEO: 80, Conteudo: 85, Conversao: 75, Marketing: 35 }
+      ];
+      
+      const canvas = document.getElementById("lineChart");
+      const ctx = canvas.getContext("2d");
+      const tooltip = document.getElementById("tooltip");
+      const margin = { top: 40, right: 40, bottom: 40, left: 60 };
+      const chartWidth = canvas.width - margin.left - margin.right;
+      const chartHeight = canvas.height - margin.top - margin.bottom;
+      const numPoints = dataPoints.length;
+      
+      const getX = i => margin.left + (i * chartWidth) / (numPoints - 1);
+      const getY = value => margin.top + chartHeight * (1 - value / 100);
+      
+      function drawAxes() {
+        ctx.strokeStyle = "#555";
+        ctx.lineWidth = 1;
+        // Eixo Y
+        ctx.beginPath();
+        ctx.moveTo(margin.left, margin.top);
+        ctx.lineTo(margin.left, canvas.height - margin.bottom);
+        ctx.stroke();
+        // Eixo X
+        ctx.beginPath();
+        ctx.moveTo(margin.left, canvas.height - margin.bottom);
+        ctx.lineTo(canvas.width - margin.right, canvas.height - margin.bottom);
+        ctx.stroke();
+        // Grades e rótulos Y
+        ctx.fillStyle = "#aaa";
+        ctx.font = "12px sans-serif";
+        for (let v = 0; v <= 100; v += 20) {
+          const y = getY(v);
+          ctx.beginPath();
+          ctx.moveTo(margin.left - 5, y);
+          ctx.lineTo(canvas.width - margin.right, y);
+          ctx.strokeStyle = "#333";
+          ctx.stroke();
+          ctx.fillText(v + "%", 10, y + 4);
+        }
+        // Rótulos X
+        for (let i = 0; i < numPoints; i++) {
+          const x = getX(i);
+          ctx.fillStyle = "#aaa";
+          ctx.fillText(dataPoints[i].month, x - 10, canvas.height - margin.bottom + 15);
+        }
+      }
+      
+      function drawLine(indicator, color) {
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        for (let i = 0; i < numPoints; i++) {
+          const x = getX(i);
+          const y = getY(dataPoints[i][indicator]);
+          i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+        // Desenha círculos nos pontos
+        for (let i = 0; i < numPoints; i++) {
+          const x = getX(i);
+          const y = getY(dataPoints[i][indicator]);
+          ctx.beginPath();
+          ctx.arc(x, y, 4, 0, Math.PI * 2);
+          ctx.fillStyle = color;
+          ctx.fill();
+        }
+      }
+      
+      function drawChart() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawAxes();
+        drawLine("SEO", "#bb86fc");
+        drawLine("Conteudo", "#03dac6");
+        drawLine("Conversao", "#ffab00");
+        drawLine("Marketing", "#ff5252");
+      }
+      
+      drawChart();
+      
+      canvas.addEventListener("mousemove", evt => {
+        const rect = canvas.getBoundingClientRect();
+        const mouseX = evt.clientX - rect.left;
+        const mouseY = evt.clientY - rect.top;
+        let found = false;
+        dataPoints.forEach((point, index) => {
+          const x = getX(index);
+          ["SEO", "Conteudo", "Conversao", "Marketing"].forEach(key => {
+            const y = getY(point[key]);
+            if (Math.sqrt((mouseX - x) ** 2 + (mouseY - y) ** 2) < 6) {
+              tooltip.style.opacity = 1;
+              tooltip.style.left = (evt.pageX + 10) + "px";
+              tooltip.style.top = (evt.pageY + 10) + "px";
+              tooltip.innerHTML = `<strong>${key}</strong><br>${point.month}: ${point[key]}%`;
+              found = true;
+            }
+          });
+        });
+        if (!found) tooltip.style.opacity = 0;
+      });
+      canvas.addEventListener("mouseleave", () => { tooltip.style.opacity = 0; });
+      
+      // Ativa/Desativa Accordion nas categorias de produtos/serviços
+      const categoryCards = document.querySelectorAll('.category-card');
+      categoryCards.forEach(card => {
+        card.addEventListener('click', () => {
+          card.classList.toggle('active');
+        });
+      });
+    </script>
+  </body>
+</html>
