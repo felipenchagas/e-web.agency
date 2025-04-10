@@ -2813,6 +2813,7 @@ Main Header
 .main-menu {
   position: relative;
 }
+
 @media only screen and (max-width: 1023px) {
   .main-menu {
     display: none;
@@ -2860,24 +2861,40 @@ Main Header
   left: 0;
   width: 100%;
 }
-.main-menu .navigation > li > a {
+/* Ajuste o container do menu (a <ul> com a classe .navigation) */
+.main-menu .navigation {
+  margin: 0;                /* remove margens padrão */
+  padding: 0;               /* remove paddings padrão */
+  display: flex;            /* exibe os itens em linha */
+  align-items: center;      /* alinha verticalmente */
+  justify-content: flex-start; /* controla o alinhamento horizontal */
+  list-style: none;         /* remove bullets */
+}
+
+/* Define espaçamento horizontal entre os <li> */
+.main-menu .navigation > li {
+  margin: 0 15px; /* ajuste conforme desejar */
   position: relative;
-  display: block;
+}
+
+/* Ajustes no link */
+.main-menu .navigation > li > a {
+  /* Você já tem praticamente tudo aqui, incluindo text-transform etc. */
+  position: relative;
   text-align: center;
   opacity: 1;
   color: var(--theme-color-dark);
-  font-size: 15px;
+  font-size: 12px;    /* ajusta o tamanho da fonte */
   line-height: 24px;
   font-weight: 700;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  font-family: var(--title-font);
+  font-family: var(--title-font); 
   text-transform: uppercase;
 }
+
 .main-menu .navigation > li > a .icon {
   position: relative;
   font-size: 20px;
