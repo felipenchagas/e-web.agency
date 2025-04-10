@@ -126,12 +126,13 @@
             font-size: 14px;
         }
         
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas fixas */
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
         
         .project-card {
             background-color: white;
@@ -175,13 +176,12 @@
             margin-right: 10px;
         }
         
-        .completed {
-            background-color: var(--success);
-        }
-        
-        .in-progress {
-            background-color: var(--warning);
-        }
+.completed {
+    background-color: var(--success); /* verde */
+}
+.in-progress {
+    background-color: var(--warning); /* laranja */
+}
         
         .review {
             background-color: var(--info);
@@ -549,6 +549,7 @@
 </head>
 <body>
     <div class="container">
+
         <header>
             <div class="header-content">
                 <div class="logo">
@@ -571,7 +572,7 @@
             <div class="stat-card">
                 <i class="fas fa-tasks"></i>
                 <div class="stat-value">2</div>
-                <div class="stat-label">Projetos em Finalização</div>
+                <div class="stat-label">Aguardando Aprovação</div>
             </div>
             <div class="stat-card">
                 <i class="fas fa-file-code"></i>
@@ -580,7 +581,7 @@
             </div>
             <div class="stat-card">
                 <i class="fas fa-chart-line"></i>
-                <div class="stat-value">92%</div>
+                <div class="stat-value">100%</div>
                 <div class="stat-label">Progresso Geral</div>
             </div>
         </section>
@@ -593,7 +594,7 @@
                 </div>
                 <div class="project-content">
                     <div class="project-status">
-                        <span class="status-badge completed">Concluído</span>
+                        <span class="status-badge completed">Concluído e Online</span>
                         <span>Site no ar</span>
                     </div>
                     <div class="progress-container">
@@ -615,7 +616,7 @@
                 </div>
                 <div class="project-content">
                     <div class="project-status">
-                        <span class="status-badge completed">Concluído</span>
+                        <span class="status-badge completed">Concluído e Online</span>
                         <span>Site no ar</span>
                     </div>
                     <div class="progress-container">
@@ -637,18 +638,18 @@
                 </div>
                 <div class="project-content">
                     <div class="project-status">
-                        <span class="status-badge in-progress">Em Revisão</span>
-                        <span>Finalização</span>
+                        <span class="status-badge in-progress">Concluído e Offline</span>
+                        <span>Aguardando aprovação</span>
                     </div>
                     <div class="progress-container">
-                        <div class="progress-bar" style="width: 95%"></div>
+                        <div class="progress-bar" style="width: 100%"></div>
                     </div>
-                    <p>Desenvolvimento avançado com mais de 56 páginas HTML. Atualmente em fase final de revisão conforme solicitações recebidas.</p>
+                    <p>Desenvolvimento completo com mais de 56 páginas HTML. Pronto para ir ao ar, aguardando aprovação final.</p>
                     <ul class="task-list">
                         <li class="completed-task"><i class="fas fa-check-circle check-icon"></i> Desenvolvimento Frontend</li>
                         <li class="completed-task"><i class="fas fa-check-circle check-icon"></i> Otimização SEO</li>
                         <li class="completed-task"><i class="fas fa-check-circle check-icon"></i> Testes Iniciais</li>
-                        <li><i class="fas fa-clock pending-icon"></i> Implementação final das correções solicitadas</li>
+                        <li class="completed-task"><i class="fas fa-check-circle check-icon"></i> Implementação final das correções solicitadas</li>
                     </ul>
                 </div>
             </div>
@@ -659,18 +660,18 @@
                 </div>
                 <div class="project-content">
                     <div class="project-status">
-                        <span class="status-badge review">Otimização</span>
-                        <span>Fase Final</span>
+                        <span class="status-badge in-progress">Concluído e Offline</span>
+                        <span>Aguardando aprovação</span>
                     </div>
                     <div class="progress-container">
-                        <div class="progress-bar" style="width: 85%"></div>
+                        <div class="progress-bar" style="width: 100%"></div>
                     </div>
-                    <p>Em fase de atualização da versão mobile e implementação de técnicas avançadas de SEO para maximizar a visibilidade nos mecanismos de busca.</p>
+                    <p>Desenvolvimento finalizado e pronto para publicação. Aguardando aprovação para ir ao ar e iniciar o SEO avançado.</p>
                     <ul class="task-list">
                         <li class="completed-task"><i class="fas fa-check-circle check-icon"></i> Desenvolvimento Base</li>
                         <li class="completed-task"><i class="fas fa-check-circle check-icon"></i> SEO Estrutural</li>
-                        <li><i class="fas fa-clock pending-icon"></i> Otimização Mobile</li>
-                        <li><i class="fas fa-clock pending-icon"></i> SEO Avançado</li>
+                        <li class="completed-task"><i class="fas fa-check-circle check-icon"></i> Otimização Mobile</li>
+                        <li class="completed-task"><i class="fas fa-check-circle check-icon"></i> SEO Avançado</li>
                     </ul>
                 </div>
             </div>
@@ -695,15 +696,15 @@
                     </div>
                     <div class="chart-bar">
                         <div class="bar-container">
-                            <div class="bar pantelas-bar" style="height: 95%"></div>
+                            <div class="bar pantelas-bar" style="height: 100%"></div>
                         </div>
-                        <div class="bar-label">Pantelas<br>95%</div>
+                        <div class="bar-label">Pantelas<br>100%</div>
                     </div>
                     <div class="chart-bar">
                         <div class="bar-container">
-                            <div class="bar pangradil-bar" style="height: 85%"></div>
+                            <div class="bar pangradil-bar" style="height: 100%"></div>
                         </div>
-                        <div class="bar-label">Pangradil<br>85%</div>
+                        <div class="bar-label">Pangradil<br>100%</div>
                     </div>
                 </div>
             </div>
@@ -714,15 +715,7 @@
                 <div class="legend">
                     <div class="legend-item">
                         <div class="legend-color completed-color"></div>
-                        <span>Completos (50%)</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-color in-progress-color"></div>
-                        <span>Em Revisão (25%)</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-color review-color"></div>
-                        <span>Otimização (25%)</span>
+                        <span>Completos (100%)</span>
                     </div>
                 </div>
             </div>
@@ -898,21 +891,16 @@
             <div class="divider"></div>
             
             <div class="tech-section">
-                <h3><span class="emoji-icon">🌟</span> Status Atual e Revisões – Site Pangradil</h3>
+                <h3><span class="emoji-icon">🌟</span> Status Atual e Próximo Passo</h3>
                 <ul class="tech-list">
-                    <li><strong>Situação Atual:</strong>
+                    <li><strong>Situação:</strong>
                         <ul class="sub-list">
-                            <li>Site Pangradil está FINALIZADO e atualmente passa por uma revisão final de SEO, focada em ajustes semânticos e integração de funcionalidades complementares.</li>
+                            <li>Todos os sites (Aramax, Brasgramas, Pantelas e Pangradil) estão concluídos; dois (Aramax e Brasgramas) já estão online e dois (Pantelas e Pangradil) aguardam aprovação para ir ao ar.</li>
                         </ul>
                     </li>
-                    <li><strong>Etapas da Revisão SEO Fina:</strong>
+                    <li><strong>Próxima Etapa:</strong>
                         <ul class="sub-list">
-                            <li>Ajustes de Heading Tags: Refinamento em páginas específicas para otimizar a relevância semântica.</li>
-                            <li>Expansão de FAQ Schema: Inclusão adicional em páginas de produtos e serviços para potencializar a visibilidade orgânica.</li>
-                            <li>Validação do Schema LocalBusiness: Integração completa com Google Maps, garantindo precisão nos dados de localização.</li>
-                            <li>Event Tracking Detalhado: Implementação de monitoramento para interações-chave, como cliques no botão do WhatsApp e envio de formulários.</li>
-                            <li>Testes Finais: Rodadas de validação no Google Search Console e PageSpeed Insights para ajustes finos de performance.</li>
-                            <li>Estratégia de Linkagem: Criação e otimização de textos âncora para reforçar a autoridade entre os domínios, formando clusters estratégicos de conteúdo.</li>
+                            <li>Aguardar aprovação para colocar Pantelas e Pangradil online e iniciar as estratégias de SEO, mantendo a abordagem técnica e criativa em alto nível.</li>
                         </ul>
                     </li>
                 </ul>
@@ -993,29 +981,17 @@
                 </tbody>
             </table>
         </div>
-		        <h2><i class="fas fa-tasks"></i> Próximos Passos</h2>
-        <div class="next-steps">
-            <p>Com base no status atual dos projetos, as seguintes etapas estão previstas para a conclusão completa:</p>
-            <ul class="next-steps-list">
-                <li><i class="fas fa-angle-right next-icon"></i> <strong>Pantelas:</strong> Finalização da implementação das correções solicitadas na última revisão (Estimativa: 2-3 dias)</li>
-                <li><i class="fas fa-angle-right next-icon"></i> <strong>Pangradil:</strong> Conclusão da otimização mobile e implementação das técnicas avançadas de SEO (Estimativa: 5-7 dias)</li>
-                <li><i class="fas fa-angle-right next-icon"></i> <strong>Testes Finais:</strong> Validação cruzada de todos os sites em diversos navegadores e dispositivos</li>
-                <li><i class="fas fa-angle-right next-icon"></i> <strong>Monitoramento:</strong> Configuração de ferramentas de analytics para acompanhamento de métricas de desempenho</li>
-            </ul>
-        </div>
-        
+
         <h2><i class="fas fa-lightbulb"></i> Conclusão</h2>
         <div class="conclusion">
-            <p>O desenvolvimento dos quatro sites está avançando conforme planejado, com resultados expressivos até o momento:</p>
-            <ul class="next-steps-list">
-                <li><i class="fas fa-angle-right next-icon"></i><strong>Aramax e Brasgramas:</strong> Projetos 100% concluídos e já disponíveis online, com todas as funcionalidades implementadas e otimizadas.</li>
-                <li><i class="fas fa-angle-right next-icon"></i><strong>Pantelas:</strong> Em fase final de revisão (95% concluído), aguardando apenas implementação das últimas correções solicitadas.</li>
-                <li><i class="fas fa-angle-right next-icon"></i><strong>Pangradil:</strong> Em fase de otimização mobile e implementação de técnicas avançadas de SEO (85% concluído).</li>
-            </ul>
-            <p>A abordagem técnica utilizada garante sites modernos, responsivos e bem posicionados nos mecanismos de busca, proporcionando uma presença digital competitiva para cada marca. A utilização consistente de HTML5 semântico, dados estruturados e técnicas avançadas de otimização assegura uma base sólida para o desempenho contínuo destes projetos.</p>
-            <p>O progresso geral do projeto está em 92%, com previsão de conclusão total nas próximas duas semanas.</p>
+            <p>Todos os quatro sites (Aramax, Brasgramas, Pantelas e Pangradil) estão finalizados, com Aramax e Brasgramas já online e Pantelas e Pangradil aguardando aprovação para publicação. O progresso geral do projeto é de 100%, e a próxima etapa é aguardar essa aprovação para, então, iniciar as estratégias de SEO e expandir ainda mais a presença digital de cada marca.</p>
+            <p>A abordagem técnica e criativa, aliada ao uso intensivo de boas práticas de desenvolvimento (HTML5 semântico, dados estruturados, design responsivo, entre outros), assegura uma base sólida para potencializar o ranqueamento e o desempenho de cada site nos principais mecanismos de busca.</p>
         </div>
         
+    </div>
         <footer>
-            <p>© 2025 Relatório gerado em 27/03/2025 | Desenvolvimento e-Web Agency</p>
+            <p>© 2025 Relatório gerado em 2025 | Desenvolvimento e-Web Agency</p>
         </footer>
+			
+	</body>
+	</html>
