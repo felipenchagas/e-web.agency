@@ -1,0 +1,102 @@
+/*============================*/
+/*=== Custom Slider Styles ===*/
+/*============================*/
+#slider-wrapper {
+    background:url(../imgs/slider.png) no-repeat;
+    width:998px;
+    height:392px;
+    margin:0 auto;
+    padding-top:74px;
+    margin-top:50px;
+}
+
+#slider {
+	position:relative;
+    width:918px;
+    height:182px;
+
+	background:url(../imgs/loading.gif) no-repeat 50% 50%;
+}
+#slider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+#slider a {
+	border:0;
+	display:block;
+}
+
+.nivo-controlNav {
+	display:none;
+	position:absolute;
+	left:400px;
+	bottom:-30px;
+}
+.nivo-controlNav a {
+	display:block;
+	width:22px;
+	height:22px;
+	background:url(../imgs/bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin-right:3px;
+	float:left;
+}
+.nivo-controlNav a.active {
+	background-position:0 -22px;
+}
+
+.nivo-directionNav a {
+	display:block;
+	width:83px;
+	height:158px;
+	background:url(../imgs/arrows2.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+}
+a.nivo-nextNav {
+	background-position:-83px 0;
+	right:10px;
+}
+a.nivo-prevNav {
+	left:15px;
+}
+
+.nivo-caption {
+    text-shadow:none;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.nivo-caption a { 
+    color:#efe9d1;
+    text-decoration:underline;
+}
+
+/*====================*/
+/*=== Other Styles ===*/
+/*====================*/
+.clear {
+	clear:both;
+}
+/*
+     FILE ARCHIVED ON 04:56:51 Dec 27, 2018 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 18:48:00 May 04, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 165.756
+  exclusion.robots: 0.141
+  exclusion.robots.policy: 0.129
+  cdx.remote: 0.087
+  esindex: 0.012
+  LoadShardBlock: 113.356 (3)
+  PetaboxLoader3.datanode: 56.917 (4)
+  CDXLines.iter: 26.168 (3)
+  PetaboxLoader3.resolve: 109.547 (2)
+  load_resource: 76.443
+*/
