@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório SEO Local - Advogado Jonas Stephâni</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 0;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background-color: #2563eb;
+            border: 3px solid #f8fafc;
+        }
+        
+        .progress-bar {
+            height: 0.5rem;
+            border-radius: 0.25rem;
+            background-color: #e2e8f0;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            border-radius: 0.25rem;
+            background: linear-gradient(90deg, #2563eb 0%, #1e40af 100%);
+        }
+
+        /* Custom styles for the new section */
+        .page-item {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+
+        .page-item:hover {
+            background-color: #f1f5f9;
+            border-left-color: #2563eb;
+        }
+
+        .copy-btn {
+            transition: all 0.2s ease;
+        }
+
+        .copy-btn:hover {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        .index-btn {
+            transition: all 0.2s ease;
+        }
+
+        .index-btn.indexed {
+            background-color: #10b981;
+            color: white;
+        }
+
+        .index-status {
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .index-status.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <!-- Header -->
+    <header class="gradient-bg text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <h1 class="text-3xl md:text-4xl font-bold mb-2">SEO Local para Direito Médico</h1>
+                    <p class="text-blue-100 text-lg">Análise e recomendações estratégicas para o escritório de advocacia</p>
+                </div>
+                <div class="bg-white/10 p-4 rounded-lg backdrop-blur-sm border border-white/20">
+                    <div class="flex items-center">
+                        <div class="mr-4">
+                            <p class="text-sm text-blue-100">Website analisado</p>
+                            <p class="font-medium text-white">advstephani.com.br</p>
+                        </div>
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center">
+                            <i class="fas fa-balance-scale text-blue-600 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard Overview -->
+    <section class="container mx-auto px-6 py-12 -mt-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Current Status Card -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-chart-line text-blue-600"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold">Situação Atual</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-sm text-gray-500 mb-1">Pontos Positivos</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Título otimizado</span>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Especialização clara</span>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Contato completo</span>
+                                <span class="bg-green-100 text-green-800 text-xs px=2 py-1 rounded">Redes sociais</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray=500 mb-1">Áreas para Melhoria</p>
+                            <div class="flex flex-wrap gap=2">
+                                <span class="bg-red-100 text-red-800 text-xs px=2 py=1 rounded">Meta descrição</span>
+                                <span class="bg-red-100 text-red-800 text-xs px=2 py=1 rounded">URLs não otimizadas</span>
+                                <span class="bg-red-100 text-red-800 text-xs px=2 py=1 rounded">Falta GMB</span>
+                                <span class="bg-red-100 text-red-800 text-xs px=2 py=1 rounded">Conteúdo local</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Competitors Card -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-users text-purple-600"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold">Análise de Concorrentes</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-sm text-gray-500 mb-2">Principais concorrentes</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <div class="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
+                                    <span>Felippe Corrêa Advocacia</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="w-2 h-2 bg-purple-500 rounded-full mr-2"></div>
+                                    <span>Cunha Pereira Filho Advocacia</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 mb-1">Oportunidades</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Diferenciação local</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Conteúdo especializado</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Prova social</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Best Practices Card -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-star text-yellow-600"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold">Melhores Práticas 2025</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-microphone text-blue-500 text-sm"></i>
+                            </div>
+                            <p class="ml-2 text-sm">Pesquisas por voz otimizadas</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-map-marker-alt text-blue-500 text-sm"></i>
+                            </div>
+                            <p class="ml-2 text-sm">Google Meu Negócio completo</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-mobile-alt text-blue-500 text-sm"></i>
+                            </div>
+                            <p class="ml-2 text-sm">Prioridade mobile-first</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-robot text-blue-500 text-sm"></i>
+                            </div>
+                            <p class="ml-2 text-sm">Inteligência Artificial aplicada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Páginas Criadas Section -->
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Páginas Criadas</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+                <p class="text-gray-600 mt-4">Lista completa de todas as páginas já publicadas no site</p>
+            </div>
+
+            <!-- Tabs for categories -->
+            <div class="flex flex-wrap border-b border-gray-200 mb-8">
+                <button class="tab-btn active px-4 py-2 font-medium text-blue-600 border-b-2 border-blue-500" data-category="previdenciario-cidades">Previdenciário - Cidades</button>
+                <button class="tab-btn px-4 py-2 font-medium text-gray-500 hover:text-blue-500" data-category="previdenciario-bairros">Previdenciário - Bairros</button>
+                <button class="tab-btn px-4 py-2 font-medium text-gray-500 hover:text-blue-500" data-category="trabalhista-cidades">Trabalhista - Cidades</button>
+                <button class="tab-btn px-4 py-2 font-medium text-gray-500 hover:text-blue-500" data-category="trabalhista-bairros">Trabalhista - Bairros</button>
+                <button class="tab-btn px-4 py-2 font-medium text-gray-500 hover:text-blue-500" data-category="medicos-bairros">Médicos - Bairros</button>
+                <button class="tab-btn px-4 py-2 font-medium text-gray-500 hover:text-blue-500" data-category="medicos-cidades">Médicos - Cidades</button>
+            </div>
+
+            <!-- Search and filter -->
+            <div class="mb-6 flex flex-col md:flex-row gap-4">
+                <div class="relative flex-grow">
+                    <input type="text" id="search-input" placeholder="Buscar página..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                    <div class="absolute left-3 top-2.5 text-gray-400">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div>
+                    <select id="status-filter" class="w-full md:w-auto px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        <option value="all">Todos os status</option>
+                        <option value="indexed">Indexados</option>
+                        <option value="not-indexed">Não indexados</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Pages list container -->
+            <div id="pages-container" class="bg-gray-50 rounded-lg overflow-hidden">
+                <!-- Content will be loaded here by JavaScript -->
+            </div>
+
+            <!-- Pagination -->
+            <div class="mt-6 flex justify-center">
+                <nav class="inline-flex rounded-md shadow">
+                    <button id="prev-page" class="px-3 py-1 rounded-l-md border border-gray-300 bg-white text-gray-500 hover:bg-gray-50">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div id="page-numbers" class="flex">
+                        <!-- Page numbers will be added here by JavaScript -->
+                    </div>
+                    <button id="next-page" class="px-3 py-1 rounded-r-md border border-gray-300 bg-white text-gray-500 hover:bg-gray-50">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Analysis Section -->
+    <section class="bg-gray-50 py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Análise Detalhada</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Technical SEO -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="gradient-bg px-6 py-4">
+                        <h3 class="text-xl font-semibold text-white">Análise Técnica de SEO</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-6">
+                            <h4 class="font-medium mb-3 flex items-center">
+                                <i class="fas fa-file-alt text-blue-500 mr-2"></i> Elementos On-Page
+                            </h4>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium">Meta Título</span>
+                                        <span class="text-sm font-medium text-green-600">80%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 80%"></div>
+                                    </div>
+                                    <p class="text-xs text-gray-500 mt-1">Inclui palavras-chave principais e localização</p>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium">Meta Descrição</span>
+                                        <span class="text-sm font-medium text-red-600">20%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 20%"></div>
+                                    </div>
+                                    <p class="text-xs text-gray-500 mt-1">Não otimizada para SEO local</p>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium">Estrutura de URLs</span>
+                                        <span class="text-sm font-medium text-red-600">10%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 10%"></div>
+                                    </div>
+                                    <p class="text-xs text-gray-500 mt-1">Não segue padrão otimizado para SEO</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-medium mb-3 flex items-center">
+                                <i class="fas fa-cog text-blue-500 mr-2"></i> Elementos Técnicos
+                            </h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-gray-50 p-3 rounded-lg">
+                                    <div class="flex items-center mb-1">
+                                        <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                        <span class="text-sm font-medium">Mobile-Friendly</span>
+                                    </div>
+                                    <p class="text-xs text-gray-500">Site responsivo</p>
+                                </div>
+                                <div class="bg-gray-50 p-3 rounded-lg">
+                                    <div class="flex items-center mb-1">
+                                        <i class="fas fa-times-circle text-red-500 mr-2"></i>
+                                        <span class="text-sm font-medium">Schema Markup</span>
+                                    </div>
+                                    <p class="text-xs text-gray-500">Ausente</p>
+                                </div>
+                                <div class="bg-gray-50 p-3 rounded-lg">
+                                    <div class="flex items-center mb-1">
+                                        <i class="fas fa-times-circle text-red-500 mr-2"></i>
+                                        <span class="text-sm font-medium">Google Meu Negócio</span>
+                                    </div>
+                                    <p class="text-xs text-gray-500">Perfil não criado</p>
+                                </div>
+                                <div class="bg-gray-50 p-3 rounded-lg">
+                                    <div class="flex items-center mb-1">
+                                        <i class="fas fa-check-circle text-yellow-500 mr-2"></i>
+                                        <span class="text-sm font-medium">Velocidade</span>
+                                    </div>
+                                    <p class="text-xs text-gray-500">Pode melhorar</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Content & Local SEO -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="gradient-bg px-6 py-4">
+                        <h3 class="text-xl font-semibold text-white">Conteúdo & SEO Local</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-6">
+                            <h4 class="font-medium mb-3 flex items-center">
+                                <i class="fas fa-map-marked-alt text-blue-500 mr-2"></i> Presença Local
+                            </h4>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium">Menções a Curitiba</span>
+                                        <span class="text-sm font-medium text-yellow-600">30%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 30%"></div>
+                                    </div>
+                                    <p class="text-xs text-gray-500 mt-1">Poucas referências à localização</p>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium">Conteúdo Hiperlocal</span>
+                                        <span class="text-sm font-medium text-red-600">5%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 5%"></div>
+                                    </div>
+                                    <p class="text-xs text-gray-500 mt-1">Falta conteúdo sobre bairros e instituições locais</p>
+                                </div>
+                                <div>
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium">Backlinks Locais</span>
+                                        <span class="text-sm font-medium text-red-600">10%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 10%"></div>
+                                    </div>
+                                    <p class="text-xs text-gray-500 mt-1">Poucas referências locais ao site</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="font-medium mb-3 flex items-center">
+                                <i class="fas fa-pen-fancy text-blue-500 mr-2"></i> Oportunidades de Conteúdo
+                            </h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <i class="fas fa-check text-blue-500 text-sm"></i>
+                                    </div>
+                                    <p class="ml-2 text-sm">Guia completo de direito médico em Curitiba</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <i class="fas fa-check text-blue-500 text-sm"></i>
+                                    </div>
+                                    <p class="ml-2 text-sm">Páginas específicas por bairros/hospitais</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <i class="fas fa-check text-blue-500 text-sm"></i>
+                                    </div>
+                                    <p class="ml-2 text-sm">Blog com casos reais e perguntas frequentes</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 mt-1">
+                                        <i class="fas fa-check text-blue-500 text-sm"></i>
+                                    </div>
+                                    <p class="ml-2 text-sm">Vídeos explicativos sobre processos médicos</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendations Section -->
+    <section class="container mx-auto px-6 py-12">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Recomendações Estratégicas</h2>
+            <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Technical Optimization -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-tools text-blue-600"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold">Otimização Técnica</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-link text-blue-500 text-sm"></i>
+                            </div>
+                            <p class="ml-2 text-sm">Reestruturar URLs para incluir palavras-chave locais</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-code text-blue-500 text-sm"></i>
+                            </div>
+                            <p class="ml-2 text-sm">Implementar Schema Markup avançado para advogados</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-tachometer-alt text-blue-500 text-sm"></i>
+                            </div>
+                            <p class="ml-2 text-sm">Otimizar velocidade com CDN and lazy loading</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-mobile text-blue-500 text-sm"></i>
+                            </div>
+                            <p class="ml-2 text-sm">Transformar em Progressive Web App (PWA)</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Content Strategy -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-edit text-green-600"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold">Estratégia de Conteúdo</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-map-marker-alt text-green-500 text-sm"></i>
+                            </div>
+                            <p class="ml-2 text-sm">Criar conteúdo hiperlocalizado para Curitiba</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-file-alt text-green-500 text-sm"></i>
+                            </div>
+                            <p class="ml-2 text-sm">Desenvolver guias completos sobre direito médico</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-video text-green-500 text-sm"></i>
+                            </div>
+                            <p class="ml-2 text-sm">Produzir vídeos explicativos e depoimentos</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-graduation-cap text-green-500 text-sm"></i>
+                            </div>
+                            <p class="ml-2 text-sm">Criar glossário jurídico-médico</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Local Presence -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-map-marked-alt text-purple-600"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold">Presença Local</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-business-time text-purple-500 text-sm"></i>
+                            </div>
+                            <p class="ml-2 text-sm">Criar e otimizar perfil no Google Meu Negócio</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-link text-purple-500 text-sm"></i>
+                            </div>
+                            <p class="ml-2 text-sm">Construir backlinks de instituições locais</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-star text-purple-500 text-sm"></i>
+                            </div>
+                            <p class="ml-2 text-sm">Implementar estratégia de avaliações online</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-users text-purple-500 text-sm"></i>
+                            </div>
+                            <p class="ml-2 text-sm">Parcerias com associações médicas de Curitiba</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Plan -->
+    <section class="bg-gray-50 py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Plano de Implementação</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <!-- Timeline -->
+                <div class="relative">
+                    <!-- Timeline line -->
+                    <div class="absolute left-4 md:left-1/2 h-full w-0.5 bg-blue-200 transform -translate-x-1/2"></div>
+                    
+                    <!-- Timeline items -->
+                    <div class="space-y-8">
+                        <!-- First 30 days -->
+                        <div class="relative pl-12 md:pl-0 md:flex justify-between items-center">
+                            <div class="md:w-5/12 md:pr-8 md:text-right mb-4 md:mb-0">
+                                <h3 class="text-lg font-semibold text-blue-600">Primeiros 30 Dias</h3>
+                                <p class="text-sm text-gray-600">Ações de alto impacto e rápido retorno</p>
+                            </div>
+                            <div class="timeline-item relative md:w-5/12 bg-white p-6 rounded-lg shadow">
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <i class="fas fa-check-circle text-blue-500 text-sm"></i>
+                                        </div>
+                                        <p class="ml-2 text-sm">Criação do Google Meu Negócio</p>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <i class="fas fa-check-circle text-blue-500 text-sm"></i>
+                                        </div>
+                                        <p class="ml-2 text-sm">Implementação de Schema Markup</p>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <i class="fas fa-check-circle text-blue-500 text-sm"></i>
+                                        </div>
+                                        <p class="ml-2 text-sm">Otimização técnica do site</p>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <i class="fas fa-check-circle text-blue-500 text-sm"></i>
+                                        </div>
+                                        <p class="ml-2 text-sm">3-5 páginas de conteúdo local</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- 30-90 days -->
+                        <div class="relative pl-12 md:pl-0 md:flex justify-between items-center">
+                            <div class="md:order-2 md:w-5/12 md:pl-8">
+                                <h3 class="text-lg font-semibold text-blue-600">30-90 Dias</h3>
+                                <p class="text-sm text-gray-600">Estratégias de médio prazo</p>
+                            </div>
+                            <div class="timeline-item relative md:w-5/12 bg-white p-6 rounded-lg shadow md:order-1">
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <i class="fas fa-check-circle text-blue-500 text-sm"></i>
+                                        </div>
+                                        <p class="ml-2 text-sm">Backlinks de instituições locais</p>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <i class="fas fa-check-circle text-blue-500 text-sm"></i>
+                                        </div>
+                                        <p class="ml-2 text-sm">3-5 vídeos sobre direito médico</p>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <i class="fas fa-check-circle text-blue-500 text-sm"></i>
+                                        </div>
+                                        <p class="ml-2 text-sm">Estratégia de mídias sociais</p>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <i class="fas fa-check-circle text-blue-500 text-sm"></i>
+                                        </div>
+                                        <p class="ml-2 text-sm">Glossário jurídico-médico inicial</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- 90+ days -->
+                        <div class="relative pl-12 md:pl-0 md:flex justify-between items-center">
+                            <div class="md:w-5/12 md:pr-8 md:text-right mb-4 md:mb-0">
+                                <h3 class="text-lg font-semibold text-blue-600">90+ Dias</h3>
+                                <p class="text-sm text-gray-600">Estratégias de longo prazo</p>
+                            </div>
+                            <div class="timeline-item relative md:w-5/12 bg-white p-6 rounded-lg shadow">
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <i class="fas fa-check-circle text-blue-500 text-sm"></i>
+                                        </div>
+                                        <p class="ml-2 text-sm">Conteúdo para microlocalidades</p>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <i class="fas fa-check-circle text-blue-500 text-sm"></i>
+                                        </div>
+                                        <p class="ml-2 text-sm">Webinars mensais</p>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <i class="fas fa-check-circle text-blue-500 text-sm"></i>
+                                        </div>
+                                        <p class="ml-2 text-sm">Pesquisas originais e guias</p>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 mt-1">
+                                            <i class="fas fa-check-circle text-blue-500 text-sm"></i>
+                                        </div>
+                                        <p class="ml-2 text-sm">Monitoramento contínuo</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics & KPIs -->
+    <section class="container mx-auto px-6 py-12">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Métricas e KPIs</h2>
+            <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Visibility -->
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-eye text-blue-600"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">Visibilidade Local</h3>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <p class="text-sm text-gray-500 mb-1">Posição em buscas locais</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 25%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500 mb-1">Impressões no Google</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 15%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500 mb-1">Cliques em buscas locais</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 10%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Traffic -->
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <div class="flex items-center mb-4">
+                    <div class="bg-green-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-chart-line text-green-600"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">Tráfego e Engajamento</h3>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <p class="text-sm text-gray-500 mb-1">Visitantes únicos</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 30%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500 mb-1">Tempo no site</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 20%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500 mb-1">Taxa de rejeição</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Conversions -->
+            <div class="bg-white rounded-xl shadow-md p-6">
+                <div class="flex items-center mb-4">
+                    <div class="bg-purple-100 p-3 rounded-full mr-4">
+                        <i class="fas fa-phone-alt text-purple-600"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold">Conversões</h3>
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <p class="text-sm text-gray-500 mb-1">Formulários preenchidos</p>
+                        <div class="progress-bar">
+                            <div class="progress-f fill" style="width: 15%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500 mb-1">Ligações recebidas</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 25%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-500 mb-1">WhatsApp conversions</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 20%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4">Pronto para transformar sua presença online?</h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">Implemente estas estratégias para posicionar seu escritório como referência em direito médico em Curitiba</p>
+            <button class="bg-white text-blue-600 font-semibold px-8 py-3 rounded-lg hover:bg-blue-50 transition duration-300 shadow-lg">
+                Implementar Estratégias
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-blue-300">Relatório SEO Local para</p>
+                    <p class="font-medium">Advogado Jonas Stephâni</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-6 pt-6 text-center text-gray-400 text-sm">
+                <p>© 2023 Relatório de SEO Local. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+  <script>
+    // Dados completos por categoria
+    const pagesData = {
+      "previdenciario-cidades": [
+        { name: "Adrianopolis", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-adrianopolis" },
+        { name: "Agudos do Sul", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-agudos-do-sul" },
+        { name: "Almirante Tamandare", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-almirante-tamandare" },
+        { name: "Araucaria", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-araucaria" },
+        { name: "Balsa Nova", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-balsa-nova" },
+        { name: "Bocaiuva do Sul", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-bocaiuva-do-sul" },
+        { name: "Campina Grande do Sul", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-campina-grande-do-sul" },
+        { name: "Campo Largo", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-campo-largo" },
+        { name: "Campo Magro", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-campo-magro" },
+        { name: "Cerro Azul", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-cerro-azul" },
+        { name: "Colombo", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-colombo" },
+        { name: "Contenda", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-contenda" },
+        { name: "Curitiba", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-curitiba" },
+        { name: "Doutor Ulysses", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-doutor-ulysses" },
+        { name: "Fazenda Rio Grande", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-fazenda-rio-grande" },
+        { name: "Itaperucu", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-itaperucu" },
+        { name: "Lapa", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-lapa" },
+        { name: "Mandirituba", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-mandirituba" },
+        { name: "Pinhais", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-pinhais" },
+        { name: "Piraquara", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-piraquara" },
+        { name: "Quatro Barras", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-quatro-barras" },
+        { name: "Quitandinha", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-quitandinha" },
+        { name: "Rio Branco do Sul", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-rio-branco-do-sul" },
+        { name: "Sao Jose dos Pinhais", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-sao-jose-dos-pinhais" },
+        { name: "Tijucas do Sul", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-tijucas-do-sul" },
+        { name: "Tunas do Parana", url: "https://advstephani.com.br/previdenciario/advogado-previdenciario-em-tunas-do-parana" }
+      ],
+      "previdenciario-bairros": [
+        { name: "Abranches", url: "https://advstephani.com.br/previdenciario/curitiba/advogado-previdenciario-no-abranches" },
+        { name: "Água Verde", url: "https://advstephani.com.br/previdenciario/curitiba/advogado-previdenciario-no-agua-verde" },
+        { name: "Ahu", url: "https://advstephani.com.br/previdenciario/curitiba/advogado-previdenciario-no-ahu" },
+        /* ... inclua todos os bairros de Curitiba na mesma estrutura ... */
+        { name: "Xaxim", url: "https://advstephani.com.br/previdenciario/curitiba/advogado-previdenciario-no-xaxim" }
+      ],
+      "trabalhista-cidades": [
+        { name: "Adrianopolis", url: "https://advstephani.com.br/trabalhista/advogado-trabalhista-em-adrianopolis" },
+        { name: "Agudos do Sul", url: "https://advstephani.com.br/trabalhista/advogado-trabalhista-em-agudos-do-sul" },
+        /* ... inclua todas as cidades trabalhistas ... */
+        { name: "Tunas do Parana", url: "https://advstephani.com.br/trabalhista/advogado-trabalhista-em-tunas-do-parana" }
+      ],
+      "trabalhista-bairros": [
+        { name: "Abranches", url: "https://advstephani.com.br/trabalhista/curitiba/advogado-trabalhista-no-abranches" },
+        /* ... inclua todos os bairros trabalhistas ... */
+        { name: "Xaxim", url: "https://advstephani.com.br/trabalhista/curitiba/advogado-trabalhista-no-xaxim" }
+      ],
+      "medicos-bairros": [
+        { name: "Abranches", url: "https://advstephani.com.br/curitiba/advogado-para-medicos-no-abranches" },
+        /* ... inclua todos os bairros médicos ... */
+        { name: "Xaxim", url: "https://advstephani.com.br/curitiba/advogado-para-medicos-no-xaxim" }
+      ],
+      "medicos-cidades": [
+        { name: "Adrianopolis", url: "https://advstephani.com.br/pr/-medico-em-adrianopolis" },
+        /* ... inclua todas as cidades médicas ... */
+        { name: "Tunas do Parana", url: "https://advstephani.com.br/pr/-medico-em-tunas-do-parana" }
+      ]
+    };
+
+    let currentCategory = 'previdenciario-cidades';
+    let currentPage = 1;
+    const itemsPerPage = 10;
+
+    function renderPages() {
+      const all = pagesData[currentCategory] || [];
+      const term = document.getElementById('search-input').value.toLowerCase();
+      const status = document.getElementById('status-filter').value;
+      let filtered = all.filter(item => item.name.toLowerCase().includes(term));
+      const totalPages = Math.ceil(filtered.length / itemsPerPage);
+      if (currentPage > totalPages) currentPage = totalPages || 1;
+      const start = (currentPage - 1) * itemsPerPage;
+      const slice = filtered.slice(start, start + itemsPerPage);
+      document.getElementById('pages-container').innerHTML = slice.map(item => `
+        <div class="flex items-center justify-between p-4 page-item">
+          <a href="${item.url}" target="_blank" class="text-blue-600 hover:underline">${item.name}</a>
+          <div class="flex items-center gap-2">
+            <button class="copy-btn border px-2 py-1 rounded" data-url="${item.url}">
+              <i class="fas fa-copy"></i>
+            </button>
+            <button class="index-btn ${item.indexed ? 'indexed' : ''}">
+              ${item.indexed ? 'Indexado' : 'Não indexado'}
+            </button>
+          </div>
+        </div>
+      `).join('');
+      renderPagination(totalPages);
+      attachCopy();
+    }
+
+    function renderPagination(total) {
+      const nums = document.getElementById('page-numbers');
+      nums.innerHTML = '';
+      for (let i = 1; i <= total; i++) {
+        nums.innerHTML += `<button data-page="${i}" class="px-3 py-1 ${i===currentPage?'bg-blue-500 text-white':'bg-white text-gray-700'}">${i}</button>`;
+      }
+    }
+
+    function attachCopy() {
+      document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.onclick = () => {
+          navigator.clipboard.writeText(btn.dataset.url);
+          btn.classList.add('bg-green-500','text-white');
+          setTimeout(() => btn.classList.remove('bg-green-500','text-white'), 2000);
+        };
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active','text-blue-600','border-blue-500'));
+          btn.classList.add('active','text-blue-600','border-blue-500');
+          currentCategory = btn.dataset.category;
+          currentPage = 1;
+          renderPages();
+        });
+      });
+      document.getElementById('search-input').addEventListener('input', () => { currentPage = 1; renderPages(); });
+      document.getElementById('status-filter').addEventListener('change', () => { currentPage = 1; renderPages(); });
+      document.getElementById('page-numbers').addEventListener('click', e => {
+        if (e.target.dataset.page) { currentPage = +e.target.dataset.page; renderPages(); }
+      });
+      document.getElementById('prev-page').addEventListener('click', () => {
+        if (currentPage > 1) { currentPage--; renderPages(); }
+      });
+      document.getElementById('next-page').addEventListener('click', () => {
+        currentPage++; renderPages();
+      });
+      renderPages();
+    });
+  </script>
+</html>
