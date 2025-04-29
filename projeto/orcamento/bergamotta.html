@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Corporativo - Bergamotta Bar | e-Web Agency</title>
+    <meta name="description" content="Proposta técnica para desenvolvimento do site corporativo do Bergamotta Bar com tecnologia de ponta e preparação para SEO avançado.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #f59e0b;
+        }
+        
+        .card {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .accordion-item.active .accordion-content {
+            max-height: 1000px;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: white;
+        }
+        
+        .btn {
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.6s ease;
+        }
+        
+        .fade-in.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-white shadow-md py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">
+                <span class="text-blue-800">e-Web</span> <span class="text-orange-500">Agency</span>
+            </div>
+            <button class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#projeto" class="hover:text-orange-500 font-medium">O Projeto</a></li>
+                    <li><a href="#tecnologias" class="hover:text-orange-500 font-medium">Tecnologias</a></li>
+                    <li><a href="#beneficios" class="hover:text-orange-500 font-medium">Benefícios</a></li>
+                    <li><a href="#investimento" class="hover:text-orange-500 font-medium">Investimento</a></li>
+                    <li><a href="#contato" class="hover:text-orange-500 font-medium">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Projeto Corporativo <span class="text-orange-400">Bergamotta Bar</span></h1>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Solução completa de desenvolvimento web com tecnologia de ponta e preparação para SEO avançado</p>
+            <a href="#investimento" class="btn bg-orange-500 text-white px-8 py-3 rounded-full font-medium inline-block">Ver Investimento</a>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-4 py-16">
+        <section id="projeto" class="mb-20 fade-in">
+            <h2 class="section-title text-3xl font-bold">Sobre o Projeto</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Bergamotta Bar</h3>
+                    <p class="mb-4">Estabelecimento localizado no coração de Curitiba, oferecendo experiências gastronômicas únicas em um ambiente acolhedor e sofisticado.</p>
+                    <ul class="space-y-2">
+                        <li><i class="fas fa-map-marker-alt text-orange-500 mr-2"></i> Av. Vicente Machado, 627 - Centro, Curitiba - PR</li>
+                        <li><i class="fas fa-phone-alt text-orange-500 mr-2"></i> (41) 99894-5007</li>
+                        <li><i class="fab fa-instagram text-orange-500 mr-2"></i> @bergamotta.bar</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Objetivos do Site</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Apresentar a identidade visual e conceito do estabelecimento</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Exibir cardápio digital com fotos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Permitir reservas online integradas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Otimizar para dispositivos móveis (mobile-first)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Preparação completa para estratégias de SEO local</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-gray-50 p-8 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-4">Por que a e-Web Agency?</h3>
+                <p class="mb-6">Com mais de 8 anos de experiência no mercado digital, a e-Web Agency combina design criativo com tecnologia de ponta para entregar resultados excepcionais. Nosso foco é criar soluções que não apenas impressionam visualmente, mas também geram negócios.</p>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="card bg-white p-6 shadow-sm">
+                        <div class="card-icon bg-blue-100 text-blue-600">
+                            <i class="fas fa-trophy text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-lg mb-2">Experiência Comprovada</h4>
+                        <p>Mais de 150 projetos entregues com excelência para clientes em diversos segmentos.</p>
+                    </div>
+                    <div class="card bg-white p-6 shadow-sm">
+                        <div class="card-icon bg-orange-100 text-orange-600">
+                            <i class="fas fa-mobile-alt text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-lg mb-2">Tecnologia Moderna</h4>
+                        <p>Utilizamos as ferramentas mais atuais do mercado para garantir performance e segurança.</p>
+                    </div>
+                    <div class="card bg-white p-6 shadow-sm">
+                        <div class="card-icon bg-green-100 text-green-600">
+                            <i class="fas fa-headset text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold text-lg mb-2">Suporte Contínuo</h4>
+                        <p>Equipe dedicada para acompanhar seu projeto mesmo após o lançamento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tecnologias" class="mb-20 fade-in">
+            <h2 class="section-title text-3xl font-bold">Tecnologias Avançadas</h2>
+            <p class="mb-8">Utilizaremos as melhores tecnologias do mercado para garantir um site rápido, seguro e preparado para crescimento futuro.</p>
+            
+            <div class="tabs">
+                <div class="flex flex-wrap border-b mb-6">
+                    <button class="tab-btn active px-4 py-2 font-medium border-b-2 border-orange-500" data-tab="frontend">Frontend</button>
+                    <button class="tab-btn px-4 py-2 font-medium" data-tab="backend">Backend</button>
+                    <button class="tab-btn px-4 py-2 font-medium" data-tab="performance">Performance</button>
+                    <button class="tab-btn px-4 py-2 font-medium" data-tab="seo">Preparação SEO</button>
+                </div>
+                
+                <div id="frontend" class="tab-content active">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="card bg-white p-6 shadow-sm">
+                            <h3 class="font-semibold text-xl mb-3 flex items-center">
+                                <i class="fab fa-react text-blue-500 mr-3 text-2xl"></i> React.js
+                            </h3>
+                            <p>Framework moderno para interfaces dinâmicas e reativas, garantindo experiência fluida ao usuário.</p>
+                            <ul class="mt-4 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Componentização para fácil manutenção</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Renderização otimizada para performance</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Ecossistema rico de bibliotecas complementares</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card bg-white p-6 shadow-sm">
+                            <h3 class="font-semibold text-xl mb-3 flex items-center">
+                                <i class="fab fa-css3-alt text-blue-400 mr-3 text-2xl"></i> Tailwind CSS
+                            </h3>
+                            <p>Framework CSS utilitário que permite criar designs exclusivos sem sair do HTML.</p>
+                            <ul class="mt-4 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Design responsivo nativo</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Personalização completa da identidade visual</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Performance otimizada (CSS mínimo)</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="backend" class="tab-content">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="card bg-white p-6 shadow-sm">
+                            <h3 class="font-semibold text-xl mb-3 flex items-center">
+                                <i class="fab fa-node-js text-green-600 mr-3 text-2xl"></i> Node.js
+                            </h3>
+                            <p>Ambiente de execução JavaScript server-side para construir aplicações escaláveis.</p>
+                            <ul class="mt-4 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Alta performance para APIs</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Ecossistema NPM com milhares de pacotes</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Escalabilidade horizontal fácil</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card bg-white p-6 shadow-sm">
+                            <h3 class="font-semibold text-xl mb-3 flex items-center">
+                                <i class="fas fa-database text-blue-600 mr-3 text-2xl"></i> MongoDB
+                            </h3>
+                            <p>Banco de dados NoSQL orientado a documentos para armazenamento flexível.</p>
+                            <ul class="mt-4 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Esquema flexível para evolução contínua</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Alta disponibilidade e replicação automática</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Consulta poderosa com MongoDB Query Language</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="performance" class="tab-content">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="card bg-white p-6 shadow-sm">
+                            <h3 class="font-semibold text-xl mb-3 flex items-center">
+                                <i class="fas fa-bolt text-yellow-500 mr-3 text-2xl"></i> Otimizações Avançadas
+                            </h3>
+                            <p>Técnicas modernas para garantir carregamento ultrarrápido.</p>
+                            <ul class="mt-4 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Lazy Loading de imagens e componentes</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Code Splitting para carregamento inteligente</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Prefetching de recursos estratégicos</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Cache HTTP/2 agressivo</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card bg-white p-6 shadow-sm">
+                            <h3 class="font-semibold text-xl mb-3 flex items-center">
+                                <i class="fas fa-shield-alt text-purple-500 mr-3 text-2xl"></i> Segurança
+                            </h3>
+                            <p>Proteção avançada contra ameaças modernas.</p>
+                            <ul class="mt-4 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>HTTPS com certificado SSL/TLS</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Proteção contra XSS e CSRF</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Firewall de aplicação web (WAF)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Backups automatizados diários</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="seo" class="tab-content">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="card bg-white p-6 shadow-sm">
+                            <h3 class="font-semibold text-xl mb-3 flex items-center">
+                                <i class="fas fa-search text-blue-500 mr-3 text-2xl"></i> Estrutura SEO-Friendly
+                            </h3>
+                            <p>Base sólida para futuras otimizações de busca.</p>
+                            <ul class="mt-4 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>URLs semânticas e limpas</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Meta tags otimizadas</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Hierarquia de cabeçalhos (H1-H6) correta</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Schema Markup para rich snippets</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card bg-white p-6 shadow-sm">
+                            <h3 class="font-semibold text-xl mb-3 flex items-center">
+                                <i class="fas fa-map-marked-alt text-green-500 mr-3 text-2xl"></i> SEO Local
+                            </h3>
+                            <p>Preparação para dominar buscas locais em Curitiba.</p>
+                            <ul class="mt-4 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Integração com Google My Business</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Dados estruturados para negócio local</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Otimização para "bares perto de mim"</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                    <span>Páginas de área de serviço otimizadas</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="beneficios" class="mb-20 fade-in">
+            <h2 class="section-title text-3xl font-bold">Benefícios Exclusivos</h2>
+            
+            <div class="accordion">
+                <div class="accordion-item mb-4 border rounded-lg overflow-hidden">
+                    <div class="accordion-header bg-gray-50 p-4 font-semibold cursor-pointer flex justify-between items-center">
+                        <span>Design Personalizado e Exclusivo</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </div>
+                    <div class="accordion-content px-4">
+                        <div class="py-4">
+                            <p>Cada elemento do site será criado sob medida para refletir a identidade única do Bergamotta Bar, incluindo:</p>
+                            <ul class="mt-3 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Paleta de cores customizada baseada na identidade visual</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Tipografia exclusiva para melhor legibilidade e personalidade</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Elementos gráficos e ícones customizados</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Layouts únicos para cada seção do site</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item mb-4 border rounded-lg overflow-hidden">
+                    <div class="accordion-header bg-gray-50 p-4 font-semibold cursor-pointer flex justify-between items-center">
+                        <span>Integração Completa com Redes Sociais</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </div>
+                    <div class="accordion-content px-4">
+                        <div class="py-4">
+                            <p>Conectamos seu site diretamente com suas redes sociais para ampliar o engajamento:</p>
+                            <ul class="mt-3 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Feed do Instagram integrado para mostrar suas últimas postagens</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Botões de compartilhamento em todas as páginas</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Integração com Facebook Pixel para campanhas direcionadas</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Exibição de avaliações do Google e Facebook</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item mb-4 border rounded-lg overflow-hidden">
+                    <div class="accordion-header bg-gray-50 p-4 font-semibold cursor-pointer flex justify-between items-center">
+                        <span>Sistema de Reservas Online Integrado</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </div>
+                    <div class="accordion-content px-4">
+                        <div class="py-4">
+                            <p>Permita que clientes façam reservas diretamente pelo site, 24 horas por dia:</p>
+                            <ul class="mt-3 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Calendário de disponibilidade em tempo real</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Seleção de mesas/cadeiras conforme layout do bar</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Confirmação automática por e-mail/SMS</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Integração com seu sistema de gestão atual</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Painel administrativo para gerenciar reservas</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item mb-4 border rounded-lg overflow-hidden">
+                    <div class="accordion-header bg-gray-50 p-4 font-semibold cursor-pointer flex justify-between items-center">
+                        <span>Cardápio Digital Interativo</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </div>
+                    <div class="accordion-content px-4">
+                        <div class="py-4">
+                            <p>Apresente seu cardápio de forma moderna e atrativa:</p>
+                            <ul class="mt-3 space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Fotos profissionais de pratos e drinks</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Filtros por categorias (entradas, principais, sobremesas, etc.)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Indicação de itens mais populares e destaques</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Informações detalhadas sobre ingredientes e alergênicos</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                    <span>Atualização remota via painel administrativo</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="investimento" class="mb-20 fade-in">
+            <h2 class="section-title text-3xl font-bold">Investimento</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="card bg-white border border-gray-200 rounded-lg overflow-hidden">
+                    <div class="bg-blue-800 text-white py-4 px-6">
+                        <h3 class="text-xl font-bold">Site Corporativo Básico</h3>
+                        <div class="text-3xl font-bold mt-2">R$ 1.800</div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Design responsivo</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Até 5 páginas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Formulário de contato</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Integração com redes sociais</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card bg-white border-2 border-orange-500 rounded-lg overflow-hidden transform scale-105 shadow-lg relative">
+                    <div class="bg-orange-500 text-white py-4 px-6">
+                        <div class="absolute top-0 right-0 bg-white text-orange-500 px-3 py-1 text-sm font-bold rounded-bl-lg">RECOMENDADO</div>
+                        <h3 class="text-xl font-bold">Site Corporativo Completo</h3>
+                        <div class="text-3xl font-bold mt-2">R$ 3.100</div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Todos os itens do plano básico</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Tecnologias avançadas (React, Node.js)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Sistema de reservas online</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Cardápio digital interativo</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Preparação completa para SEO</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Suporte por 3 meses</span>
+                            </li>
+                        </ul>
+                        <a href="#contato" class="btn bg-orange-500 hover:bg-orange-600 text-white w-full py-2 rounded font-medium text-center block">Contratar</a>
+                    </div>
+                </div>
+                
+                <div class="card bg-white border border-gray-200 rounded-lg overflow-hidden">
+                    <div class="bg-blue-800 text-white py-4 px-6">
+                        <h3 class="text-xl font-bold">Site + SEO Completo</h3>
+                        <div class="text-3xl font-bold mt-2">R$ 4.900</div>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Todos os itens do plano completo</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Otimização SEO técnica completa</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Estratégia de conteúdo para 3 meses</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Gerenciamento de Google Meu Negócio</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Relatórios mensais de performance</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-50 p-8 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-4">O que está incluído no investimento de R$ 3.100?</h3>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-semibold text-lg mb-3 text-blue-800">Desenvolvimento</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Briefing detalhado e planejamento estratégico</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Design UI/UX personalizado</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Desenvolvimento com tecnologias modernas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Integração de sistemas (reservas, cardápio)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Testes rigorosos em diversos dispositivos</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-3 text-blue-800">Entrega</h4>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Hospedagem profissional por 12 meses</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Certificado SSL para segurança</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Backups automáticos diários</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Treinamento para uso do painel administrativo</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Suporte técnico por 3 meses</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-white p-6 rounded-lg border border-orange-200">
+                    <h4 class="font-semibold text-lg mb-3 text-orange-600">Condições Especiais</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-gem text-orange-500 mt-1 mr-2"></i>
+                            <span><strong>Pagamento em 2x de R$ 1.550</strong> sem juros (50% no pedido e 50% na entrega)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-gem text-orange-500 mt-1 mr-2"></i>
+                            <span>Desconto de 5% para pagamento à vista (R$ 2.945)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-gem text-orange-500 mt-1 mr-2"></i>
+                            <span>Garantia de 30 dias para ajustes pós-entrega</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="mb-20 fade-in">
+            <h2 class="section-title text-3xl font-bold">Vamos conversar?</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Entre em contato</h3>
+                    <p class="mb-6">Preencha o formulário ao lado ou utilize um dos nossos canais diretos:</p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="bg-blue-100 text-blue-800 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">E-mail</h4>
+                                <a href="mailto:contato@e-web.agency" class="text-blue-600 hover:underline">contato@e-web.agency</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-green-100 text-green-800 p-3 rounded-full mr-4">
+                                <i class="fab fa-whatsapp text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">WhatsApp</h4>
+                                <a href="https://wa.me/5541998945007" target="_blank" class="text-blue-600 hover:underline">(41) 99894-5007</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-purple-100 text-purple-800 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Telefone</h4>
+                                <a href="tel:+5541998945007" class="text-blue-600 hover:underline">(41) 99894-5007</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-pink-100 text-pink-800 p-3 rounded-full mr-4">
+                                <i class="fab fa-instagram text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Instagram</h4>
+                                <a href="https://www.instagram.com/bergamotta.bar/" target="_blank" class="text-blue-600 hover:underline">@bergamotta.bar</a>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-semibold text-lg mb-3">Horário de Atendimento</h4>
+                        <p>Segunda a Sexta: 9h às 18h</p>
+                        <p>Sábado: 9h às 12h</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <form class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="mb-4">
+                            <label for="nome" class="block text-gray-700 font-medium mb-2">Nome Completo</label>
+                            <input type="text" id="nome" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">E-mail</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="telefone" class="block text-gray-700 font-medium mb-2">Telefone</label>
+                            <input type="tel" id="telefone" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="mensagem" class="block text-gray-700 font-medium mb-2">Mensagem</label>
+                            <textarea id="mensagem" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
+                        </div>
+                        <button type="submit" class="btn bg-orange-500 hover:bg-orange-600 text-white w-full py-3 rounded font-medium">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4"><span class="text-blue-400">e-Web</span> <span class="text-orange-400">Agency</span></h3>
+                    <p class="mb-4">Soluções digitais completas para seu negócio crescer online.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Links Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#projeto" class="hover:text-orange-400">O Projeto</a></li>
+                        <li><a href="#tecnologias" class="hover:text-orange-400">Tecnologias</a></li>
+                        <li><a href="#beneficios" class="hover:text-orange-400">Benefícios</a></li>
+                        <li><a href="#investimento" class="hover:text-orange-400">Investimento</a></li>
+                        <li><a href="#contato" class="hover:text-orange-400">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contato</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-orange-400 mt-1 mr-2"></i>
+                            <span>Curitiba - PR, Brasil</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-orange-400 mt-1 mr-2"></i>
+                            <a href="tel:+5541998945007" class="hover:underline">(41) 99894-5007</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-orange-400 mt-1 mr-2"></i>
+                            <a href="mailto:contato@e-web.agency" class="hover:underline">contato@e-web.agency</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Horário</h3>
+                    <p>Segunda a Sexta: 9h às 18h</p>
+                    <p>Sábado: 9h às 12h</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 e-Web Agency. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('header button');
+        const navMenu = document.querySelector('nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('hidden');
+        });
+        
+        // Tabs
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabId = btn.getAttribute('data-tab');
+                const tabContainer = btn.closest('.tabs');
+                
+                // Remove active class from all buttons
+                tabContainer.querySelectorAll('.tab-btn').forEach(b => {
+                    b.classList.remove('active');
+                    b.classList.remove('border-orange-500');
+                });
+                
+                // Add active class to clicked button
+                btn.classList.add('active');
+                btn.classList.add('border-orange-500');
+                
+                // Hide all tab contents
+                tabContainer.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Show corresponding tab content
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Accordion
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            
+            header.addEventListener('click', () => {
+                // Close all other items
+                accordionItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.accordion-content').style.maxHeight = '0';
+                        otherItem.querySelector('.fa-chevron-down').classList.remove('transform', 'rotate-180');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+                const content = item.querySelector('.accordion-content');
+                
+                if (item.classList.contains('active')) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    header.querySelector('.fa-chevron-down').classList.add('transform', 'rotate-180');
+                } else {
+                    content.style.maxHeight = '0';
+                    header.querySelector('.fa-chevron-down').classList.remove('transform', 'rotate-180');
+                }
+            });
+        });
+        
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!navMenu.classList.contains('hidden')) {
+                        navMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Animation on Scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInOnScroll = () => {
+            const triggerBottom = window.innerHeight * 0.8;
+            
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                
+                if (elementTop < triggerBottom) {
+                    element.classList.add('show');
+                }
+            });
+        };
+        
+        // Initialize elements that are already in view
+        fadeInOnScroll();
+        
+        // Add scroll event listener
+        window.addEventListener('scroll', fadeInOnScroll);
+    </script>
+</body>
+</html>
