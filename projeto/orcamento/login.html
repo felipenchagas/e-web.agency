@@ -11,11 +11,20 @@
         body {
             background: linear-gradient(135deg, #2c3e50, #3498db);
             font-family: 'Segoe UI', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .logo-top {
+            margin-bottom: 30px;
+        }
+        .logo-top img {
+            max-width: 180px;
+            filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));
         }
         .login-container {
             background-color: #fff;
@@ -24,14 +33,15 @@
             box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
             width: 100%;
             max-width: 400px;
-        }
-        .login-container h2 {
             text-align: center;
+        }
+        h2 {
             color: #2c3e50;
             margin-bottom: 30px;
         }
         .form-group {
             margin-bottom: 20px;
+            text-align: left;
         }
         label {
             display: block;
@@ -65,12 +75,20 @@
             color: red;
             font-size: 14px;
             margin-top: 10px;
-            text-align: center;
             display: none;
         }
     </style>
 </head>
 <body>
+
+    <!-- LOGO NO TOPO, FORA DA CAIXA -->
+    <div class="logo-top">
+        <a href="https://e-web.agency" target="_blank">
+            <img src="https://e-web.agency/assets/img/app-landing/logo/logo1.png" alt="E-Web Agency Logo">
+        </a>
+    </div>
+
+    <!-- CAIXA BRANCA DO FORMULÁRIO -->
     <div class="login-container">
         <h2>Acesso Restrito</h2>
         <form id="loginForm">
