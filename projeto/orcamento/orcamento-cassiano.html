@@ -2,12 +2,82 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <title>Acesso Restrito - Orçamentos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista Completa de Orçamentos - Estruturas Metálicas</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         body {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .logo-top {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .logo-top img {
+            max-width: 180px;
+            filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            margin: 30px auto;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            color: #34495e;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        input {
+            width: 100%;
+            padding: 12px 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #3498db;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+            display: none;
+        }
+
+        #conteudoPrivado {
+            display: none;
+        }
+		       body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f8f9fa;
             padding-top: 20px;
@@ -151,7 +221,33 @@
     </style>
 </head>
 <body>
-    <div class="container">
+
+<!-- Login -->
+<div class="logo-top">
+    <a href="https://e-web.agency" target="_blank">
+        <img src="https://e-web.agency/assets/img/app-landing/logo/logo1.png" alt="E-Web Agency Logo">
+    </a>
+</div>
+
+<div class="login-container">
+    <h2>Acesso Restrito</h2>
+    <form id="loginForm">
+        <div class="form-group">
+            <label for="username">Usuário</label>
+            <input type="text" id="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Senha</label>
+            <input type="password" id="password" required>
+        </div>
+        <button type="submit">Entrar</button>
+        <div class="error-message" id="errorMsg">Usuário ou senha incorretos.</div>
+    </form>
+</div>
+
+<!-- Conteúdo da página original inserido aqui -->
+<div id="conteudoPrivado">
+   <div class="container">
         <h1 class="text-center">
             <i class="fas fa-hard-hat me-2"></i>
             Lista Completa de Orçamentos - Estruturas Metálicas
@@ -159,6 +255,12 @@
         
         <div class="filter-box">
             <div class="row">
+                <div class="col-md-3 mb-3">
+                    <label for="filterCity" class="form-label"><i class="fas fa-city me-1"></i> Filtrar por Cidade:</label>
+                    <select id="filterCity" class="form-select">
+                        <option value="">Todas as Cidades</option>
+                    </select>
+                </div>
                 <div class="col-md-3 mb-3">
                     <label for="filterType" class="form-label"><i class="fas fa-tasks me-1"></i> Filtrar por Tipo:</label>
                     <select id="filterType" class="form-select">
@@ -188,7 +290,7 @@
                 </div>
             </div>
             <div class="row mt-2">
-                <div class="col-12 text-end">
+                <div class="col-4 text-end">
                     <button class="btn btn-clear-filters" id="clearFilters">
                         <i class="fas fa-times me-1"></i> Limpar Filtros
                     </button>
@@ -197,7 +299,7 @@
         </div>
         
         <div class="data-info">
-            Total de orçamentos: <span id="totalCount">178</span>
+            Total de orçamentos: <span id="totalCount">175</span>
         </div>
         
         <div class="table-responsive">
@@ -2073,100 +2175,6 @@
     <td class="date-cell text-center">02/05/2025</td>
 </tr>
 
-<!-- 176 -->
-<tr>
-    <td class="text-center">176</td>
-    <td>Dejanane santos oliveira</td>
-    <td class="empresa-cell"></td>
-    <td>Não informada</td>
-    <td><span class="badge bg-dark">Orçamento</span></td>
-    <td class="desc-cell">Olá! Tudo bem? Gostaria de saber se vocês possuem um valor médio por metro quadrado para construção de mezanino em estrutura metálica. Estou planejando uma obra e gostaria de ter uma ideia dos custos para incluir no meu orçamento. Agradeço desde já pela atenção!
-</td>
-    <td class="contact-cell"> dso5@aluno.ifnmg.edu.br<br>38999212788</td>
-    <td class="date-cell text-center">22/05/2025</td>
-</tr>
-
-
-<!-- 177 -->
-<tr>
-    <td class="text-center">177</td>
-    <td>Rogerio Candido Silva</td>
-    <td class="empresa-cell">Colégio Ceeba - Betim</td>
-    <td>Não informada</td>
-    <td><span class="badge bg-dark">Orçamento</span></td>
-    <td class="desc-cell">Assunto: Solicitação de orçamento – Grama sintética para área escolar (Betim/MG)
-
-
-
-Prezados,
-
-
-
-Sou responsável por uma instituição de ensino localizada em Betim/MG, e estamos em busca de uma solução definitiva para uma área externa de aproximadamente 150 a 180 m² que anteriormente era gramada, mas que não apresenta mais viabilidade para manutenção com grama natural.
-
-
-
-Gostaríamos de receber um orçamento completo para fornecimento e instalação de grama sintética, considerando as seguintes especificações:
-
-
-
-Área total: 150 a 180 m²
-
-
-
-Tipo de uso: Escolar (uso intenso por crianças)
-
-
-
-Altura da grama desejada: Entre 30 mm e 40 mm, com tratamento UV e resistência à abrasão
-
-
-
-Base de instalação: Incluir preparação com drenagem (brita, areia e manta geotêxtil)
-
-
-
-Manta amortecedora: Informar se há essa opção e incluir no orçamento como item opcional
-
-
-
-Prazo estimado de execução
-
-
-
-Garantia do produto e da instalação
-
-
-
-Referências de projetos semelhantes (se possível)
-
-
-
-Também gostaríamos de agendar uma visita técnica para avaliação da área e detalhamento do projeto.
-
-
-
-Fico à disposição para quaisquer dúvidas e no aguardo de sua proposta.
-
-
-
-Atenciosamente,</td>
-    <td class="contact-cell">xvrcs@uol.com.br<br>31994062730</td>
-    <td class="date-cell text-center">22/05/2025</td>
-</tr>
-
-<!-- 178 -->
-<tr>
-    <td class="text-center">178</td>
-    <td>Ricardo Caracciolo</td>
-    <td class="empresa-cell">MD ENGENHARIA</td>
-    <td>São Paulo</td>
-    <td><span class="badge bg-dark">Orçamento</span></td>
-    <td class="desc-cell">Gostaria de um orçamento para uma obra no Aeroporto de Aracaju.;</td>
-    <td class="contact-cell">ricardo@grupomd-eng.com<br>(11) 9616-79792</td>
-    <td class="date-cell text-center">22/05/2025</td>
-</tr>
-
 
 
                 </tbody>
@@ -2177,8 +2185,24 @@ Atenciosamente,</td>
             <p>Nenhum resultado encontrado com os filtros atuais.</p>
         </div>
     </div>
+</div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const user = document.getElementById("username").value.trim();
+        const pass = document.getElementById("password").value.trim();
+
+        if (user === "cassiano" && pass === "agency") {
+            document.querySelector(".login-container").style.display = "none";
+            document.querySelector(".logo-top").style.display = "none";
+            document.getElementById("conteudoPrivado").style.display = "block";
+        } else {
+            document.getElementById("errorMsg").style.display = "block";
+        }
+    });
+</script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 <script>
     $(document).ready(function () {
@@ -2386,6 +2410,5 @@ const resumo = `${numero} - ${nome}${cidade !== "Não informada" ? " · " + cida
 gerarAccordionMobile();
 
 </script>
-
 </body>
 </html>
