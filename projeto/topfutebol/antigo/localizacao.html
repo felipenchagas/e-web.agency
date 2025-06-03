@@ -158,5 +158,97 @@ body {
 </div>
 </div>
 <div id="Rodape">:: Rua Carolina Castelli, 1000 - Novo Mundo :: Locação de Quadras e Espaços para eventos 41 3346-1117 :: WhatsApp 41 98403.9797</div>
+    <style>
+        body {
+            font-family: sans-serif;
+            min-height: 150vh; /* Para ter scroll e ver o efeito fixed */
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .floating-icons {
+            position: fixed;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Espaçamento entre os ícones */
+        }
+
+        .floating-icons .icon {
+            width: 50px;
+            height: 50px;
+            background-repeat: no-repeat;
+            background-position: center;
+            /* background-size: contain; é o padrão agora para a maioria */
+            background-size: contain; 
+            transition: transform 0.2s ease;
+            display: block; /* Garante que o <a> ocupe o espaço definido */
+            text-indent: -9999px; /* Esconde o texto do link, se houver */
+        }
+
+        /* Efeito hover para todos os ícones */
+        .floating-icons .icon:hover {
+            transform: scale(1.1);
+        }
+
+        /* Ícones de Instagram e WhatsApp: Sem fundo, sem borda arredondada - NÃO ALTERAR */
+        .insta, .whats {
+            background-color: transparent !important; 
+            border-radius: 0 !important; 
+            box-shadow: none !important; 
+            border: none !important; 
+        }
+
+        .insta {
+            background-image: url('https://cdn-icons-png.flaticon.com/512/2111/2111463.png');
+        }
+
+        .whats {
+            background-image: url('https://cdn-icons-png.flaticon.com/512/733/733585.png');
+        }
+
+        /* Telefone com fundo vermelho e ícone branco */
+        .phone {
+            background-color: #f44336; /* Fundo vermelho */
+            /* Nova URL para ícone de telefone branco com fundo transparente */
+            background-image: url('social/tel.png'); 
+            background-size: 55% auto; /* Ajustado para o ícone ficar bem visível no círculo */
+            background-position: center;
+            border-radius: 50%; /* Deixa o fundo vermelho circular */
+            box-shadow: none; 
+            border: none !important; 
+        }
+
+        /* Ícones das Lojas de Aplicativos - Agora sem fundo/borda CSS, apenas o logo */
+        .playstore {
+            background-image: url('https://cdn-icons-png.flaticon.com/512/888/888857.png'); /* Logo da Play Store com fundo transparente */
+            background-color: transparent !important; /* Garantir sem cor de fundo */
+            border-radius: 0 !important; /* Garantir sem borda arredondada */
+            box-shadow: none !important; /* Garantir sem sombra */
+            background-size: 80% auto; /* Ajuste para o logo da Play Store ficar bom */
+        }
+
+        .applestore {
+             /* Logo da Apple Store com fundo transparente */
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/App_Store_%28iOS%29.svg/2048px-App_Store_%28iOS%29.svg.png');
+            background-color: transparent !important; /* Garantir sem cor de fundo */
+            border-radius: 0 !important; /* Garantir sem borda arredondada */
+            box-shadow: none !important; /* Garantir sem sombra */
+            background-size: 70% auto; /* Ajuste para o logo da Apple Store ficar bom */
+        }
+    </style>
+
+    <!-- Ícones flutuantes -->
+    <div class="floating-icons">
+        <a href="https://www.instagram.com/topsportsfutebol/" target="_blank" class="icon insta" title="Instagram">Instagram</a>
+        <a href="https://wa.me/5541984039797" target="_blank" class="icon whats" title="WhatsApp">WhatsApp</a>
+        <a href="tel:+5541984039797" class="icon phone" title="Ligar">Ligar</a>
+        <a href="https://play.google.com/store/apps/details?id=com.multiplix.topsports&pli=1" target="_blank" class="icon playstore" title="Google Play">Google Play</a>
+        <a href="https://apps.apple.com/br/app/top-sports/id6736372061" target="_blank" class="icon applestore" title="App Store">App Store</a>
+    </div>
 </body>
 </html>
