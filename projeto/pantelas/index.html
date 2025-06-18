@@ -83,7 +83,108 @@
 
     <!-- /.preloader -->
 
+		<!-- ============ CONTATO & APP ================== -->
+<div style="background:#f4f4f6;padding:70px 0;font-family:Arial,Helvetica,sans-serif">
 
+  <!-- cabeçalho -->
+  <div style="text-align:center;margin-bottom:60px">
+    <h6 style="margin:0 0 10px;font:700 13px 'Arial';letter-spacing:.6px;color:#ff3562;text-transform:uppercase">
+      Fale com a gente
+    </h6>
+    <h2 style="margin:0;font:700 40px/1.2 'Arial';color:#0d0d0d">
+      Pronto para entrar em campo?
+    </h2>
+  </div>
+
+  <!-- cards -->
+  <div style="
+    display:flex;flex-wrap:wrap;gap:32px;justify-content:center;
+    max-width:1100px;margin:0 auto 60px;
+  ">
+
+    <!-- WhatsApp -->
+    <div style="flex:1 1 240px;background:#fff;border-radius:12px;
+                padding:32px;box-shadow:0 2px 10px rgba(0,0,0,.05)">
+      <h3 style="margin:0 0 10px;font:700 20px 'Arial';color:#0d0d0d">WhatsApp</h3>
+      <p style="margin:0 0 24px;font:400 15px/1.5 'Arial';color:#555">
+        Dúvidas, horários ou reservas em poucos toques.
+      </p>
+      <a href="https://wa.me/5541999999999" target="_blank"
+         style="display:inline-block;background:#ff3562;color:#fff;
+                padding:10px 26px;border-radius:24px;font:600 14px 'Arial';
+                text-decoration:none">Chamar no Whats</a>
+    </div>
+
+    <!-- Central de reservas -->
+    <div style="flex:1 1 240px;background:#fff;border:2px solid #ff3562;border-radius:12px;
+                padding:32px">
+      <h3 style="margin:0 0 10px;font:700 20px 'Arial';color:#0d0d0d">Central de Reservas</h3>
+      <p style="margin:0 0 24px;font:400 15px/1.5 'Arial';color:#555">
+        Consulte disponibilidade e valores online.
+      </p>
+      <a href="#formulario"
+         style="display:inline-block;background:#ff3562;color:#fff;
+                padding:10px 40px;border-radius:24px;font:600 14px 'Arial';
+                text-decoration:none">Fazer reserva</a>
+    </div>
+
+    <!-- Telefone -->
+    <div style="flex:1 1 240px;background:#fff;border-radius:12px;
+                padding:32px;box-shadow:0 2px 10px rgba(0,0,0,.05)">
+      <h3 style="margin:0 0 10px;font:700 20px 'Arial';color:#0d0d0d">Telefone</h3>
+      <p style="margin:0 0 24px;font:400 15px/1.5 'Arial';color:#555">
+        Ligue para falar com nossa equipe.
+      </p>
+      <a href="tel:+5541999999999"
+         style="display:inline-block;background:#ff3562;color:#fff;
+                padding:10px 38px;border-radius:24px;font:600 14px 'Arial';
+                text-decoration:none">Ligar agora</a>
+    </div>
+
+    <!-- Atendimento presencial -->
+    <div style="flex:1 1 240px;background:#fff;border-radius:12px;
+                padding:32px;box-shadow:0 2px 10px rgba(0,0,0,.05)">
+      <h3 style="margin:0 0 10px;font:700 20px 'Arial';color:#0d0d0d">Presencial</h3>
+      <p style="margin:0 0 24px;font:400 15px/1.5 'Arial';color:#555">
+        Visite nossa estrutura e agende pessoalmente.
+      </p>
+      <a href="#localizacao"
+         style="display:inline-block;background:#ff3562;color:#fff;
+                padding:10px 30px;border-radius:24px;font:600 14px 'Arial';
+                text-decoration:none">Como chegar</a>
+    </div>
+  </div>
+
+  <!-- baixar app -->
+  <div style="text-align:center">
+    <h3 style="margin:0 0 18px;font:700 22px 'Arial';color:#0d0d0d">
+      Tenha tudo no bolso: baixe o App Top Sports
+    </h3>
+
+    <!-- badges -->
+    <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap">
+      <a href="https://play.google.com/store/apps/details?id=com.multiplix.topsports"
+         target="_blank" style="display:inline-block">
+        <img src="https://developer.android.com/images/brand/pt-br_generic_rgb_wo_45.png"
+             alt="Disponível no Google Play" style="height:52px;width:auto">
+      </a>
+
+      <a href="https://apps.apple.com/br/app/top-sports/id6736372061"
+         target="_blank" style="display:inline-block">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+             alt="Baixar na App Store" style="height:52px;width:auto">
+      </a>
+    </div>
+  </div>
+
+</div>
+<!-- ================================================================ -->
+    <!-- Ícones flutuantes -->
+    <div class="floating-icons">
+        <a href="https://www.instagram.com/topsportsfutebol/" target="_blank" class="icon insta" title="Instagram">Instagram</a>
+        <a href="https://wa.me/5541984039797" target="_blank" class="icon whats" title="WhatsApp">WhatsApp</a>
+        <a href="tel:+5541984039797" class="icon phone" title="Ligar">Ligar</a>
+    </div>
     <div class="page-wrapper">
      <header class="main-header-two">
     <div class="main-menu-two__top">
@@ -935,7 +1036,88 @@
 
 
 
-    
+        <style>
+        body {
+            font-family: sans-serif;
+            min-height: 150vh; /* Para ter scroll e ver o efeito fixed */
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .floating-icons {
+            position: fixed;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Espaçamento entre os ícones */
+        }
+
+        .floating-icons .icon {
+            width: 50px;
+            height: 50px;
+            background-repeat: no-repeat;
+            background-position: center;
+            /* background-size: contain; é o padrão agora para a maioria */
+            background-size: contain; 
+            transition: transform 0.2s ease;
+            display: block; /* Garante que o <a> ocupe o espaço definido */
+            text-indent: -9999px; /* Esconde o texto do link, se houver */
+        }
+
+        /* Efeito hover para todos os ícones */
+        .floating-icons .icon:hover {
+            transform: scale(1.1);
+        }
+
+        /* Ícones de Instagram e WhatsApp: Sem fundo, sem borda arredondada - NÃO ALTERAR */
+        .insta, .whats {
+            background-color: transparent !important; 
+            border-radius: 0 !important; 
+            box-shadow: none !important; 
+            border: none !important; 
+        }
+
+        .insta {
+            background-image: url('https://cdn-icons-png.flaticon.com/512/2111/2111463.png');
+        }
+
+        .whats {
+            background-image: url('https://cdn-icons-png.flaticon.com/512/733/733585.png');
+        }
+
+        /* Telefone com fundo vermelho e ícone branco */
+        .phone {
+            background-color: #f44336; /* Fundo vermelho */
+            /* Nova URL para ícone de telefone branco com fundo transparente */
+            background-image: url('social/tel.png'); 
+            background-size: 55% auto; /* Ajustado para o ícone ficar bem visível no círculo */
+            background-position: center;
+            border-radius: 50%; /* Deixa o fundo vermelho circular */
+            box-shadow: none; 
+            border: none !important; 
+        }
+
+        /* Ícones das Lojas de Aplicativos - Agora sem fundo/borda CSS, apenas o logo */
+        .playstore {
+            background-image: url('https://cdn-icons-png.flaticon.com/512/888/888857.png'); /* Logo da Play Store com fundo transparente */
+            background-color: transparent !important; /* Garantir sem cor de fundo */
+            border-radius: 0 !important; /* Garantir sem borda arredondada */
+            box-shadow: none !important; /* Garantir sem sombra */
+            background-size: 80% auto; /* Ajuste para o logo da Play Store ficar bom */
+        }
+
+        .applestore {
+             /* Logo da Apple Store com fundo transparente */
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/App_Store_%28iOS%29.svg/2048px-App_Store_%28iOS%29.svg.png');
+            background-color: transparent !important; /* Garantir sem cor de fundo */
+            border-radius: 0 !important; /* Garantir sem borda arredondada */
+            box-shadow: none !important; /* Garantir sem sombra */
+            background-size: 70% auto; /* Ajuste para o logo da Apple Store ficar bom */
+        }
+    </style>
     <script src="assets/js/script.js"></script>
 </body>
 
