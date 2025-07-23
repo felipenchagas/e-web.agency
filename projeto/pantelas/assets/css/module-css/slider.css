@@ -687,7 +687,7 @@
     display: block;
     overflow: hidden;
     background-color: var(--maroof-black);
-    padding: 55px 0 43px;
+
     z-index: 1;
 }
 
@@ -740,7 +740,7 @@
 }
 
 .banner-one__title {
-    font-size: 80px;
+    font-size: 40px;
     color: var(--maroof-white);
     font-weight: 900;
     line-height: 80px;

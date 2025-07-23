@@ -43,7 +43,7 @@
 
 body {
   font-family: var(--maroof-font);
-  font-size: 20px;
+  /* font-size: 20px; -tamanho fonte corpo */
   line-height: 30px;
   font-weight: 300;
   color: var(--maroof-gray);
@@ -100,7 +100,6 @@ h6 {
 p {
   margin: 0;
   text-indent: 30px; /* Recuo na primeira linha */
-  text-align: justify; /* Justifica o texto */
 }
 
 
@@ -216,9 +215,98 @@ ul {
   border-radius: 14px;
 }
 
+/* -------- lâmina produtos -------- */
+.section-pad{padding:80px 0;}
+#produtos .ttl-main{
+  text-transform:uppercase;
+  font-size:clamp(22px,3vw,36px);
+  font-weight:700;
+  text-align:center;
+  margin:0 0 12px;
+}
+#produtos .ttl-sub{
+  text-transform:uppercase;
+  font-size:clamp(18px,2.2vw,26px);
+  font-weight:700;
+  text-align:center;
+  margin:0 0 48px;
+  position:relative;
+}
+#produtos .ttl-sub span{
+  border-bottom:4px solid #e53935; /* mesma cor do botão */
+  padding-bottom:6px;
+}
+
+.grid-prod{
+  display:grid;
+  gap:40px 32px;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+}
+
+.prod-card{
+  background:#fff;
+  border-radius:12px;
+  padding:24px 24px 32px;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+
+.prod-img{
+  width:100%;
+  height:170px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 0 20px;
+}
+.prod-img img{
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+}
+
+.prod-title{
+  font-size:20px;
+  font-weight:700;
+  margin:0 0 12px;
+}
+
+.prod-txt{
+  font-size:16px;
+  line-height:1.55;
+  color:#444;
+  margin:0 0 24px;
+  flex:1; /* empurra o botão pra base */
+}
+
+.btn-red{
+  display:inline-block;
+  padding:14px 32px;
+  background:#e53935;
+  color:#fff;
+  border-radius:8px;
+  font-weight:600;
+  text-transform:capitalize;
+  transition:opacity .2s ease;
+  margin-top:auto;
+}
+.btn-red:hover{opacity:.85;}
+/* -------- /lâmina produtos -------- */
+
+/* responsivo fino (se quiser tudo 2 colunas tablets) */
+@media(max-width:768px){
+  .grid-prod{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:520px){
+  .grid-prod{grid-template-columns:1fr;}
+}
+
+
 .section-title__title {
   color: var(--maroof-black);
-  font-size: 59px;
+  /* font-size: 59px; -tamanho fonte corpo */
   line-height: 57px;
   font-weight: 700;
   
