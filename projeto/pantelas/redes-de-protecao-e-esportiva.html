@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -15,8 +15,6 @@
     
     
     
-
-
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/animate.min.css">
@@ -87,7 +85,7 @@
                             </div>
                             <div class="form-inner">
                                 <h4>Orçamento</h4>
-                                <form action="assets/inc/sendemail.php" class="contact-form-validated" novalidate="novalidate">
+                                <form action="#" class="contact-form-validated" novalidate="novalidate">
                                     <div class="form-group">
                                         <input type="text" name="name" placeholder="Name" required="">
                                     </div>
@@ -162,28 +160,198 @@
                         <div class="main-menu-two__main-menu-box">
                             <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
   <ul class="main-menu__list">
-    <!-- Item 1: Home -->
+      <li><a href="index">Início</a></li>
+    
+    <!-- Item 2: A Empresa -->
+    <li><a href="empresa">A Empresa</a></li>
+    
+    <!-- Item 3: Produtos (menu principal com submenus) -->
 <li class="has-dropdown">
   <a href="produtos">Produtos</a>
   <ul class="sub-menu">
-    <li><a href="tela-losangular">Tela Losangular</a></li>
-    <li><a href="tela-ondulada">Tela Ondulada</a></li>
-    <li><a href="tela-eletrosoldada">Tela Eletrosoldada</a></li>
-    <li><a href="tela-de-protecao">Tela de Proteção</a></li>
-    <li><a href="telas-diversas">Telas Diversas</a></li>
-    <li><a href="arames">Arames</a></li>
-    <li><a href="redes">Redes</a></li>
+
+    <!-- 1) Tela Losangular -->
+    <li class="has-dropdown">
+      <a href="#">Tela Losangular</a>
+      <ul class="sub-menu">
+        <li><a href="tela-losangular-revestida">Tela Losangular Revestida</a></li>
+        <li><a href="tela-losangular-galvanizada">Tela Losangular Galvanizada</a></li>
+      </ul>
+    </li>
+
+
+    <!-- 3) Tela Eletrosoldada -->
+    <li class="has-dropdown">
+      <a href="#">Tela Eletrosoldada</a>
+      <ul class="sub-menu">
+        <li><a href="telas-eletrosoldadas-galvanizadas">Eletrosoldadas Galvanizadas</a></li>
+        <li><a href="telas-eletrosoldadas-fortinet">Fortinet</a></li>
+        <li><a href="telas-eletrosoldadas-practica">Practica</a></li>
+      </ul>
+    </li>
+
+    <!-- 4) Tela de Proteção -->
+    <li class="has-dropdown">
+      <a href="tela-de-protecao">Tela de Proteção</a>
+      <ul class="sub-menu">
+        <li><a href="tela-mosquiteira">Tela Mosquiteira</a></li>
+        <li><a href="redes-de-protecao">Telas para Janelas</a></li>
+        <li><a href="telas-de-sombreamento">Telas de Sombreamento</a></li>
+      </ul>
+    </li>
+
+    <!-- 5) Telas Diversas -->
+    <li class="has-dropdown">
+      <a href="telas-diversas">Telas Diversas</a>
+      <ul class="sub-menu">
+        <li><a href="telas-diversas-belinox">Diversas Belinox</a></li>
+        <li><a href="telas-diversas-estuque">Diversas Estuque</a></li>
+        <li><a href="telas-diversas-hexagonal">Diversas Hexagonal</a></li>
+        <li><a href="telas-plasticas-diversas">Telas Plásticas Diversas</a></li>
+        <li><a href="telas-diversas-tecida">Diversas Tecida</a></li>
+      </ul>
+    </li>
+
+    <!-- 6) Arames -->
+    <li class="has-dropdown">
+      <a href="arames">Arames</a>
+      <ul class="sub-menu">
+        <li><a href="arame-farpado">Arame Farpado</a></li>
+        <li><a href="arame-liso-culturas-aereas">Arame Liso para Culturas Aéreas</a></li>
+        <li><a href="arame-de-aco-inox">Arame de Aço Inox</a></li>
+        <li><a href="arame-liso">Arame Liso</a></li>
+      </ul>
+    </li>
+
+    <!-- 7) Redes -->
+    <li class="has-dropdown">
+      <a href="redes-de-protecao-e-esportiva">Redes</a>
+      <ul class="sub-menu">
+        <li><a href="redes-de-protecao">Redes de Proteção</a></li>
+        <li><a href="redes-esportivas">Redes Esportivas</a></li>
+      </ul>
+    </li>
+
+    <!-- 8) Alambrados -->
     <li><a href="alambrados">Alambrados</a></li>
-    <li><a href="gradil">Gradil</a></li>
-    <li><a href="cercamento">Cercamento</a></li>
-    <li><a href="concertina">Concertina</a></li>
-    <li><a href="grama-sintetica">Grama Sintética</a></li>
-    <li><a href="quadras-esportivas">Quadras Esportivas</a></li>
-    <li><a href="estruturas-metalicas">Estruturas Metálicas</a></li>
-    <li><a href="equipamentos-esportivos">Equipamentos Esportivos</a></li>
+
+    <!-- 9) Gradil -->
+    <li class="has-dropdown">
+      <a href="gradil-eletrosoldado">Gradil</a>
+      <ul class="sub-menu">
+        <li><a href="gradil-painel">Painel</a></li>
+      </ul>
+    </li>
+
+    <!-- 10) Cercamento -->
+    <li class="has-dropdown">
+      <a href="cercamento">Cercamento</a>
+      <ul class="sub-menu">
+        <li><a href="cercamentos-postes-metalicos">Postes Metálicos</a></li>
+        <li><a href="cercamento-losangular">Losangular</a></li>
+        <li><a href="telas-eletrosoldada">Eletrosoldadas</a></li>
+        <li><a href="redes-de-protecao-e-esportiva">Rede Laminada</a></li>
+      </ul>
+    </li>
+
+    <!-- 11) Concertina -->
+    <li class="has-dropdown">
+      <a href="concertina">Concertina</a>
+      <ul class="sub-menu">
+        <li><a href="concertina-helicoidal">Helicoidal</a></li>
+        <li><a href="concertina-clipada">Clipada</a></li>
+        <li><a href="redes-de-protecao-e-esportiva">Rede Laminada</a></li>
+      </ul>
+    </li>
+
+    <!-- 12) Grama Sintética -->
+    <li class="has-dropdown">
+      <a href="grama-sinteticas">Grama Sintética</a>
+      <ul class="sub-menu">
+        <li><a href="grama-sinteticas">Futebol</a></li>
+        <li><a href="grama-sintetica-de-golfe">Golfe</a></li>
+        <li><a href="grama-sinteticas">Paisagismo</a></li>
+        <li><a href="grama-sinteticas">Decorativa</a></li>
+      </ul>
+    </li>
+
+    <!-- 13) Quadras Esportivas -->
+    <li class="has-dropdown">
+      <a href="quadras-esportivas">Quadras Esportivas</a>
+      <ul class="sub-menu">
+        <li><a href="quadra-de-futebol-society">Futebol society</a></li>
+        <li><a href="quadras-poliesportivas">Poliesportivas</a></li>
+        <li><a href="estrutura-metalica-ginasio">Estrutura Metálica para Ginásio</a></li>
+        <li><a href="coberturas-para-quadras-galpoes-barracoes">Coberturas para Quadras, Galpões e Barracões</a></li>
+      </ul>
+    </li>
+
+    <!-- 14) Estruturas Metálicas -->
+    <li class="has-dropdown">
+      <a href="estrutura-metalica">Estruturas Metálicas</a>
+      <ul class="sub-menu">
+        <li><a href="estruturas-metalicas-ginasios">Para ginásios</a></li>
+        <li><a href="estruturas-metalicas-coberturas">Para coberturas</a></li>
+        <li><a href="estruturas-metalicas-barracoes">Para barracões</a></li>
+        <li><a href="estrutura-metalicas-galpoes">Para galpões</a></li>
+        <li><a href="coberturas-para-quadras-galpoes-barracoes">Cobertura Metálica</a></li>
+      </ul>
+    </li>
+
+    <!-- 15) Equipamentos (Esportivos) -->
+    <li class="has-dropdown">
+      <a href="equipamentos-esportivos">Equipamentos</a>
+      <ul class="sub-menu">
+        <li><a href="equipamentos-esportivos-estrutura-para-basquete">Estrutura para basquete</a></li>
+        <li><a href="equipamentos-esportivos-tabelas-de-basquete">Tabelas de basquete</a></li>
+        <li><a href="equipamentos-esportivos-traves-de-futebol">Traves de futebol</a></li>
+      </ul>
+    </li>
+
+    <!-- 16) Outros (Ferragens e cia) -->
+    <li class="has-dropdown">
+      <a href="ferragens">Outros</a>
+      <ul class="sub-menu">
+        <li><a href="cabos-de-aco">Cabos de Aço</a></li>
+        <li><a href="ferragens">Ferragens Variadas</a></li>
+        <li><a href="cordas">Cordas</a></li>
+      </ul>
+    </li>
+
+  </ul>
+</li>
+<li class="has-dropdown">
+  <a href="#">Redes Sociais</a>
+  <ul class="sub-menu">
+    <!-- Categoria: Arames -->
+    <li class="has-dropdown">
+      <a href="https://www.instagram.com/pantelasbr">
+        <span>Instagram &nbsp;<i class="icon-instagram"></i></span>
+      </a>
+      <a href="https://www.facebook.com/pantelas.cwb">
+        Facebook &nbsp;<i class="icon-facebook-f"></i>
+      </a>
+    </li>
   </ul>
 </li>
 
+    
+    <li><a href="obras">Obras</a></li>
+    <li><a href="contato">Contato</a></li>
+  </ul>
+                        </div>
+                        <div class="main-menu-two__search-btn-box">
+                            
+                            <div class="main-menu-two__btn-box">
+                                <a href="contato" class="thm-btn-two main-menu-two__btn">Solicitar Orçamento<span class="icon-dubble-arrow-right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
         <!--Page Header Start-->
 <section class="page-header">
     <div class="page-header__bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg);">
