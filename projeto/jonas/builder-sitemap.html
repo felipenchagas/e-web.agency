@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<title>builder sitemap offline</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+ body{background:#0b1020;color:#e5e7eb;font-family:sans-serif;margin:0}
+ .wrap{max-width:1100px;margin:32px auto;padding:0 16px}
+ .card{background:#111827;border-radius:10px;padding:16px}
+ input,select,button{margin:4px;padding:6px;border-radius:6px;border:1px solid #333;background:#0b142a;color:#e5e7eb}
+ button{cursor:pointer}
+ details{background:#0b142a;margin:6px 0;border-radius:6px}
+ summary{padding:8px;cursor:pointer;font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <h1>builder sitemap offline</h1>
+ <div class="card">
+   <input id="file" type="file" multiple accept=".xml">
+   <select id="mode">
+     <option value="seg1">1º segmento</option>
+     <option value="seg2">2º segmento</option>
+     <option value="domain">domínio</option>
+   </select>
+   <button id="load">carregar</button>
+   <button id="gen">GERAR HTML FINAL</button>
+   <div id="status" style="margin-top:6px"></div>
+   <div id="tree" style="margin-top:10px"></div>
+ </div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+let urls=[],cats={};
+
+$("load").onclick=async()=>{
+  const files=[...$("file").files];
+  if(!files.length){alert("selecione 1+ XML");return;}
+  urls=[];
+  for(const f of files){
+    const txt=await f.text();
+    const doc=new DOMParser().parseFromString(txt,"application/xml");
+    doc.querySelectorAll("urlset url loc").forEach(l=>{const t=l.textContent.trim(); if(t) urls.push(t);});
+    doc.querySelectorAll("sitemapindex sitemap loc").forEach(l=>{const t=l.textContent.trim(); if(t) urls.push(t);});
+  }
+  buildCats();
+  render();
+};
+
+$("gen").onclick=()=>{
+  if(!Object.keys(cats).length){alert("carregue primeiro");return;}
+  const html=makeFinal();
+  const blob=new Blob([html],{type:"text/html"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);
+  a.download="sitemap-categorias.html";
+  a.click();
+  URL.revokeObjectURL(a.href);
+};
+
+function buildCats(){
+  cats={};
+  const mode=$("mode").value;
+  for(const u of urls){
+    let key="raiz";
+    try{
+      if(/^https?:\/\//i.test(u)){
+        const obj=new URL(u);
+        if(mode==="domain") key=obj.host;
+        else{
+          const segs=obj.pathname.split("/").filter(Boolean);
+          key=(mode==="seg2"?segs[1]:segs[0])||"raiz";
+        }
+      }else{
+        const segs=u.split("/").filter(Boolean);
+        key=(mode==="seg2"?segs[1]:segs[0])||"raiz";
+      }
+    }catch(e){}
+    (cats[key]=cats[key]||[]).push(u);
+  }
+  // sort
+  for(const k of Object.keys(cats)){ cats[k].sort(( a,b)=>a.localeCompare(b)); }
+  cats=Object.fromEntries(Object.entries(cats).sort((a,b)=>a[0].localeCompare(b[0])));
+}
+
+function render(){
+  $("tree").innerHTML="";
+  for(const [k,arr] of Object.entries(cats)){
+    const det=document.createElement("details");
+    const sum=document.createElement("summary");
+    sum.textContent=`${k} (${arr.length})`;
+    det.appendChild(sum);
+    const ul=document.createElement("ul");
+    arr.forEach(u=>{
+      const li=document.createElement("li");
+      const a=document.createElement("a");
+      a.href=u; a.target="_blank"; a.textContent=u;
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+    det.appendChild(ul);
+    $("tree").appendChild(det);
+  }
+  $("status").textContent=`${urls.length} urls em ${Object.keys(cats).length} categorias`;
+}
+
+function makeFinal(){
+  const blocks=Object.entries(cats).map(([k,a])=>`<details><summary>${escapeHtml(k)} (${a.length})</summary><ul>${
+    a.map(u=>`<li><a href="${escapeAttr(u)}" target="_blank" rel="noopener">${escapeHtml(u)}</a></li>`).join("")
+  }</ul></details>`).join("");
+  return `<!doctype html><html lang="pt-br"><head><meta charset="utf-8"><title>sitemap por categorias</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;max-width:1100px;margin:32px auto;padding:0 16px;background:#f8fafc;color:#0f172a}
+details{border:1px solid #e5e7eb;border-radius:8px;margin:8px 0;background:#fff}
+summary{padding:10px 12px;cursor:pointer;font-weight:600}
+ul{margin:8px 16px 16px}</style></head><body>
+<h1>sitemap por categorias</h1>${blocks}</body></html>`;
+}
+
+function escapeHtml(s){return String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[m]));}
+function escapeAttr(s){return String(s).replace(/"/g,'&quot;');}
+</script>
+</body>
+</html>

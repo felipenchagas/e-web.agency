@@ -685,6 +685,26 @@ ul {
   transition: all 500ms ease;
   z-index: 999;
 }
+/* Sub-submenu */
+.has-dropdown .sub-menu .has-dropdown > a::after {
+
+  float: right;
+  font-size: 12px;
+}
+
+.has-dropdown .sub-menu .sub-menu {
+  position: absolute;
+  left: 100%;   /* abre para o lado direito */
+  top: 0;
+  display: none;
+  background: #fff;
+  min-width: 200px;
+  z-index: 999;
+}
+
+.has-dropdown .sub-menu li:hover > .sub-menu {
+  display: block;
+}
 
 .main-menu {
   position: relative;
