@@ -55,6 +55,346 @@ body {
   z-index: 1;
 }
 
+/* ====== FORM CARD POLIDO ====== */
+.about-one__working-hour .about-one__working-hour-title{
+  margin-bottom: 18px;
+}
+
+/* cada “pílula” */
+.about-one__working-hour .about-item{
+  display:grid;
+  grid-template-columns: 42% 1fr;
+  gap:16px;
+  background:#fff;
+  border:1px solid #e6ecf0;
+  border-radius:18px;
+  padding:16px 18px;
+  margin-bottom:16px;
+  box-shadow:0 1px 0 rgba(2,6,23,.03);
+}
+.about-one__working-hour .about-item--submit{
+  grid-template-columns: 1fr;
+  padding:12px;
+}
+
+.about-one__working-hour .about-label{
+  color:#6b7a90;
+  font-weight:600;
+  line-height:1.25;
+  align-self:center;
+}
+.about-one__working-hour .about-item--textarea .about-label{
+  align-self:flex-start; margin-top:6px;
+}
+
+.about-one__working-hour .about-field{align-self:center}
+
+/* inputs consistentes */
+.about-one__working-hour .about-field input,
+.about-one__working-hour .about-field select,
+.about-one__working-hour .about-field textarea{
+  width:100%;
+  height:48px;
+  padding:12px 14px;
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+  background:#fff;
+  font-size:15px;
+  line-height:1.2;
+  outline:none;
+  transition:border .15s, box-shadow .15s;
+}
+.about-one__working-hour .about-field textarea{
+  height:auto; min-height:110px; resize:vertical;
+}
+
+/* foco bonito no container e no campo */
+.about-one__working-hour .about-item:focus-within{
+  border-color:#cfe0ff; box-shadow:0 0 0 4px rgba(30,102,255,.08);
+}
+.about-one__working-hour .about-field input:focus,
+.about-one__working-hour .about-field select:focus,
+.about-one__working-hour .about-field textarea:focus{
+  border-color:#1e66ff;
+}
+
+/* botão */
+.about-one__working-hour .about-btn{
+  display:inline-block; width:100%;
+  border:0; border-radius:12px;
+  padding:14px 18px;
+  background:#1e66ff; color:#fff; font-weight:700; cursor:pointer;
+}
+.about-one__working-hour .about-btn:hover{filter:brightness(.96)}
+
+/* mobile: label em cima */
+@media (max-width:576px){
+  .about-one__working-hour .about-item{grid-template-columns:1fr}
+}
+
+/* ====== SELECT: manter nativo e bonito ====== */
+/* seta padrão suave */
+.about-one__working-hour .about-field select{
+  appearance:none; -webkit-appearance:none; -moz-appearance:none;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='12' viewBox='0 0 20 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2l8 8 8-8' stroke='%2390a3b8' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 12px center;
+  background-size:16px 10px;
+  padding-right:40px;
+}
+
+/* ====== CASOS COM PLUGINS (se seu tema aplica) ====== */
+/* Nice Select */
+.about-one__working-hour .nice-select{
+  width:100%; height:48px; line-height:48px;
+  border:1px solid #e2e8f0; border-radius:12px; padding:0 42px 0 14px;
+  background:#fff; color:#0f172a;
+}
+.about-one__working-hour .nice-select:after{right:14px;border-color:#90a3b8}
+.about-one__working-hour .nice-select .list{
+  width:100%; background:#fff; color:#0f172a; border-radius:14px;
+  border:1px solid #e2e8f0; box-shadow:0 10px 30px rgba(2,6,23,.08);
+  left:0; right:0; padding:8px;
+}
+.about-one__working-hour .nice-select .option{
+  padding:12px 14px; border-radius:10px; margin:4px 2px;
+}
+.about-one__working-hour .nice-select .option.focus,
+.about-one__working-hour .nice-select .option.selected,
+.about-one__working-hour .nice-select .option:hover{
+  background:#eef5ff; color:#0f172a;
+}
+
+/* Choices.js */
+.about-one__working-hour .choices{width:100%}
+.about-one__working-hour .choices__inner{
+  min-height:48px; border-radius:12px; border:1px solid #e2e8f0;
+  padding:8px 12px; background:#fff;
+}
+.about-one__working-hour .choices__list--dropdown{
+  border-radius:14px; border:1px solid #e2e8f0; box-shadow:0 10px 30px rgba(2,6,23,.08);
+}
+
+
+/* ===== FORMULÁRIO (escopado) ===== */
+.about-one__working-hour .about-one__working-hour-title{ margin-bottom:18px; }
+.about-one__working-hour .about-one__working-hour-list{ margin:0; padding:0; }
+
+.about-one__working-hour .about-item{
+  display:grid; grid-template-columns:42% 1fr; gap:16px;
+  background:#fff; border:1px solid #e6ecf0; border-radius:18px;
+  padding:16px 18px; margin-bottom:16px; box-shadow:0 1px 0 rgba(2,6,23,.03);
+}
+.about-one__working-hour .about-item--submit{ grid-template-columns:1fr; padding:12px; }
+
+.about-one__working-hour .about-label{
+  color:#6b7a90; font-weight:600; line-height:1.25; align-self:center;
+}
+.about-one__working-hour .about-item--textarea .about-label{ align-self:flex-start; margin-top:6px; }
+.about-one__working-hour .about-field{ align-self:center; }
+
+.about-one__working-hour .about-field input,
+.about-one__working-hour .about-field select,
+.about-one__working-hour .about-field textarea{
+  width:100%; height:48px; padding:12px 14px;
+  border:1px solid #e2e8f0; border-radius:12px; background:#fff;
+  font-size:15px; line-height:1.2; outline:none; transition:border .15s, box-shadow .15s;
+}
+.about-one__working-hour .about-field textarea{ height:auto; min-height:110px; resize:vertical; }
+
+/* placeholders + texto digitado */
+.about-one__working-hour .about-field input::placeholder,
+.about-one__working-hour .about-field textarea::placeholder,
+.about-one__working-hour .about-field select:invalid{ color:#a6b2c3; opacity:1; font-weight:500; }
+.about-one__working-hour .about-field input,
+.about-one__working-hour .about-field textarea{ color:#1b2b40; }
+
+/* foco */
+.about-one__working-hour .about-item:focus-within{ border-color:#cfe0ff; box-shadow:0 0 0 4px rgba(30,102,255,.08); }
+.about-one__working-hour .about-field input:focus,
+.about-one__working-hour .about-field select:focus,
+.about-one__working-hour .about-field textarea:focus{ border-color:#1e66ff; }
+
+/* botão */
+.about-one__working-hour .about-btn{
+  display:inline-block; width:100%; border:0; border-radius:12px;
+  padding:14px 18px; background:#1e66ff; color:#fff; font-weight:700; cursor:pointer;
+}
+.about-one__working-hour .about-btn:hover{ filter:brightness(.96); }
+
+/* mobile */
+@media (max-width:576px){
+  .about-one__working-hour .about-item{ grid-template-columns:1fr; }
+}
+
+/* honeypot invisível */
+.hp-field{ position:absolute; left:-9999px; }
+
+/* ===== SELECT CUSTOM (sem plugin) ===== */
+.about-one__working-hour .svc{ position:relative; }
+
+/* botão do select – ocupa a linha e permite quebra de texto */
+.about-one__working-hour .svc-btn{
+  width:100%;
+  min-height:48px;
+  border:1px solid #e2e8f0; border-radius:12px; background:#fff;
+  padding:12px 44px 12px 14px; text-align:left; cursor:pointer;
+  font-size:15px; line-height:1.35; color:#1b2b40; position:relative;
+  transition:border .15s, box-shadow .15s; white-space:normal;
+}
+.about-one__working-hour .svc-btn .svc-text{
+  display:inline-block; white-space:normal; vertical-align:middle;
+}
+.about-one__working-hour .svc-btn.placeholder{ color:#a6b2c3; font-weight:500; }
+.about-one__working-hour .svc-btn:after{
+  content:""; position:absolute; right:14px; top:50%; width:10px; height:10px;
+  margin-top:-6px; border-right:2px solid #90a3b8; border-bottom:2px solid #90a3b8; transform:rotate(45deg);
+}
+.about-one__working-hour .svc.open .svc-btn{ border-color:#cfe0ff; box-shadow:0 0 0 4px rgba(30,102,255,.08); }
+
+/* lista de opções */
+.about-one__working-hour .svc-list{
+  position:absolute; z-index:50; left:0; right:0; top:calc(100% + 8px);
+  background:#fff; border:1px solid #e2e8f0; border-radius:14px;
+  box-shadow:0 18px 40px rgba(2,6,23,.14); padding:8px; display:none;
+}
+.about-one__working-hour .svc.open .svc-list{ display:block; }
+
+.about-one__working-hour .svc-opt{
+  display:flex; align-items:center; gap:10px; padding:12px;
+  border-radius:12px; cursor:pointer; transition:background .12s, transform .05s;
+}
+.about-one__working-hour .svc-opt:hover,
+.about-one__working-hour .svc-opt.active{ background:#eef5ff; }
+.about-one__working-hour .svc-opt:active{ transform:scale(.996); }
+.about-one__working-hour .svc-opt:focus{ outline:2px solid #cfe0ff; outline-offset:2px; }
+
+.about-one__working-hour .svc-ico{
+  width:36px; height:36px; border-radius:10px; display:flex; align-items:center; justify-content:center;
+  background:#f3f6ff; font-size:18px;
+}
+.about-one__working-hour .svc-label{ color:#0f172a; font-weight:600; line-height:1.25; }
+.about-one__working-hour .svc-btn .svc-ico{ margin-right:8px; display:none; }
+.about-one__working-hour .svc-btn.has-ico .svc-ico{ display:inline-flex; position:relative; top:4px; }
+
+/* ===== Serviço em largura total ===== */
+/* opção 1: só o campo ocupa as duas colunas */
+.about-one__working-hour .about-item--service .about-field{ grid-column:1 / -1; }
+/* e some com o label (se quiser mostrar, remova esta linha) */
+.about-one__working-hour .about-item--service .about-label{ display:none; }
+
+/* alternativa (use em vez das 2 acima): tornar o item 1 coluna */
+/* .about-one__working-hour .about-item--service{ grid-template-columns:1fr; } */
+
+/* ===== Bloqueio de plugins nesse campo ===== */
+.about-one__working-hour .about-item--service .nice-select,
+.about-one__working-hour .about-item--service .choices,
+.about-one__working-hour .about-item--service .choices__inner{ display:none !important; }
+.about-one__working-hour .about-item--service select.svc-select{
+  position:absolute !important; left:-9999px !important; width:1px; height:1px; opacity:0; pointer-events:none;
+}
+
+/* (se o site tiver nice-select/choices global, limite o estilo ao card) */
+.about-one__working-hour .nice-select{ width:100% }
+.about-one__working-hour .nice-select .list{ left:0 !important; right:0 !important; transform:none !important; text-align:left; }
+.about-one__working-hour .nice-select .current,
+.about-one__working-hour .nice-select .option{
+  text-align:left; white-space:normal; padding:0 14px; line-height:1.35;
+}
+.about-one__working-hour .nice-select .option:hover,
+.about-one__working-hour .nice-select .option.focus,
+.about-one__working-hour .nice-select .option.selected{ background:#eef5ff; color:#0f172a; }
+.about-one__working-hour .nice-select:after{ right:14px; border-color:#90a3b8; }
+
+/* ===== SERVICES – facelift ===== */
+.services-one{ --svc-accent:#0f2147; --svc-bg:#f6f9ff; --svc-border:rgba(15,33,71,.06) }
+.services-one .services-one__right > .row{ row-gap:28px }
+
+/* card */
+.services-one .services-one__single{
+  height:100%;
+  background:#fff;
+  border-radius:22px;
+  padding:22px 22px;
+  border:1px solid rgba(15,33,71,.06);
+  box-shadow:0 8px 28px rgba(15,33,71,.05);
+  transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.services-one .services-one__single:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 34px rgba(15,33,71,.08);
+  border-color:rgba(15,33,71,.10);
+}
+
+/* head: ícone + título lado a lado */
+.services-one .services-one__head{
+  display:flex; align-items:center; gap:14px; margin-bottom:12px;
+}
+
+/* ícone “flat” dentro de pill suave */
+.services-one .services-one__icon{
+  width:52px; height:52px;
+  display:flex; align-items:center; justify-content:center;
+  border-radius:14px;
+  background:var(--svc-bg);
+  box-shadow:inset 0 0 0 1px var(--svc-border);
+  flex:0 0 52px;
+}
+.services-one .services-one__icon [class^="icon-"],
+.services-one .services-one__icon [class*=" icon-"]{
+  font-size:26px; line-height:1; color:var(--svc-accent);
+}
+
+/* título ocupa o resto, sem pular linha à toa */
+.services-one .services-one__title{
+  margin:0; font-weight:800; font-size:20px; line-height:1.25;
+  color:#0f2147; flex:1 1 auto;
+}
+.services-one .services-one__title a{ color:inherit; text-decoration:none }
+.services-one .services-one__title a:hover{ text-decoration:underline }
+
+/* texto do card */
+.services-one .services-one__text{
+  margin:6px 0 0 0;
+  color:#5f6d83; line-height:1.6;
+}
+
+/* alinhar alturas entre colunas */
+@media (min-width:992px){
+  .services-one .services-one__right .row > [class*="col-"]{
+    display:flex;
+  }
+  .services-one .services-one__right .row > [class*="col-"] > .services-one__single{
+    width:100%;
+  }
+}
+
+/* micro-ajustes de espaçamento no container esquerdo */
+.services-one .services-one__left .section-title__tagline{
+  margin-bottom:10px;
+}
+.services-one .services-one__left .section-title__title{
+  margin-bottom:14px;
+}
+.services-one .services-one__left .services-one__text{
+  color:#5f6d83; margin-bottom:18px;
+}
+
+/* variações de cor por card (opcional) */
+.services-one__single-1 .services-one__icon{ background:#f3f8ff }
+.services-one__single-1 .services-one__icon [class^="icon-"]{ color:#1e66ff }
+.services-one__single:nth-child(2) .services-one__icon [class^="icon-"]{ color:#0ea5a4 }
+.services-one__single:nth-child(3) .services-one__icon [class^="icon-"]{ color:#7c3aed }
+.services-one__single:nth-child(4) .services-one__icon [class^="icon-"]{ color:#16a34a }
+.services-one__single:nth-child(5) .services-one__icon [class^="icon-"]{ color:#ef4444 }
+
+/* mobile respiro */
+@media (max-width:576px){
+  .services-one .services-one__single{ padding:18px 16px }
+  .services-one .services-one__icon{ width:48px;height:48px;border-radius:12px }
+  .services-one .services-one__icon [class^="icon-"]{ font-size:24px }
+  .services-one .services-one__title{ font-size:19px }
+}
 
 body.locked {
   overflow: hidden;
