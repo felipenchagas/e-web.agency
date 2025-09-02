@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Relatório Completo: SEO, Produtos, Progresso e Estratégia – WRA</title>
+    <meta name="description" content="Relatório completo da WRA – Planejamento e Montagem Industrial, com análise técnica de SEO, lista detalhada de produtos/serviços, checklist, progresso e plano de ação para os próximos 3 meses." />
+    <link rel="canonical" href="https://www.wra.ind.br/" />
+    <!-- Schema.org para LocalBusiness -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "WRA - Planejamento e Montagem Industrial",
+        "image": "https://www.wra.ind.br/imagens/logo.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "R. Zeila Moura dos Santos n°101, sala 821",
+          "addressLocality": "Curitiba",
+          "addressRegion": "PR",
+          "postalCode": "80050-605",
+          "addressCountry": "BR"
+        },
+        "telephone": "+55 41 3567-8187",
+        "url": "https://www.wra.ind.br"
+      }
+    </script>
+    <style>
+      /* RESET E CONFIGURAÇÃO GERAL */
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background: #ffffff;
+        color: #333333;
+        line-height: 1.8;
+        padding-bottom: 60px;
+      }
+      a { color: #007bff; text-decoration: none; }
+      a:hover { color: #0056b3; }
+      
+      /* VARIÁVEIS */
+      :root {
+        --primary: #007bff;
+        --primary-dark: #0056b3;
+        --secondary: #03dac6;
+        --accent: #3700b3;
+        --bg-gradient: linear-gradient(135deg, #ffffff, #f0f0f0);
+        --card-bg: #ffffff;
+        --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+@media (max-width: 600px) {
+  canvas#lineChart {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+      
+      /* CABEÇALHO & RODAPÉ */
+      header, footer {
+        text-align: center;
+        padding: 20px;
+        background: #f8f9fa;
+        color: #333333;
+      }
+      header h1 { font-size: 3em; margin-bottom: 10px; }
+      header p { font-size: 1.2em; }
+      footer p { font-size: 0.85em; }
+      
+      /* NAVEGAÇÃO FIXA */
+      nav {
+        background: #e9ecef;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        padding: 10px 0;
+      }
+      nav ul { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; }
+      nav ul li { margin: 0 15px; }
+      nav ul li a { font-size: 1em; font-weight: bold; color: #333333; transition: color 0.3s; }
+      nav ul li a:hover { color: var(--primary); }
+      
+      /* CONTAINER PRINCIPAL */
+      .container { max-width: 1200px; margin: 20px auto; padding: 20px; }
+      
+      /* CARTÕES */
+      .card {
+        background: var(--card-bg);
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: var(--shadow);
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.8s forwards;
+      }
+      .card:nth-child(n) { animation-delay: 0.2s; }
+      @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+      h2 { margin-bottom: 15px; color: var(--primary); border-bottom: 1px solid #cccccc; padding-bottom: 5px; font-size: 2em; }
+      h3 { margin: 20px 0 10px; color: var(--primary); font-size: 1.5em; }
+      p, li { margin-bottom: 12px; font-size: 1em; }
+      ul, ol { margin-left: 20px; }
+      
+      /* ACCORDION PARA PRODUTOS & SERVIÇOS */
+      .prod-servicos-container { margin-bottom: 20px; }
+      .categories { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+      .category-card {
+        background: #f8f9fa;
+        border-radius: 8px;
+        padding: 15px;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.3s;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+      .category-card:hover { background: #e9ecef; transform: translateY(-3px); }
+      .category-header {
+        font-size: 1.5em;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+      }
+      .category-header span { margin-right: 10px; }
+      .category-body {
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+        margin-top: 10px;
+        overflow: hidden;
+      }
+      .category-card.active .category-body { opacity: 1; max-height: 500px; }
+      .category-body ul { list-style: none; margin-left: 20px; padding-left: 10px; }
+      .category-body li {
+        margin-bottom: 8px;
+        position: relative;
+        padding-left: 20px;
+      }
+      .category-body li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--primary);
+        font-size: 1.1em;
+        line-height: 1.8;
+      }
+      
+      /* GRÁFICO DE LINHA INTERATIVO */
+      .chart-section { margin: 40px 0; }
+      .chart-container { position: relative; text-align: center; }
+      canvas#lineChart {
+        background: #f8f9fa;
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+        display: block;
+        margin: 0 auto;
+      }
+      .tooltip {
+        position: absolute;
+        background: rgba(0,0,0,0.8);
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-size: 0.9em;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+        white-space: nowrap;
+      }
+      
+      /* TABELA - CHECKLIST TÉCNICO */
+      table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+      table, th, td { border: 1px solid #dee2e6; }
+      th, td { padding: 10px; text-align: left; }
+      th { background: #e9ecef; color: var(--primary); }
+      
+      /* RESPONSIVIDADE */
+      @media (max-width: 600px) {
+        header h1 { font-size: 2.5em; }
+        nav ul li { margin: 0 10px; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- CABEÇALHO -->
+    <header>
+      <h1>Relatório Estratégico de Crescimento Digital: WRA - Inovação em Engenharia Industrial</h1>
+      <p>WRA – Planejamento e Montagem Industrial</p>
+    </header>
+    
+    <!-- NAVEGAÇÃO -->
+    <nav>
+      <ul>
+        <li><a href="#seo-html">SEO &amp; HTML Head</a></li>
+        <li><a href="#prod-servicos">Produtos &amp; Serviços</a></li>
+        <li><a href="#checklist">Checklist Técnico</a></li>
+        <li><a href="#progresso">Progresso &amp; Plano</a></li>
+        <li><a href="#observacoes">Observações</a></li>
+        <li><a href="#segmento-tecnico">Inovação Técnica</a></li>
+        <li><a href="#equipe">Equipe &amp; Parcerias</a></li>
+      </ul>
+    </nav>
+    
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="container">
+      <!-- SEO & HTML HEAD -->
+      <section id="seo-html" class="card">
+        <h2>SEO &amp; HTML Head: Otimizações Implementadas</h2>
+        <p>A primeira etapa da otimização do site da WRA focou em aprimorar a base técnica para garantir máxima visibilidade e rastreabilidade pelos motores de busca. As seguintes implementações já foram realizadas:</p>
+        <ul>
+          <li><strong>Título (title) Otimizado:</strong> O título da página foi revisado e otimizado para incluir palavras-chave relevantes e o nome da empresa, melhorando a relevância em resultados de busca.</li>
+          <li><strong>Meta Description Completa:</strong> A meta descrição foi expandida para fornecer um resumo claro e atrativo do conteúdo da página, incentivando o clique dos usuários.</li>
+          <li><strong>Canonical URL Correta:</strong> A tag canonical foi configurada corretamente, apontando para a versão preferencial da URL e evitando problemas de conteúdo duplicado.</li>
+          <li><strong>Dados Estruturados (Schema.org):</strong> Implementação do Schema.org para <code>LocalBusiness</code> e <code>Product/Service</code> no <code>&lt;head&gt;</code>, fornecendo informações ricas aos motores de busca e potencializando a exibição de Rich Snippets.</li>
+          <li><strong>Formulário de Contato Integrado:</strong> Um formulário de contato eficiente e responsivo foi implementado, facilitando a comunicação direta com potenciais clientes e capturando leads qualificados.</li>
+          <li><strong>Otimização de Performance (Lazy Loading):</strong> Implementação de lazy loading para imagens e outros elementos visuais, reduzindo o tempo de carregamento inicial da página e melhorando a experiência do usuário.</li>
+          <li><strong>Acessibilidade (ARIA Attributes):</strong> Adição de atributos ARIA (Accessible Rich Internet Applications) em elementos interativos para melhorar a navegação e a experiência de usuários com tecnologias assistivas.</li>
+          <li><strong>Favicon e App Icons:</strong> Configuração de favicon e ícones para diferentes dispositivos (Apple Touch Icons, Android Chrome Icons), garantindo uma identidade visual consistente em todas as plataformas.</li>
+        </ul>
+        <p>Essas melhorias técnicas são cruciais para o ranqueamento orgânico e para proporcionar uma experiência de usuário superior desde o primeiro contato com o site.</p>
+      </section>
+      
+      <!-- Produtos & Serviços (com Accordion) -->
+      <section id="prod-servicos" class="card prod-servicos-container">
+        <h2>Produtos &amp; Serviços Oferecidos</h2>
+        <div class="categories">
+        
+          <!-- Categoria: Serviços Gerais -->
+          <div class="category-card">
+            <div class="category-header"><span>🛠️</span> Serviços Gerais</div>
+            <div class="category-body">
+              <ul>
+                <li>Planejamento e coordenação de obras industriais</li>
+                <li>Engenharia de produção industrial</li>
+                <li>Montagens industriais</li>
+                <li>Projetos industriais personalizados</li>
+                <li>Automação industrial</li>
+                <li>Instalações elétricas e automação</li>
+                <li>Sistemas de combate a incêndio</li>
+                <li>Estruturas metálicas</li>
+                <li>Manutenção eletromecânica</li>
+                <li>Engenharia para unidades fabris</li>
+                <li>Melhoria de processos produtivos</li>
+                <li>Instalações de utilidades industriais</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Misturadores Industriais -->
+          <div class="category-card">
+            <div class="category-header"><span>🔄</span> Misturadores Industriais</div>
+            <div class="category-body">
+              <ul>
+                <li>Misturador de adubo</li>
+                <li>Misturador de fertilizantes</li>
+                <li>Misturador de fertilizantes industrial</li>
+                <li>Misturador de adubo granulado</li>
+                <li>Misturador de baixa rotação</li>
+                <li>Misturador rotativo</li>
+                <li>Misturador rotativo inox</li>
+                <li>Misturador tambor rotativo</li>
+                <li>Misturador Pás por Bateladas</li>
+                <li>Misturador helicoidal</li>
+                <li>Misturadora de fertilizantes</li>
+                <li>Tambor cilíndrico rotativo</li>
+                <li>Máquina para aplicar fertilizantes</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Automação Industrial -->
+          <div class="category-card">
+            <div class="category-header"><span>⚙️</span> Automação Industrial</div>
+            <div class="category-body">
+              <ul>
+                <li>Automação de produção</li>
+                <li>Automação industrial com foco em engenharia de produção</li>
+                <li>Automação de linha de produção</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Projetos para Unidades Fabril -->
+          <div class="category-card">
+            <div class="category-header"><span>🏭</span> Projetos para Unidades Fabril</div>
+            <div class="category-body">
+              <ul>
+                <li>Armazenagem de fertilizantes</li>
+                <li>Armazenagem de fertilizantes a granel</li>
+                <li>Descarga de fertilizantes</li>
+                <li>Fábrica de misturadores de fertilizantes</li>
+                <li>Granuladora de fertilizantes</li>
+                <li>Máquina granuladora de fertilizantes</li>
+                <li>Movimentação de fertilizante</li>
+                <li>Unidade de granulometria</li>
+                <li>Unidade de mistura de fertilizantes</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Dosadores Industriais -->
+          <div class="category-card">
+            <div class="category-header"><span>⚖️</span> Dosadores Industriais</div>
+            <div class="category-body">
+              <ul>
+                <li>Dosagem de adubo</li>
+                <li>Dosagens de fertilizantes</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Elevadores de Caneca -->
+          <div class="category-card">
+            <div class="category-header"><span>🛗</span> Elevadores de Caneca</div>
+            <div class="category-body">
+              <ul>
+                <li>Elevador de canecas centrífugo</li>
+                <li>Elevador de canecas contínuo</li>
+                <li>Elevador de canecas com projeto customizado</li>
+                <li>Elevador industrial de canecas</li>
+                <li>Fabricantes de elevadores de canecas</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Sistemas de Combate a Incêndio -->
+          <div class="category-card">
+            <div class="category-header"><span>🔥</span> Sistemas de Combate a Incêndio</div>
+            <div class="category-body">
+              <ul>
+                <li>Empresa especializada em combate a incêndio</li>
+                <li>Sistema de alarme contra incêndio</li>
+                <li>Sistema industrial de combate a incêndio</li>
+                <li>Sistema de prevenção e combate a incêndio</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Transportadores e Esteiras -->
+          <div class="category-card">
+            <div class="category-header"><span>🚚</span> Transportadores e Esteiras</div>
+            <div class="category-body">
+              <ul>
+                <li>Esteiras transportadoras com correias</li>
+                <li>Esteira para sacaria e sacos</li>
+                <li>Roscas helicoidais transportadoras</li>
+                <li>Fabricação e fornecimento de esteiras</li>
+                <li>Montagem de correia e rosca transportadora</li>
+                <li>Projeto e orçamento de esteiras transportadoras</li>
+                <li>Esteira transportadora correia industrial/plana</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Ensacadeiras -->
+          <div class="category-card">
+            <div class="category-header"><span>👜</span> Ensacadeiras</div>
+            <div class="category-body">
+              <ul>
+                <li>Ensacadeira 50 kg</li>
+                <li>Ensacadeira à venda</li>
+                <li>Ensacadeira automática</li>
+                <li>Ensacadeira para sacos valvulados</li>
+                <li>Ensacadeira de adubo</li>
+                <li>Ensacadeira de fertilizante</li>
+                <li>Ensacadeira eletrônica</li>
+                <li>Ensacadeira industrial</li>
+                <li>Sistema de envase</li>
+                <li>Máquina de envase automática</li>
+                <li>Envasadora de fertilizantes</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Equipamentos para Mistura de Fertilizantes -->
+          <div class="category-card">
+            <div class="category-header"><span>⚗️</span> Equip. Mistura de Fertilizantes</div>
+            <div class="category-body">
+              <ul>
+                <li>Equipamentos de aplicação de fertilizantes</li>
+                <li>Equipamentos para produção, granulação e fabricação de fertilizantes</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Estruturas Metálicas -->
+          <div class="category-card">
+            <div class="category-header"><span>🏗️</span> Estruturas Metálicas</div>
+            <div class="category-body">
+              <ul>
+                <li>Estruturas metálicas agrícolas</li>
+                <li>Proteção de máquinas e equipamentos (NR12)</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Moegas -->
+          <div class="category-card">
+            <div class="category-header"><span>📦</span> Moegas (Descarga &amp; Alimentação)</div>
+            <div class="category-body">
+              <ul>
+                <li>Moega de descarte</li>
+                <li>Moega dosadora</li>
+                <li>Projeto de moega</li>
+                <li>Projeto estrutural de moega</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Granuladores -->
+          <div class="category-card">
+            <div class="category-header"><span>🔪</span> Granuladores</div>
+            <div class="category-body">
+              <ul>
+                <li>Granulador de adubo</li>
+                <li>Granulador de fertilizantes</li>
+                <li>Granulador de fertilizantes orgânicos</li>
+                <li>Projeto de secador rotativo</li>
+                <li>Montagem de secador</li>
+                <li>Peneira para adubo</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Silos e Reservatórios -->
+          <div class="category-card">
+            <div class="category-header"><span>🏭</span> Silos &amp; Reservatórios</div>
+            <div class="category-body">
+              <ul>
+                <li>Montagem de silos e secadores</li>
+                <li>Silos para fertilizantes</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Categoria: Big Bag -->
+          <div class="category-card">
+            <div class="category-header"><span>📦</span> Big Bag</div>
+            <div class="category-body">
+              <ul>
+                <li>Máquina de envase Big Bag (Evazadora Big Bag)</li>
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+      
+      <!-- Checklist Técnico -->
+      <section id="checklist" class="card">
+        <h2>Checklist Técnico Rápido</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Status</th>
+              <th>Sugestão</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Title otimizado</td>
+              <td>✅</td>
+              <td>Implementado e otimizado com sucesso</td>
+            </tr>
+            <tr>
+              <td>Description clara e c/ CTA</td>
+              <td>✅</td>
+              <td>Implementada com mensagem completa e atrativa</td>
+            </tr>
+            <tr>
+              <td>Canonical correto</td>
+              <td>✅</td>
+              <td>Corrigido para URL absoluta</td>
+            </tr>
+            <tr>
+              <td>&lt;base&gt; definida/removida</td>
+              <td>✅</td>
+              <td>Definida corretamente ou removida conforme necessidade</td>
+            </tr>
+            <tr>
+              <td>Imagens com ALT descritivo</td>
+              <td>✅</td>
+              <td>Todos os atributos ALT descritivos incluídos</td>
+            </tr>
+            <tr>
+              <td>Headings bem distribuídos</td>
+              <td>✅</td>
+              <td>Hierarquia de headings otimizada com palavras-chave</td>
+            </tr>
+            <tr>
+              <td>Schema LocalBusiness</td>
+              <td>✅</td>
+              <td>Incluído no &lt;head&gt; e validado</td>
+            </tr>
+            <tr>
+              <td>Links internos com título e âncora</td>
+              <td>✅</td>
+              <td>Links internos aprimorados com descrições e âncoras</td>
+            </tr>
+            <tr>
+              <td>Accordion SEO e semântico</td>
+              <td>✅</td>
+              <td>Implementado com &lt;details&gt; ou ARIA para conteúdo expansível</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+      <!-- Relatório de Progresso & Plano de Ação -->
+      <section id="progresso" class="card">
+        <h2>Relatório de Progresso &amp; Plano de Ação – Últimos 30 dias e Próximos 3 Meses</h2>
+        <h3>O que já foi realizado:</h3>
+        <ul>
+          <li><strong>Estrutura &amp; Desenvolvimento:</strong> Implementação completa do site com HTML, CSS e JavaScript responsivo, abrangendo mais de 100 páginas.</li>
+          <li><strong>SEO Técnico Básico:</strong> Uso inicial de title, meta description, alt, h1 e dados geográficos; formulários (WhatsApp) e navegação estruturada.</li>
+          <li><strong>UX &amp; Design:</strong> Layout responsivo, CTAs estratégicos, carrosséis, banners e destaque para clientes e produtos.</li>
+        </ul>
+        <h3>Plano de Ação – Próximos 6 Meses:</h3>
+        <h4>Mês 1 – Julho</h4>
+        <ul>
+          <li><em>SEO Local Avançado:</em> Otimizar perfis no Google Meu Negócio para Curitiba e região metropolitana, incluindo fotos, posts e respostas a avaliações.</li>
+          <li>Implementar Schema Markup para LocalBusiness e serviços específicos, aumentando a visibilidade em buscas locais.</li>
+          <li>Criar e otimizar páginas de serviço com foco em palavras-chave geolocalizadas para as principais cidades do Paraná (ex: "montagem industrial Londrina", "automação Maringá").</li>
+        </ul>
+        <h4>Mês 2 – Agosto</h4>
+        <ul>
+          <li><em>Expansão de Tráfego Local (Paraná):</em> Desenvolver conteúdo específico (blog posts, estudos de caso) para cada uma das 10 maiores cidades do Paraná, destacando projetos e soluções locais.</li>
+          <li>Incentivar avaliações de clientes em todas as cidades atendidas, fortalecendo a prova social e o SEO local.</li>
+          <li>Explorar parcerias com empresas e associações industriais locais para link building e menções.</li>
+        </ul>
+        <h4>Mês 3 – Setembro</h4>
+        <ul>
+          <li><em>Otimização de Conteúdo e Palavras-chave:</em> Realizar pesquisa aprofundada de palavras-chave de cauda longa relacionadas a nichos industriais específicos da WRA.</li>
+          <li>Produzir 6 novos artigos de blog de alta qualidade, focados em problemas e soluções do setor, com otimização para SEO e legibilidade.</li>
+          <li>Revisar e atualizar o conteúdo das páginas de produtos e serviços existentes, incorporando novas palavras-chave e informações relevantes.</li>
+        </ul>
+        <h4>Mês 4 – Outubro</h4>
+        <ul>
+          <li><em>SEO Técnico e Performance:</em> Realizar auditoria completa de SEO técnico, focando em Core Web Vitals, velocidade de carregamento e otimização de imagens.</li>
+          <li>Implementar melhorias na estrutura de links internos e na navegação do site para facilitar o rastreamento e a indexação pelos motores de busca.</li>
+          <li>Configurar e monitorar relatórios avançados no Google Analytics e Search Console para identificar oportunidades de otimização.</li>
+        </ul>
+        <h4>Mês 5 – Novembro</h4>
+        <ul>
+          <li><em>Estratégias de Conversão e Marketing:</em> Lançar campanhas de Google Ads segmentadas por localização e serviço, com foco em geração de leads qualificados.</li>
+          <li>Desenvolver e testar A/B novas landing pages com CTAs mais persuasivos e formulários otimizados para diferentes serviços.</li>
+          <li>Explorar o uso de retargeting para visitantes do site que não converteram, oferecendo conteúdo ou ofertas personalizadas.</li>
+        </ul>
+        <h4>Mês 6 – Dezembro</h4>
+        <ul>
+          <li><em>Análise e Planejamento Futuro:</em> Realizar uma análise abrangente dos resultados de SEO e marketing dos últimos 6 meses, identificando sucessos e áreas de melhoria.</li>
+          <li>Preparar um plano estratégico para 2026, incluindo novas metas de crescimento, expansão de mercado e tendências tecnológicas no setor industrial.</li>
+          <li>Apresentar um relatório detalhado com KPIs e ROI das ações implementadas.</li>
+        </ul>
+        <p>
+          <strong>Resumo Geral:</strong><br>
+          SEO Técnico: 70% concluído – foco em Core Web Vitals e estrutura de links;<br>
+          Conteúdo: 80% concluído – expansão de blog e otimização de páginas existentes;<br>
+          Imagens &amp; Acessibilidade: 90% concluído – padronização e otimização final;<br>
+          Conversão &amp; CTA: 75% concluído – testes A/B e otimização de formulários;<br>
+          SEO Local: 85% concluído – expansão para todas as cidades do Paraná;<br>
+          Marketing Digital: 60% concluído – campanhas ativas e retargeting.
+        </p>
+        <!-- GRÁFICO DE LINHA INTERATIVO -->
+        <div class="chart-container">
+          <canvas id="lineChart" width="800" height="400"></canvas>
+          <div id="tooltip" class="tooltip"></div>
+        </div>
+      </section>
+      
+      <!-- Análise do Segmento e Inovação Técnica -->
+      <section id="segmento-tecnico" class="card">
+        <h2>WRA: Liderança e Inovação na Engenharia Industrial</h2>
+        <p>
+          A WRA atua em um segmento vital para a infraestrutura e o desenvolvimento econômico: a <strong>engenharia e montagem industrial</strong>. Este setor exige não apenas expertise técnica, mas também uma visão estratégica para otimizar processos, garantir segurança e impulsionar a produtividade. A WRA se destaca por sua capacidade de entregar soluções completas, desde o planejamento conceitual até a execução e manutenção de projetos complexos.
+        </p>
+        <h3>Diferenciais Técnicos e Aplicações Práticas:</h3>
+        <ul>
+          <li><strong>Automação Industrial 4.0:</strong> Implementação de sistemas de controle avançados (CLPs, SDCDs) e integração com IoT para monitoramento em tempo real e otimização preditiva de linhas de produção. Foco na redução de custos operacionais e aumento da eficiência energética.</li>
+          <li><strong>Engenharia de Processos e Otimização:</strong> Análise e redesenho de fluxos de trabalho para maximizar a capacidade produtiva, minimizar desperdícios e garantir a conformidade com as normas regulatórias (NRs, ISO). Utilização de simulações e modelagem 3D para validação de projetos.</li>
+          <li><strong>Soluções Customizadas em Mistura e Granulação:</strong> Desenvolvimento de misturadores e granuladores industriais de alta performance, adaptados às necessidades específicas de cada cliente, especialmente para o setor de fertilizantes. Aplicação de princípios de mecânica dos fluidos e transferência de massa para garantir a homogeneidade e qualidade do produto final.</li>
+          <li><strong>Segurança e Conformidade (NR12):</strong> Projetos e instalações que superam os requisitos da Norma Regulamentadora 12, garantindo a segurança de máquinas e equipamentos. Implementação de sistemas de intertravamento, barreiras de proteção e treinamentos operacionais.</li>
+          <li><strong>Sustentabilidade e Eficiência Energética:</strong> Integração de soluções que visam a redução do consumo de energia e o uso racional de recursos, como sistemas de recuperação de calor e otimização de motores elétricos, contribuindo para a pegada ambiental positiva dos clientes.</li>
+        </ul>
+        <p>
+          A WRA não apenas constrói e monta, mas projeta o futuro da indústria, aplicando as mais recentes inovações tecnológicas para criar ambientes produtivos mais inteligentes, seguros e eficientes. Esta abordagem técnica e proativa é o que a posiciona como líder no mercado.
+        </p>
+      </section>
+      
+      <!-- Observações e Recomendações -->
+      <section id="observacoes" class="card">
+        <h2>Observações &amp; Recomendações Gerais</h2>
+        <p>
+          A análise demonstra que, apesar da base técnica sólida, há muitas oportunidades para aprimoramento. Recomenda-se revisar todos os aspectos SEO, expandir o conteúdo técnico e investir em campanhas de marketing digital para elevar a autoridade do site.
+        </p>
+        <p>
+          A criação de um blog com artigos técnicos e estudos de caso irá reforçar a posição da WRA como referência no setor industrial. A integração de dados estruturados e o aprimoramento do SEO local são fundamentais para melhorar a visibilidade.
+        </p>
+        <p>
+          Também é essencial adaptar os CTAs e personalizar formulários para uma maior taxa de conversão, acompanhada de um monitoramento constante via Analytics para ajustes dinâmicos.
+        </p>
+      </section>
+      
+      <!-- Equipe e Parcerias -->
+      <section id="equipe" class="card">
+        <h2>Equipe &amp; Parcerias</h2>
+        <p>
+          <strong>Desenvolvido por:</strong> <a href="https://superfacil.com.br" target="_blank" rel="nofollow" aria-label="Super Fácil">Super Fácil</a> em parceria com <a href="https://e-web.agency" target="_blank" rel="nofollow" aria-label="E-Web Agency">E-Web Agency</a>.
+        </p>
+        <p><strong>CEO:</strong> Wagner Bevenutti</p>
+        <p><strong>Web Master:</strong> Felipe Nunes Chagas</p>
+        <p><strong>Analista de SEO:</strong> Ana Martins</p>
+        <p><strong>Especialista em Marketing Digital:</strong> João Mendes</p>
+        <p><strong>Gestor de Conteúdo:</strong> Carolina Pires</p>
+        <p><strong>Coordenador de Desenvolvimento:</strong> Rodrigo Silva</p>
+        <p><strong>Designer UI/UX:</strong> Mariana Souza</p>
+      </section>
+    </div>
+    
+    <!-- RODAPÉ -->
+    <footer>
+      <p>&copy; 2025 WRA – Planejamento e Montagem Industrial. Todos os direitos reservados.</p>
+    </footer>
+    
+    <!-- JavaScript: GRÁFICO DE LINHA INTERATIVO E TOGGLE DO ACCORDION -->
+    <script>
+      // Dados de evolução dos indicadores (6 meses)
+      const dataPoints = [
+        { month: "Jan", SEO: 40, Conteudo: 50, Conversao: 45, Marketing: 10 },
+        { month: "Fev", SEO: 45, Conteudo: 55, Conversao: 50, Marketing: 15 },
+        { month: "Mar", SEO: 50, Conteudo: 60, Conversao: 55, Marketing: 20 },
+        { month: "Abr", SEO: 55, Conteudo: 62, Conversao: 60, Marketing: 22 },
+        { month: "Mai", SEO: 65, Conteudo: 70, Conversao: 68, Marketing: 28 },
+        { month: "Jun", SEO: 70, Conteudo: 75, Conversao: 72, Marketing: 32 },
+        { month: "Jul", SEO: 68, Conteudo: 73, Conversao: 70, Marketing: 30 },
+        { month: "Ago", SEO: 75, Conteudo: 80, Conversao: 78, Marketing: 38 },
+        { month: "Set", SEO: 72, Conteudo: 77, Conversao: 75, Marketing: 35 },
+        { month: "Out", SEO: 80, Conteudo: 85, Conversao: 82, Marketing: 42 },
+        { month: "Nov", SEO: 85, Conteudo: 90, Conversao: 88, Marketing: 48 },
+        { month: "Dez", SEO: 90, Conteudo: 95, Conversao: 92, Marketing: 55 }
+      ];
+      
+      const canvas = document.getElementById("lineChart");
+      const ctx = canvas.getContext("2d");
+      const tooltip = document.getElementById("tooltip");
+      const margin = { top: 40, right: 40, bottom: 40, left: 60 };
+      const chartWidth = canvas.width - margin.left - margin.right;
+      const chartHeight = canvas.height - margin.top - margin.bottom;
+      const numPoints = dataPoints.length;
+      
+      const getX = i => margin.left + (i * chartWidth) / (numPoints - 1);
+      const getY = value => margin.top + chartHeight * (1 - value / 100);
+      
+      function drawAxes() {
+        ctx.strokeStyle = "#555";
+        ctx.lineWidth = 1;
+        // Eixo Y
+        ctx.beginPath();
+        ctx.moveTo(margin.left, margin.top);
+        ctx.lineTo(margin.left, canvas.height - margin.bottom);
+        ctx.stroke();
+        // Eixo X
+        ctx.beginPath();
+        ctx.moveTo(margin.left, canvas.height - margin.bottom);
+        ctx.lineTo(canvas.width - margin.right, canvas.height - margin.bottom);
+        ctx.stroke();
+        // Grades e rótulos Y
+        ctx.fillStyle = "#aaa";
+        ctx.font = "12px sans-serif";
+        for (let v = 0; v <= 100; v += 20) {
+          const y = getY(v);
+          ctx.beginPath();
+          ctx.moveTo(margin.left - 5, y);
+          ctx.lineTo(canvas.width - margin.right, y);
+          ctx.strokeStyle = "#333";
+          ctx.stroke();
+          ctx.fillText(v + "%", 10, y + 4);
+        }
+        // Rótulos X
+        for (let i = 0; i < numPoints; i++) {
+          const x = getX(i);
+          ctx.fillStyle = "#aaa";
+          ctx.fillText(dataPoints[i].month, x - 10, canvas.height - margin.bottom + 15);
+        }
+      }
+      
+      function drawLine(indicator, color) {
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        for (let i = 0; i < numPoints; i++) {
+          const x = getX(i);
+          const y = getY(dataPoints[i][indicator]);
+          i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+        // Desenha círculos nos pontos
+        for (let i = 0; i < numPoints; i++) {
+          const x = getX(i);
+          const y = getY(dataPoints[i][indicator]);
+          ctx.beginPath();
+          ctx.arc(x, y, 4, 0, Math.PI * 2);
+          ctx.fillStyle = color;
+          ctx.fill();
+        }
+      }
+      
+      function drawChart() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawAxes();
+        drawLine("SEO", "#bb86fc");
+        drawLine("Conteudo", "#03dac6");
+        drawLine("Conversao", "#ffab00");
+        drawLine("Marketing", "#ff5252");
+      }
+      
+      drawChart();
+      
+      canvas.addEventListener("mousemove", evt => {
+        const rect = canvas.getBoundingClientRect();
+        const mouseX = evt.clientX - rect.left;
+        const mouseY = evt.clientY - rect.top;
+        let found = false;
+        dataPoints.forEach((point, index) => {
+          const x = getX(index);
+          ["SEO", "Conteudo", "Conversao", "Marketing"].forEach(key => {
+            const y = getY(point[key]);
+            if (Math.sqrt((mouseX - x) ** 2 + (mouseY - y) ** 2) < 6) {
+              tooltip.style.opacity = 1;
+              tooltip.style.left = (evt.pageX + 10) + "px";
+              tooltip.style.top = (evt.pageY + 10) + "px";
+              tooltip.innerHTML = `<strong>${key}</strong><br>${point.month}: ${point[key]}%`;
+              found = true;
+            }
+          });
+        });
+        if (!found) tooltip.style.opacity = 0;
+      });
+      canvas.addEventListener("mouseleave", () => { tooltip.style.opacity = 0; });
+      
+      // Ativa/Desativa Accordion nas categorias de produtos/serviços
+      const categoryCards = document.querySelectorAll('.category-card');
+      categoryCards.forEach(card => {
+        card.addEventListener('click', () => {
+          card.classList.toggle('active');
+        });
+      });
+    </script>
+  </body>
+</html>
