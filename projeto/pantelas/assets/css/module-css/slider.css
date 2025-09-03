@@ -726,21 +726,19 @@
 .banner-one__title-box {
     position: relative;
     display: block;
-    margin-bottom: 21px;
-}
-
-.banner-one__sub-title {
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--maroof-base);
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    line-height: 12px;
     margin-bottom: 15px;
 }
 
+.banner-one__sub-title {
+    font-size: 25px;
+    color: var(--maroof-white);
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+}
+
 .banner-one__title {
-    font-size: 20px;
+    font-size: 30px;
     color: var(--maroof-white);
     font-weight: 900;
     line-height: 40px;
