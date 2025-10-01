@@ -10,8 +10,8 @@ window.elementorFrontendConfig = window.elementorFrontendConfig || {
     isScriptDebug: false
   },
   urls: {
-    assets: "../wp-content/plugins/elementor/assets/",
-    uploadUrl: "../wp-content/uploads"
+    assets: "https://advjonasstephani.com.br/wp-content/plugins/elementor/assets/",
+    uploadUrl: "https://advjonasstephani.com.br/wp-content/uploads"
   },
   settings: { page: {} },
   kit: {},
@@ -53,50 +53,50 @@ async function loadGroup(list){ for (const u of list) await loadScript(u); }
   try {
     // A) jQuery + UI
     await loadGroup([
-      "../wp-includes/js/jquery/jquery.min.js",
-      "../wp-includes/js/jquery/jquery-migrate.min.js",
-      "../wp-includes/js/jquery/ui/core.min.js"
+      "https://advjonasstephani.com.br/wp-includes/js/jquery/jquery.min.js",
+      "https://advjonasstephani.com.br/wp-includes/js/jquery/jquery-migrate.min.js",
+      "https://advjonasstephani.com.br/wp-includes/js/jquery/ui/core.min.js"
     ]);
     window.$ = window.jQuery = window.jQuery || window.$;
 
     // B) MediaElement
     await loadGroup([
-      "../wp-includes/js/mediaelement/mediaelement-and-player.min.js",
-      "../wp-includes/js/mediaelement/mediaelement-migrate.min.js",
-      "../wp-includes/js/mediaelement/wp-mediaelement.min.js"
+      "https://advjonasstephani.com.br/wp-includes/js/mediaelement/mediaelement-and-player.min.js",
+      "https://advjonasstephani.com.br/wp-includes/js/mediaelement/mediaelement-migrate.min.js",
+      "https://advjonasstephani.com.br/wp-includes/js/mediaelement/wp-mediaelement.min.js"
     ]);
 
     // C) libs WP comuns
     await loadGroup([
-      "../wp-includes/js/dist/vendor/react.min.js",
-      "../wp-includes/js/dist/vendor/react-dom.min.js",
-      "../wp-includes/js/dist/escape-html.min.js",
-      "../wp-includes/js/dist/element.min.js"
+      "https://advjonasstephani.com.br/wp-includes/js/dist/vendor/react.min.js",
+      "https://advjonasstephani.com.br/wp-includes/js/dist/vendor/react-dom.min.js",
+      "https://advjonasstephani.com.br/wp-includes/js/dist/escape-html.min.js",
+      "https://advjonasstephani.com.br/wp-includes/js/dist/element.min.js"
     ]);
 
-    // D) Elementor core"../wp-content/plugins/elementor/assets/js/webpack.runtime.min.js", (ordem crítica)
+    // D) Elementor core"https://advjonasstephani.com.br/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js", (ordem crítica)
     await loadGroup([      
-      "../wp-content/plugins/elementor/assets/js/frontend-modules.min.js",
-      "../wp-content/plugins/elementor/assets/js/frontend.min.js"
+      "https://advjonasstephani.com.br/wp-content/plugins/elementor/assets/js/frontend-modules.min.js",
+      "https://advjonasstephani.com.br/wp-content/plugins/elementor/assets/js/frontend.min.js"
     ]);
 
     // E) Tema Hello + Header/Footer Elementor
     await loadGroup([
-      "../wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js",
-      "../wp-content/plugins/header-footer-elementor/inc/js/frontend.js"
+      "https://advjonasstephani.com.br/wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js",
+      "https://advjonasstephani.com.br/wp-content/plugins/header-footer-elementor/inc/js/frontend.js"
     ]);
 
     // F) ElementsKit
     await loadGroup([
-      "../wp-content/plugins/elementskit-lite/widgets/init/assets/js/widget-scripts.js",
-      "../wp-content/plugins/elementskit-lite/widgets/init/assets/js/odometer.min.js",
-      "../wp-content/plugins/elementskit-lite/widgets/init/assets/js/animate-circle.min.js",
-      "../wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js"
+      "https://advjonasstephani.com.br/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widget-scripts.js",
+      "https://advjonasstephani.com.br/wp-content/plugins/elementskit-lite/widgets/init/assets/js/odometer.min.js",
+      "https://advjonasstephani.com.br/wp-content/plugins/elementskit-lite/widgets/init/assets/js/animate-circle.min.js",
+      "https://advjonasstephani.com.br/wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js"
     ]);
 
     // G) MetForm
     await loadGroup([
-      "../wp-content/plugins/metform/public/assets/js/htm.js"
+      "https://advjonasstephani.com.br/wp-content/plugins/metform/public/assets/js/htm.js"
     ]);
 
     if (DEBUG) console.log("Todos os scripts foram carregados na ordem correta.");
