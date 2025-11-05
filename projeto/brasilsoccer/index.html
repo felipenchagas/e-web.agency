@@ -103,26 +103,43 @@
   </div>
 
   <!-- Hero Section -->
-  <section id="home" class="hero flex items-center justify-center text-center text-white relative overflow-hidden">
-    <div class="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto relative z-10">
-      <h1 class="text-4xl md:text-6xl font-bold mb-6">
-        <span class="text-secondary">BRASIL</span> SOCCER
-      </h1>
-      <p class="text-xl md:text-2xl mb-8 opacity-90">O melhor espaço para futebol e lazer em Curitiba</p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="#contact" class="bg-secondary hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">Reserve Agora</a>
-        <a href="#services" class="bg-transparent hover:bg-white hover:text-primary text-white font-bold py-3 px-8 border-2 border-white rounded-full transition duration-300 transform hover:scale-105">Nossos Serviços</a>
-      </div>
-    </div>
-
-    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
-      <a href="#about" class="text-white" aria-label="Ir para seção Sobre">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-        </svg>
+<section id="home"
+  class="hero flex items-center justify-center text-center text-white relative overflow-hidden"
+  style="
+    background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
+                      url('fotos/quadra-noite.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  "
+>
+  <div class="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto relative z-10">
+    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+      <span class="text-secondary">BRASIL</span> SOCCER
+    </h1>
+    <p class="text-xl md:text-2xl mb-8 opacity-90">
+      O melhor espaço para futebol e lazer em Curitiba
+    </p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="#contact" class="bg-secondary hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+        Reserve Agora
+      </a>
+      <a href="#services" class="bg-transparent hover:bg-white hover:text-primary text-white font-bold py-3 px-8 border-2 border-white rounded-full transition duration-300 transform hover:scale-105">
+        Nossos Serviços
       </a>
     </div>
-  </section>
+  </div>
+
+  <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
+    <a href="#about" class="text-white" aria-label="Ir para seção Sobre">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </a>
+  </div>
+</section>
+
 
   <!-- About Section -->
   <section id="about" class="py-20 bg-white">
@@ -455,7 +472,7 @@
         <div>
           <h4 class="text-lg font-bold mb-4">Newsletter</h4>
           <p class="text-gray-400 mb-4">Inscreva-se para receber nossas promoções e novidades.</p>
-          <form class="flex" action="https://formsubmit.co/brasilsocceratendimento@gmail.com" method="POST">
+          <form class="flex" action="#" method="POST">
             <input type="hidden" name="_captcha" value="false" />
             <input type="email" name="email" required placeholder="Seu e-mail" class="px-4 py-2 rounded-l-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-secondary w-full" />
             <button type="submit" class="bg-secondary hover:bg-orange-600 text-white px-4 py-2 rounded-r-lg transition duration-300" aria-label="Enviar e-mail para newsletter"><i class="fas fa-paper-plane"></i></button>
