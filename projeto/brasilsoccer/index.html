@@ -63,33 +63,45 @@
 </head>
 <body class="bg-gray-50">
   <!-- Navigation -->
-  <nav class="fixed w-full bg-white shadow-lg z-50 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-20 items-center">
-        <div class="flex-shrink-0 flex items-center">
-          <div class="text-2xl font-bold text-primary">
-            <span class="text-secondary">BRASIL</span> SOCCER
-          </div>
-        </div>
-        <div class="hidden md:block">
-          <div class="ml-10 flex items-center space-x-8">
-            <a href="#home" class="text-gray-900 hover:text-primary px-3 py-2 font-medium">Home</a>
-            <a href="#about" class="text-gray-900 hover:text-primary px-3 py-2 font-medium">Sobre</a>
-            <a href="#services" class="text-gray-900 hover:text-primary px-3 py-2 font-medium">Serviços</a>
-            <a href="#events" class="text-gray-900 hover:text-primary px-3 py-2 font-medium">Eventos</a>
-            <a href="#contact" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-green-700 transition duration-300 font-medium">Contato</a>
-          </div>
-        </div>
-        <div class="md:hidden">
-          <button class="mobile-menu-button p-2 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu">
-            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+<nav class="fixed w-full bg-white/95 backdrop-blur shadow-md z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="h-20 flex items-center justify-between">
+      <!-- LOGO -->
+      <a href="/" class="text-2xl font-bold text-primary">
+        <span class="text-secondary">BRASIL</span> SOCCER
+      </a>
+
+      <!-- MENU -->
+      <div class="hidden md:flex items-center gap-8 relative">
+        <a href="index.html" class="hover:text-primary">Home</a>
+
+        <!-- Dropdown principal -->
+        <div class="group relative">
+          <button class="hover:text-primary flex items-center gap-1">
+            A BRASIL SOCCER
+            <svg class="w-3 h-3 mt-[2px]" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.29a.75.75 0 01-.02-1.08z" clip-rule="evenodd" />
             </svg>
           </button>
+
+          <!-- Dropdown -->
+          <div class="absolute left-0 mt-2 hidden group-hover:block bg-[#1E40AF] text-white rounded-md shadow-lg py-2 w-56 z-50">
+            <a href="sobre-nos.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">A Brasil Soccer</a>
+            <a href="locacao-e-mensalistas.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">Locação e Mensalistas</a>
+            <a href="campeonatos.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">Campeonatos</a>
+            <a href="escola-de-futebol.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">Escola de Futebol</a>
+            <a href="seja-um-anunciante.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">Seja um Anunciante</a>
+          </div>
         </div>
+
+        <a href="quadras.html" class="hover:text-primary">Quadras</a>
+        <a href="churrasqueira-e-eventos.html" class="hover:text-primary">Churrasqueira & Eventos</a>
+        <a href="contato.html" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-emerald-800 transition">Contato</a>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
+
 
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="mobile-menu hidden md:hidden fixed w-full bg-white shadow-lg z-40 pt-20">

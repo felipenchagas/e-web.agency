@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quem Somos | Brasil Soccer – Quadras e Eventos em Curitiba</title>
+
+  <!-- Tailwind CDN (dev). Em produção, compile Tailwind. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- SEO -->
+  <meta name="description" content="Conheça a história da Brasil Soccer: missão, valores, estrutura e equipe por trás do melhor espaço de futebol e lazer em Curitiba." />
+  <link rel="canonical" href="https://brasilsoccer.com.br/quem-somos" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Quem Somos | Brasil Soccer" />
+  <meta property="og:description" content="Nossa história, missão, visão e valores. Venha conhecer a Brasil Soccer." />
+  <meta property="og:url" content="https://brasilsoccer.com.br/quem-somos" />
+  <meta property="og:image" content="https://brasilsoccer.com.br/fotos/og-cover.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#00a651" />
+
+  <style>
+    :root { --primary:#00a651; --secondary:#f9a01b; }
+    body { font-family:'Poppins',sans-serif; scroll-behavior:smooth; }
+    .bg-primary{ background-color:var(--primary); }
+    .text-primary{ color:var(--primary); }
+    .bg-secondary{ background-color:var(--secondary); }
+    .text-secondary{ color:var(--secondary); }
+
+    /* Hero personalizável */
+    .hero{ min-height:60vh; background-size:cover; background-position:center; background-repeat:no-repeat; }
+    .card-hover:hover{ transform:translateY(-6px); box-shadow:0 20px 25px -5px rgba(0,0,0,.1), 0 10px 10px -5px rgba(0,0,0,.04); }
+
+    /* A11y/UX */
+    section[id]{ scroll-margin-top:88px; }
+    :focus-visible{ outline:3px solid var(--secondary); outline-offset:3px; }
+    #back-to-top.hidden{ display:none; }
+    img{ height:auto; }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- Nav -->
+<nav class="fixed w-full bg-white/95 backdrop-blur shadow-md z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="h-20 flex items-center justify-between">
+      <!-- LOGO -->
+      <a href="/" class="text-2xl font-bold text-primary">
+        <span class="text-secondary">BRASIL</span> SOCCER
+      </a>
+
+      <!-- MENU -->
+      <div class="hidden md:flex items-center gap-8 relative">
+        <a href="index.html" class="hover:text-primary">Home</a>
+
+        <!-- Dropdown principal -->
+        <div class="group relative">
+          <button class="hover:text-primary flex items-center gap-1">
+            A BRASIL SOCCER
+            <svg class="w-3 h-3 mt-[2px]" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.29a.75.75 0 01-.02-1.08z" clip-rule="evenodd" />
+            </svg>
+          </button>
+
+          <!-- Dropdown -->
+          <div class="absolute left-0 mt-2 hidden group-hover:block bg-[#1E40AF] text-white rounded-md shadow-lg py-2 w-56 z-50">
+            <a href="sobre-nos.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">A Brasil Soccer</a>
+            <a href="locacao-e-mensalistas.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">Locação e Mensalistas</a>
+            <a href="campeonatos.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">Campeonatos</a>
+            <a href="escola-de-futebol.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">Escola de Futebol</a>
+            <a href="seja-um-anunciante.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">Seja um Anunciante</a>
+          </div>
+        </div>
+
+        <a href="quadras.html" class="hover:text-primary">Quadras</a>
+        <a href="churrasqueira-e-eventos.html" class="hover:text-primary">Churrasqueira & Eventos</a>
+        <a href="contato.html" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-emerald-800 transition">Contato</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu hidden md:hidden fixed w-full bg-white shadow-lg z-40 pt-20">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a href="/" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-primary">Home</a>
+      <a href="/quem-somos" class="block px-3 py-2 text-base font-semibold text-primary">Quem Somos</a>
+      <a href="/servicos" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-primary">Serviços</a>
+      <a href="#equipe" class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-primary">Equipe</a>
+      <a href="#contato" class="block px-3 py-2 text-base font-medium text-white bg-primary rounded-full mx-3">Contato</a>
+    </div>
+  </div>
+
+  <!-- Hero Quem Somos -->
+  <section id="topo" class="hero flex items-center text-white relative"
+    style="background-image:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('/fotos/quem-somos-hero.jpg');">
+    <div class="px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto py-28">
+      <p class="uppercase tracking-widest text-secondary font-semibold mb-3">Quem Somos</p>
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Paixão por futebol, <span class="text-secondary">compromisso</span> com a experiência</h1>
+      <p class="mt-6 text-lg md:text-xl text-gray-100 max-w-3xl">Desde o primeiro apito, construímos um espaço onde jogar bola, reunir amigos e celebrar vitórias acontece com conforto, segurança e qualidade.</p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-4">
+        <a href="#historia" class="bg-secondary text-white font-bold py-3 px-8 rounded-full hover:bg-orange-600 transition">Nossa História</a>
+        <a href="#valores" class="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-primary transition">Missão e Valores</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumbs -->
+  <nav class="bg-gray-100 py-3" aria-label="Breadcrumb">
+    <ol class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center space-x-2 text-sm">
+      <li><a href="/" class="text-gray-600 hover:text-primary">Home</a></li>
+      <li class="text-gray-400">/</li>
+      <li class="text-gray-900 font-medium">Quem Somos</li>
+    </ol>
+  </nav>
+
+  <!-- História + Números -->
+  <section id="historia" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Nossa história</h2>
+          <p class="mt-4 text-gray-600">Começamos com uma ideia simples: unir esporte e convivência em um só lugar. Ao longo dos anos, evoluímos a estrutura, ampliamos o número de quadras, instalamos churrasqueiras e um bar pensado para assistir aos jogos com conforto.</p>
+          <p class="mt-4 text-gray-600">Hoje, somos referência em Curitiba para quem busca jogar, treinar, confraternizar e participar de eventos em um ambiente seguro e acolhedor.</p>
+          <div class="mt-6 grid grid-cols-3 gap-4 text-center">
+            <div class="bg-gray-50 p-4 rounded-xl"><div class="text-3xl font-extrabold text-primary">5</div><div class="text-sm text-gray-600">Quadras</div></div>
+            <div class="bg-gray-50 p-4 rounded-xl"><div class="text-3xl font-extrabold text-primary">6</div><div class="text-sm text-gray-600">Churrasqueiras</div></div>
+            <div class="bg-gray-50 p-4 rounded-xl"><div class="text-3xl font-extrabold text-primary">15+</div><div class="text-sm text-gray-600">Anos de experiência</div></div>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="fotos/quem-somos-estrutura.jpg" alt="Estrutura da Brasil Soccer com quadras e área social" width="1280" height="800" loading="lazy" decoding="async" class="rounded-2xl shadow-2xl w-full" />
+          <div class="absolute -bottom-6 -right-6 bg-secondary text-white p-6 rounded-xl shadow-xl">
+            <p class="font-semibold">Em frente ao Hospital do Trabalhador</p>
+            <p class="text-sm opacity-90">Fácil acesso • Estacionamento amplo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Missão, Visão, Valores -->
+  <section id="valores" class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Missão, Visão e Valores</h2>
+        <p class="mt-4 text-gray-600">O que nos guia dentro e fora de campo.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl p-8 shadow-lg card-hover">
+          <div class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mb-4"><i class="fas fa-bullseye"></i></div>
+          <h3 class="text-xl font-bold">Missão</h3>
+          <p class="mt-2 text-gray-600">Proporcionar experiências esportivas e sociais de qualidade, com hospitalidade e estrutura completa.</p>
+        </div>
+        <div class="bg-white rounded-xl p-8 shadow-lg card-hover">
+          <div class="w-12 h-12 bg-secondary text-primary rounded-lg flex items-center justify-center mb-4"><i class="fas fa-eye"></i></div>
+          <h3 class="text-xl font-bold">Visão</h3>
+          <p class="mt-2 text-gray-600">Ser o espaço mais lembrado de Curitiba quando o assunto é futebol, lazer e bons momentos.</p>
+        </div>
+        <div class="bg-white rounded-xl p-8 shadow-lg card-hover">
+          <div class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mb-4"><i class="fas fa-heart"></i></div>
+          <h3 class="text-xl font-bold">Valores</h3>
+          <ul class="mt-2 text-gray-600 space-y-2 list-disc list-inside">
+            <li>Respeito dentro e fora de campo</li>
+            <li>Segurança e conforto</li>
+            <li>Jogo limpo e espírito de equipe</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diferenciais -->
+  <section id="diferenciais" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Por que escolher a Brasil Soccer</h2>
+          <ul class="mt-6 space-y-4 text-gray-700">
+            <li class="flex"><i class="fas fa-shield-alt text-primary mr-3 mt-1"></i> Estrutura segura, limpa e bem iluminada</li>
+            <li class="flex"><i class="fas fa-parking text-primary mr-3 mt-1"></i> Estacionamento para mais de 200 carros</li>
+            <li class="flex"><i class="fas fa-tv text-primary mr-3 mt-1"></i> Bar com telões e transmissão dos principais jogos</li>
+            <li class="flex"><i class="fas fa-people-group text-primary mr-3 mt-1"></i> Eventos corporativos, aniversários e campeonatos</li>
+          </ul>
+          <a href="/servicos" class="inline-block mt-6 bg-primary text-white px-6 py-3 rounded-full hover:bg-green-700 transition">Conheça nossos serviços</a>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <img src="fotos/quadra-a.jpg" alt="Quadra de grama sintética" width="900" height="700" loading="lazy" decoding="async" class="rounded-xl shadow-md w-full h-48 object-cover" />
+          <img src="fotos/restaurante.jpg" alt="Área de churrasqueiras" width="900" height="700" loading="lazy" decoding="async" class="rounded-xl shadow-md w-full h-48 object-cover" />
+          <img src="fotos/bar-teloes.jpg" alt="Bar com telões" width="900" height="700" loading="lazy" decoding="async" class="rounded-xl shadow-md w-full h-48 object-cover" />
+          <img src="fotos/campeonato-festa.jpg" alt="Evento corporativo nas quadras" width="900" height="700" loading="lazy" decoding="async" class="rounded-xl shadow-md w-full h-48 object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipe -->
+  <section id="equipe" class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Nossa equipe</h2>
+        <p class="mt-2 text-gray-600">Pessoas que fazem a bola rolar todos os dias.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white rounded-xl shadow-lg p-6 text-center card-hover">
+          <img src="fotos/time-1.jpg" alt="Gerente de operações" width="400" height="400" loading="lazy" decoding="async" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover" />
+          <h3 class="font-semibold">Gerente de Operações</h3>
+          <p class="text-sm text-gray-600">Agenda de quadras, eventos e qualidade da experiência.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 text-center card-hover">
+          <img src="fotos/time-2.jpg" alt="Coordenador de Esportes" width="400" height="400" loading="lazy" decoding="async" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover" />
+          <h3 class="font-semibold">Coordenador de Esportes</h3>
+          <p class="text-sm text-gray-600">Tabelas, arbitragem e boas práticas de jogo.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 text-center card-hover">
+          <img src="fotos/time-3.jpg" alt="Chefe de Cozinha" width="400" height="400" loading="lazy" decoding="async" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover" />
+          <h3 class="font-semibold">Chefe de Cozinha</h3>
+          <p class="text-sm text-gray-600">Cardápio do bar e atendimento a eventos.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 text-center card-hover">
+          <img src="fotos/time-4.jpg" alt="Atendimento e Reservas" width="400" height="400" loading="lazy" decoding="async" class="w-28 h-28 rounded-full mx-auto mb-4 object-cover" />
+          <h3 class="font-semibold">Atendimento & Reservas</h3>
+          <p class="text-sm text-gray-600">O primeiro toque para a sua partida acontecer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Visita -->
+  <section class="py-16 bg-primary text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold">Venha nos conhecer</h2>
+          <p class="mt-3 opacity-95">Agende uma visita, traga seu time e aproveite para experimentar nosso cardápio.</p>
+        </div>
+        <div class="flex gap-4 md:justify-end">
+          <a href="#contato" class="bg-white text-primary font-bold px-6 py-3 rounded-full hover:bg-gray-100 transition">Falar com a equipe</a>
+          <a href="https://wa.me/5541984039747?text=Ol%C3%A1%20Brasil%20Soccer!%20Quero%20agendar%20uma%20visita." target="_blank" rel="nofollow noopener" class="bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-3 rounded-full transition"><i class="fab fa-whatsapp mr-2"></i>WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato compacto -->
+  <section id="contato" class="py-16 bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="text-3xl font-bold mb-4">Entre em contato</h2>
+          <p class="text-gray-300 mb-6">Tire dúvidas, peça orçamento ou reserve sua data.</p>
+          <form class="space-y-5" action="https://formsubmit.co/brasilsocceratendimento@gmail.com" method="POST">
+            <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
+            <input type="hidden" name="_captcha" value="false" />
+            <div class="grid sm:grid-cols-2 gap-4">
+              <input required name="name" type="text" placeholder="Seu nome" class="px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-secondary w-full" />
+              <input required name="email" type="email" placeholder="seu@email.com" class="px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-secondary w-full" />
+            </div>
+            <input name="subject" type="text" placeholder="Assunto" class="px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-secondary w-full" />
+            <textarea required name="message" rows="5" placeholder="Como podemos ajudar?" class="px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-secondary w-full"></textarea>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <button type="submit" class="w-full bg-secondary hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition">Enviar</button>
+              <a class="w-full inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition" href="https://wa.me/5541984039747?text=Ol%C3%A1%20Brasil%20Soccer!%20Quero%20reservar." target="_blank" rel="nofollow noopener"><i class="fab fa-whatsapp mr-2"></i> WhatsApp</a>
+            </div>
+          </form>
+        </div>
+        <div class="bg-gray-800 rounded-xl p-8">
+          <h3 class="text-2xl font-bold mb-6">Onde estamos</h3>
+          <div class="space-y-4 text-gray-300">
+            <p class="flex"><i class="fas fa-map-marker-alt text-secondary mr-3 mt-1"></i> Rua João Bettega, 1250 – Portão, Curitiba/PR – CEP 81050-030</p>
+            <p class="flex"><i class="fas fa-phone-alt text-secondary mr-3 mt-1"></i> (41) 98403-9747</p>
+            <p class="flex"><i class="fas fa-envelope text-secondary mr-3 mt-1"></i> brasilsocceratendimento@gmail.com</p>
+            <p class="flex"><i class="fas fa-clock text-secondary mr-3 mt-1"></i> Seg a Sex: 08:00–23:00 • Sáb e Dom: 08:00–00:00</p>
+          </div>
+          <div class="h-64 w-full mt-6 rounded-xl overflow-hidden">
+            <iframe title="Mapa Brasil Soccer" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.238040691633!2d-49.30282392434513!3d-25.4625506333666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce472f8f33f81%3A0x9e1bcd5b84794494!2sRua%20Jo%C3%A3o%20Bettega%2C%201250%20-%20Port%C3%A3o%2C%20Curitiba%20-%20PR%2C%2081050-030!5e0!3m2!1spt-BR!2sbr!4v1687206780422!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-2xl font-bold mb-4"><span class="text-primary">BRASIL</span> <span class="text-secondary">SOCCER</span></h3>
+          <p class="text-gray-400">O melhor espaço para futebol e lazer em Curitiba, com estrutura completa para seu entretenimento.</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold mb-4">Mapa do site</h4>
+          <ul class="space-y-2">
+            <li><a href="/" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="/quem-somos" class="text-gray-400 hover:text-white transition">Quem Somos</a></li>
+            <li><a href="/servicos" class="text-gray-400 hover:text-white transition">Serviços</a></li>
+            <li><a href="#equipe" class="text-gray-400 hover:text-white transition">Equipe</a></li>
+            <li><a href="#contato" class="text-gray-400 hover:text-white transition">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold mb-4">Serviços</h4>
+          <ul class="space-y-2">
+            <li class="text-gray-400">Quadras de Futebol</li>
+            <li class="text-gray-400">Churrasqueiras</li>
+            <li class="text-gray-400">Bar e Restaurante</li>
+            <li class="text-gray-400">Eventos Corporativos</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+          <p class="text-gray-400 mb-4">Receba novidades e promoções.</p>
+          <form class="flex" action="https://formsubmit.co/brasilsocceratendimento@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="email" name="email" required placeholder="Seu e-mail" class="px-4 py-2 rounded-l-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-secondary w-full" />
+            <button type="submit" class="bg-secondary hover:bg-orange-600 text-white px-4 py-2 rounded-r-lg transition" aria-label="Enviar e-mail para newsletter"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm">&copy; 2025 Brasil Soccer. Todos os direitos reservados.</p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="#" class="text-gray-400 hover:text-white transition" rel="nofollow noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-gray-400 hover:text-white transition" rel="nofollow noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/5541984039747" class="text-gray-400 hover:text-white transition" rel="nofollow noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <a href="#topo" class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition z-50 hidden" id="back-to-top" aria-label="Voltar ao topo">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+  </a>
+
+  <!-- JSON-LD: AboutPage + Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "Quem Somos",
+    "url": "https://brasilsoccer.com.br/quem-somos",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://brasilsoccer.com.br/"},
+        {"@type": "ListItem", "position": 2, "name": "Quem Somos", "item": "https://brasilsoccer.com.br/quem-somos"}
+      ]
+    },
+    "primaryImageOfPage": "https://brasilsoccer.com.br/fotos/quem-somos-hero.jpg"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsActivityLocation",
+    "name": "Brasil Soccer",
+    "url": "https://brasilsoccer.com.br/",
+    "image": "https://brasilsoccer.com.br/fotos/og-cover.jpg",
+    "telephone": "+55-41-98403-9747",
+    "email": "brasilsocceratendimento@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua João Bettega, 1250",
+      "addressLocality": "Curitiba",
+      "addressRegion": "PR",
+      "postalCode": "81050-030",
+      "addressCountry": "BR"
+    }
+  }
+  </script>
+
+  <!-- JS -->
+  <script>
+    const mobileBtn = document.querySelector('.mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const backToTop = document.getElementById('back-to-top');
+
+    backToTop?.classList.add('hidden');
+
+    mobileBtn?.addEventListener('click', () => {
+      const hidden = mobileMenu.classList.toggle('hidden');
+      mobileBtn.setAttribute('aria-expanded', String(!hidden));
+    });
+    mobileMenu?.addEventListener('click', (e) => {
+      if (e.target.closest('a')) { mobileMenu.classList.add('hidden'); mobileBtn?.setAttribute('aria-expanded','false'); }
+    });
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') { mobileMenu?.classList.add('hidden'); mobileBtn?.setAttribute('aria-expanded','false'); }
+    });
+    window.addEventListener('scroll', () => {
+      (window.pageYOffset > 300) ? backToTop?.classList.remove('hidden') : backToTop?.classList.add('hidden');
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (!target) return; e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+    document.querySelectorAll('img').forEach(img => {
+      if (!img.hasAttribute('loading')) img.loading = 'lazy';
+      if (!img.hasAttribute('decoding')) img.decoding = 'async';
+    });
+  </script>
+</body>
+</html>

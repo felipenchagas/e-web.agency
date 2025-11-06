@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Seja um Anunciante | Brasil Soccer</title>
+  <meta name="description" content="Anuncie nas quadras, no bar e nos eventos da Brasil Soccer. Formatos offline e digital, relatórios fotográficos e ativações no dia de jogo." />
+  <link rel="canonical" href="https://brasilsoccer.com.br/seja-um-anunciante.html" />
+
+  <!-- Tailwind (dev). Em produção, gere seu build para performance -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Favicons -->
+  <link rel="icon" href="/favicon.ico" sizes="any"/>
+  <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+  <meta name="theme-color" content="#00a651"/>
+
+  <style>
+    :root { --primary:#00a651; --secondary:#f9a01b; --menuBlue:#2f5cab; }
+    body{ font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+    .text-primary{ color:var(--primary) } .bg-primary{ background:var(--primary) }
+    .text-secondary{ color:var(--secondary) } .bg-secondary{ background:var(--secondary) }
+
+    .micro-hero{ background:#3b3b3b; color:#fff; padding:2.25rem 0; border-bottom:1px solid rgba(255,255,255,.08); }
+    .micro-kicker{ letter-spacing:.08em; color:var(--secondary); font-weight:700; font-size:.85rem }
+    .btn-pill{ border-radius:9999px; padding:.75rem 1.25rem; font-weight:700 }
+    .btn-primary{ background:var(--secondary); color:#111 }
+    .btn-primary:hover{ filter:brightness(.95) }
+    .btn-ghost{ border:1px solid rgba(255,255,255,.6); color:#fff }
+    .btn-ghost:hover{ background:#fff; color:#000 }
+    .card{ background:#fff; border-radius:16px; box-shadow:0 10px 25px rgba(0,0,0,.08); }
+    .card-edge{ border-left:4px solid var(--primary) }
+
+    /* Dropdown azul (desktop) */
+    .menu-parent{ position:relative }
+    .menu-panel{
+      position:absolute; left:0; top:100%; width:260px; padding:.5rem;
+      background:var(--menuBlue); border-radius:12px; box-shadow:0 15px 35px rgba(0,0,0,.35);
+      opacity:0; visibility:hidden; transform:translateY(8px); transition:.18s ease;
+    }
+    .menu-parent:focus-within .menu-panel,
+    .menu-parent:hover .menu-panel{ opacity:1; visibility:visible; transform:translateY(0) }
+    .menu-panel a{ display:block; color:#fff; padding:.75rem 1rem; border-radius:10px }
+    .menu-panel a:hover{ background:rgba(255,255,255,.1) }
+
+    /* Acessibilidade / UX */
+    section[id]{ scroll-margin-top:88px }
+    :focus-visible{ outline:3px solid var(--secondary); outline-offset:3px }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- NAV (único e corrigido) -->
+  <nav class="fixed inset-x-0 top-0 z-50 bg-white/95 backdrop-blur shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="h-20 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="index.html" class="text-2xl font-extrabold text-primary">
+          <span class="text-secondary">BRASIL</span> SOCCER
+        </a>
+
+        <!-- Desktop -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="hover:text-primary">Home</a>
+
+          <div class="menu-parent">
+            <button class="flex items-center gap-1 hover:text-primary" aria-haspopup="true" aria-expanded="false">
+              A BRASIL SOCCER
+              <svg class="w-3 h-3 mt-[2px]" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.29a.75.75 0 01-.02-1.08z" clip-rule="evenodd"/>
+              </svg>
+            </button>
+            <div class="menu-panel">
+              <a href="sobre-nos.html">A Brasil Soccer</a>
+              <a href="locacao-e-mensalistas.html">Locação e Mensalistas</a>
+              <a href="campeonatos.html">Campeonatos</a>
+              <a href="escola-de-futebol.html">Escola de Futebol</a>
+              <a href="seja-um-anunciante.html" aria-current="page">Seja um Anunciante</a>
+            </div>
+          </div>
+
+          <a href="quadras.html" class="hover:text-primary">Quadras</a>
+          <a href="churrasqueira-e-eventos.html" class="hover:text-primary">Churrasqueira & Eventos</a>
+          <a href="contato.html" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-emerald-800 transition">Contato</a>
+        </div>
+
+        <!-- Mobile -->
+        <button id="btnMobile" class="md:hidden p-2 text-gray-800" aria-controls="mMenu" aria-expanded="false" aria-label="Abrir menu">
+          <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <nav id="mMenu" class="hidden md:hidden bg-white border-t border-gray-200">
+      <ul class="px-4 py-4 space-y-2">
+        <li><a class="block px-3 py-2 rounded hover:bg-gray-50" href="index.html">Home</a></li>
+        <details class="group">
+          <summary class="list-none flex items-center justify-between px-3 py-2 rounded cursor-pointer hover:bg-gray-50">
+            <span>A BRASIL SOCCER</span>
+            <svg class="w-4 h-4 transition group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.29a.75.75 0 01-.02-1.08z" clip-rule="evenodd"/></svg>
+          </summary>
+          <div class="mt-1 ml-2 border-l border-gray-200">
+            <a href="sobre-nos.html" class="block pl-5 pr-3 py-2 rounded hover:bg-gray-50">A Brasil Soccer</a>
+            <a href="locacao-e-mensalistas.html" class="block pl-5 pr-3 py-2 rounded hover:bg-gray-50">Locação e Mensalistas</a>
+            <a href="campeonatos.html" class="block pl-5 pr-3 py-2 rounded hover:bg-gray-50">Campeonatos</a>
+            <a href="escola-de-futebol.html" class="block pl-5 pr-3 py-2 rounded hover:bg-gray-50">Escola de Futebol</a>
+            <a href="seja-um-anunciante.html" class="block pl-5 pr-3 py-2 rounded bg-gray-50">Seja um Anunciante</a>
+          </div>
+        </details>
+        <li><a class="block px-3 py-2 rounded hover:bg-gray-50" href="quadras.html">Quadras</a></li>
+        <li><a class="block px-3 py-2 rounded hover:bg-gray-50" href="churrasqueira-e-eventos.html">Churrasqueira & Eventos</a></li>
+        <li><a class="block text-center bg-primary text-white px-6 py-2 rounded-full hover:bg-emerald-800 transition" href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </nav>
+
+  <!-- MICRO HERO -->
+  <section class="micro-hero mt-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="micro-kicker">PARA MARCAS</div>
+      <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Seja um <span class="text-secondary">Anunciante</span></h1>
+      <p class="mt-2 text-white/90 max-w-2xl">
+        Sua marca onde o jogo acontece: quadras, bar, eventos e digital. Planos flexíveis, relatórios e ativações.
+      </p>
+      <div class="mt-5 flex gap-3">
+        <a href="#formatos" class="btn-pill btn-primary">Formatos e pacotes</a>
+        <a href="#briefing" class="btn-pill btn-ghost">Falar com comercial</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BREADCRUMB -->
+  <nav class="bg-gray-100/70 border-b">
+    <div class="max-w-7xl mx-auto px-4 h-10 flex items-center text-sm text-gray-600">
+      <a href="index.html" class="hover:text-black">Home</a>
+      <span class="mx-2">/</span>
+      <span class="text-black font-medium">Seja um Anunciante</span>
+    </div>
+  </nav>
+
+  <!-- FORMATOS -->
+  <section id="formatos" class="max-w-7xl mx-auto px-4 py-10">
+    <div class="grid md:grid-cols-3 gap-6">
+      <article class="card p-6 card-edge">
+        <div class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center">
+            <i class="fa-solid fa-rectangle-ad"></i>
+          </span>
+          <h2 class="font-extrabold text-lg">Placas de Quadra</h2>
+        </div>
+        <p class="text-gray-600 mt-3">Exposição contínua para jogadores e público em 5 quadras.</p>
+        <ul class="mt-3 text-gray-700 space-y-1">
+          <li>• Produção inclusa (opcional)</li>
+          <li>• Relatórios fotográficos</li>
+          <li>• Locação mensal ou por torneio</li>
+        </ul>
+      </article>
+
+      <article class="card p-6 card-edge">
+        <div class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-full bg-secondary text-black flex items-center justify-center">
+            <i class="fa-solid fa-champagne-glasses"></i>
+          </span>
+          <h2 class="font-extrabold text-lg">Branding no Bar</h2>
+        </div>
+        <p class="text-gray-600 mt-3">Telões, cardápio, materiais de mesa e ativações em dia de jogo.</p>
+        <ul class="mt-3 text-gray-700 space-y-1">
+          <li>• Mídia nos telões e TVs</li>
+          <li>• Sampling e promotores</li>
+          <li>• Naming night (semanal ou mensal)</li>
+        </ul>
+      </article>
+
+      <article class="card p-6 card-edge">
+        <div class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-full bg-[#2f5cab] text-white flex items-center justify-center">
+            <i class="fa-solid fa-trophy"></i>
+          </span>
+          <h2 class="font-extrabold text-lg">Eventos Patrocinados</h2>
+        </div>
+        <p class="text-gray-600 mt-3">Cotas máster e apoio em torneios e festivais temáticos.</p>
+        <ul class="mt-3 text-gray-700 space-y-1">
+          <li>• Naming rights do campeonato</li>
+          <li>• Premiações e ativações de marca</li>
+          <li>• Conteúdo social dedicado</li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- Pacotes -->
+    <div class="grid md:grid-cols-3 gap-6 mt-8">
+      <div class="card p-6">
+        <p class="text-xs font-semibold tracking-wide text-gray-500">PACOTE</p>
+        <h3 class="text-xl font-extrabold">Starter</h3>
+        <p class="text-gray-600 mt-2">Placa de quadra + telões nos dias de jogos.</p>
+        <ul class="mt-4 space-y-2 text-gray-700">
+          <li>• 1 placa premium</li>
+          <li>• Inserções nos telões</li>
+          <li>• Relatório mensal</li>
+        </ul>
+        <a href="#briefing" class="btn-pill btn-primary inline-block mt-5">Solicitar proposta</a>
+      </div>
+
+      <div class="card p-6 ring-2 ring-secondary">
+        <p class="text-xs font-semibold tracking-wide text-gray-500">PACOTE</p>
+        <h3 class="text-xl font-extrabold">Match Day</h3>
+        <p class="text-gray-600 mt-2">Dia de jogo completo com presença de marca no bar e em quadra.</p>
+        <ul class="mt-4 space-y-2 text-gray-700">
+          <li>• 2 placas + mídia telões</li>
+          <li>• Ativação com promotores</li>
+          <li>• Conteúdo social</li>
+        </ul>
+        <a href="#briefing" class="btn-pill btn-primary inline-block mt-5">Reservar datas</a>
+      </div>
+
+      <div class="card p-6">
+        <p class="text-xs font-semibold tracking-wide text-gray-500">PACOTE</p>
+        <h3 class="text-xl font-extrabold">Master</h3>
+        <p class="text-gray-600 mt-2">Cota máster de campeonato + naming e premiações.</p>
+        <ul class="mt-4 space-y-2 text-gray-700">
+          <li>• Naming do torneio</li>
+          <li>• 3 placas + mídia total</li>
+          <li>• Plano de conteúdo dedicado</li>
+        </ul>
+        <a href="#briefing" class="btn-pill btn-primary inline-block mt-5">Falar com comercial</a>
+      </div>
+    </div>
+
+    <!-- Media Kit -->
+    <div class="card p-6 mt-8 flex flex-col md:flex-row md:items-center md:justify-between">
+      <div>
+        <h4 class="font-bold text-xl">Baixe o Media Kit</h4>
+        <p class="text-gray-600">Público, inventário, métricas e tabela de formatos.</p>
+      </div>
+      <a href="/docs/media-kit-brasil-soccer.pdf" class="btn-pill btn-primary mt-4 md:mt-0">
+        <i class="fa-regular fa-file-pdf mr-2"></i>Download PDF
+      </a>
+    </div>
+  </section>
+
+  <!-- MÉTRICAS & PÚBLICO -->
+  <section class="max-w-7xl mx-auto px-4 pb-10">
+    <div class="grid lg:grid-cols-3 gap-6">
+      <div class="card p-6">
+        <h3 class="font-extrabold text-lg">Audiência no Local</h3>
+        <ul class="mt-3 text-gray-700 space-y-1">
+          <li>• 5 quadras ativas, pico à noite</li>
+          <li>• + de 120 partidas / mês</li>
+          <li>• Bar com até 100 pessoas</li>
+        </ul>
+      </div>
+      <div class="card p-6">
+        <h3 class="font-extrabold text-lg">Perfis</h3>
+        <ul class="mt-3 text-gray-700 space-y-1">
+          <li>• 18–44 anos (majoritário)</li>
+          <li>• Times corporativos e amigos</li>
+          <li>• Famílias em finais de semana</li>
+        </ul>
+      </div>
+      <div class="card p-6">
+        <h3 class="font-extrabold text-lg">Entrega & Relatórios</h3>
+        <ul class="mt-3 text-gray-700 space-y-1">
+          <li>• Relatório fotográfico por cota</li>
+          <li>• Check-list de veiculação</li>
+          <li>• Conteúdo social (opcional)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASES / LOGOS (placeholder) -->
+  <section class="max-w-7xl mx-auto px-4 pb-10">
+    <div class="card p-6">
+      <div class="flex items-center justify-between flex-wrap gap-4">
+        <h3 class="text-xl font-extrabold">Marcas que já jogaram com a gente</h3>
+        <a href="#briefing" class="btn-pill btn-primary">Vamos conversar</a>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 mt-6 opacity-80">
+        <img src="logos/logo-1.svg" alt="Marca 1" class="h-10 object-contain">
+        <img src="logos/logo-2.svg" alt="Marca 2" class="h-10 object-contain">
+        <img src="logos/logo-3.svg" alt="Marca 3" class="h-10 object-contain">
+        <img src="logos/logo-4.svg" alt="Marca 4" class="h-10 object-contain">
+        <img src="logos/logo-5.svg" alt="Marca 5" class="h-10 object-contain">
+        <img src="logos/logo-6.svg" alt="Marca 6" class="h-10 object-contain">
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="max-w-7xl mx-auto px-4 pb-10">
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="card p-6">
+        <h3 class="font-extrabold text-lg">Quanto tempo mínimo?</h3>
+        <p class="text-gray-700 mt-2">Temos planos por torneio, mensal e trimestral. Projetos sob medida também.</p>
+      </div>
+      <div class="card p-6">
+        <h3 class="font-extrabold text-lg">Vocês produzem o material?</h3>
+        <p class="text-gray-700 mt-2">Sim, opcional com custo de produção; ou recebemos seu arquivo conforme gabarito.</p>
+      </div>
+      <div class="card p-6">
+        <h3 class="font-extrabold text-lg">Tem relatório de comprovação?</h3>
+        <p class="text-gray-700 mt-2">Entregamos registro fotográfico e check-list de veiculação por período.</p>
+      </div>
+      <div class="card p-6">
+        <h3 class="font-extrabold text-lg">Posso ativar em dia de jogo?</h3>
+        <p class="text-gray-700 mt-2">Claro! Promotores, sampling e ações no bar sob agendamento.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRIEFING COMERCIAL -->
+  <section id="briefing" class="bg-white border-t">
+    <div class="max-w-7xl mx-auto px-4 py-12">
+      <div class="mb-6">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Briefing rápido</h2>
+        <p class="text-gray-600">Conte pra gente sobre a sua campanha. Respondemos com proposta em poucas horas úteis.</p>
+      </div>
+
+      <form class="grid md:grid-cols-2 gap-6" action="https://formsubmit.co/brasilsocceratendimento@gmail.com" method="POST">
+        <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off"/>
+        <input type="hidden" name="_captcha" value="false"/>
+        <input type="hidden" name="_template" value="table"/>
+        <input type="hidden" name="_subject" value="Briefing Comercial - Brasil Soccer"/>
+
+        <div class="card p-5">
+          <label class="text-sm font-semibold">Nome*</label>
+          <input required name="nome" class="mt-2 w-full border rounded-lg px-3 py-2" placeholder="Seu nome" />
+          <label class="text-sm font-semibold mt-4">E-mail*</label>
+          <input required type="email" name="email" class="mt-2 w-full border rounded-lg px-3 py-2" placeholder="email@empresa.com" />
+          <label class="text-sm font-semibold mt-4">Telefone / WhatsApp</label>
+          <input name="telefone" class="mt-2 w-full border rounded-lg px-3 py-2" placeholder="(41) 9 8403-9747" />
+          <label class="text-sm font-semibold mt-4">Empresa</label>
+          <input name="empresa" class="mt-2 w-full border rounded-lg px-3 py-2" placeholder="Nome da marca" />
+        </div>
+
+        <div class="card p-5">
+          <label class="text-sm font-semibold">Objetivo da ação*</label>
+          <select required name="objetivo" class="mt-2 w-full border rounded-lg px-3 py-2 bg-white">
+            <option value="">Selecione</option>
+            <option>Branding</option>
+            <option>Promoção/Vendas</option>
+            <option>Lançamento</option>
+            <option>Engajamento Social</option>
+          </select>
+
+          <label class="text-sm font-semibold mt-4">Formato(s) de interesse*</label>
+          <div class="mt-2 grid grid-cols-2 gap-2 text-sm">
+            <label class="flex items-center gap-2"><input type="checkbox" name="formatos[]" value="Placas de quadra">Placas de quadra</label>
+            <label class="flex items-center gap-2"><input type="checkbox" name="formatos[]" value="Telões/Bar">Telões/Bar</label>
+            <label class="flex items-center gap-2"><input type="checkbox" name="formatos[]" value="Eventos patrocinados">Eventos patrocinados</label>
+            <label class="flex items-center gap-2"><input type="checkbox" name="formatos[]" value="Conteúdo social">Conteúdo social</label>
+          </div>
+
+          <label class="text-sm font-semibold mt-4">Período desejado</label>
+          <input name="periodo" class="mt-2 w-full border rounded-lg px-3 py-2" placeholder="Ex.: 2 meses / temporada" />
+
+          <label class="text-sm font-semibold mt-4">Orçamento estimado</label>
+          <input name="orcamento" class="mt-2 w-full border rounded-lg px-3 py-2" placeholder="Ex.: R$ 5.000 a R$ 15.000" />
+
+          <label class="text-sm font-semibold mt-4">Observações</label>
+          <textarea name="observacoes" rows="4" class="mt-2 w-full border rounded-lg px-3 py-2" placeholder="Requisitos de arte, brindes, restrições, etc."></textarea>
+        </div>
+
+        <div class="md:col-span-2 flex flex-col sm:flex-row gap-3">
+          <button type="submit" class="btn-pill btn-primary">Enviar briefing</button>
+          <a href="https://wa.me/5541984039747?text=Oi%20Brasil%20Soccer!%20Quero%20anunciar." target="_blank" rel="nofollow noopener" class="btn-pill bg-[#25D366] text-white">
+            <i class="fa-brands fa-whatsapp mr-2"></i> Falar no WhatsApp
+          </a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white py-10 mt-6">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-2xl font-extrabold"><span class="text-primary">BRASIL</span> <span class="text-secondary">SOCCER</span></h3>
+          <p class="text-white/70 mt-2">Quadras, bar e eventos em Curitiba.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Mapa do site</h4>
+          <ul class="space-y-2 text-white/80">
+            <li><a href="sobre-nos.html" class="hover:text-white">A Brasil Soccer</a></li>
+            <li><a href="quadras.html" class="hover:text-white">Quadras</a></li>
+            <li><a href="churrasqueira-e-eventos.html" class="hover:text-white">Churrasqueira & Eventos</a></li>
+            <li><a href="contato.html" class="hover:text-white">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Comercial</h4>
+          <ul class="space-y-2 text-white/80">
+            <li><a href="seja-um-anunciante.html" class="hover:text-white">Seja um Anunciante</a></li>
+            <li><a href="/docs/media-kit-brasil-soccer.pdf" class="hover:text-white">Media Kit</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-3">Contato</h4>
+          <p class="text-white/80">Rua João Bettega, 1250 – Portão<br/>Curitiba/PR</p>
+          <p class="text-white/80 mt-2">(41) 98403-9747<br/>brasilsocceratendimento@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 mt-8 pt-6 flex items-center justify-between text-sm text-white/70">
+        <p>© 2025 Brasil Soccer</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-white" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="hover:text-white" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://wa.me/5541984039747" class="hover:text-white" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD Organization + OfferCatalog (simples) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Brasil Soccer",
+    "url":"https://brasilsoccer.com.br/",
+    "email":"brasilsocceratendimento@gmail.com",
+    "telephone":"+55-41-98403-9747",
+    "address":{"@type":"PostalAddress","streetAddress":"Rua João Bettega, 1250","addressLocality":"Curitiba","addressRegion":"PR","postalCode":"81050-030","addressCountry":"BR"},
+    "department":{
+      "@type":"Organization",
+      "name":"Comercial e Patrocínios",
+      "url":"https://brasilsoccer.com.br/seja-um-anunciante.html",
+      "hasOfferCatalog":{
+        "@type":"OfferCatalog",
+        "name":"Inventário de Mídia",
+        "itemListElement":[
+          {"@type":"Offer","name":"Placas de Quadra"},
+          {"@type":"Offer","name":"Branding no Bar (Telões/TVs)"},
+          {"@type":"Offer","name":"Eventos Patrocinados"}
+        ]
+      }
+    }
+  }
+  </script>
+
+  <!-- JS: menu mobile -->
+  <script>
+    const btnMobile = document.getElementById('btnMobile');
+    const mMenu = document.getElementById('mMenu');
+    btnMobile?.addEventListener('click', () => {
+      const hidden = mMenu.classList.toggle('hidden');
+      btnMobile.setAttribute('aria-expanded', String(!hidden));
+    });
+    mMenu?.addEventListener('click', (e) => {
+      if (e.target.closest('a')) {
+        mMenu.classList.add('hidden');
+        btnMobile.setAttribute('aria-expanded','false');
+      }
+    });
+  </script>
+</body>
+</html>
