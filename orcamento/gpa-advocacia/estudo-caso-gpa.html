@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposta de SEO Regional — GPA Advocacia</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b1221;
+    --bg-2:#0e1830;
+    --card:#0f1c3a;
+    --text:#dfe7ff;
+    --muted:#9fb2ff;
+    --accent:#ff6b3d;
+    --accent-2:#22d3ee;
+    --success:#22c55e;
+    --warning:#f59e0b;
+    --radius:18px;
+    --shadow:0 20px 60px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.04);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background: radial-gradient(1200px 700px at 80% -10%, rgba(34,211,238,.12), transparent 60%),
+                           radial-gradient(900px 600px at -10% 20%, rgba(255,107,61,.10), transparent 60%), var(--bg);
+    color:var(--text); font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; line-height:1.6;
+  }
+  .container{max-width:1200px;margin:0 auto;padding:28px}
+  header.hero{
+    border-radius:calc(var(--radius) + 6px);
+    padding:36px 28px;
+    background: linear-gradient(135deg, rgba(15,28,58,.75), rgba(11,18,33,.8)),
+                radial-gradient(900px 500px at 10% -10%, rgba(34,211,238,.12), transparent 60%);
+    box-shadow:var(--shadow);
+    position:relative; overflow:hidden;
+  }
+  .hero:before{
+    content:""; position:absolute; inset:-1px;
+    background: radial-gradient(700px 350px at 90% 10%, rgba(255,107,61,.22), transparent 60%);
+    pointer-events:none;
+  }
+  .brand{display:flex; align-items:center; gap:16px}
+  .brand img{width:120px; height:auto; filter:drop-shadow(0 6px 24px rgba(255,107,61,.35))}
+  .brand h1{margin:0;font-size:28px;letter-spacing:.5px}
+  .hero p.sub{margin:8px 0 0; color:var(--muted)}
+  .grid{display:grid; gap:20px}
+  .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+  .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+  @media (max-width:960px){ .grid.cols-3,.grid.cols-2{grid-template-columns:1fr}}
+  .card{
+    background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02) 40%, rgba(255,255,255,.01));
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:22px;
+    border:1px solid rgba(255,255,255,.06);
+    backdrop-filter: blur(6px);
+  }
+  .kpi{display:flex;align-items:center;gap:14px}
+  .kpi .dot{width:10px;height:10px;border-radius:999px;background:var(--accent); box-shadow:0 0 18px rgba(255,107,61,.65)}
+  h2.section-title{margin:10px 0 12px; font-size:22px; letter-spacing:.3px}
+  h3.card-title{margin:0 0 8px; font-size:16px; color:#fff; letter-spacing:.2px}
+  p.muted{color:var(--muted); margin:0}
+  .tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);padding:6px 10px;border-radius:999px;font-size:12px;color:#e8eeff;border:1px solid rgba(255,255,255,.08)}
+  .tag .mark{width:8px;height:8px;border-radius:999px;background:var(--accent)}
+  .list{margin:10px 0 0;padding-left:16px}
+  .list li{margin:6px 0; color:var(--text)}
+  .pill{display:inline-flex;gap:8px;align-items:center;background:rgba(34,211,238,.08);border:1px solid rgba(34,211,238,.2);color:#c8f6ff;padding:8px 12px;border-radius:12px;font-size:12px}
+  .divider{height:1px;background:linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent); margin:24px 0}
+  .foot-note{color:#cbd5ff; font-size:12px; opacity:.85}
+  .cta{display:flex; gap:14px; flex-wrap:wrap; margin-top:16px}
+  .btn{
+    background:linear-gradient(135deg,var(--accent),#ff8540);
+    color:#0c0c0c;font-weight:700;border:none;border-radius:12px;padding:12px 16px;cursor:pointer;
+    box-shadow: 0 8px 24px rgba(255,107,61,.35);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform: translateY(-2px); box-shadow:0 12px 28px rgba(255,107,61,.45)}
+  .btn.ghost{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.16)}
+  .badge{font-size:11px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:4px 8px;border-radius:999px;margin-left:10px}
+
+  /* Table styles */
+  table{
+    width:100%; border-collapse:separate; border-spacing:0; overflow:hidden;
+    border-radius:12px; border:1px solid rgba(255,255,255,.08)
+  }
+  thead th{
+    text-align:left; font-weight:700; padding:12px; background:rgba(255,255,255,.06); color:#f2f4ff;
+  }
+  tbody td{padding:12px; color:#e7ebff; border-top:1px dashed rgba(255,255,255,.08)}
+
+  /* Chips */
+  .chip{display:inline-flex;align-items:center;gap:8px;margin:4px 6px 0 0;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);font-size:12px;color:#e7ebff}
+  .chip .mini{width:7px;height:7px;border-radius:999px;background:var(--accent-2)}
+
+  /* Section blocks */
+  section.block{margin-top:26px}
+  .note{background:rgba(255,255,255,.06); border:1px dashed rgba(255,255,255,.16); padding:14px; border-radius:12px; color:#e7ebff}
+  .flex{display:flex; gap:16px; flex-wrap:wrap; align-items:center}
+</style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      
+<div class="partners" style="display:flex;align-items:center;gap:24px;justify-content:flex-start;margin-bottom:22px;">
+  <div style="display:flex;align-items:center;gap:12px;">
+    <img src="https://e-web.online/assets/img/app-landing/logo/logo1.png" alt="e-Web Agency" style="height:42px;">
+    <span style="font-size:14px;color:#9fb2ff;">Projeto desenvolvido pela <b>e‑Web Agency</b></span>
+  </div>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <img src="https://empresarialweb.com.br/images/logo-empresarialweb.png" alt="Empresarial Web" style="height:38px;">
+    <span style="font-size:14px;color:#9fb2ff;">em parceria com <b>Empresarial Web</b></span>
+  </div>
+</div>
+
+<img alt="Logo GPA Advocacia" style="height:auto;display:block;margin:0 auto 10px;filter:drop-shadow(0 6px 24px rgba(255,107,61,.35));" src="logo-gpa.png"/>
+<div class="brand">
+        
+        <div>
+          <h1>Proposta de SEO Regional — <span style="color:#fff">GPA Advocacia</span> <span class="badge">estudo de caso (sem valores)</span></h1>
+          <p class="sub">Parceria jurídica no mundo dos negócios · Curitiba como base · Expansão: Oeste de SC · Norte e Sul do PR · São Paulo</p>
+          <div class="cta">
+            <button class="btn">Plano tático</button>
+            <button class="btn ghost">Cronograma detalhado</button>
+            <span class="pill">Alcance orgânico · B2B · Autoridade local</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="block">
+      <div class="grid cols-3">
+        <div class="card">
+          <div class="kpi"><span class="dot"></span><div><h3 class="card-title">Objetivo</h3><p class="muted">Construir presença orgânica regional para demandas de <b>advocacia empresarial</b> e <b>assessoria jurídica</b> com foco em geração de leads qualificados.</p></div></div>
+        </div>
+        <div class="card">
+          <div class="kpi"><span class="dot" style="background:var(--accent-2)"></span><div><h3 class="card-title">Direcionadores</h3><p class="muted">Conteúdo especializado, páginas locais escaláveis, dados estruturados, experiência mobile e monitoramento contínuo.</p></div></div>
+        </div>
+        <div class="card">
+          <div class="kpi"><span class="dot" style="background:var(--success)"></span><div><h3 class="card-title">Resultados Esperados</h3><p class="muted">Ganho de visibilidade por cidade, captação de consultas e consolidar a GPA como <b>parceira estratégica</b> das empresas.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2 class="section-title">Arquitetura de Páginas Locais</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3 class="card-title">Modelo de URL</h3>
+          <div class="note">
+            /advocacia-empresarial-em-curitiba<br/>
+            /assessoria-juridica-empresarial-em-chapeco<br/>
+            /advogado-para-empresas-em-londrina<br/>
+            /consultoria-juridica-empresarial-em-ponta-grossa
+          </div>
+          <p class="muted" style="margin-top:10px">Cada página inclui: H1 local, contexto econômico, serviços empresariais, FAQ (Schema), CTAs (WhatsApp), depoimentos e links internos.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Cidades Prioritárias (chips)</h3>
+          <div>
+            <div class="chip"><span class="mini"></span>Curitiba</div>
+            <div class="chip"><span class="mini"></span>São José dos Pinhais</div>
+            <div class="chip"><span class="mini"></span>Pinhais</div>
+            <div class="chip"><span class="mini"></span>Colombo</div>
+            <div class="chip"><span class="mini"></span>Araucária</div>
+            <div class="chip"><span class="mini"></span>Campo Largo</div>
+            <div class="chip"><span class="mini"></span>Fazenda Rio Grande</div>
+            <div class="chip"><span class="mini"></span>Almirante Tamandaré</div>
+            <div class="chip"><span class="mini"></span>Campina Grande do Sul</div>
+            <div class="chip"><span class="mini"></span>Quatro Barras</div>
+            <div class="chip"><span class="mini"></span>Londrina</div>
+            <div class="chip"><span class="mini"></span>Maringá</div>
+            <div class="chip"><span class="mini"></span>Apucarana</div>
+            <div class="chip"><span class="mini"></span>Arapongas</div>
+            <div class="chip"><span class="mini"></span>Cambé</div>
+            <div class="chip"><span class="mini"></span>Rolândia</div>
+            <div class="chip"><span class="mini"></span>Chapecó</div>
+            <div class="chip"><span class="mini"></span>Xanxerê</div>
+            <div class="chip"><span class="mini"></span>Concórdia</div>
+            <div class="chip"><span class="mini"></span>São Miguel do Oeste</div>
+            <div class="chip"><span class="mini"></span>Joaçaba</div>
+            <div class="chip"><span class="mini"></span>Videira</div>
+            <div class="chip"><span class="mini"></span>Ponta Grossa</div>
+            <div class="chip"><span class="mini"></span>Guarapuava</div>
+            <div class="chip"><span class="mini"></span>União da Vitória</div>
+            <div class="chip"><span class="mini"></span>Lapa</div>
+            <div class="chip"><span class="mini"></span>Irati</div>
+            <div class="chip"><span class="mini"></span>Palmeira</div>
+            <div class="chip"><span class="mini"></span>Sorocaba</div>
+            <div class="chip"><span class="mini"></span>Campinas</div>
+            <div class="chip"><span class="mini"></span>São José dos Campos</div>
+            <div class="chip"><span class="mini"></span>Ribeirão Preto</div>
+            <div class="chip"><span class="mini"></span>Santos</div>
+            <div class="chip"><span class="mini"></span>São Paulo (capital)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2 class="section-title">Roadmap (sem valores)</h2>
+      <div class="card">
+        <table>
+          <thead><tr><th>Fase</th><th>Entregáveis</th><th>Duração estimada</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><b>1. Diagnóstico & Pesquisa</b></td>
+              <td>Auditoria técnica · Keyword research regional · Definição de clusters (societário, contratual, trabalhista empresarial, tributário)</td>
+              <td>1–2 semanas</td>
+            </tr>
+            <tr>
+              <td><b>2. Arquitetura & Conteúdo</b></td>
+              <td>Modelo de página local · 10 primeiras cidades · FAQs (Schema) · Interlinking</td>
+              <td>2–4 semanas</td>
+            </tr>
+            <tr>
+              <td><b>3. Implementação</b></td>
+              <td>On-page (titles, metas, headings) · Dados estruturados · Sitemap/robots · Performance</td>
+              <td>2–3 semanas</td>
+            </tr>
+            <tr>
+              <td><b>4. Monitoramento</b></td>
+              <td>Search Console · GA4 · Relatórios quinzenais · Iteração por cidade</td>
+              <td>Contínuo</td>
+            </tr>
+            <tr>
+              <td><b>5. Expansão</b></td>
+              <td>Novas cidades · Novos tópicos B2B · Conteúdos de autoridade (cases sem dados sensíveis)</td>
+              <td>Mensal</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="foot-note" style="margin-top:10px">Observação: Este documento é um estudo do caso do projeto completo e não contém preços.</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2 class="section-title">Canais & Métricas</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <h3 class="card-title">Métricas-chave</h3>
+          <ul class="list">
+            <li>Impressões e cliques orgânicos por cidade</li>
+            <li>Posição média por cluster de serviço</li>
+            <li>Taxa de conversão (contato/whatsapp)</li>
+            <li>Tempo até 1ª consulta por cidade</li>
+          </ul>
+          <div class="divider"></div>
+          <span class="tag"><span class="mark"></span> GA4 + Search Console</span>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Crescimento esperado</h3>
+          <canvas id="chart-vis" height="180"></canvas>
+          <p class="muted">Projeção qualitativa de crescimento orgânico com base na expansão de páginas locais.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Distribuição por Região</h3>
+          <canvas id="chart-pie" height="180"></canvas>
+          <p class="muted">Participação estimada por macro-região ao longo dos 3 primeiros meses.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2 class="section-title">Conteúdo por Cluster (exemplos)</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <h3 class="card-title">Societário</h3>
+          <p class="muted">Acordos de sócios · M&A · Estruturação de holdings · Governança.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Contratos</h3>
+          <p class="muted">Elaboração e revisão · SLAs · Distribuição · Fornecimento · Prestação de serviços.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Trabalhista Empresarial</h3>
+          <p class="muted">Compliance trabalhista · Políticas internas · Redução de passivo.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Tributário</h3>
+          <p class="muted">Planejamento tributário · Incentivos · Recuperação de créditos.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Regulatório</h3>
+          <p class="muted">LGPD · Setores regulados · Due diligence.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Contencioso Estratégico</h3>
+          <p class="muted">Demandas de alto impacto com visão de risco e negócio.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2 class="section-title">FAQ (estrutura SEO)</h2>
+      <div class="card">
+        <details open><summary><b>Como funciona a criação de páginas por cidade?</b></summary><p class="muted">Partimos de um modelo escalável, ajustando contextos locais e serviços prioritários, mantendo consistência de marca e sinais E-E-A-T.</p></details>
+        <details><summary><b>É necessário conteúdo de blog?</b></summary><p class="muted">Sim — artigos dirigidos para decisões empresariais aumentam autoridade e abrem portas em cidades competitivas (ex.: SP e Campinas).</p></details>
+        <details><summary><b>Quais integrações são previstas?</b></summary><p class="muted">GA4, Search Console, mapas de calor e rastreamento de cliques em WhatsApp/formulários.</p></details>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2 class="section-title">Contato</h2>
+      <div class="card flex">
+        <div class="pill">@gpa.adv · gpa.adv@outlook.com</div>
+        <div class="pill">(41) 99726-6499</div>
+        <div class="pill">Curitiba · São Paulo · Chapecó</div>
+      </div>
+    </section>
+
+    <footer class="block" style="opacity:.9">
+      <div class="divider"></div>
+      <p class="foot-note">© 2025 GPA Advocacia — Documento de estudo do projeto (sem valores). Desenvolvido por Nube Lab Criativo.</p>
+    </footer>
+  </div>
+
+  <!-- Charts (Chart.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script>
+    // Area-like line chart (qualitative projection)
+    const ctx1 = document.getElementById('chart-vis');
+    new Chart(ctx1, {
+      type: 'line',
+      data: {
+        labels: ['M1','M2','M3','M4','M5','M6'],
+        datasets: [{ label:'Visibilidade orgânica', data:[10,18,28,40,55,70], fill:true, tension:.35 }]
+      },
+      options: {
+        responsive:true,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { grid: { display:false } },
+          y: { grid: { color:'rgba(255,255,255,.08)' }, ticks: { display: true } }
+        }
+      }
+    });
+
+    // Doughnut by regions (qualitativo)
+    const ctx2 = document.getElementById('chart-pie');
+    new Chart(ctx2, {
+      type: 'doughnut',
+      data: {
+        labels:['Curitiba/RMC','Norte PR','Sul PR','Oeste SC','SP'],
+        datasets:[{ data:[32,18,15,20,15] }]
+      },
+      options: {
+        plugins: { legend: { position:'bottom', labels: { color:'#e7ebff' } } },
+        cutout:'58%'
+      }
+    });
+  </script>
+</body>
+</html>
