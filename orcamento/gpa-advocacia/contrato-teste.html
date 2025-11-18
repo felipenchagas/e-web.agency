@@ -177,6 +177,7 @@
   .price-main{
     font:700 20px/1.2 'Poppins',sans-serif;
     margin-bottom:4px;
+    color: var(--ink);
   }
   .price-detail{
     font-size:13px;
@@ -304,13 +305,109 @@
   }
 
   /* ANEXO */
-  .anexo-img{
+  .anexo-thumb{
     width:100%;
-    max-height:550px;
-    object-fit:contain;
+    max-width:420px;
     border-radius:14px;
     border:1px solid var(--line);
     background:#fff;
+    cursor:pointer;
+    transition:transform .18s ease, box-shadow .18s ease;
+    box-shadow:0 6px 18px rgba(15,23,42,.08);
+  }
+  .anexo-thumb:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 26px rgba(15,23,42,.12);
+  }
+  .anexo-helper{
+    font-size:12px;
+    color:var(--muted);
+    margin-top:6px;
+  }
+
+  .anexo-viewer{
+    margin-top:14px;
+    border-radius:14px;
+    border:1px solid var(--line);
+    background:#fff;
+    overflow:hidden;
+    max-height:0;
+    opacity:0;
+    transition:max-height .35s ease, opacity .3s ease;
+  }
+  .anexo-viewer.open{
+    max-height:85vh;
+    opacity:1;
+  }
+
+  .anexo-scroll{
+    position:relative;
+    max-height:80vh;
+    overflow:hidden;
+    background:#0f172a;
+  }
+
+  .anexo-close{
+    text-align:right;
+    padding:8px;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+  }
+  .anexo-close button{
+    padding:6px 12px;
+    border-radius:8px;
+    border:1px solid var(--line);
+    background:#f1f5f9;
+    font-size:12px;
+    cursor:pointer;
+  }
+
+  /* ZOOM + DRAG */
+  #zoomContainer{
+    width:100%;
+    height:600px;
+    overflow:visible;
+    position:relative;
+    cursor:grab;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  #zoomContainer:active{
+    cursor:grabbing;
+  }
+
+  #zoomImg{
+    position:absolute;
+    top:0; left:0;
+    transform-origin:top left;
+    user-select:none;
+    -webkit-user-drag:none;
+  }
+
+  .zoom-controls{
+    position:absolute;
+    bottom:12px;
+    right:12px;
+    display:flex;
+    gap:8px;
+    z-index:10;
+  }
+
+  .zoom-controls button{
+    width:36px;
+    height:36px;
+    border-radius:8px;
+    border:1px solid var(--line);
+    background:#fff;
+    cursor:pointer;
+    font-size:20px;
+    font-weight:700;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+    display:flex;
+    align-items:center;
+    justify-content:center;
   }
 
   footer{
@@ -328,149 +425,41 @@
     .card{box-shadow:none;}
     .controls,
     .sig-actions,
-    .partnerbar{display:none !important;}
+    .partnerbar,
+    .zoom-controls,
+    .anexo-helper {display:none !important;}
+    .anexo-thumb { display:block; width: 100%; max-width: 100%; }
+    .anexo-viewer { display: none; }
   }
-  /* ANEXO — MINIATURA + EXPANSÃO */
-.anexo-thumb{
-  width:100%;
-  max-width:420px;
-  border-radius:14px;
-  border:1px solid var(--line);
-  background:#fff;
-  cursor:pointer;
-  transition:transform .18s ease, box-shadow .18s ease;
-  box-shadow:0 6px 18px rgba(15,23,42,.08);
-}
-.anexo-thumb:hover{
-  transform:translateY(-2px);
-  box-shadow:0 10px 26px rgba(15,23,42,.12);
-}
-.anexo-helper{
-  font-size:12px;
-  color:var(--muted);
-  margin-top:6px;
-}
-
-.anexo-viewer{
-  margin-top:14px;
-  border-radius:14px;
-  border:1px solid var(--line);
-  background:#fff;
-  overflow:hidden;
-  max-height:0;
-  opacity:0;
-  transition:max-height .35s ease, opacity .3s ease;
-}
-.anexo-viewer.open{
-  max-height:85vh;
-  opacity:1;
-}
-
-.anexo-scroll{
-  max-height:80vh;
-  overflow:auto;
-  background:#0f172a;
-  padding:10px;
-}
-.anexo-full{
-  display:block;
-  width:auto;
-  height:auto;
-  max-width:none;
-}
-
-.anexo-close{
-  text-align:right;
-  padding:8px;
-}
-.anexo-close button{
-  padding:6px 12px;
-  border-radius:8px;
-  border:1px solid var(--line);
-  background:#fff;
-  font-size:12px;
-  cursor:pointer;
-}
-/* ZOOM + DRAG */
-#zoomContainer{
-  width:100%;
-  height:100%;
-  overflow:visible;
-  position:relative;
-  cursor:grab;
-}
-
-#zoomContainer:active{
-  cursor:grabbing;
-}
-
-#zoomImg{
-  position:absolute;
-  top:0;
-  left:0;
-  transform-origin:top left;
-  user-select:none;
-  -webkit-user-drag:none;
-}
-
-.zoom-controls{
-  position:absolute;
-  bottom:12px;
-  right:12px;
-  display:flex;
-  gap:8px;
-  z-index:10;
-}
-
-.zoom-controls button{
-  width:36px;
-  height:36px;
-  border-radius:8px;
-  border:1px solid var(--line);
-  background:#fff;
-  cursor:pointer;
-  font-size:20px;
-  font-weight:700;
-  box-shadow:0 4px 10px rgba(0,0,0,.15);
-}
-
-.anexo-scroll{
-  position:relative;
-  max-height:80vh;
-  overflow:hidden;
-  background:#0f172a;
-}
 
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <!-- HEADER -->
   <header class="hero">
     <div class="hero-art"></div>
     <div class="partnerbar">
       <img src="https://e-web.online/assets/img/app-landing/logo/logo1.png" alt="e-Web Agency">
       <div class="sep"></div>
-      <span style="font-weight:600;color:#334155">contrato de projeto da e-Web Agency em parceria com Empresarial Web</span>
+      <span style="font-weight:600;color:#334155;font-size:13px;text-align:center;">Contrato e-Web Agency + Empresarial Web</span>
       <div class="sep"></div>
       <img src="https://empresarialweb.com.br/images/logo-empresarialweb.png" alt="Empresarial Web">
     </div>
     <div class="brand">
-      <img id="logo-gpa" alt="Logo GPA Advocacia" src="logo-gpa-escura.png">
+      <img id="logo-gpa" alt="Logo GPA Advocacia" src="logo-gpa-escura.png" onerror="this.style.display='none'">
       <div>
         <h1>Contrato de Prestação de Serviços Digitais</h1>
         <p>Desenvolvimento de Site Institucional + Arquitetura SEO — Projeto GPA Advocacia.</p>
         <div class="badges">
           <span class="badge"><span class="icon"></span>Contrato Comercial</span>
-          <span class="badge"><span class="icon" style="background:var(--brand-2);"></span>Site + SEO Regional</span>
-          <span class="badge"><span class="icon" style="background:var(--ok);"></span>Pagamento Parcela&nbsp;do</span>
+          <span class="badge"><span class="icon" style="background:var(--brand-2);"></span>Site Exclusivo</span>
+          <span class="badge"><span class="icon" style="background:var(--ok);"></span>R$ 2.200 (Parcelado)</span>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- DADOS DAS PARTES -->
   <section class="section card">
     <h2>Partes</h2>
 
@@ -484,21 +473,20 @@
     <p><span class="label">Nome:</span> Felipe Nunes Chagas</p>
     <p><span class="label">CPF:</span> 070.292.459-89</p>
     <p><span class="label">Agência:</span> e-Web Agency + Empresarial Web</p>
-    <p><span class="label">E-mail:</span> felipe@empresarialweb.com.br &nbsp;|&nbsp; <span class="label">Telefone/WhatsApp:</span> (41) 99975-0085</p>
+    <p><span class="label">E-mail:</span> felipe@empresarialweb.com.br &nbsp;|&nbsp; <span class="label">WhatsApp:</span> (41) 99975-0085</p>
   </section>
 
-  <!-- CLÁUSULA 1 -->
   <section class="section card">
     <h2>Cláusula 1 — Objeto do Contrato</h2>
-    <p>O presente contrato tem por objeto o <strong>desenvolvimento completo do site institucional da GPA Advocacia</strong>, obedecendo estritamente à arquitetura de informação e hierarquia de páginas descritas no <strong>Anexo I (Mapa do Site)</strong>, parte integrante deste contrato.</p>
+    <p>O presente contrato tem por objeto o <strong>desenvolvimento completo do site institucional da GPA Advocacia</strong>, tomando como base inicial a estrutura visualizada no <strong>Anexo I (Mapa do Site)</strong>, que será validada e ajustada em conjunto durante o desenvolvimento.</p>
 
     <h3>1.1 — Entregáveis Técnicos e de Conteúdo</h3>
 
-    <p class="label">Estrutura e Design:</p>
+    <p class="label">Estrutura e Design Exclusivo:</p>
     <ul>
       <li>Desenvolvimento de site moderno, responsivo e rápido.</li>
-      <li>Layout exclusivo para a página inicial (Home).</li>
-      <li>Template padrão para as páginas internas listadas no Anexo I.</li>
+      <li><strong>Layout da Home:</strong> Design 100% exclusivo e personalizado para a página principal.</li>
+      <li><strong>Páginas Internas:</strong> Layout interno personalizado seguindo a identidade visual da marca (Design System), garantindo unidade estética exclusiva para o escritório em todas as páginas de conteúdo.</li>
     </ul>
 
     <p class="label">Conteúdo (Redação):</p>
@@ -507,103 +495,93 @@
       <li>Aplicação de técnicas de SEO e Copywriting voltadas ao público-alvo.</li>
     </ul>
 
-    <p class="label">SEO Técnico:</p>
+    <p class="label">SEO Técnico e Regional:</p>
     <ul>
-      <li>Configuração de metatags, titles, descriptions.</li>
-      <li>Criação de sitemaps e arquivos técnicos necessários.</li>
-      <li>Implementação de dados estruturados (Schema.org), quando cabível.</li>
-    </ul>
-
-    <p class="label">Arquitetura Regional:</p>
-    <ul>
-      <li>Configuração técnica focada na atuação local (Curitiba/RMC).</li>
-      <li>Estrutura já preparada para suportar futura expansão gradual (PR/SC/SP).</li>
+      <li>Configuração de metatags, titles, descriptions e sitemaps.</li>
+      <li>Configuração técnica focada na atuação local (Curitiba/RMC), com estrutura preparada para suportar futura expansão gradual (PR/SC/SP).</li>
     </ul>
   </section>
 
-  <!-- CLÁUSULA 2 -->
   <section class="section card">
     <h2>Cláusula 2 — Investimento e Forma de Pagamento</h2>
-    <p>O valor total ajustado para o projeto é de <strong>R$ 2.400,00 (dois mil e quatrocentos reais)</strong>, a ser pago da seguinte forma:</p>
+    <p>O valor total ajustado para o projeto é de <strong>R$ 2.200,00 (dois mil e duzentos reais)</strong>, a ser pago da seguinte forma:</p>
 
     <div class="grid-2">
       <div>
         <h3>2.1 — Entrada (Início do Projeto)</h3>
         <p class="highlight">
-          <strong>R$ 700,00 (setecentos reais)</strong>, pagos na assinatura deste contrato via PIX, cobrindo custos iniciais de setup (plugins, certificações, APIs, bases de layout, fontes licenciadas e ferramentas premium).
+          <strong>R$ 700,00 (setecentos reais)</strong>, pagos na assinatura deste contrato via PIX, cobrindo custos iniciais de setup (certificações, APIs e ferramentas).
         </p>
 
         <h3>2.2 — Parcelamento do Saldo</h3>
-        <p>O saldo restante de <strong>R$ 1.700,00</strong> será parcelado em <strong>10 (dez) parcelas de R$ 170,00</strong>, a serem pagas mensalmente via PIX.</p>
+        <p>O saldo restante de <strong>R$ 1.500,00</strong> será parcelado em <strong>10 (dez) parcelas de R$ 150,00</strong>, a serem pagas mensalmente via PIX.</p>
         <p><span class="label">Vencimento:</span> a 1ª parcela vence 30 dias após a data da assinatura e pagamento da entrada.</p>
-        <p><span class="label">Chave PIX:</span> 07029245989 (CPF) ou outro dado a ser confirmado entre as partes.</p>
+        <p><span class="label">Chave PIX:</span> (41) 99975-0085 (Celular) ou confirmar com CONTRATADO.</p>
       </div>
 
       <div>
-        <h3>2.3 — Condições Gerais de Pagamento</h3>
+        <h3>2.3 — Condições Gerais</h3>
         <ul>
-          <li>O parcelamento é fruto do acordo comercial entre as partes e <strong>não está vinculado ao andamento do projeto</strong>, salvo se houver novo ajuste formal.</li>
-          <li>Após iniciado o desenvolvimento, não haverá suspensão das parcelas, salvo acordo por escrito entre CONTRATANTE e CONTRATADO.</li>
-          <li>O CONTRATANTE poderá, a seu critério, antecipar parcelas futuras para quitação mais rápida do contrato.</li>
+          <li>O parcelamento é um acordo comercial facilitado e <strong>não está vinculado ao andamento do projeto</strong>.</li>
+          <li>O CONTRATANTE poderá, a seu critério, antecipar parcelas futuras para quitação mais rápida.</li>
         </ul>
 
-        <div class="price-main">Resumo Financeiro</div>
+        <div class="price-main" style="margin-top:20px;">Resumo Financeiro</div>
         <div class="price-detail">
-          Total: R$ 2.400,00 · Entrada: R$ 700,00 · 10x R$ 170,00 (PIX).
+          Total: R$ 2.200,00<br>
+          Entrada: R$ 700,00<br>
+          10x R$ 150,00 (PIX)
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CLÁUSULA 3 -->
   <section class="section card">
     <h2>Cláusula 3 — Prazos e Entregas</h2>
     <p>Após a confirmação do pagamento da entrada, o projeto seguirá o fluxo abaixo:</p>
 
     <div class="timeline">
       <div class="titem"><strong>Layout (Home):</strong> apresentação da proposta visual até a sexta-feira subsequente ao fechamento.</div>
-      <div class="titem"><strong>Desenvolvimento:</strong> após aprovação do layout, o CONTRATADO executará a criação das páginas e inserção dos conteúdos conforme Anexo I.</div>
-      <div class="titem"><strong>Entrega Final:</strong> site publicado e pronto para revisão final em prazo estimado de 40 dias, podendo variar em função de ajustes complexos solicitados pelo CONTRATANTE.</div>
+      <div class="titem"><strong>Validação e Desenvolvimento:</strong> alinhamento sobre o Mapa do Site (Anexo I) e início da criação das páginas e conteúdos.</div>
+      <div class="titem"><strong>Entrega Final:</strong> site publicado e pronto para revisão final em prazo estimado de 40 dias (podendo variar conforme validações e ajustes).</div>
     </div>
+    
+    <p style="font-size:13px; margin-top:12px; font-style:italic; color:var(--muted);">
+      * Caso os textos não sejam validados pelo CONTRATANTE no prazo, a entrega técnica será considerada realizada para fins de conclusão de etapa.
+    </p>
   </section>
 
-  <!-- CLÁUSULA 4 -->
   <section class="section card">
-    <h2>Cláusula 4 — Responsabilidades e Validação Jurídica</h2>
+    <h2>Cláusula 4 — Responsabilidades e Validação</h2>
 
     <h3>4.1 — Do CONTRATADO</h3>
     <ul>
       <li>Entregar o site funcional, com todos os textos redigidos e otimizados dentro do escopo.</li>
+      <li><strong>Revisões e Tratativas:</strong> Realizar reuniões de alinhamento e aplicar as revisões solicitadas pelo CONTRATANTE durante o processo, visando desenvolver o serviço da melhor maneira possível e com a melhor aderência à identidade do escritório.</li>
       <li>Garantir boa estabilidade técnica, segurança básica e velocidade adequada.</li>
-      <li>Aplicar boas práticas de SEO técnico e estruturação de conteúdo.</li>
     </ul>
 
-    <h3>4.2 — Do CONTRATANTE</h3>
+    <h3>4.2 — Do CONTRATANTE (Obrigatório)</h3>
     <ul>
-      <li>Fornecer logos, informações institucionais e eventuais documentos necessários.</li>
-      <li>Aprovar ou solicitar ajustes dentro de prazos razoáveis, para que o cronograma seja mantido.</li>
+      <li>Fornecer logos, informações institucionais e participar das validações.</li>
       <li>Custear e manter o registro de domínio e a hospedagem do site.</li>
     </ul>
 
-    <h3>4.3 — Validação Jurídica do Conteúdo</h3>
-    <p class="muted">
-      Considerando que os textos serão redigidos pelo CONTRATADO, profissional da área de tecnologia e marketing, e não jurídico,
-      o CONTRATANTE declara estar ciente de que é de sua <strong>inteira responsabilidade</strong> revisar e validar a precisão legal,
-      termos técnicos e orientações jurídicas presentes no site, antes ou logo após a publicação.
-    </p>
-    <p class="muted">
-      O CONTRATADO fica isento de responsabilidade por eventuais imprecisões jurídicas, cabendo ao CONTRATANTE a aprovação final do teor informativo.
+    <h3>4.3 — Isenção de Responsabilidade Jurídica</h3>
+    <p class="highlight" style="background:#fff4f0; color:#9a3412;">
+      Considerando que os textos serão redigidos pelo CONTRATADO (profissional da área de tecnologia/marketing e não jurídica), 
+      o CONTRATANTE declara estar ciente de que é de sua <strong>inteira responsabilidade revisar e validar a precisão legal</strong>, 
+      termos técnicos e orientações jurídicas presentes no site antes ou logo após a publicação. 
+      O CONTRATADO fica isento de responsabilidade por eventuais imprecisões jurídicas.
     </p>
   </section>
 
-  <!-- CLÁUSULA 5 E 6 -->
   <section class="section grid-2">
     <div class="card">
       <h2>Cláusula 5 — Garantia e Suporte</h2>
       <ul>
         <li>O CONTRATADO oferece <strong>30 dias de suporte técnico</strong> após a entrega final.</li>
-        <li>Inclui correções de erros, pequenos ajustes de layout e ajustes pontuais nos textos durante a fase de revisão.</li>
-        <li>Não inclui criação de novas seções, funcionalidades adicionais ou reestruturações completas (que poderão ser orçadas à parte).</li>
+        <li>Inclui correções de erros, ajustes de layout e alterações nos textos solicitadas durante a fase de revisão final.</li>
       </ul>
     </div>
 
@@ -619,14 +597,12 @@
     </div>
   </section>
 
-  <!-- CLÁUSULA 7 -->
   <section class="section card">
     <h2>Cláusula 7 — Foro</h2>
     <p>As partes elegem o foro da <strong>Comarca de Curitiba/PR</strong> para dirimir quaisquer dúvidas originadas deste contrato.</p>
     <p style="margin-top:12px;">Curitiba, _____ de ____________________ de 2025.</p>
   </section>
 
-  <!-- ASSINATURAS -->
   <section class="section card">
     <h2>Assinaturas</h2>
     <div class="sign-grid">
@@ -635,10 +611,7 @@
           <div class="sig-header">
             <span>Assinatura do CONTRATANTE</span>
             <div class="sig-actions">
-              <label>
-                Upload
-                <input type="file" accept="image/*" onchange="loadSignature(event,'sigContratante')">
-              </label>
+              <label>Upload<input type="file" accept="image/*" onchange="loadSignature(event,'sigContratante')"></label>
               <button type="button" onclick="clearSignature('sigContratante')">Limpar</button>
             </div>
           </div>
@@ -652,10 +625,7 @@
           <div class="sig-header">
             <span>Assinatura do CONTRATADO</span>
             <div class="sig-actions">
-              <label>
-                Upload
-                <input type="file" accept="image/*" onchange="loadSignature(event,'sigContratado')">
-              </label>
+              <label>Upload<input type="file" accept="image/*" onchange="loadSignature(event,'sigContratado')"></label>
               <button type="button" onclick="clearSignature('sigContratado')">Limpar</button>
             </div>
           </div>
@@ -671,46 +641,38 @@
     </div>
   </section>
 
-  <!-- ANEXO I -->
-<!-- ANEXO I -->
-<section class="section card">
-  <h2>Anexo I — Mapa do Site</h2>
-  <p class="muted">Clique na miniatura para visualizar o mapa completo.</p>
+  <section class="section card" style="page-break-before: always;">
+    <h2>Anexo I — Mapa do Site (Base)</h2>
+    <p class="muted">Escopo visual do projeto, sujeito a validação e ajustes durante o desenvolvimento (Clique para ampliar).</p>
 
-  <!-- MINIATURA -->
-  <img
-    src="mapa-mental.png"
-    alt="Mapa do site GPA Advocacia"
-    class="anexo-thumb"
-    onclick="toggleAnexoViewer()"
-  >
+    <img
+      src="mapa-mental.png"
+      alt="Mapa do site GPA Advocacia"
+      class="anexo-thumb"
+      onclick="toggleAnexoViewer()"
+      onerror="this.style.display='none'; this.parentElement.innerHTML+='<p style=\'color:red\'>[Imagem mapa-mental.png não encontrada na pasta]</p>'"
+    >
 
-  <div class="anexo-helper">Clique para expandir o mapa.</div>
+    <div class="anexo-helper">Clique para expandir.</div>
 
-  <!-- VIEWER EXPANDIDO -->
-  <div id="anexoViewer" class="anexo-viewer">
-
-    <div class="anexo-close">
-      <button onclick="toggleAnexoViewer()">Fechar mapa</button>
+    <div id="anexoViewer" class="anexo-viewer">
+      <div class="anexo-close">
+        <button onclick="toggleAnexoViewer()">Fechar mapa</button>
+      </div>
+      <div class="anexo-scroll">
+        <div id="zoomContainer">
+          <img id="zoomImg" src="mapa-mental.png" alt="Mapa completo">
+        </div>
+        <div class="zoom-controls">
+          <button onclick="zoomIn()">+</button>
+          <button onclick="zoomOut()">–</button>
+          <button onclick="resetZoom()">Reset</button>
+        </div>
+      </div>
     </div>
+  </section>
 
-<div class="anexo-scroll">
-  <div id="zoomContainer">
-    <img id="zoomImg" src="mapa-mental.png" alt="Mapa completo">
-  </div>
-
-  <div class="zoom-controls">
-    <button onclick="zoomIn()">+</button>
-    <button onclick="zoomOut()">–</button>
-    <button onclick="resetZoom()">Reset</button>
-  </div>
-</div>
-
-  </div>
-</section>
-
-
-  <footer>© 2025 — e-Web Agency + Empresarial Web · Documento online de contrato comercial</footer>
+  <footer>© 2025 — e-Web Agency + Empresarial Web · Documento confidencial</footer>
 </div>
 
 <script>
@@ -724,7 +686,6 @@
     let rect = canvas.getBoundingClientRect();
 
     function resize(){
-      // salvar conteúdo se quiser, mas aqui simplificamos
       const ratio = window.devicePixelRatio || 1;
       canvas.width = canvas.clientWidth * ratio;
       canvas.height = canvas.clientHeight * ratio;
@@ -758,7 +719,6 @@
       const pos = getPos(e);
       ctx.beginPath();
       ctx.moveTo(pos.x,pos.y);
-      e.preventDefault();
     }
 
     function move(e){
@@ -805,7 +765,7 @@
         if(!sig) return;
         const {canvas, ctx} = sig;
         ctx.clearRect(0,0,canvas.width,canvas.height);
-        // desenha centralizado
+        
         const scale = Math.min(canvas.clientWidth / img.width, canvas.clientHeight / img.height);
         const w = img.width * scale;
         const h = img.height * scale;
@@ -822,88 +782,95 @@
     initSignatureCanvas('sigContratante');
     initSignatureCanvas('sigContratado');
   });
- function toggleAnexoViewer(){
-  const viewer = document.getElementById('anexoViewer');
-  viewer.classList.toggle('open');
-}
-/* ===== ZOOM & DRAG DO ANEXO ===== */
 
-let scale = 1;
-let posX = 0;
-let posY = 0;
+  /* ===== ANEXO VIEWER ===== */
+  function toggleAnexoViewer(){
+    const viewer = document.getElementById('anexoViewer');
+    viewer.classList.toggle('open');
+    if(!viewer.classList.contains('open')){
+      resetZoom();
+    }
+  }
 
-let isDragging = false;
-let startX, startY;
+  /* ===== ZOOM & DRAG DO ANEXO ===== */
+  let scale = 1;
+  let posX = 0;
+  let posY = 0;
+  let isDragging = false;
+  let startX, startY;
 
-const img = document.getElementById("zoomImg");
-const container = document.getElementById("zoomContainer");
+  const zoomImg = document.getElementById("zoomImg");
+  const zoomContainer = document.getElementById("zoomContainer");
 
-function updateTransform(){
-  img.style.transform = `translate(${posX}px, ${posY}px) scale(${scale})`;
-}
+  function updateTransform(){
+    zoomImg.style.transform = `translate(${posX}px, ${posY}px) scale(${scale})`;
+  }
 
-function zoomIn(){
-  scale += 0.2;
-  updateTransform();
-}
+  function zoomIn(){
+    scale += 0.2;
+    updateTransform();
+  }
 
-function zoomOut(){
-  scale = Math.max(0.2, scale - 0.2);
-  updateTransform();
-}
+  function zoomOut(){
+    scale = Math.max(0.2, scale - 0.2);
+    updateTransform();
+  }
 
-function resetZoom(){
-  scale = 1;
-  posX = 0;
-  posY = 0;
-  updateTransform();
-}
+  function resetZoom(){
+    scale = 1;
+    posX = 0;
+    posY = 0;
+    updateTransform();
+  }
 
-// Scroll para zoom
-container.addEventListener("wheel", function(e){
-  e.preventDefault();
-  const delta = e.deltaY > 0 ? -0.1 : 0.1;
-  scale = Math.max(0.2, scale + delta);
-  updateTransform();
-});
+  if(zoomContainer){
+    zoomContainer.addEventListener("wheel", function(e){
+      e.preventDefault();
+      const delta = e.deltaY > 0 ? -0.1 : 0.1;
+      scale = Math.max(0.2, scale + delta);
+      updateTransform();
+    });
 
-// Drag
-container.addEventListener("mousedown", function(e){
-  isDragging = true;
-  startX = e.clientX - posX;
-  startY = e.clientY - posY;
-});
+    zoomContainer.addEventListener("mousedown", function(e){
+      isDragging = true;
+      startX = e.clientX - posX;
+      startY = e.clientY - posY;
+    });
 
-document.addEventListener("mousemove", function(e){
-  if(!isDragging) return;
-  posX = e.clientX - startX;
-  posY = e.clientY - startY;
-  updateTransform();
-});
+    window.addEventListener("mousemove", function(e){
+      if(!isDragging) return;
+      posX = e.clientX - startX;
+      posY = e.clientY - startY;
+      updateTransform();
+    });
 
-document.addEventListener("mouseup", function(){
-  isDragging = false;
-});
+    window.addEventListener("mouseup", function(){
+      isDragging = false;
+    });
 
-// Touch drag
-container.addEventListener("touchstart", function(e){
-  isDragging = true;
-  startX = e.touches[0].clientX - posX;
-  startY = e.touches[0].clientY - posY;
-});
+    // Touch
+    zoomContainer.addEventListener("touchstart", function(e){
+      isDragging = true;
+      if(e.touches.length === 1){
+         startX = e.touches[0].clientX - posX;
+         startY = e.touches[0].clientY - posY;
+      }
+    }, {passive:false});
 
-container.addEventListener("touchmove", function(e){
-  if(!isDragging) return;
-  posX = e.touches[0].clientX - startX;
-  posY = e.touches[0].clientY - startY;
-  updateTransform();
-  e.preventDefault();
-});
+    window.addEventListener("touchmove", function(e){
+      if(!isDragging) return;
+      if(e.touches.length === 1){
+        posX = e.touches[0].clientX - startX;
+        posY = e.touches[0].clientY - startY;
+        updateTransform();
+        e.preventDefault();
+      }
+    }, {passive:false});
 
-container.addEventListener("touchend", ()=>{
-  isDragging = false;
-});
-
+    window.addEventListener("touchend", ()=>{
+      isDragging = false;
+    });
+  }
 </script>
 
 </body>
