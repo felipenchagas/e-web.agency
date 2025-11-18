@@ -3,352 +3,908 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Proposta de SEO Regional — GPA Advocacia</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<title>Contrato de Prestação de Serviços — Projeto GPA Advocacia</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
   :root{
-    --bg:#0b1221;
-    --bg-2:#0e1830;
-    --card:#0f1c3a;
-    --text:#dfe7ff;
-    --muted:#9fb2ff;
-    --accent:#ff6b3d;
-    --accent-2:#22d3ee;
-    --success:#22c55e;
-    --warning:#f59e0b;
+    --bg:#f7f9fc;
+    --card:#ffffff;
+    --ink:#17223b;
+    --muted:#5f6b86;
+    --line:#e2e8f0;
+    --brand:#0ea5e9;
+    --brand-2:#ff7a59;
+    --ok:#16a34a;
     --radius:18px;
-    --shadow:0 20px 60px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.04);
   }
   *{box-sizing:border-box}
   body{
-    margin:0; background: radial-gradient(1200px 700px at 80% -10%, rgba(34,211,238,.12), transparent 60%),
-                           radial-gradient(900px 600px at -10% 20%, rgba(255,107,61,.10), transparent 60%), var(--bg);
-    color:var(--text); font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; line-height:1.6;
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',system-ui,Segoe UI,Roboto,Arial,sans-serif;
   }
-  .container{max-width:1200px;margin:0 auto;padding:28px}
+  .wrap{
+    max-width:980px;
+    margin:0 auto;
+    padding:28px;
+  }
+
+  /* HEADER */
   header.hero{
-    border-radius:calc(var(--radius) + 6px);
-    padding:36px 28px;
-    background: linear-gradient(135deg, rgba(15,28,58,.75), rgba(11,18,33,.8)),
-                radial-gradient(900px 500px at 10% -10%, rgba(34,211,238,.12), transparent 60%);
-    box-shadow:var(--shadow);
-    position:relative; overflow:hidden;
+    position:relative;
+    border-radius:28px;
+    overflow:hidden;
+    background:linear-gradient(135deg,#ffffff,#f4fbff);
+    border:1px solid var(--line);
+    box-shadow:0 12px 40px rgba(17,24,39,.06);
   }
-  .hero:before{
-    content:""; position:absolute; inset:-1px;
-    background: radial-gradient(700px 350px at 90% 10%, rgba(255,107,61,.22), transparent 60%);
+  .hero-art{
+    position:absolute;
+    inset:-1px;
     pointer-events:none;
+    background:
+      radial-gradient(60% 55% at 90% 10%, rgba(14,165,233,.15), transparent 65%),
+      radial-gradient(60% 55% at 10% 0%, rgba(255,122,89,.12), transparent 60%);
+    filter:saturate(1.05);
   }
-  .brand{display:flex; align-items:center; gap:16px}
-  .brand img{width:120px; height:auto; filter:drop-shadow(0 6px 24px rgba(255,107,61,.35))}
-  .brand h1{margin:0;font-size:28px;letter-spacing:.5px}
-  .hero p.sub{margin:8px 0 0; color:var(--muted)}
-  .grid{display:grid; gap:20px}
-  .grid.cols-3{grid-template-columns:repeat(3,1fr)}
-  .grid.cols-2{grid-template-columns:repeat(2,1fr)}
-  @media (max-width:960px){ .grid.cols-3,.grid.cols-2{grid-template-columns:1fr}}
+  .partnerbar{
+    position:relative;
+    z-index:1;
+    display:flex;
+    gap:16px;
+    align-items:center;
+    justify-content:center;
+    padding:14px;
+    border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg,#ffffffaa,#ffffffee);
+  }
+  .partnerbar img{height:34px}
+  .partnerbar .sep{
+    width:1px;
+    height:22px;
+    background:var(--line);
+  }
+  .brand{
+    position:relative;
+    z-index:1;
+    display:grid;
+    grid-template-columns:120px 1fr;
+    gap:18px;
+    align-items:center;
+    padding:20px;
+  }
+  @media (max-width:740px){
+    .brand{
+      grid-template-columns:1fr;
+      text-align:center;
+      justify-items:center;
+    }
+  }
+  .brand img#logo-gpa{
+    width:110px;
+    height:auto;
+    border-radius:14px;
+    box-shadow:0 10px 24px rgba(14,165,233,.18);
+  }
+  .brand h1{
+    margin:0;
+    font:700 24px/1.25 'Poppins',sans-serif;
+  }
+  .brand p{
+    margin:6px 0 0;
+    color:var(--muted);
+  }
+  .badges{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-top:10px;
+  }
+  .badge{
+    font:600 11px/1 'Inter',sans-serif;
+    padding:7px 10px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    background:#fff;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+  }
+  .badge span.icon{
+    width:8px;
+    height:8px;
+    border-radius:999px;
+    background:var(--brand);
+  }
+
+  /* SECTIONS */
+  .section{
+    margin-top:22px;
+  }
   .card{
-    background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02) 40%, rgba(255,255,255,.01));
+    background:var(--card);
+    border:1px solid var(--line);
     border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    padding:22px;
-    border:1px solid rgba(255,255,255,.06);
-    backdrop-filter: blur(6px);
+    padding:18px 20px;
+    box-shadow:0 8px 28px rgba(17,24,39,.05);
   }
-  .kpi{display:flex;align-items:center;gap:14px}
-  .kpi .dot{width:10px;height:10px;border-radius:999px;background:var(--accent); box-shadow:0 0 18px rgba(255,107,61,.65)}
-  h2.section-title{margin:10px 0 12px; font-size:22px; letter-spacing:.3px}
-  h3.card-title{margin:0 0 8px; font-size:16px; color:#fff; letter-spacing:.2px}
-  p.muted{color:var(--muted); margin:0}
-  .tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);padding:6px 10px;border-radius:999px;font-size:12px;color:#e8eeff;border:1px solid rgba(255,255,255,.08)}
-  .tag .mark{width:8px;height:8px;border-radius:999px;background:var(--accent)}
-  .list{margin:10px 0 0;padding-left:16px}
-  .list li{margin:6px 0; color:var(--text)}
-  .pill{display:inline-flex;gap:8px;align-items:center;background:rgba(34,211,238,.08);border:1px solid rgba(34,211,238,.2);color:#c8f6ff;padding:8px 12px;border-radius:12px;font-size:12px}
-  .divider{height:1px;background:linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent); margin:24px 0}
-  .foot-note{color:#cbd5ff; font-size:12px; opacity:.85}
-  .cta{display:flex; gap:14px; flex-wrap:wrap; margin-top:16px}
+  h2{
+    font:700 18px/1.2 'Poppins',sans-serif;
+    margin:0 0 10px;
+  }
+  h3{
+    font:600 15px/1.2 'Poppins',sans-serif;
+    margin:12px 0 6px;
+  }
+  p{
+    margin:6px 0;
+    font-size:14px;
+    line-height:1.5;
+  }
+  .muted{color:var(--muted);}
+
+  .grid-2{
+    display:grid;
+    gap:16px;
+    grid-template-columns:1fr 1fr;
+  }
+  @media (max-width:820px){
+    .grid-2{grid-template-columns:1fr;}
+  }
+
+  ul{
+    margin:6px 0 6px 18px;
+    padding:0;
+    font-size:14px;
+  }
+  li{margin:4px 0;}
+
+  .label{
+    font-weight:600;
+  }
+
+  .highlight{
+    background:#ecfeff;
+    border-radius:10px;
+    padding:10px 12px;
+    font-size:13px;
+  }
+
+  /* PAYMENT BOX */
+  .price-main{
+    font:700 20px/1.2 'Poppins',sans-serif;
+    margin-bottom:4px;
+  }
+  .price-detail{
+    font-size:13px;
+    color:var(--muted);
+  }
+
+  /* TIMELINE */
+  .timeline{
+    position:relative;
+    padding-left:18px;
+    margin-top:4px;
+  }
+  .timeline:before{
+    content:"";
+    position:absolute;
+    left:6px;
+    top:4px;
+    bottom:4px;
+    width:2px;
+    background:var(--line);
+  }
+  .titem{
+    position:relative;
+    padding-left:10px;
+    margin:8px 0;
+    font-size:13px;
+  }
+  .titem:before{
+    content:"";
+    position:absolute;
+    left:-1px;
+    top:6px;
+    width:8px;
+    height:8px;
+    border-radius:999px;
+    background:var(--brand);
+  }
+
+  /* SIGNATURES */
+  .sign-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+  }
+  @media (max-width:820px){
+    .sign-grid{grid-template-columns:1fr;}
+  }
+  .sig-box{
+    border:2px dashed var(--line);
+    border-radius:14px;
+    background:#f8fafc;
+    padding:10px;
+  }
+  .sig-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    margin-bottom:6px;
+  }
+  .sig-header span{
+    font-size:13px;
+    font-weight:600;
+  }
+  .sig-actions{
+    display:flex;
+    gap:6px;
+    flex-wrap:wrap;
+  }
+  .sig-actions label,
+  .sig-actions button{
+    border-radius:999px;
+    border:1px solid var(--line);
+    background:#fff;
+    font-size:11px;
+    padding:4px 8px;
+    cursor:pointer;
+  }
+  .sig-actions input[type="file"]{
+    display:none;
+  }
+  canvas.signature{
+    width:100%;
+    height:130px;
+    border-radius:10px;
+    background:#ffffff;
+    box-shadow:inset 0 0 0 1px #e5e7eb;
+  }
+  .sig-name{
+    margin-top:6px;
+    font-size:12px;
+    font-weight:600;
+    text-align:center;
+  }
+
+  .controls{
+    margin-top:10px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:flex-end;
+  }
   .btn{
-    background:linear-gradient(135deg,var(--accent),#ff8540);
-    color:#0c0c0c;font-weight:700;border:none;border-radius:12px;padding:12px 16px;cursor:pointer;
-    box-shadow: 0 8px 24px rgba(255,107,61,.35);
-    transition: transform .15s ease, box-shadow .15s ease;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    padding:10px 14px;
+    border-radius:999px;
+    border:none;
+    cursor:pointer;
+    font-size:13px;
+    font-weight:600;
+    text-decoration:none;
   }
-  .btn:hover{transform: translateY(-2px); box-shadow:0 12px 28px rgba(255,107,61,.45)}
-  .btn.ghost{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.16)}
-  .badge{font-size:11px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);padding:4px 8px;border-radius:999px;margin-left:10px}
-
-  /* Table styles */
-  table{
-    width:100%; border-collapse:separate; border-spacing:0; overflow:hidden;
-    border-radius:12px; border:1px solid rgba(255,255,255,.08)
+  .btn-primary{
+    background:linear-gradient(135deg,#0ea5e9,#0369a1);
+    color:#fff;
+    box-shadow:0 8px 20px rgba(14,165,233,.35);
   }
-  thead th{
-    text-align:left; font-weight:700; padding:12px; background:rgba(255,255,255,.06); color:#f2f4ff;
+  .btn-ghost{
+    background:#fff;
+    color:#0f172a;
+    border:1px solid var(--line);
   }
-  tbody td{padding:12px; color:#e7ebff; border-top:1px dashed rgba(255,255,255,.08)}
 
-  /* Chips */
-  .chip{display:inline-flex;align-items:center;gap:8px;margin:4px 6px 0 0;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);font-size:12px;color:#e7ebff}
-  .chip .mini{width:7px;height:7px;border-radius:999px;background:var(--accent-2)}
+  /* ANEXO */
+  .anexo-img{
+    width:100%;
+    max-height:550px;
+    object-fit:contain;
+    border-radius:14px;
+    border:1px solid var(--line);
+    background:#fff;
+  }
 
-  /* Section blocks */
-  section.block{margin-top:26px}
-  .note{background:rgba(255,255,255,.06); border:1px dashed rgba(255,255,255,.16); padding:14px; border-radius:12px; color:#e7ebff}
-  .flex{display:flex; gap:16px; flex-wrap:wrap; align-items:center}
+  footer{
+    margin:26px 0 6px;
+    text-align:center;
+    color:#94a3b8;
+    font-size:11px;
+  }
+
+  /* PRINT */
+  @media print{
+    body{background:#ffffff;}
+    .wrap{padding:0 20px;}
+    header.hero{box-shadow:none;}
+    .card{box-shadow:none;}
+    .controls,
+    .sig-actions,
+    .partnerbar{display:none !important;}
+  }
+  /* ANEXO — MINIATURA + EXPANSÃO */
+.anexo-thumb{
+  width:100%;
+  max-width:420px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background:#fff;
+  cursor:pointer;
+  transition:transform .18s ease, box-shadow .18s ease;
+  box-shadow:0 6px 18px rgba(15,23,42,.08);
+}
+.anexo-thumb:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 26px rgba(15,23,42,.12);
+}
+.anexo-helper{
+  font-size:12px;
+  color:var(--muted);
+  margin-top:6px;
+}
+
+.anexo-viewer{
+  margin-top:14px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background:#fff;
+  overflow:hidden;
+  max-height:0;
+  opacity:0;
+  transition:max-height .35s ease, opacity .3s ease;
+}
+.anexo-viewer.open{
+  max-height:85vh;
+  opacity:1;
+}
+
+.anexo-scroll{
+  max-height:80vh;
+  overflow:auto;
+  background:#0f172a;
+  padding:10px;
+}
+.anexo-full{
+  display:block;
+  width:auto;
+  height:auto;
+  max-width:none;
+}
+
+.anexo-close{
+  text-align:right;
+  padding:8px;
+}
+.anexo-close button{
+  padding:6px 12px;
+  border-radius:8px;
+  border:1px solid var(--line);
+  background:#fff;
+  font-size:12px;
+  cursor:pointer;
+}
+/* ZOOM + DRAG */
+#zoomContainer{
+  width:100%;
+  height:100%;
+  overflow:visible;
+  position:relative;
+  cursor:grab;
+}
+
+#zoomContainer:active{
+  cursor:grabbing;
+}
+
+#zoomImg{
+  position:absolute;
+  top:0;
+  left:0;
+  transform-origin:top left;
+  user-select:none;
+  -webkit-user-drag:none;
+}
+
+.zoom-controls{
+  position:absolute;
+  bottom:12px;
+  right:12px;
+  display:flex;
+  gap:8px;
+  z-index:10;
+}
+
+.zoom-controls button{
+  width:36px;
+  height:36px;
+  border-radius:8px;
+  border:1px solid var(--line);
+  background:#fff;
+  cursor:pointer;
+  font-size:20px;
+  font-weight:700;
+  box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+.anexo-scroll{
+  position:relative;
+  max-height:80vh;
+  overflow:hidden;
+  background:#0f172a;
+}
+
 </style>
 </head>
 <body>
-  <div class="container">
-    <header class="hero">
-      
-<div class="partners" style="display:flex;align-items:center;gap:24px;justify-content:flex-start;margin-bottom:22px;">
-  <div style="display:flex;align-items:center;gap:12px;">
-    <img src="https://e-web.online/assets/img/app-landing/logo/logo1.png" alt="e-Web Agency" style="height:42px;">
-    <span style="font-size:14px;color:#9fb2ff;">Projeto desenvolvido pela <b>e‑Web Agency</b></span>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <header class="hero">
+    <div class="hero-art"></div>
+    <div class="partnerbar">
+      <img src="https://e-web.online/assets/img/app-landing/logo/logo1.png" alt="e-Web Agency">
+      <div class="sep"></div>
+      <span style="font-weight:600;color:#334155">contrato de projeto da e-Web Agency em parceria com Empresarial Web</span>
+      <div class="sep"></div>
+      <img src="https://empresarialweb.com.br/images/logo-empresarialweb.png" alt="Empresarial Web">
+    </div>
+    <div class="brand">
+      <img id="logo-gpa" alt="Logo GPA Advocacia" src="logo-gpa-escura.png">
+      <div>
+        <h1>Contrato de Prestação de Serviços Digitais</h1>
+        <p>Desenvolvimento de Site Institucional + Arquitetura SEO — Projeto GPA Advocacia.</p>
+        <div class="badges">
+          <span class="badge"><span class="icon"></span>Contrato Comercial</span>
+          <span class="badge"><span class="icon" style="background:var(--brand-2);"></span>Site + SEO Regional</span>
+          <span class="badge"><span class="icon" style="background:var(--ok);"></span>Pagamento Parcela&nbsp;do</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- DADOS DAS PARTES -->
+  <section class="section card">
+    <h2>Partes</h2>
+
+    <h3>CONTRATANTE</h3>
+    <p><span class="label">Nome empresarial:</span> Gustavo de Oliveira Pedroso Sociedade Individual de Advocacia</p>
+    <p><span class="label">CNPJ:</span> 52.964.752/0001-76 &nbsp;|&nbsp; Nome fantasia: “Gustavo ADV”</p>
+    <p><span class="label">Endereço:</span> Rua Maria de Lurdes dos Santos, 405 – Casa 01 – Atuba – Colombo/PR</p>
+    <p><span class="label">E-mail:</span> pedrosogustavo2@outlook.com &nbsp;|&nbsp; <span class="label">Telefone:</span> (41) 9742-3394</p>
+
+    <h3>CONTRATADO</h3>
+    <p><span class="label">Nome:</span> Felipe Nunes Chagas</p>
+    <p><span class="label">CPF:</span> 070.292.459-89</p>
+    <p><span class="label">Agência:</span> e-Web Agency + Empresarial Web</p>
+    <p><span class="label">E-mail:</span> felipe@empresarialweb.com.br &nbsp;|&nbsp; <span class="label">Telefone/WhatsApp:</span> (41) 99975-0085</p>
+  </section>
+
+  <!-- CLÁUSULA 1 -->
+  <section class="section card">
+    <h2>Cláusula 1 — Objeto do Contrato</h2>
+    <p>O presente contrato tem por objeto o <strong>desenvolvimento completo do site institucional da GPA Advocacia</strong>, obedecendo estritamente à arquitetura de informação e hierarquia de páginas descritas no <strong>Anexo I (Mapa do Site)</strong>, parte integrante deste contrato.</p>
+
+    <h3>1.1 — Entregáveis Técnicos e de Conteúdo</h3>
+
+    <p class="label">Estrutura e Design:</p>
+    <ul>
+      <li>Desenvolvimento de site moderno, responsivo e rápido.</li>
+      <li>Layout exclusivo para a página inicial (Home).</li>
+      <li>Template padrão para as páginas internas listadas no Anexo I.</li>
+    </ul>
+
+    <p class="label">Conteúdo (Redação):</p>
+    <ul>
+      <li>Redação, curadoria e inserção de conteúdo textual e visual das páginas do Anexo I.</li>
+      <li>Aplicação de técnicas de SEO e Copywriting voltadas ao público-alvo.</li>
+    </ul>
+
+    <p class="label">SEO Técnico:</p>
+    <ul>
+      <li>Configuração de metatags, titles, descriptions.</li>
+      <li>Criação de sitemaps e arquivos técnicos necessários.</li>
+      <li>Implementação de dados estruturados (Schema.org), quando cabível.</li>
+    </ul>
+
+    <p class="label">Arquitetura Regional:</p>
+    <ul>
+      <li>Configuração técnica focada na atuação local (Curitiba/RMC).</li>
+      <li>Estrutura já preparada para suportar futura expansão gradual (PR/SC/SP).</li>
+    </ul>
+  </section>
+
+  <!-- CLÁUSULA 2 -->
+  <section class="section card">
+    <h2>Cláusula 2 — Investimento e Forma de Pagamento</h2>
+    <p>O valor total ajustado para o projeto é de <strong>R$ 2.400,00 (dois mil e quatrocentos reais)</strong>, a ser pago da seguinte forma:</p>
+
+    <div class="grid-2">
+      <div>
+        <h3>2.1 — Entrada (Início do Projeto)</h3>
+        <p class="highlight">
+          <strong>R$ 700,00 (setecentos reais)</strong>, pagos na assinatura deste contrato via PIX, cobrindo custos iniciais de setup (plugins, certificações, APIs, bases de layout, fontes licenciadas e ferramentas premium).
+        </p>
+
+        <h3>2.2 — Parcelamento do Saldo</h3>
+        <p>O saldo restante de <strong>R$ 1.700,00</strong> será parcelado em <strong>10 (dez) parcelas de R$ 170,00</strong>, a serem pagas mensalmente via PIX.</p>
+        <p><span class="label">Vencimento:</span> a 1ª parcela vence 30 dias após a data da assinatura e pagamento da entrada.</p>
+        <p><span class="label">Chave PIX:</span> (41) 99975-0085 (Celular) — ou outro dado a ser confirmado entre as partes.</p>
+      </div>
+
+      <div>
+        <h3>2.3 — Condições Gerais de Pagamento</h3>
+        <ul>
+          <li>O parcelamento é fruto do acordo comercial entre as partes e <strong>não está vinculado ao andamento do projeto</strong>, salvo se houver novo ajuste formal.</li>
+          <li>Após iniciado o desenvolvimento, não haverá suspensão das parcelas, salvo acordo por escrito entre CONTRATANTE e CONTRATADO.</li>
+          <li>O CONTRATANTE poderá, a seu critério, antecipar parcelas futuras para quitação mais rápida do contrato.</li>
+        </ul>
+
+        <div class="price-main">Resumo Financeiro</div>
+        <div class="price-detail">
+          Total: R$ 2.400,00 · Entrada: R$ 700,00 · 10x R$ 170,00 (PIX).
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLÁUSULA 3 -->
+  <section class="section card">
+    <h2>Cláusula 3 — Prazos e Entregas</h2>
+    <p>Após a confirmação do pagamento da entrada, o projeto seguirá o fluxo abaixo:</p>
+
+    <div class="timeline">
+      <div class="titem"><strong>Layout (Home):</strong> apresentação da proposta visual até a sexta-feira subsequente ao fechamento.</div>
+      <div class="titem"><strong>Desenvolvimento:</strong> após aprovação do layout, o CONTRATADO executará a criação das páginas e inserção dos conteúdos conforme Anexo I.</div>
+      <div class="titem"><strong>Entrega Final:</strong> site publicado e pronto para revisão final em prazo estimado de 1 a 2 semanas, podendo variar em função de ajustes complexos solicitados pelo CONTRATANTE.</div>
+    </div>
+  </section>
+
+  <!-- CLÁUSULA 4 -->
+  <section class="section card">
+    <h2>Cláusula 4 — Responsabilidades e Validação Jurídica</h2>
+
+    <h3>4.1 — Do CONTRATADO</h3>
+    <ul>
+      <li>Entregar o site funcional, com todos os textos redigidos e otimizados dentro do escopo.</li>
+      <li>Garantir boa estabilidade técnica, segurança básica e velocidade adequada.</li>
+      <li>Aplicar boas práticas de SEO técnico e estruturação de conteúdo.</li>
+    </ul>
+
+    <h3>4.2 — Do CONTRATANTE</h3>
+    <ul>
+      <li>Fornecer logos, informações institucionais e eventuais documentos necessários.</li>
+      <li>Aprovar ou solicitar ajustes dentro de prazos razoáveis, para que o cronograma seja mantido.</li>
+      <li>Custear e manter o registro de domínio e a hospedagem do site.</li>
+    </ul>
+
+    <h3>4.3 — Validação Jurídica do Conteúdo</h3>
+    <p class="muted">
+      Considerando que os textos serão redigidos pelo CONTRATADO, profissional da área de tecnologia e marketing, e não jurídico,
+      o CONTRATANTE declara estar ciente de que é de sua <strong>inteira responsabilidade</strong> revisar e validar a precisão legal,
+      termos técnicos e orientações jurídicas presentes no site, antes ou logo após a publicação.
+    </p>
+    <p class="muted">
+      O CONTRATADO fica isento de responsabilidade por eventuais imprecisões jurídicas, cabendo ao CONTRATANTE a aprovação final do teor informativo.
+    </p>
+  </section>
+
+  <!-- CLÁUSULA 5 E 6 -->
+  <section class="section grid-2">
+    <div class="card">
+      <h2>Cláusula 5 — Garantia e Suporte</h2>
+      <ul>
+        <li>O CONTRATADO oferece <strong>30 dias de suporte técnico</strong> após a entrega final.</li>
+        <li>Inclui correções de erros, pequenos ajustes de layout e ajustes pontuais nos textos durante a fase de revisão.</li>
+        <li>Não inclui criação de novas seções, funcionalidades adicionais ou reestruturações completas (que poderão ser orçadas à parte).</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Cláusula 6 — Plano Mensal (Opcional)</h2>
+      <p>O CONTRATANTE poderá aderir posteriormente ao plano de recorrência:</p>
+      <p class="highlight"><strong>SEO Contínuo e Expansão — R$ 550,00/mês</strong> (sem fidelidade).</p>
+      <ul>
+        <li>Monitoramento e melhorias de posicionamento.</li>
+        <li>Produção de conteúdos estratégicos.</li>
+        <li>Implementação gradual da expansão regional (novas páginas para cidades de PR/SC/SP).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CLÁUSULA 7 -->
+  <section class="section card">
+    <h2>Cláusula 7 — Foro</h2>
+    <p>As partes elegem o foro da <strong>Comarca de Curitiba/PR</strong> para dirimir quaisquer dúvidas originadas deste contrato.</p>
+    <p style="margin-top:12px;">Curitiba, _____ de ____________________ de 2025.</p>
+  </section>
+
+  <!-- ASSINATURAS -->
+  <section class="section card">
+    <h2>Assinaturas</h2>
+    <div class="sign-grid">
+      <div>
+        <div class="sig-box">
+          <div class="sig-header">
+            <span>Assinatura do CONTRATANTE</span>
+            <div class="sig-actions">
+              <label>
+                Upload
+                <input type="file" accept="image/*" onchange="loadSignature(event,'sigContratante')">
+              </label>
+              <button type="button" onclick="clearSignature('sigContratante')">Limpar</button>
+            </div>
+          </div>
+          <canvas id="sigContratante" class="signature"></canvas>
+        </div>
+        <p class="sig-name">GUSTAVO DE OLIVEIRA PEDROSO — CONTRATANTE</p>
+      </div>
+
+      <div>
+        <div class="sig-box">
+          <div class="sig-header">
+            <span>Assinatura do CONTRATADO</span>
+            <div class="sig-actions">
+              <label>
+                Upload
+                <input type="file" accept="image/*" onchange="loadSignature(event,'sigContratado')">
+              </label>
+              <button type="button" onclick="clearSignature('sigContratado')">Limpar</button>
+            </div>
+          </div>
+          <canvas id="sigContratado" class="signature"></canvas>
+        </div>
+        <p class="sig-name">FELIPE NUNES CHAGAS — CONTRATADO</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button type="button" class="btn btn-ghost" onclick="clearAllSignatures()">Limpar assinaturas</button>
+      <button type="button" class="btn btn-primary" onclick="window.print()">Imprimir / Salvar em PDF</button>
+    </div>
+  </section>
+
+  <!-- ANEXO I -->
+<!-- ANEXO I -->
+<section class="section card">
+  <h2>Anexo I — Mapa do Site</h2>
+  <p class="muted">Clique na miniatura para visualizar o mapa completo.</p>
+
+  <!-- MINIATURA -->
+  <img
+    src="mapa-mental.png"
+    alt="Mapa do site GPA Advocacia"
+    class="anexo-thumb"
+    onclick="toggleAnexoViewer()"
+  >
+
+  <div class="anexo-helper">Clique para expandir o mapa.</div>
+
+  <!-- VIEWER EXPANDIDO -->
+  <div id="anexoViewer" class="anexo-viewer">
+
+    <div class="anexo-close">
+      <button onclick="toggleAnexoViewer()">Fechar mapa</button>
+    </div>
+
+<div class="anexo-scroll">
+  <div id="zoomContainer">
+    <img id="zoomImg" src="mapa-mental.png" alt="Mapa completo">
   </div>
-  <div style="display:flex;align-items:center;gap:12px;">
-    <img src="https://empresarialweb.com.br/images/logo-empresarialweb.png" alt="Empresarial Web" style="height:38px;">
-    <span style="font-size:14px;color:#9fb2ff;">em parceria com <b>Empresarial Web</b></span>
+
+  <div class="zoom-controls">
+    <button onclick="zoomIn()">+</button>
+    <button onclick="zoomOut()">–</button>
+    <button onclick="resetZoom()">Reset</button>
   </div>
 </div>
 
-<img alt="Logo GPA Advocacia" style="height:auto;display:block;margin:0 auto 10px;filter:drop-shadow(0 6px 24px rgba(255,107,61,.35));" src="logo-gpa.png"/>
-<div class="brand">
-        
-        <div>
-          <h1>Proposta de SEO Regional — <span style="color:#fff">GPA Advocacia</span> <span class="badge">estudo de caso (sem valores)</span></h1>
-          <p class="sub">Parceria jurídica no mundo dos negócios · Curitiba como base · Expansão: Oeste de SC · Norte e Sul do PR · São Paulo</p>
-          <div class="cta">
-            <button class="btn">Plano tático</button>
-            <button class="btn ghost">Cronograma detalhado</button>
-            <span class="pill">Alcance orgânico · B2B · Autoridade local</span>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <section class="block">
-      <div class="grid cols-3">
-        <div class="card">
-          <div class="kpi"><span class="dot"></span><div><h3 class="card-title">Objetivo</h3><p class="muted">Construir presença orgânica regional para demandas de <b>advocacia empresarial</b> e <b>assessoria jurídica</b> com foco em geração de leads qualificados.</p></div></div>
-        </div>
-        <div class="card">
-          <div class="kpi"><span class="dot" style="background:var(--accent-2)"></span><div><h3 class="card-title">Direcionadores</h3><p class="muted">Conteúdo especializado, páginas locais escaláveis, dados estruturados, experiência mobile e monitoramento contínuo.</p></div></div>
-        </div>
-        <div class="card">
-          <div class="kpi"><span class="dot" style="background:var(--success)"></span><div><h3 class="card-title">Resultados Esperados</h3><p class="muted">Ganho de visibilidade por cidade, captação de consultas e consolidar a GPA como <b>parceira estratégica</b> das empresas.</p></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="block">
-      <h2 class="section-title">Arquitetura de Páginas Locais</h2>
-      <div class="grid cols-2">
-        <div class="card">
-          <h3 class="card-title">Modelo de URL</h3>
-          <div class="note">
-            /advocacia-empresarial-em-curitiba<br/>
-            /assessoria-juridica-empresarial-em-chapeco<br/>
-            /advogado-para-empresas-em-londrina<br/>
-            /consultoria-juridica-empresarial-em-ponta-grossa
-          </div>
-          <p class="muted" style="margin-top:10px">Cada página inclui: H1 local, contexto econômico, serviços empresariais, FAQ (Schema), CTAs (WhatsApp), depoimentos e links internos.</p>
-        </div>
-        <div class="card">
-          <h3 class="card-title">Cidades Prioritárias (chips)</h3>
-          <div>
-            <div class="chip"><span class="mini"></span>Curitiba</div>
-            <div class="chip"><span class="mini"></span>São José dos Pinhais</div>
-            <div class="chip"><span class="mini"></span>Pinhais</div>
-            <div class="chip"><span class="mini"></span>Colombo</div>
-            <div class="chip"><span class="mini"></span>Araucária</div>
-            <div class="chip"><span class="mini"></span>Campo Largo</div>
-            <div class="chip"><span class="mini"></span>Fazenda Rio Grande</div>
-            <div class="chip"><span class="mini"></span>Almirante Tamandaré</div>
-            <div class="chip"><span class="mini"></span>Campina Grande do Sul</div>
-            <div class="chip"><span class="mini"></span>Quatro Barras</div>
-            <div class="chip"><span class="mini"></span>Londrina</div>
-            <div class="chip"><span class="mini"></span>Maringá</div>
-            <div class="chip"><span class="mini"></span>Apucarana</div>
-            <div class="chip"><span class="mini"></span>Arapongas</div>
-            <div class="chip"><span class="mini"></span>Cambé</div>
-            <div class="chip"><span class="mini"></span>Rolândia</div>
-            <div class="chip"><span class="mini"></span>Chapecó</div>
-            <div class="chip"><span class="mini"></span>Xanxerê</div>
-            <div class="chip"><span class="mini"></span>Concórdia</div>
-            <div class="chip"><span class="mini"></span>São Miguel do Oeste</div>
-            <div class="chip"><span class="mini"></span>Joaçaba</div>
-            <div class="chip"><span class="mini"></span>Videira</div>
-            <div class="chip"><span class="mini"></span>Ponta Grossa</div>
-            <div class="chip"><span class="mini"></span>Guarapuava</div>
-            <div class="chip"><span class="mini"></span>União da Vitória</div>
-            <div class="chip"><span class="mini"></span>Lapa</div>
-            <div class="chip"><span class="mini"></span>Irati</div>
-            <div class="chip"><span class="mini"></span>Palmeira</div>
-            <div class="chip"><span class="mini"></span>Sorocaba</div>
-            <div class="chip"><span class="mini"></span>Campinas</div>
-            <div class="chip"><span class="mini"></span>São José dos Campos</div>
-            <div class="chip"><span class="mini"></span>Ribeirão Preto</div>
-            <div class="chip"><span class="mini"></span>Santos</div>
-            <div class="chip"><span class="mini"></span>São Paulo (capital)</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="block">
-      <h2 class="section-title">Roadmap (sem valores)</h2>
-      <div class="card">
-        <table>
-          <thead><tr><th>Fase</th><th>Entregáveis</th><th>Duração estimada</th></tr></thead>
-          <tbody>
-            <tr>
-              <td><b>1. Diagnóstico & Pesquisa</b></td>
-              <td>Auditoria técnica · Keyword research regional · Definição de clusters (societário, contratual, trabalhista empresarial, tributário)</td>
-              <td>1–2 semanas</td>
-            </tr>
-            <tr>
-              <td><b>2. Arquitetura & Conteúdo</b></td>
-              <td>Modelo de página local · 10 primeiras cidades · FAQs (Schema) · Interlinking</td>
-              <td>2–4 semanas</td>
-            </tr>
-            <tr>
-              <td><b>3. Implementação</b></td>
-              <td>On-page (titles, metas, headings) · Dados estruturados · Sitemap/robots · Performance</td>
-              <td>2–3 semanas</td>
-            </tr>
-            <tr>
-              <td><b>4. Monitoramento</b></td>
-              <td>Search Console · GA4 · Relatórios quinzenais · Iteração por cidade</td>
-              <td>Contínuo</td>
-            </tr>
-            <tr>
-              <td><b>5. Expansão</b></td>
-              <td>Novas cidades · Novos tópicos B2B · Conteúdos de autoridade (cases sem dados sensíveis)</td>
-              <td>Mensal</td>
-            </tr>
-          </tbody>
-        </table>
-        <p class="foot-note" style="margin-top:10px">Observação: Este documento é um estudo do caso do projeto completo e não contém preços.</p>
-      </div>
-    </section>
-
-    <section class="block">
-      <h2 class="section-title">Canais & Métricas</h2>
-      <div class="grid cols-3">
-        <div class="card">
-          <h3 class="card-title">Métricas-chave</h3>
-          <ul class="list">
-            <li>Impressões e cliques orgânicos por cidade</li>
-            <li>Posição média por cluster de serviço</li>
-            <li>Taxa de conversão (contato/whatsapp)</li>
-            <li>Tempo até 1ª consulta por cidade</li>
-          </ul>
-          <div class="divider"></div>
-          <span class="tag"><span class="mark"></span> GA4 + Search Console</span>
-        </div>
-        <div class="card">
-          <h3 class="card-title">Crescimento esperado</h3>
-          <canvas id="chart-vis" height="180"></canvas>
-          <p class="muted">Projeção qualitativa de crescimento orgânico com base na expansão de páginas locais.</p>
-        </div>
-        <div class="card">
-          <h3 class="card-title">Distribuição por Região</h3>
-          <canvas id="chart-pie" height="180"></canvas>
-          <p class="muted">Participação estimada por macro-região ao longo dos 3 primeiros meses.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="block">
-      <h2 class="section-title">Conteúdo por Cluster (exemplos)</h2>
-      <div class="grid cols-3">
-        <div class="card">
-          <h3 class="card-title">Societário</h3>
-          <p class="muted">Acordos de sócios · M&A · Estruturação de holdings · Governança.</p>
-        </div>
-        <div class="card">
-          <h3 class="card-title">Contratos</h3>
-          <p class="muted">Elaboração e revisão · SLAs · Distribuição · Fornecimento · Prestação de serviços.</p>
-        </div>
-        <div class="card">
-          <h3 class="card-title">Trabalhista Empresarial</h3>
-          <p class="muted">Compliance trabalhista · Políticas internas · Redução de passivo.</p>
-        </div>
-        <div class="card">
-          <h3 class="card-title">Tributário</h3>
-          <p class="muted">Planejamento tributário · Incentivos · Recuperação de créditos.</p>
-        </div>
-        <div class="card">
-          <h3 class="card-title">Regulatório</h3>
-          <p class="muted">LGPD · Setores regulados · Due diligence.</p>
-        </div>
-        <div class="card">
-          <h3 class="card-title">Contencioso Estratégico</h3>
-          <p class="muted">Demandas de alto impacto com visão de risco e negócio.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="block">
-      <h2 class="section-title">FAQ (estrutura SEO)</h2>
-      <div class="card">
-        <details open><summary><b>Como funciona a criação de páginas por cidade?</b></summary><p class="muted">Partimos de um modelo escalável, ajustando contextos locais e serviços prioritários, mantendo consistência de marca e sinais E-E-A-T.</p></details>
-        <details><summary><b>É necessário conteúdo de blog?</b></summary><p class="muted">Sim — artigos dirigidos para decisões empresariais aumentam autoridade e abrem portas em cidades competitivas (ex.: SP e Campinas).</p></details>
-        <details><summary><b>Quais integrações são previstas?</b></summary><p class="muted">GA4, Search Console, mapas de calor e rastreamento de cliques em WhatsApp/formulários.</p></details>
-      </div>
-    </section>
-
-    <section class="block">
-      <h2 class="section-title">Contato</h2>
-      <div class="card flex">
-        <div class="pill">@gpa.adv · gpa.adv@outlook.com</div>
-        <div class="pill">(41) 99726-6499</div>
-        <div class="pill">Curitiba · São Paulo · Chapecó</div>
-      </div>
-    </section>
-
-    <footer class="block" style="opacity:.9">
-      <div class="divider"></div>
-      <p class="foot-note">© 2025 GPA Advocacia — Documento de estudo do projeto (sem valores).</p>
-    </footer>
   </div>
+</section>
 
-  <!-- Charts (Chart.js) -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-  <script>
-    // Area-like line chart (qualitative projection)
-    const ctx1 = document.getElementById('chart-vis');
-    new Chart(ctx1, {
-      type: 'line',
-      data: {
-        labels: ['M1','M2','M3','M4','M5','M6'],
-        datasets: [{ label:'Visibilidade orgânica', data:[10,18,28,40,55,70], fill:true, tension:.35 }]
-      },
-      options: {
-        responsive:true,
-        plugins: { legend: { display: false } },
-        scales: {
-          x: { grid: { display:false } },
-          y: { grid: { color:'rgba(255,255,255,.08)' }, ticks: { display: true } }
-        }
-      }
+
+  <footer>© 2025 — e-Web Agency + Empresarial Web · Documento online de contrato comercial</footer>
+</div>
+
+<script>
+  // --- assinatura com desenho ---
+  const signatures = {};
+
+  function initSignatureCanvas(id){
+    const canvas = document.getElementById(id);
+    const ctx = canvas.getContext('2d');
+    let drawing = false;
+    let rect = canvas.getBoundingClientRect();
+
+    function resize(){
+      // salvar conteúdo se quiser, mas aqui simplificamos
+      const ratio = window.devicePixelRatio || 1;
+      canvas.width = canvas.clientWidth * ratio;
+      canvas.height = canvas.clientHeight * ratio;
+      ctx.scale(ratio, ratio);
+      ctx.lineWidth = 2;
+      ctx.lineCap = 'round';
+      ctx.strokeStyle = '#111827';
+    }
+
+    resize();
+    window.addEventListener('resize', () => {
+      rect = canvas.getBoundingClientRect();
+      resize();
     });
 
-    // Doughnut by regions (qualitativo)
-    const ctx2 = document.getElementById('chart-pie');
-    new Chart(ctx2, {
-      type: 'doughnut',
-      data: {
-        labels:['Curitiba/RMC','Norte PR','Sul PR','Oeste SC','SP'],
-        datasets:[{ data:[32,18,15,20,15] }]
-      },
-      options: {
-        plugins: { legend: { position:'bottom', labels: { color:'#e7ebff' } } },
-        cutout:'58%'
+    function getPos(e){
+      if(e.touches && e.touches.length){
+        return {
+          x: e.touches[0].clientX - rect.left,
+          y: e.touches[0].clientY - rect.top
+        };
       }
-    });
-  </script>
+      return {
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top
+      };
+    }
+
+    function start(e){
+      drawing = true;
+      const pos = getPos(e);
+      ctx.beginPath();
+      ctx.moveTo(pos.x,pos.y);
+      e.preventDefault();
+    }
+
+    function move(e){
+      if(!drawing) return;
+      const pos = getPos(e);
+      ctx.lineTo(pos.x,pos.y);
+      ctx.stroke();
+      e.preventDefault();
+    }
+
+    function end(){
+      drawing = false;
+    }
+
+    canvas.addEventListener('mousedown', start);
+    canvas.addEventListener('mousemove', move);
+    window.addEventListener('mouseup', end);
+
+    canvas.addEventListener('touchstart', start, {passive:false});
+    canvas.addEventListener('touchmove', move, {passive:false});
+    window.addEventListener('touchend', end);
+
+    signatures[id] = {canvas, ctx};
+  }
+
+  function clearSignature(id){
+    const sig = signatures[id];
+    if(!sig) return;
+    sig.ctx.clearRect(0,0,sig.canvas.width,sig.canvas.height);
+  }
+
+  function clearAllSignatures(){
+    Object.keys(signatures).forEach(clearSignature);
+  }
+
+  function loadSignature(event, id){
+    const file = event.target.files[0];
+    if(!file) return;
+    const reader = new FileReader();
+    reader.onload = function(e){
+      const img = new Image();
+      img.onload = function(){
+        const sig = signatures[id];
+        if(!sig) return;
+        const {canvas, ctx} = sig;
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+        // desenha centralizado
+        const scale = Math.min(canvas.clientWidth / img.width, canvas.clientHeight / img.height);
+        const w = img.width * scale;
+        const h = img.height * scale;
+        const x = (canvas.clientWidth - w) / 2;
+        const y = (canvas.clientHeight - h) / 2;
+        ctx.drawImage(img, x, y, w, h);
+      };
+      img.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    initSignatureCanvas('sigContratante');
+    initSignatureCanvas('sigContratado');
+  });
+ function toggleAnexoViewer(){
+  const viewer = document.getElementById('anexoViewer');
+  viewer.classList.toggle('open');
+}
+/* ===== ZOOM & DRAG DO ANEXO ===== */
+
+let scale = 1;
+let posX = 0;
+let posY = 0;
+
+let isDragging = false;
+let startX, startY;
+
+const img = document.getElementById("zoomImg");
+const container = document.getElementById("zoomContainer");
+
+function updateTransform(){
+  img.style.transform = `translate(${posX}px, ${posY}px) scale(${scale})`;
+}
+
+function zoomIn(){
+  scale += 0.2;
+  updateTransform();
+}
+
+function zoomOut(){
+  scale = Math.max(0.2, scale - 0.2);
+  updateTransform();
+}
+
+function resetZoom(){
+  scale = 1;
+  posX = 0;
+  posY = 0;
+  updateTransform();
+}
+
+// Scroll para zoom
+container.addEventListener("wheel", function(e){
+  e.preventDefault();
+  const delta = e.deltaY > 0 ? -0.1 : 0.1;
+  scale = Math.max(0.2, scale + delta);
+  updateTransform();
+});
+
+// Drag
+container.addEventListener("mousedown", function(e){
+  isDragging = true;
+  startX = e.clientX - posX;
+  startY = e.clientY - posY;
+});
+
+document.addEventListener("mousemove", function(e){
+  if(!isDragging) return;
+  posX = e.clientX - startX;
+  posY = e.clientY - startY;
+  updateTransform();
+});
+
+document.addEventListener("mouseup", function(){
+  isDragging = false;
+});
+
+// Touch drag
+container.addEventListener("touchstart", function(e){
+  isDragging = true;
+  startX = e.touches[0].clientX - posX;
+  startY = e.touches[0].clientY - posY;
+});
+
+container.addEventListener("touchmove", function(e){
+  if(!isDragging) return;
+  posX = e.touches[0].clientX - startX;
+  posY = e.touches[0].clientY - startY;
+  updateTransform();
+  e.preventDefault();
+});
+
+container.addEventListener("touchend", ()=>{
+  isDragging = false;
+});
+
+</script>
+
 </body>
 </html>
