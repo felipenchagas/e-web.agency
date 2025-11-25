@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="GPA Advocacia - Parceria Jurídica no mundo dos negócios. Especialistas em Direito Empresarial e Inovação.">
+    <title>GPA Advocacia | Direito Empresarial e Inovação</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style8.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Floating Menu -->
+    <nav class="floating-menu" id="floating-menu">
+        <a href="#" class="logo">GPA Advocacia</a>
+
+        <ul class="nav__list">
+            <li><a href="#home" class="nav__link">Home</a></li>
+            <li><a href="#sobre" class="nav__link">Quem Somos</a></li>
+            <li><a href="#areas" class="nav__link">Áreas de Atuação</a></li>
+            <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+
+        <div class="menu-cta">
+            <a href="https://wa.me/5541997266499" target="_blank" class="btn">Fale Conosco</a>
+            <div class="mobile-toggle" id="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="close-menu" id="close-menu"><i class="fas fa-times"></i></div>
+        <ul>
+            <li><a href="#home" onclick="closeMenu()">Home</a></li>
+            <li><a href="#sobre" onclick="closeMenu()">Quem Somos</a></li>
+            <li><a href="#areas" onclick="closeMenu()">Áreas de Atuação</a></li>
+            <li><a href="#contato" onclick="closeMenu()">Contato</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section with Form -->
+    <section class="hero" id="home">
+        <div class="hero__bg">
+            <img src="imagens/meeting.jpg" alt="GPA Advocacia Office">
+        </div>
+        <div class="hero__overlay"></div>
+
+        <div class="container hero__container">
+            <div class="hero__content">
+                <span class="hero__subtitle">Direito Empresarial & Inovação</span>
+                <h1 class="hero__title">Parceria Jurídica <br> para <span>Negócios</span> <br> de Sucesso.</h1>
+                <p class="hero__desc">
+                    Atuamos com foco em resultados, segurança jurídica e estratégias personalizadas para impulsionar o
+                    crescimento da sua empresa.
+                </p>
+
+                <div style="display: flex; gap: 2rem;">
+                    <div class="stat-mini">
+                        <span style="font-size: 2rem; font-weight: 700; color: var(--color-accent);">8+</span>
+                        <span style="display: block; font-size: 0.8rem; text-transform: uppercase;">Anos de Exp.</span>
+                    </div>
+                    <div class="stat-mini">
+                        <span style="font-size: 2rem; font-weight: 700; color: var(--color-accent);">100%</span>
+                        <span style="display: block; font-size: 0.8rem; text-transform: uppercase;">Foco
+                            Empresarial</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero__form">
+                <h3 class="form-title">Agende uma Reunião</h3>
+                <p class="form-subtitle">Preencha os dados abaixo para iniciar seu atendimento.</p>
+
+                <form action="https://wa.me/5541997266499" method="get" target="_blank">
+                    <div class="input-group">
+                        <input type="text" class="input-field" placeholder=" " required>
+                        <label class="input-label">Nome Completo</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="tel" class="input-field" placeholder=" " required>
+                        <label class="input-label">WhatsApp</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="input-field" placeholder=" " required>
+                        <label class="input-label">Nome da Empresa</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Solicitar Contato</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section with Numbered Cards -->
+    <section class="section services" id="areas">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nossas Soluções</span>
+                <h2 class="section-title">Áreas de Atuação</h2>
+                <p style="color: var(--text-light);">Oferecemos suporte jurídico completo para todas as fases do seu
+                    negócio.</p>
+            </div>
+
+            <div class="services__grid-numbered">
+                <div class="service-card-numbered">
+                    <div class="card-number">01</div>
+                    <div class="card-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3>Direito Empresarial</h3>
+                    <p>Consultoria e assessoria jurídica especializada para empresas</p>
+                </div>
+
+                <div class="service-card-numbered">
+                    <div class="card-number">02</div>
+                    <div class="card-icon"><i class="fas fa-gavel"></i></div>
+                    <h3>Contencioso Cível</h3>
+                    <p>Defesa estratégica em processos judiciais complexos</p>
+                </div>
+
+                <div class="service-card-numbered">
+                    <div class="card-number">03</div>
+                    <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
+                    <h3>Contratos</h3>
+                    <p>Elaboração e revisão de contratos empresariais</p>
+                </div>
+
+                <div class="service-card-numbered">
+                    <div class="card-number">04</div>
+                    <div class="card-icon"><i class="fas fa-copyright"></i></div>
+                    <h3>Propriedade Intelectual</h3>
+                    <p>Registro e proteção de marcas e patentes</p>
+                </div>
+
+                <div class="service-card-numbered">
+                    <div class="card-number">05</div>
+                    <div class="card-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Compliance</h3>
+                    <p>Adequação e conformidade às normas regulatórias</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container stats__container">
+            <div class="stat-item">
+                <span class="stat-number" data-target="8">0</span>
+                <span class="stat-label">Anos de Experiência</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="3">0</span>
+                <span class="stat-label">Estados de Atuação</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="150">0</span>
+                <span class="stat-label">Clientes Atendidos</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="sobre">
+        <div class="container about__container">
+            <div class="about__img">
+                <div class="img-decoration img-decoration--tl"></div>
+                <img src="imagens/lawyer.jpg" alt="Gustavo Pedroso">
+                <div class="img-decoration img-decoration--br"></div>
+            </div>
+            <div class="about__content">
+                <span class="section-tag">Quem Somos</span>
+                <h2 class="section-title">Gustavo Pedroso</h2>
+                <h4 class="about__subtitle">Sócio Fundador | Especialista em Direito Empresarial</h4>
+                <p class="about__desc">
+                    Com uma visão moderna e inovadora da advocacia, Gustavo Pedroso fundou a GPA Advocacia para ser mais
+                    do que um escritório jurídico: um verdadeiro parceiro de negócios.
+                </p>
+                <p class="about__desc">
+                    Nossa missão é descomplicar o direito e utilizá-lo como ferramenta estratégica para o crescimento e
+                    segurança das empresas.
+                </p>
+                <a href="#contato" class="btn">Agendar Consultoria</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section why-choose">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nossos Diferenciais</span>
+                <h2 class="section-title">Por Que Escolher a GPA?</h2>
+            </div>
+
+            <div class="diferentials-grid">
+                <div class="diferential-card">
+                    <div class="diferential-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Agilidade</h3>
+                    <p>Respostas rápidas e soluções eficientes para o seu negócio</p>
+                </div>
+
+                <div class="diferential-card">
+                    <div class="diferential-icon">
+                        <i class="fas fa-chess-knight"></i>
+                    </div>
+                    <h3>Estratégia</h3>
+                    <p>Planejamento jurídico alinhado aos objetivos empresariais</p>
+                </div>
+
+                <div class="diferential-card">
+                    <div class="diferential-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Segurança</h3>
+                    <p>Compliance e proteção total para sua empresa</p>
+                </div>
+
+                <div class="diferential-card">
+                    <div class="diferential-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Inovação</h3>
+                    <p>Soluções modernas para desafios jurídicos contemporâneos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Depoimentos</span>
+                <h2 class="section-title">O Que Nossos Clientes Dizem</h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "A GPA foi fundamental para estruturar juridicamente nossa startup. Profissionalismo e agilidade
+                        exemplares."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4>João Silva</h4>
+                            <span>CEO, Tech Solutions</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Excelente suporte em compliance. A equipe da GPA entende as necessidades do mercado
+                        empresarial."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4>Maria Santos</h4>
+                            <span>Diretora, Grupo Empresarial</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Assessoria jurídica estratégica que fez toda diferença no crescimento da nossa empresa."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4>Carlos Mendes</h4>
+                            <span>Fundador, Startup XYZ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Perguntas Frequentes</span>
+                <h2 class="section-title">Dúvidas Comuns</h2>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Como funciona a consultoria jurídica?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nossa consultoria começa com uma análise detalhada das necessidades da sua empresa, seguida
+                            por um plano de ação personalizado.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quais são os honorários?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Trabalhamos com modelos flexíveis, incluindo honorários por projeto, mensalidade ou hora
+                            trabalhada, adequados ao seu negócio.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Atuam em todo o Brasil?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, temos atuação nacional com escritórios em Curitiba (PR), São Paulo (SP) e Chapecó (SC).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Qual o prazo de resposta?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nosso compromisso é responder todas as demandas em até 24 horas úteis, garantindo agilidade
+                            no atendimento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-overlay"></div>
+        <div class="container cta-container">
+            <div class="cta-content">
+                <h2 class="cta-title">Pronto para Proteger e Impulsionar seu Negócio?</h2>
+                <p class="cta-desc">Entre em contato agora e descubra como podemos ser o parceiro jurídico ideal para
+                    sua empresa.</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/5541997266499" target="_blank" class="btn btn-primary-cta">
+                        <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+                    </a>
+                    <a href="mailto:gpa.adv@outlook.com" class="btn btn-secondary-cta">
+                        <i class="fas fa-envelope"></i> Enviar E-mail
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contato">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <a href="#" class="logo">GPA Advocacia</a>
+                    <p class="footer__desc">Soluções jurídicas inteligentes para o seu negócio.</p>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Links Rápidos</h4>
+                    <ul class="footer__links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#sobre">Quem Somos</a></li>
+                        <li><a href="#areas">Áreas de Atuação</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Contato</h4>
+                    <ul class="footer__links">
+                        <li><i class="fas fa-envelope"></i> gpa.adv@outlook.com</li>
+                        <li><i class="fas fa-phone"></i> (41) 99726-6499</li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Redes Sociais</h4>
+                    <div class="footer__social">
+                        <a href="https://instagram.com/gpa.adv" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; 2025 GPA Advocacia. Todos os direitos reservados.</p>
+                <p>Desenvolvido com excelência.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script8.js"></script>
+</body>
+
+</html>

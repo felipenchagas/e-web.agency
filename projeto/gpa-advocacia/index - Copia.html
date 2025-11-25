@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="GPA Advocacia - Parceria Jurídica no mundo dos negócios. Especialistas em Direito Empresarial e Inovação em Curitiba, São Paulo e Chapecó.">
+    <title>GPA Advocacia | Direito Empresarial e Inovação</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar__container">
+            <a href="#home" class="navbar__logo">
+                <span class="navbar__logo-text">GPA</span>
+                <span class="navbar__logo-sub">Advocacia</span>
+            </a>
+
+            <ul class="navbar__menu" id="navbarMenu">
+                <li class="navbar__item"><a href="#home" class="navbar__link">Home</a></li>
+                <li class="navbar__item"><a href="#sobre" class="navbar__link">Quem Somos</a></li>
+                <li class="navbar__item"><a href="#servicos" class="navbar__link">Serviços</a></li>
+                <li class="navbar__item"><a href="#areas" class="navbar__link">Áreas de Atuação</a></li>
+                <li class="navbar__item"><a href="#contato" class="navbar__link">Contato</a></li>
+            </ul>
+
+            <div class="navbar__actions">
+                <a href="tel:+5541997266499" class="navbar__phone">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>(41) 99726-6499</span>
+                </a>
+                <a href="https://wa.me/5541997266499" target="_blank" class="btn btn--primary">
+                    <i class="fab fa-whatsapp"></i>
+                    Fale Conosco
+                </a>
+            </div>
+
+            <button class="navbar__toggle" id="navbarToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero__bg">
+            <div class="hero__overlay"></div>
+        </div>
+        <div class="container hero__container">
+            <div class="hero__content">
+                <span class="hero__tag" data-aos="fade-up">Excelência Jurídica</span>
+                <h1 class="hero__title" data-aos="fade-up" data-aos-delay="100">
+                    Parceria Jurídica no <span class="gradient-text">Mundo dos Negócios</span>
+                </h1>
+                <p class="hero__description" data-aos="fade-up" data-aos-delay="200">
+                    Escritório especializado em empresas e empresários que buscam segurança jurídica aliada às melhores
+                    estratégias empresariais.
+                </p>
+                <div class="hero__buttons" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#contato" class="btn btn--primary btn--large">
+                        <i class="fas fa-comments"></i>
+                        Agende uma Consulta
+                    </a>
+                    <a href="#sobre" class="btn btn--outline btn--large">
+                        <i class="fas fa-arrow-down"></i>
+                        Conheça Mais
+                    </a>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="hero__stats" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-card">
+                        <div class="stat-card__icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="stat-card__content">
+                            <h3 class="stat-card__number">8+</h3>
+                            <p class="stat-card__label">Anos de Experiência</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="stat-card__content">
+                            <h3 class="stat-card__number">3</h3>
+                            <p class="stat-card__label">Estados de Atuação</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card__icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="stat-card__content">
+                            <h3 class="stat-card__number">100%</h3>
+                            <p class="stat-card__label">Foco Empresarial</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-indicator__line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="sobre">
+        <div class="container">
+            <div class="about__grid">
+                <div class="about__image" data-aos="fade-right">
+                    <div class="about__image-wrapper">
+                        <img src="imagens/Insurance-Law500.jpg" alt="Gustavo Pedroso - Sócio Fundador GPA Advocacia">
+                        <div class="about__badge">
+                            <i class="fas fa-balance-scale"></i>
+                            <span>GPA Advocacia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about__content" data-aos="fade-left">
+                    <span class="section__tag">Quem Somos</span>
+                    <h2 class="section__title">Parceria e <span class="gradient-text">Inovação</span></h2>
+                    <div class="section__divider"></div>
+
+                    <p class="about__text">
+                        GPA Advocacia é um escritório fundado em Curitiba, especializado em empresas e empresários que
+                        buscam segurança jurídica aliada às melhores estratégias empresariais.
+                    </p>
+
+                    <p class="about__text">
+                        Com mais de 8 anos de atuação, busca desenvolver um serviço personalizado e estratégico,
+                        auxiliando os negócios a prosperarem e sendo um verdadeiro parceiro de negócios.
+                    </p>
+
+                    <!-- Features -->
+                    <div class="features-grid">
+                        <div class="feature-box">
+                            <div class="feature-box__icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="feature-box__content">
+                                <h3>Parceria</h3>
+                                <p>Atendimento personalizado e próximo</p>
+                            </div>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-box__icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="feature-box__content">
+                                <h3>Inovação</h3>
+                                <p>Novas formas de pensar e solucionar problemas</p>
+                            </div>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-box__icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="feature-box__content">
+                                <h3>Conhecimento</h3>
+                                <p>Jurídico aliado ao conhecimento de mercado</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#contato" class="btn btn--primary">
+                        <i class="fas fa-envelope"></i>
+                        Entre em Contato
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section section--dark" id="servicos">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__tag">Nossos Diferenciais</span>
+                <h2 class="section__title">Por que escolher a <span class="gradient-text">GPA Advocacia</span>?</h2>
+                <div class="section__divider"></div>
+            </div>
+
+            <div class="services__grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card__icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="service-card__title">Serviço Personalizado</h3>
+                    <p class="service-card__text">
+                        Em um mundo cada vez mais automatizado, um atendimento personalizado e próximo é a comodidade
+                        que os empresários querem e a parceria que as empresas precisam.
+                    </p>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card__icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="service-card__title">Conhecimento</h3>
+                    <p class="service-card__text">
+                        O mundo mudou, e o Advogado também precisa mudar. Em um ambiente complexo como o atual, unir o
+                        conhecimento jurídico com o conhecimento de mercado faz toda a diferença.
+                    </p>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card__icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="service-card__title">Inovação</h3>
+                    <p class="service-card__text">
+                        Não é apenas a criação de um aplicativo, mas sim novas formas de pensar, de agir, de atender e
+                        solucionar problemas de maneira eficiente.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas Section -->
+    <section class="areas section" id="areas">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__tag">Expertise</span>
+                <h2 class="section__title">Áreas de <span class="gradient-text">Atuação</span></h2>
+                <div class="section__divider"></div>
+            </div>
+
+            <div class="areas__grid">
+                <!-- Consultiva -->
+                <div class="area-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="area-card__header">
+                        <div class="area-card__icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="area-card__title">Área Consultiva</h3>
+                        <p class="area-card__subtitle">Prevenção e Estratégia</p>
+                    </div>
+                    <div class="area-card__image">
+                        <img src="imagens/meeting.jpg" alt="Área Consultiva">
+                        <div class="area-card__overlay"></div>
+                    </div>
+                    <ul class="area-card__list">
+                        <li><i class="fas fa-check-circle"></i> Contratos e Estruturação de Negócios</li>
+                        <li><i class="fas fa-check-circle"></i> Marcas e Patentes</li>
+                        <li><i class="fas fa-check-circle"></i> Direito Digital e Inovação</li>
+                        <li><i class="fas fa-check-circle"></i> Ambiental, Florestal e Agronegócio</li>
+                        <li><i class="fas fa-check-circle"></i> Compliance e Regulatório</li>
+                        <li><i class="fas fa-check-circle"></i> Advocacy/Public Affairs</li>
+                    </ul>
+                </div>
+
+                <!-- Contenciosa -->
+                <div class="area-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="area-card__header">
+                        <div class="area-card__icon">
+                            <i class="fas fa-gavel"></i>
+                        </div>
+                        <h3 class="area-card__title">Área Contenciosa</h3>
+                        <p class="area-card__subtitle">Defesa e Resolução</p>
+                    </div>
+                    <div class="area-card__image">
+                        <img src="imagens/law-bg.jpg" alt="Área Contenciosa">
+                        <div class="area-card__overlay"></div>
+                    </div>
+                    <ul class="area-card__list">
+                        <li><i class="fas fa-check-circle"></i> Família e Sucessões</li>
+                        <li><i class="fas fa-check-circle"></i> Penal Empresarial</li>
+                        <li><i class="fas fa-check-circle"></i> Relações Trabalhistas</li>
+                        <li><i class="fas fa-check-circle"></i> Tributário</li>
+                        <li><i class="fas fa-check-circle"></i> Arbitragem e Mediação</li>
+                        <li><i class="fas fa-check-circle"></i> Recuperação de Crédito</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="founder section section--dark">
+        <div class="container">
+            <div class="founder__grid">
+                <div class="founder__image" data-aos="fade-right">
+                    <div class="founder__image-wrapper">
+                        <img src="imagens/lawyer.jpg" alt="Gustavo de Oliveira Pedroso">
+                        <div class="founder__badge">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="founder__content" data-aos="fade-left">
+                    <span class="section__tag">Liderança</span>
+                    <h2 class="section__title">Gustavo de Oliveira <span class="gradient-text">Pedroso</span></h2>
+                    <div class="section__divider"></div>
+                    <p class="founder__role">Sócio Fundador | Direito Empresarial</p>
+
+                    <p class="founder__text">
+                        Especialista em Direito Empresarial e Inovação pela Universidade Estadual de Londrina e Master
+                        in Business Administration pelo IBMEC, conta com vasta experiência em Órgãos Públicos,
+                        Escritórios de Advocacia e Departamentos Jurídicos de empresas.
+                    </p>
+
+                    <p class="founder__text">
+                        Iniciou o GPA com um objetivo: <strong>Ser um Jurídico parceiro de negócios, unindo segurança
+                            jurídica com atuação estratégica.</strong>
+                    </p>
+
+                    <div class="founder__credentials">
+                        <div class="credential-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Especialista em Direito Empresarial - UEL</span>
+                        </div>
+                        <div class="credential-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>MBA - IBMEC</span>
+                        </div>
+                        <div class="credential-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>8+ Anos de Experiência</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta__content" data-aos="zoom-in">
+                <div class="cta__icon">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h2 class="cta__title">Precisa de orientação jurídica estratégica?</h2>
+                <p class="cta__text">Entre em contato e descubra como podemos ajudar seu negócio a prosperar</p>
+                <div class="cta__buttons">
+                    <a href="https://wa.me/5541997266499" target="_blank" class="btn btn--primary btn--large">
+                        <i class="fab fa-whatsapp"></i>
+                        (41) 99726-6499
+                    </a>
+                    <a href="mailto:gpa.adv@outlook.com" class="btn btn--outline btn--large">
+                        <i class="fas fa-envelope"></i>
+                        gpa.adv@outlook.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contato">
+        <div class="container">
+            <div class="section__header" data-aos="fade-up">
+                <span class="section__tag">Fale Conosco</span>
+                <h2 class="section__title">Entre em <span class="gradient-text">Contato</span></h2>
+                <div class="section__divider"></div>
+            </div>
+
+            <div class="contact__grid">
+                <div class="contact__info" data-aos="fade-right">
+                    <div class="contact-card">
+                        <div class="contact-card__icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-card__content">
+                            <h3>Nossos Escritórios</h3>
+                            <p>Curitiba (PR)</p>
+                            <p>São Paulo (SP)</p>
+                            <p>Chapecó (SC)</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card__icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-card__content">
+                            <h3>Telefone</h3>
+                            <a href="tel:+5541997266499">(41) 99726-6499</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card__icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-card__content">
+                            <h3>E-mail</h3>
+                            <a href="mailto:gpa.adv@outlook.com">gpa.adv@outlook.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card__icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="contact-card__content">
+                            <h3>Instagram</h3>
+                            <a href="https://instagram.com/gpa.adv" target="_blank">@gpa.adv</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact__form" data-aos="fade-left">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Nome *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Sobrenome *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensagem *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary btn--large btn--full">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <div class="footer__logo">
+                        <span class="footer__logo-text">GPA</span>
+                        <span class="footer__logo-sub">Advocacia</span>
+                    </div>
+                    <p class="footer__description">
+                        Ser um Jurídico parceiro de negócios, unindo segurança jurídica com atuação estratégica.
+                    </p>
+                    <div class="footer__social">
+                        <a href="https://instagram.com/gpa.adv" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/5541997266499" target="_blank" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Links Rápidos</h4>
+                    <ul class="footer__links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#sobre">Quem Somos</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#areas">Áreas de Atuação</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Áreas de Atuação</h4>
+                    <ul class="footer__links">
+                        <li><a href="#areas">Direito Empresarial</a></li>
+                        <li><a href="#areas">Contratos</a></li>
+                        <li><a href="#areas">Marcas e Patentes</a></li>
+                        <li><a href="#areas">Direito Digital</a></li>
+                        <li><a href="#areas">Compliance</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__col">
+                    <h4 class="footer__title">Contato</h4>
+                    <ul class="footer__contact">
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+5541997266499">(41) 99726-6499</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:gpa.adv@outlook.com">gpa.adv@outlook.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Curitiba, São Paulo, Chapecó</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; 2025 GPA Advocacia. Todos os direitos reservados.</p>
+                <p class="footer__dev">Desenvolvido por <a href="https://empresarialweb.com.br" target="_blank">e-Web
+                        Agency</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
