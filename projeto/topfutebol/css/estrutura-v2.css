@@ -1,0 +1,171 @@
+/* ESTRUTURA V2 - LAYOUT DETALHADO E CRIATIVO */
+
+/* Reset básico para o container principal */
+.estrutura-v2, .estrutura-v2 * {
+    box-sizing: border-box;
+}
+
+.estrutura-v2 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+    background-color: #ffffff; /* Fundo branco para um look mais clean */
+}
+
+/* --- Seção de Hero (Cabeçalho da Página) --- */
+.hero-estrutura {
+    padding: 80px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../imagens/estrutura/IMG_8046_jpg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    border-bottom: 5px solid #cf2027;
+}
+.hero-conteudo h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 0 0 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+.hero-conteudo p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+/* --- Layout das Seções de Conteúdo --- */
+.secao-feature {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+/* Inverte a ordem para seções pares */
+.secao-feature:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.feature-texto {
+    flex: 1 1 55%; /* Mais espaço para o texto */
+    min-width: 320px;
+}
+.feature-texto h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    color: #1a202c;
+    position: relative;
+    padding-bottom: 10px;
+}
+/* Linha decorativa para o título */
+.feature-texto h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: #cf2027;
+}
+.feature-texto p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #4a5568;
+    margin-bottom: 15px;
+}
+
+.feature-imagens {
+    flex: 1 1 40%;
+    min-width: 320px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr; /* Duas colunas para as imagens */
+}
+.feature-imagens img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-imagens img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+}
+/* Faz a primeira imagem ocupar as duas colunas */
+.feature-imagens.coluna-unica img {
+    grid-column: span 2;
+}
+
+/* --- Seção de Galeria de Fotos --- */
+.secao-galeria {
+    padding: 80px 20px;
+    background-color: #f8f9fa; /* Fundo levemente cinza */
+}
+.galeria-titulo {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.galeria-titulo h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #1a202c;
+}
+.galeria-titulo p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.galeria-grid-fotos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.foto-item {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    position: relative;
+    height: 250px;
+}
+.foto-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.foto-item:hover img {
+    transform: scale(1.1);
+}
+
+/* --- Responsividade --- */
+@media (max-width: 992px) {
+    .secao-feature {
+        gap: 30px;
+        margin: 60px auto;
+    }
+    .feature-texto h2 { font-size: 2rem; }
+    .hero-conteudo h1 { font-size: 2.8rem; }
+}
+
+@media (max-width: 768px) {
+    .secao-feature, .secao-feature:nth-child(even) {
+        flex-direction: column; /* Empilha tudo em telas pequenas */
+    }
+    .hero-conteudo h1 { font-size: 2.2rem; }
+    .galeria-titulo h2 { font-size: 2.2rem; }
+}

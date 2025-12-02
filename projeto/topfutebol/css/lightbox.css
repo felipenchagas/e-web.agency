@@ -1,0 +1,59 @@
+/* CSS para o Lightbox */
+
+/* A sobreposição (fundo escuro) */
+#lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 10000;
+    display: none; /* Começa escondido */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* O container da imagem grande (sem sizing) */
+#lightbox-modal {
+    position: relative;
+    box-shadow: 0 0 40px rgba(0,0,0,0.8);
+    background: #111;
+    /* Removemos max-width e max-height daqui para o container não interferir */
+}
+
+#lightbox-modal img {
+    display: block;
+    /* Define o tamanho máximo diretamente em relação à tela */
+    max-width: 90vw; /* No máximo 90% da largura da tela */
+    max-height: 90vh; /* No máximo 90% da altura da tela */
+    object-fit: contain; /* Mantém a proporção */
+}
+
+/* Botão de fechar */
+#lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+    font-family: Arial, sans-serif;
+}
+
+#lightbox-close:hover {
+    color: #ccc;
+}
+
+/* Animação de fade-in */
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
