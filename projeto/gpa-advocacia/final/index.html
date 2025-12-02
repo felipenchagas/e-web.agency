@@ -1,0 +1,1062 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rexlaw - Law Attorney HTML Template</title>
+  <link rel="stylesheet" href="assets/css/owl.carousel.css">
+  <link rel="stylesheet" href="assets/css/fontawesome-all.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/css/flaticon.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/video.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <style>
+    body {
+      margin: 0;
+    }
+    .demo_banner-section {
+      background-image: url(assets/img/slider/s2.jpg);
+      padding: 250px 0px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+    .demo_banner-section h1 {
+      color: #fff;
+      line-height: 1.5;
+      font-size: 50px;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+    .demo_logo {
+      margin-bottom: 50px;
+    }
+    .demo_banner-section .background-overlay {
+      background-color: rgba(0, 0, 0, 0.8);
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+    .demo_banner_text {
+      z-index: 1;
+      position: relative;
+    }
+    @-webkit-keyframes mover {
+      0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+      100% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px); 
+      } 
+    }
+
+    @keyframes mover {
+      0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+      100% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px); 
+      } 
+    }
+    .demo_scoll a {
+      color: #fff;
+      margin-top: 50px;
+      padding: 20px 10px;
+      display: inline-block;
+      border-radius: 20px;
+      border: 1px solid #fff;
+    }
+    .demo_scoll a i {
+      animation: mover 1s infinite alternate;
+    }
+    .area-title {
+      margin: 0 auto;
+      max-width: 750px; 
+    }
+    .area-title span {
+      color: #343434;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: "Roboto"; 
+    }
+    .area-title h2 {
+      margin: 0 auto;
+      font-size: 36px;
+      font-weight: 700;
+      max-width: 520px;
+      margin-bottom: 35px;
+      position: relative; 
+    }
+    .area-title h2 span {
+      font-size: 36px;
+      font-weight: 300;
+    }
+    .area-title h2:after {
+      top: 15px;
+      content: '';
+      height: 2px;
+      width: 50px;
+      left: -46px;
+      position: absolute;
+      background-color: #b89b5e;
+    }
+    .area-title h2:before {
+      top: 22px;
+      content: '';
+      height: 2px;
+      width: 25px;
+      left: -20px;
+      position: absolute;
+      background-color: #b89b5e;
+    }
+    .demo-section {
+      padding: 120px 0px 60px;
+    }
+    .demo_pages {
+      display: block;
+      width: 100%;
+      padding-top: 50px;
+    }
+    .demo_link {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 2px 30px rgba(0, 0, 0, .1);
+    }
+    .demo_link:before {
+      position: absolute;
+      content: '';
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      opacity: 0;
+      visibility: hidden;
+      transition: .3s all ease-in-out;
+      left: 0;
+      background-color: rgba(0,0,0,.7);
+    }
+    .demo_link:hover::before {
+      opacity: 1;
+      visibility: visible;
+    }
+    .view_btn {
+      position: absolute;
+      top: 0;
+      background-color: #b89b5e;
+      left: 0;
+      top: 40%;
+      right: 0;
+      z-index: 1;
+      color: #fff;
+      width: 180px;
+      height: 60px;
+      margin: 0 auto;
+      font-size: 18px;
+      text-align: center;
+      line-height: 60px;
+      transform: translateY(-50%);
+      border-radius: 30px;
+      opacity: 0;
+      transition: .3s all ease-in-out;
+      visibility: hidden;
+    }
+
+    .demo_link:hover .view_btn,
+    .demo_link:hover::before {
+      opacity: 1;
+      visibility: visible;
+    }
+    .demo_link:hover .view_btn {
+      top: 50%;
+    }
+    .view_btn a {
+      display: block;
+      width: 100%;
+    }
+    .demo_link img {
+      top: 0;
+      left: 0;
+    }
+    .demo_link {
+      position: relative;
+    }
+    .new-badge {
+      top: 0;
+      left: 0;
+      color: #fff;
+      z-index: 3;
+      height: 50px;
+      width: 100px;
+      line-height: 50px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+      position: absolute;
+      background-color: #ff2b2b;
+    }
+    .page-title {
+      padding: 20px;
+      margin-bottom: 100px;
+      text-transform: uppercase;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 2px 30px rgba(0, 0, 0, .1);
+    }
+    .page-title h3 {
+      transition: .3s all ease-in-out;
+    }
+    .page-title:after {
+      content: '';
+      position: absolute;
+      background-color: #b89b5e;
+      height: 0%;
+      width: 100%;
+      top: auto;
+      bottom: 0;
+      z-index: -1;
+      transition: .5s all ease-in-out;
+      left: 0;
+    }
+    .page-title:hover h3 {
+      color: #fff;
+    }
+    .page-title:hover::after {
+      height: 100px;
+      top: 0;
+      bottom: auto;
+    }
+    .page-title h3 {
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .page-title h3 a {
+      width: 100%;
+      display: block;
+    }
+    .feature-section {
+      padding-bottom: 110px; 
+    }
+    .feature-section .area-title strong {
+      color: #343434; 
+    }
+    .feature-section .area-title span {
+      font-weight: 700;
+    }
+    .feature-section .area-title h2:after {
+      left: -15px; 
+    }
+    .feature-section .area-title h2:before {
+      left: 10px; 
+    }
+    .feature-section .col-lg-4:nth-child(3) .feature-content::after,
+    .feature-section .col-lg-4:nth-child(6) .feature-content::after {
+      display: none;
+    }
+
+    .feature-content-item {
+      background-color: #fafafa;
+      -webkit-box-shadow: 0px 14px 65px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 14px 65px 0px rgba(0, 0, 0, 0.15);
+      position: relative; 
+    }
+    .feature-content-item:after {
+      top: 50%;
+      left: 0;
+      right: 0;
+      content: '';
+      width: 90%;
+      margin: 0 auto;
+      position: absolute;
+      border: 1px dashed #d0d0d0; 
+    }
+
+    .feature-content {
+      position: relative;
+      padding: 40px 40px 55px 45px;
+      -webkit-transition: .3s all ease-in-out;
+      -o-transition: .3s all ease-in-out;
+      transition: .3s all ease-in-out; 
+    }
+    .feature-content h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin: 20px 0px 15px 0px;
+      -webkit-transition: .3s all ease-in-out;
+      -o-transition: .3s all ease-in-out;
+      transition: .3s all ease-in-out; 
+    }
+    .feature-content p {
+      font-size: 16px;
+      max-width: 290px; 
+    }
+    .feature-content:after {
+      top: 50px;
+      content: '';
+      height: 60%;
+      right: -15px;
+      position: absolute;
+      border-right: 1px dashed #d0d0d0; 
+    }
+    .feature-content:hover h3 {
+
+      color: #723cbe; 
+    }
+    .feature-content:hover  {
+      -webkit-box-shadow: 0px 40px 80px 0px rgba(4, 10, 48, 0.06);
+      box-shadow: 0px 40px 80px 0px rgba(4, 10, 48, 0.06); 
+    }
+    .more-feature-section {
+      background-color: #f9f9f9;
+      padding: 120px 0px;
+    }
+    .more-feature-section .feature span img {
+      width: 70px;
+      height: 70px;
+      overflow: hidden;
+      text-align: center;
+      margin: 0 auto 15px;
+    }
+    .more-feature-section .feature {
+      width: 100%;
+      height: auto;
+      padding: 45px 30px 30px 30px;
+      min-height: 205px;
+      text-align: center;
+      border-radius: 3px;
+      margin-bottom: 30px;
+      background: #ffffff;
+    }
+    .more-feature-section .feature h3 {
+      margin: 0px;
+      color: #151515;
+      margin-top: 15px;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    .copyright-text {
+      background-color: #343434;
+      color: #fff;
+      padding: 30px 0px 20px;
+      border-top: 10px solid #b89b5e;
+    }
+    .demo_link,
+    .page-title {
+      max-width: 598px;
+    }
+    .app_btn {
+      height: 60px;
+      width: 180px;
+      margin: 0 auto;
+      line-height: 60px;
+      color: #fff;
+      border: 2px solid #ffff;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      transition: .3s all ease-in-out;
+    }
+    .app_btn:hover {
+      border: 2px solid #b89b5e;
+      background-color: #b89b5e;
+    }
+    .app_btn a {
+      display: block;
+      width: 100%;
+    }
+  </style>
+  <div id="preloader"></div>
+
+<!-- Start of banner section
+  ============================================= -->
+  <section id="demo_banner" class="demo_banner-section background-style relative-position">
+    <div class="background-overlay"></div>
+    <div class="demo_banner_text text-center  pera-content headline">
+      <div class="demo_logo">
+        <img src="assets/img/logo/flogo-1.png" alt="">
+      </div>
+      <h1>RexLaw <br> <span id="typer">Law Firm</span> HTML Template</h1>
+      <div class="app_btn gradiant-bg text-center">
+        <a href="https://themeforest.net/item/rexlaw-attorney-html-template/26425720">
+          Buy RexLaw
+        </a>
+      </div>
+      <div class="demo_scoll">
+        <a href="#"><i class="fas fa-long-arrow-alt-down"></i></a>
+      </div>
+    </div>
+  </section>
+<!-- End of banner section
+  ============================================= -->
+
+<!-- Start of demo section
+  ============================================= -->
+  <section id="demo" class="demo-section">
+    <div class="container-fluid">
+      <div class="area-title headline text-center pera-content">
+        <span>Demos</span>
+        <h2>RexLaw Has <span>18+</span> awesome demos</h2>
+        <p>RexLaw is a Creative and Modern Corporate Business Template.This template is suitable for all business, corporate, agency and finance related activities</p>
+      </div>
+      <div class="demo_pages">
+        <div class="row justify-content-md-center">
+          <div class="col-lg-4 col-md-4  wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+            <div class="demo_link">
+              <div class="view_btn">
+                <a target="_blank" href="index-4.html"> View Now</a>
+              </div>
+              <div class="new-badge text-uppercase">
+                New
+              </div>
+              <a href="index-3.html">
+                <div class="page-title-link">
+                  <div class="demo_img_link relative-position">
+                    <img src="assets/demo/home4.jpg" alt="">
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="page-title headline text-center">
+             <a href="index-3.html"> 
+              <h3>Home page 4 - Business Firm</h3>
+            </a>
+          </div>
+        </div>
+        <!-- /page -->
+        <div class="col-lg-4 col-md-4  wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+          <div class="demo_link">
+            <a href="index-1.html">
+              <div class="view_btn">
+                <a target="_blank" href="index-1.html"> View Now</a>
+              </div>
+              <div class="page-title-link">
+                <div class="demo_img_link relative-position">
+                  <img src="assets/demo/home1.jpg" alt="">
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="page-title headline text-center">
+           <a href="index-1.html"> 
+            <h3>Home Page 1 - Agency </h3>
+          </a>
+        </div>
+      </div>
+      <!-- /page -->
+      <div class="col-lg-4 col-md-4  wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+        <div class="demo_link">
+          <div class="view_btn">
+            <a target="_blank" href="index-2.html"> View Now</a>
+          </div>
+          <a href="index-2.html">
+            <div class="page-title-link">
+              <div class="demo_img_link relative-position">
+                <img src="assets/demo/home2.jpg" alt="">
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="page-title headline text-center">
+         <a href="index-2.html"> 
+          <h3>Home page 2 - Private Firm</h3>
+        </a>
+      </div>
+    </div>
+    <!-- /page -->
+    <div class="col-lg-4 col-md-4  wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+      <div class="demo_link">
+        <div class="view_btn">
+          <a target="_blank" href="index-3.html"> View Now</a>
+        </div>
+        <a href="index-3.html">
+          <div class="page-title-link">
+            <div class="demo_img_link relative-position">
+              <img src="assets/demo/home3.jpg" alt="">
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="page-title headline text-center">
+       <a href="index-3.html"> 
+        <h3>Home page 3 - Attorney</h3>
+      </a>
+    </div>
+  </div>
+  <!-- /page -->
+  <div class="col-lg-4 col-md-4  wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+    <div class="demo_link">
+      <div class="view_btn">
+        <a target="_blank" href="about.html"> View Now</a>
+      </div>
+      <a href="about.html">
+        <div class="page-title-link">
+          <div class="demo_img_link relative-position">
+            <img src="assets/demo/ab.jpg" alt="">
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="page-title headline text-center">
+     <a href="about.html"> 
+      <h3>About Us</h3>
+    </a>
+  </div>
+</div>
+<!-- /page -->
+<div class="col-lg-4 col-md-4  wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+  <div class="demo_link">
+    <div class="view_btn">
+      <a target="_blank" href="case.html"> View Now</a>
+    </div>
+    <a href="case.html">
+      <div class="page-title-link">
+        <div class="demo_img_link relative-position">
+          <img src="assets/demo/cs.jpg" alt="">
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="page-title headline text-center">
+   <a href="case.html"> 
+    <h3>Case 1</h3>
+  </a>
+</div>
+</div>
+<!-- /page -->
+<div class="col-lg-4 col-md-4  wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+  <div class="demo_link">
+    <div class="view_btn">
+      <a target="_blank" href="case-2.html"> View Now</a>
+    </div>
+    <a href="case-2.html">
+      <div class="page-title-link">
+        <div class="demo_img_link relative-position">
+          <img src="assets/demo/cs2.jpg" alt="">
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="page-title headline text-center">
+   <a href="case-2.html"> 
+    <h3>Case 2</h3>
+  </a>
+</div>
+</div>
+<div class="col-lg-4 col-md-4  wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+  <div class="demo_link">
+    <div class="view_btn">
+      <a target="_blank" href="case-details.html"> View Now</a>
+    </div>
+    <a href="case-details.html">
+      <div class="page-title-link">
+        <div class="demo_img_link relative-position">
+          <img src="assets/demo/csd.jpg" alt="">
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="page-title headline text-center">
+   <a href="case-details.html"> 
+    <h3>Case Details</h3>
+  </a>
+</div>
+</div>
+<!-- /page -->
+<!-- /page -->
+<div class="col-lg-4 col-md-4  wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+  <div class="demo_link">
+    <div class="view_btn">
+      <a target="_blank" href="practice.html"> View Now</a>
+    </div>
+    <a href="practice.html">
+      <div class="page-title-link">
+        <div class="demo_img_link relative-position">
+          <img src="assets/demo/ps.jpg" alt="">
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="page-title headline text-center">
+   <a href="practice.html"> 
+    <h3>Practice</h3>
+  </a>
+</div>
+</div>
+<!-- /page -->
+<div class="col-lg-4 col-md-4  wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+  <div class="demo_link">
+    <div class="view_btn">
+      <a target="_blank" href="practice-single.html"> View Now</a>
+    </div>
+    <a href="practice-single.html">
+      <div class="page-title-link">
+        <div class="demo_img_link relative-position">
+          <img src="assets/demo/psd.jpg" alt="">
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="page-title headline text-center">
+   <a href="practice-single.html"> 
+    <h3>Practice Details</h3>
+  </a>
+</div>
+</div>
+<!-- /page -->
+
+<div class="col-lg-4 col-md-4  wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+  <div class="demo_link">
+    <div class="view_btn">
+      <a target="_blank" href="blog.html"> View Now</a>
+    </div>
+    <a href="blog.html">
+      <div class="page-title-link">
+        <div class="demo_img_link relative-position">
+          <img src="assets/demo/bl.jpg" alt="">
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="page-title headline text-center">
+   <a href="blog.html"> 
+    <h3>Blog</h3>
+  </a>
+</div>
+</div>
+<!-- /page -->
+<div class="col-lg-4 col-md-4  wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+  <div class="demo_link">
+    <div class="view_btn">
+      <a target="_blank" href="blog-single.html"> View Now</a>
+    </div>
+    <a href="blog-single.html">
+      <div class="page-title-link">
+        <div class="demo_img_link relative-position">
+          <img src="assets/demo/bld.jpg" alt="">
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="page-title headline text-center">
+   <a href="blog-single.html"> 
+    <h3>blog details</h3>
+  </a>
+</div>
+</div>
+<!-- /page -->
+<div class="col-lg-4 col-md-4  wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+  <div class="demo_link">
+    <div class="view_btn">
+      <a target="_blank" href="pricing.html"> View Now</a>
+    </div>
+    <a href="pricing.html">
+      <div class="page-title-link">
+        <div class="demo_img_link relative-position">
+          <img src="assets/demo/pr.jpg" alt="">
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="page-title headline text-center">
+   <a href="pricing.html"> 
+    <h3>Pricing</h3>
+  </a>
+</div>
+</div>
+<!-- /page -->
+<div class="col-lg-4 col-md-4  wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+  <div class="demo_link">
+    <div class="view_btn">
+      <a target="_blank" href="team.html"> View Now</a>
+    </div>
+    <a href="team.html">
+      <div class="page-title-link">
+        <div class="demo_img_link relative-position">
+          <img src="assets/demo/tm.jpg" alt="">
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="page-title headline text-center">
+   <a href="team.html"> 
+    <h3>Team</h3>
+  </a>
+</div>
+</div>
+<!-- /page -->
+<div class="col-lg-4 col-md-4  wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+  <div class="demo_link">
+    <div class="view_btn">
+      <a target="_blank" href="team-single.html"> View Now</a>
+    </div>
+    <a href="team-single.html">
+      <div class="page-title-link">
+        <div class="demo_img_link relative-position">
+          <img src="assets/demo/tmd.jpg" alt="">
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="page-title headline text-center">
+   <a href="team-single.html"> 
+    <h3>Team Details</h3>
+  </a>
+</div>
+</div>
+<!-- /page -->
+<div class="col-lg-4 col-md-4  wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+  <div class="demo_link">
+    <div class="view_btn">
+      <a target="_blank" href="service.html"> View Now</a>
+    </div>
+    <a href="service.html">
+      <div class="page-title-link">
+        <div class="demo_img_link relative-position">
+          <img src="assets/demo/sr.jpg" alt="">
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="page-title headline text-center">
+   <a href="service.html"> 
+    <h3>service</h3>
+  </a>
+</div>
+</div>
+<!-- /page -->
+<div class="col-lg-4 col-md-4  wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+  <div class="demo_link">
+    <div class="view_btn">
+      <a target="_blank" href="contact.html"> View Now</a>
+    </div>
+    <a href="contact.html">
+      <div class="page-title-link">
+        <div class="demo_img_link relative-position">
+          <img src="assets/demo/cn.jpg" alt="">
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="page-title headline text-center">
+   <a href="contact.html"> 
+    <h3>Contact</h3>
+  </a>
+</div>
+</div>
+<!-- /page -->
+<div class="col-lg-4 col-md-4  wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+  <div class="demo_link">
+    <div class="view_btn">
+      <a target="_blank" href="faq.html"> View Now</a>
+    </div>
+    <a href="faq.html">
+      <div class="page-title-link">
+        <div class="demo_img_link relative-position">
+          <img src="assets/demo/fq.jpg" alt="">
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="page-title headline text-center">
+   <a href="faq.html"> 
+    <h3>404 Page</h3>
+  </a>
+</div>
+</div>
+<!-- /page -->
+</div>
+</div>
+
+
+</div></section>
+<!-- End of demo section
+  ============================================= -->
+
+<!-- Start of feature section
+  ============================================= --> 
+  <section id="feature" class="feature-section">
+    <div class="container">
+      <div class="area-title headline text-center pera-content">
+        <span>Features</span>
+        <h2>Why you will
+          choose <strong>RexLaw</strong>?
+        </h2>
+      </div>
+      <div class="feature-content-item">
+        <div class="row">
+          <div class="col-lg-4 col-sm-6">
+            <div class="feature-content headline pera-content">
+              <img src="assets/demo/f1.png" alt="">
+              <h3>Easy to Customize</h3>
+              <p>Well structured and easy to customize <br>
+              code. Spend less time to customize.</p>
+            </div>
+          </div>
+          <!-- /feature-item -->
+          <div class="col-lg-4 col-sm-6">
+            <div class="feature-content headline pera-content">
+              <img src="assets/demo/f2.png" alt="">
+              <h3>Fully Responsive</h3>
+              <p>This template is fully responsive and easily
+              compitable with all devices</p>
+            </div>
+          </div>
+          <!-- /feature-item -->
+          <div class="col-lg-4 col-sm-6">
+            <div class="feature-content headline pera-content">
+              <img src="assets/demo/f3.png" alt="">
+              <h3>Retina Ready</h3>
+              <p>Through nuanced stakeholder relations and astute partnership building.</p>
+            </div>
+          </div>
+          <!-- /feature-item -->
+          <div class="col-lg-4 col-sm-6">
+            <div class="feature-content headline pera-content">
+              <img src="assets/demo/f4.png" alt="">
+              <h3>Dedicated Support</h3>
+              <p>Our support staff is ready to answer all your questions 7 days a week</p>
+            </div>
+          </div>
+          <!-- /feature-item -->
+          <div class="col-lg-4 col-sm-6">
+            <div class="feature-content headline pera-content">
+              <img src="assets/demo/f5.png" alt="">
+              <h3>User Friendly Section</h3>
+              <p> It works across different browsers as expected and degrades gracefully.</p>
+            </div>
+          </div>
+          <!-- /feature-item -->
+          <div class="col-lg-4 col-sm-6">
+            <div class="feature-content headline pera-content">
+              <img src="assets/demo/f6.png" alt="">
+              <h3>Modern Design Quality</h3>
+              <p>Through nuanced stakeholder relations and astute partnership building.</p>
+            </div>
+          </div>
+          <!-- /feature-item -->
+        </div>
+      </div> 
+    </div>
+  </section>   
+<!-- End of feature section
+  ============================================= --> 
+
+<!-- Start of more feature section
+  ============================================= -->
+  <section id="more-feature" class="more-feature-section">
+    <div class="container">
+      <div class="area-title headline text-center pera-content">
+        <span>More Features</span>
+        <h2>RexLaw have some
+          other features
+        </h2>
+      </div>
+      <div class="row">
+
+        <div class="col-lg-3  wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+          <div class="feature z-depth-1">
+            <span>
+              <img src="assets/demo/ht.png" alt="image_not_found">
+            </span>
+            <h3>html5</h3>
+          </div>
+        </div>
+
+        <div class="col-lg-3 wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
+          <div class="feature z-depth-1">
+            <span>
+              <img src="assets/demo/js.png" alt="image_not_found">
+            </span>
+            <h3>JQUERY</h3>
+          </div>
+        </div>
+
+        <div class="col-lg-3 wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
+          <div class="feature z-depth-1">
+            <span>
+             <img src="assets/demo/scs.png" alt="image_not_found">
+           </span>
+           <h3>SASS</h3>
+         </div>
+       </div>
+
+       <div class="col-lg-3 wow fadeInLeft" data-wow-delay="900ms" data-wow-duration="1500ms">
+        <div class="feature z-depth-1">
+          <span>
+            <img src="assets/demo/fb.png" alt="image_not_found">
+          </span>
+          <h3>Bootstrap V4</h3>
+        </div>
+      </div>
+
+      <div class="col-lg-3 wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+        <div class="feature z-depth-1">
+          <span>
+            <img src="assets/demo/cc.png" alt="image_not_found">
+          </span>
+          <h3>Clean Code</h3>
+        </div>
+      </div>
+
+      <div class="col-lg-3 wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
+        <div class="feature z-depth-1">
+          <span>
+            <img src="assets/demo/cb.png" alt="image_not_found">
+          </span>
+          <h3>Cross Browser</h3>
+        </div>
+      </div>
+
+      <div class="col-lg-3 wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
+        <div class="feature z-depth-1">
+          <span>
+            <img src="assets/demo/gf.png" alt="image_not_found">
+          </span>
+          <h3>Google Font</h3>
+        </div>
+      </div>
+
+      <div class="col-lg-3 wow fadeInLeft" data-wow-delay="900ms" data-wow-duration="1500ms">
+        <div class="feature z-depth-1">
+          <span>
+            <img src="assets/demo/fi.png" alt="image_not_found">
+          </span>
+          <h3>Flat Icon</h3>
+        </div>
+      </div>
+
+      <div class="col-lg-3 wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+        <div class="feature z-depth-1">
+          <span>
+            <img src="assets/demo/ff.png" alt="image_not_found">
+          </span>
+          <h3>Fontawesome</h3>
+        </div>
+      </div>
+
+      <div class="col-lg-3 wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
+        <div class="feature z-depth-1">
+          <span>
+            <img src="assets/demo/w3.png" alt="image_not_found">
+          </span>
+          <h3>W3 Validated</h3>
+        </div>
+      </div>
+
+      <div class="col-lg-3 wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
+        <div class="feature z-depth-1">
+          <span>
+            <img src="assets/demo/wd.png" alt="image_not_found">
+          </span>
+          <h3>well documenation</h3>
+        </div>
+      </div>
+
+      <div class="col-lg-3 wow fadeInLeft" data-wow-delay="900ms" data-wow-duration="1500ms">
+        <div class="feature z-depth-1">
+          <span>
+            <img src="assets/demo/mp.png" alt="image_not_found">
+          </span>
+          <h3>Magnific Popup</h3>
+        </div>
+      </div>
+
+      <div class="col-lg-3 wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+        <div class="feature z-depth-1">
+          <span>
+            <img src="assets/demo/plz.png" alt="image_not_found">
+          </span>
+          <h3>Parallax Scroll</h3>
+        </div>
+      </div>
+
+      <div class="col-lg-3 wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
+        <div class="feature z-depth-1">
+          <span>
+            <img src="assets/demo/cdn.png" alt="image_not_found">
+          </span>
+          <h3>Animated CounterUp</h3>
+        </div>
+      </div>
+
+      <div class="col-lg-3 wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
+        <div class="feature z-depth-1">
+          <span>
+            <img src="assets/demo/crp.png" alt="image_not_found">
+          </span>
+          <h3>Circle Progress</h3>
+        </div>
+      </div>
+
+      <div class="col-lg-3 wow fadeInLeft" data-wow-delay="900ms" data-wow-duration="1500ms">
+        <div class="feature z-depth-1">
+          <span>
+            <img src="assets/demo/sd.png" alt="image_not_found">
+          </span>
+          <h3>Sound Cloud</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+ <!-- Start of more feature section
+  ============================================= -->
+
+<!-- Start of Page section
+  ============================================= -->
+  <section id="page-show" class="page-showcase relative-position">
+    <div class="page-list">
+      <div class="copyright-text clearfix">
+        <div class="col-lg-12 col-sm-12 pera-content text-center">
+          <p class="designed-by">Designed with <i class="fas fa-heart"></i> by <a target="_blank" href="https://themexriver.com">themexriver</a></p>
+        </div>  
+        <div class="col-lg-6 col-sm-12 float-right">
+
+        </div> 
+      </div>
+    </div>
+    <div class="up">
+      <a href="#" class="scrollup text-center"><i class="fas fa-angle-up"></i></a>
+    </div>
+  </section>
+<!-- End  of page section
+  ============================================= -->
+
+  <!-- For Js Library -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/demo/jquery.typer.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="assets/js/jarallax.js"></script>
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="assets/js/appear.js"></script>
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/jquery.filterizr.js"></script>
+  <script src="assets/js/circle-progress.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/gmap3.min.js"></script>
+  <script src="../maps/api/js?key=AIzaSyC61_QVqt9LAhwFdlQmsNwi5aUJy9B2SyA"></script>
+  <script>
+    var win = jQuery(window),
+    foo = jQuery('#typer');
+    foo.typer(['Adviser','Advocate', 'Attorney', 'Barrister', 'Consultant', 'Counsel', 'Law Firm']);           
+    win.resize(function(){
+      var fontSize = Math.max(Math.min(win.width() / (1 * 5), parseFloat(Number.POSITIVE_INFINITY)), parseFloat(Number.NEGATIVE_INFINITY));
+
+    }).resize();
+  </script>
+
+</body>
+</html>
