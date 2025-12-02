@@ -1,0 +1,704 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Portas Curitiba | Baggio Premium</title>
+  <meta charset="utf-8">
+  <meta name="keywords" content="Portas Curitiba, Pisos, Baggio" />
+  <meta name="description" content="Baggio Portas e Pisos Curitiba: Excelência e Tradição." />
+  <link rel="shortcut icon" href="favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+  <!-- CSS Libs -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.css">
+  <link rel="stylesheet" href="fonts/fi/flaticon.css">
+  <link rel="stylesheet" href="css/flexslider.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/indent.css">
+  <link rel="stylesheet" href="rs-plugin/css/settings.css">
+  <link rel="stylesheet" href="rs-plugin/css/layers.css">
+  <link rel="stylesheet" href="rs-plugin/css/navigation.css">
+  <link rel="stylesheet" href="tuner/css/colorpicker.css">
+  <link rel="stylesheet" href="tuner/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="estilo/wts.css">
+
+  <style>
+    /* Creative Redesign Styles - Baggio Premium (Light Mode) */
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+    :root {
+      --primary-bg: #ffffff;
+      --secondary-bg: #f8f9fa;
+      --primary-text: #1a1a1a;
+      --secondary-text: #555555;
+      --primary-gold: #d4af37;
+      --secondary-gold: #f3e5ab;
+      --glass-bg: rgba(255, 255, 255, 0.9);
+      --glass-border: rgba(0, 0, 0, 0.05);
+      --font-heading: 'Playfair Display', serif;
+      --font-body: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background-color: var(--primary-bg);
+      color: var(--primary-text);
+      font-family: var(--font-body);
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: var(--font-heading);
+      color: var(--primary-text);
+    }
+
+    /* Immersive Hero */
+    .hero-immersive {
+      height: 30vh;
+      min-height: 250px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('img/empresa/curitiba.jpg') center/cover no-repeat;
+      filter: brightness(0.5);
+      transform: scale(1.1);
+      animation: zoomOut 20s infinite alternate;
+    }
+
+    @keyframes zoomOut {
+      from {
+        transform: scale(1.1);
+      }
+
+      to {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+      }
+
+      to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .hero-content-new {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 800px;
+      padding: 0 20px;
+    }
+
+    .hero-title-new {
+      font-size: 4.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #ffffff;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .hero-subtitle-new {
+      font-size: 1.5rem;
+      font-weight: 300;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--secondary-gold);
+      margin-bottom: 50px;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      animation: fadeInUp 1s ease-out 0.3s forwards;
+    }
+
+    /* Content Sections */
+    .content-section {
+      padding: 100px 0;
+      background: var(--primary-bg);
+    }
+
+    .section-title-wrapper {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: var(--primary-gold);
+    }
+
+    .content-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--secondary-text);
+      text-align: justify;
+      max-width: 900px;
+      margin: 0 auto 60px;
+    }
+
+    /* Collections Grid */
+    .collections-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    .collection-card {
+      position: relative;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #fff;
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    .collection-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .collection-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .collection-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--primary-text);
+    }
+
+    .collection-link {
+      display: inline-block;
+      padding: 8px 20px;
+      border: 1px solid var(--primary-gold);
+      color: var(--primary-gold);
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .collection-link:hover {
+      background: var(--primary-gold);
+      color: #fff;
+    }
+
+    /* Map Section */
+    .map-section {
+      position: relative;
+      height: 450px;
+      width: 100%;
+      margin-top: 80px;
+    }
+
+    .map-frame {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+    }
+
+    .map-frame:hover {
+      filter: grayscale(0%);
+    }
+
+    /* Contact Info Card */
+    .contact-card {
+      background: var(--secondary-bg);
+      padding: 60px;
+      text-align: center;
+      margin-top: -100px;
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+    }
+
+    .contact-item {
+      margin-bottom: 20px;
+    }
+
+    .contact-icon {
+      font-size: 2rem;
+      color: var(--primary-gold);
+      margin-bottom: 15px;
+    }
+
+    /* Header Overrides */
+    .site-top-panel {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      color: #555;
+    }
+
+    .main-nav.js-stick {
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .mn-sub {
+      background: #fff;
+      border: 1px solid #eee;
+    }
+
+    .mn-sub li a {
+      color: #555;
+    }
+
+    .mn-sub li a:hover {
+      color: var(--primary-gold);
+    }
+
+    .inner-nav>ul>li>a {
+      color: #333;
+    }
+
+    .inner-nav>ul>li>a:hover {
+      color: var(--primary-gold);
+    }
+
+    @media (max-width: 768px) {
+      .hero-title-new {
+        font-size: 3rem;
+      }
+
+      .contact-card {
+        padding: 30px;
+        margin-top: 0;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- header page-->
+  <header>
+    <!-- site top panel-->
+    <div class="site-top-panel">
+      <div class="container p-relative">
+        <div class="row">
+          <div class="col-md-6 col-sm-7">
+            <!-- lang select wrapper-->
+            <div class="top-left-wrap font-3">
+              <div class="mail-top"><a href="mailto:contato@baggioportas.com.br"> <i
+                    class="flaticon-suntour-email"></i>contato@baggioportas.com.br</a></div><span>/</span>
+              <div class="tel-top"><a href="tel:(41) 3366-5457"> <i class="flaticon-suntour-phone"></i>(41)
+                  3366-5457</a></div>
+            </div>
+            <!-- ! lang select wrapper-->
+          </div>
+          <div class="col-md-6 col-sm-5 text-right">
+            <div class="top-right-wrap">
+              <div class="top-login"><a href="baggio-portas-curitiba">Curitiba - PR</a> |</div>
+              <div class="top-login"><a href="baggio-portas-chapeco">Chapecó - SC</a></div>
+              <div class="curr-wrap dropdown">
+                <div>
+                  <ul>
+                    <li><a href="#" class="lang-sel icl-en">Atendimento<i class="fa fa-angle-down"></i></a>
+                      <ul>
+                        <li><a href="baggio-portas-chapeco">SC</a></li>
+                        <li><a href="baggio-portas-curitiba">PR</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ! site top panel-->
+    <!-- Navigation panel-->
+    <nav class="main-nav js-stick">
+      <div class="full-wrapper relative clearfix container">
+        <!-- Logo ( * your text or image into link tag *)-->
+        <div class="nav-logo-wrap local-scroll"><a href="https://felipenchagas.github.io/R.baggio-2/" class="logo"><img
+              src="img/logo.png" data-at2x="img/logo.png" alt="Logo Baggio portas e pisos"></a></div>
+        <!-- Main Menu-->
+        <div class="inner-nav desktop-nav">
+          <ul class="clearlist">
+            <!-- Item With Sub-->
+            <li><a href="https://felipenchagas.github.io/R.baggio-2/" class="mn-has-sub active">Home </a></li>
+            <!-- End Item With Sub-->
+            <li class="slash">/</li>
+            <!-- Item With Sub-->
+            <li><a href="baggio-empresa" class="mn-has-sub">Baggio</a>
+              <!-- Sub-->
+
+              <!-- End Sub-->
+            </li>
+            <!-- End Item With Sub-->
+            <li class="slash">/</li>
+            <!-- Item With Sub-->
+            <li class="megamenu"><a href="#" class="mn-has-sub">Produtos <i
+                  class="fa fa-angle-down button_open"></i></a>
+              <!-- Sub-->
+              <ul class="mn-sub mn-has-multi">
+                <li class="mn-sub-multi"><a href="portas" class="mn-group-title">Portas</a>
+                  <ul>
+                    <li><a href="portas-internas"><span>Internas</span></a></li>
+                    <li><a href="portas-externas"><span>Externas</span></a></li>
+                    <li><a href="portas-internas-ecoflex-cores"><span>Cores</span></a></li><li><a href="portas-externas-3d"><span>Externas 3d</span></a></li><li><a href="portas-externas-3d"><span>Externas 3d</span></a></li>
+                  </ul>
+                </li>
+                <li class="mn-sub-multi"><a class="mn-group-title">Pisos Durafloor</a>
+                  <ul>
+                    <li><a href="pisos-unique"><span>Unique</span></a></li>
+                    <li><a href="pisos-street"><span>Street</span></a></li>
+                    <li><a href="pisos-studio"><span>Studio</span></a></li>
+                    <li><a href="pisos-link"><span>Link</span></a></li>
+                    <li><a href="pisos-nature"><span>Nature</span></a></li>
+                    <li><a href="pisos-new-way"><span>New Way</span></a></li>
+                  </ul>
+                </li>
+                <li class="mn-sub-multi"><a class="mn-group-title">Ferragens</a>
+                  <ul>
+                    <li><a href="santa-luzia"><span>Rodapé</span></a></li>
+                    <!--<li><a href="rodape-santa-luzia"><span>Santa Luzia</span></a></li>-->
+                    <li><a href="pado"><span>Pado</span></a></li>
+                  </ul>
+                </li>
+              </ul>
+              <!-- End Sub-->
+            </li>
+            <li class="megamenu"><a href="#" class="mn-has-sub">Lojas<i class="fa fa-angle-down button_open"></i></a>
+              <!-- Sub-->
+              <ul class="mn-sub mn-has-multi">
+                <li class="mn-sub-multi"><a href="portas" class="mn-group-title">Portas</a>
+                  <ul>
+                    <li><a href="baggio-portas-curitiba"><span>Curitiba</span></a></li>
+                    <li><a href="baggio-portas-chapeco"><span>Chapecó</span></a></li>
+                  </ul>
+                </li>
+              </ul>
+              <!-- End Sub-->
+            </li>
+            <!-- End Item With Sub-->
+            <!-- span /-->
+            <!-- Item With Sub-->
+            <!-- Item With Sub-->
+            <!-- End Item With Sub-->
+            <!-- Item-->
+            <li><a href="https://www.instagram.com/baggioportasepisos/">Web</a></li>
+            <!-- End Item-->
+            <!-- Search-->
+            <li class="search"><a href="contato" class="mn-has-sub">Contato</a>
+
+            </li>
+            <!-- End Search-->
+          </ul>
+        </div>
+        <!-- End Main Menu-->
+      </div>
+    </nav>
+    <a class="corzinha" href="https://wa.me/5500000000">
+      <div id="whatswidget-pre-wrapper">
+        <div id="whatswidget-widget-wrapper" class="whatswidget-widget-wrapper" style="all:revert;">
+          <div id="whatswidget-conversation-message-outer" class="whatswidget-conversation-message-outer"
+            style="all:revert;"> <span id="whatswidget-text-header-outer" class="whatswidget-text-header-outer"
+              style="all:revert;">Empresa</span><br>
+            <div id="whatswidget-text-message-outer" class="whatswidget-text-message-outer" style="all:revert;">Bem
+              vindo, precisa de ajuda? = )</div>
+          </div>
+          <div class="whatswidget-button-wrapper" style="all:revert;">
+            <div class="whatswidget-button" id="whatswidget-button" style="all:revert;"><img src="wts.svg"></div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </header>
+  <!-- ! header page-->
+  <div id="content-block">
+    <!-- ! header page-->
+
+    <!-- Immersive Hero -->
+    <section class="hero-immersive">
+      <div class="hero-bg"></div>
+      <div class="hero-content-new">
+        <h1 class="hero-title-new">Baggio Curitiba</h1>
+        <p class="hero-subtitle-new">Excelência na Capital Paranaense</p>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section container">
+      <div class="section-title-wrapper">
+        <h2 class="section-title">Nossa Sede</h2>
+		
+      </div>
+      <div class="content-text">
+        <p>
+          No coração de Curitiba, a <strong>Baggio Portas</strong> estabelece o padrão de excelência no mercado de
+          portas
+          e pisos. Combinando tradição e inovação, nossa unidade principal é reconhecida pela qualidade superior e
+          pelo
+          design inovador que são marcas registradas dos nossos produtos.
+        </p>
+		
+        <p>
+          A vasta gama de opções que oferecemos em nossa sede de Curitiba atende as mais variadas necessidades e
+          gostos,
+          desde projetos residenciais requintados até as exigências complexas de grandes empreendimentos comerciais.
+          Nossas <b>portas e pisos</b> são meticulosamente projetados e fabricados com materiais da mais alta
+          qualidade,
+          garantindo beleza e durabilidade.
+      </div>
+<div class="shop-item">
+<div class="shop-media">
+<div class=""><img src="img/empresa/curitiba.jpg"  alt="Piso Pisos Link"></div>
+</div>
+</div>
+      <!-- Featured Collections Grid -->
+      <div class="section-title-wrapper">
+        <h3 class="section-title" style="font-size: 2rem;">Nossas Coleções</h3>
+      </div>
+      <div class="collections-grid">
+        <!-- Portas -->
+        <div class="collection-card">
+          <img src="img/prod/portas-ecoflex/interna-nova-01.png" alt="Portas Internas" class="collection-img">
+          <h4 class="collection-title">Portas Internas</h4>
+          <a href="portas-internas" class="collection-link">Ver Coleção</a>
+        </div>
+        <div class="collection-card">
+          <img src="img/prod/externas/externas.jpg" alt="Portas Externas" class="collection-img">
+          <h4 class="collection-title">Portas Externas</h4>
+          <a href="portas-externas" class="collection-link">Ver Coleção</a>
+        </div>
+        <div class="collection-card">
+          <img src="img/prod/portas-ecoflex-cores/preta.jpg" alt="Portas Cores" class="collection-img">
+          <h4 class="collection-title">Portas Cores</h4>
+          <a href="portas-internas-ecoflex-cores" class="collection-link">Ver Coleção</a>
+        </div>
+        <!-- Pisos -->
+        <div class="collection-card">
+          <img src="img/prod/pisos/unique/unique.jpg" alt="Pisos Unique" class="collection-img">
+          <h4 class="collection-title">Pisos Unique</h4>
+          <a href="pisos-unique" class="collection-link">Ver Coleção</a>
+        </div>
+        <div class="collection-card">
+          <img src="img/prod/pisos/street/street.jpg" alt="Pisos Street" class="collection-img">
+          <h4 class="collection-title">Pisos Street</h4>
+          <a href="pisos-street" class="collection-link">Ver Coleção</a>
+        </div>
+        <div class="collection-card">
+          <img src="img/prod/pisos/studio/studio.jpg" alt="Pisos Studio" class="collection-img">
+          <h4 class="collection-title">Pisos Studio</h4>
+          <a href="pisos-studio" class="collection-link">Ver Coleção</a>
+        </div>
+        <div class="collection-card">
+          <img src="img/prod/pisos/link/link.jpg" alt="Pisos Link" class="collection-img">
+          <h4 class="collection-title">Pisos Link</h4>
+          <a href="pisos-link" class="collection-link">Ver Coleção</a>
+        </div>
+        <div class="collection-card">
+          <img src="img/prod/pisos/nature/nature.jpg" alt="Pisos Nature" class="collection-img">
+          <h4 class="collection-title">Pisos Nature</h4>
+          <a href="pisos-nature" class="collection-link">Ver Coleção</a>
+        </div>
+        <div class="collection-card">
+          <img src="img/prod/pisos/new-way/new-way.jpg" alt="Pisos New Way" class="collection-img">
+          <h4 class="collection-title">Pisos New Way</h4>
+          <a href="pisos-new-way" class="collection-link">Ver Coleção</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="map-section">
+      <iframe class="map-frame"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.354466464646!2d-49.2308!3d-25.4678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce50000000001%3A0x0!2sAv.+Comendador+Franco%2C+4499+-+Jardim+das+Am%C3%A9ricas%2C+Curitiba+-+PR%2C+81530-440!5e0!3m2!1spt-BR!2sbr!4v1699263287543!5m2!1spt-BR!2sbr"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Contact Card -->
+    <div class="container">
+      <div class="contact-card">
+        <h3 class="section-title" style="font-size: 2rem; margin-bottom: 40px;">Visite-nos</h3>
+        <div class="row">
+          <div class="col-md-6 contact-item">
+            <i class="fa fa-map-marker contact-icon"></i>
+            <p>Av. Com. Franco, 4499<br>Jardim das Américas, Curitiba - PR</p>
+          </div>
+          <div class="col-md-6 contact-item">
+            <i class="fa fa-phone contact-icon"></i>
+            <p>(41) 3366-5457<br>contato@baggioportas.com.br</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- call out section-->
+    <section class="page-section pt-90 pb-80 bg-main pattern relative">
+      <div class="container">
+        <div class="call-out-box clearfix with-icon">
+          <div class="row call-out-wrap">
+            <div class="col-md-5">
+              <h2 class="title-section alt-2"><span>Entre em</span> contato</h2>
+            </div>
+            <div class="col-md-7">
+              <form action="#" method="post" class="form contact-form mt-10">
+                <div class="input-container">
+                  <input type="text" placeholder="Contato" value="" name="email" class="newsletter-field mb-0 form-row">
+                  <i class="flaticon-suntour-email icon-left"></i>
+                  <button type="submit" class="subscribe-submit">
+                    <i class="flaticon-suntour-arrow icon-right"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ! call out section-->
+  </div>
+
+  <footer style="background-image: url('pic/footer/footer-bg.jpg')" class="footer footer-fixed">
+    <div class="container">
+      <div class="row pb-100 pb-md-40">
+        <!-- widget footer-->
+        <div class="col-md-6 col-sm-12 mb-sm-30">
+          <div class="logo-soc clearfix">
+            <div class="footer-logo"><a href="https://felipenchagas.github.io/R.baggio-2/"><img src="img/logo-white.png"
+                  data-at2x="img/logo-white.png" alt="Embrafer SC"></a></div>
+          </div>
+          <p style="color:aliceblue;" class="color-g2 mt-10">Nossa empresa é um marco no mercado de <b>pisos laminados
+              e portas</b>, estabelecendo-se como um sinonimo de qualidade e sofisticação no segmento. Dispomos de
+            uma
+            equipe de especialistas com habilidades apuradas e um profundo conhecimento na seleção e manipulação de
+            materiais de alta qualidade.</p>
+          <!-- social-->
+          <div class="social-link dark"><a href="#" class="cws-social fa fa-youtube"></a><a href="#"
+              class="cws-social fa fa-facebook"></a><a href="#" class="cws-social fa fa-google-plus"></a><a href="#"
+              class="cws-social fa fa-linkedin"></a></div>
+          <!-- ! social-->
+        </div>
+        <!-- ! widget footer-->
+        <!-- widget footer-->
+        <div class="col-md-3 col-sm-6 mb-sm-30">
+          <div class="widget-footer">
+            <h4>Menu RÃ¡pido</h4>
+            <ul>
+              <li style="color:aliceblue;"><a href="https://felipenchagas.github.io/R.baggio-2/">Início</a></li>
+              <li style="color:aliceblue;"><a href="baggio-empresa">Empresa</a></li>
+              <li style="color:aliceblue;"><a href="galeria">Galeria</a></li>
+              <li style="color:aliceblue;"><a href="contato-portas de madeira-metalica-sc">Contato</a></li>
+
+            </ul>
+
+          </div>
+        </div>
+        <!-- end widget footer-->
+        <!-- widget footer-->
+        <div class="col-md-3 col-sm-6">
+          <div class="widget-footer">
+            <h4>Principais Produtos</h4>
+            <div class="widget-tags-wrap"><a href="portas-internas" rel="tag" class="tag">Portas internas</a><a
+                href="portas-externas" rel="tag" class="tag">Portas externas</a><a href="#" rel="tag"
+                class="tag">PISOS</a><a href="#" rel="tag" class="tag">DURAFLOOR</a><a href="#" rel="tag"
+                class="tag">FERRAGENS</a><a href="#" rel="tag" class="tag">SANTA LUZIA</a></div>
+
+          </div>
+        </div>
+        <!-- end widget footer-->
+      </div>
+    </div>
+    <!-- copyright-->
+    <div class="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <p>Â© Direitos 2025 <span>Desenvolvimento Próprio</span> &nbsp;&nbsp;|&nbsp;&nbsp; Baggio portas e pisos
+            </p>
+          </div>
+          <div class="col-sm-6 text-right"><a href="#" class="footer-nav">Início</a><a href="empresa"
+              class="footer-nav">Empresa</a><a href="#" class="footer-nav">Serviços</a><a href="#"
+              class="footer-nav">Galeria</a><a href="#" class="footer-nav">Contato</a></div>
+        </div>
+      </div>
+    </div>
+    <!-- end copyright-->
+    <!-- scroll top-->
+  </footer>
+  <script type="text/javascript" src="js/jquery.sticky.js"></script>
+  <script type="text/javascript" src="js/TweenMax.min.js"></script>
+  <script type="text/javascript" src="js/cws_parallax.js"></script>
+  <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="js/jquery.fancybox-media.js"></script>
+  <script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+  <script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
+  <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+  <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+  <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+  <script type="text/javascript" src="rs-plugin/js/extensions/revolution.extension.slideanims.min.js"></script>
+  <script type="text/javascript" src="rs-plugin/js/extensions/revolution.extension.layeranimation.min.js"></script>
+  <script type="text/javascript" src="rs-plugin/js/extensions/revolution.extension.navigation.min.js"></script>
+  <script type="text/javascript" src="rs-plugin/js/extensions/revolution.extension.parallax.min.js"></script>
+  <script type="text/javascript" src="rs-plugin/js/extensions/revolution.extension.video.min.js"></script>
+  <script type="text/javascript" src="rs-plugin/js/extensions/revolution.extension.actions.min.js"></script>
+  <script type="text/javascript" src="rs-plugin/js/extensions/revolution.extension.kenburn.min.js"></script>
+  <script type="text/javascript" src="rs-plugin/js/extensions/revolution.extension.migration.min.js"></script>
+  <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="js/jquery.form.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/bg-video/cws_self_vimeo_bg.js"></script>
+  <script type="text/javascript" src="js/bg-video/jquery.vimeo.api.min.js"></script>
+  <script type="text/javascript" src="js/bg-video/cws_YT_bg.js"></script>
+  <script type="text/javascript" src="js/jquery.tweet.js"></script>
+  <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+  <script type="text/javascript" src="js/jquery.flexslider.js"></script>
+  <script type="text/javascript" src="js/retina.min.js"></script>
+</body>
+
+</html>
