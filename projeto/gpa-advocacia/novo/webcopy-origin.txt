@@ -1,0 +1,448 @@
+Uri: https://advkt.netlify.app/css/animate.min.css
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\css\animate.min.css
+Content Type: text/css
+
+Uri: https://advkt.netlify.app/css/bootstrap.min.css
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\css\bootstrap.min.css
+Content Type: text/css
+
+Uri: https://advkt.netlify.app/css/fontawesome.min.css
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\css\fontawesome.min.css
+Content Type: text/css
+
+Uri: https://advkt.netlify.app/css/magnific-popup.css
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\css\magnific-popup.css
+Content Type: text/css
+
+Uri: https://advkt.netlify.app/css/meanmenu.min.css
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\css\meanmenu.min.css
+Content Type: text/css
+
+Uri: https://advkt.netlify.app/css/nice-select.min.css
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\css\nice-select.min.css
+Content Type: text/css
+
+Uri: https://advkt.netlify.app/css/slick.min.css
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\css\slick.min.css
+Content Type: text/css
+
+Uri: https://advkt.netlify.app/css/style.css
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\css\style.css
+Content Type: text/css
+
+Uri: https://advkt.netlify.app/images/about/about-card-img-3.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\about\about-card-img-3.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/about/about-thumb.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\about\about-thumb.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/brand-logo/brand-logo-2/logo-1.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\brand-logo\brand-logo-2\logo-1.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/brand-logo/brand-logo-2/logo-2.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\brand-logo\brand-logo-2\logo-2.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/brand-logo/brand-logo-2/logo-3.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\brand-logo\brand-logo-2\logo-3.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/brand-logo/brand-logo-2/logo-4.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\brand-logo\brand-logo-2\logo-4.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/brand-logo/brand-logo-2/logo-5.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\brand-logo\brand-logo-2\logo-5.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/brand-logo/brand-logo-2/logo-6.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\brand-logo\brand-logo-2\logo-6.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/brand-logo/client-10.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\brand-logo\client-10.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/brand-logo/client-7.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\brand-logo\client-7.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/brand-logo/client-8.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\brand-logo\client-8.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/brand-logo/client-9.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\brand-logo\client-9.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/faq-img/g1.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\faq-img\g1.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/faq-img/g2.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\faq-img\g2.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/icon/law.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\icon\law.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/icon/play-btn.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\icon\play-btn.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/icon/process-step/icon-1.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\icon\process-step\icon-1.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/icon/process-step/icon-2.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\icon\process-step\icon-2.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/icon/process-step/icon-3.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\icon\process-step\icon-3.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/icon/process-step/icon-4.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\icon\process-step\icon-4.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/instagram/instagram-1.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\instagram\instagram-1.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/instagram/instagram-2.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\instagram\instagram-2.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/instagram/instagram-3.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\instagram\instagram-3.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/instagram/instagram-4.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\instagram\instagram-4.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/instagram/instagram-5.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\instagram\instagram-5.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/instagram/instagram-6.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\instagram\instagram-6.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/latest-posts/lp1.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\latest-posts\lp1.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/latest-posts/lp2.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\latest-posts\lp2.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/latest-posts/lp3.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\latest-posts\lp3.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/logo/apple-touch-icon-114x114.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\logo\apple-touch-icon-114x114.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/logo/apple-touch-icon-120x120.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\logo\apple-touch-icon-120x120.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/logo/apple-touch-icon-144x144.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\logo\apple-touch-icon-144x144.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/logo/apple-touch-icon-152x152.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\logo\apple-touch-icon-152x152.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/logo/apple-touch-icon-180x180.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\logo\apple-touch-icon-180x180.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/logo/apple-touch-icon-57x57.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\logo\apple-touch-icon-57x57.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/logo/apple-touch-icon-72x72.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\logo\apple-touch-icon-72x72.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/logo/apple-touch-icon-76x76.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\logo\apple-touch-icon-76x76.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/logo/apple-touch-icon.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\logo\apple-touch-icon.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/logo/black-logo.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\logo\black-logo.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/logo/favicon.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\logo\favicon.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/logo/footer-logo-white.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\logo\footer-logo-white.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/portfolio/p5.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\portfolio\p5.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/project/p1.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\project\p1.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/project/p2.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\project\p2.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/project/p3.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\project\p3.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/project/p4.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\project\p4.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/project/p5.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\project\p5.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/project/p6.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\project\p6.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/project/p7.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\project\p7.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/project/p8.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\project\p8.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/section-bg/footer-bg-2.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\section-bg\footer-bg-2.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/section-bg/portfolio-bg.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\section-bg\portfolio-bg.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/section-bg/testimonial-two-bg.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\section-bg\testimonial-two-bg.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/shape/about-img-shape.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\shape\about-img-shape.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/shape/circle-shape.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\shape\circle-shape.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/shape/faq-gallery-shape.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\shape\faq-gallery-shape.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/shape/portfolio-bg-shape.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\shape\portfolio-bg-shape.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/slider/shape.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\slider\shape.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/slider/signature.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\slider\signature.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/slider/slider-2.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\slider\slider-2.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/slider/slider-feature-1.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\slider\slider-feature-1.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/slider/user/user-1.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\slider\user\user-1.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/slider/user/user-2.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\slider\user\user-2.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/slider/user/user-3.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\slider\user\user-3.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/team-member/team-1.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\team-member\team-1.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/team-member/team-2.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\team-member\team-2.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/team-member/team-3.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\team-member\team-3.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/team-member/team-4.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\team-member\team-4.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/team-member/team-5.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\team-member\team-5.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/team-member/team-6.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\team-member\team-6.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/team-member/team-7.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\team-member\team-7.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/team-member/team-8.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\team-member\team-8.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/testimonial/users-two/brand-1.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\testimonial\users-two\brand-1.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/testimonial/users-two/brand-2.png
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\testimonial\users-two\brand-2.png
+Content Type: image/png
+
+Uri: https://advkt.netlify.app/images/testimonial/users-two/user-1.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\testimonial\users-two\user-1.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/testimonial/users-two/user-2.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\testimonial\users-two\user-2.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/images/video-popup/popup-img-1.jpg
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\images\video-popup\popup-img-1.jpg
+Content Type: image/jpeg
+
+Uri: https://advkt.netlify.app/index-2
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\index-2.html
+Content Type: text/html
+
+Uri: https://advkt.netlify.app/js/bootstrap.min.js
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\js\bootstrap.min.js
+Content Type: application/javascript
+
+Uri: https://advkt.netlify.app/js/circletype.min.js
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\js\circletype.min.js
+Content Type: application/javascript
+
+Uri: https://advkt.netlify.app/js/custom.js
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\js\custom.js
+Content Type: application/javascript
+
+Uri: https://advkt.netlify.app/js/inview.min.js
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\js\inview.min.js
+Content Type: application/javascript
+
+Uri: https://advkt.netlify.app/js/isotope.min.js
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\js\isotope.min.js
+Content Type: application/javascript
+
+Uri: https://advkt.netlify.app/js/jquery.counterup.min.js
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\js\jquery.counterup.min.js
+Content Type: application/javascript
+
+Uri: https://advkt.netlify.app/js/jquery.imagesloaded.min.js
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\js\jquery.imagesloaded.min.js
+Content Type: application/javascript
+
+Uri: https://advkt.netlify.app/js/jquery.lettering.min.js
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\js\jquery.lettering.min.js
+Content Type: application/javascript
+
+Uri: https://advkt.netlify.app/js/jquery.magnific-popup.min.js
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\js\jquery.magnific-popup.min.js
+Content Type: application/javascript
+
+Uri: https://advkt.netlify.app/js/jquery.meanmenu.min.js
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\js\jquery.meanmenu.min.js
+Content Type: application/javascript
+
+Uri: https://advkt.netlify.app/js/jquery.min.js
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\js\jquery.min.js
+Content Type: application/javascript
+
+Uri: https://advkt.netlify.app/js/jquery.nice-select.min.js
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\js\jquery.nice-select.min.js
+Content Type: application/javascript
+
+Uri: https://advkt.netlify.app/js/simpleParallax.min.js
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\js\simpleParallax.min.js
+Content Type: application/javascript
+
+Uri: https://advkt.netlify.app/js/slick.min.js
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\js\slick.min.js
+Content Type: application/javascript
+
+Uri: https://advkt.netlify.app/js/tilt.jquery.min.js
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\js\tilt.jquery.min.js
+Content Type: application/javascript
+
+Uri: https://advkt.netlify.app/js/waypoints.js
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\js\waypoints.js
+Content Type: application/javascript
+
+Uri: https://advkt.netlify.app/js/wow.min.js
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\js\wow.min.js
+Content Type: application/javascript
+
+Uri: https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@400;500;600;700&family=Jost:wght@400;500;600;700&display=swap
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\css2
+Content Type: text/css
+
+Uri: https://fonts.gstatic.com/s/heptaslab/v25/ea8JadoyU_jkHdalebHvyWVNdYoIsHe5Hvkn5zfb.ttf
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\s\heptaslab\v25\ea8JadoyU_jkHdalebHvyWVNdYoIsHe5Hvkn5zfb.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/heptaslab/v25/ea8JadoyU_jkHdalebHvyWVNdYoIsHe5HvkV5zfb.ttf
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\s\heptaslab\v25\ea8JadoyU_jkHdalebHvyWVNdYoIsHe5HvkV5zfb.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/heptaslab/v25/ea8JadoyU_jkHdalebHvyWVNdYoIsHe5HvnL4Dfb.ttf
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\s\heptaslab\v25\ea8JadoyU_jkHdalebHvyWVNdYoIsHe5HvnL4Dfb.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/heptaslab/v25/ea8JadoyU_jkHdalebHvyWVNdYoIsHe5Hvny4Dfb.ttf
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\s\heptaslab\v25\ea8JadoyU_jkHdalebHvyWVNdYoIsHe5Hvny4Dfb.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/jost/v20/92zPtBhPNqw79Ij1E865zBUv7mx9IgVG.ttf
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\s\jost\v20\92zPtBhPNqw79Ij1E865zBUv7mx9IgVG.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/jost/v20/92zPtBhPNqw79Ij1E865zBUv7mxEIgVG.ttf
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\s\jost\v20\92zPtBhPNqw79Ij1E865zBUv7mxEIgVG.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/jost/v20/92zPtBhPNqw79Ij1E865zBUv7myjJQVG.ttf
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\s\jost\v20\92zPtBhPNqw79Ij1E865zBUv7myjJQVG.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/jost/v20/92zPtBhPNqw79Ij1E865zBUv7myRJQVG.ttf
+File Name: C:\Downloaded Web Sites\advkt.netlify.app\s\jost\v20\92zPtBhPNqw79Ij1E865zBUv7myRJQVG.ttf
+Content Type: font/ttf
+
