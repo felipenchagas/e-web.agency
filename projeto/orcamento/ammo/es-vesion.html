@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Dominio Digital | AMMO Construction Ltd.</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            /* Paleta: Executive Blueprint (Deep Navy & Safety Orange) */
+            --bg-dark: #0f172a;
+            --bg-card: rgba(30, 41, 59, 0.85);
+            --bg-glass: rgba(255, 255, 255, 0.05);
+            --border-glass: rgba(255, 255, 255, 0.12);
+            
+            --primary: #38bdf8;
+            --accent: #f97316;
+            --success: #10b981;
+            --danger: #ef4444;
+            
+            --text-main: #f8fafc;
+            --text-muted: #cbd5e1;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background-color: var(--bg-dark);
+            background-image: 
+                linear-gradient(180deg, rgba(15, 23, 42, 0.95) 0%, rgba(11, 17, 32, 0.98) 100%),
+                url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop');
+            background-attachment: fixed;
+            background-size: cover;
+            color: var(--text-main);
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; font-weight: 800; letter-spacing: -0.5px; text-transform: uppercase; }
+        
+        .container { max-width: 1150px; margin: 0 auto; padding: 0 20px; }
+
+        /* --- ANIMACIONES --- */
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes growBar { from { width: 0; } to { width: var(--target-width); } }
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(249, 115, 22, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0); }
+        }
+
+        .animate { animation: slideUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; opacity: 0; }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+
+        /* --- COMPONENTES UI --- */
+        .glass-panel {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border-glass);
+            border-radius: 16px;
+            padding: 45px;
+            margin-bottom: 50px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-header { text-align: center; margin-bottom: 60px; position: relative; }
+        .section-header h2 { font-size: 2.5rem; margin-bottom: 15px; background: linear-gradient(to right, #fff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-header p { font-size: 1.1rem; color: var(--text-muted); max-width: 700px; margin: 0 auto; font-weight: 300; }
+        .section-header::after { content: ''; display: block; width: 80px; height: 5px; background: var(--accent); margin: 25px auto 0; border-radius: 3px; }
+
+        /* --- HERO --- */
+        header {
+            min-height: 85vh;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            text-align: center; padding: 100px 20px;
+        }
+
+        .status-badge {
+            background: rgba(249, 115, 22, 0.15); border: 1px solid var(--accent); color: var(--accent);
+            padding: 10px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; letter-spacing: 2px;
+            margin-bottom: 30px; display: inline-block; box-shadow: 0 0 20px rgba(249, 115, 22, 0.2);
+        }
+
+        .hero-title {
+            font-size: 4rem; line-height: 1.1; margin-bottom: 30px;
+            text-shadow: 0 10px 40px rgba(0,0,0,0.6);
+        }
+
+        .hero-subtitle { font-size: 1.4rem; color: var(--text-muted); font-weight: 300; max-width: 900px; margin-bottom: 40px; }
+
+        /* --- DIAGNÓSTICO --- */
+        .diagnostic-grid { display: grid; grid-template-columns: 1fr 0.9fr; gap: 50px; align-items: start; }
+        
+        .alert-box {
+            border-left: 5px solid var(--danger);
+            background: linear-gradient(90deg, rgba(239, 68, 68, 0.1) 0%, transparent 100%);
+            padding: 25px; border-radius: 0 15px 15px 0; margin-bottom: 25px;
+        }
+        
+        .success-box {
+            border-left: 5px solid var(--success);
+            background: linear-gradient(90deg, rgba(16, 185, 129, 0.1) 0%, transparent 100%);
+            padding: 25px; border-radius: 0 15px 15px 0; margin-bottom: 25px;
+        }
+
+        /* Chart Visuals */
+        .chart-container { 
+            background: rgba(15, 23, 42, 0.5); border: 1px solid var(--border-glass);
+            border-radius: 20px; padding: 30px; text-align: center;
+        }
+
+        .donut-wrap { position: relative; width: 180px; height: 180px; margin: 0 auto 30px; }
+        .donut-circle {
+            width: 100%; height: 100%; border-radius: 50%;
+            background: conic-gradient(var(--danger) 0% 72%, rgba(255,255,255,0.05) 72% 100%);
+            box-shadow: 0 0 30px rgba(239, 68, 68, 0.2);
+        }
+        .donut-inner {
+            position: absolute; top: 15px; left: 15px; right: 15px; bottom: 15px;
+            background: var(--bg-dark); border-radius: 50%;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+        }
+        .donut-val { font-size: 2.2rem; font-weight: 800; color: var(--danger); line-height: 1; }
+        .donut-lbl { font-size: 0.7rem; color: var(--text-muted); text-transform: uppercase; margin-top: 5px; }
+
+        .comparison-bars { width: 100%; }
+        .bar-row { margin-bottom: 20px; }
+        .bar-header { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem; font-weight: 600; color: var(--text-muted); }
+        .bar-track { width: 100%; height: 10px; background: rgba(255,255,255,0.08); border-radius: 6px; overflow: hidden; }
+        .bar-fill { height: 100%; border-radius: 6px; animation: growBar 1.5s ease-out forwards; position: relative; }
+        .bar-fill::after {
+            content: ''; position: absolute; top:0; left:0; right:0; bottom:0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        }
+
+        /* --- REGIONES (DOMINIO TERRITORIAL) --- */
+        .geo-grid { 
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+            gap: 15px; margin-top: 30px; 
+        }
+        .geo-card {
+            background: rgba(255,255,255,0.03); border: 1px solid var(--border-glass);
+            padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 10px;
+            transition: all 0.3s ease;
+        }
+        .geo-card:hover { border-color: var(--primary); background: rgba(56, 189, 248, 0.1); transform: translateY(-3px); }
+        .geo-icon { color: var(--accent); font-size: 1.1rem; }
+        .geo-name { font-size: 0.9rem; font-weight: 600; color: var(--text-main); }
+
+        /* --- SERVICIOS --- */
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 40px; }
+        
+        .service-card {
+            background: var(--bg-glass); border: 1px solid var(--border-glass);
+            padding: 35px; border-radius: 16px; transition: all 0.4s ease;
+            position: relative; overflow: hidden;
+        }
+        .service-card:hover { transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 20px 40px rgba(56, 189, 248, 0.1); }
+        
+        .s-icon { 
+            font-size: 2.2rem; color: var(--primary); margin-bottom: 25px; 
+            background: rgba(56, 189, 248, 0.1); width: 70px; height: 70px; 
+            display: flex; align-items: center; justify-content: center; border-radius: 14px;
+        }
+
+        .tag-cloud { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+        .tag { 
+            background: rgba(255,255,255,0.03); border: 1px solid var(--border-glass);
+            padding: 6px 14px; border-radius: 50px; font-size: 0.8rem; color: var(--text-muted);
+        }
+        .tag.pro { border-color: var(--accent); color: var(--accent); background: rgba(249, 115, 22, 0.1); }
+
+        /* --- PRECIO (OFERTA) --- */
+        .pricing-split { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
+        
+        .deal-main {
+            border: 2px solid var(--accent); background: linear-gradient(160deg, var(--bg-card), rgba(15, 23, 42, 0.9));
+            position: relative; overflow: hidden;
+        }
+        .ribbon {
+            position: absolute; top: 0; right: 0; background: var(--accent); color: white;
+            padding: 10px 30px; border-radius: 0 0 0 15px; font-weight: 800; font-size: 0.9rem;
+        }
+
+        .price-row { display: flex; align-items: baseline; gap: 20px; margin: 30px 0; }
+        .price-big { font-size: 4rem; font-weight: 800; color: white; line-height: 1; }
+        .price-old { text-decoration: line-through; color: var(--text-muted); font-size: 1.5rem; }
+
+        .feature-list { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
+        .f-item { display: flex; align-items: center; gap: 12px; font-size: 0.95rem; }
+        .f-item i { color: var(--success); font-size: 1.1rem; }
+
+        .monthly-box {
+            background: linear-gradient(180deg, rgba(56, 189, 248, 0.1), var(--bg-card));
+            border: 1px solid var(--primary); text-align: center; display: flex; flex-direction: column; justify-content: center;
+        }
+
+        .cta-btn {
+            background: linear-gradient(90deg, var(--accent), #c2410c); color: white; border: none;
+            width: 100%; padding: 20px; border-radius: 8px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px;
+            cursor: pointer; margin-top: 25px; transition: 0.3s; animation: pulseGlow 3s infinite; text-decoration: none; display: block;
+        }
+        .cta-btn:hover { transform: translateY(-3px) scale(1.01); box-shadow: 0 20px 40px rgba(249, 115, 22, 0.4); }
+
+        footer { border-top: 1px solid var(--border-glass); padding: 50px 0; text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-top: 80px; }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.8rem; }
+            .diagnostic-grid, .pricing-split, .feature-list, .geo-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="animate">
+            <span class="status-badge"><i class="fas fa-file-contract"></i> PROPUESTA ESTRATÉGICA 2025</span>
+            <h1 class="hero-title">SU EXCELENCIA EN LA OBRA<br>MERECE UNA BASE DIGITAL SÓLIDA</h1>
+            <p class="hero-subtitle">Ustedes construyen estructuras sólidas. Nosotros construimos la autoridad digital para que todo Calgary lo sepa.</p>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <section class="glass-panel animate delay-1">
+            <div class="section-header">
+                <h2>ANÁLISIS DE INTEGRIDAD DIGITAL</h2>
+                <p>Identificando la brecha entre su reputación real y su presencia en línea.</p>
+            </div>
+
+            <div class="diagnostic-grid">
+                <div>
+                    <h3 style="margin-bottom:25px; color:white; border-bottom:1px solid var(--border-glass); padding-bottom:15px;">
+                        La "disonancia de marca"
+                    </h3>
+                    <p style="margin-bottom:20px; color:var(--text-muted); font-size:1.05rem;">
+                        Estimados socios, hoy existe aquí una contradicción costosa. Su ejecución física en proyectos como <strong>White Horn</strong> y <strong>Mahogany Gardens</strong> es impecable. Sin embargo, su <strong>tarjeta de presentación digital</strong> está con la base comprometida.
+                    </p>
+                    
+                    <div class="alert-box">
+                        <h4 style="color:var(--danger); margin-bottom:15px;"><i class="fas fa-radiation-alt"></i> El riesgo actual</h4>
+                        <ul style="list-style:none; color:var(--text-muted); line-height:1.8;">
+                            <li><i class="fas fa-times" style="color:var(--danger); margin-right:10px;"></i> <strong>Sitio "one-page":</strong> Para Google, su estructura actual se asemeja más a un folleto que a una empresa completa. Esto dificulta el posicionamiento en búsquedas específicas.</li>
+                            <li><i class="fas fa-times" style="color:var(--danger); margin-right:10px;"></i> <strong>Pérdida silenciosa de leads:</strong> Los mensajes de "warning" en el formulario no son solo un detalle visual; son solicitudes de presupuesto que nunca llegan a su bandeja de entrada.</li>
+                        </ul>
+                    </div>
+
+                    <div class="success-box">
+                        <h4 style="color:var(--success); margin-bottom:15px;"><i class="fas fa-drafting-compass"></i> La oportunidad</h4>
+                        <p style="color:var(--text-muted); font-size:0.95rem;">
+                            Transformar su sitio en un <strong>activo comercial 24/7</strong>. Con una arquitectura multi-página enfocada en cada servicio clave, crearemos autoridad técnica inmediata para quien busque "framing" o "decks" en su región.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h4 style="margin-bottom:25px; color:var(--text-main);">PÉRDIDA DE TRÁFICO (LEADS)</h4>
+                    
+                    <div class="donut-wrap">
+                        <div class="donut-circle"></div>
+                        <div class="donut-inner">
+                            <span class="donut-val">72%</span>
+                            <span class="donut-lbl">Tasa de rechazo</span>
+                        </div>
+                    </div>
+
+                    <div class="comparison-bars">
+                        <div class="bar-row">
+                            <div class="bar-header"><span>Autoridad SEO (actual)</span> <span style="color:var(--danger)">Crítica</span></div>
+                            <div class="bar-track"><div class="bar-fill" style="width: 15%; background: var(--danger); --target-width: 15%;"></div></div>
+                        </div>
+                        <div class="bar-row">
+                            <div class="bar-header"><span>Autoridad SEO (nuevo sitio)</span> <span style="color:var(--success)">Dominante</span></div>
+                            <div class="bar-track"><div class="bar-fill" style="width: 95%; background: var(--success); --target-width: 95%;"></div></div>
+                        </div>
+                    </div>
+                    
+                    <p style="font-size:0.8rem; margin-top:20px; color:var(--text-muted);">*Estimación ilustrativa basada en el comportamiento común de usuarios en sitios one-page del sector de construcción en Calgary.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-panel animate delay-2">
+            <div class="section-header">
+                <h2>INGENIERÍA DEL NUEVO SITIO WEB</h2>
+                <p>Construyendo activos digitales que trabajan 24/7 para cerrar contratos.</p>
+            </div>
+
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="s-icon"><i class="fas fa-ruler-combined"></i></div>
+                    <h4>Especialización en framing</h4>
+                    <p style="font-size:0.9rem; color:var(--text-muted);">
+                        Landing page técnica dedicada exclusivamente a <strong>back framing</strong>, bulkheads y esqueletos estructurales. Posiciona a AMMO como la opción técnica #1.
+                    </p>
+                    <div class="tag-cloud">
+                        <span class="tag pro">Back Framing</span>
+                        <span class="tag">Structural Skeleton</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="s-icon"><i class="fas fa-door-closed"></i></div>
+                    <h4>Instalación de ventanas</h4>
+                    <p style="font-size:0.9rem; color:var(--text-muted);">
+                        Enfoque en eficiencia energética y sellado perfecto. Utilizaremos un lenguaje que transmita “cero filtraciones” y “acabado de lujo”.
+                    </p>
+                    <div class="tag-cloud">
+                        <span class="tag pro">Window Installers</span>
+                        <span class="tag">Exterior Doors</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="s-icon"><i class="fas fa-layer-group"></i></div>
+                    <h4>Decks y exteriores</h4>
+                    <p style="font-size:0.9rem; color:var(--text-muted);">
+                        Galería de alto impacto para proyectos en madera tratada y composite (Trex), enfocada en aumentar el valor percibido de la propiedad.
+                    </p>
+                    <div class="tag-cloud">
+                        <span class="tag pro">Composite Decks</span>
+                        <span class="tag">Custom Fences</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-panel animate delay-2" style="border: 1px solid var(--primary);">
+            <div style="display:flex; align-items:center; gap:15px; margin-bottom:20px;">
+                <i class="fas fa-map-marked-alt" style="font-size:2rem; color:var(--accent);"></i>
+                <h3 style="margin:0;">ESTRATEGIA DE DOMINIO TERRITORIAL</h3>
+            </div>
+            
+            <p style="color:var(--text-muted); margin-bottom:30px; font-size:1.05rem;">
+                No vamos a crear solo un sitio “bonito”. Inyectaremos <strong>schema markup local</strong> para garantizar que Google entienda que ustedes son la autoridad de referencia en estos distritos clave:
+            </p>
+
+            <div class="geo-grid">
+                <div class="geo-card"><i class="fas fa-location-arrow geo-icon"></i> <span class="geo-name">Mahogany Gardens (SE)</span></div>
+                <div class="geo-card"><i class="fas fa-location-arrow geo-icon"></i> <span class="geo-name">Whitehorn (NE)</span></div>
+                <div class="geo-card"><i class="fas fa-location-arrow geo-icon"></i> <span class="geo-name">Cochrane & Area</span></div>
+                <div class="geo-card"><i class="fas fa-location-arrow geo-icon"></i> <span class="geo-name">Auburn Bay</span></div>
+                <div class="geo-card"><i class="fas fa-location-arrow geo-icon"></i> <span class="geo-name">Seton</span></div>
+                <div class="geo-card"><i class="fas fa-location-arrow geo-icon"></i> <span class="geo-name">Saddle Ridge</span></div>
+                <div class="geo-card"><i class="fas fa-location-arrow geo-icon"></i> <span class="geo-name">Evanston (NW)</span></div>
+                <div class="geo-card"><i class="fas fa-location-arrow geo-icon"></i> <span class="geo-name">Legacy</span></div>
+            </div>
+        </section>
+
+        <section class="animate delay-3">
+            <div class="section-header">
+                <h2>PROPUESTA DE COLABORACIÓN</h2>
+                <p>No buscamos solo un cliente, sino un caso de éxito para nuestro portafolio.</p>
+            </div>
+
+            <div class="pricing-split">
+                <div class="glass-panel deal-main" style="margin-bottom:0;">
+                    <div class="ribbon">TARIFA DE PORTAFOLIO</div>
+                    
+                    <h3 style="font-size:1.6rem; margin-bottom:10px;"><i class="fas fa-hammer"></i> Fase de construcción</h3>
+                    <p style="color:var(--text-muted)">Rediseño completo + estrategia</p>
+                    
+                    <div class="price-row">
+                        <span class="price-old">2,500 CAD</span>
+                        <div style="display:flex; flex-direction:column; line-height:1;">
+                            <span class="price-big">650 CAD</span>
+                            <span style="font-size:1rem; color:var(--accent);">CAD (pago único)</span>
+                        </div>
+                    </div>
+
+                    <p style="color:var(--text-muted); font-size:0.95rem;">
+                        <strong>¿Por qué este valor?</strong> Este es el tipo de proyecto por el que normalmente cobramos entre <strong>2,500 y 3,000 CAD</strong>, dependiendo del alcance. 
+                        Como estamos consolidando nuestro trabajo en Canadá, ofrecemos a AMMO una <strong>condición de socio estratégico</strong>: ustedes invierten <strong>650 CAD</strong> en un proyecto completo; nosotros ganamos un caso sólido y la posibilidad de usar los resultados como referencia.
+                    </p>
+
+                    <div class="feature-list">
+                        <div class="f-item"><i class="fas fa-check-circle"></i> Arquitectura de 5 páginas</div>
+                        <div class="f-item"><i class="fas fa-check-circle"></i> Copywriting nativo (inglés)</div>
+                        <div class="f-item"><i class="fas fa-check-circle"></i> Corrección de formularios</div>
+                        <div class="f-item"><i class="fas fa-check-circle"></i> Galería de proyectos en alta definición</div>
+                    </div>
+                </div>
+
+                <div class="glass-panel monthly-box" style="margin-bottom:0;">
+                    <i class="fas fa-shield-alt" style="font-size:3.5rem; color:var(--primary); margin-bottom:20px;"></i>
+                    <h3 style="margin-bottom:5px;">Protección mensual</h3>
+                    <p style="font-size:0.9rem; color:var(--text-muted);">Mantenimiento y crecimiento continuo</p>
+                    
+                    <div style="margin:25px 0;">
+                        <span style="font-size:2.5rem; font-weight:800; color:white;">100</span>
+                        <span style="color:var(--text-muted);"> CAD / mes</span>
+                    </div>
+
+                    <ul style="text-align:left; list-style:none; color:var(--text-muted); font-size:0.9rem; line-height:2.2; padding:0 20px;">
+                        <li><i class="fas fa-check" style="color:var(--success); margin-right:10px;"></i> Hosting seguro</li>
+                        <li><i class="fas fa-check" style="color:var(--success); margin-right:10px;"></i> Actualizaciones de SEO local</li>
+                        <li><i class="fas fa-check" style="color:var(--success); margin-right:10px;"></i> Ediciones ilimitadas de contenido</li>
+                        <li><i class="fas fa-check" style="color:var(--success); margin-right:10px;"></i> Sin contrato de permanencia</li>
+                    </ul>
+
+                    <a href="mailto:felipe@empresarialweb.com.br" class="cta-btn">ACEPTAR PROPUESTA</a>
+                    <p style="font-size:0.8rem; margin-top:15px; color:var(--text-muted);">Oferta válida por 10 días.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 e-Web Agency. Documento confidencial preparado para la dirección de AMMO Construction Ltd.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

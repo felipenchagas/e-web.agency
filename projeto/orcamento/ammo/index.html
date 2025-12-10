@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Proposal - AMMO Construction Ltd. | Digital Renovation</title>
+    <meta name="description" content="Strategic website redevelopment proposal for AMMO Construction. Turning a static page into a lead generation machine.">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            /* Palette for Construction: Trust Blue & Safety Orange */
+            --primary: #1a2530;     /* Dark Slate */
+            --secondary: #f39c12;   /* Construction Orange */
+            --accent: #2980b9;      /* Blue */
+            --success: #27ae60;
+            --light: #ecf0f1;
+            --white: #ffffff;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            --radius: 6px;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+        
+        body { background-color: #f4f7f6; color: #333; line-height: 1.6; }
+        
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #34495e 100%);
+            color: white;
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEgMWgydjJIMUMxeiIgZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIwLjA1Ii8+PC9zdmc+');
+            opacity: 0.3;
+        }
+
+        .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; position: relative; z-index: 2; }
+        .logo { font-size: 24px; font-weight: 800; display: flex; align-items: center; gap: 10px; color: var(--secondary); }
+        .status-badge { background: rgba(255,255,255,0.1); padding: 5px 15px; border-radius: 20px; font-size: 0.9em; border: 1px solid rgba(255,255,255,0.2); }
+        
+        h1 { font-size: 2.5rem; margin-bottom: 10px; position: relative; z-index: 2; }
+        .subtitle { font-size: 1.2rem; opacity: 0.9; font-weight: 300; max-width: 700px; position: relative; z-index: 2; }
+
+        /* NLP SECTION */
+        .nlp-intro {
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+            border-left: 5px solid var(--secondary);
+        }
+        .nlp-intro h3 { color: var(--primary); font-size: 1.5rem; margin-bottom: 20px; }
+        .nlp-intro p { margin-bottom: 15px; color: #555; }
+        .highlight { background: #fff3cd; padding: 2px 5px; border-radius: 3px; font-weight: 600; color: #856404; }
+
+        /* COMPARISON GRID */
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .comp-card { background: white; padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow); }
+        .comp-card.current { border-top: 4px solid #e74c3c; }
+        .comp-card.new { border-top: 4px solid var(--success); }
+        
+        .comp-header { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; font-weight: bold; font-size: 1.2rem; }
+        .comp-list li { list-style: none; margin-bottom: 12px; display: flex; gap: 10px; font-size: 0.95rem; }
+        .red-x { color: #e74c3c; min-width: 20px; }
+        .green-check { color: var(--success); min-width: 20px; }
+
+        /* PRICING */
+        .pricing-section { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; margin-bottom: 40px; }
+        
+        .investment-card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+        }
+        .inv-header { background: var(--primary); color: white; padding: 20px; text-align: center; }
+        .inv-body { padding: 30px; flex-grow: 1; }
+        .price-tag { font-size: 3rem; font-weight: 800; color: var(--primary); text-align: center; margin: 20px 0; }
+        .price-sub { font-size: 1rem; color: #777; font-weight: normal; }
+        .strike { text-decoration: line-through; color: #bdc3c7; font-size: 1.5rem; margin-right: 10px; }
+        
+        .monthly-card {
+            background: linear-gradient(to bottom right, #2980b9, #2c3e50);
+            color: white;
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .monthly-price { font-size: 2.5rem; font-weight: 700; margin: 10px 0; color: var(--secondary); }
+
+        /* TIMELINE */
+        .timeline { margin-bottom: 40px; }
+        .step { display: flex; gap: 20px; margin-bottom: 20px; background: white; padding: 20px; border-radius: var(--radius); box-shadow: var(--shadow); align-items: center; }
+        .step-icon { width: 50px; height: 50px; background: var(--light); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1.2rem; flex-shrink: 0; }
+        
+        /* SEO VISUALIZER */
+        .seo-viz { background: white; padding: 30px; border-radius: var(--radius); margin-bottom: 40px; box-shadow: var(--shadow); }
+        .keyword-badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+        .k-badge { background: var(--light); padding: 5px 12px; border-radius: 15px; font-size: 0.85rem; color: #555; border: 1px solid #ddd; }
+        .k-badge.active { background: #e8f6f3; color: var(--success); border-color: var(--success); }
+
+        /* FOOTER */
+        footer { text-align: center; color: #777; padding: 40px 0; font-size: 0.9rem; border-top: 1px solid #ddd; }
+
+        /* UTILS */
+        .btn-accept {
+            display: block; width: 100%; padding: 15px; background: var(--success); color: white; text-align: center; 
+            text-decoration: none; font-weight: bold; border-radius: var(--radius); margin-top: 20px; transition: 0.3s;
+        }
+        .btn-accept:hover { background: #219150; }
+
+        @media (max-width: 768px) {
+            .comparison-grid, .pricing-section { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="header-top">
+            <div class="logo"><i class="fas fa-layer-group"></i> e-Web Agency</div>
+            <div class="status-badge">Proposal #AMMO-2025</div>
+        </div>
+        <h1>Constructing a Better Reputation</h1>
+        <p class="subtitle">A strategic proposal to align AMMO Construction's digital presence with the high quality of your physical craftsmanship.</p>
+    </header>
+
+    <div class="nlp-intro">
+        <h3><i class="fas fa-hard-hat" style="color:var(--secondary); margin-right:10px;"></i> The "Invisible Frame" Problem</h3>
+        <p>Hi team at AMMO,</p>
+        <p>We've analyzed your current online presence. It is clear that you are built on integrity and skilled craftsmanship. Your projects in <strong>White Horn</strong> and <strong>Mahogany Gardens</strong> prove that you deliver high-quality structural work.</p>
+        
+        <p><strong>However, there is a disconnect.</strong></p>
+        
+        <p>Right now, your website is like a house with good bones but no curb appeal. It's a "One-Page" structure, which tells Google that you are a small, general handyman rather than a specialized Framing & Exteriors company. When a builder searches for <em>"Back Framing Calgary"</em> or a homeowner searches for <em>"Composite Deck Installers,"</em> <span class="highlight">they aren't finding you because your current site groups everything into a single URL.</span></p>
+        
+        <p>Furthermore, technical errors (like the "Warning" messages on your contact form) are silently killing leads. <strong>You are likely losing thousands of dollars in contracts simply because the "Contact Us" door is jammed.</strong></p>
+        
+        <p>We want to fix the foundation before you lose another project to a competitor with a better website.</p>
+    </div>
+
+    <h2 style="margin-bottom:20px; color:var(--primary);">The Renovation Plan</h2>
+    <div class="comparison-grid">
+        <div class="comp-card current">
+            <div class="comp-header"><i class="fas fa-times-circle" style="color:#e74c3c;"></i> Current Site (Liability)</div>
+            <ul class="comp-list">
+                <li><span class="red-x"><i class="fas fa-times"></i></span> <strong>Single Page Layout:</strong> Bad for SEO. Google can't distinguish between "Framing" and "Windows".</li>
+                <li><span class="red-x"><i class="fas fa-times"></i></span> <strong>Broken English/Typos:</strong> "installServicesation" reduces professional trust.</li>
+                <li><span class="red-x"><i class="fas fa-times"></i></span> <strong>Broken Forms:</strong> "Warning" errors prevent clients from emailing you.</li>
+                <li><span class="red-x"><i class="fas fa-times"></i></span> <strong>Generic Design:</strong> Doesn't highlight your specific Calgary project expertise.</li>
+            </ul>
+        </div>
+        
+        <div class="comp-card new">
+            <div class="comp-header"><i class="fas fa-check-circle" style="color:var(--success);"></i> New Proposal (Asset)</div>
+            <ul class="comp-list">
+                <li><span class="green-check"><i class="fas fa-check"></i></span> <strong>Multi-Page Structure:</strong> Dedicated pages for Framing, Decks, and Windows to rank on Google.</li>
+                <li><span class="green-check"><i class="fas fa-check"></i></span> <strong>Professional Copywriting:</strong> Native English text that sells "Trust" and "On-Budget" delivery.</li>
+                <li><span class="green-check"><i class="fas fa-check"></i></span> <strong>Conversion Optimized:</strong> Forms that actually work and ask the right questions.</li>
+                <li><span class="green-check"><i class="fas fa-check"></i></span> <strong>Portfolio Gallery:</strong> High-end showcase of your White Horn & Mahogany projects.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="seo-viz">
+        <h3 style="color:var(--primary);"><i class="fas fa-search-location"></i> Local Dominance Strategy</h3>
+        <p>We won't just build a site; we will build a <strong>Local Lead Magnet</strong>. By breaking your services into separate pages, we can target specific search terms in Calgary and Cochrane.</p>
+        
+        <div class="keyword-badges">
+            <span class="k-badge active">Framing Contractors Calgary</span>
+            <span class="k-badge active">Residential Back Framing</span>
+            <span class="k-badge active">Deck Builders Cochrane</span>
+            <span class="k-badge active">Window Installation SE Calgary</span>
+            <span class="k-badge active">Commercial Wood Framing</span>
+            <span class="k-badge active">Exterior Finishing Alberta</span>
+        </div>
+    </div>
+
+    <h2 style="margin-bottom:20px; color:var(--primary);">Partnership Investment</h2>
+    <div class="pricing-section">
+        
+        <div class="investment-card">
+            <div class="inv-header">
+                <h3><i class="fas fa-pencil-ruler"></i> Design & Build (One-Time)</h3>
+            </div>
+            <div class="inv-body">
+                <p>Complete overhaul of AMMO Construction's digital presence. Includes design, development, and copywriting.</p>
+                <div class="price-tag">
+                    <span class="strike">$2,500</span> $600 <span class="price-sub">CAD</span>
+                </div>
+                <ul class="comp-list">
+                    <li><span class="green-check"><i class="fas fa-check"></i></span> 5-Page Professional Website (Home, About, Framing, Exteriors, Contact)</li>
+                    <li><span class="green-check"><i class="fas fa-check"></i></span> Mobile-First Design (For builders/clients on phones)</li>
+                    <li><span class="green-check"><i class="fas fa-check"></i></span> Copywriting Fixes (Professional Grammar & Tone)</li>
+                    <li><span class="green-check"><i class="fas fa-check"></i></span> Portfolio Gallery Setup</li>
+                </ul>
+                <div style="background:#fff3cd; padding:10px; font-size:0.9em; border-radius:4px; margin-top:15px; text-align:center;">
+                    <strong>Why the discount?</strong> This is a "Portfolio Partnership" rate. We build you a flagship site, you give us a testimonial.
+                </div>
+            </div>
+        </div>
+
+        <div class="monthly-card">
+            <div style="text-align:center;">
+                <i class="fas fa-shield-alt" style="font-size:40px; margin-bottom:15px; opacity:0.8;"></i>
+                <h3>Growth & Protection</h3>
+            </div>
+            <div style="text-align:center;">
+                <div class="monthly-price">$100 <span style="font-size:1rem; font-weight:normal;">CAD/mo</span></div>
+                <p style="font-size:0.9rem; opacity:0.9; margin-bottom:20px;">No lock-in contract. Cancel anytime.</p>
+            </div>
+            <ul style="font-size:0.9rem; list-style:none;">
+                <li style="margin-bottom:10px;"><i class="fas fa-check" style="color:var(--secondary); margin-right:10px;"></i> <strong>Local SEO:</strong> Monthly updates to Google Business Profile.</li>
+                <li style="margin-bottom:10px;"><i class="fas fa-check" style="color:var(--secondary); margin-right:10px;"></i> <strong>Hosting & Security:</strong> We keep the site live and hacker-free.</li>
+                <li style="margin-bottom:10px;"><i class="fas fa-check" style="color:var(--secondary); margin-right:10px;"></i> <strong>Content Updates:</strong> Need to add a new project photo? Just email us.</li>
+            </ul>
+            <a href="#" class="btn-accept">Start Project</a>
+        </div>
+    </div>
+
+    <h2 style="margin-bottom:20px; color:var(--primary);">Construction Schedule</h2>
+    <div class="timeline">
+        <div class="step">
+            <div class="step-icon">1</div>
+            <div>
+                <strong>Foundation (Days 1-3):</strong> We analyze your best project photos and draft the new site structure.
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-icon">2</div>
+            <div>
+                <strong>Framing (Days 4-10):</strong> We build the site, write the professional copy, and fix the mobile layout.
+            </div>
+        </div>
+        <div class="step">
+            <div class="step-icon">3</div>
+            <div>
+                <strong>Inspection & Handover (Day 14):</strong> You review the site. Once approved, we launch it and connect your domain.
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 e-Web Agency. Proposal valid for 14 days.</p>
+        <p>Prepared for AMMO Construction Ltd. - Calgary, AB</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
