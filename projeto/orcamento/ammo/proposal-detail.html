@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Propuesta Web & SEO – AMMO Construction Ltd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Fonte Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f5f6f9;
+      --bg-alt: #ffffff;
+      --border: #d4d7e0;
+      --border-soft: #e1e4ee;
+      --text: #111827;
+      --muted: #6b7280;
+      --accent: #c58a24;       /* dourado da marca */
+      --accent-soft: #fdf4e6;
+      --accent-dark: #1f2933;  /* cinza azulado, “engenharia” */
+      --radius-lg: 16px;
+      --radius-xl: 22px;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.08);
+      --transition-fast: 0.2s ease-out;
+      --transition-med: 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #e5ebf5 0, #f5f6f9 48%, #f5f6f9 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .page-shell {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 24px 18px 56px;
+    }
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      margin-bottom: 24px;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 18px;
+      background: rgba(255,255,255,0.96);
+      border-radius: 999px;
+      border: 1px solid rgba(209, 213, 219, 0.9);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      background: #111827;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .brand-logo img {
+      width: 90%;
+      height: auto;
+      display: block;
+    }
+
+    .brand-text h1 {
+      font-size: 0.92rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+    }
+
+    .brand-text span {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    nav a {
+      font-size: 0.8rem;
+      text-decoration: none;
+      color: var(--muted);
+      padding: 7px 11px;
+      border-radius: 999px;
+      transition: var(--transition-fast);
+    }
+
+    nav a:hover {
+      color: var(--accent-dark);
+      background: #eef1f8;
+    }
+
+    .btn-nav-primary {
+      background: var(--accent);
+      color: #fff;
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 10px 22px rgba(197, 138, 36, 0.35);
+      transition: var(--transition-fast);
+    }
+
+    .btn-nav-primary:hover {
+      background: #b57917;
+      box-shadow: 0 14px 26px rgba(197, 138, 36, 0.45);
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    /* SEÇÕES */
+    section {
+      background: var(--bg-alt);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-soft);
+      padding: 24px 22px 22px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .section-header h2 {
+      font-size: 1.3rem;
+      color: var(--accent-dark);
+    }
+
+    .section-header p {
+      max-width: 460px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .tag {
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .hero-left {
+      padding-right: 6px;
+      border-right: 1px solid var(--border-soft);
+    }
+
+    .hero-title {
+      font-size: 1.9rem;
+      line-height: 1.25;
+      margin-bottom: 8px;
+      color: var(--accent-dark);
+    }
+
+    .hero-subtitle {
+      font-size: 0.96rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .chip {
+      font-size: 0.78rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      background: #f9fafb;
+      color: #374151;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border-radius: 999px;
+      padding: 10px 18px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 14px 30px rgba(197, 138, 36, 0.35);
+      transition: var(--transition-fast);
+      margin-bottom: 6px;
+    }
+
+    .btn-primary:hover {
+      background: #b57917;
+      box-shadow: 0 16px 32px rgba(197, 138, 36, 0.45);
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .hero-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      background: #f9fafb;
+      padding: 16px 14px;
+    }
+
+    .hero-number {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--accent-dark);
+    }
+
+    .hero-number span {
+      color: var(--accent);
+    }
+
+    .hero-card p {
+      font-size: 0.86rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .hero-pill {
+      background: var(--accent-soft);
+      border-radius: var(--radius-lg);
+      padding: 10px 12px;
+      font-size: 0.84rem;
+      border: 1px dashed rgba(197,138,36,0.6);
+      color: #7c5b16;
+    }
+
+    .hero-pill strong {
+      color: #5c4312;
+    }
+
+    /* COLUNAS / LISTAS */
+    .two-cols {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 20px;
+    }
+
+    .text-muted {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .check-list {
+      list-style: none;
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    .check-list li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 6px;
+    }
+
+    .check-list li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 1px;
+      font-size: 0.76rem;
+      color: var(--accent);
+    }
+
+    .note-box {
+      background: #f9fafb;
+      border-radius: var(--radius-lg);
+      border: 1px dashed rgba(209,213,219,0.9);
+      padding: 14px 14px 12px;
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    .note-box strong {
+      color: var(--accent-dark);
+    }
+
+    /* SERVIÇOS */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+    }
+
+    .service-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-soft);
+      background: #f9fafb;
+      padding: 14px 14px 12px;
+    }
+
+    .service-label {
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .service-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--accent-dark);
+      margin-bottom: 6px;
+    }
+
+    .service-desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .service-list {
+      list-style: none;
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    .service-list li {
+      position: relative;
+      padding-left: 14px;
+      margin-bottom: 4px;
+    }
+
+    .service-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent);
+    }
+
+    .service-quote {
+      font-size: 0.8rem;
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid #e5e7eb;
+      color: #92400e;
+      font-style: italic;
+    }
+
+    /* TIMELINE */
+    .timeline {
+      border-left: 2px solid #e5e7eb;
+      margin-top: 6px;
+      padding-left: 16px;
+    }
+
+    .timeline-item {
+      margin-bottom: 12px;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -10px;
+      top: 4px;
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      border: 2px solid var(--accent);
+      background: #fff;
+    }
+
+    .timeline-title {
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: var(--accent-dark);
+      margin-bottom: 2px;
+    }
+
+    .timeline-text {
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    /* GRID */
+    .columns-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    /* PRICING */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 18px;
+    }
+
+    .pricing-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-soft);
+      background: #f9fafb;
+      padding: 16px 16px 14px;
+    }
+
+    .pricing-badge {
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #92400e;
+      background: var(--accent-soft);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+    }
+
+    .pricing-price {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--accent-dark);
+      margin-bottom: 2px;
+    }
+
+    .pricing-note {
+      font-size: 0.84rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .pricing-list {
+      list-style: none;
+      font-size: 0.86rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .pricing-list li {
+      position: relative;
+      padding-left: 16px;
+      margin-bottom: 4px;
+    }
+
+    .pricing-list li::before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 0.78rem;
+      color: var(--accent);
+    }
+
+    .pill-muted {
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      padding: 6px 10px;
+      display: inline-block;
+      margin-top: 8px;
+      background: #fff;
+    }
+
+    footer {
+      margin-top: 16px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    footer span {
+      color: var(--accent-dark);
+      font-weight: 500;
+    }
+
+    /* BOTÃO TOPO */
+    #btnTop {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      border: 1px solid #d1d5db;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      cursor: pointer;
+      color: var(--accent-dark);
+      box-shadow: 0 10px 25px rgba(15,23,42,0.18);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity var(--transition-fast), visibility var(--transition-fast), transform var(--transition-fast);
+      z-index: 40;
+    }
+
+    #btnTop.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    #btnTop:hover {
+      transform: translateY(-3px);
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 860px) {
+      .header-inner {
+        border-radius: 18px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-left {
+        border-right: none;
+        border-bottom: 1px solid var(--border-soft);
+        padding-bottom: 16px;
+        margin-bottom: 6px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page-shell {
+        padding-inline: 14px;
+      }
+      section {
+        padding: 18px 16px 18px;
+      }
+      .section-header {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-shell">
+
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-logo">
+          <img src="https://i0.wp.com/ammoconstruction.ca/wp-content/uploads/2025/10/Gold-House-AMMO-LOGO.png"
+               alt="AMMO Construction Ltd Logo">
+        </div>
+        <div class="brand-text">
+          <h1>AMMO CONSTRUCTION LTD</h1>
+          <span>AN INVISIBLE BASE FOR A PERFECT FINISH</span>
+        </div>
+      </div>
+      <nav>
+        <a href="#contexto">Contexto</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#seo">SEO Local</a>
+        <a href="#fases">Fases</a>
+        <a href="#precios">Inversión</a>
+        <a href="#pasos" class="btn-nav-primary">Próximos pasos →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO / CONTEXTO -->
+    <section id="contexto">
+      <div class="section-header">
+        <div>
+          <div class="tag">Propuesta de desarrollo web & SEO local</div>
+          <h2>Un sitio web pensado para ganar proyectos en Calgary.</h2>
+        </div>
+        <p>
+          La idea es que la presencia online de AMMO Construction Ltd. refleje lo que ya pasa en obra:
+          proyectos bien hechos, entregados a tiempo y con alta calidad técnica; ahora visibles para quien
+          busca servicios de framing y construcción en Calgary.
+        </p>
+      </div>
+
+      <div class="hero">
+        <div class="hero-left">
+          <h3 class="hero-title">Transformar visitas en llamadas, correos y presupuestos.</h3>
+          <p class="hero-subtitle">
+            El nuevo sitio será un activo comercial 24/7: más visibilidad en Google, más contactos de calidad
+            y una presentación profesional al nivel de los proyectos de AMMO.
+          </p>
+
+          <div class="hero-chips">
+            <span class="chip">Residential & Commercial Framing</span>
+            <span class="chip">Back Framing · Windows & Doors</span>
+            <span class="chip">Fences & Decks</span>
+          </div>
+
+          <a href="#precios" class="btn-primary">
+            Ver propuesta económica
+          </a>
+          <div class="hero-note">
+            Enfocado en Calgary y alrededores, preparado para crecer con nuevos servicios y proyectos.
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-card">
+            <div class="hero-number"><span>+1</span> sitio nuevo</div>
+            <p>
+              Diseño multi-página, ya pensado para SEO local, con espacio claro para servicios, proyectos y reseñas.
+            </p>
+          </div>
+          <div class="hero-pill">
+            <strong>Objetivo:</strong> que quien busque framing, back framing, decks o instalación de puertas/ventanas
+            en Calgary encuentre a AMMO primero y entienda rápido por qué elegirlos.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARQUITETURA -->
+    <section id="servicios">
+      <div class="section-header">
+        <div>
+          <div class="tag">Alcance del nuevo sitio</div>
+          <h2>Arquitectura y estructura de páginas</h2>
+        </div>
+        <p>
+          El sitio actual funciona casi como un folleto. La nueva versión será una plataforma pensada para SEO local,
+          proyectos, reseñas y generación constante de contactos.
+        </p>
+      </div>
+
+      <div class="two-cols">
+        <div>
+          <p class="text-muted">
+            El proyecto contempla un sitio multi-página, con contenido optimizado para buscadores y organizado de forma
+            clara para constructores, contratistas y propietarios.
+          </p>
+          <ul class="check-list">
+            <li>Home con mensaje claro, llamados a la acción y resumen de servicios.</li>
+            <li>Página general de servicios con enlaces internos a cada área clave.</li>
+            <li>Páginas específicas para Back Framing, Windows & Doors, Fences & Decks y soporte residencial/comercial.</li>
+            <li>Sección de proyectos (Whitehorn, Mahogany Gardens, West Hawk y otros).</li>
+            <li>Página “Sobre AMMO” para historia, valores y equipo.</li>
+            <li>Espacio para reseñas y testimonios verificados.</li>
+            <li>Página de contacto con formulario funcional y datos completos.</li>
+            <li>Blog / Recursos para alimentar el SEO con contenido útil.</li>
+          </ul>
+        </div>
+        <div class="note-box">
+          <strong>Objetivo principal:</strong><br>
+          Que el nuevo sitio sea coherente con lo que AMMO ya hace en obra: proyectos fuertes, bien coordinados y
+          técnicamente sólidos, pero ahora visibles y comprensibles también para quien llega por primera vez desde Google.
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS DESTACADOS -->
+    <section>
+      <div class="section-header">
+        <div>
+          <div class="tag">Servicios a destacar</div>
+          <h2>Framing, instalación y exteriores</h2>
+        </div>
+        <p>
+          Cada servicio tendrá su propia página optimizada, con texto técnico, beneficios, preguntas frecuentes
+          y llamados claros a solicitar presupuesto.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-label">Servicio #1</div>
+          <div class="service-title">Back Framing Services</div>
+          <p class="service-desc">
+            Estructura interior y preparación para terminaciones, siguiendo planos y especificaciones del proyecto.
+          </p>
+          <ul class="service-list">
+            <li>Refuerzos estructurales para muros, cielos y elementos interiores.</li>
+            <li>Preparación para drywall, acabados y detalles arquitectónicos.</li>
+            <li>Alineación y nivelación cuidadosa para un resultado limpio y duradero.</li>
+          </ul>
+          <p class="service-quote">
+            “Expert structural framing ensuring durability and alignment with project specifications.”
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-label">Servicio #2</div>
+          <div class="service-title">Windows & Doors Installation</div>
+          <p class="service-desc">
+            Instalación profesional de puertas y ventanas para proyectos nuevos o renovaciones.
+          </p>
+          <ul class="service-list">
+            <li>Sellos, escuadras y ajustes para eficiencia energética y hermeticidad.</li>
+            <li>Enfoque en seguridad, funcionalidad y acabado prolijo.</li>
+            <li>Coordinación con otros oficios para evitar retrabajos.</li>
+          </ul>
+          <p class="service-quote">
+            “Professional installation for energy efficiency, security, and perfect finishing.”
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-label">Servicio #3</div>
+          <div class="service-title">Residential & Commercial Construction Support</div>
+          <p class="service-desc">
+            Soporte integral de framing e instalación para casas a medida, ampliaciones, renovaciones y proyectos comerciales.
+          </p>
+          <ul class="service-list">
+            <li>Coordinación con arquitectos, ingenieros y contratistas generales.</li>
+            <li>Ajustes en obra según cambios de diseño o requerimientos.</li>
+            <li>Base sólida para que las terminaciones se ejecuten sin problemas.</li>
+          </ul>
+          <p class="service-quote">
+            “Reliable framing and installation services for custom homes and renovations.”
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-label">Servicio #4</div>
+          <div class="service-title">Fences & Decks</div>
+          <p class="service-desc">
+            Cercos y decks diseñados para integrar el exterior con la arquitectura de la propiedad.
+          </p>
+          <ul class="service-list">
+            <li>Construcción de cercos para delimitación, seguridad y privacidad.</li>
+            <li>Diseño de decks funcionales y estéticos para áreas exteriores.</li>
+            <li>Selección de materiales adecuada al clima y uso del espacio.</li>
+          </ul>
+          <p class="service-quote">
+            “Share with us your vision and our team will make it a reality.”
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- POR QUE AMMO / PROYECTOS -->
+    <section>
+      <div class="section-header">
+        <div>
+          <div class="tag">Posicionamiento de marca</div>
+          <h2>Por qué AMMO y cómo contarlo en el sitio</h2>
+        </div>
+        <p>
+          El diferencial de AMMO está en la confianza, la coordinación y la calidad del trabajo. El contenido
+          del sitio va a mostrar eso con ejemplos concretos.
+        </p>
+      </div>
+
+      <div class="columns-2">
+        <div>
+          <h3 style="font-size:1rem;margin-bottom:6px;">Más que un framing crew</h3>
+          <p class="text-muted">
+            El sitio destacará que AMMO nace de dos amigos con una visión compartida: construir con integridad,
+            intención y oficio. Cada sección refuerza tres pilares:
+          </p>
+          <ul class="check-list" style="margin-top:6px;">
+            <li><strong>Confianza</strong>: decisiones técnicas claras, comunicación transparente.</li>
+            <li><strong>Colaboración</strong>: trabajo conjunto con constructores, contratistas y propietarios.</li>
+            <li><strong>Calidad</strong>: desde la estructura invisible hasta el último ajuste de puertas y ventanas.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="font-size:1rem;margin-bottom:6px;">Proyectos que dan credibilidad</h3>
+          <p class="text-muted">
+            La sección de proyectos (Whitehorn, Mahogany Gardens, West Hawk y otros) mostrará:
+          </p>
+          <ul class="check-list" style="margin-top:6px;">
+            <li>Tipo de obra, tamaño y ubicación.</li>
+            <li>Alcance de AMMO en cada proyecto (back framing, accesibilidad, coordinación, etc.).</li>
+            <li>Desafíos técnicos y soluciones que aportaron valor real al cliente.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO -->
+    <section id="seo">
+      <div class="section-header">
+        <div>
+          <div class="tag">SEO específico para Calgary</div>
+          <h2>Estrategia SEO on-page & local</h2>
+        </div>
+        <p>
+          El sitio será diseñado desde el inicio para ayudar a AMMO a aparecer en búsquedas como
+          “framing contractor Calgary”, “back framing Calgary” o “deck builders Calgary”.
+        </p>
+      </div>
+
+      <div class="two-cols">
+        <div>
+          <h3 style="font-size:0.98rem;margin-bottom:6px;">SEO On-Page</h3>
+          <p class="text-muted">
+            Cada página tendrá títulos, metadescripciones, encabezados y textos pensados para buscadores y personas:
+          </p>
+          <ul class="check-list" style="margin-top:6px;">
+            <li>Investigación inicial de palabras clave relacionadas con framing y construcción en Calgary.</li>
+            <li>Uso de términos semánticos y preguntas frecuentes reales de los clientes.</li>
+            <li>URLs amigables, estructura limpia y contenido fácil de escanear.</li>
+          </ul>
+
+          <h3 style="font-size:0.98rem;margin:14px 0 6px;">SEO Local</h3>
+          <ul class="check-list">
+            <li>Enfoque en barrios y áreas clave: Mahogany, Whitehorn, Cochrane y otros acordados.</li>
+            <li>Implementación de <em>schema markup</em> local (datos estructurados).</li>
+            <li>Preparación del sitio para integrarse con Google Business Profile.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="font-size:0.98rem;margin-bottom:6px;">Velocidad y experiencia de usuario</h3>
+          <p class="text-muted">
+            La experiencia del usuario impacta directamente en SEO y en la tasa de conversión:
+          </p>
+          <ul class="check-list" style="margin-top:6px;">
+            <li>Sitio ligero, pensado primero para móviles (mobile-first).</li>
+            <li>Imágenes optimizadas sin perder calidad visual.</li>
+            <li>Navegación clara para que sea fácil pedir presupuesto o contacto.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FASES -->
+    <section id="fases">
+      <div class="section-header">
+        <div>
+          <div class="tag">Plan de ejecución</div>
+          <h2>Fases del proyecto y plazos estimados</h2>
+        </div>
+        <p>
+          La lógica es la misma que en obra: fases claras, entregables definidos y comunicación transparente
+          en cada etapa.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-title">Fase 1 – Diagnóstico y planificación (3–5 días)</div>
+          <p class="timeline-text">
+            Revisión del sitio actual, definición de estructura de páginas y prioridades.
+            Aprobación del mapa del sitio antes de avanzar al diseño.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-title">Fase 2 – Diseño y contenido (7–10 días)</div>
+          <p class="timeline-text">
+            Propuesta visual de la Home y una página de servicio. Redacción de textos principales en inglés,
+            revisión conjunta y ajustes hasta aprobación del layout base.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-title">Fase 3 – Desarrollo y SEO on-page (10–15 días)</div>
+          <p class="timeline-text">
+            Construcción de todas las páginas, implementación de formularios, proyectos, reseñas y metatags.
+            Alineación de URLs, headings y datos estructurados.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-title">Fase 4 – Pruebas y lanzamiento (3–5 días)</div>
+          <p class="timeline-text">
+            Pruebas en diferentes dispositivos, verificación de envíos de formularios y enlaces internos.
+            Publicación en el dominio principal y envío de sitemap a Google.
+          </p>
+        </div>
+      </div>
+
+      <p class="text-muted" style="margin-top:10px;">
+        <strong>Plazo total estimado:</strong> entre 25 y 35 días corridos, dependiendo de la velocidad de aprobación
+        de contenidos y del envío de fotos, logos y descripciones de proyectos.
+      </p>
+    </section>
+
+    <!-- PRÓXIMOS PASOS -->
+    <section id="pasos">
+      <div class="section-header">
+        <div>
+          <div class="tag">Cierre & siguientes pasos</div>
+          <h2>Cómo avanzamos desde aquí</h2>
+        </div>
+        <p>
+          La propuesta es flexible: podemos ajustar estructura, plazos y detalles de inversión según las
+          prioridades de AMMO para este año.
+        </p>
+      </div>
+
+      <div class="columns-2">
+        <div>
+          <h3 style="font-size:0.98rem;margin-bottom:6px;">1. Confirmar el alcance</h3>
+          <p class="text-muted">
+            Definimos juntos:
+          </p>
+          <ul class="check-list" style="margin-top:6px;">
+            <li>Qué servicios son prioridad para destacar en las primeras páginas.</li>
+            <li>Qué barrios y áreas de Calgary son más estratégicos.</li>
+            <li>Qué proyectos y testimonios se van a mostrar en la primera versión.</li>
+          </ul>
+
+          <h3 style="font-size:0.98rem;margin:14px 0 6px;">2. Enviar insumos clave</h3>
+          <ul class="check-list">
+            <li>Logo en buena resolución (PNG / SVG si está disponible).</li>
+            <li>Fotos de obras y equipos en terreno.</li>
+            <li>Reseñas / testimonios de project managers o supervisores.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="font-size:0.98rem;margin-bottom:6px;">3. Inicio de la Fase 1</h3>
+          <p class="text-muted">
+            Con el alcance aprobado, se agenda la Fase 1 de planificación. A partir de ahí se respetan las fechas
+            acordadas y se comparte el avance en cada etapa, hasta la publicación del nuevo sitio.
+          </p>
+
+          <div class="note-box" style="margin-top:10px;">
+            <strong>En resumen:</strong><br>
+            Un sitio web nuevo, diseñado para el mercado de Calgary, que muestre lo que AMMO ya hace muy bien en obra
+            y lo convierta en más llamadas, más correos y más proyectos ganados.
+          </div>
+        </div>
+      </div>
+    </section>
+	<img src="mind-map.png">
+    <!-- PRECIOS -->
+    <section id="precios">
+      <div class="section-header">
+        <div>
+          <div class="tag">Inversión propuesta</div>
+          <h2>Desarrollo del sitio y mantenimiento opcional</h2>
+        </div>
+        <p>
+          Propuesta con valor especial de portafolio para AMMO, pensando en construir un caso de éxito fuerte en Calgary.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-badge">Pago único · Sitio completo</div>
+          <div class="pricing-price">650 CAD</div>
+          <div class="pricing-note">
+            Condición preferencial. Proyectos de este tipo suelen estar en el rango de 2,500 – 3,000 CAD.
+          </div>
+          <ul class="pricing-list">
+            <li>Diseño y desarrollo completo del nuevo sitio multi-página.</li>
+            <li>Implementación de toda la estructura SEO on-page.</li>
+            <li>Configuración inicial de formularios de contacto y analítica.</li>
+            <li>Ajustes menores posteriores al lanzamiento (primeros 30 días).</li>
+          </ul>
+        </div>
+
+        <div class="pricing-card">
+          <div class="pricing-badge">Opción · Mantenimiento mensual</div>
+          <div class="pricing-price">100 CAD / mes</div>
+          <div class="pricing-note">
+            Para mantener el sitio vivo, actualizado y alineado con el mercado.
+          </div>
+          <ul class="pricing-list">
+            <li>Hosting seguro y monitoreado.</li>
+            <li>Actualizaciones de contenido: textos, fotos, nuevos proyectos.</li>
+            <li>Ajustes continuos de SEO local y mejoras técnicas.</li>
+            <li>Soporte básico, sin contrato de permanencia obligatorio.</li>
+          </ul>
+          <div class="pill-muted">
+            Se puede cancelar en cualquier momento con aviso previo. La idea es acompañar el crecimiento
+            de AMMO, no atarla con cláusulas rígidas.
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    Propuesta de desarrollo web & SEO local para <span>AMMO Construction Ltd</span> · Calgary, Alberta
+  </footer>
+</div>
+
+<button id="btnTop" aria-label="Volver arriba">↑</button>
+
+<script>
+  const btnTop = document.getElementById('btnTop');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 260) {
+      btnTop.classList.add('visible');
+    } else {
+      btnTop.classList.remove('visible');
+    }
+  });
+
+  btnTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>
