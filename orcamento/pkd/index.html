@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ===================== -->
+<!-- SEO BÁSICO -->
+<!-- ===================== -->
+<title>PKD Treinamentos | Cursos Online, Workshops e Formação Profissional</title>
+
+<meta name="description" content="Plataforma da PKD Treinamentos para venda de cursos online, workshops e treinamentos práticos. Compra direta no site com acesso imediato ou área do aluno.">
+
+<link rel="canonical" href="https://e-web.online/" />
+
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+
+<!-- ===================== -->
+<!-- FAVICON (PNG) -->
+<!-- ===================== -->
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+<meta name="theme-color" content="#111827">
+
+<!-- ===================== -->
+<!-- OPEN GRAPH (WhatsApp / Facebook / LinkedIn) -->
+<!-- ===================== -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PKD Treinamentos">
+<meta property="og:title" content="PKD Treinamentos | Cursos Online e Formação Profissional">
+<meta property="og:description" content="Cursos online e treinamentos práticos da PKD. Compre direto no site e tenha acesso imediato ou via área do aluno.">
+<meta property="og:url" content="https://e-web.online/">
+<meta property="og:image" content="background.png">
+<meta property="og:image:secure_url" content="background.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pt_BR">
+
+<!-- ===================== -->
+<!-- TWITTER CARD -->
+<!-- ===================== -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PKD Treinamentos | Cursos Online">
+<meta name="twitter:description" content="Venda de cursos online, workshops e treinamentos com acesso direto ou área do aluno.">
+<meta name="twitter:image" content="background.png">
+<meta name="twitter:site" content="@pkdtreinamentos">
+
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+    :root{
+      --primary:#f59e0b;      /* amber-500 */
+      --primary-dark:#d97706; /* amber-600 */
+      --dark:#111827;         /* gray-900 */
+    }
+
+    body{
+      font-family:'Open Sans',sans-serif;
+      color:#333;
+      line-height:1.6;
+      background-color:#f9fafb;
+    }
+
+    h1,h2,h3,h4{ font-family:'Montserrat',sans-serif; font-weight:800; }
+
+    .section-title{
+      position:relative;
+      padding-bottom:15px;
+      margin-bottom:30px;
+    }
+    .section-title:after{
+      content:"";
+      position:absolute;
+      bottom:0; left:0;
+      width:80px; height:4px;
+      background:var(--primary);
+      border-radius:2px;
+    }
+
+    .card-hover{
+      transition:all .4s cubic-bezier(0.175,0.885,0.32,1.275);
+    }
+    .card-hover:hover{
+      transform:translateY(-8px);
+      box-shadow:0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04);
+    }
+
+    .hero{
+      background:
+        linear-gradient(rgba(17,24,39,.85), rgba(17,24,39,.95)),
+        url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1920&q=80');
+      background-size:cover;
+      background-position:center;
+      background-attachment:fixed;
+      color:white;
+    }
+
+    .glass-effect{
+      background:rgba(255,255,255,.95);
+      backdrop-filter:blur(10px);
+      border:1px solid rgba(255,255,255,.2);
+    }
+
+    .accordion-content{
+      max-height:0;
+      overflow:hidden;
+      transition:max-height .4s ease-out;
+    }
+
+    @keyframes slideUp{
+      from{ opacity:0; transform:translateY(20px); }
+      to{ opacity:1; transform:translateY(0); }
+    }
+
+    .fade-in{ opacity:0; transform:translateY(30px); transition:all .8s ease; }
+    .fade-in.show{ opacity:1; transform:translateY(0); }
+
+    .gradient-text{
+      background:linear-gradient(to right,#f59e0b,#fbbf24);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .tag{
+      display:inline-flex; align-items:center; gap:8px;
+      background:#111827;
+      color:#fff;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:999px;
+      padding:6px 12px;
+      font-family:'Montserrat',sans-serif;
+      font-weight:800;
+      font-size:.75rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .tech-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:#0f172a;
+      color:#fff;
+      border-radius:999px;
+      padding:6px 12px;
+      font-weight:900;
+      font-size:.75rem;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+    }
+  </style>
+
+  <style>
+    :root{
+      --inf-bg:#ecfeff;
+      --inf-card:#ffffff;
+      --inf-text:#0f172a;
+      --inf-muted:#64748b;
+      --inf-line:#cbd5e1;
+
+      --c1:#06b6d4;
+      --c2:#f97316;
+      --c3:#ef4444;
+      --c4:#a855f7;
+      --c5:#f59e0b;
+      --c6:#22c55e;
+    }
+
+    .inf-wrap{
+      background:linear-gradient(180deg,var(--inf-bg),#ffffff);
+      border:1px solid #e2e8f0;
+      border-radius:24px;
+      padding:26px;
+      box-shadow:0 18px 40px rgba(2,6,23,.08);
+    }
+    .inf-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:18px;
+    }
+    .inf-title{
+      font-family:'Montserrat',sans-serif;
+      font-weight:900;
+      letter-spacing:.06em;
+      font-size:1.3rem;
+      color:var(--inf-text);
+    }
+    .inf-sub{ color:var(--inf-muted); font-size:.95rem; }
+    .inf-grid{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:14px;
+    }
+    .inf-card{
+      background:var(--inf-card);
+      border:1px solid #e2e8f0;
+      border-radius:18px;
+      padding:14px;
+      box-shadow:0 10px 22px rgba(2,6,23,.06);
+      overflow:hidden;
+    }
+    .inf-card h4{
+      font-family:'Montserrat',sans-serif;
+      font-weight:800;
+      font-size:1rem;
+      color:var(--inf-text);
+      margin-bottom:8px;
+    }
+    .inf-note{ color:var(--inf-muted); font-size:.85rem; margin-top:8px; }
+
+    .span-12{ grid-column:span 12; }
+    .span-6{ grid-column:span 6; }
+    .span-4{ grid-column:span 4; }
+    .span-8{ grid-column:span 8; }
+
+    @media (max-width:1024px){
+      .span-8,.span-6,.span-4{ grid-column:span 12; }
+    }
+
+    .inf-svg{ width:100%; height:auto; display:block; }
+
+    .legend{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 14px;
+      margin-top:10px;
+    }
+    .leg-item{ display:flex; align-items:center; gap:8px; color:var(--inf-muted); font-size:.85rem; }
+    .dot{ width:10px; height:10px; border-radius:999px; }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:#f1f5f9;
+      border:1px solid #e2e8f0;
+      border-radius:999px;
+      padding:6px 10px;
+      font-weight:900;
+      font-size:.78rem;
+      color:#0f172a;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="bg-white/95 backdrop-blur shadow-lg py-4 sticky top-0 z-50 transition-all duration-300">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <div class="text-2xl font-extrabold tracking-tight">
+        <span class="text-gray-800">e-Web</span> - <span class="text-amber-500">PKD</span>
+        <span class="text-xs font-normal text-gray-500 block -mt-1 tracking-widest uppercase">Proposta</span>
+      </div>
+
+      <button class="md:hidden text-gray-800 hover:text-amber-500 transition" aria-label="Abrir menu">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+
+      <nav class="hidden md:block">
+        <ul class="flex space-x-8">
+          <li><a href="#projeto" class="hover:text-amber-500 font-semibold transition">O Projeto</a></li>
+          <li><a href="#diferenciais" class="hover:text-amber-500 font-semibold transition">Diferenciais</a></li>
+          <li><a href="#investimento" class="hover:text-amber-500 font-semibold transition">Investimento</a></li>
+          <li><a href="#plataforma" class="hover:text-amber-500 font-semibold transition">Plataforma</a></li>
+          <li><a href="#entrega" class="hover:text-amber-500 font-semibold transition">Entrega</a></li>
+          <li><a href="#contato" class="bg-amber-500 text-white px-5 py-2 rounded-full hover:bg-amber-600 transition shadow-md">Contratar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero min-h-screen flex items-center relative">
+    <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#f9fafb] to-transparent"></div>
+
+    <div class="container mx-auto px-4 text-center z-10 py-20">
+      <div class="inline-block bg-amber-500 text-white px-4 py-1 rounded-full text-sm font-bold mb-6 tracking-wide animate-pulse">
+        PROJETO EXCLUSIVO
+      </div>
+
+      <!-- LOGO -->
+      <div class="flex justify-center mb-6">
+        <img
+          src="logo.png"
+          alt="Logo PKD TREINAMENTOS"
+          class="max-h-28 md:max-h-36 w-auto object-contain drop-shadow-lg"
+          loading="eager"
+        >
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+        PKD <span class="gradient-text">TREINAMENTOS</span>
+      </h1>
+
+      <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto text-gray-200 font-light">
+        Site institucional + vitrine de cursos, workshops e serviços — com opção de <strong>venda de cursos online</strong>
+        diretamente pelo site (checkout + liberação de acesso).
+      </p>
+
+      <div class="flex flex-col md:flex-row justify-center gap-4">
+        <a href="#investimento" class="bg-amber-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-amber-600 transition transform hover:-translate-y-1 shadow-lg hover:shadow-amber-500/50">
+          Ver Opções e Valores
+        </a>
+        <a href="#projeto" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-gray-900 transition">
+          Escopo Técnico
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <main class="container mx-auto px-4 -mt-20 z-20 relative">
+
+    <!-- CARDS TOPO -->
+    <div class="grid md:grid-cols-3 gap-6 mb-20">
+      <div class="bg-white p-8 rounded-xl shadow-xl card-hover border-b-4 border-amber-500">
+        <i class="fas fa-graduation-cap text-4xl text-amber-500 mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Venda de Curso Online</h3>
+        <p class="text-gray-600">Páginas de cursos com CTA forte e foco em conversão.<br><strong>Objetivo:</strong> compra rápida.</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-xl shadow-xl card-hover border-b-4 border-amber-500">
+        <i class="fas fa-credit-card text-4xl text-amber-500 mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Checkout no Site</h3>
+        <p class="text-gray-600">Pagamento integrado (ex.: Mercado Pago).<br>Automação básica pós-pagamento.</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-xl shadow-xl card-hover border-b-4 border-amber-500">
+        <i class="fas fa-user-lock text-4xl text-amber-500 mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Área do Aluno</h3>
+        <p class="text-gray-600">Login + “Meus Cursos” + liberação automática.<br>Mais controle, menos pirataria.</p>
+      </div>
+    </div>
+
+    <!-- PROJETO -->
+    <section id="projeto" class="mb-24 py-10 fade-in">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+          <h2 class="section-title text-4xl font-bold text-gray-800">Identidade & <span class="text-amber-500">Objetivo</span></h2>
+
+          <p class="text-lg text-gray-600 mb-6 text-justify">
+            O objetivo é transformar a <strong>PKD TREINAMENTOS</strong> em uma operação simples e eficiente:
+            <strong>descoberta</strong> → <strong>confiança</strong> → <strong>compra</strong> → <strong>acesso</strong>.
+            Sem depender de WhatsApp para cada venda e sem “link jogado” que circula fácil.
+          </p>
+
+          <ul class="space-y-4">
+            <li class="flex items-center p-3 bg-white rounded-lg shadow-sm">
+              <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-600 mr-4">
+                <i class="fas fa-landmark"></i>
+              </div>
+              <span class="font-medium">Página “Quem é a PKD” (história, origem, provocação e propósito)</span>
+            </li>
+
+            <li class="flex items-center p-3 bg-white rounded-lg shadow-sm">
+              <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-600 mr-4">
+                <i class="fas fa-list"></i>
+              </div>
+              <span class="font-medium">Vitrine completa: <strong>Cursos</strong>, <strong>Workshops</strong> e <strong>Serviços</strong> (ex.: Cliente Oculto)</span>
+            </li>
+
+            <li class="flex items-center p-3 bg-white rounded-lg shadow-sm">
+              <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-600 mr-4">
+                <i class="fas fa-comments"></i>
+              </div>
+              <span class="font-medium">CTA inteligente: WhatsApp para fechar (opção 1) ou compra no site (opções 2/3)</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="md:w-1/2 relative">
+          <div class="absolute -inset-4 bg-gradient-to-r from-amber-400 to-orange-600 rounded-2xl blur-lg opacity-30"></div>
+
+          <div class="relative bg-gray-900 rounded-2xl p-8 text-white overflow-hidden">
+            <div class="absolute top-0 right-0 p-4 opacity-10">
+              <i class="fas fa-bolt text-9xl"></i>
+            </div>
+
+            <h3 class="text-2xl font-bold mb-6">Estrutura do Site</h3>
+
+            <div class="grid grid-cols-2 gap-6">
+              <div class="border border-gray-700 p-4 rounded-lg hover:border-amber-500 transition">
+                <i class="fas fa-book-open text-amber-400 text-3xl mb-2"></i>
+                <h4 class="font-bold">Cursos (EAD)</h4>
+                <p class="text-xs text-gray-400">Páginas por curso + compra/acesso</p>
+              </div>
+
+              <div class="border border-gray-700 p-4 rounded-lg hover:border-amber-500 transition">
+                <i class="fas fa-chalkboard-user text-amber-400 text-3xl mb-2"></i>
+                <h4 class="font-bold">Workshops</h4>
+                <p class="text-xs text-gray-400">Vitrine + CTA de fechamento</p>
+              </div>
+
+              <div class="border border-gray-700 p-4 rounded-lg hover:border-amber-500 transition">
+                <i class="fas fa-briefcase text-amber-400 text-3xl mb-2"></i>
+                <h4 class="font-bold">Serviços</h4>
+                <p class="text-xs text-gray-400">Ex.: Cliente Oculto com diagnóstico</p>
+              </div>
+
+              <div class="border border-gray-700 p-4 rounded-lg hover:border-amber-500 transition">
+                <i class="fas fa-pen-nib text-amber-400 text-3xl mb-2"></i>
+                <h4 class="font-bold">Artigos</h4>
+                <p class="text-xs text-gray-400">Conteúdo semanal (opcional)</p>
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <span class="tag"><i class="fas fa-shield"></i> Mais controle, menos vazamento</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section id="diferenciais" class="mb-24 fade-in">
+      <h2 class="section-title text-3xl font-bold text-center mx-auto w-max">Por que vai funcionar?</h2>
+<div class="max-w-3xl mx-auto mt-10 space-y-4">
+
+  <!-- 1 -->
+  <div class="accordion-item bg-white border border-gray-100 rounded-xl shadow-sm overflow-hidden">
+    <div class="accordion-header p-5 cursor-pointer flex justify-between items-center hover:bg-gray-50 transition">
+      <span class="font-bold text-lg text-gray-800">
+        <i class="fas fa-wand-magic-sparkles text-amber-500 mr-3"></i>
+        Design premium + navegação simples
+      </span>
+      <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+    </div>
+    <div class="accordion-content">
+      <div class="p-5 border-t border-gray-100 bg-gray-50">
+        <p>
+          Visual profissional, micro-interações e páginas objetivas: o visitante entende o curso,
+          vê valor e encontra o CTA sem esforço. Menos distração, mais decisão.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="accordion-item bg-white border border-gray-100 rounded-xl shadow-sm overflow-hidden">
+    <div class="accordion-header p-5 cursor-pointer flex justify-between items-center hover:bg-gray-50 transition">
+      <span class="font-bold text-lg text-gray-800">
+        <i class="fas fa-lock text-amber-500 mr-3"></i>
+        Menos pirataria que “link não listado”
+      </span>
+      <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+    </div>
+    <div class="accordion-content">
+      <div class="p-5 border-t border-gray-100 bg-gray-50">
+        <p>
+          A área do aluno (Opção 3) cria acesso individual por login.
+          Não é segurança absoluta, mas elimina o cenário atual de link repassado livremente.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="accordion-item bg-white border border-gray-100 rounded-xl shadow-sm overflow-hidden">
+    <div class="accordion-header p-5 cursor-pointer flex justify-between items-center hover:bg-gray-50 transition">
+      <span class="font-bold text-lg text-gray-800">
+        <i class="fas fa-chart-line text-amber-500 mr-3"></i>
+        Estrutura pronta para vender (SEO + conversão)
+      </span>
+      <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+    </div>
+    <div class="accordion-content">
+      <div class="p-5 border-t border-gray-100 bg-gray-50">
+        <p>
+          Arquitetura pensada para tráfego orgânico e anúncios.
+          Páginas rápidas, CTA bem posicionados e fluxo claro até o checkout ou WhatsApp.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="accordion-item bg-white border border-gray-100 rounded-xl shadow-sm overflow-hidden">
+    <div class="accordion-header p-5 cursor-pointer flex justify-between items-center hover:bg-gray-50 transition">
+      <span class="font-bold text-lg text-gray-800">
+        <i class="fas fa-rocket text-amber-500 mr-3"></i>
+        Menos dependência de WhatsApp
+      </span>
+      <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+    </div>
+    <div class="accordion-content">
+      <div class="p-5 border-t border-gray-100 bg-gray-50">
+        <p>
+          Com checkout no site, parte das vendas acontece sem conversa manual.
+          O WhatsApp fica reservado para dúvidas reais, não para cada pedido.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="accordion-item bg-white border border-gray-100 rounded-xl shadow-sm overflow-hidden">
+    <div class="accordion-header p-5 cursor-pointer flex justify-between items-center hover:bg-gray-50 transition">
+      <span class="font-bold text-lg text-gray-800">
+        <i class="fas fa-layer-group text-amber-500 mr-3"></i>
+        Cresce sem refazer tudo
+      </span>
+      <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+    </div>
+    <div class="accordion-content">
+      <div class="p-5 border-t border-gray-100 bg-gray-50">
+        <p>
+          A estrutura permite começar simples (Opção 1) e evoluir para checkout
+          e área do aluno depois, sem reconstruir o site do zero.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="accordion-item bg-white border border-gray-100 rounded-xl shadow-sm overflow-hidden">
+    <div class="accordion-header p-5 cursor-pointer flex justify-between items-center hover:bg-gray-50 transition">
+      <span class="font-bold text-lg text-gray-800">
+        <i class="fas fa-user-check text-amber-500 mr-3"></i>
+        Mais confiança antes da compra
+      </span>
+      <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+    </div>
+    <div class="accordion-content">
+      <div class="p-5 border-t border-gray-100 bg-gray-50">
+        <p>
+          Conteúdo institucional, serviços, depoimentos e explicação clara do método
+          reduzem objeções e aumentam a taxa de conversão.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="accordion-item bg-white border border-gray-100 rounded-xl shadow-sm overflow-hidden">
+    <div class="accordion-header p-5 cursor-pointer flex justify-between items-center hover:bg-gray-50 transition">
+      <span class="font-bold text-lg text-gray-800">
+        <i class="fas fa-screwdriver-wrench text-amber-500 mr-3"></i>
+        Simples de manter no dia a dia
+      </span>
+      <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+    </div>
+    <div class="accordion-content">
+      <div class="p-5 border-t border-gray-100 bg-gray-50">
+        <p>
+          Atualização de cursos, preços e materiais sem burocracia.
+          Nada de painel complexo ou dependência técnica para tarefas simples.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+      
+    </section>
+
+    <!-- INVESTIMENTO (3 OPÇÕES) -->
+    <section id="investimento" class="mb-24 fade-in">
+      <div class="text-center mb-16">
+        <h2 class="section-title text-4xl font-bold inline-block">Investimento (3 Opções)</h2>
+        <p class="text-gray-600 mt-4 max-w-3xl mx-auto">
+          Você escolhe o nível de automação agora — e pode evoluir depois.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- OPÇÃO 1 -->
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 relative group hover:border-amber-500 transition duration-300">
+          <div class="bg-gray-900 p-8 text-center text-white relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-20 h-20 bg-amber-500 rounded-bl-full opacity-20 group-hover:opacity-40 transition"></div>
+            <h3 class="text-2xl font-bold mb-2">Opção 1: Site Corporativo</h3>
+            <p class="text-gray-400 text-sm uppercase tracking-wider">Institucional + Vitrine + WhatsApp</p>
+
+            <div class="mt-4 flex justify-center items-baseline">
+              <span class="text-xl font-medium text-gray-400 mr-1">R$</span>
+              <span class="text-5xl font-extrabold text-amber-400">1.500</span>
+              <span class="text-gray-400 ml-1">,00</span>
+            </div>
+            <p class="text-xs text-gray-500 mt-2">Prazo: <strong>15 dias</strong></p>
+          </div>
+
+          <div class="p-8">
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-amber-500 mt-1 mr-3"></i>
+                <span class="text-gray-700"><strong>Site institucional premium</strong> (layout incrível + responsivo)</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-amber-500 mt-1 mr-3"></i>
+                <span class="text-gray-700">Seção “Quem é a PKD” (história, propósito, provocação)</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-amber-500 mt-1 mr-3"></i>
+                <span class="text-gray-700">Vitrine: <strong>Cursos</strong>, <strong>Workshops</strong> e <strong>Serviços</strong></span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-amber-500 mt-1 mr-3"></i>
+                <span class="text-gray-700">CTA para WhatsApp (fechamento com consultoras/parcerias)</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-amber-500 mt-1 mr-3"></i>
+                <span class="text-gray-700">Depoimentos + Galeria (fotos/vídeos de eventos)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- OPÇÃO 2 (DESTAQUE) -->
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-amber-500 relative transform lg:-translate-y-4 z-10">
+          <div class="absolute top-0 center w-full bg-amber-500 text-white text-center text-xs font-bold py-1 uppercase tracking-widest">
+            MAIS VENDAS / MENOS WHATSAPP
+          </div>
+
+          <div class="bg-gradient-to-br from-amber-500 to-orange-600 p-8 text-center text-white mt-4">
+            <h3 class="text-2xl font-bold mb-2">Opção 2: Checkout no Site</h3>
+            <p class="text-white/90 text-sm uppercase tracking-wider">Pagamento + entrega automatizada básica</p>
+
+            <div class="mt-4 flex justify-center items-baseline">
+              <span class="text-xl font-medium text-white/80 mr-1">R$</span>
+              <span class="text-5xl font-extrabold text-white">2.500</span>
+              <span class="text-white/80 ml-1">,00</span>
+            </div>
+            <p class="text-xs text-white/90 mt-2">Prazo: <strong>25 dias</strong></p>
+          </div>
+
+          <div class="p-8 bg-white">
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <i class="fas fa-rocket text-orange-600 mt-1 mr-3"></i>
+                <span class="text-gray-800 font-medium">Tudo da Opção 1</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-credit-card text-orange-600 mt-1 mr-3"></i>
+                <span class="text-gray-800 font-medium">Integração com <strong>Mercado Pago</strong> (ou outro gateway)</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-envelope text-orange-600 mt-1 mr-3"></i>
+                <span class="text-gray-800 font-medium">Pós-pagamento: confirmação + instruções por e-mail</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-file-arrow-down text-orange-600 mt-1 mr-3"></i>
+                <span class="text-gray-800 font-medium">Entrega simples: link do curso + PDF para download</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-chart-simple text-orange-600 mt-1 mr-3"></i>
+                <span class="text-gray-800 font-medium">Relatório básico de pedidos (painel simples / exportável)</span>
+              </li>
+            </ul>
+
+            <div class="mt-8 bg-amber-50 border border-amber-200 p-5 rounded-xl">
+              <p class="text-amber-900 font-semibold">
+                <i class="fas fa-info-circle mr-2"></i>
+                Ideal para começar a vender no site <strong>sem montar plataforma completa</strong>.
+              </p>
+              <p class="text-amber-800 text-sm mt-2">
+                Observação: taxas do gateway (Mercado Pago) são do próprio serviço e não fazem parte do valor do projeto.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- OPÇÃO 3 -->
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100 relative group hover:border-amber-500 transition duration-300">
+          <div class="bg-gray-900 p-8 text-center text-white relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-20 h-20 bg-amber-500 rounded-bl-full opacity-20 group-hover:opacity-40 transition"></div>
+            <h3 class="text-2xl font-bold mb-2">Opção 3: Plataforma Completa</h3>
+            <p class="text-gray-400 text-sm uppercase tracking-wider">Área do aluno + acesso por login</p>
+
+            <div class="mt-4 flex justify-center items-baseline">
+              <span class="text-xl font-medium text-gray-400 mr-1">R$</span>
+              <span class="text-5xl font-extrabold text-amber-400">5.500</span>
+              <span class="text-gray-400 ml-1">,00</span>
+            </div>
+            <p class="text-xs text-gray-500 mt-2">Prazo: <strong>40 dias</strong></p>
+          </div>
+
+          <div class="p-8">
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-amber-500 mt-1 mr-3"></i>
+                <span class="text-gray-700"><strong>Tudo da Opção 2</strong></span>
+              </li>
+
+              <li class="flex items-start">
+                <i class="fas fa-user-lock text-amber-500 mt-1 mr-3"></i>
+                <span class="text-gray-700">Cadastro/Login + recuperação de senha</span>
+              </li>
+
+              <li class="flex items-start">
+                <i class="fas fa-layer-group text-amber-500 mt-1 mr-3"></i>
+                <span class="text-gray-700">Área “<strong>Meus Cursos</strong>” (lista dos cursos liberados/comprados)</span>
+              </li>
+
+              <li class="flex items-start">
+                <i class="fas fa-video text-amber-500 mt-1 mr-3"></i>
+                <span class="text-gray-700">Aulas via embed (YouTube) dentro do site + botão de PDF</span>
+              </li>
+
+              <li class="flex items-start">
+                <i class="fas fa-screwdriver-wrench text-amber-500 mt-1 mr-3"></i>
+                <span class="text-gray-700">Painel simples para cadastrar/editar cursos (título, descrição, preço, link, PDF)</span>
+              </li>
+            </ul>
+
+            <div class="mt-8 bg-gray-50 border border-gray-200 p-5 rounded-xl">
+              <p class="text-gray-900 font-bold">
+                <i class="fas fa-shield-halved mr-2 text-amber-600"></i>
+                Acesso por usuário = menos vazamento do que “link não listado”
+              </p>
+              <p class="text-gray-600 text-sm mt-2">
+                Não existe sistema 100% imune, mas aqui você sai do “link livre” e passa para controle por login e liberação.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 text-center bg-white p-6 rounded-lg max-w-4xl mx-auto border border-gray-200">
+        <p class="text-gray-700 font-medium">
+          <i class="fas fa-handshake mr-2 text-amber-600"></i>
+          Você pode começar pela Opção 1 (WhatsApp) e evoluir para 2/3 quando quiser — sem refazer o site do zero.
+        </p>
+      </div>
+    </section>
+
+    <!-- PLATAFORMA (EXPLICAÇÃO DIRETA) -->
+    <section id="plataforma" class="mb-24 py-10 fade-in">
+      <div class="text-center mb-14">
+        <h2 class="section-title text-4xl font-bold inline-block">Plataforma do Jeito Certo (sem “Netflix”)</h2>
+        <p class="text-gray-600 mt-4 max-w-3xl mx-auto">
+          Você pediu o mais importante: simples. Comprar → assistir → baixar PDF. Só isso.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl shadow-xl border border-gray-200 p-8 card-hover">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center">
+              <i class="fas fa-cart-shopping text-amber-600 text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800">Compra</h3>
+          </div>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex gap-3"><i class="fas fa-check text-green-500 mt-1"></i> Checkout Mercado Pago (recomendado)</li>
+            <li class="flex gap-3"><i class="fas fa-check text-green-500 mt-1"></i> Produto por curso (página individual)</li>
+            <li class="flex gap-3"><i class="fas fa-check text-green-500 mt-1"></i> Confirmação automática pós-pagamento</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-xl border border-gray-200 p-8 card-hover">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center">
+              <i class="fas fa-circle-play text-amber-600 text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800">Acesso</h3>
+          </div>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex gap-3"><i class="fas fa-check text-green-500 mt-1"></i> Opção 2: link entregue (mais simples)</li>
+            <li class="flex gap-3"><i class="fas fa-check text-green-500 mt-1"></i> Opção 3: área do aluno por login</li>
+            <li class="flex gap-3"><i class="fas fa-check text-green-500 mt-1"></i> Página do curso com embed + materiais</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-xl border border-gray-200 p-8 card-hover">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center">
+              <i class="fas fa-file-arrow-down text-amber-600 text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800">PDF / Materiais</h3>
+          </div>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex gap-3"><i class="fas fa-check text-green-500 mt-1"></i> Download direto dentro do curso</li>
+            <li class="flex gap-3"><i class="fas fa-check text-green-500 mt-1"></i> Organização por módulo (se quiser)</li>
+            <li class="flex gap-3"><i class="fas fa-check text-green-500 mt-1"></i> Atualização fácil do material</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-10 bg-white rounded-2xl shadow-xl border border-gray-200 p-8">
+        <div class="flex items-center justify-between flex-wrap gap-3 mb-6">
+          <h3 class="text-2xl font-extrabold text-gray-900">Fluxo simples: compra → acesso → conclusão</h3>
+          <span class="tech-badge"><i class="fas fa-bolt"></i> UX de Conversão</span>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-4">
+          <div class="rounded-xl border border-gray-200 p-5">
+            <p class="text-xs font-bold text-gray-500 uppercase tracking-widest">Etapa 1</p>
+            <p class="text-lg font-bold mt-1">Página do Curso</p>
+            <p class="text-sm text-gray-600 mt-2">Benefícios, para quem é, prova social</p>
+          </div>
+          <div class="rounded-xl border border-gray-200 p-5">
+            <p class="text-xs font-bold text-gray-500 uppercase tracking-widest">Etapa 2</p>
+            <p class="text-lg font-bold mt-1">Checkout</p>
+            <p class="text-sm text-gray-600 mt-2">Mercado Pago + confirmação automática</p>
+          </div>
+          <div class="rounded-xl border border-gray-200 p-5">
+            <p class="text-xs font-bold text-gray-500 uppercase tracking-widest">Etapa 3</p>
+            <p class="text-lg font-bold mt-1">Liberação</p>
+            <p class="text-sm text-gray-600 mt-2">E-mail (Op.2) ou Área do Aluno (Op.3)</p>
+          </div>
+          <div class="rounded-xl border border-gray-200 p-5 bg-gray-900 text-white">
+            <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Etapa 4</p>
+            <p class="text-lg font-extrabold mt-1 text-amber-500">Conclusão</p>
+            <p class="text-sm text-gray-200 mt-2">Assistiu + baixou PDF + aplicou</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENTREGA (CRONOGRAMA POR OPÇÃO) -->
+    <section id="entrega" class="mb-24 fade-in">
+      <div class="text-center mb-14">
+        <h2 class="section-title text-4xl font-bold inline-block">Entrega & Cronograma</h2>
+        <p class="text-gray-600 mt-4 max-w-3xl mx-auto">
+          Prazos fechados por opção. Sempre com validação em marcos.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-xl border border-gray-200 p-8">
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="p-5 rounded-xl border border-gray-200">
+            <p class="text-xs font-bold text-gray-500 uppercase tracking-widest">Opção 1</p>
+            <p class="text-lg font-extrabold mt-1">15 dias</p>
+            <p class="text-sm text-gray-600 mt-2">
+              Layout + páginas principais + vitrine + CTA WhatsApp + depoimentos + galeria.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-xl border border-gray-200">
+            <p class="text-xs font-bold text-gray-500 uppercase tracking-widest">Opção 2</p>
+            <p class="text-lg font-extrabold mt-1">25 dias</p>
+            <p class="text-sm text-gray-600 mt-2">
+              Tudo da Opção 1 + checkout (Mercado Pago) + pós-pagamento + entrega automatizada básica.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-xl border border-gray-200 bg-amber-50">
+            <p class="text-xs font-bold text-amber-700 uppercase tracking-widest">Opção 3</p>
+            <p class="text-lg font-extrabold mt-1 text-gray-900">40 dias</p>
+            <p class="text-sm text-gray-700 mt-2">
+              Tudo da Opção 2 + área do aluno + “Meus Cursos” + painel simples de cursos.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-8 border-t pt-6">
+          <p class="text-gray-700">
+            <i class="fas fa-circle-check text-green-600 mr-2"></i>
+            O prazo começa após envio de: logo, textos base, lista de cursos e materiais (PDF/links).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFOGRÁFICOS (mantidos) -->
+    <section class="mb-24 fade-in">
+      <div class="inf-wrap">
+        <div class="inf-head">
+          <div>
+            <div class="inf-title">INFOGRÁFICOS DE PERFORMANCE</div>
+            <div class="inf-sub">Visual “premium” com SVG inline — perfeito pra site estático (só .html).</div>
+          </div>
+          <span class="pill"><i class="fas fa-chart-pie"></i> Data Visual</span>
+        </div>
+
+        <div class="inf-grid">
+          <article class="inf-card span-6">
+            <h4>Distribuição de Origem (Tráfego)</h4>
+
+            <svg class="inf-svg" viewBox="0 0 520 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Donut chart">
+              <circle cx="150" cy="130" r="78" fill="none" stroke="#e2e8f0" stroke-width="26"/>
+              <circle cx="150" cy="130" r="78" fill="none" stroke="var(--c1)" stroke-width="26" stroke-dasharray="180 490" stroke-dashoffset="0"/>
+              <circle cx="150" cy="130" r="78" fill="none" stroke="var(--c2)" stroke-width="26" stroke-dasharray="130 490" stroke-dashoffset="-180"/>
+              <circle cx="150" cy="130" r="78" fill="none" stroke="var(--c3)" stroke-width="26" stroke-dasharray="90 490" stroke-dashoffset="-310"/>
+              <circle cx="150" cy="130" r="78" fill="none" stroke="var(--c5)" stroke-width="26" stroke-dasharray="90 490" stroke-dashoffset="-400"/>
+
+              <circle cx="150" cy="130" r="48" fill="#ffffff" stroke="#e2e8f0"/>
+              <text x="150" y="122" text-anchor="middle" font-family="Montserrat" font-size="18" font-weight="900" fill="#0f172a">PKD</text>
+              <text x="150" y="145" text-anchor="middle" font-family="Open Sans" font-size="12" font-weight="700" fill="#64748b">Pesquisa + Social</text>
+
+              <line x1="235" y1="70" x2="310" y2="44" stroke="#94a3b8" stroke-width="2"/>
+              <rect x="312" y="26" rx="10" ry="10" width="190" height="44" fill="#ffffff" stroke="#e2e8f0"/>
+              <text x="324" y="53" font-family="Open Sans" font-size="12" font-weight="800" fill="#0f172a">Google/Busca: 37%</text>
+
+              <line x1="230" y1="130" x2="310" y2="130" stroke="#94a3b8" stroke-width="2"/>
+              <rect x="312" y="108" rx="10" ry="10" width="190" height="44" fill="#ffffff" stroke="#e2e8f0"/>
+              <text x="324" y="135" font-family="Open Sans" font-size="12" font-weight="800" fill="#0f172a">Direto: 27%</text>
+
+              <line x1="220" y1="190" x2="310" y2="210" stroke="#94a3b8" stroke-width="2"/>
+              <rect x="312" y="192" rx="10" ry="10" width="190" height="44" fill="#ffffff" stroke="#e2e8f0"/>
+              <text x="324" y="219" font-family="Open Sans" font-size="12" font-weight="800" fill="#0f172a">Social/Indicações: 18%</text>
+            </svg>
+
+            <div class="legend">
+              <div class="leg-item"><span class="dot" style="background:var(--c1)"></span> Google/Busca</div>
+              <div class="leg-item"><span class="dot" style="background:var(--c2)"></span> Direto</div>
+              <div class="leg-item"><span class="dot" style="background:var(--c3)"></span> Social</div>
+              <div class="leg-item"><span class="dot" style="background:var(--c5)"></span> Indicações</div>
+            </div>
+          </article>
+
+          <article class="inf-card span-6">
+            <h4>Metas de Crescimento (Mensal)</h4>
+
+            <svg class="inf-svg" viewBox="0 0 520 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart">
+              <g opacity=".7">
+                <line x1="60" y1="220" x2="500" y2="220" stroke="var(--inf-line)"/>
+                <line x1="60" y1="170" x2="500" y2="170" stroke="var(--inf-line)"/>
+                <line x1="60" y1="120" x2="500" y2="120" stroke="var(--inf-line)"/>
+                <line x1="60" y1="70"  x2="500" y2="70"  stroke="var(--inf-line)"/>
+              </g>
+
+              <rect x="95"  y="95" width="60" height="125" rx="10" fill="var(--c1)"/>
+              <rect x="195" y="70" width="60" height="150" rx="10" fill="var(--c3)"/>
+              <rect x="295" y="120" width="60" height="100" rx="10" fill="var(--c4)"/>
+              <rect x="395" y="55" width="60" height="165" rx="10" fill="var(--c5)"/>
+
+              <text x="125" y="85" text-anchor="middle" font-family="Montserrat" font-size="12" font-weight="900" fill="#0f172a">+22%</text>
+              <text x="225" y="60" text-anchor="middle" font-family="Montserrat" font-size="12" font-weight="900" fill="#0f172a">+35%</text>
+              <text x="325" y="110" text-anchor="middle" font-family="Montserrat" font-size="12" font-weight="900" fill="#0f172a">+18%</text>
+              <text x="425" y="45" text-anchor="middle" font-family="Montserrat" font-size="12" font-weight="900" fill="#0f172a">+41%</text>
+
+              <text x="125" y="245" text-anchor="middle" font-family="Open Sans" font-size="12" font-weight="700" fill="#64748b">Cliques</text>
+              <text x="225" y="245" text-anchor="middle" font-family="Open Sans" font-size="12" font-weight="700" fill="#64748b">Checkout</text>
+              <text x="325" y="245" text-anchor="middle" font-family="Open Sans" font-size="12" font-weight="700" fill="#64748b">Leads</text>
+              <text x="425" y="245" text-anchor="middle" font-family="Open Sans" font-size="12" font-weight="700" fill="#64748b">Vendas</text>
+            </svg>
+          </article>
+
+          <article class="inf-card span-12">
+            <h4>Pirâmide de Entrega (Base Técnica → Conversão)</h4>
+
+            <svg class="inf-svg" viewBox="0 0 980 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pyramid chart">
+              <g transform="translate(70,30)">
+                <polygon points="220,200 460,200 420,160 260,160" fill="var(--c1)"/>
+                <polygon points="260,160 420,160 390,120 290,120" fill="var(--c5)"/>
+                <polygon points="290,120 390,120 360,80 320,80" fill="var(--c2)"/>
+                <polygon points="320,80 360,80 340,40" fill="var(--c3)"/>
+
+                <g font-family="Open Sans" font-size="14" font-weight="800" fill="#0f172a">
+                  <text x="510" y="205">Base: Performance + Estrutura + SEO Técnico</text>
+                  <text x="510" y="165">UX: Página do curso + CTA + Prova social</text>
+                  <text x="510" y="125">Confiança: História PKD + Serviços + Depoimentos</text>
+                  <text x="510" y="85">Topo: Venda (Checkout) + Acesso (Aluno)</text>
+                </g>
+
+                <g stroke="#94a3b8" stroke-width="2">
+                  <line x1="460" y1="185" x2="500" y2="198"/>
+                  <line x1="420" y1="145" x2="500" y2="158"/>
+                  <line x1="390" y1="105" x2="500" y2="118"/>
+                  <line x1="340" y1="55"  x2="500" y2="78"/>
+                </g>
+              </g>
+            </svg>
+
+            <div class="inf-note">Isso “vende” o raciocínio: sem base técnica, não tem topo de conversão.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO / ACEITE -->
+    <section id="contato" class="mb-20 fade-in">
+      <div class="bg-gray-900 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+        <div class="md:w-5/12 p-10 md:p-12 text-white bg-gradient-to-br from-gray-900 to-gray-800 flex flex-col justify-between relative">
+          <div class="absolute top-0 right-0 p-4 opacity-10">
+            <i class="fas fa-graduation-cap text-8xl"></i>
+          </div>
+
+          <div>
+            <h2 class="text-3xl font-bold mb-6">Vamos colocar a PKD para vender no automático?</h2>
+            <p class="text-gray-400 mb-8">
+              Você escolhe a opção. Eu entrego o projeto com foco em conversão e um fluxo simples: vender → liberar → aplicar.
+            </p>
+
+            <div class="space-y-6">
+              <div class="flex items-center">
+                <div class="w-12 h-12 bg-amber-500/20 rounded-full flex items-center justify-center text-amber-500 mr-4">
+                  <i class="fab fa-whatsapp text-xl"></i>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-400">WhatsApp</p>
+                  <p class="font-bold text-lg">(41) 99767-0937</p>
+                </div>
+              </div>
+
+              <div class="flex items-center">
+                <div class="w-12 h-12 bg-amber-500/20 rounded-full flex items-center justify-center text-amber-500 mr-4">
+                  <i class="fas fa-envelope text-xl"></i>
+                </div>
+                <div>
+                  <p class="text-sm text-gray-400">Email</p>
+                  <p class="font-bold text-lg">felipe@Empresarialweb.com.br</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-12">
+            <p class="text-sm text-gray-500">e-Web Agency &copy; 2026</p>
+          </div>
+        </div>
+
+        <div class="md:w-7/12 p-10 md:p-12 bg-white flex flex-col justify-center">
+          <h3 class="text-3xl font-extrabold text-gray-900 mb-4">Aceite da Proposta</h3>
+
+          <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+            Ao clicar no botão abaixo, você confirma o interesse em iniciar o projeto conforme os termos apresentados.
+            O aceite será registrado via e-mail para formalização.
+          </p>
+
+          <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 mb-8">
+            <ul class="space-y-3 text-gray-700 text-sm">
+              <li class="flex items-start gap-3">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span>Opção 1: R$ 1.500 — prazo 15 dias (site + vitrine + WhatsApp)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span>Opção 2: R$ 2.500 — prazo 25 dias (checkout Mercado Pago + entrega simples)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                <span>Opção 3: R$ 5.500 — prazo 40 dias (área do aluno + “Meus Cursos” + painel simples)</span>
+              </li>
+            </ul>
+          </div>
+
+          <a
+            href="mailto:felipe@empresarialweb.com.br?subject=Aceite%20da%20Proposta%20-%20PKD%20TREINAMENTOS&body=Ol%C3%A1%20Felipe,%0D%0A%0D%0AConfirmo%20o%20aceite%20da%20proposta%20apresentada%20para%20o%20projeto%20da%20PKD%20TREINAMENTOS.%0D%0A%0D%0AOp%C3%A7%C3%A3o%20escolhida:%20(1)%20R$%201.500%20/%2015%20dias%20ou%20(2)%20R$%202.500%20/%2025%20dias%20ou%20(3)%20R$%205.500%20/%2040%20dias.%0D%0A%0D%0APodemos%20dar%20in%C3%ADcio%20ao%20projeto.%0D%0A%0D%0AAtenciosamente,"
+            class="w-full bg-amber-500 text-white text-center font-extrabold py-5 rounded-xl hover:bg-amber-600 transition transform hover:-translate-y-1 shadow-lg hover:shadow-amber-500/40 text-lg"
+          >
+            <i class="fas fa-check-circle mr-2"></i>
+            Aceitar e Enviar E-mail
+          </a>
+
+          <p class="text-xs text-gray-400 mt-4 text-center">
+            * Ao clicar, seu aplicativo de e-mail será aberto para confirmação.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-2xl font-bold mb-4 text-white">
+        <span class="text-gray-100">e-Web</span> <span class="text-amber-500">Agency</span>
+      </h3>
+      <p class="mb-6">Transformando negócios em referências digitais — com foco em conversão.</p>
+
+      <div class="flex justify-center space-x-6 mb-8">
+        <a href="#" class="hover:text-amber-500 transition" aria-label="Instagram"><i class="fab fa-instagram text-2xl"></i></a>
+        <a href="#" class="hover:text-amber-500 transition" aria-label="LinkedIn"><i class="fab fa-linkedin text-2xl"></i></a>
+        <a href="#" class="hover:text-amber-500 transition" aria-label="WhatsApp"><i class="fab fa-whatsapp text-2xl"></i></a>
+      </div>
+
+      <p class="text-sm text-gray-600">Feito com <i class="fas fa-heart text-red-500 mx-1"></i> em Curitiba.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Menu Mobile
+    const btnMobile = document.querySelector('header button');
+    const nav = document.querySelector('nav');
+
+    btnMobile.addEventListener('click', () => {
+      nav.classList.toggle('hidden');
+      if(!nav.classList.contains('hidden')){
+        nav.classList.add('absolute','top-full','left-0','w-full','bg-white','shadow-lg','p-4','flex','flex-col','items-center');
+      }
+    });
+
+    // Accordion
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const content = item.querySelector('.accordion-content');
+        const icon = header.querySelector('.fa-chevron-down');
+
+        document.querySelectorAll('.accordion-item').forEach(other => {
+          if(other !== item){
+            other.querySelector('.accordion-content').style.maxHeight = null;
+            other.querySelector('.fa-chevron-down').classList.remove('rotate-180');
+          }
+        });
+
+        if(content.style.maxHeight){
+          content.style.maxHeight = null;
+          icon.classList.remove('rotate-180');
+        }else{
+          content.style.maxHeight = content.scrollHeight + "px";
+          icon.classList.add('rotate-180');
+        }
+      });
+    });
+
+    // Scroll Animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){
+          window.scrollTo({ top: target.offsetTop - 100, behavior: 'smooth' });
+          if(!nav.classList.contains('hidden') && window.innerWidth < 768){
+            nav.classList.add('hidden');
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
