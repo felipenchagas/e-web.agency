@@ -134,16 +134,18 @@
     }
 </style>
 <style>
-/* Correção de Alinhamento do Menu */
+/* Correção de Alinhamento do Menu - Alinhado a partir do centro com espaçamento */
 @media (min-width: 1025px) {
-    /* Coluna Esquerda: Menu alinhado à direita (colado no logo) */
+    /* Coluna Esquerda: Menu alinhado à direita (perto do logo) */
     .elementor-location-header .elementor-element-537fc374 {
         justify-content: flex-end !important;
+        padding-right: 40px !important; /* Espaço para não colar no logo */
     }
     
-    /* Coluna Direita: Menu alinhado à esquerda (colado no logo), Botão na ponta */
+    /* Coluna Direita: Menu alinhado à esquerda (perto do logo), Botão na ponta */
     .elementor-location-header .elementor-element-1c2dd2fd {
         justify-content: space-between !important;
+        padding-left: 40px !important; /* Espaço para não colar no logo */
     }
     .elementor-location-header .elementor-element-1c2dd2fd .elementor-widget-nav-menu {
         margin-right: auto !important; /* Empurra o botão para a direita */
