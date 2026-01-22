@@ -1,10 +1,10 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Top Sports - Quadras de Futebol, Vôlei e Mais em Curitiba</title>
-<meta name="description" content="Top Sports oferece uma infraestrutura completa com quadras de futebol, vôlei, escola de futebol e muito mais em Curitiba. Alugue sua quadra com facilidade e aproveite!">
+<title>Top Sports - Campeonatos e Torneios em Curitiba</title>
+<meta name="description" content="Organize seu campeonato na Top Sports. Estrutura profissional, 7 quadras, tecnologia VAR e a melhor resenha de Curitiba.">
 <meta name="author" content="Top Sports">
 
 <!-- Metatags Gerais -->
@@ -12,15 +12,15 @@
 <meta name="geo.region" content="BR-PR">
 <meta name="geo.placename" content="Curitiba, Paraná">
 <meta name="ICBM" content="-25.4417, -49.2743">
-<meta name="theme-color" content="#3852c5">
+<meta name="theme-color" content="#cf2027">
 <meta name="referrer" content="no-referrer-when-downgrade">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://e-web.agency/projeto/topfutebol/site/">
-<meta property="og:title" content="Top Sports - Quadras de Futebol, Vôlei e Mais em Curitiba">
-<meta property="og:description" content="Top Sports oferece uma infraestrutura completa com quadras de futebol, vôlei, escola de futebol e muito mais em Curitiba. Alugue sua quadra com facilidade e aproveite!">
+<meta property="og:title" content="Top Sports - Campeonatos e Torneios em Curitiba">
+<meta property="og:description" content="Organize seu campeonato na Top Sports. Estrutura profissional, 7 quadras, tecnologia VAR e a melhor resenha de Curitiba.">
 <meta property="og:image" content="https://e-web.agency/projeto/topfutebol/site/social/social.jpg">
 <meta property="og:site_name" content="Top Sports">
 <meta property="og:image:width" content="1200">
@@ -29,8 +29,8 @@
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@TopSportsCuritiba">
-<meta name="twitter:title" content="Top Sports - Quadras de Futebol, Vôlei e Mais em Curitiba">
-<meta name="twitter:description" content="Alugue quadras de futebol, vôlei e muito mais na Top Sports, em Curitiba. Estrutura de qualidade para suas partidas e eventos. Reserve já!">
+<meta name="twitter:title" content="Top Sports - Campeonatos e Torneios em Curitiba">
+<meta name="twitter:description" content="Organize seu campeonato na Top Sports. Estrutura profissional, 7 quadras, tecnologia VAR e a melhor resenha de Curitiba.">
 <meta name="twitter:image" content="https://e-web.agency/projeto/topfutebol/site/social/social.jpg">
 
 <!-- Favicon e Apple Icon (ajuste os caminhos conforme necessários) -->
@@ -82,11 +82,160 @@
   "copyrightNotice": "Top Sports"
 }
 </script>
+
 <link rel='stylesheet' id='widget-icon-list-css' href='wp-content/plugins/elementor/assets/css/widget-icon-list.min.css?ver=3.27.5' media='all'>
-<link rel='stylesheet' id='elementor-post-679-css' href='wp-content/uploads/sites/20/elementor/css/post-679.css?ver=1736371077' media='all'>
 <link rel='stylesheet' href='css/style.css?v=1.0' media='all'>
 <link rel='stylesheet' href='css/menu-essenciais.css' media='all'>
-			</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+
+<style>
+    /* Estilos Customizados e Criativos para a Página de Campeonatos */
+    :root {
+        --primary: #cf2027;
+        --secondary: #021a26;
+        --accent: #f4b400;
+        --white: #ffffff;
+        --gray-light: #f4f6f8;
+        --text-color: #333;
+    }
+
+    .campeonatos-v2 { font-family: 'Poppins', Arial, sans-serif; overflow-x: hidden; color: var(--text-color); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    
+    /* Botões Corrigidos */
+    .btn { 
+        display: inline-flex; 
+        align-items: center; 
+        gap: 10px; 
+        padding: 16px 32px; 
+        border-radius: 8px; 
+        text-decoration: none; 
+        font-weight: 700; 
+        text-transform: uppercase; 
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+        cursor: pointer;
+        border: none;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        font-size: 0.95rem;
+    }
+    .btn-primary { background-color: var(--primary); color: var(--white) !important; }
+    .btn-primary:hover { background-color: #ff353d; transform: translateY(-2px); box-shadow: 0 8px 15px rgba(207, 32, 39, 0.3); }
+    
+    .btn-secondary { background-color: var(--secondary); color: var(--white) !important; }
+    .btn-secondary:hover { background-color: #052d3d; transform: translateY(-2px); box-shadow: 0 8px 15px rgba(2, 26, 38, 0.3); }
+
+    /* Hero */
+    .hero-v2 {
+        position: relative;
+        height: 70vh;
+        min-height: 500px;
+        background: url('fotos/top-sports-7788.jpg') center/cover no-repeat fixed;
+        display: flex;
+        align-items: center;
+        color: var(--white);
+    }
+    .hero-v2::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(2,26,38,0.92) 0%, rgba(2,26,38,0.6) 100%);
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 750px; }
+    .hero-content h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px; color: var(--white); font-weight: 800; }
+    .hero-content p { font-size: 1.25rem; margin-bottom: 40px; opacity: 0.95; line-height: 1.6; color: var(--white); max-width: 600px; }
+
+    /* Seções */
+    section { padding: 90px 0; }
+    .section-title { text-align: center; margin-bottom: 70px; }
+    .section-title h2 { font-size: 2.8rem; color: var(--secondary); margin-bottom: 15px; font-weight: 800; }
+    .section-title .divider { width: 60px; height: 4px; background: var(--primary); margin: 0 auto; border-radius: 2px; }
+
+    /* Cards de Categorias */
+    .categories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
+    .cat-card { 
+        background: var(--white); 
+        padding: 40px 30px; 
+        border-radius: 12px; 
+        text-align: left; 
+        transition: 0.3s; 
+        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        border: 1px solid #eee;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .cat-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-color: transparent; }
+    .cat-card i { font-size: 3rem; color: var(--primary); margin-bottom: 20px; }
+    .cat-card h4 { font-size: 1.4rem; margin-bottom: 12px; color: var(--secondary); font-weight: 700; }
+    .cat-card p { font-size: 1rem; color: #666; line-height: 1.6; margin: 0; }
+
+    /* Info Grid Reformulado */
+    .info-block { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: flex-start; }
+    .info-image { position: relative; }
+    .info-image img { width: 100%; border-radius: 15px; box-shadow: 0 20px 40px rgba(0,0,0,0.15); display: block; }
+    
+    .info-text h3 { font-size: 2.4rem; color: var(--secondary); margin-bottom: 25px; line-height: 1.2; font-weight: 800; }
+    .intro-text { font-size: 1.1rem; color: #555; line-height: 1.7; margin-bottom: 40px; }
+
+    /* Lista detalhada */
+    .detailed-list { display: flex; flex-direction: column; gap: 30px; margin-bottom: 40px; }
+    .list-item { display: flex; gap: 20px; }
+    .list-icon { 
+        width: 50px; height: 50px; 
+        background: rgba(207, 32, 39, 0.1); 
+        color: var(--primary); 
+        border-radius: 10px; 
+        display: flex; align-items: center; justify-content: center; 
+        font-size: 1.5rem; flex-shrink: 0; 
+    }
+    .list-content h5 { font-size: 1.2rem; color: var(--secondary); margin: 0 0 8px; font-weight: 700; }
+    .list-content p { font-size: 1rem; color: #666; line-height: 1.5; margin: 0; }
+
+    /* Gallery */
+    .gallery-masonry { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .gallery-item { height: 280px; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    .gallery-item:hover img { transform: scale(1.08); }
+
+    /* CTA Section Corrigida */
+    .cta-v2 { 
+        background: linear-gradient(rgba(2,26,38,0.92), rgba(2,26,38,0.92)), url('fotos/top-sports-7977.jpg') center/cover no-repeat fixed; 
+        color: var(--white); 
+        text-align: center;
+        padding: 140px 0;
+    }
+    .cta-v2 h2 { color: var(--white); font-size: 3rem; margin-bottom: 25px; font-weight: 800; }
+    .cta-v2 p { color: rgba(255,255,255,0.9); font-size: 1.2rem; margin-bottom: 50px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+
+    @media (max-width: 992px) {
+        .info-block { grid-template-columns: 1fr; gap: 40px; }
+        .hero-content h1 { font-size: 2.5rem; }
+        .gallery-masonry { grid-template-columns: repeat(2, 1fr); }
+        .section-title h2 { font-size: 2.2rem; }
+    }
+</style>
+<style>
+/* Correção de Alinhamento do Menu - Alinhado a partir do centro com espaçamento */
+@media (min-width: 1025px) {
+    /* Coluna Esquerda: Menu alinhado à direita (perto do logo) */
+    .elementor-location-header .elementor-element-537fc374 {
+        justify-content: flex-end !important;
+        padding-right: 40px !important; /* Espaço para não colar no logo */
+    }
+    
+    /* Coluna Direita: Menu alinhado à esquerda (perto do logo), Botão na ponta */
+    .elementor-location-header .elementor-element-1c2dd2fd {
+        justify-content: space-between !important;
+        padding-left: 40px !important; /* Espaço para não colar no logo */
+    }
+    .elementor-location-header .elementor-element-1c2dd2fd .elementor-widget-nav-menu {
+        margin-right: auto !important; /* Empurra o botão para a direita */
+    }
+}
+</style>
+</head>
+
 <body class="page-template page-template-elementor_header_footer page page-id-679 wp-embed-responsive theme-default elementor-default elementor-template-full-width elementor-kit-201 elementor-page elementor-page-679">
 
 
@@ -203,8 +352,6 @@
 </nav>
 </div>
 </div>
-<!-- Ícones de redes sociais -->
-
 <!-- Botão de registro -->
 <div class="elementor-element elementor-element-466fa6a elementor-widget elementor-widget-button" data-id="466fa6a" data-element_type="widget" data-widget_type="button.default">
 <div class="elementor-widget-container">
@@ -223,360 +370,217 @@
 </div>
 </div>
 </div>
-				<div data-elementor-type="wp-page" data-elementor-id="679" class="elementor elementor-679" data-elementor-post-type="page">
-				<div class="elementor-element elementor-element-11f1bd7f e-flex e-con-boxed e-con e-parent" data-id="11f1bd7f" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-					<div class="e-con-inner">
-		<div class="elementor-element elementor-element-74a66ce1 e-flex e-con-boxed elementor-invisible e-con e-child" data-id="74a66ce1" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;fadeInUp&quot;}">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-692e70e1 elementor-widget elementor-widget-heading" data-id="692e70e1" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h1 class="elementor-heading-title elementor-size-default">Matches</h1>				</div>
-				</div>
-				<div class="elementor-element elementor-element-13cdbac5 elementor-widget elementor-widget-heading" data-id="13cdbac5" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h4 class="elementor-heading-title elementor-size-default">Persistent practice produces gold</h4>				</div>
-				</div>
-					</div>
-				</div>
-					</div>
-				</div>
 
-		
-<!-- Seção Campeonatos -->
-<section style="background-color:#f5f5f5; padding:60px 0;">
-  <div style="max-width:1200px; margin:0 auto; padding:0 20px;">
+<!-- CONTEÚDO PRINCIPAL -->
+<main class="campeonatos-v2">
     
-    <!-- Título -->
-    <h2 style="text-align:center; font-size:32px; color:#333; margin-bottom:40px;">
-      Campeonatos de Futebol Society, Vôlei e Futsal
-    </h2>
-    
-    <!-- Layout flexível: texto à esquerda, cards à direita -->
-    <div style="display:flex; flex-wrap:wrap; gap:40px;">
-      
-      <!-- Coluna de texto -->
-      <div style="flex:1 1 300px; min-width:280px;">
-        <h3 style="font-size:24px; color:#222; margin-bottom:20px;">
-          Torneios e Campeonatos
-        </h3>
-        <p style="font-size:16px; line-height:1.6; color:#555; margin-bottom:20px;">
-          Na <strong>Top Sports</strong> você encontra toda a estrutura e apoio para realização de seu torneio ou campeonato entre empresas, amigos e familiares.
-        </p>
-        <p style="font-size:16px; line-height:1.6; color:#555; margin-bottom:20px;">
-          Além de benefícios na locação de quadras e churrasqueiras, disponibilizamos todas as informações de times, regulamentos, fotos e resultados diretamente em nosso site para manter todos os participantes informados sobre o andamento da competição.
-        </p>
-        <ul style="font-size:16px; line-height:1.6; color:#555; padding-left:20px; margin-bottom:20px;">
-          <li>Regulamentos personalizados;</li>
-          <li>Fotos e resultados atualizados online;</li>
-          <li>Ambiente coberto e seguro;</li>
-          <li>Infraestrutura completa com churrasqueiras e estacionamento;</li>
-          <li>Troféus, medalhas e brindes especiais;</li>
-        </ul>
-        <p style="font-size:16px; color:#555;">
-          <strong>Informações:</strong>
-          <a href="https://wa.me/5541984039797" target="_blank" style="color:#1e88e5; text-decoration:none;">
-            (41) 99925-1493
-          </a>
-          ou utilize o
-          <a href="#formulario-campeonatos" style="color:#1e88e5; text-decoration:none;">
-            formulário de inscrição
-          </a>.
-        </p>
-      </div>
-      
-      <!-- Grid de posts -->
-      <div style="flex:2 1 600px; min-width:300px; display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); gap:20px;">
-        
-        <!-- Card 1 -->
-        <article style="background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-          <img src="imagens/campeonato-volei.jpg" alt="Campeonato de Vôlei" style="width:100%; display:block;">
-          <div style="padding:15px;">
-            <h4 style="font-size:18px; color:#222; margin:0 0 10px;">
-              Vôlei no Top: Disputa acirrada e energia contagiante
-            </h4>
-            <p style="font-size:14px; color:#666; line-height:1.5; margin:0;">
-              O campeonato de vôlei promovido pelo Top Futebol vem se destacando pelo alto nível técnico e pela vibe positiva entre os participantes...
-            </p>
-          </div>
-        </article>
-        
-        <!-- Card 2 -->
-        <article style="background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-          <img src="imagens/organizacao-top.jpg" alt="Futebol Society Profissional" style="width:100%; display:block;">
-          <div style="padding:15px;">
-            <h4 style="font-size:18px; color:#222; margin:0 0 10px;">
-              Society com estrutura profissional e clima de campeonato
-            </h4>
-            <p style="font-size:14px; color:#666; line-height:1.5; margin:0;">
-              Quem joga futebol society no Top Futebol sente que está num verdadeiro campeonato profissional...
-            </p>
-          </div>
-        </article>
-        
-        <!-- Card 3 -->
-        <article style="background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-          <img src="imagens/campeonato-salao.jpg" alt="Campeonato de Futsal" style="width:100%; display:block;">
-          <div style="padding:15px;">
-            <h4 style="font-size:18px; color:#222; margin:0 0 10px;">
-              Futsal: emoção em cada rodada e organização elogiada
-            </h4>
-            <p style="font-size:14px; color:#666; line-height:1.5; margin:0;">
-              O futsal do Top Futebol tem atraído jogadores e torcedores com jogos intensos e emocionantes...
-            </p>
-          </div>
-        </article>
-        
-        <!-- Card 4 -->
-        <article style="background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-          <img src="imagens/organizacao-campeonatos.jpg" alt="Organização Top Futebol" style="width:100%; display:block;">
-          <div style="padding:15px;">
-            <h4 style="font-size:18px; color:#222; margin:0 0 10px;">
-              Organização do Top impressiona atletas e público
-            </h4>
-            <p style="font-size:14px; color:#666; line-height:1.5; margin:0;">
-              Além dos jogos, o que mais chama atenção nos eventos do Top Futebol é o cuidado com cada detalhe...
-            </p>
-          </div>
-        </article>
-        
-      </div>
-      
-    </div>
-    
-  </div>
-</section>
+    <!-- Hero Section -->
+    <section class="hero-v2">
+        <div class="container hero-content">
+            <h1>A Emoção do Jogo em Nível Profissional</h1>
+            <p>Seu torneio merece o melhor palco. São 7 quadras cobertas de altíssimo padrão, tecnologia VAR exclusiva e estrutura completa para receber atletas e torcedores com conforto e segurança.</p>
+            <a href="https://wa.me/5541984039797?text=Quero%20organizar%20um%20campeonato" class="btn btn-primary" target="_blank">
+                <i class="mdi mdi-trophy-variant"></i> Organizar Meu Campeonato
+            </a>
+        </div>
+    </section>
 
-				<div data-elementor-type="footer" data-elementor-id="379" class="elementor elementor-379 elementor-location-footer" data-elementor-post-type="elementor_library">
-			<div class="elementor-element elementor-element-345d6629 e-flex e-con-boxed e-con e-parent" data-id="345d6629" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-					<div class="e-con-inner">
-		<div class="elementor-element elementor-element-3f9125b9 e-con-full e-flex e-con e-child" data-id="3f9125b9" data-element_type="container">
-				<div class="elementor-element elementor-element-59aeeb6d elementor-widget elementor-widget-heading" data-id="59aeeb6d" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h6 class="elementor-heading-title elementor-size-default">Siga-nos nas redes sociais</h6>				</div>
-				</div>
-				<div class="elementor-element elementor-element-53a3787c elementor-shape-circle e-grid-align-left e-grid-align-mobile-center elementor-grid-0 elementor-widget elementor-widget-social-icons" data-id="53a3787c" data-element_type="widget" data-widget_type="social-icons.default">
-				<div class="elementor-widget-container">
-							<div class="elementor-social-icons-wrapper elementor-grid">
-							
-							<span class="elementor-grid-item">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-f220faa" target="_blank">
-						<span class="elementor-screen-only">Twitter</span>
-						<svg class="e-font-icon-svg e-fab-twitter" viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>					</a>
-				</span>
-							<span class="elementor-grid-item">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-64e98eb" href="https://instagram.com/topsportsfutebol">
-						<span class="elementor-screen-only">Instagram</span>
-						<svg class="e-font-icon-svg e-fab-instagram" viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>					</a>
-				</span>
-							
-					</div>
-						</div>
-				</div>
-				</div>
-		<div class="elementor-element elementor-element-621ad5de e-con-full e-flex e-con e-child" data-id="621ad5de" data-element_type="container">
-				<div class="elementor-element elementor-element-48b2a82 elementor-widget elementor-widget-image" data-id="48b2a82" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-															<img src="imagens/logo.png" title="playyon-logo-1.png" alt="playyon-logo-1.png" loading="lazy">															</div>
-				</div>
-				</div>
-		<div class="elementor-element elementor-element-497581bf e-con-full e-flex e-con e-child" data-id="497581bf" data-element_type="container">
-				<div class="elementor-element elementor-element-778d017b elementor-widget elementor-widget-heading" data-id="778d017b" data-element_type="widget" data-widget_type="heading.default">
-				<div class="elementor-widget-container">
-					<h6 class="elementor-heading-title elementor-size-default">Receba promoções</h6>				</div>
-				</div>
-				<div class="elementor-element elementor-element-5658f31b elementor-button-align-stretch elementor-widget elementor-widget-form" data-id="5658f31b" data-element_type="widget" data-settings="{&quot;button_width&quot;:&quot;30&quot;,&quot;button_width_tablet&quot;:&quot;50&quot;,&quot;step_next_label&quot;:&quot;Next&quot;,&quot;step_previous_label&quot;:&quot;Previous&quot;,&quot;step_type&quot;:&quot;number_text&quot;,&quot;step_icon_shape&quot;:&quot;circle&quot;}" data-widget_type="form.default">
-				<div class="elementor-widget-container">
-							<form class="elementor-form" method="post" name="New Form">
-			<input type="hidden" name="post_id" value="379">
-			<input type="hidden" name="form_id" value="5658f31b">
-			<input type="hidden" name="referer_title" value="2024  December  22">
+    <!-- Categorias Section -->
+    <section class="section-categories">
+        <div class="container">
+            <div class="section-title">
+                <h2>Categorias em Destaque</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="categories-grid">
+                <div class="cat-card">
+                    <i class="mdi mdi-soccer"></i>
+                    <h4>Livre / Open</h4>
+                    <p>Competições de alto nível para atletas acima de 16 anos. Intensidade, rivalidades saudáveis e disputas emocionantes do início ao fim.</p>
+                </div>
+                <div class="cat-card">
+                    <i class="mdi mdi-account-group"></i>
+                    <h4>Master / Sênior</h4>
+                    <p>Categorias exclusivas para 35+, 40+ e 50+. A combinação perfeita entre esporte, manutenção da saúde e a tradicional resenha pós-jogo.</p>
+                </div>
+                <div class="cat-card">
+                    <i class="mdi mdi-gender-female"></i>
+                    <h4>Feminino</h4>
+                    <p>Espaço garantido para o futebol feminino brilhar. Torneios organizados com seriedade para incentivar cada vez mais a modalidade.</p>
+                </div>
+                <div class="cat-card">
+                    <i class="mdi mdi-office-building"></i>
+                    <h4>Corporativo</h4>
+                    <p>Fortaleça o espírito de equipe da sua empresa. Torneios de integração personalizados com churrasco e confraternização inclusos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-			
-			<div class="elementor-form-fields-wrapper elementor-labels-above">
-								<div class="elementor-field-type-email elementor-field-group elementor-column elementor-field-group-email elementor-col-70 elementor-md-50 elementor-field-required">
-													<input size="1" type="email" name="form_fields[email]" id="form-field-email" class="elementor-field elementor-size-sm  elementor-field-textual" placeholder="Email" required="required" aria-required="true">
-											</div>
-								<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-30 e-form__buttons elementor-md-50">
-					<button class="elementor-button elementor-size-sm" type="submit">
-						<span class="elementor-button-content-wrapper">
-															<span class="elementor-button-icon">
-									<i aria-hidden="true" class="mdi mdi-email"></i>																	</span>
-																						<span class="elementor-button-text">Sign up</span>
-													</span>
-					</button>
-				</div>
-			</div>
-		</form>
-						</div>
-				</div>
-				</div>
-					</div>
-				</div>
-		
+    <!-- Info Section 1: Organização -->
+    <section class="section-info" style="background-color: var(--gray-light);">
+        <div class="container info-block">
+            <div class="info-image">
+                <img src="fotos/top-sports-7868.jpg" alt="Organização de Campeonatos na Top Sports">
+                <div style="margin-top: 25px; font-size: 1rem; color: #555; line-height: 1.7; border-left: 4px solid var(--primary); padding-left: 20px; background: #fff; border-radius: 0 10px 10px 0;">
+                    <p style="margin-bottom: 15px;">
+                        <strong>O jogo continua fora de campo:</strong> O sucesso do seu campeonato não termina no apito final. Nossa estrutura oferece 7 churrasqueiras cobertas com TV e um bar completo com cardápio variado (porções, espetinhos e bebidas geladas). É o ambiente perfeito para a integração dos times, entrega de troféus e aquela resenha imperdível que fideliza os participantes.
+                    </p>
+                    <p style="margin: 0;">
+                        <strong>Conforto e Segurança:</strong> Sabemos que a logística é crucial. Por isso, oferecemos estacionamento amplo, gratuito e monitorado. Seus convidados e atletas chegam com tranquilidade e focam apenas no evento.
+                    </p>
+                </div>
+            </div>
+            <div class="info-text">
+                <h3>Organização de Excelência</h3>
+                <p class="intro-text">Na Top Sports, não apenas alugamos o espaço; nós elevamos o nível da sua competição. Nossa equipe cuida dos detalhes técnicos para que você foque apenas no espetáculo dentro de campo.</p>
+                
+                <div class="detailed-list">
+                    <div class="list-item">
+                        <div class="list-icon"><i class="mdi mdi-whistle"></i></div>
+                        <div class="list-content">
+                            <h5>Arbitragem Federada</h5>
+                            <p>Parceria com árbitros experientes e federados, garantindo imparcialidade e controle disciplinar rigoroso em todas as partidas.</p>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-icon"><i class="mdi mdi-video-outline"></i></div>
+                        <div class="list-content">
+                            <h5>Tecnologia "Chame o VAR"</h5>
+                            <p>Exclusividade Top Sports! Sistema de replay instantâneo para tirar a dúvida daqueles lances polêmicos que decidem campeonatos.</p>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-icon"><i class="mdi mdi-trophy-award"></i></div>
+                        <div class="list-content">
+                            <h5>Gestão e Premiação Premium</h5>
+                            <p>Site atualizado com tabelas e artilharia em tempo real, além de troféus e medalhas de alta qualidade que valorizam a conquista.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/5541984039797" class="btn btn-secondary" target="_blank">
+                    <i class="mdi mdi-whatsapp"></i> Falar com um Organizador
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Section 2: Areia e Diversidade -->
+    <section class="section-info">
+        <div class="container info-block" style="grid-template-columns: 1fr 1fr; direction: rtl;">
+            <div class="info-image" style="direction: ltr;">
+                <img src="fotos/areia.jpg" alt="Torneios de Areia Beach Tennis e Vôlei">
+                <div style="margin-top: 25px; font-size: 1rem; color: #555; line-height: 1.7; border-left: 4px solid var(--primary); padding-left: 20px; background: #fff; border-radius: 0 10px 10px 0;">
+                    <p style="margin-bottom: 15px;">
+                        <strong>Performance e Saúde:</strong> Nossas quadras utilizam areia de tratamento especial que não retém calor e minimiza o impacto nas articulações. Isso permite a realização de circuitos de longa duração e maratonas de jogos sem prejudicar o físico dos atletas, garantindo alto rendimento do primeiro ao último set.
+                    </p>
+                    <p style="margin: 0;">
+                        <strong>Formatos Flexíveis:</strong> Atendemos desde ligas mensais até eventos no formato "Day Use" para empresas. Organizamos clínicas, torneios relâmpago e circuitos de final de semana, adaptando a estrutura conforme a necessidade e o tamanho do seu público.
+                    </p>
+                </div>
+            </div>
+            <div class="info-text" style="direction: ltr;">
+                <h3>Além do Futebol: A Areia Ferve!</h3>
+                <p class="intro-text">Nossa estrutura é referência também para os amantes dos esportes de areia. Seja Beach Tennis, Futevôlei ou Vôlei de Praia, garantimos o clima perfeito para competições de alto rendimento ou lazer.</p>
+                
+                <div class="detailed-list">
+                    <div class="list-item">
+                        <div class="list-icon"><i class="mdi mdi-weather-sunny"></i></div>
+                        <div class="list-content">
+                            <h5>Estrutura Coberta e Protegida</h5>
+                            <p>São 2 quadras de areia totalmente cobertas. Aqui seu torneio acontece com conforto faça chuva ou faça sol, sem interrupções.</p>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-icon"><i class="mdi mdi-lightbulb-on-outline"></i></div>
+                        <div class="list-content">
+                            <h5>Iluminação e Areia de Qualidade</h5>
+                            <p>Areia tratada e iluminação LED profissional, proporcionando a melhor jogabilidade e segurança para os atletas.</p>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-icon"><i class="mdi mdi-party-popper"></i></div>
+                        <div class="list-content">
+                            <h5>Ambiente de Confraternização</h5>
+                            <p>Churrasqueiras próximas às quadras de areia, criando um ambiente integrado e festivo, perfeito para o "terceiro tempo" do seu evento.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/5541984039797" class="btn btn-primary" target="_blank">
+                    <i class="mdi mdi-beach"></i> Agendar Torneio de Areia
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section-gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Galeria dos Campeões</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="gallery-masonry">
+                <div class="gallery-item"><img src="fotos/top-sports-7977.jpg" alt="Torcida Vibrando na Top Sports"></div>
+                <div class="gallery-item"><img src="fotos/top-sports-7796.jpg" alt="Lance de Jogo Intenso"></div>
+                <div class="gallery-item"><img src="fotos/top-sports-7783.jpg" alt="Disputa de Bola no Campeonato"></div>
+                <div class="gallery-item"><img src="fotos/top-sports-7790.jpg" alt="Time Comemorando Vitória"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="cta-v2">
+        <div class="container">
+            <h2>Pronto para levantar a taça?</h2>
+            <p>Não deixe seu campeonato nas mãos de amadores. Traga seu time, sua empresa ou seu grupo de amigos para o centro esportivo mais moderno do Portão. A glória espera por você.</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="https://wa.me/5541984039797?text=Quero%20inscrever%20meu%20time" class="btn btn-primary" target="_blank">
+                    <i class="mdi mdi-check-decagram"></i> Inscrever Time / Agendar Torneio
+                </a>
+                <a href="estrutura" class="btn btn-secondary">
+                    <i class="mdi mdi-magnify"></i> Conhecer Nossa Estrutura
+                </a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER (Mantido) -->
 <footer style="background:#021a26;color:#fff;padding:32px 0;font-family:Arial,Helvetica,sans-serif">
-
-  <!-- wrapper centralizado -->
-  <div style="
-    max-width:1200px;      /* limite para não grudar nas bordas */
-    margin:0 auto;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:space-between;  /* distribui espaços iguais */
-    gap:48px;
-  ">
-
-    <!-- Endereço -->
+  <div style="max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; justify-content:space-between; gap:48px;">
     <div style="flex:1 1 220px;min-width:180px">
-      <h6 style="margin:0 0 8px;font:700 13px 'Arial';letter-spacing:.5px;color:#ff3562;text-transform:uppercase">
-        Endereço
-      </h6>
-      <p style="margin:0;font:400 15px/1.5 'Arial'">
-        Rua João Bettega, 2709 - Portão<br>
-        (entre Belarina Alimentos e Superpro Atacado)<br>
-        Curitiba / PR - CEP 81070-460
-      </p>
+      <h6 style="margin:0 0 8px;font:700 13px 'Arial';letter-spacing:.5px;color:#ff3562;text-transform:uppercase">Endereço</h6>
+      <p style="margin:0;font:400 15px/1.5 'Arial'">Rua João Bettega, 2709 - Portão<br>(entre Belarina Alimentos e Superpro Atacado)<br>Curitiba / PR - CEP 81070-460</p>
     </div>
-
-    <!-- Email -->
     <div style="flex:1 1 220px;min-width:180px">
-      <h6 style="margin:0 0 8px;font:700 13px 'Arial';letter-spacing:.5px;color:#ff3562;text-transform:uppercase">
-        Email
-      </h6>
-      <a href="mailto:atendimento@topfutebol.com.br"
-         style="font:400 15px/1.5 'Arial';color:#fff;text-decoration:none">
-         atendimento@topfutebol.com.br
-      </a>
+      <h6 style="margin:0 0 8px;font:700 13px 'Arial';letter-spacing:.5px;color:#ff3562;text-transform:uppercase">Email</h6>
+      <a href="mailto:atendimento@topfutebol.com.br" style="color:#fff;text-decoration:none">atendimento@topfutebol.com.br</a>
     </div>
-
-    <!-- Contato -->
     <div style="flex:1 1 220px;min-width:180px">
-      <h6 style="margin:0 0 8px;font:700 13px 'Arial';letter-spacing:.5px;color:#ff3562;text-transform:uppercase">
-        Contato
-      </h6>
-      <p style="margin:0;font:400 15px/1.5 'Arial'">
-        (41) 3346-1117<br>
-        <a href="https://wa.me/5541984039797" style="color:#fff;text-decoration:none">
-          (41) 98403-9797
-        </a>
-      </p>
+      <h6 style="margin:0 0 8px;font:700 13px 'Arial';letter-spacing:.5px;color:#ff3562;text-transform:uppercase">Contato</h6>
+      <p style="margin:0;font:400 15px/1.5 'Arial'">(41) 3346-1117<br><a href="https://wa.me/5541984039797" style="color:#fff;text-decoration:none">(41) 98403-9797</a></p>
     </div>
-
-    <!-- Horário -->
     <div style="flex:1 1 220px;min-width:180px">
-      <h6 style="margin:0 0 8px;font:700 13px 'Arial';letter-spacing:.5px;color:#ff3562;text-transform:uppercase">
-        Horário
-      </h6>
-<p style="margin:0;font:400 15px/1.5 'Arial'">
-        Segunda à Sexta: 08h00 - 00h00<br>
-        Sábado: 08h00 - 22h00<br>
-        Domingo: 08h00 - 16h00
-      </p>
+      <h6 style="margin:0 0 8px;font:700 13px 'Arial';letter-spacing:.5px;color:#ff3562;text-transform:uppercase">Horário</h6>
+      <p style="margin:0;font:400 15px/1.5 'Arial'">Segunda à Sexta: 08h00 - 00h00<br>Sábado: 08h00 - 22h00<br>Domingo: 08h00 - 16h00</p>
     </div>
-
   </div>
-
-  <!-- linha de copyright -->
-  <p style="margin:32px 0 0;text-align:center;font:400 13px/1 'Arial';opacity:.75">
-    Copyright © 2025 Top Sports.
-  </p>
-
+  <p style="margin:32px 0 0;text-align:center;font:400 13px/1 'Arial';opacity:.75">Copyright © 2025 Top Sports.</p>
 </footer>
-				</div>
-		<!-- Overlay do modal -->
 
 <script src="js/menu.js"></script>
+<div class="floating-icons">
+    <a href="https://app.chameovar.com.br/chamou-o-var" target="_blank" class="icon" style="background-image: url('app/chame-o-var.png'); background-color: transparent !important;" title="Chame o VAR">Chame o VAR</a>
+    <a href="https://www.instagram.com/topsportsfutebol/" target="_blank" class="icon insta" title="Instagram">Instagram</a>
+    <a href="https://wa.me/5541984039797" target="_blank" class="icon whats" title="WhatsApp">WhatsApp</a>
+    <a href="tel:+5541984039797" class="icon phone" title="Ligar">Ligar</a>
+    <a href="https://play.google.com/store/apps/details?id=com.multiplix.topsports&pli=1" target="_blank" class="icon playstore" title="Google Play">Google Play</a>
+    <a href="https://apps.apple.com/br/app/top-sports/id6736372061" target="_blank" class="icon applestore" title="App Store">App Store</a>
+</div>
 
-    <style>
-        body {
-            font-family: sans-serif;
-            min-height: 150vh; /* Para ter scroll e ver o efeito fixed */
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-
-        .floating-icons {
-            position: fixed;
-            top: 50%;
-            right: 15px;
-            transform: translateY(-50%);
-            z-index: 9999;
-            display: flex;
-            flex-direction: column;
-            gap: 10px; /* Espaçamento entre os ícones */
-        }
-
-        .floating-icons .icon {
-            width: 50px;
-            height: 50px;
-            background-repeat: no-repeat;
-            background-position: center;
-            /* background-size: contain; é o padrão agora para a maioria */
-            background-size: contain; 
-            transition: transform 0.2s ease;
-            display: block; /* Garante que o <a> ocupe o espaço definido */
-            text-indent: -9999px; /* Esconde o texto do link, se houver */
-        }
-
-        /* Efeito hover para todos os ícones */
-        .floating-icons .icon:hover {
-            transform: scale(1.1);
-        }
-
-        /* Ícones de Instagram e WhatsApp: Sem fundo, sem borda arredondada - NÃO ALTERAR */
-        .insta, .whats {
-            background-color: transparent !important; 
-            border-radius: 0 !important; 
-            box-shadow: none !important; 
-            border: none !important; 
-        }
-
-        .insta {
-            background-image: url('https://cdn-icons-png.flaticon.com/512/2111/2111463.png');
-        }
-
-        .whats {
-            background-image: url('https://cdn-icons-png.flaticon.com/512/733/733585.png');
-        }
-
-        /* Telefone com fundo vermelho e ícone branco */
-        .phone {
-            background-color: #f44336; /* Fundo vermelho */
-            /* Nova URL para ícone de telefone branco com fundo transparente */
-            background-image: url('social/tel.png'); 
-            background-size: 55% auto; /* Ajustado para o ícone ficar bem visível no círculo */
-            background-position: center;
-            border-radius: 50%; /* Deixa o fundo vermelho circular */
-            box-shadow: none; 
-            border: none !important; 
-        }
-
-        /* Ícones das Lojas de Aplicativos - Agora sem fundo/borda CSS, apenas o logo */
-        .playstore {
-            background-image: url('https://cdn-icons-png.flaticon.com/512/888/888857.png'); /* Logo da Play Store com fundo transparente */
-            background-color: transparent !important; /* Garantir sem cor de fundo */
-            border-radius: 0 !important; /* Garantir sem borda arredondada */
-            box-shadow: none !important; /* Garantir sem sombra */
-            background-size: 80% auto; /* Ajuste para o logo da Play Store ficar bom */
-        }
-
-        .applestore {
-             /* Logo da Apple Store com fundo transparente */
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/App_Store_%28iOS%29.svg/2048px-App_Store_%28iOS%29.svg.png');
-            background-color: transparent !important; /* Garantir sem cor de fundo */
-            border-radius: 0 !important; /* Garantir sem borda arredondada */
-            box-shadow: none !important; /* Garantir sem sombra */
-            background-size: 70% auto; /* Ajuste para o logo da Apple Store ficar bom */
-        }
-    </style>
-
-    <!-- Ícones flutuantes -->
-    <div class="floating-icons">
-        <a href="https://app.chameovar.com.br/chamou-o-var" target="_blank" class="icon" style="background-image: url('app/chame-o-var.png'); background-color: transparent !important;" title="Chame o VAR">Chame o VAR</a>
-        <a href="https://www.instagram.com/topsportsfutebol/" target="_blank" class="icon insta" title="Instagram">Instagram</a>
-        <a href="https://wa.me/5541984039797" target="_blank" class="icon whats" title="WhatsApp">WhatsApp</a>
-        <a href="tel:+5541984039797" class="icon phone" title="Ligar">Ligar</a>
-        <a href="https://play.google.com/store/apps/details?id=com.multiplix.topsports&pli=1" target="_blank" class="icon playstore" title="Google Play">Google Play</a>
-        <a href="https://apps.apple.com/br/app/top-sports/id6736372061" target="_blank" class="icon applestore" title="App Store">App Store</a>
-    </div>
 </body>
 </html>
