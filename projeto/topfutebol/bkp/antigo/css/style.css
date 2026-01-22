@@ -1,0 +1,279 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family:Verdana, Geneva, sans-serif;
+	1font-family:"Times New Roman", Times, serif;
+	font-size:13px;
+	1line-height:15px;
+	color:#FFF;
+	background-color:#000;
+	text-shadow: #000 1px 2px 3px;
+}
+#bg_geral1{
+	background:url(../../../../20181227045704im_/http_/topfutebol.com.br/imgs/bg/bg1.jpg) #000 no-repeat; background-position:top center; background-size: 100% 100%;
+	1height:1188px;
+}
+a{color:#FFF; text-decoration:none;}
+#background{position: absolute; z-index:-10; width:100%; 1height:100%;}
+#Geral{ 
+margin:0 auto;
+width:980px;
+color:#CCC;
+background-color:#000;
+}
+
+#GeralBox{ 
+margin:0 auto;
+width:980px;
+color:#CCC;
+}
+#GeralTopo{ 
+width:980px;
+height:140px;
+color:#CCC;
+padding:5px;
+margin:0px auto 0px auto;
+1background-color:#000;
+}
+
+#GeralMenu{ 
+margin:0 auto;
+width:960px;
+height:70px;
+color:#CCC;
+}
+
+
+#GeralConteudo{ 
+margin:0 auto;
+width:980px;
+color:#CCC;
+background-color:#000;
+}
+
+#menu{ padding-left:20px;width:960px; background:url(../imgs/barra_menu.png) no-repeat; text-shadow: #000 1px 2px 3px;}
+#menu ul{1background:#ccc;height:70px;position:relative;padding:0 10px;list-style:none;padding:0;margin:0;}
+#menu li{float:left;color:#fff;}
+#menu a,#menu a:visited{font-size:14px;display:block; text-align:center; height:40px;1width:150px;color:#FFF;font-weight:bold;padding:22px 11px 10px 11px;text-decoration:none;}
+#menu a:hover{text-decoration:underline;}
+#menu li:hover > a{font-weight:bold;color:#CCC; text-decoration:none;}
+#menu ul ul{ text-align:left; background: url(../imgs/bg_menu_dropdown.png) no-repeat;width:216px;display:none;position:absolute;top:65px;height:200px;padding:0; z-index:1000;}
+#menu ul ul li{clear:both;1background:#063;}
+#menu ul ul a,#menu ul ul a:hover{ text-align:left; width:170px; height:20px;font-size:12px;padding:15px 10px 0px 10px;1border-bottom:1px dashed #ccc;}
+
+.MenuLogo{
+float:left;
+width:220px;
+1height:100px;
+text-align:center;
+padding-top:10px;
+}
+
+
+#MenuCampeonato{ background:url(../imgs/bg_menu_campeonato.png) #800000 ; height:50px;
+border: 1px solid #999;
+border-radius:15px;
+-moz-border-radius:15px;
+-webkit-border-radius:15px;	
+-moz-box-shadow:1px 1px 15px #000;
+-webkit-box-shadow:1px 1px 15px #000;
+box-shadow:1px 1px 15px #000;
+}
+#MenuCampeonato a { text-decoration: none; list-style:none; color:#FFF; }
+#MenuCampeonato ul { text-decoration: none; list-style:none; padding:7px 0px 0px 0px; margin:10px 10px 10px 10px; }
+#MenuCampeonato li { float:left;text-decoration: none; list-style:none; padding:0px 0px 0px 6px; text-align:center;  }
+#MenuCampeonato a:hover{text-decoration:none; color:#CCC;}
+#MenuCampeonato1 li:hover > a{font-weight:bold;color:#CCC; text-decoration:none;}
+
+.ancora{float:left;width:100%;height:10px;}
+.MenuNoticia{font-size:17px; background:url(../imgs/bg_menu_noticia.png) #F30004 repeat-x; border:solid 2px #C2151C; padding:0px 10px 10px 10px; width:280px;}
+
+.MenuNoticia a{ line-height:25px;}
+.MenuNoticia a:hover{ color:#CCC;}
+
+#Banner{
+width: 980px;
+margin:10px auto 10px auto;
+}
+#BannerInterno{
+width: 980px;
+margin:10px auto 10px auto;
+}
+
+.IndexBox{
+width:320px;
+margin:30px auto 10px;
+}
+
+.BoxIndexInfo{
+background:url(../imgs/BOX_index.png) no-repeat;
+height:285px; 
+width:970px;
+margin-left:10px;
+}
+.BoxIndexInfo2{
+background:url(../imgs/BG_texto_principal.png) repeat-y;
+width:950px;
+padding:0px 10px 0px 10px;
+margin-left:10px;
+}
+
+.BoxIndexInfo2C{
+background:url(../imgs/BG_texto_principal_c.png) no-repeat;
+width:950px;
+padding:0px 10px 10px 10px;
+margin-left:10px;
+}
+
+.BoxIndexInfo2B{
+background:url(../imgs/BG_texto_principal_b.png) no-repeat;
+width:950px;
+padding:10px 10px 10px 10px;
+margin-left:10px;
+}
+.IndexBoxTitulos2{
+color:#FFF;
+font-size:20px;
+height:45px;
+padding:14px 0px 0px 20px;
+}
+
+.IndexBoxTitulos{
+color:#FFF;
+font-size:20px;
+height:45px;
+padding:14px 0px 0px 20px;
+}
+
+.InternoBoxTitulos{color:#FFF; font-size:21px; height:30px; padding:14px 0px 0px 5px; text-shadow: #000 1px 2px 3px;}
+
+.CampeonatosBotao{ padding:0px 10px 20px 10px;}
+.CampeonatosLinha{float:left; width:900px;}
+.CampeonatosBase{float:left; width:900px; 1height:305px;}
+.CampeonatosTitulo{ color:#FFF; font-size:23px; padding:0px 0px 0px 5px; text-shadow: #000 1px 2px 3px;}
+.CampeonatosFoto{1float:left;margin:10px 10px 10px 10px; width:880px;}
+.CampeonatosDescricao{ clear:both; 1float:right; margin:10px 10px 10px 10px; width:880px;}
+.CampeonatosMenu{float:left;margin:10px 5px 10px 5px; width:930px;
+ 	
+}
+
+
+.CampeonatosInfo{float:left; width:900px;}
+
+.CampeonatosInfoFotos{float:left; width:900px; }
+.CampeonatosInfoTimes{float:left; width:900px; }
+.CampeonatosInfoTabela{float:left; width:900px; }
+.CampeonatosInfoRegulamento{float:left; width:900px; }
+
+.QuadrasFotosBase{ text-decoration:none;}
+.QuadrasFotosBase li{display:inline;}
+.QuadrasFotosBase li a{text-decoration:none;}
+.QuadrasFotosBase ul{margin:0px; padding:0px;}
+
+.EstruturaFotosBase{ text-decoration:none;}
+.EstruturaFotosBase li{display:inline; margin:0px; padding:0px;}
+.EstruturaFotosBase li a{text-decoration:none; margin:0px; padding:0px;}
+.EstruturaFotosBase ul{margin:0px; padding:0px;}
+
+.ChurrasqueirasFotosBase{ text-decoration:none;}
+.ChurrasqueirasFotosBase li{display:inline; margin:0px; padding:0px;}
+.ChurrasqueirasFotosBase li a{text-decoration:none; margin:0px; padding:0px;}
+.ChurrasqueirasFotosBase ul{margin:0px; padding:0px;}
+
+.classimg{border:4px solid #FFF;}
+.classimgGalerias{border:4px solid #FFF;}
+
+
+input[type=text]{ 
+border-radius:6px;
+-moz-border-radius:6px;
+-webkit-border-radius:6px;
+background:#CCC; 
+border:2px solid #FFFFFF;
+margin:5px 5px 5px 0px;
+1font-weight:bold;
+}	
+
+select{ 
+border-radius:6px;
+-moz-border-radius:6px;
+-webkit-border-radius:6px;
+background:#CCC; 
+border:2px solid #FFFFFF;
+margin:5px 5px 5px 0px;
+1font-weight:bold;
+}	
+
+textarea{
+margin:10px 10px 10px 0px;
+border: 2px solid #FFFFFF;
+background:#CCC;
+border-radius:6px;
+-moz-border-radius:6px;
+-webkit-border-radius:6px;
+}
+
+.btnContato {
+	height:35px;
+	width:60px;
+background:url(../imgs/btn_enviar.png) no-repeat center;
+  cursor:pointer;
+  border:none;
+}
+
+#toTop {
+width:100px;
+border:1px solid #FFF;
+background:#CD0001;
+text-align:center;
+padding:5px;
+position:fixed; /* this is the magic */
+bottom:10px; /* together with this to put the div at the bottom*/
+right:10px;
+cursor:pointer;
+display:none;
+color:#FFF;
+font-family:verdana;
+font-size:12px;
+border-radius:15px;
+-moz-border-radius:15px;
+-webkit-border-radius:15px;	
+-moz-box-shadow:1px 1px 15px #000;
+-webkit-box-shadow:1px 1px 15px #000;
+box-shadow:1px 1px 15px #000; 	
+}
+#Rodape{
+background:url(../imgs/rodape_grama.png) repeat-x bottom;
+color:#FFF;
+font-size:14px;
+text-align:center;
+float:left;
+width:100%;
+margin-top:20px;
+height:35px;
+}
+
+
+/*
+     FILE ARCHIVED ON 04:56:43 Dec 27, 2018 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 18:47:57 May 04, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 619.1
+  exclusion.robots: 0.11
+  exclusion.robots.policy: 0.102
+  cdx.remote: 0.063
+  esindex: 0.009
+  LoadShardBlock: 506.793 (3)
+  PetaboxLoader3.datanode: 1389.264 (4)
+  CDXLines.iter: 20.58 (3)
+  load_resource: 944.084
+  PetaboxLoader3.resolve: 37.155
+*/

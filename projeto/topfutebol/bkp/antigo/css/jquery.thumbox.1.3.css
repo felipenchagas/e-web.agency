@@ -1,0 +1,145 @@
+/** 
+  * 
+  * Thumbox - plugin para galeria de imagens
+  *
+  *  @author     Jose Raimundo de Sousa Neto <sputinykster@gmail.com>
+  *  @version    1.3
+  *  @link       http://www.jneto.net.br
+  *  @since      1.0
+  *  
+  **/
+#thumbox-dock *, #thumbox-overlay, #thumbox-image, #thumbox-border, #thumbox-loader, #thumbox-close, #thumbox-buttonNext, #thumbox-buttonPrev, #thumbox-label{
+	margin:0;
+	padding:0;
+	border:0;
+}
+#thumbox-dock{
+	position:absolute;
+	z-index:9996;
+	background:#000;
+	top:-5000px;
+	left:-5000px
+}
+#thumbox-dock .thumbox-scrollerpages{
+	overflow:hidden;
+	float:left;
+	position: relative;
+}
+#thumbox-dock .thumbox-pages{
+	position:relative;
+	width:100%;
+	left:0;
+}
+#thumbox-dock .thumbox-page{
+	text-align:center;
+	float:left;
+}
+#thumbox-dock .thumbox-page img{
+	margin:6px;
+	cursor:pointer;
+	border:3px #333 solid;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+}
+#thumbox-dock .thumbox-arrowdock{
+	width:20px;
+	cursor:pointer;
+	float:left;
+	background:#333 no-repeat center center;
+}
+#thumbox-dock .thumbox-leftarrow{
+	background-image:url(../../../../20190118110736im_/http_/topfutebol.com.br/imgs/thumbox-prev.png);
+}
+#thumbox-dock .thumbox-rightarrow{
+	background-image:url(../../../../20190118110738im_/http_/topfutebol.com.br/imgs/thumbox-next.png);
+}
+#thumbox-overlay{
+	position:absolute;
+	z-index:9995;
+	top:0;
+	left:0;
+  	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  	filter: alpha(opacity=0);
+  	-moz-opacity: 0.0;
+  	-khtml-opacity: 0.0;
+  	opacity: 0.0;
+}
+.thumbox-hoverImage, .thumbox-currentImage{
+	border-color:#DDD !important;
+}
+#thumbox-image{
+	margin-top:80px;
+	position:absolute;
+	z-index:9998;
+}
+#thumbox-border{
+	margin-top:80px;
+	position:absolute;
+	z-index:9997;
+	background:#FFF;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+#thumbox-loader{
+	position:absolute;
+	z-index:9999;
+	width:128px;
+	height:15px;
+	background:url(../../../../20190118110740im_/http_/topfutebol.com.br/imgs/thumbox-loader.gif)
+}
+#thumbox-close{
+	margin-top:80px;
+	position:absolute;
+	z-index:9999;
+	width:30px;
+	height:30px;
+	background:url(../../../../20190118110742im_/http_/topfutebol.com.br/imgs/thumbox-close.png);
+	cursor:pointer;
+}
+#thumbox-buttonNext, #thumbox-buttonPrev{
+	margin-top:80px;
+	width:41px;
+	height:66px;
+	position:absolute;
+	z-index:9999;
+	cursor:pointer;
+}
+#thumbox-buttonNext{
+	background:url(../../../../20190118110744im_/http_/topfutebol.com.br/imgs/thumbox-nextImg.png);
+}
+#thumbox-buttonPrev{
+	background:url(../../../../20190118110746im_/http_/topfutebol.com.br/imgs/thumbox-prevImg.png);
+}
+#thumbox-label{
+	margin-top:80px;
+	background:url(../../../../20190118110748im_/http_/topfutebol.com.br/imgs/thumbox-bgLabel.png);
+	position:absolute;
+	z-index:9999;
+	color:#FFF;
+	font-size:15px;
+	font-family:"Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+	padding:5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+}
+/*
+     FILE ARCHIVED ON 04:56:57 Dec 27, 2018 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 18:48:04 May 04, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 56.404
+  exclusion.robots: 0.109
+  exclusion.robots.policy: 0.1
+  RedisCDXSource: 0.589
+  esindex: 0.009
+  LoadShardBlock: 32.824 (3)
+  PetaboxLoader3.datanode: 40.877 (4)
+  CDXLines.iter: 20.014 (3)
+  load_resource: 1072.326
+  PetaboxLoader3.resolve: 1040.313
+*/
