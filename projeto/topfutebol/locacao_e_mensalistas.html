@@ -101,7 +101,24 @@
 <link rel='stylesheet' href='css/style.css?v=1.0' media='all'>
 <link rel='stylesheet' href='css/menu-essenciais.css' media='all'>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
-			</head>
+			<style>
+/* Correção de Alinhamento do Menu */
+@media (min-width: 1025px) {
+    /* Coluna Esquerda: Menu alinhado à direita (colado no logo) */
+    .elementor-location-header .elementor-element-537fc374 {
+        justify-content: flex-end !important;
+    }
+    
+    /* Coluna Direita: Menu alinhado à esquerda (colado no logo), Botão na ponta */
+    .elementor-location-header .elementor-element-1c2dd2fd {
+        justify-content: space-between !important;
+    }
+    .elementor-location-header .elementor-element-1c2dd2fd .elementor-widget-nav-menu {
+        margin-right: auto !important; /* Empurra o botão para a direita */
+    }
+}
+</style>
+</head>
 <body class="post-template-default single single-post postid-319 single-format-standard wp-embed-responsive theme-default elementor-default elementor-kit-201 elementor-page-385">
 
 
@@ -264,7 +281,7 @@
                     <li><i class="mdi mdi-check-circle"></i> <strong>Prioridade na escolha de horários nobres.</strong></li>
                     <li><i class="mdi mdi-check-circle"></i> <strong>Valores especiais</strong> com desconto em relação à locação avulsa.</li>
                     <li><i class="mdi mdi-check-circle"></i> <strong>Prioridade na reserva de churrasqueiras</strong> para o pós-jogo.</li>
-                    <li><i class="mdi mdi-check-circle"></i> <strong>Acesso ao "Chame o VAR"</strong> para gravar e rever os lances.</li>
+                    <li><i class="mdi mdi-check-circle"></i> <strong>Acesso ao "Chame o VAR" </strong> para gravar e rever os lances.</li>
                     <li><i class="mdi mdi-check-circle"></i> <strong>Coletes limpos e bola oficial</strong> inclusos em todos os jogos.</li>
                 </ul>
                 <a href="https://wa.me/5541984039797?text=Quero%20ser%20mensalista" class="btn btn-primary" target="_blank">Consultar Planos Mensais</a>
