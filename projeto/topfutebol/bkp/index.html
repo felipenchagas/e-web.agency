@@ -212,8 +212,16 @@
         
         /* Glassmorphism Content */
         .slide-inner { position: absolute; inset: 0; z-index: 3; display: flex; align-items: center; justify-content: center; padding: 20px; }
-        .glass-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); padding: 60px 40px; border-radius: 20px; text-align: center; max-width: 900px; width: 100%; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); transform: translateY(50px); opacity: 0; transition: all 1s ease; }
+        .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); padding: 60px 40px; border-radius: 20px; text-align: center; max-width: 900px; width: 100%; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); transform: translateY(50px); opacity: 0; transition: all 1s ease; margin-top: 60px; }
         .swiper-slide-active .glass-card { transform: translateY(0); opacity: 1; transition-delay: 0.3s; }
+        
+        /* Ajuste de opacidade específico para o slide 1 */
+        .glass-card.low-opacity { background: rgba(255, 255, 255, 0.01); backdrop-filter: blur(5px); }
+        
+        /* Alinhamento à direita para slides específicos */
+        .slide-inner.align-right { justify-content: flex-end; padding-right: 22%; }
+        .slide-inner.align-right .glass-card { text-align: right; max-width: 600px; }
+        .slide-inner.align-right .btn-group { justify-content: flex-end; }
         
         /* Typography */
         .glass-card h1 { font-family: 'Poppins', sans-serif; font-size: 4.5rem; font-weight: 900; text-transform: uppercase; line-height: 1; margin-bottom: 25px; color: #fff; text-shadow: 0 10px 30px rgba(0,0,0,0.5); letter-spacing: -2px; }
@@ -222,33 +230,57 @@
         
         /* Buttons */
         .btn-group { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
-        .btn-premium { padding: 18px 45px; border-radius: 50px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; transition: 0.3s; position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 10px; }
-        .btn-fill { background: #cf2027; color: #fff; border: 2px solid #cf2027; box-shadow: 0 10px 25px rgba(207, 32, 39, 0.4); }
-        .btn-fill:hover { background: #a01217; border-color: #a01217; transform: translateY(-5px); }
-        .btn-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.8); }
-        .btn-outline:hover { background: #fff; color: #000; transform: translateY(-5px); }
+        .btn-premium { padding: 18px 45px; border-radius: 50px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; transition: 0.3s; position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 10px; color: #fff !important; }
+        .btn-fill { background: #cf2027; color: #fff !important; border: 2px solid #cf2027; box-shadow: 0 10px 25px rgba(207, 32, 39, 0.4); }
+        .btn-fill:hover { background: #a01217; border-color: #a01217; transform: translateY(-5px); color: #fff !important; box-shadow: 0 15px 35px rgba(207, 32, 39, 0.6); }
+        .btn-outline { background: transparent; color: #fff !important; border: 2px solid rgba(255,255,255,0.8); }
+        .btn-outline:hover { background: #fff; color: #000 !important; transform: translateY(-5px); box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3); }
         
         /* Navigation */
         .swiper-button-next, .swiper-button-prev { color: #fff; background: rgba(255,255,255,0.1); width: 60px; height: 60px; border-radius: 50%; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.2); transition: 0.3s; }
         .swiper-button-next:hover, .swiper-button-prev:hover { background: #cf2027; border-color: #cf2027; transform: scale(1.1); }
         .swiper-button-next::after, .swiper-button-prev::after { font-size: 1.5rem; font-weight: bold; }
         
-        /* Progress Bar */
-        .autoplay-progress { position: absolute; right: 30px; bottom: 30px; z-index: 10; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #cf2027; }
-        .autoplay-progress svg { position: absolute; left: 0; top: 0; width: 100%; height: 100%; stroke-width: 4px; stroke: #cf2027; fill: none; stroke-dashoffset: calc(125.6px * (1 - var(--progress))); stroke-dasharray: 125.6; transform: rotate(-90deg); }
+        /* Pagination Numbered */
+        .swiper-pagination { bottom: 30px !important; }
+        .swiper-pagination-bullet {
+            width: 35px; height: 35px;
+            background: rgba(255,255,255,0.2);
+            opacity: 1;
+            border: 1px solid rgba(255,255,255,0.5);
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: 700;
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 8px !important;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+        .swiper-pagination-bullet-active {
+            background: #cf2027;
+            border-color: #cf2027;
+            transform: scale(1.2);
+            box-shadow: 0 0 15px rgba(207, 32, 39, 0.6);
+        }
+        
+        /* Progress Bar - Hidden */
+        .autoplay-progress { display: none; }
         
         @media (max-width: 768px) { .swiper-container-wrapper { height: 75vh; } .glass-card h1 { font-size: 2.5rem; } .glass-card { padding: 30px 20px; } .btn-premium { width: 100%; justify-content: center; } .swiper-button-next, .swiper-button-prev { display: none; } }
     </style>
 
     <div class="swiper-container-wrapper">
-        <div class="swiper mySwiper"><br><br>
+        <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
                     <div class="slide-bg" style="background-image: url('imagens/inicial/aerial-view-of-stadium-aerial-cityscape-top-view-.jpg');"></div>
                     <div class="slide-overlay"></div>
                     <div class="slide-inner">
-                        <div class="glass-card">
+                        <div class="glass-card low-opacity">
                             <h1>Mais que esporte,<br><span>É EXPERIÊNCIA</span></h1>
                             <p>Descubra o complexo esportivo mais completo de Curitiba. 20.000m² de pura paixão pelo esporte no coração do Portão.</p>
                             <div class="btn-group">
@@ -259,7 +291,7 @@
                 </div>
                 <!-- Slide 2 -->
                 <div class="swiper-slide">
-                    <div class="slide-bg" style="background-image: url('fotos/top-sports-8015.jpg');"></div>
+                    <div class="slide-bg" style="background-image: url('imagens/inicial/slider-1-cardapio.jpg');"></div>
                     <div class="slide-overlay"></div>
                     <div class="slide-inner">
                         <div class="glass-card">
@@ -273,9 +305,9 @@
                 </div>
                 <!-- Slide 3 -->
                 <div class="swiper-slide">
-                    <div class="slide-bg" style="background-image: url('fotos/top-sports-7950.jpg');"></div>
+                    <div class="slide-bg" style="background-image: url('imagens/inicial/slide-var.jpg');"></div>
                     <div class="slide-overlay"></div>
-                    <div class="slide-inner">
+                    <div class="slide-inner align-right">
                         <div class="glass-card">
                             <h1>A Polêmica<br><span>ACABOU!</span></h1>
                             <p>Chega de dúvida. Na Top Sports você conta com a tecnologia exclusiva "Chame o VAR" para rever seus lances.</p>
@@ -286,21 +318,38 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- Controles -->
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
-            <div class="autoplay-progress"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20"></circle></svg><span></span></div>
+            
+            <!-- Pagination Numerada -->
+            <div class="swiper-pagination"></div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        const progressCircle = document.querySelector(".autoplay-progress svg");
-        const progressContent = document.querySelector(".autoplay-progress span");
         var swiper = new Swiper(".mySwiper", {
-            spaceBetween: 0, effect: "fade", speed: 1000, loop: true,
-            autoplay: { delay: 6000, disableOnInteraction: false },
-            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-            on: { autoplayTimeLeft(s, time, progress) { progressCircle.style.setProperty("--progress", 1 - progress); progressContent.textContent = Math.ceil(time / 1000) + "s"; } }
+            spaceBetween: 0,
+            effect: "fade",
+            speed: 1000,
+            loop: true,
+            autoplay: {
+                delay: 7000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + '</span>';
+                },
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
         });
     </script>
 </div>

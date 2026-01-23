@@ -573,14 +573,105 @@
 </footer>
 
 <script src="js/menu.js"></script>
-<div class="floating-icons">
-    <a href="https://app.chameovar.com.br/chamou-o-var" target="_blank" class="icon" style="background-image: url('app/chame-o-var.png'); background-color: transparent !important;" title="Chame o VAR">Chame o VAR</a>
-    <a href="https://www.instagram.com/topsportsfutebol/" target="_blank" class="icon insta" title="Instagram">Instagram</a>
-    <a href="https://wa.me/5541984039797" target="_blank" class="icon whats" title="WhatsApp">WhatsApp</a>
-    <a href="tel:+5541984039797" class="icon phone" title="Ligar">Ligar</a>
-    <a href="https://play.google.com/store/apps/details?id=com.multiplix.topsports&pli=1" target="_blank" class="icon playstore" title="Google Play">Google Play</a>
-    <a href="https://apps.apple.com/br/app/top-sports/id6736372061" target="_blank" class="icon applestore" title="App Store">App Store</a>
-</div>
+    <!-- Ícones flutuantes com efeito Bolha -->
+    <div class="floating-icons">
+        <a href="https://app.chameovar.com.br/chamou-o-var" target="_blank" class="icon icon-var" title="Chame o VAR">
+            <span>Chame o VAR</span>
+        </a>
+        <a href="https://www.instagram.com/topsportsfutebol/" target="_blank" class="icon icon-insta" title="Instagram">
+            <span>Instagram</span>
+        </a>
+        <a href="https://wa.me/5541984039797" target="_blank" class="icon icon-whats" title="WhatsApp">
+            <span>WhatsApp</span>
+        </a>
+        <a href="tel:+5541984039797" class="icon icon-phone" title="Ligar">
+            <span>Ligar</span>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.multiplix.topsports&pli=1" target="_blank" class="icon icon-play" title="Google Play">
+            <span>Google Play</span>
+        </a>
+        <a href="https://apps.apple.com/br/app/top-sports/id6736372061" target="_blank" class="icon icon-apple" title="App Store">
+            <span>App Store</span>
+        </a>
+    </div>
+
+<style>
+    /* Estilos da Sidebar Bolha */
+    .floating-icons {
+        position: fixed;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-end;
+    }
+
+    .floating-icons .icon {
+        width: 55px;
+        height: 55px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+        text-decoration: none;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 60%;
+        border: 2px solid #eee;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .icon-var { background-image: url('app/chame-o-var.png'); background-size: 85% !important; }
+    .icon-insta { background-image: url('https://cdn-icons-png.flaticon.com/512/2111/2111463.png'); }
+    .icon-whats { background-image: url('https://cdn-icons-png.flaticon.com/512/733/733585.png'); }
+    .icon-phone { background-image: url('social/tel.png'); background-color: #f44336 !important; background-size: 50% !important; border-color: #f44336 !important; }
+    .icon-play { background-image: url('https://cdn-icons-png.flaticon.com/512/888/888857.png'); }
+    .icon-apple { background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/App_Store_%28iOS%29.svg/2048px-App_Store_%28iOS%29.svg.png'); background-size: 50% !important; }
+
+    .floating-icons .icon span {
+        opacity: 0;
+        font-size: 0px;
+        color: #fff !important;
+        font-weight: 800;
+        font-family: 'Poppins', sans-serif;
+        transition: all 0.3s ease;
+        text-align: center;
+        line-height: 1;
+        pointer-events: none;
+        display: block !important; 
+        width: 100%;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        text-indent: 0 !important;
+    }
+
+    .floating-icons .icon:hover {
+        width: 100px;  
+        height: 100px; 
+        border-radius: 50%;
+        background-color: transparent !important;
+        background-position: center 15px !important;
+        background-size: 40% !important; 
+        z-index: 99999;
+        border: none !important;
+        box-shadow: none;
+    }
+
+    .floating-icons .icon:hover span {
+        opacity: 1 !important;
+        font-size: 12px !important;
+    }
+</style>
 
 </body>
 </html>

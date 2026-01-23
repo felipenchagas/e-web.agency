@@ -3,118 +3,47 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Escola de Futebol PFA - Top Sports Curitiba</title>
-<meta name="description" content="Escola de Futebol PFA na Top Sports. Treinos para crianças e adolescentes de 4 a 17 anos com metodologia exclusiva, segurança e valores humanos.">
+<title>Top Sports - Quadras de Futebol, Vôlei e Mais em Curitiba</title>
+<meta name="description" content="Top Sports oferece uma infraestrutura completa com quadras de futebol, vôlei, escola de futebol e muito mais em Curitiba. Alugue sua quadra com facilidade e aproveite!">
 <meta name="author" content="Top Sports">
 
 <!-- Metatags Gerais -->
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="geo.region" content="BR-PR">
 <meta name="geo.placename" content="Curitiba, Paraná">
-<meta name="theme-color" content="#cf2027">
+<meta name="ICBM" content="-25.4417, -49.2743">
+<meta name="theme-color" content="#3852c5">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://e-web.agency/projeto/topfutebol/site/">
-<meta property="og:title" content="Escola de Futebol PFA - Top Sports Curitiba">
+<meta property="og:title" content="Top Sports - Quadras de Futebol, Vôlei e Mais em Curitiba">
+<meta property="og:description" content="Top Sports oferece uma infraestrutura completa com quadras de futebol, vôlei, escola de futebol e muito mais em Curitiba. Alugue sua quadra com facilidade e aproveite!">
 <meta property="og:image" content="https://e-web.agency/projeto/topfutebol/site/social/social.jpg">
+<meta property="og:site_name" content="Top Sports">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 
-<!-- Favicon -->
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@TopSportsCuritiba">
+<meta name="twitter:title" content="Top Sports - Quadras de Futebol, Vôlei e Mais em Curitiba">
+<meta name="twitter:description" content="Alugue quadras de futebol, vôlei e muito mais na Top Sports, em Curitiba. Estrutura de qualidade para suas partidas e eventos. Reserve já!">
+<meta name="twitter:image" content="https://e-web.agency/projeto/topfutebol/site/social/social.jpg">
+
+<!-- Favicon e Apple Icon (ajuste os caminhos conforme necessários) -->
 <link rel="icon" href="https://e-web.agency/projeto/topfutebol/site/social/favicon3.png" sizes="32x32">
+<link rel="apple-touch-icon" href="https://e-web.agency/projeto/topfutebol/site/social/favicon3.png">
 
-<!-- CSS -->
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+
 <link rel='stylesheet' href='css/style.css?v=1.0' media='all'>
 <link rel='stylesheet' href='css/menu-essenciais.css' media='all'>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
-<link rel='stylesheet' id='widget-icon-list-css' href='wp-content/plugins/elementor/assets/css/widget-icon-list.min.css?ver=3.27.5' media='all'>
 
-<style>
-    :root {
-        --primary: #cf2027;
-        --secondary: #021a26;
-        --white: #ffffff;
-        --gray-light: #f4f6f8;
-        --text-color: #333;
-    }
-
-    body { font-family: 'Poppins', Arial, sans-serif; color: var(--text-color); margin: 0; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-
-    /* Botões */
-    .btn { 
-        display: inline-flex; align-items: center; gap: 10px; padding: 15px 35px; border-radius: 50px; 
-        text-decoration: none; font-weight: 700; text-transform: uppercase; transition: 0.3s; 
-        cursor: pointer; border: none; box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-    .btn-primary { background-color: var(--primary); color: var(--white) !important; }
-    .btn-primary:hover { background-color: #ff353d; transform: translateY(-3px); }
-    .btn-secondary { background-color: var(--secondary); color: var(--white) !important; }
-    .btn-secondary:hover { background-color: #052d3d; transform: translateY(-3px); }
-
-    /* Hero */
-    .hero-escola {
-        position: relative;
-        height: 70vh;
-        min-height: 500px;
-        background: url('imagens/grama-sintetica-futebol.jpg') center/cover no-repeat fixed;
-        display: flex;
-        align-items: center;
-        color: var(--white);
-    }
-    .hero-escola::before {
-        content: ''; position: absolute; inset: 0;
-        background: linear-gradient(90deg, rgba(2,26,38,0.9) 0%, rgba(2,26,38,0.4) 100%);
-    }
-    .hero-content { position: relative; z-index: 2; max-width: 800px; }
-    .hero-content h1 { font-size: 3.8rem; line-height: 1.1; margin-bottom: 20px; font-weight: 800; color: #fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-    .hero-content p { font-size: 1.4rem; margin-bottom: 35px; opacity: 0.95; color: #fff; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
-
-    /* Seções Gerais */
-    section { padding: 90px 0; }
-    .section-title { text-align: center; margin-bottom: 60px; }
-    .section-title h2 { font-size: 3rem; color: var(--secondary); margin-bottom: 15px; font-weight: 800; }
-    .divider { width: 80px; height: 5px; background: var(--primary); margin: 0 auto; border-radius: 10px; }
-
-    /* Grid Layouts */
-    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: start; }
-    .info-image img { width: 100%; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
-    .info-text h3 { font-size: 2.2rem; color: var(--secondary); margin-bottom: 20px; font-weight: 700; }
-    .info-text p { font-size: 1.1rem; line-height: 1.7; color: #555; margin-bottom: 20px; }
-    
-    /* Values Grid */
-    .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-    .value-card { 
-        background: #fff; padding: 40px 30px; border-radius: 15px; 
-        box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; 
-        border-bottom: 5px solid var(--primary); transition: 0.3s;
-    }
-    .value-card:hover { transform: translateY(-10px); }
-    .value-card i { font-size: 3.5rem; color: var(--primary); margin-bottom: 20px; display: block; }
-    .value-card h4 { font-size: 1.4rem; margin-bottom: 15px; color: var(--secondary); font-weight: 700; }
-    .value-card p { font-size: 1rem; color: #666; line-height: 1.6; margin: 0; }
-
-    /* News Grid */
-    .news-section { background-color: var(--gray-light); }
-    .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-    .news-card { background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); padding: 30px; transition: 0.3s; border-left: 5px solid var(--primary); }
-    .news-card:hover { transform: translateY(-5px); }
-    .news-card h4 { color: var(--secondary); font-size: 1.3rem; margin-bottom: 15px; font-weight: 700; }
-    .news-card p { color: #666; font-size: 1rem; margin: 0; line-height: 1.6; }
-
-    /* CTA Final */
-    .cta-school {
-        background: linear-gradient(rgba(207,32,39,0.9), rgba(207,32,39,0.9)), url('imagens/escola-futebol.jpg') center/cover fixed;
-        text-align: center;
-        color: var(--white);
-    }
-    .cta-school h2 { font-size: 3rem; color: #fff; margin-bottom: 20px; }
-    .cta-school p { font-size: 1.3rem; margin-bottom: 40px; color: #fff; }
-
-    @media (max-width: 992px) {
-        .grid-2 { grid-template-columns: 1fr; gap: 40px; }
-        .hero-content h1 { font-size: 2.8rem; }
-    }
-</style>
 <style>
 /* Correção de Alinhamento do Menu - Alinhado a partir do centro com espaçamento */
 @media (min-width: 1025px) {
@@ -136,9 +65,8 @@
 </style>
 </head>
 
-<body class="page-template page-template-elementor_header_footer page page-id-679 wp-embed-responsive theme-default elementor-default elementor-template-full-width elementor-kit-201 elementor-page elementor-page-679">
+<body class="home page-template page-template-elementor_header_footer page page-id-699 wp-embed-responsive theme-default elementor-default elementor-template-full-width elementor-kit-201 elementor-page elementor-page-699">
 
-<!-- HEADER DO INDEX (Correto) -->
 <div data-elementor-type="header" data-elementor-id="377" class="elementor elementor-377 elementor-location-header" data-elementor-post-type="elementor_library">
 
 <!-- Overlay do modal -->
@@ -250,17 +178,11 @@
 </nav>
 </div>
 </div>
-<!-- Ícones de redes sociais -->
-
 <!-- Botão de registro -->
 <div class="elementor-element elementor-element-466fa6a elementor-widget elementor-widget-button" data-id="466fa6a" data-element_type="widget" data-widget_type="button.default">
 <div class="elementor-widget-container">
 <div class="elementor-button-wrapper">
-<a class="elementor-button elementor-button-link elementor-size-sm" href="contato">
-<span class="elementor-button-content-wrapper">
-<span class="elementor-button-text">Contato
-</span>
-</a>
+<a class="elementor-button elementor-button-link elementor-size-sm" href="contato"><span class="elementor-button-text">Contato</span></a>
 </div>
 </div>
 </div>
@@ -271,108 +193,233 @@
 </div>
 </div>
 
-<!-- MAIN CONTENT -->
-<main>
-    <!-- Hero -->
-    <section class="hero-escola">
-        <div class="container hero-content">
-            <h1>PFA Escola de Futebol</h1>
-            <p>Formando craques e cidadãos. Metodologia exclusiva, valores humanos e a melhor estrutura de Curitiba para o seu filho brilhar.</p>
-            <a href="#matricula" class="btn btn-primary">Matricule-se Agora</a>
-        </div>
-    </section>
+<div data-elementor-type="wp-page" data-elementor-id="699" class="elementor elementor-699" data-elementor-post-type="page">
 
-    <!-- Sobre / Metodologia -->
-        <section class="section-about">
-            <div class="container grid-2">
-                    <div class="info-image" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                        <img src="imagens/escola-futebol.jpg" alt="Escola de Futebol PFA 1" style="border-radius: 10px; height: 200px; object-fit: cover;">
-                        <img src="fotos/top-sports-8005.jpg" alt="Escola de Futebol PFA 2" style="border-radius: 10px; height: 200px; object-fit: cover;">
-                        <img src="fotos/top-sports-7997.jpg" alt="Escola de Futebol PFA 3" style="border-radius: 10px; height: 200px; object-fit: cover;">
-                        <img src="fotos/top-sports-7969.jpg" alt="Escola de Futebol PFA 4" style="border-radius: 10px; height: 200px; object-fit: cover;">
-                    </div>
-                <div class="info-text">
-                    <h3>Muito Mais que Futebol</h3>
-                    <p>A estrutura da Top Sports foi pensada para receber a <strong>PFA Escola de Futebol</strong> com máximo conforto e segurança: contamos com quadras cobertas de grama sintética e futsal, sistema de amortecimento que ajuda na prevenção de lesões, vestiários adaptados, áreas exclusivas para os pais acompanharem os treinos e total acessibilidade.</p>
-                    <p>Atendemos crianças e adolescentes dos <strong>4 aos 17 anos</strong>. O treino vai muito além do chute a gol. Trabalhamos fundamentos técnicos, coordenação motora, tomada de decisão e disciplina, sempre respeitando a idade e o estágio de desenvolvimento de cada aluno.</p>
-                </div>
-            </div>
-        </section>
+<!-- NOVO SLIDER SWIPER PREMIUM -->
+<div class="elementor-element elementor-element-7dbf4d5b e-flex e-con-boxed e-con e-parent" data-id="7dbf4d5b" data-element_type="container" style="padding: 0; width: 100%; max-width: 100%;">
+    <style>
+        /* Slider Premium Styles */
+        .swiper-container-wrapper { position: relative; width: 100%; height: 85vh; min-height: 650px; overflow: hidden; background: #000; }
+        .swiper { width: 100%; height: 100%; }
+        .swiper-slide { overflow: hidden; position: relative; }
+        
+        /* Ken Burns Effect */
+        .slide-bg { position: absolute; inset: 0; background-size: cover; background-position: center; transform: scale(1); transition: transform 6s cubic-bezier(0.25, 0.46, 0.45, 0.94); z-index: 1; }
+        .swiper-slide-active .slide-bg { transform: scale(1.15); }
+        
+        /* Overlay */
+        .slide-overlay { position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(2, 26, 38, 0.2) 0%, rgba(2, 26, 38, 0.85) 100%); z-index: 2; }
+        
+        /* Glassmorphism Content */
+        .slide-inner { position: absolute; inset: 0; z-index: 3; display: flex; align-items: center; justify-content: center; padding: 20px; }
+        .glass-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); padding: 60px 40px; border-radius: 20px; text-align: center; max-width: 900px; width: 100%; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); transform: translateY(50px); opacity: 0; transition: all 1s ease; }
+        .swiper-slide-active .glass-card { transform: translateY(0); opacity: 1; transition-delay: 0.3s; }
+        
+        /* Typography */
+        .glass-card h1 { font-family: 'Poppins', sans-serif; font-size: 4.5rem; font-weight: 900; text-transform: uppercase; line-height: 1; margin-bottom: 25px; color: #fff; text-shadow: 0 10px 30px rgba(0,0,0,0.5); letter-spacing: -2px; }
+        .glass-card h1 span { color: #cf2027; display: inline-block; }
+        .glass-card p { font-size: 1.4rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 40px; font-weight: 400; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+        
+        /* Buttons */
+        .btn-group { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+        .btn-premium { padding: 18px 45px; border-radius: 50px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; transition: 0.3s; position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 10px; }
+        .btn-fill { background: #cf2027; color: #fff; border: 2px solid #cf2027; box-shadow: 0 10px 25px rgba(207, 32, 39, 0.4); }
+        .btn-fill:hover { background: #a01217; border-color: #a01217; transform: translateY(-5px); }
+        .btn-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.8); }
+        .btn-outline:hover { background: #fff; color: #000; transform: translateY(-5px); }
+        
+        /* Navigation */
+        .swiper-button-next, .swiper-button-prev { color: #fff; background: rgba(255,255,255,0.1); width: 60px; height: 60px; border-radius: 50%; backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.2); transition: 0.3s; }
+        .swiper-button-next:hover, .swiper-button-prev:hover { background: #cf2027; border-color: #cf2027; transform: scale(1.1); }
+        .swiper-button-next::after, .swiper-button-prev::after { font-size: 1.5rem; font-weight: bold; }
+        
+        /* Progress Bar */
+        .autoplay-progress { position: absolute; right: 30px; bottom: 30px; z-index: 10; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #cf2027; }
+        .autoplay-progress svg { position: absolute; left: 0; top: 0; width: 100%; height: 100%; stroke-width: 4px; stroke: #cf2027; fill: none; stroke-dashoffset: calc(125.6px * (1 - var(--progress))); stroke-dasharray: 125.6; transform: rotate(-90deg); }
+        
+        @media (max-width: 768px) { .swiper-container-wrapper { height: 75vh; } .glass-card h1 { font-size: 2.5rem; } .glass-card { padding: 30px 20px; } .btn-premium { width: 100%; justify-content: center; } .swiper-button-next, .swiper-button-prev { display: none; } }
+    </style>
 
-    <!-- Valores -->
-    <section class="section-values" style="background-color: var(--gray-light);">
-        <div class="container">
-            <div class="section-title">
-                <h2>Nossos Pilares</h2>
-                <div class="divider"></div>
-                <p style="max-width: 700px; margin: 20px auto 0; font-size: 1.1rem; color: #555;">Acreditamos no esporte como ferramenta essencial de formação. Unimos metodologia de treino com valores humanos.</p>
-            </div>
-            <div class="values-grid">
-                <div class="value-card">
-                    <i class="mdi mdi-handshake"></i>
-                    <h4>Respeito e Equipe</h4>
-                    <p>Aprender a jogar junto, respeitar o adversário e valorizar o coletivo.</p>
-                </div>
-                <div class="value-card">
-                    <i class="mdi mdi-trending-up"></i>
-                    <h4>Superação</h4>
-                    <p>Desafiar limites e entender que ganhar e perder fazem parte do processo.</p>
-                </div>
-                <div class="value-card">
-                    <i class="mdi mdi-heart"></i>
-                    <h4>Paixão e Alegria</h4>
-                    <p>O objetivo principal é que a criança se sinta feliz e motivada em campo.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Notícias / Destaques -->
-    <section class="news-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Fique por Dentro</h2>
-                <div class="divider"></div>
-            </div>
-            <div class="news-grid">
-                <div class="news-card">
-                    <div class="news-content">
-                        <h4>🏆 Copa Top Sports</h4>
-                        <p>Disputas emocionantes, torcida vibrante e mais de 40 equipes competindo em alto nível. Um torneio que virou tradição na região!</p>
+    <div class="swiper-container-wrapper">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div class="slide-bg" style="background-image: url('imagens/inicial/aerial-view-of-stadium-aerial-cityscape-top-view-.jpg');"></div>
+                    <div class="slide-overlay"></div>
+                    <div class="slide-inner">
+                        <div class="glass-card">
+                            <h1>Mais que esporte,<br><span>É EXPERIÊNCIA</span></h1>
+                            <p>Descubra o complexo esportivo mais completo de Curitiba. 20.000m² de pura paixão pelo esporte no coração do Portão.</p>
+                            <div class="btn-group">
+                                <a href="topsports" class="btn-premium btn-fill">Conheça a Estrutura</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="news-card">
-                    <div class="news-content">
-                        <h4>🔥 Treino Especial</h4>
-                        <p>Uma sessão intensa com foco em agilidade, explosão e estratégia de jogo. Atletas de todas as idades participaram e elevaram seu desempenho.</p>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div class="slide-bg" style="background-image: url('fotos/top-sports-8015.jpg');"></div>
+                    <div class="slide-overlay"></div>
+                    <div class="slide-inner">
+                        <div class="glass-card">
+                            <h1>O Melhor<br><span>TERCEIRO TEMPO</span></h1>
+                            <p>Depois do jogo, a resenha continua. Novo bar e lanchonete com cardápio exclusivo de porções e burgers.</p>
+                            <div class="btn-group">
+                                <a href="cardapio/cardapio-top-sports.pdf" target="_blank" class="btn-premium btn-fill"><i class="mdi mdi-silverware-variant"></i> Ver Cardápio</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="news-card">
-                    <div class="news-content">
-                        <h4>👦⚽ Top Kids em Ação</h4>
-                        <p>Nossos pequenos talentos deram show no amistoso interno. Orgulho para pais, treinadores e toda a comunidade Top Sports.</p>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <div class="slide-bg" style="background-image: url('fotos/top-sports-7950.jpg');"></div>
+                    <div class="slide-overlay"></div>
+                    <div class="slide-inner">
+                        <div class="glass-card">
+                            <h1>A Polêmica<br><span>ACABOU!</span></h1>
+                            <p>Chega de dúvida. Na Top Sports você conta com a tecnologia exclusiva "Chame o VAR" para rever seus lances.</p>
+                            <div class="btn-group">
+                                <a href="https://app.chameovar.com.br/chamou-o-var" target="_blank" class="btn-premium btn-outline"><i class="mdi mdi-video"></i> Acessar o VAR</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="autoplay-progress"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20"></circle></svg><span></span></div>
         </div>
-    </section>
+    </div>
 
-    <!-- Matricula / CTA -->
-    <section class="cta-school" id="matricula">
-        <div class="container">
-            <h2>Garanta a Vaga do Seu Filho</h2>
-            <p>É rápido, fácil e direto. Escolha seu horário, traga seu pequeno craque e venha fazer parte da família PFA.</p>
-            <div style="margin-top: 30px; background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; display: inline-block;">
-                <p style="margin: 0; font-size: 1.1rem;"><i class="mdi mdi-map-marker"></i> Rua João Bettega, 2709 – Portão – Curitiba/PR</p>
-                <p style="margin: 10px 0 0; font-size: 1.1rem;"><i class="mdi mdi-phone"></i> (41) 3346-1117</p>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const progressCircle = document.querySelector(".autoplay-progress svg");
+        const progressContent = document.querySelector(".autoplay-progress span");
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 0, effect: "fade", speed: 1000, loop: true,
+            autoplay: { delay: 6000, disableOnInteraction: false },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+            on: { autoplayTimeLeft(s, time, progress) { progressCircle.style.setProperty("--progress", 1 - progress); progressContent.textContent = Math.ceil(time / 1000) + "s"; } }
+        });
+    </script>
+</div>
+
+<div class="elementor-element elementor-element-53115af8 e-flex e-con-boxed e-con e-parent" data-id="53115af8" data-element_type="container">
+    <div class="elementor-element elementor-element-1358a2ec e-flex e-con-boxed e-con e-parent" data-id="1358a2ec" data-element_type="container">
+      <div class="e-con-inner">
+        <div class="elementor-element elementor-element-566a501e e-con-full e-flex e-con e-child">
+          <div class="elementor-element elementor-element-4660cb9b elementor-widget elementor-widget-heading">
+            <div class="elementor-widget-container">
+              <h6 class="elementor-heading-title elementor-size-default">Quem somos</h6>
             </div>
-            <br><br>
-            <a href="https://wa.me/5541984039797?text=Quero%20matricular%20meu%20filho" class="btn btn-primary" target="_blank">
-                <i class="mdi mdi-whatsapp"></i> Falar com a Escola
-            </a>
+          </div>
+          <div class="elementor-element elementor-element-560a26fe elementor-widget elementor-widget-heading">
+            <div class="elementor-widget-container">
+              <h2 class="elementor-heading-title elementor-size-default">
+                Estrutura completa para futebol, vôlei e esportes de areia
+              </h2>
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-4ae700d1 elementor-widget elementor-widget-heading">
+            <div class="elementor-widget-container">
+              <div class="elementor-heading-title elementor-size-default">
+                Localizada no bairro Portão, a Top Sports é um complexo esportivo de 20.000m² em Curitiba, com 7 quadras (sintéticas, areia e salão), 7 churrasqueiras, salão de eventos e PFA Escola de Futebol.
+              </div>
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-8f0f867 elementor-widget elementor-widget-text-editor">
+            <div class="elementor-widget-container">
+              <p>
+                São <strong>7 quadras no total</strong>: 4 sintéticas (gramado de primeira linha, cobertas), 2 de areia (cobertas) para beach tênis/futevôlei e 1 poliesportiva (piso madeira, coberta). 
+                A estrutura conta ainda com <strong>7 churrasqueiras cobertas com TV</strong>, salão de eventos, bar e lanchonete com <strong>novo cardápio</strong> e tecnologia <strong>"Chame o VAR"</strong> para lances em quadra.
+                Tudo em um ambiente com amplo estacionamento gratuito e segurança.
+              </p>
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-754b414d e-con-full e-grid e-con e-child">
+            <div class="elementor-element elementor-element-c1b276d elementor-widget elementor-widget-counter">
+              <div class="elementor-widget-container">
+                <div class="elementor-counter">
+                  <div class="elementor-counter-title">Mensalistas ativos</div>
+                  <div class="elementor-counter-number-wrapper">
+                    <span class="elementor-counter-number" data-duration="2000" data-to-value="200" data-from-value="0">200</span>
+                    <span class="elementor-counter-number-suffix">+</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="elementor-element elementor-element-4a48d1bc elementor-widget elementor-widget-counter">
+              <div class="elementor-widget-container">
+                <div class="elementor-counter">
+                  <div class="elementor-counter-title">Satisfação dos clientes</div>
+                  <div class="elementor-counter-number-wrapper">
+                    <span class="elementor-counter-number" data-duration="2000" data-to-value="100" data-from-value="0">100</span>
+                    <span class="elementor-counter-number-suffix">%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="elementor-element elementor-element-7d6aa322 elementor-widget elementor-widget-counter">
+              <div class="elementor-widget-container">
+                <div class="elementor-counter">
+                  <div class="elementor-counter-title">Eventos e empresas parceiras</div>
+                  <div class="elementor-counter-number-wrapper">
+                    <span class="elementor-counter-number" data-duration="2000" data-to-value="30" data-from-value="0">30</span>
+                    <span class="elementor-counter-number-suffix">+</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
-</main>
+        <div class="elementor-element elementor-element-472f4157 e-con-full e-flex e-con e-child">
+          <div class="elementor-element elementor-element-61b4122 elementor-widget elementor-widget-image">
+            <div class="elementor-widget-container">
+              <img loading="lazy" decoding="async" src="imagens/inicial/topfutebol.jpg" class="attachment-full size-full" alt="Vista aérea da Top Sports">
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-1289ad73 e-con-full e-flex e-con e-child" data-settings='{"background_background":"classic","position":"absolute"}'>
+            <div class="elementor-element elementor-element-37b136c8 elementor-widget elementor-widget-icon-box">
+              <div class="elementor-widget-container">
+                <div class="elementor-icon-box-wrapper">
+                  <div class="elementor-icon-box-content">
+                    <div class="elementor-icon-box-title">
+                      <span>
+                        Esporte para todos
+                      </span>
+                    </div>
+                    <p class="elementor-icon-box-description">
+                      Futebol, vôlei, beach tênis e futevôlei em um único lugar, com estrutura para treinos, jogos, campeonatos e confraternizações com a família e os amigos.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seção Valores -->
+    <div class="elementor-element elementor-element-523d5f96 e-flex e-con-boxed e-con e-parent" data-id="523d5f96" data-element_type="container" data-settings='{"background_background":"classic"}'>
+      <div class="e-con-inner"><div class="elementor-element elementor-element-67bf6fe8 e-con-full e-flex e-con e-child"><div class="elementor-element elementor-element-7731ecef elementor-widget elementor-widget-heading"><div class="elementor-widget-container"><h6 class="elementor-heading-title elementor-size-default">Nossos Valores</h6></div></div><div class="elementor-element elementor-element-43d97958 elementor-widget elementor-widget-heading"><div class="elementor-widget-container"><h2 class="elementor-heading-title elementor-size-default">O esporte transforma. A Top Sports é palco para essa mudança.</h2></div></div><div class="elementor-element elementor-element-c9adcf9 elementor-widget elementor-widget-text-editor"><div class="elementor-widget-container"><p>Na Top Sports, o foco vai além do placar. Nosso espaço foi pensado para conectar pessoas por meio do esporte, incentivar hábitos saudáveis, fortalecer amizades e criar momentos inesquecíveis em quadra, na areia ou ao redor da churrasqueira.</p></div></div></div></div>
+    </div>
+    
+    <!-- Seção Instalações -->
+    <div class="elementor-element elementor-element-ceef6e9 e-flex e-con-boxed e-con e-parent" data-id="ceef6e9" data-element_type="container" data-settings='{"background_background":"classic"}'>
+        <div class="e-con-inner">
+            <div class="elementor-element elementor-element-34dba481 e-con-full e-flex e-con e-child">
+                <div class="elementor-widget-container">
+                    <h3 class="elementor-heading-title elementor-size-default">Alugue sua quadra esportiva em Curitiba</h3>
+                    <p>Quadras com grama sintética, quadras de areia e quadra poliesportiva. Estrutura completa com vestiários e estacionamento.</p>
+                    <a class="elementor-button elementor-button-link elementor-size-sm" href="contato">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
 
 <!-- FOOTER -->
 <footer style="background:#021a26;color:#fff;padding:32px 0;font-family:Arial,Helvetica,sans-serif">
@@ -458,104 +505,44 @@ var ekit_config = {"ajaxurl":"https:\/\/preview.creativemox.com\/playyon\/wp-adm
 <script src="wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js?ver=3.4.4" id="elementskit-elementor-js"></script>
 
 <script src="js/menu.js"></script>
-    <!-- Ícones flutuantes com efeito Bolha -->
-    <div class="floating-icons">
-        <a href="https://app.chameovar.com.br/chamou-o-var" target="_blank" class="icon icon-var" title="Chame o VAR">
-            <span>Chame o VAR</span>
-        </a>
-        <a href="https://www.instagram.com/topsportsfutebol/" target="_blank" class="icon icon-insta" title="Instagram">
-            <span>Instagram</span>
-        </a>
-        <a href="https://wa.me/5541984039797" target="_blank" class="icon icon-whats" title="WhatsApp">
-            <span>WhatsApp</span>
-        </a>
-        <a href="tel:+5541984039797" class="icon icon-phone" title="Ligar">
-            <span>Ligar</span>
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.multiplix.topsports&pli=1" target="_blank" class="icon icon-play" title="Google Play">
-            <span>Google Play</span>
-        </a>
-        <a href="https://apps.apple.com/br/app/top-sports/id6736372061" target="_blank" class="icon icon-apple" title="App Store">
-            <span>App Store</span>
-        </a>
-    </div>
+<div class="floating-icons">
+    <a href="https://app.chameovar.com.br/chamou-o-var" target="_blank" class="icon" style="background-image: url('app/chame-o-var.png'); background-color: transparent !important;" title="Chame o VAR">Chame o VAR</a>
+    <a href="https://www.instagram.com/topsportsfutebol/" target="_blank" class="icon insta" title="Instagram">Instagram</a>
+    <a href="https://wa.me/5541984039797" target="_blank" class="icon whats" title="WhatsApp">WhatsApp</a>
+    <a href="tel:+5541984039797" class="icon phone" title="Ligar">Ligar</a>
+    <a href="https://play.google.com/store/apps/details?id=com.multiplix.topsports&pli=1" target="_blank" class="icon playstore" title="Google Play">Google Play</a>
+    <a href="https://apps.apple.com/br/app/top-sports/id6736372061" target="_blank" class="icon applestore" title="App Store">App Store</a>
+</div>
 
 <style>
-    /* Estilos da Sidebar Bolha */
+    /* Estilos Customizados para flutuantes */
     .floating-icons {
         position: fixed;
         top: 50%;
-        right: 20px;
+        right: 15px;
         transform: translateY(-50%);
         z-index: 9999;
         display: flex;
         flex-direction: column;
-        gap: 15px;
-        align-items: flex-end;
+        gap: 10px;
     }
-
     .floating-icons .icon {
-        width: 55px;
-        height: 55px;
-        background-color: #fff;
-        border-radius: 50%;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center; 
-        text-decoration: none;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        width: 50px;
+        height: 50px;
         background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 60%;
-        border: 2px solid #eee;
-        position: relative;
-        box-sizing: border-box;
+        background-position: center;
+        background-size: contain;
+        transition: transform 0.2s ease;
+        display: block;
+        text-indent: -9999px;
     }
-
-    .icon-var { background-image: url('app/chame-o-var.png'); background-size: 85% !important; }
-    .icon-insta { background-image: url('https://cdn-icons-png.flaticon.com/512/2111/2111463.png'); }
-    .icon-whats { background-image: url('https://cdn-icons-png.flaticon.com/512/733/733585.png'); }
-    .icon-phone { background-image: url('social/tel.png'); background-color: #f44336 !important; background-size: 50% !important; border-color: #f44336 !important; }
-    .icon-play { background-image: url('https://cdn-icons-png.flaticon.com/512/888/888857.png'); }
-    .icon-apple { background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/App_Store_%28iOS%29.svg/2048px-App_Store_%28iOS%29.svg.png'); background-size: 50% !important; }
-
-    .floating-icons .icon span {
-        opacity: 0;
-        font-size: 0px;
-        color: #fff !important;
-        font-weight: 800;
-        font-family: 'Poppins', sans-serif;
-        transition: all 0.3s ease;
-        text-align: center;
-        line-height: 1;
-        pointer-events: none;
-        display: block !important; 
-        width: 100%;
-        text-shadow: 0 2px 4px rgba(0,0,0,0.8);
-        position: absolute;
-        bottom: 10px;
-        left: 0;
-        text-indent: 0 !important;
-    }
-
-    .floating-icons .icon:hover {
-        width: 100px;  
-        height: 100px; 
-        border-radius: 50%;
-        background-color: transparent !important;
-        background-position: center 15px !important;
-        background-size: 40% !important; 
-        z-index: 99999;
-        border: none !important;
-        box-shadow: none;
-    }
-
-    .floating-icons .icon:hover span {
-        opacity: 1 !important;
-        font-size: 12px !important;
-    }
+    .floating-icons .icon:hover { transform: scale(1.1); }
+    .insta, .whats, .playstore, .applestore { background-color: transparent !important; border: none !important; box-shadow: none !important; }
+    .phone { background-color: #f44336; border-radius: 50%; box-shadow: none; border: none !important; background-image: url('social/tel.png'); background-size: 55% auto; }
+    .insta { background-image: url('https://cdn-icons-png.flaticon.com/512/2111/2111463.png'); }
+    .whats { background-image: url('https://cdn-icons-png.flaticon.com/512/733/733585.png'); }
+    .playstore { background-image: url('https://cdn-icons-png.flaticon.com/512/888/888857.png'); background-size: 80% auto; }
+    .applestore { background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/App_Store_%28iOS%29.svg/2048px-App_Store_%28iOS%29.svg.png'); background-size: 70% auto; }
 </style>
 
 </body>
