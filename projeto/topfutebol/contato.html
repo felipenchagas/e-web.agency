@@ -172,6 +172,99 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 			</head>
 <body class="page-template page-template-elementor_header_footer page page-id-486 wp-embed-responsive theme-default elementor-default elementor-template-full-width elementor-kit-201 elementor-page elementor-page-486">
 
+<!-- NOVO HEADER MOBILE DO ZERO -->
+<div class="top-mobile-header">
+    <div class="mobile-grid-container">
+        <!-- Esquerda: Sanduíche -->
+        <div class="mobile-col-left">
+            <button class="custom-hamburger" id="custom-hamburger-trigger" aria-label="Abrir Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        
+        <!-- Centro: Logo -->
+        <div class="mobile-col-center">
+            <a href="index"><img src="imagens/logo.png" alt="Top Sports"></a>
+        </div>
+        
+        <!-- Direita: Contato -->
+        <div class="mobile-col-right">
+            <a href="contato" class="mobile-btn-red">CONTATO</a>
+        </div>
+    </div>
+</div>
+
+<style>
+/* CSS DO NOVO HEADER MOBILE (ZERO CONFLITO) */
+.top-mobile-header {
+    display: none; /* Escondido por padrão */
+    background-color: #ffffff; /* Fundo Branco */
+    padding: 10px 15px;
+    height: 70px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #eee; /* Borda leve */
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 1024px) {
+    .top-mobile-header { display: block; }
+    /* Esconde o Header do Elementor */
+    .elementor-location-header { display: none !important; }
+    
+    .mobile-grid-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+
+    .mobile-col-left, .mobile-col-right { flex: 1; display: flex; align-items: center; }
+    .mobile-col-center { flex: 2; display: flex; justify-content: center; align-items: center; }
+
+    .mobile-col-left { justify-content: flex-start; }
+    .mobile-col-right { justify-content: flex-end; }
+
+    /* Estilo Sanduíche (Bola vermelha com linhas brancas) */
+    .custom-hamburger {
+        background-color: #cf2027 !important;
+        border: none !important;
+        border-radius: 50% !important;
+        width: 45px !important;
+        height: 45px !important;
+        cursor: pointer;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 4px !important;
+        padding: 0 !important;
+        box-shadow: 0 3px 10px rgba(207, 32, 39, 0.3);
+    }
+    .custom-hamburger span {
+        display: block !important;
+        width: 22px !important;
+        height: 2px !important;
+        background-color: #ffffff !important; 
+        border-radius: 2px !important;
+    }
+
+    /* Estilo Logo */
+    .mobile-col-center img { max-height: 45px; width: auto; }
+
+    /* Estilo Botão */
+    .mobile-btn-red {
+        background-color: #cf2027; color: #fff !important; text-decoration: none;
+        padding: 8px 15px; border-radius: 5px; font-size: 11px; font-weight: 800;
+        text-transform: uppercase; white-space: nowrap;
+    }
+}
+</style>
+
 
 <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
@@ -832,17 +925,18 @@ var ekit_config = {"ajaxurl":"https:\/\/preview.creativemox.com\/playyon\/wp-adm
 </script>
 <script src="wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js?ver=3.4.4" id="elementskit-elementor-js"></script>
 
-<script src="js/menu.js"></script>
-    <!-- Ícones flutuantes com efeito Bolha -->
-    <div class="floating-icons">
+    <!-- Ícones flutuantes com efeito Bolha e comportamento Mobile -->
+    <div class="floating-icons" id="floatingIcons">
+        <!-- Botão de Apps (Apenas Mobile) -->
+        <div class="icon icon-apps-toggle" id="toggleApps" onclick="this.parentElement.classList.toggle('active'); var s = this.querySelector('span'); s.textContent = (s.textContent === 'APPS' ? 'FECHAR' : 'APPS');" title="Abrir Apps">
+            <span class="mobile-label">APPS</span>
+        </div>
+
         <a href="https://app.chameovar.com.br/chamou-o-var" target="_blank" class="icon icon-var" title="Chame o VAR">
             <span>Chame o VAR</span>
         </a>
         <a href="https://www.instagram.com/topsportsfutebol/" target="_blank" class="icon icon-insta" title="Instagram">
             <span>Instagram</span>
-        </a>
-        <a href="https://wa.me/5541984039797" target="_blank" class="icon icon-whats" title="WhatsApp">
-            <span>WhatsApp</span>
         </a>
         <a href="tel:+5541984039797" class="icon icon-phone" title="Ligar">
             <span>Ligar</span>
@@ -853,10 +947,15 @@ var ekit_config = {"ajaxurl":"https:\/\/preview.creativemox.com\/playyon\/wp-adm
         <a href="https://apps.apple.com/br/app/top-sports/id6736372061" target="_blank" class="icon icon-apple" title="App Store">
             <span>App Store</span>
         </a>
+        
+        <!-- WhatsApp (Sempre visível) -->
+        <a href="https://wa.me/5541984039797" target="_blank" class="icon icon-whats" title="WhatsApp" id="whatsAppIcon">
+            <span>WhatsApp</span>
+        </a>
     </div>
 
 <style>
-    /* Estilos da Sidebar Bolha */
+    /* Sidebar Base */
     .floating-icons {
         position: fixed;
         top: 50%;
@@ -869,9 +968,10 @@ var ekit_config = {"ajaxurl":"https:\/\/preview.creativemox.com\/playyon\/wp-adm
         align-items: flex-end;
     }
 
+    .icon-apps-toggle { display: none !important; }
+
     .floating-icons .icon {
-        width: 55px;
-        height: 55px;
+        width: 55px; height: 55px;
         background-color: #fff;
         border-radius: 50%;
         box-shadow: 0 5px 15px rgba(0,0,0,0.15);
@@ -886,7 +986,7 @@ var ekit_config = {"ajaxurl":"https:\/\/preview.creativemox.com\/playyon\/wp-adm
         background-size: 60%;
         border: 2px solid #eee;
         position: relative;
-        box-sizing: border-box;
+        cursor: pointer;
     }
 
     .icon-var { background-image: url('app/chame-o-var.png'); background-size: 85% !important; }
@@ -896,41 +996,87 @@ var ekit_config = {"ajaxurl":"https:\/\/preview.creativemox.com\/playyon\/wp-adm
     .icon-play { background-image: url('https://cdn-icons-png.flaticon.com/512/888/888857.png'); }
     .icon-apple { background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/App_Store_%28iOS%29.svg/2048px-App_Store_%28iOS%29.svg.png'); background-size: 50% !important; }
 
+    /* Estilo do Texto no Desktop (Hover) */
     .floating-icons .icon span {
-        opacity: 0;
-        font-size: 0px;
-        color: #fff !important;
-        font-weight: 800;
-        font-family: 'Poppins', sans-serif;
-        transition: all 0.3s ease;
-        text-align: center;
-        line-height: 1;
-        pointer-events: none;
-        display: block !important; 
-        width: 100%;
-        text-shadow: 0 2px 4px rgba(0,0,0,0.8);
-        position: absolute;
-        bottom: 10px;
-        left: 0;
+        opacity: 0; position: absolute; bottom: 10px; left: 0; width: 100%;
+        font-size: 0px; color: #fff !important; font-weight: 800; text-align: center;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.8); transition: 0.3s; pointer-events: none;
         text-indent: 0 !important;
     }
 
     .floating-icons .icon:hover {
-        width: 100px;  
-        height: 100px; 
-        border-radius: 50%;
+        width: 100px; height: 100px; 
         background-color: transparent !important;
         background-position: center 15px !important;
         background-size: 40% !important; 
-        z-index: 99999;
-        border: none !important;
-        box-shadow: none;
+        border: none !important; box-shadow: none;
     }
 
-    .floating-icons .icon:hover span {
-        opacity: 1 !important;
-        font-size: 12px !important;
+    .floating-icons .icon:hover span { opacity: 1 !important; font-size: 12px !important; }
+
+    /* MOBILE CONFIG */
+    @media (max-width: 1024px) {
+        .floating-icons {
+            top: 120px; right: 15px; transform: none;
+        }
+
+        /* Botão Apps no Topo Direito */
+        .icon-apps-toggle { 
+            display: flex !important; 
+            background-color: #021a26 !important;
+            z-index: 10001;
+            border: 2px solid #fff !important;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
+            position: relative !important;
+            overflow: visible !important;
+            background-image: url('https://img.icons8.com/material-sharp/48/ffffff/apps.png') !important;
+            background-size: 50% !important;
+            background-position: center center !important;
+        }
+        
+        .icon-apps-toggle span.mobile-label { 
+            opacity: 1 !important; 
+            font-size: 11px !important; 
+            color: #fff !important;
+            text-shadow: 1px 1px 3px #000 !important;
+            position: absolute !important; 
+            bottom: -22px !important; 
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 1px;
+            width: auto !important;
+            pointer-events: none;
+        }
+
+        @media (min-width: 1025px) { .mobile-label { display: none !important; } }
+
+        /* Esconde Apps da Gaveta */
+        .floating-icons .icon:not(#whatsAppIcon):not(.icon-apps-toggle) {
+            display: none !important;
+            opacity: 0; transform: scale(0.5);
+        }
+
+        /* Abre Gaveta */
+        .floating-icons.active .icon:not(#whatsAppIcon) {
+            display: flex !important; opacity: 1; transform: scale(1);
+        }
+
+        /* WhatsApp na Direita Inferior - Mobile */
+        #whatsAppIcon {
+            position: fixed; right: 20px; bottom: 20px;
+            width: 65px; height: 65px;
+            background-color: transparent !important;
+            background-image: url('https://cdn-icons-png.flaticon.com/512/733/733585.png') !important;
+            background-size: contain !important;
+            border: none !important; box-shadow: none !important;
+            z-index: 10000; border-radius: 0 !important;
+        }
+        #whatsAppIcon span { display: none !important; }
     }
 </style>
+
+<script src="js/menu.js"></script>
 </body>
 </html>
