@@ -45,18 +45,52 @@
 <link rel='stylesheet' href='css/menu-essenciais.css' media='all'>
 
 <style>
-/* Correção de Alinhamento do Menu - Desktop */
+/* Correção de Alinhamento do Menu - Simetria Total Desktop */
 @media (min-width: 1025px) {
-    .elementor-location-header .elementor-element-537fc374 {
-        justify-content: flex-end !important;
-        padding-right: 40px !important;
+    /* Container Pai: Remove gaps automáticos */
+    .elementor-location-header .elementor-element-c809bcd {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        gap: 0 !important;
     }
+
+    /* Colunas Laterais */
+    .elementor-location-header .elementor-element-537fc374,
     .elementor-location-header .elementor-element-1c2dd2fd {
-        justify-content: space-between !important;
-        padding-left: 40px !important;
+        display: flex !important;
+        flex: 1 !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
-    .elementor-location-header .elementor-element-1c2dd2fd .elementor-widget-nav-menu {
-        margin-right: auto !important;
+
+    .elementor-location-header .elementor-element-537fc374 { justify-content: flex-end !important; }
+    .elementor-location-header .elementor-element-1c2dd2fd { justify-content: flex-start !important; }
+
+    /* Coluna Central: Logo (Compensação para tirar o buraco da direita) */
+    .elementor-location-header .elementor-element-2518095 {
+        flex: 0 0 auto !important;
+        margin-left: 30px !important;  /* Espaço com o menu da esquerda */
+        margin-right: 0px !important;  /* COLA no menu da direita para compensar o buraco */
+        padding: 0 !important;
+    }
+
+    /* Zera respiros internos dos widgets */
+    .elementor-location-header .elementor-widget-nav-menu,
+    .elementor-location-header .elementor-widget-nav-menu .elementor-widget-container {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Remove o recuo do primeiro item do menu da direita */
+    .elementor-location-header .elementor-element-1c2dd2fd .elementor-nav-menu > li:first-child > a {
+        padding-left: 0 !important;
+    }
+
+    /* Botão de Contato na ponta direita extrema */
+    .elementor-location-header .elementor-element-1c2dd2fd .elementor-widget-button {
+        margin-left: auto !important;
     }
 }
 
@@ -259,15 +293,12 @@
 <div class="elementor-element elementor-element-3e167f42 elementor-nav-menu--stretch elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-widget elementor-widget-nav-menu" data-id="3e167f42-right" data-element_type="widget" style="margin-right: 15px;" data-settings="{&quot;full_width&quot;:&quot;stretch&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;svg class=\&quot;e-font-icon-svg e-fas-angle-down\&quot; viewBox=\&quot;0 0 320 512\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot;&gt;&lt;path d=\&quot;M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z\&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
 <div class="elementor-widget-container">
 <nav aria-label="Menu Secundário" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none">
-<ul id="menu-3-3e167f43" class="elementor-nav-menu" style="display: flex; align-items: center;">
-<!-- Item "Mais" -->
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-336" style="display: inline-block;">
+<ul id="menu-3-3e167f43" class="elementor-nav-menu" style="display: flex !important; align-items: center !important; padding-left: 0 !important; margin-left: 0 !important;">
 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-326">
 <a href="churrasqueiras_e_eventos" class="elementor-item" title="Churrasqueira & Eventos" tabindex="-1">Churrasqueira e eventos</a>
 </li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-326">
 <a href="escola_de_futebol" class="elementor-item" title="Escola PFA" tabindex="-1">Escola PFA</a>
-</li>
 </li>
 </ul>
 </nav>
