@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Seleciona o botão hamburger existente
-  const existingHamburger = document.querySelector(".elementor-menu-toggle");
+  // Seleciona os botões (o original e o novo customizado)
+  const hamburgers = document.querySelectorAll(".elementor-menu-toggle, #custom-hamburger-trigger");
 
   // Seleciona os elementos do modal
   const modalOverlay = document.getElementById("modal-overlay");
@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
     modalMenu.classList.add("open");
     modalOverlay.classList.add("open");
     modalMenu.setAttribute("aria-hidden", "false");
-    existingHamburger.setAttribute("aria-expanded", "true");
   }
 
   // Função para fechar o modal
@@ -20,22 +19,19 @@ document.addEventListener("DOMContentLoaded", function() {
     modalMenu.classList.remove("open");
     modalOverlay.classList.remove("open");
     modalMenu.setAttribute("aria-hidden", "true");
-    existingHamburger.setAttribute("aria-expanded", "false");
   }
 
-  // Se o hamburger existir, adiciona o evento de clique
-  if (existingHamburger) {
-    existingHamburger.addEventListener("click", function() {
-      // Se já estiver aberto, fecha; caso contrário, abre
+  // Adiciona evento em todos os botões que abrem o menu
+  hamburgers.forEach(hamburger => {
+    hamburger.addEventListener("click", function(e) {
+      e.preventDefault();
       if (modalMenu.classList.contains("open")) {
         closeModal();
       } else {
         openModal();
       }
     });
-  } else {
-    console.error("Não foi possível encontrar o .elementor-menu-toggle");
-  }
+  });
 
   // Botão de fechar do modal
   if (modalCloseBtn) {
