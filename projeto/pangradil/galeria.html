@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Galeria de Fotos | Pangradil</title>
+
+<!-- Stylesheets -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+<link href="css/jquery.fancybox.min.css" rel="stylesheet">
+
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+
+<style>
+    .gallery-block {
+        margin-bottom: 30px;
+    }
+    .gallery-block .inner-box {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    .gallery-block .inner-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+    .gallery-block .image {
+        position: relative;
+        margin-bottom: 0;
+        overflow: hidden;
+    }
+    .gallery-block .image img {
+        display: block;
+        width: 100%;
+        height: 250px; /* Fixed height for consistency */
+        object-fit: cover;
+        transition: all 0.5s ease;
+    }
+    .gallery-block .inner-box:hover .image img {
+        transform: scale(1.1);
+    }
+    .gallery-block .overlay-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    .gallery-block .inner-box:hover .overlay-box {
+        opacity: 1;
+    }
+    .gallery-block .overlay-box i {
+        color: #fff;
+        font-size: 24px;
+        background: var(--theme-color-1, #ff5e14);
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        border-radius: 50%;
+        transform: scale(0);
+        transition: all 0.3s ease;
+    }
+    .gallery-block .inner-box:hover .overlay-box i {
+        transform: scale(1);
+    }
+</style>
+</head>
+
+<body>
+<div class="page-wrapper">
+
+	<!-- Preloader -->
+<div class="preloader"></div>
+	<!-- Main Header-->
+<header class="main-header header-style-two" id="home">
+    <!-- Header Top -->
+    <div class="header-top">
+        <div class="inner-container">
+            
+            <!-- Top Left -->
+            <div class="top-left">
+                <!-- Info List -->
+                <ul class="list-style-one">
+                    <li><i class="fa fa-clock"></i> Seg - Sex: 08:00 - 18:00</li>
+                    <li><i class="fa fa-map-marker-alt"></i> Curitiba, Paraná</li>
+                    <li><i class="fa fa-envelope"></i> <a href="mailto:contato@pangradil.com.br">contato@pangradil.com.br</a></li>
+                </ul>
+            </div>
+        
+            <!-- Top Right -->
+            <div class="top-right">
+                <!-- Info Btn -->
+                <a href="tel:+554133145000" class="info-btn">
+                    <i class="icon fa fa-phone"></i>
+                    <small>Faça uma ligação</small>
+                    <strong>(41) 3314-5000</strong>
+                </a>
+
+                <!-- Social Icon One -->
+                <ul class="social-icon-one">
+                    <li><a href="contato-pangradil.html"><i class="icon fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/pangradil/"><i class="icon fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Header Top -->
+    
+    <div class="header-lower">
+        <!-- Main box -->
+        <div class="main-box">
+            <div class="logo-box">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt="Logo Pangradil" title="Pangradil"></a>
+                </div>
+            </div>
+
+            <!--Nav Box-->
+            <div class="nav-outer">    
+                <nav class="nav main-menu">
+            <ul class="navigation onepage-nav">
+            <li><a href="index.html">Início</a></li>
+			<li><a href="quem-somos.html">Quem Somos</a></li>
+            <li><a href="vantagens-do-gradil-para-cercamento.html">Vantagens</a></li>
+            <li><a href="tecnologia-fabricacao-gradil.html">Tecnologia</a></li>
+			<li><a href="especificacoes-gradil.html">Especificações técnicas</a></li>
+            <li class="current"><a href="galeria.html">Galeria</a></li>
+			<li><a href="contato-pangradil.html">Contato</a></li>
+            </ul>
+                </nav>
+            </div>
+            <!-- Main Menu End-->
+
+
+        </div>
+    </div>
+
+    <!-- Mobile Menu  -->
+    <div class="mobile-menu">
+        <div class="menu-backdrop"></div>
+        
+        <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+        <nav class="menu-box">
+            <div class="upper-box">
+                <div class="nav-logo">
+                    <a href="index.html"><img src="images/logo.png" alt="Logo Pangradil" title="Pangradil"></a>
+                </div>
+                <div class="close-btn"><i class="icon fa fa-times"></i></div>
+            </div>
+        
+            <ul class="navigation clearfix">
+                <!-- Menu será gerado automaticamente -->
+            </ul>
+            <ul class="contact-list-one">
+                <li>
+                    <i class="icon lnr-icon-phone-handset"></i>
+                    <span class="title">Ligue Agora</span>
+                    <div class="text"><a href="tel:+554133145000">(41) 3314-5000</a></div>
+                </li>
+                <li>
+                    <i class="icon lnr-icon-envelope1"></i>
+                    <span class="title">Envie um E-mail</span>
+                    <div class="text"><a href="mailto:contato@pangradil.com.br">contato@pangradil.com.br</a></div>
+                </li>
+                <li>
+                    <i class="icon lnr-icon-map-marker"></i>
+                    <span class="title">Endereço</span>
+                    <div class="text">Curitiba, Paraná</div>
+                </li>
+            </ul>
+        
+            <ul class="social-links">
+                <li><a href="contato-pangradil.html"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/pangradil/"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </nav>
+    </div><!-- End Mobile Menu -->
+
+    <!-- Header Search -->
+    <div class="search-popup">
+        <span class="search-back-drop"></span>
+        <button class="close-search"><span class="fa fa-times"></span></button>
+        
+        <div class="search-inner">
+            <form method="post" action="#">
+                <div class="form-group">
+                    <input type="search" name="search-field" value="" placeholder="Buscar..." required="">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- End Header Search -->
+
+    <!-- Sticky Header  -->
+    <div class="sticky-header">
+        <div class="auto-container">
+            <div class="inner-container">
+                <!--Logo-->
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt="Logo Pangradil" title="Pangradil"></a>
+                </div>
+        
+                <!--Right Col-->
+                <div class="nav-outer">
+                    <!-- Main Menu -->
+                    <nav class="main-menu">
+                        <div class="navbar-collapse show collapse clearfix">
+                            <ul class="navigation clearfix">
+                                <!-- Menu será gerado automaticamente -->
+                            </ul>
+                        </div>
+                    </nav><!-- Main Menu End-->
+        
+                    <!--Mobile Navigation Toggler-->
+                    <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+                </div>
+            </div>
+        </div>
+    </div><!-- End Sticky Menu -->
+</header>
+	<!--End Main Header -->
+
+<!-- Start main-content -->
+<section class="page-title" style="background-image: url(images/background/1.jpg);">
+	<div class="auto-container">
+		<div class="title-outer text-center">
+			<h1 class="title">Galeria de Fotos</h1>
+			<ul class="page-breadcrumb">
+				<li><a href="index.html">Home</a></li>
+				<li>Galeria</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<!-- Gallery Section -->
+<section class="projects-section pt-100 pb-70">
+    <div class="auto-container">
+        <div class="sec-title text-center">
+            <div class="sub-title-outer">
+                <span class="sub-title">Nosso Portfólio</span>
+                <span class="divider"></span>
+            </div>
+            <h2>Confira Nossas Instalações</h2>
+            <div class="text">Veja alguns dos nossos projetos recentes de gradis e cercamentos instalados em residências, comércios e indústrias.</div>
+        </div>
+
+        <div class="row">
+            <!-- Gallery Item 1 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-block wow fadeInUp">
+                <div class="inner-box">
+                    <figure class="image">
+                        <img src="images/galeria/353785350_679601870643317_6765158214310443073_n..jpg" alt="Instalação Pangradil">
+                    </figure>
+                    <a href="images/galeria/353785350_679601870643317_6765158214310443073_n..jpg" class="overlay-box" data-fancybox="gallery" data-caption="Instalação Pangradil">
+                        <i class="icon fa fa-search-plus"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gallery Item 2 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-block wow fadeInUp" data-wow-delay="200ms">
+                <div class="inner-box">
+                    <figure class="image">
+                        <img src="images/galeria/353993857_933327924565142_6998592242693843400_n..jpg" alt="Instalação Pangradil">
+                    </figure>
+                    <a href="images/galeria/353993857_933327924565142_6998592242693843400_n..jpg" class="overlay-box" data-fancybox="gallery" data-caption="Instalação Pangradil">
+                        <i class="icon fa fa-search-plus"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gallery Item 3 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-block wow fadeInUp" data-wow-delay="400ms">
+                <div class="inner-box">
+                    <figure class="image">
+                        <img src="images/galeria/354041636_983658296213096_686189533597700694_n..jpg" alt="Instalação Pangradil">
+                    </figure>
+                    <a href="images/galeria/354041636_983658296213096_686189533597700694_n..jpg" class="overlay-box" data-fancybox="gallery" data-caption="Instalação Pangradil">
+                        <i class="icon fa fa-search-plus"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gallery Item 4 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-block wow fadeInUp">
+                <div class="inner-box">
+                    <figure class="image">
+                        <img src="images/galeria/367764928_236033488904302_1848670327573186477_n..jpg" alt="Instalação Pangradil">
+                    </figure>
+                    <a href="images/galeria/367764928_236033488904302_1848670327573186477_n..jpg" class="overlay-box" data-fancybox="gallery" data-caption="Instalação Pangradil">
+                        <i class="icon fa fa-search-plus"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gallery Item 5 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-block wow fadeInUp" data-wow-delay="200ms">
+                <div class="inner-box">
+                    <figure class="image">
+                        <img src="images/galeria/369281459_6494780333963481_34726823945297331_n..jpg" alt="Instalação Pangradil">
+                    </figure>
+                    <a href="images/galeria/369281459_6494780333963481_34726823945297331_n..jpg" class="overlay-box" data-fancybox="gallery" data-caption="Instalação Pangradil">
+                        <i class="icon fa fa-search-plus"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gallery Item 6 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-block wow fadeInUp" data-wow-delay="400ms">
+                <div class="inner-box">
+                    <figure class="image">
+                        <img src="images/galeria/369656079_622159583397659_5471621604545539630_n..jpg" alt="Instalação Pangradil">
+                    </figure>
+                    <a href="images/galeria/369656079_622159583397659_5471621604545539630_n..jpg" class="overlay-box" data-fancybox="gallery" data-caption="Instalação Pangradil">
+                        <i class="icon fa fa-search-plus"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gallery Item 7 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-block wow fadeInUp">
+                <div class="inner-box">
+                    <figure class="image">
+                        <img src="images/galeria/372502651_3471178273145250_4795113029677721171_n..jpg" alt="Instalação Pangradil">
+                    </figure>
+                    <a href="images/galeria/372502651_3471178273145250_4795113029677721171_n..jpg" class="overlay-box" data-fancybox="gallery" data-caption="Instalação Pangradil">
+                        <i class="icon fa fa-search-plus"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gallery Item 8 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-block wow fadeInUp" data-wow-delay="200ms">
+                <div class="inner-box">
+                    <figure class="image">
+                        <img src="images/galeria/372628509_676808864017585_5986371165310253253_n..jpg" alt="Instalação Pangradil">
+                    </figure>
+                    <a href="images/galeria/372628509_676808864017585_5986371165310253253_n..jpg" class="overlay-box" data-fancybox="gallery" data-caption="Instalação Pangradil">
+                        <i class="icon fa fa-search-plus"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gallery Item 9 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-block wow fadeInUp" data-wow-delay="400ms">
+                <div class="inner-box">
+                    <figure class="image">
+                        <img src="images/galeria/400481171_321034537341405_8867305442128759153_n..jpg" alt="Instalação Pangradil">
+                    </figure>
+                    <a href="images/galeria/400481171_321034537341405_8867305442128759153_n..jpg" class="overlay-box" data-fancybox="gallery" data-caption="Instalação Pangradil">
+                        <i class="icon fa fa-search-plus"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gallery Item 10 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-block wow fadeInUp">
+                <div class="inner-box">
+                    <figure class="image">
+                        <img src="images/galeria/419337245_1039653910461325_157357556625805051_n..jpg" alt="Instalação Pangradil">
+                    </figure>
+                    <a href="images/galeria/419337245_1039653910461325_157357556625805051_n..jpg" class="overlay-box" data-fancybox="gallery" data-caption="Instalação Pangradil">
+                        <i class="icon fa fa-search-plus"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gallery Item 11 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-block wow fadeInUp" data-wow-delay="200ms">
+                <div class="inner-box">
+                    <figure class="image">
+                        <img src="images/galeria/425262783_705800838354812_6946234808124086272_n..jpg" alt="Instalação Pangradil">
+                    </figure>
+                    <a href="images/galeria/425262783_705800838354812_6946234808124086272_n..jpg" class="overlay-box" data-fancybox="gallery" data-caption="Instalação Pangradil">
+                        <i class="icon fa fa-search-plus"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gallery Item 12 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-block wow fadeInUp" data-wow-delay="400ms">
+                <div class="inner-box">
+                    <figure class="image">
+                        <img src="images/galeria/434453156_1499464604247385_5950021422603736978_n..jpg" alt="Instalação Pangradil">
+                    </figure>
+                    <a href="images/galeria/434453156_1499464604247385_5950021422603736978_n..jpg" class="overlay-box" data-fancybox="gallery" data-caption="Instalação Pangradil">
+                        <i class="icon fa fa-search-plus"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Main Footer -->
+<footer class="main-footer footer-style-one">
+    <div class="bg bg-image" style="background-image: url(images/background/1.jpg)"></div>
+    <div class="icon-turbines-7"></div>
+  
+    <!-- Footer Top -->
+    <div class="footer-top">
+        <div class="auto-container">
+            <div class="outer-box">
+
+                <!-- Top Left -->
+                <div class="top-left">
+                    <div class="logo"><img src="images/logo-2.png" alt="Logo da Pangradil" title="Pangradil"></div>
+                </div>
+
+                <!-- Top Right -->
+                <div class="top-right">
+                    <ul class="social-icon-two">
+                        <li class="title">Siga-nos:</li>
+                        <li><a href="contato-pangradil.html"><i class="icon fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/pangradil/"><i class="icon fab fa-instagram"></i></a></li>
+                        <li><a href="contato-pangradil.html"><i class="icon fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Widgets Section -->
+    <div class="widgets-section">
+        <div class="auto-container">
+            <div class="row">
+
+                <!-- Footer Column -->
+                <div class="footer-column col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                    <div class="footer-widget contact-widget">
+                        <h5 class="widget-title">Contato</h5>
+                        <div class="widget-content">
+                            <ul class="contact-list-two light">
+                                <li><i class="fal fa-map-marker-alt mt-1"></i> Avenida Presidente Kennedy, 3895 - Portão - Curitiba / PR</li>
+                                <li><i class="fal fa-phone"></i> <a href="tel:+554133145000">(41) 3314-5000</a></li>
+                                <li><i class="fal fa-envelope"></i> <a href="mailto:contato@pangradil.com.br">contato@pangradil.com.br</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Column -->
+                <div class="footer-column col-xl-2 col-lg-6 col-md-6 col-sm-12">
+                    <div class="footer-widget links-widget">
+                        <h5 class="widget-title">Links Rápidos</h5>
+                        <div class="widget-content">
+                            <ul class="user-links">
+                                <li><i class="icon fa fa-angle-right"></i> <a href="index.html">Início</a></li>
+                                <li><i class="icon fa fa-angle-right"></i> <a href="quem-somos.html">Quem Somos</a></li>
+                                <li><i class="icon fa fa-angle-right"></i> <a href="especificacoes-gradil.html">Serviços</a></li>
+                                <li><i class="icon fa fa-angle-right"></i> <a href="tecnologia-fabricacao-gradil.html">Tecnologia</a></li>
+                                <li><i class="icon fa fa-angle-right"></i> <a href="contato-pangradil.html">Contato</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Column -->
+                <div class="footer-column col-xl-2 col-lg-6 col-md-6 col-sm-12">
+                    <div class="footer-widget links-widget">
+                        <h5 class="widget-title">A Empresa</h5>
+                        <div class="widget-content">
+                            <ul class="user-links">
+                                <li><i class="icon fa fa-angle-right"></i> <a href="quem-somos.html">Equipe</a></li>
+                                <li><i class="icon fa fa-angle-right"></i> <a href="contato-pangradil.html">Carreiras</a></li>
+                                <li><i class="icon fa fa-angle-right"></i> <a href="quem-somos.html">Política de privacidade</a></li>
+                                <li><i class="icon fa fa-angle-right"></i> <a href="quem-somos.html">Termos de uso</a></li>
+                                <li><i class="icon fa fa-angle-right"></i> <a href="contato-pangradil.html">Suporte</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Column -->
+                <div class="footer-column col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                    <div class="footer-widget newsletter-widget">
+                        <h5 class="widget-title">Newsletter</h5>
+                        <div class="text">Assine para receber atualizações, notícias e insights sobre cercamentos e gradis.</div>
+
+                        <!-- Newsletter Form -->
+                        <div class="newsletter-form">
+                            <form method="post" action="#">
+                                <div class="form-group">
+                                    <div class="input-outer">
+                                        <span class="icon fal fa-envelope"></span>
+                                        <input type="email" name="Email" placeholder="Seu Email" required="">
+                                    </div>
+                                    <button type="submit" class="theme-btn btn-style-one bg-orange"><span class="btn-title">Inscreva-se</span></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="auto-container">
+            <div class="inner-container">
+                <div class="copyright-text">© 2025 Pangradil. Todos os direitos reservados.</div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+  <!--End Main Footer -->
+
+</div><!-- End Page Wrapper -->
+
+<!-- Scroll To Top -->
+<div class="scroll-to-top scroll-to-target" data-target="php"><span class="fa fa-angle-up"></span></div>
+
+<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min-1.js"></script><script src="js/jquery.js"></script>
+<script src="js/popper.min.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/gsap.min.js"></script>
+<script src="js/mixitup.js"></script>
+<script src="js/bxslider.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script src="js/splitType.js"></script>
+<script src="js/select2.min.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/appear.js"></script>
+<script src="js/owl.js"></script>
+<script src="js/script.js"></script>
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/5541984039787" class="float-whatsapp" target="_blank">
+  <i class="fab fa-whatsapp my-float"></i>
+</a>
+<style>
+.float-whatsapp{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    left:40px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index:100;
+}
+.float-whatsapp:hover {
+    color: #fff;
+    background-color: #1ebc57;
+}
+.my-float{
+    margin-top:16px;
+}
+</style>
+</body>
+</html>
