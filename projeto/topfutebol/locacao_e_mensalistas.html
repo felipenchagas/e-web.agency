@@ -488,19 +488,28 @@
 /* Hero Section - Texto Branco e Sombra */
 .hero-locacao {
     position: relative;
-    height: 500px;
+    height: 70vh;
+    min-height: 550px;
     background-size: cover;
     background-position: center;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: #fff !important; /* Texto branco */
+    padding-top: 100px; /* Menu clearance */
 }
 .hero-locacao .overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)); }
 .hero-content { position: relative; z-index: 2; }
 .hero-content h1 { font-size: 3.5rem; margin-bottom: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.9); color: #fff; }
 .hero-content p { font-size: 1.3rem; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto; text-shadow: 1px 1px 3px rgba(0,0,0,0.8); color: #fff; }
+
+/* Ajuste Notebooks */
+@media (max-width: 1400px) and (max-height: 800px) {
+    .hero-locacao { height: auto; padding: 140px 0 80px; }
+    .hero-content h1 { font-size: 3rem; }
+}
 
 .section-mensalista, .section-avulsa { padding: 80px 0; }
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
