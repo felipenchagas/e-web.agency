@@ -1622,6 +1622,16 @@ ul {
   clip-path: polygon(0 0, 100% 0%, 77% 100%, 0% 100%);
 }
 
+@media (max-width: 1199px) {
+  .main-menu-two__logo:before {
+    display: none;
+  }
+  .main-menu-two__logo a {
+    clip-path: none;
+    padding: 15px;
+  }
+}
+
 .main-menu-two__left {
   position: relative;
   display: block;
