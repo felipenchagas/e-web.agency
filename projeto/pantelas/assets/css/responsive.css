@@ -1321,8 +1321,13 @@
     }
 
     .about-one__right {
-        margin-left: 0;
+        margin-left: 0 !important;
         margin-top: 50px;
+        padding-left: 0 !important;
+    }
+
+    .about-one__img-box {
+        grid-template-columns: 1fr !important;
     }
 
     .about-one__main-tab-box .tab-buttons {

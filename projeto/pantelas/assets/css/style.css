@@ -890,7 +890,7 @@ ul {
 
 .main-menu .main-menu__list>li>a,
 .stricky-header .main-menu__list>li>a {
-  font-size: 18px;
+  font-size: 17px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -898,8 +898,10 @@ ul {
   -ms-flex-align: center;
   align-items: center;
   color: var(--maroof-white);
-  font-weight: 500;
-  
+  font-weight: 700;
+  font-family: "Montserrat", "Inter", "Arial", sans-serif;
+  text-transform: uppercase;
+
   position: relative;
   padding: 2px 20px;
   border-radius: 17px;
@@ -907,7 +909,6 @@ ul {
   transition: all 500ms ease;
   z-index: 1;
 }
-
 .main-menu .main-menu__list>li.current>a,
 .main-menu .main-menu__list>li:hover>a,
 .stricky-header .main-menu__list>li.current>a,
@@ -1008,9 +1009,9 @@ ul {
 .stricky-header .main-menu__list > li > ul > li > a,
 .stricky-header .main-menu__list > li > ul > li > ul > li > a {
   position: relative;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 22px;
-  font-weight: 500;
+  font-weight: 700;
   display: flex;
   padding: 6px 15px;
   color: var(--maroof-black);
@@ -1616,7 +1617,7 @@ ul {
   align-items: center;
   justify-content: center;
   background-color: var(--maroof-base);
-  padding: 32px 80px;
+  padding: 15px 60px;
   padding-left: 0;
   clip-path: polygon(0 0, 100% 0%, 77% 100%, 0% 100%);
 }
@@ -1684,6 +1685,10 @@ ul {
   color: var(--maroof-black);
   padding: 0;
   border-radius: 0;
+  font-size: 17px;
+  font-weight: 700;
+  font-family: "Montserrat", "Inter", "Arial", sans-serif;
+  text-transform: uppercase;
 }
 
 .main-menu-two .main-menu__list>li.current>a,
@@ -2205,3 +2210,144 @@ ul {
 /*--------------------------------------------------------------
 # End
 --------------------------------------------------------------*/
+/* Floating Icons */
+.floating-icons {
+    position: fixed;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.floating-icons .icon {
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; 
+    transition: transform 0.2s ease;
+    display: block;
+    text-indent: -9999px;
+}
+
+.floating-icons .icon:hover {
+    transform: scale(1.1);
+}
+
+.insta, .whats {
+    background-color: transparent !important; 
+    border-radius: 0 !important; 
+    box-shadow: none !important; 
+    border: none !important; 
+}
+
+.insta {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/2111/2111463.png');
+}
+
+.whats {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/733/733585.png');
+}
+
+.phone {
+    background-color: #f44336;
+    background-image: url('../../social/tel.png'); 
+    background-size: 55% auto;
+    background-position: center;
+    border-radius: 50%;
+    box-shadow: none; 
+    border: none !important; 
+}
+
+/* =========================
+   MEGA MENU CUSTOM STYLES
+   ========================= */
+
+/* Dropdown padrão (todos os menus com submenu) */
+.main-menu__list > li.has-dropdown { position: relative; }
+.main-menu__list > li.has-dropdown > .sub-menu{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: none;
+  min-width: 220px;
+  width: auto;
+  max-width: none;
+  white-space: normal;
+}
+
+/* MEGA MENU: só PRODUTOS (3º item) */
+.main-menu__list > li:nth-child(3).has-dropdown{ position: static; }
+.main-menu-two__wrapper-inner,
+.main-menu-two__main-menu-box{ position: relative; }
+
+.main-menu__list > li:nth-child(3).has-dropdown > .sub-menu{
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1100px, calc(100vw - 40px));
+  min-width: 900px;
+  padding: 24px 28px;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 8px 24px;
+
+  box-sizing: border-box;
+}
+
+/* Itens do mega menu */
+.main-menu__list > li:nth-child(3).has-dropdown > .sub-menu > li{ width: 100%; }
+.main-menu__list > li:nth-child(3).has-dropdown > .sub-menu a{
+  line-height: 1.4;
+  white-space: normal;
+}
+
+/* FLYOUT: submenus internos do PRODUTOS */
+.main-menu__list > li:nth-child(3).has-dropdown > .sub-menu > li.has-dropdown{ position: relative; }
+
+.main-menu__list > li:nth-child(3).has-dropdown > .sub-menu > li.has-dropdown > .sub-menu{
+  position: absolute;
+  top: 0;
+  left: calc(100% - 122px);   
+  min-width: 240px;
+  width: max-content;
+  padding: 12px 14px;
+  margin: 0;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.14);
+  z-index: 9999;
+  display: none;
+}
+
+.main-menu__list > li:nth-child(3).has-dropdown > .sub-menu > li.has-dropdown:hover > .sub-menu{
+  display: block;
+}
+
+.main-menu__list > li:nth-child(3).has-dropdown > .sub-menu > li.has-dropdown > a{
+  position: relative;
+  padding-right: 18px;
+}
+.main-menu__list > li:nth-child(3).has-dropdown > .sub-menu > li.has-dropdown > a::after{
+  content: "›";
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: .55;
+}
+
+@media (max-width: 1100px){
+  .main-menu__list > li:nth-child(3).has-dropdown > .sub-menu{
+    min-width: auto;
+    width: min(980px, calc(100vw - 24px));
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+  .main-menu__list > li:nth-child(3).has-dropdown > .sub-menu > li.has-dropdown > .sub-menu{
+    left: auto;
+    right: calc(100% + 6px);
+  }
+}
