@@ -240,7 +240,10 @@ ul {
 .grid-prod{
   display:grid;
   gap:40px 32px;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .prod-card{
