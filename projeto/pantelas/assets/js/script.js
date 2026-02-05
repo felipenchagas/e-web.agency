@@ -1,6 +1,33 @@
 (function ($) {
   "use strict";
 
+  // MOBILE MENU — FORCE START
+  $(document).on("click", ".mobile-nav__toggler", function (e) {
+    e.preventDefault();
+    $(".mobile-nav__wrapper").toggleClass("expanded");
+    $("body").toggleClass("locked");
+  });
+
+  // CLONE MENU TO MOBILE
+  if ($(".main-menu__list").length && $(".mobile-nav__container").length) {
+    let navContent = $(".main-menu .main-menu__list").prop('outerHTML');
+    if(navContent) {
+        $(".mobile-nav__container").html(navContent);
+    }
+  }
+
+  // MOBILE DROPDOWNS
+  $(document).on("click", ".mobile-nav__container .main-menu__list li.has-dropdown > a, .mobile-nav__container .main-menu__list li.dropdown > a", function(e){
+      // Se tiver submenu, o link principal apenas abre o submenu no mobile
+      if($(this).parent().find('ul').length){
+          e.preventDefault();
+          let self = $(this);
+          self.parent().children("ul").slideToggle();
+          self.toggleClass('menu-open');
+      }
+  });
+
+
 
   /*--------------------------------------------------------------
     FullHeight
@@ -747,43 +774,6 @@
     // dynamic current class
     let mainNavUL = $(".main-menu__list");
     dynamicCurrentMenuClass(mainNavUL);
-  }
-
-
-  if ($(".main-menu__list").length && $(".mobile-nav__container").length) {
-    let navContent = document.querySelector(".main-menu .main-menu__list").outerHTML;
-    let mobileNavContainer = document.querySelector(".mobile-nav__container");
-    mobileNavContainer.innerHTML = navContent;
-  }
-
-  if ($(".mobile-nav__container .main-menu__list").length) {
-    let dropdownAnchor = $(
-      ".mobile-nav__container .main-menu__list li.has-dropdown > a, .mobile-nav__container .main-menu__list li.dropdown > a"
-    );
-    dropdownAnchor.each(function () {
-      let self = $(this);
-      let toggleBtn = document.createElement("BUTTON");
-      toggleBtn.setAttribute("aria-label", "dropdown toggler");
-      toggleBtn.innerHTML = "<i class='fa fa-angle-down'></i>";
-      
-      // Append button to the LI, not the Anchor, for better control
-      self.parent().append(toggleBtn);
-
-      self.parent().children("button").on("click", function (e) {
-        e.preventDefault();
-        let self = $(this);
-        self.toggleClass("expanded");
-        self.parent().children("ul").slideToggle();
-      });
-    });
-  }
-
-  if ($(".mobile-nav__toggler").length) {
-    $(".mobile-nav__toggler").on("click", function (e) {
-      e.preventDefault();
-      $(".mobile-nav__wrapper").toggleClass("expanded");
-      $("body").toggleClass("locked");
-    });
   }
 
   if ($(".search-toggler").length) {
