@@ -240,9 +240,8 @@ ul {
 .grid-prod{
   display:grid;
   gap:40px 32px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 350px));
   justify-content: center;
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -1190,9 +1189,6 @@ ul {
   color: #fff;
 }
 
-.mobile-nav__container .main-menu__list li button.expanded i {
-  transform: rotate(180deg);
-}
   border: none;
   outline: none;
   cursor: pointer;
