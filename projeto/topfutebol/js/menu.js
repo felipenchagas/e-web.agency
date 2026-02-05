@@ -9,21 +9,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Função para abrir o modal
   function openModal() {
-    modalMenu.classList.add("open");
-    modalOverlay.classList.add("open");
-    modalMenu.setAttribute("aria-hidden", "false");
+    if (modalMenu) {
+      modalMenu.classList.add("open");
+      modalMenu.setAttribute("aria-hidden", "false");
+    }
+    if (modalOverlay) {
+      modalOverlay.classList.add("open");
+    }
   }
 
   // Função para fechar o modal
   function closeModal() {
-    modalMenu.classList.remove("open");
-    modalOverlay.classList.remove("open");
-    modalMenu.setAttribute("aria-hidden", "true");
+    if (modalMenu) {
+      modalMenu.classList.remove("open");
+      modalMenu.setAttribute("aria-hidden", "true");
+    }
+    if (modalOverlay) {
+      modalOverlay.classList.remove("open");
+    }
   }
 
   // Adiciona evento em todos os botões que abrem o menu
   hamburgers.forEach(hamburger => {
     hamburger.addEventListener("click", function(e) {
+      if (!modalMenu) return;
       e.preventDefault();
       if (modalMenu.classList.contains("open")) {
         closeModal();
