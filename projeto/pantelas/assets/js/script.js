@@ -13,17 +13,26 @@
     let navContent = $(".main-menu .main-menu__list").prop('outerHTML');
     if(navContent) {
         $(".mobile-nav__container").html(navContent);
+        
+        // Add dropdown buttons to items with submenus
+        $(".mobile-nav__container .main-menu__list li.has-dropdown, .mobile-nav__container .main-menu__list li.dropdown").each(function(){
+            $(this).append('<button class="dropdown-toggle-btn"><i class="fa fa-angle-down"></i></button>');
+        });
     }
   }
 
-  // MOBILE DROPDOWNS
-  $(document).on("click", ".mobile-nav__container .main-menu__list li.has-dropdown > a, .mobile-nav__container .main-menu__list li.dropdown > a", function(e){
-      // Se tiver submenu, o link principal apenas abre o submenu no mobile
-      if($(this).parent().find('ul').length){
+  // MOBILE DROPDOWNS LOGIC
+  $(document).on("click", ".dropdown-toggle-btn", function(e){
+      e.preventDefault();
+      $(this).toggleClass('expanded');
+      $(this).parent().children("ul").slideToggle();
+  });
+
+  // Ensure anchors with actual links work, but prevent '#' links
+  $(document).on("click", ".mobile-nav__container .main-menu__list li > a", function(e){
+      if($(this).attr('href') === '#') {
           e.preventDefault();
-          let self = $(this);
-          self.parent().children("ul").slideToggle();
-          self.toggleClass('menu-open');
+          $(this).parent().children(".dropdown-toggle-btn").trigger('click');
       }
   });
 
