@@ -1122,38 +1122,118 @@ ul {
 /*--------------------------------------------------------------
 # Mobile Nav
 --------------------------------------------------------------*/
+.mobile-nav__container .main-menu__list,
+.mobile-nav__container .main-menu__list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mobile-nav__container .main-menu__list li {
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav__container .main-menu__list li:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav__container .main-menu__list li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 30px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  height: 46px;
+  transition: all 500ms ease;
+  font-family: var(--maroof-font);
+  text-transform: uppercase;
+}
+
+.mobile-nav__container .main-menu__list li a:hover {
+  color: var(--maroof-base);
+}
+
+.mobile-nav__container .main-menu__list li button {
+  width: 30px;
+  height: 30px;
+  background-color: var(--maroof-base);
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  font-size: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  right: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.mobile-nav__container .main-menu__list {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.mobile-nav__container .main-menu__list li button i {
+  color: #fff;
+}
+
+.mobile-nav__container .main-menu__list li button.expanded i {
+  transform: rotate(180deg);
+}
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.mobile-nav__container .main-menu__list li button.expanded i::before {
+  content: "\f106";
+}
+
+.mobile-nav__container .main-menu__list li ul {
+  display: none;
+  padding-left: 15px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.mobile-nav__container .main-menu__list li ul li {
+  border-bottom: none;
+}
+
+.mobile-nav__container .main-menu__list li ul li a {
+  font-size: 13px;
+  height: 40px;
+}
+
 .mobile-nav__wrapper {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 999;
+  z-index: -1;
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
-  -webkit-transform-origin: left center;
-  transform-origin: left center;
-  -webkit-transition: visibility 500ms ease 500ms, -webkit-transform 500ms ease 500ms;
-  transition: visibility 500ms ease 500ms, -webkit-transform 500ms ease 500ms;
-  transition: transform 500ms ease 500ms, visibility 500ms ease 500ms;
-  transition: transform 500ms ease 500ms, visibility 500ms ease 500ms, -webkit-transform 500ms ease 500ms;
+  transition: transform 400ms ease, visibility 400ms ease;
   visibility: hidden;
-}
-
-.mobile-nav__wrapper .container {
-  padding-left: 0;
-  padding-right: 0;
+  pointer-events: none;
 }
 
 .mobile-nav__wrapper.expanded {
-  opacity: 1;
+  z-index: 9999;
   -webkit-transform: translateX(0%);
   transform: translateX(0%);
   visibility: visible;
-  -webkit-transition: visibility 500ms ease 0ms, -webkit-transform 500ms ease 0ms;
-  transition: visibility 500ms ease 0ms, -webkit-transform 500ms ease 0ms;
-  transition: transform 500ms ease 0ms, visibility 500ms ease 0ms;
-  transition: transform 500ms ease 0ms, visibility 500ms ease 0ms, -webkit-transform 500ms ease 0ms;
+  pointer-events: auto;
 }
 
 .mobile-nav__overlay {
@@ -1167,6 +1247,15 @@ ul {
   cursor: pointer;
 }
 
+@media (max-width: 1199px) {
+  .main-menu .mobile-nav__toggler {
+    display: inline-block !important;
+    visibility: visible !important;
+    position: relative;
+    z-index: 10;
+  }
+}
+
 .mobile-nav__content {
   width: 300px;
   background-color: var(--maroof-black);
@@ -1174,29 +1263,15 @@ ul {
   position: relative;
   height: 100%;
   overflow-y: auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 15px;
-  padding-right: 15px;
-  opacity: 0;
-  visibility: hidden;
+  padding: 30px 15px;
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
-  -webkit-transition: opacity 500ms ease 0ms, visibility 500ms ease 0ms, -webkit-transform 500ms ease 0ms;
-  transition: opacity 500ms ease 0ms, visibility 500ms ease 0ms, -webkit-transform 500ms ease 0ms;
-  transition: opacity 500ms ease 0ms, visibility 500ms ease 0ms, transform 500ms ease 0ms;
-  transition: opacity 500ms ease 0ms, visibility 500ms ease 0ms, transform 500ms ease 0ms, -webkit-transform 500ms ease 0ms;
+  transition: transform 400ms ease;
 }
 
 .mobile-nav__wrapper.expanded .mobile-nav__content {
-  opacity: 1;
-  visibility: visible;
   -webkit-transform: translateX(0);
   transform: translateX(0);
-  -webkit-transition: opacity 500ms ease 500ms, visibility 500ms ease 500ms, -webkit-transform 500ms ease 500ms;
-  transition: opacity 500ms ease 500ms, visibility 500ms ease 500ms, -webkit-transform 500ms ease 500ms;
-  transition: opacity 500ms ease 500ms, visibility 500ms ease 500ms, transform 500ms ease 500ms;
-  transition: opacity 500ms ease 500ms, visibility 500ms ease 500ms, transform 500ms ease 500ms, -webkit-transform 500ms ease 500ms;
 }
 
 .mobile-nav__content .logo-box {
