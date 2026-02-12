@@ -109,7 +109,6 @@
         .hero-content h1 { font-size: 2.5rem; }
         .hero-content p { font-size: 1.1rem; }
         
-        .grid-2 { grid-template-columns: 1fr; gap: 40px; }
         .hero-content h1 { font-size: 2.8rem; } /* Override previous rule if needed */
     }
 </style>
@@ -416,6 +415,38 @@
         /* Grid Layouts Restored */
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: start; }
         .info-image img { width: 100%; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
+
+        /* Estilo do Mosaico de Imagens na seção Sobre */
+        .about-image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .about-image-grid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .about-image-grid img:hover { transform: scale(1.03); }
+
+        @media (max-width: 992px) {
+            .grid-2 {
+                display: flex !important;
+                flex-direction: column-reverse !important;
+                gap: 40px;
+            }
+            .about-image-grid { 
+                grid-template-columns: 1fr 1fr; 
+                gap: 10px; 
+            }
+            .about-image-grid img { 
+                height: 150px; 
+                border-radius: 10px;
+            }
+        }
         .info-text h3 { font-size: 2.2rem; color: var(--secondary); margin-bottom: 20px; font-weight: 700; }
         .info-text p { font-size: 1.1rem; line-height: 1.7; color: #555; margin-bottom: 20px; }
         
@@ -441,7 +472,7 @@
 
         /* CTA Final Restored */
         .cta-school {
-            background: linear-gradient(rgba(207,32,39,0.9), rgba(207,32,39,0.9)), url('imagens/escola-futebol.jpg') center/cover fixed;
+            background: linear-gradient(rgba(84, 121, 209, 0.85), rgba(84, 121, 209, 0.85)), url('imagens/escola-futebol.jpg') center/cover fixed;
             text-align: center;
             color: var(--white);
         }
@@ -452,11 +483,11 @@
     <!-- Sobre / Metodologia -->
         <section class="section-about">
             <div class="container grid-2">
-                    <div class="info-image" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                        <img src="imagens/escola-futebol.jpg" alt="Escola de Futebol PFA 1" style="border-radius: 10px; height: 200px; object-fit: cover;">
-                        <img src="fotos/top-sports-8005.jpg" alt="Escola de Futebol PFA 2" style="border-radius: 10px; height: 200px; object-fit: cover;">
-                        <img src="fotos/top-sports-7997.jpg" alt="Escola de Futebol PFA 3" style="border-radius: 10px; height: 200px; object-fit: cover;">
-                        <img src="fotos/top-sports-7969.jpg" alt="Escola de Futebol PFA 4" style="border-radius: 10px; height: 200px; object-fit: cover;">
+                    <div class="about-image-grid">
+                        <img src="imagens/escola-futebol.jpg" alt="Escola de Futebol PFA 1">
+                        <img src="fotos/top-sports-8005.jpg" alt="Escola de Futebol PFA 2">
+                        <img src="fotos/top-sports-7997.jpg" alt="Escola de Futebol PFA 3">
+                        <img src="fotos/top-sports-7969.jpg" alt="Escola de Futebol PFA 4">
                     </div>
                 <div class="info-text">
                     <h3>Muito Mais que Futebol</h3>

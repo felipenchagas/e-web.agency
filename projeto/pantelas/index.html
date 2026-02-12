@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -59,7 +59,7 @@
 
 <link rel="stylesheet" href="assets/css/module-css/slider.css?v=3.0">
 <link rel="stylesheet" href="assets/css/module-css/footer.css?v=1.0">
-<link rel="stylesheet" href="assets/css/module-css/about.css?v=1.0">
+<link rel="stylesheet" href="assets/css/module-css/about.css?v=2.0">
 <link rel="stylesheet" href="assets/css/module-css/sliding-text.css?v=1.0">
 <link rel="stylesheet" href="assets/css/module-css/services.css?v=1.0">
 <link rel="stylesheet" href="assets/css/module-css/counter.css?v=1.0">
@@ -147,10 +147,10 @@
       <div class="container">
         <div class="main-menu-two__wrapper-inner">
           <div class="main-menu-two__left">
-            <div class="main-menu-two__logo">
-              <a href="index">
-              <img src="assets/logo-35.png" alt="Logo da Pantelas - telas e arames em Curitiba" style="max-height: 150px; width: auto;">
-              </a>
+            <div class="main-menu-two__left-inner">
+              <div class="main-menu-two__logo">
+                <a href="index"><img src="assets/logo-35.png" alt="Logo Pantelas" style="max-height: 150px; width: auto;"></a>
+              </div>
             </div>
           </div>
           <div class="main-menu-two__right">
@@ -159,61 +159,144 @@
               <ul class="main-menu__list">
                 <li><a href="index">Início</a></li>
                 <li><a href="empresa">A Empresa</a></li>
-                <li class="has-dropdown">
-                  <a href="produtos">Produtos</a>
-                  <ul class="sub-menu">
-                    <li><a href="painel-gradil-pangradil">1. Pangradil (Gradil e Portão)</a></li>
-                    <li class="has-dropdown">
-                      <a href="#">2. Tela Losangular</a>
-                      <ul class="sub-menu">
-                        <li><a href="tela-losangular-revestida">Revestida em PVC</a></li>
-                        <li><a href="tela-losangular-galvanizada">Galvanizada</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="tela-ondulada">3. Tela Ondulada</a></li>
-                    <li class="has-dropdown">
-                      <a href="grama-sinteticas">4. Grama Sintética</a>
-                      <ul class="sub-menu">
-                        <li><a href="grama-sinteticas-futebol">Futebol</a></li>
-                        <li><a href="grama-sinteticas-paisagismo">Paisagismo</a></li>
-                        <li><a href="grama-sinteticas-decorativa">Decorativa</a></li>
-                        <li><a href="grama-sintetica-de-golfe">Golfe</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="redes-de-protecao">5. Rede de Proteção</a></li>
-                    <li class="has-dropdown">
-                      <a href="concertina">6. Aramax (Concertina)</a>
-                      <ul class="sub-menu">
-                        <li><a href="concertina-helicoidal">Helicoidal</a></li>
-                        <li><a href="concertina-clipada">Clipada</a></li>
-                        <li><a href="redes-laminadas">Rede Laminada</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="telas-eletrosoldada">7. Tela Eletrosoldada</a></li>
-                    <li><a href="alambrados">8. Alambrado 2'' 70/12</a></li>
-                    <li><a href="mao-de-obra">9. Mão de Obra</a></li>
-                    <li class="has-dropdown">
-                      <a href="equipamentos-esportivos">10. Acessórios Esportivos</a>
-                      <ul class="sub-menu">
-                        <li><a href="equipamentos-esportivos-traves-de-futebol">Trave de Futsal</a></li>
-                        <li><a href="equipamentos-esportivos-tabelas-de-basquete">Tabela de Basquete</a></li>
-                        <li><a href="poste-rede-beach-tennis">Beach Tennis</a></li>
-                        <li><a href="poste-rede-volei">Vôlei</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="tela-peneira">11. Tela Peneira</a></li>
-                    <li><a href="alambrado-2-pvc">12. Alambrado 2'' PVC</a></li>
-                    <li><a href="telas-eletrosoldadas-fortinet">13. Tela Fortinet</a></li>
-                    <li><a href="tela-expandida">14. Tela Expandida</a></li>
-                    <li><a href="telas-diversas-hexagonal">15. Tela Hexagonal</a></li>
-                    <li><a href="tela-mosquiteiro">16. Tela Mosquiteiro</a></li>
-                    <li><a href="rede-esportiva">17. Rede Esportiva</a></li>
-                    <li><a href="telas-plasticas-diversas">18. Tela Plástica</a></li>
-                    <li><a href="alambrado-12">19. Alambrado 12</a></li>
-                    <li><a href="tela-touro">20. Tela Touro</a></li>
-                    <li><a href="refletor-led">21. Refletor LED</a></li>
-                  </ul>
-                </li>
+<li class="has-dropdown">
+  <a href="produtos">Produtos</a>
+  <ul class="sub-menu">
+
+    <!-- 1. Gradil Pangradil -->
+    <li class="has-dropdown">
+      <a href="painel-gradil-pangradil">Gradil Pangradil</a>
+      <ul class="sub-menu">
+        <li><a href="pangradil-cercamento">Cercamento</a></li>
+        <li><a href="pangradil-nr-12">NR 12</a></li>
+        <li><a href="pangradil-portoes">Portões</a></li>
+      </ul>
+    </li>
+
+    <!-- 2. Tela Losangular -->
+    <li class="has-dropdown">
+      <a href="tela-losangular">Tela Losangular (Alambrado)</a>
+      <ul class="sub-menu">
+        <li><a href="tela-losangular-galvanizada">Galvanizada</a></li>
+        <li><a href="tela-losangular-pvc">Revestida em PVC</a></li>
+      </ul>
+    </li>
+
+    <!-- 3. Tela Ondulada -->
+    <li class="has-dropdown">
+      <a href="tela-ondulada">Tela Ondulada</a>
+      <ul class="sub-menu">
+        <li><a href="tela-ondulada-galvanizada">Galvanizada</a></li>
+        <li><a href="tela-ondulada-inox">Inox</a></li>
+      </ul>
+    </li>
+
+    <!-- 4. Grama Sintética -->
+    <li class="has-dropdown">
+      <a href="grama-sintetica">Grama Sintética</a>
+      <ul class="sub-menu">
+        <li><a href="grama-sintetica-esportiva">Esportiva</a></li>
+        <li><a href="grama-sintetica-decorativa">Decorativa</a></li>
+        <li><a href="grama-sintetica-paisagismo">Paisagismo</a></li>
+      </ul>
+    </li>
+
+    <!-- 5. Redes -->
+    <li class="has-dropdown">
+      <a href="redes">Redes</a>
+      <ul class="sub-menu">
+        <li><a href="redes-de-protecao">Proteção</a></li>
+        <li><a href="redes-esportivas">Esportiva</a></li>
+      </ul>
+    </li>
+
+    <!-- 6. Concertina Aramax -->
+    <li class="has-dropdown">
+      <a href="concertina">Concertina Aramax</a>
+      <ul class="sub-menu">
+        <li><a href="concertina-rede-laminada">Rede Laminada</a></li>
+        <li><a href="concertina-flat">Flat</a></li>
+        <li><a href="concertina-clipada">Clipada</a></li>
+        <li><a href="concertina-helicoidal">Helicoidal</a></li>
+      </ul>
+    </li>
+
+    <!-- 7. Tela Eletrosoldada -->
+    <li class="has-dropdown">
+      <a href="tela-eletrosoldada">Tela Eletrosoldada</a>
+      <ul class="sub-menu">
+        <li><a href="tela-eletrosoldada-galvanizada">Galvanizada</a></li>
+        <li><a href="tela-fortinet">Revestida em PVC (Fortinet)</a></li>
+      </ul>
+    </li>
+
+    <!-- 8. Quadras Esportivas -->
+    <li class="has-dropdown">
+      <a href="quadras-esportivas">Quadras Esportivas</a>
+      <ul class="sub-menu">
+        <li><a href="quadra-society">Society</a></li>
+        <li><a href="quadra-poliesportiva">Poliesportiva</a></li>
+      </ul>
+    </li>
+
+    <!-- 9. Equipamentos Esportivos -->
+    <li class="has-dropdown">
+      <a href="equipamentos-esportivos">Equipamentos Esportivos</a>
+      <ul class="sub-menu">
+        <li><a href="trave-de-futsal">Trave de Futsal</a></li>
+        <li><a href="tabela-de-basquete">Tabela de Basquete</a></li>
+      </ul>
+    </li>
+
+    <!-- 10 a 15 -->
+    <li><a href="tela-peneira">Tela Peneira</a></li>
+    <li><a href="tela-expandida">Tela Expandida</a></li>
+    <li><a href="tela-hexagonal">Tela Hexagonal</a></li>
+    <li><a href="tela-touro">Tela Touro (Plástica)</a></li>
+
+    <!-- 14. Arames -->
+    <li class="has-dropdown">
+      <a href="arames">Arames</a>
+      <ul class="sub-menu">
+        <li><a href="arame-liso-galvanizado">Liso Galvanizado</a></li>
+        <li><a href="arame-inox">Aço Inox</a></li>
+        <li><a href="arame-farpado">Farpado</a></li>
+      </ul>
+    </li>
+
+    <!-- 15. Telas Diversas -->
+    <li class="has-dropdown">
+      <a href="telas-diversas">Telas Diversas</a>
+      <ul class="sub-menu">
+        <li><a href="tela-sombrite">Sombrite</a></li>
+        <li><a href="tela-mosquiteira">Mosquiteira</a></li>
+        <li><a href="tela-plastica">Plástica</a></li>
+      </ul>
+    </li>
+
+    <!-- 16. Estrutura Metálica -->
+    <li class="has-dropdown">
+      <a href="estrutura-metalica">Estrutura Metálica</a>
+      <ul class="sub-menu">
+        <li><a href="estrutura-quadras">Quadras Esportivas</a></li>
+        <li><a href="estrutura-barracoes">Barracões</a></li>
+        <li><a href="estrutura-galpoes">Galpões</a></li>
+      </ul>
+    </li>
+
+    <!-- 17. Outras Telas -->
+    <li class="has-dropdown">
+      <a href="outras-telas">Outras Telas</a>
+      <ul class="sub-menu">
+        <li><a href="tela-tecida-galvanizada">Tela Tecida Galvanizada</a></li>
+        <li><a href="tela-tecida-inox">Tela Tecida Inox</a></li>
+        <li><a href="tela-tapume-polietileno">Tela Tapume Polietileno</a></li>
+        <li><a href="tela-polipropileno">Tela Polipropileno</a></li>
+      </ul>
+    </li>
+
+  </ul>
+</li>
                 <li class="has-dropdown">
                   <a href="#">Redes Sociais</a>
                   <ul class="sub-menu">
@@ -337,60 +420,63 @@
     <h2 class="ttl-main">Telas, Arames, Grama Sintética e Mais em Curitiba e Região</h2>
     <h3 class="ttl-sub"><span>Conheça os nossos produtos abaixo:</span></h3>
 
-    <div class="grid-prod">
+    <div class="row">
 
       <!-- card 1: Tela Losangular -->
-      <article class="prod-card">
-        <figure class="prod-img">
-          <img src="assets/tela-losangular.jpg" alt="Tela Losangular" loading="lazy">
-        </figure>
-        <h4 class="prod-title">Tela Losangular</h4>
-        <p class="prod-txt">
-          A tela losangular é a mais comum do mercado e amplamente utilizada em diversos projetos, como proteção, cercamentos e aplicações decorativas. 
-          Pode ser fabricada em aço galvanizado. <strong>Revestida em PVC</strong>, conforme a necessidade do projeto. 
-          Versátil, econômica e de fácil instalação.
-        </p>
-        <a href="tela-losangular-revestida" class="btn-red" style="display:block;width:max-content;margin:0 auto;">Veja mais</a>
-      </article>
+      <div class="col-xl-3 col-lg-6 mb-4">
+        <article class="prod-card" style="height: 100%;">
+          <figure class="prod-img">
+            <img src="assets/tela-losangular.jpg" alt="Tela Losangular" loading="lazy">
+          </figure>
+          <h4 class="prod-title">Tela Losangular</h4>
+          <p class="prod-txt">
+            A tela losangular é a mais comum do mercado e amplamente utilizada em diversos projetos, como proteção, cercamentos e aplicações decorativas. Versátil, econômica e de fácil instalação.
+          </p>
+          <a href="tela-losangular-revestida" class="btn-red" style="display:block;width:max-content;margin:0 auto;">Veja mais</a>
+        </article>
+      </div>
 
       <!-- card 2: Tela Ondulada -->
-      <article class="prod-card">
-        <figure class="prod-img">
-          <img src="assets/tela-ondulada.jpg" alt="Tela Ondulada" loading="lazy">
-        </figure>
-        <h4 class="prod-title">Tela Ondulada</h4>
-        <p class="prod-txt">
-          As telas onduladas são indicadas para locais onde se exige maior rigidez em comparação às telas losangulares. 
-          Adaptam-se muito bem a ambientes internos e externos e podem ser instaladas em quadros metálicos para reforçar a segurança.
-        </p>
-        <a href="tela-ondulada.html" class="btn-red" style="display:block;width:max-content;margin:0 auto;">Veja mais</a>
-      </article>
+      <div class="col-xl-3 col-lg-6 mb-4">
+        <article class="prod-card" style="height: 100%;">
+          <figure class="prod-img">
+            <img src="assets/tela-ondulada.jpg" alt="Tela Ondulada" loading="lazy">
+          </figure>
+          <h4 class="prod-title">Tela Ondulada</h4>
+          <p class="prod-txt">
+            As telas onduladas são indicadas para locais onde se exige maior rigidez em comparação às telas losangulares. Adaptam-se muito bem a ambientes internos e externos.
+          </p>
+          <a href="tela-ondulada.html" class="btn-red" style="display:block;width:max-content;margin:0 auto;">Veja mais</a>
+        </article>
+      </div>
 
       <!-- card 3: Tela Eletrosoldada -->
-      <article class="prod-card">
-        <figure class="prod-img">
-          <img src="assets/produtos/eletrosoldada.jpg" alt="Tela Eletrosoldada" loading="lazy">
-        </figure>
-        <h4 class="prod-title">Tela Eletrosoldada</h4>
-        <p class="prod-txt">
-          A tela eletrosoldada é ainda mais rígida do que as onduladas, pois os arames são soldados nos pontos de cruzamento, garantindo alta resistência. 
-          Ideal para cercamentos permanentes de alta qualidade ou aplicações temporárias que exigem robustez.
-        </p>
-        <a href="tela-eletrosoldada" class="btn-red" style="display:block;width:max-content;margin:0 auto;">Veja mais</a>
-      </article>
+      <div class="col-xl-3 col-lg-6 mb-4">
+        <article class="prod-card" style="height: 100%;">
+          <figure class="prod-img">
+            <img src="assets/produtos/eletrosoldada.jpg" alt="Tela Eletrosoldada" loading="lazy">
+          </figure>
+          <h4 class="prod-title">Tela Eletrosoldada</h4>
+          <p class="prod-txt">
+            A tela eletrosoldada é ainda mais rígida do que as onduladas, pois os arames são soldados nos pontos de cruzamento, garantindo alta resistência.
+          </p>
+          <a href="tela-eletrosoldada" class="btn-red" style="display:block;width:max-content;margin:0 auto;">Veja mais</a>
+        </article>
+      </div>
 
       <!-- card 4: Telas Diversas -->
-      <article class="prod-card">
-        <figure class="prod-img">
-          <img src="assets/produtos/telas-diversas.jpg" alt="Telas Diversas" loading="lazy">
-        </figure>
-        <h4 class="prod-title">Telas Diversas</h4>
-        <p class="prod-txt">
-          Telas é com a Pantelas. Aqui você encontra telas de diversos tipos, materiais e aplicações, atendendo às mais variadas necessidades de cercamento,
-          proteção e acabamento. Conheça todos os modelos em nosso catálogo virtual.
-        </p>
-        <a href="telas-diversas" class="btn-red" style="display:block;width:max-content;margin:0 auto;">Veja mais</a>
-      </article>
+      <div class="col-xl-3 col-lg-6 mb-4">
+        <article class="prod-card" style="height: 100%;">
+          <figure class="prod-img">
+            <img src="assets/produtos/telas-diversas.jpg" alt="Telas Diversas" loading="lazy">
+          </figure>
+          <h4 class="prod-title">Telas Diversas</h4>
+          <p class="prod-txt">
+            Telas é com a Pantelas. Aqui você encontra telas de diversos tipos, materiais e aplicações, atendendo às mais variadas necessidades de cercamento e proteção.
+          </p>
+          <a href="telas-diversas" class="btn-red" style="display:block;width:max-content;margin:0 auto;">Veja mais</a>
+        </article>
+      </div>
 
     </div>
   </div>
@@ -468,71 +554,75 @@
         </div>
     </div>
 </section>
-<section id="produtos" class="produtos section-pad">
+<section id="produtos-2" class="produtos section-pad">
   <div class="container">
-    <div class="grid-prod">
-  <!-- card 1 -->
-  <article class="prod-card">
-    <figure class="prod-img">
-      <img src="assets/arames.png" alt="Arames" loading="lazy">
-    </figure>
-    <h4 class="prod-title">Arames</h4>
-    <p class="prod-txt">
-      Trabalhamos com uma linha completa de arames para cercamentos, amarrações e aplicações estruturais.
-      Disponíveis em diferentes espessuras e acabamentos, atendem desde projetos residenciais até usos industriais.
-    </p>
-    <a href="arames.html" style="display:block;width:max-content;margin:0 auto;" class="btn-red">Veja mais</a>
-  </article>
+    <div class="row">
+      <!-- card 1 -->
+      <div class="col-xl-3 col-lg-6 mb-4">
+        <article class="prod-card" style="height: 100%;">
+          <figure class="prod-img">
+            <img src="assets/arames.png" alt="Arames" loading="lazy">
+          </figure>
+          <h4 class="prod-title">Arames</h4>
+          <p class="prod-txt">
+            Trabalhamos com uma linha completa de arames para cercamentos, amarrações e aplicações estruturais. Disponíveis em diferentes espessuras.
+          </p>
+          <a href="arames.html" style="display:block;width:max-content;margin:0 auto;" class="btn-red">Veja mais</a>
+        </article>
+      </div>
 
-  <!-- card 2 -->
-  <article class="prod-card">
-    <figure class="prod-img">
-      <img src="assets/redes.png" alt="Redes" loading="lazy">
-    </figure>
-    <h4 class="prod-title">Redes</h4>
-    <p class="prod-txt">
-      Redes indicadas para proteção, esporte e contenção, fabricadas com materiais resistentes e duráveis.
-      Ideais para quadras, sacadas, áreas recreativas e espaços que exigem segurança com bom acabamento.
-    </p>
-    <a href="redes-de-protecao-e-esportiva.html" style="display:block;width:max-content;margin:0 auto;" class="btn-red">Veja mais</a>
-  </article>
+      <!-- card 2 -->
+      <div class="col-xl-3 col-lg-6 mb-4">
+        <article class="prod-card" style="height: 100%;">
+          <figure class="prod-img">
+            <img src="assets/redes.png" alt="Redes" loading="lazy">
+          </figure>
+          <h4 class="prod-title">Redes</h4>
+          <p class="prod-txt">
+            Redes indicadas para proteção, esporte e contenção, fabricadas com materiais resistentes. Ideais para quadras, sacadas e espaços recreativos.
+          </p>
+          <a href="redes-de-protecao-e-esportiva.html" style="display:block;width:max-content;margin:0 auto;" class="btn-red">Veja mais</a>
+        </article>
+      </div>
 
-  <!-- card 3 -->
-  <article class="prod-card">
-    <figure class="prod-img">
-      <img src="assets/alambrados.png" alt="Alambrados" loading="lazy">
-    </figure>
-    <h4 class="prod-title">Alambrados</h4>
-    <p class="prod-txt">
-      Sistemas completos de cercamento que utilizam telas como elemento principal, com postes de aço ou concreto.
-      Solução versátil para áreas esportivas, industriais, condomínios e controle de perímetro.
-    </p>
-    <a href="alambrados.html" style="display:block;width:max-content;margin:0 auto;" class="btn-red">Veja mais</a>
-  </article>
+      <!-- card 3 -->
+      <div class="col-xl-3 col-lg-6 mb-4">
+        <article class="prod-card" style="height: 100%;">
+          <figure class="prod-img">
+            <img src="assets/alambrados.png" alt="Alambrados" loading="lazy">
+          </figure>
+          <h4 class="prod-title">Alambrados</h4>
+          <p class="prod-txt">
+            Sistemas completos de cercamento que utilizam telas como elemento principal. Solução versátil para áreas esportivas e industriais.
+          </p>
+          <a href="alambrados.html" style="display:block;width:max-content;margin:0 auto;" class="btn-red">Veja mais</a>
+        </article>
+      </div>
 
-  <!-- card 4 -->
-  <article class="prod-card">
-    <figure class="prod-img">
-      <img src="assets/gradil.png" alt="Gradil" loading="lazy">
-    </figure>
-    <h4 class="prod-title">Gradil</h4>
-    <p class="prod-txt">
-      Painéis de gradil eletrosoldado que oferecem alto nível de segurança aliado a um visual moderno.
-      Indicados para cercamentos permanentes em áreas residenciais, comerciais e industriais.
-    </p>
-    <a href="gradil-eletrosoldado.html" style="display:block;width:max-content;margin:0 auto;" class="btn-red">Veja mais</a>
-  </article>
-</div>
-
+      <!-- card 4 -->
+      <div class="col-xl-3 col-lg-6 mb-4">
+        <article class="prod-card" style="height: 100%;">
+          <figure class="prod-img">
+            <img src="assets/gradil.png" alt="Gradil" loading="lazy">
+          </figure>
+          <h4 class="prod-title">Gradil</h4>
+          <p class="prod-txt">
+            Painéis de gradil eletrosoldado que oferecem alto nível de segurança aliado a um visual moderno. Indicados para áreas comerciais e residenciais.
+          </p>
+          <a href="gradil-eletrosoldado.html" style="display:block;width:max-content;margin:0 auto;" class="btn-red">Veja mais</a>
+        </article>
+      </div>
+    </div>
   </div>
 </section>
+
         <!--Counter Two Start -->
         <section class="counter-two">
     <div class="counter-two__wrap">
         <div class="counter-two__bg-shape float-bob-y" style="background-image: url(assets/images/shapes/counter-two-bg-shape.png);"></div>
         <div class="container">
             <div class="section-title text-center">
-                <div class="section-title__tagline-box">
+                <div class="section-title__tagline-box" style="margin-bottom: 10px;">
                     <span class="section-title__tagline">Por que escolher a Pantelas</span>
                 </div>
                 <h2 class="section-title__title"><span>Cercamento e Proteção</span></h2>
@@ -627,58 +717,64 @@
     </div>
 </section>
 
-<<section id="produtos" class="produtos section-pad">
+<section id="produtos-3" class="produtos section-pad">
   <div class="container">
-
-    <div class="grid-prod">
+    <div class="row">
       <!-- card 1 -->
-      <article class="prod-card">
-        <figure class="prod-img">
-          <img src="assets/produtos/cercamento.jpg" alt="Cercamento" loading="lazy">
-        </figure>
-        <h4 class="prod-title">Cercamentos</h4>
-        <p class="prod-txt">
-          Cercamentos com qualidade e beleza exigem conhecimento e bons materiais!
-Aqui na Pantelas você encontra tudo o que precisa para montar sua cerca para durar muitos anos!
-        </p>
-        <a href="cercamento.html" style="display:block;width:max-content;margin:0 auto;" class="btn-red">veja mais</a>
-      </article>
+      <div class="col-xl-3 col-lg-6 mb-4">
+        <article class="prod-card" style="height: 100%;">
+          <figure class="prod-img">
+            <img src="assets/produtos/cercamento.jpg" alt="Cercamento" loading="lazy">
+          </figure>
+          <h4 class="prod-title">Cercamentos</h4>
+          <p class="prod-txt">
+            Cercamentos com qualidade e beleza exigem bons materiais! Aqui na Pantelas você encontra tudo o que precisa para montar sua cerca.
+          </p>
+          <a href="cercamento.html" style="display:block;width:max-content;margin:0 auto;" class="btn-red">veja mais</a>
+        </article>
+      </div>
 
       <!-- card 2 -->
-      <article class="prod-card">
-        <figure class="prod-img">
-          <img src="assets/inicial/cercamento.jpg" alt="Concertina" loading="lazy">
-        </figure>
-        <h4 class="prod-title">Concertina</h4>
-        <p class="prod-txt">
-          Com estrutura reforçada e grande poder de laceração, o ouriço, ou concertina Aramax é uma eficiente ferramenta para segurança residencial e comercial.
-        </p>
-        <a href="concertina.html" style="display:block;width:max-content;margin:0 auto;" class="btn-red">veja mais</a>
-      </article>
+      <div class="col-xl-3 col-lg-6 mb-4">
+        <article class="prod-card" style="height: 100%;">
+          <figure class="prod-img">
+            <img src="assets/inicial/cercamento.jpg" alt="Concertina" loading="lazy">
+          </figure>
+          <h4 class="prod-title">Concertina</h4>
+          <p class="prod-txt">
+            Com estrutura reforçada e grande poder de laceração, a concertina Aramax é uma eficiente ferramenta para segurança residencial e comercial.
+          </p>
+          <a href="concertina.html" style="display:block;width:max-content;margin:0 auto;" class="btn-red">veja mais</a>
+        </article>
+      </div>
 
       <!-- card 3 -->
-      <article class="prod-card">
-        <figure class="prod-img">
-          <img src="assets/produtos/redes-de-protecao.jpg" alt="Rede de proteção" loading="lazy">
-        </figure>
-        <h4 class="prod-title">Rede de proteção</h4>
-        <p class="prod-txt">
-          Seja em acessórios para cercamentos ou acessórios esportivos, a Pantelas possui um leque de produtos que pode atender à sua demanda.
-        </p>
-        <a href="redes-de-protecao.html" style="display:block;width:max-content;margin:0 auto;" class="btn-red">veja mais</a>
-      </article>
+      <div class="col-xl-3 col-lg-6 mb-4">
+        <article class="prod-card" style="height: 100%;">
+          <figure class="prod-img">
+            <img src="assets/produtos/redes-de-protecao.jpg" alt="Rede de proteção" loading="lazy">
+          </figure>
+          <h4 class="prod-title">Rede de proteção</h4>
+          <p class="prod-txt">
+            Seja em acessórios para cercamentos ou acessórios esportivos, a Pantelas possui um leque de produtos que pode atender à sua demanda.
+          </p>
+          <a href="redes-de-protecao.html" style="display:block;width:max-content;margin:0 auto;" class="btn-red">veja mais</a>
+        </article>
+      </div>
 
       <!-- card 4 -->
-      <article class="prod-card">
-        <figure class="prod-img">
-          <img src="assets/produtos/grama-sinteticas.jpg" alt="Grama Sintética" loading="lazy">
-        </figure>
-        <h4 class="prod-title">Grama Sintética</h4>
-        <p class="prod-txt">
-          A Pantelas vende e instala a grama artificial esportiva e a grama decorativa fabricadas pela Brasgrama.
-        </p>
-        <a href="grama-sinteticas.html" style="display:block;width:max-content;margin:0 auto;" class="btn-red">veja mais</a>
-      </article>
+      <div class="col-xl-3 col-lg-6 mb-4">
+        <article class="prod-card" style="height: 100%;">
+          <figure class="prod-img">
+            <img src="assets/produtos/grama-sinteticas.jpg" alt="Grama Sintética" loading="lazy">
+          </figure>
+          <h4 class="prod-title">Grama Sintética</h4>
+          <p class="prod-txt">
+            A Pantelas vende e instala a grama artificial esportiva e a grama decorativa fabricadas pela Brasgrama para diversos projetos.
+          </p>
+          <a href="grama-sinteticas.html" style="display:block;width:max-content;margin:0 auto;" class="btn-red">veja mais</a>
+        </article>
+      </div>
     </div>
   </div>
 </section>
@@ -688,7 +784,7 @@ Aqui na Pantelas você encontra tudo o que precisa para montar sua cerca para du
 <!-- Brand One Start -->
 <section class="brand-one" style="padding:40px 0;">
         <div class="section-title text-left">
-            <h2 class="section-title__title">Paceiros</span></h2>
+            <h2 class="section-title__title">Parceiros</span></h2>
         </div>
   <div class="container">
     <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:20px; align-items:center; justify-items:center;">
@@ -827,10 +923,10 @@ Aqui na Pantelas você encontra tudo o que precisa para montar sua cerca para du
       </div>
     </div>
 
-    <div class="row" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+    <div class="row">
 
       <!-- Card 1 -->
-      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+      <div class="col-xl-3 col-lg-6 mb-4">
         <div style="border:1px solid #eee; border-radius:16px; padding:24px; text-align:center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); height: 100%;">
           <div style="margin-bottom:16px;">
             <img style="width: 60px; height: 60px;" src="assets/icones/grade-protecao.png" alt="Telas de proteção">
@@ -842,7 +938,7 @@ Aqui na Pantelas você encontra tudo o que precisa para montar sua cerca para du
       </div>
 
       <!-- Card 2 -->
-      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+      <div class="col-xl-3 col-lg-6 mb-4">
         <div style="border:1px solid #eee; border-radius:16px; padding:24px; text-align:center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); height: 100%;">
           <div style="margin-bottom:16px;">
             <img style="width: 60px; height: 60px;" src="assets/icones/grama-sintetica.png" alt="Grama sintética">
@@ -854,7 +950,7 @@ Aqui na Pantelas você encontra tudo o que precisa para montar sua cerca para du
       </div>
 
       <!-- Card 3 -->
-      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+      <div class="col-xl-3 col-lg-6 mb-4">
         <div style="border:1px solid #eee; border-radius:16px; padding:24px; text-align:center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); height: 100%;">
           <div style="margin-bottom:16px;">
             <img style="width: 60px; height: 60px;" src="assets/icones/estrutura-metalica.png" alt="Estruturas metálicas">
@@ -866,7 +962,7 @@ Aqui na Pantelas você encontra tudo o que precisa para montar sua cerca para du
       </div>
 
       <!-- Card 4 -->
-      <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+      <div class="col-xl-3 col-lg-6 mb-4">
         <div style="border:1px solid #eee; border-radius:16px; padding:24px; text-align:center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); height: 100%;">
           <div style="margin-bottom:16px;">
             <img style="width: 60px; height: 60px;" src="assets/icones/quadra-esportiva.png" alt="Quadras esportivas">
@@ -1067,7 +1163,7 @@ Aqui na Pantelas você encontra tudo o que precisa para montar sua cerca para du
                 </div>
             </div>
         </div>
-    </div>\n\n    <div class="mobile-nav__wrapper">
+    </div>    <div class="mobile-nav__wrapper">
         <div class="mobile-nav__overlay mobile-nav__toggler"></div>
         <div class="mobile-nav__content">
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
@@ -1092,7 +1188,9 @@ Aqui na Pantelas você encontra tudo o que precisa para montar sua cerca para du
                 </div>
             </div>
         </div>
-    </div>\n\n    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    </div>
+</div>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jarallax.min.js"></script>
     <script src="assets/js/jquery.ajaxchimp.min.js"></script>
