@@ -5,37 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Política de Privacidade | Brasil Soccer</title>
 
+  <!-- Tailwind (dev) -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <meta name="description" content="Entenda como a Brasil Soccer coleta, usa e protege seus dados pessoais. Transparência e segurança em primeiro lugar." />
-  <link rel="canonical" href="https://brasilsoccer.com.br/politica-de-privacidade" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Política de Privacidade | Brasil Soccer" />
-  <meta property="og:description" content="Transparência no uso de dados: quais informações coletamos, por quê e seus direitos." />
-  <meta property="og:url" content="https://brasilsoccer.com.br/politica-de-privacidade" />
-  <meta property="og:image" content="https://brasilsoccer.com.br/fotos/og-cover.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="robots" content="noindex, follow" />
   <meta name="theme-color" content="#0A7D3B" />
 
   <style>
-    :root{--primary:#0A7D3B;--primary-700:#066A31;--secondary:#F9A01B;}
+    :root{--primary:#0A7D3B;--secondary:#F9A01B}
     body{font-family:'Poppins',sans-serif}
     .bg-primary{background-color:var(--primary)} .text-primary{color:var(--primary)}
     .bg-secondary{background-color:var(--secondary)} .text-secondary{color:var(--secondary)}
-    section[id]{scroll-margin-top:88px}
-    .hero{min-height:40vh;background:linear-gradient(rgba(6,106,49,.92),rgba(6,106,49,.92)),url('/fotos/hero-grama.jpg') center/cover no-repeat}
   </style>
 </head>
-<body class="bg-white text-gray-900">
+<body class="bg-gray-50 text-gray-900">
 
   <!-- NAV -->
 <nav class="fixed w-full bg-white/95 backdrop-blur shadow-md z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="h-20 flex items-center justify-between">
       <!-- LOGO -->
-      <a href="/" class="text-2xl font-bold text-primary">
+      <a href="index.html" class="text-2xl font-bold text-primary">
         <span class="text-secondary">BRASIL</span> SOCCER
       </a>
 
@@ -44,7 +36,7 @@
         <a href="index.html" class="hover:text-primary">Home</a>
 
         <!-- Dropdown principal -->
-        <div class="group relative">
+        <div class="group relative py-4">
           <button class="hover:text-primary flex items-center gap-1">
             A BRASIL SOCCER
             <svg class="w-3 h-3 mt-[2px]" fill="currentColor" viewBox="0 0 20 20">
@@ -53,105 +45,53 @@
           </button>
 
           <!-- Dropdown -->
-          <div class="absolute left-0 mt-2 hidden group-hover:block bg-[#1E40AF] text-white rounded-md shadow-lg py-2 w-56 z-50">
+          <div class="absolute left-0 top-full hidden group-hover:block bg-[#1E40AF] text-white rounded-md shadow-lg py-2 w-56 z-50 border-t-4 border-secondary">
             <a href="sobre-nos.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">A Brasil Soccer</a>
             <a href="locacao-e-mensalistas.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">Locação e Mensalistas</a>
             <a href="campeonatos.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">Campeonatos</a>
             <a href="escola-de-futebol.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">Escola de Futebol</a>
-            <a href="seja-um-anunciante.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">Seja um Anunciante</a>
           </div>
         </div>
 
         <a href="quadras.html" class="hover:text-primary">Quadras</a>
         <a href="churrasqueira-e-eventos.html" class="hover:text-primary">Churrasqueira & Eventos</a>
-        <a href="contato.html" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-emerald-800 transition">Contato</a>
+        <a href="https://wa.me/5541984039747" target="_blank" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-emerald-800 transition">Contato</a>
       </div>
     </div>
   </div>
 </nav>
 
+  <main class="pt-32 pb-20">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="text-3xl md:text-4xl font-extrabold mb-8">Política de Privacidade</h1>
+      
+      <div class="bg-white p-8 rounded-2xl shadow-sm border space-y-6 text-gray-700 leading-relaxed text-justify">
+        <p>A <strong>Brasil Soccer</strong> valoriza a privacidade dos seus usuários. Esta política explica como coletamos e protegemos seus dados ao utilizar nosso site ou serviços.</p>
 
-  <!-- HERO -->
-  <header class="hero text-white flex items-center">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <p class="uppercase tracking-widest text-white/90 font-semibold mb-2">Política de Privacidade</p>
-      <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Sua privacidade é prioridade em campo</h1>
-      <p class="mt-3 text-lg text-white/90 max-w-3xl">Explicamos de forma simples como tratamos seus dados, por que coletamos e quais são seus direitos.</p>
-    </div>
-  </header>
+        <h2 class="text-xl font-bold text-gray-900">1. Coleta de Informações</h2>
+        <p>Coletamos informações básicas fornecidas voluntariamente por você através de nossos canais de contato, como nome, e-mail e telefone, com o objetivo exclusivo de prestar atendimento e realizar reservas.</p>
 
-  <!-- Breadcrumb -->
-  <nav class="bg-gray-100 py-3 text-sm">
-    <div class="max-w-7xl mx-auto px-4 flex items-center gap-2">
-      <a href="/" class="text-gray-600 hover:text-primary">Home</a>
-      <span class="text-gray-400">/</span>
-      <span class="text-gray-900 font-medium">Política de Privacidade</span>
-    </div>
-  </nav>
+        <h2 class="text-xl font-bold text-gray-900">2. Uso dos Dados</h2>
+        <p>Seus dados são utilizados para responder suas solicitações, processar agendamentos de quadras ou churrasqueiras e enviar comunicações importantes sobre o funcionamento do complexo.</p>
 
-  <!-- CONTEÚDO -->
-  <main class="py-14">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-neutral prose-headings:font-semibold">
-      <h2>1. Quem somos</h2>
-      <p>Somos a <strong>Brasil Soccer</strong>, espaço esportivo e de lazer em Curitiba. Esta política descreve como tratamos dados pessoais de visitantes, clientes e interessados em nossos serviços.</p>
+        <h2 class="text-xl font-bold text-gray-900">3. Segurança</h2>
+        <p>Implementamos medidas de segurança para proteger suas informações contra acesso não autorizado ou uso indevido. Não compartilhamos, vendemos ou alugamos seus dados para terceiros.</p>
 
-      <h2>2. Quais dados coletamos</h2>
-      <ul>
-        <li><strong>Formulários do site:</strong> nome, e-mail, telefone e mensagem.</li>
-        <li><strong>Comunicação direta:</strong> informações trocadas por WhatsApp, telefone ou e-mail.</li>
-        <li><strong>Acesso ao site:</strong> dados técnicos de navegação (IP, dispositivo, páginas acessadas) por cookies essenciais e métricas.</li>
-      </ul>
+        <h2 class="text-xl font-bold text-gray-900">4. Cookies</h2>
+        <p>Podemos utilizar cookies para melhorar a experiência de navegação e entender como os visitantes utilizam nosso site, de forma anônima.</p>
 
-      <h2>3. Para que usamos</h2>
-      <ul>
-        <li>Responder dúvidas, orçamentos e reservas.</li>
-        <li>Operar e melhorar a experiência do site.</li>
-        <li>Enviar comunicações sobre serviços e novidades (apenas para quem solicitou ou consentiu).</li>
-      </ul>
+        <h2 class="text-xl font-bold text-gray-900">5. Seus Direitos</h2>
+        <p>Você pode solicitar a qualquer momento a exclusão ou correção de seus dados pessoais entrando em contato conosco através do nosso e-mail oficial.</p>
 
-      <h2>4. Cookies</h2>
-      <p>Usamos cookies <em>estritamente necessários</em> ao funcionamento e, eventualmente, métricas agregadas. Você pode controlar cookies pelo seu navegador. Desativá-los pode limitar recursos do site.</p>
-
-      <h2>5. Base legal</h2>
-      <p>Tratamos dados com base em <strong>execução de contrato</strong> (atender solicitações), <strong>consentimento</strong> (newsletter e comunicações opcionais) e <strong>interesse legítimo</strong> (melhoria do site e prevenção a fraudes), nos termos da LGPD.</p>
-
-      <h2>6. Compartilhamento</h2>
-      <p>Não vendemos seus dados. Podemos compartilhar com provedores que viabilizam a operação do site e atendimento (por exemplo, serviço de formulário e hospedagem), sempre com obrigações de segurança e confidencialidade.</p>
-
-      <h2>7. Retenção</h2>
-      <p>Guardamos dados pelo tempo necessário para cumprir a finalidade ou obrigações legais. Após isso, excluímos ou anonimizamos.</p>
-
-      <h2>8. Seus direitos</h2>
-      <ul>
-        <li>Acessar, corrigir ou atualizar dados.</li>
-        <li>Solicitar exclusão quando aplicável.</li>
-        <li>Revogar consentimentos e se opor a tratamentos.</li>
-        <li>Portabilidade e informações sobre compartilhamentos, nos termos da lei.</li>
-      </ul>
-
-      <h2>9. Segurança</h2>
-      <p>Adotamos medidas técnicas e organizacionais para proteger suas informações. Nenhum sistema é 100% livre de riscos, mas trabalhamos para reduzir probabilidades e impactos.</p>
-
-      <h2>10. Contato do controlador</h2>
-      <p>E-mail: <a href="mailto:brasilsocceratendimento@gmail.com">brasilsocceratendimento@gmail.com</a><br>
-         WhatsApp: <a href="https://wa.me/5541984039747" target="_blank" rel="nofollow noopener">(+55) 41 98403-9747</a><br>
-         Endereço: Rua João Bettega, 1250 – Portão – Curitiba/PR – 81050-030.</p>
-
-      <h2>11. Atualizações desta política</h2>
-      <p>Podemos atualizar este documento para refletir melhorias ou requisitos legais. A versão vigente estará sempre nesta página, com data de atualização.</p>
-
-      <div class="p-5 rounded-xl bg-gray-50 border mt-10">
-        <div class="text-sm text-gray-600">Última atualização: <strong>fevereiro/2025</strong></div>
+        <p class="pt-6 border-t font-semibold">Atualizado em Março de 2025.</p>
       </div>
 
-      <div class="not-prose mt-10 flex flex-wrap gap-3">
-        <a href="/contato" class="inline-flex items-center gap-2 bg-primary text-white px-5 py-3 rounded-full hover:bg-emerald-800 transition">
-          <i class="fa-solid fa-envelope"></i> Falar com a equipe
-        </a>
-        <a href="https://wa.me/5541984039747?text=Ol%C3%A1!%20Quero%20entender%20mais%20sobre%20meus%20dados."
+      <div class="mt-10 text-center">
+        <p class="mb-4 text-gray-600 font-medium italic uppercase tracking-tighter">Dúvidas sobre seus dados?</p>
+        <a href="https://wa.me/5541984039747"
            target="_blank" rel="nofollow noopener"
-           class="inline-flex items-center gap-2 bg-secondary text-white px-5 py-3 rounded-full hover:bg-orange-600 transition">
-          <i class="fab fa-whatsapp"></i> WhatsApp
+           class="inline-flex items-center gap-2 bg-green-600 text-white px-8 py-4 rounded-xl hover:bg-green-700 transition shadow-xl font-black uppercase">
+          <i class="fab fa-whatsapp text-xl"></i> Atendimento via WhatsApp
         </a>
       </div>
     </div>
@@ -167,37 +107,28 @@
       <div>
         <h4 class="font-bold mb-3">Navegação</h4>
         <ul class="space-y-2 text-gray-300">
-          <li><a href="/" class="hover:text-white">Home</a></li>
-          <li><a href="/sobre-nos" class="hover:text-white">A Brasil Soccer</a></li>
-          <li><a href="/quadras" class="hover:text-white">Quadras</a></li>
-          <li><a href="/churrasqueira-e-eventos" class="hover:text-white">Churrasqueira & Eventos</a></li>
-          <li><a href="/contato" class="hover:text-white">Contato</a></li>
-          <li><a href="/politica-de-privacidade" class="hover:text-white">Política de Privacidade</a></li>
+          <li><a href="index.html" class="hover:text-white">Home</a></li>
+          <li><a href="sobre-nos.html" class="hover:text-white">A Brasil Soccer</a></li>
+          <li><a href="quadras.html" class="hover:text-white">Quadras</a></li>
+          <li><a href="churrasqueira-e-eventos.html" class="hover:text-white">Churrasqueira & Eventos</a></li>
+          <li><a href="https://wa.me/5541984039747" class="hover:text-white">Contato</a></li>
         </ul>
       </div>
       <div>
         <h4 class="font-bold mb-3">Fale com a gente</h4>
-        <a href="https://wa.me/5541984039747" class="inline-flex items-center gap-2 bg-secondary hover:bg-orange-600 text-white px-4 py-2 rounded-full transition"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://wa.me/5541984039747" target="_blank" class="inline-flex items-center gap-2 bg-secondary hover:bg-orange-600 text-white px-4 py-2 rounded-full transition"><i class="fab fa-whatsapp"></i> WhatsApp</a>
       </div>
     </div>
-    <div class="mt-8 border-top border-gray-700 pt-6 text-center text-gray-400 text-sm">&copy; 2025 Brasil Soccer. Todos os direitos reservados.</div>
+    <div class="mt-8 border-top border-gray-700 pt-6 text-center text-gray-400 text-sm italic">&copy; 2025 Brasil Soccer. Todos os direitos reservados.</div>
   </footer>
 
-  <!-- JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"PrivacyPolicy",
-    "name":"Política de Privacidade – Brasil Soccer",
-    "url":"https://brasilsoccer.com.br/politica-de-privacidade",
-    "publisher":{
-      "@type":"SportsActivityLocation",
-      "name":"Brasil Soccer",
-      "telephone":"+55-41-98403-9747",
-      "address":{"@type":"PostalAddress","streetAddress":"Rua João Bettega, 1250","addressLocality":"Curitiba","addressRegion":"PR","postalCode":"81050-030","addressCountry":"BR"}
-    }
-  }
-  </script>
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/5541984039747" target="_blank" rel="nofollow noopener" class="fixed right-6 top-1/2 -translate-y-1/2 z-[60] group flex items-center" aria-label="Falar no WhatsApp">
+    <span class="bg-white text-gray-900 px-4 py-2 rounded-l-lg shadow-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none -mr-2 pr-6">WhatsApp</span>
+    <div class="bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(22,163,74,0.5)] transition-all duration-300 group-hover:scale-110 group-hover:bg-green-500 animate-pulse">
+      <i class="fab fa-whatsapp text-4xl"></i>
+    </div>
+  </a>
 
   <script>
     document.querySelectorAll('img').forEach(img=>{img.loading=img.loading||'lazy';img.decoding=img.decoding||'async';});

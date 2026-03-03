@@ -47,21 +47,20 @@
         <a href="index.html" class="hover:text-primary">Home</a>
 
         <!-- Dropdown principal -->
-        <div class="group relative">
-          <button class="hover:text-primary flex items-center gap-1">
+        <div class="group relative py-4">
+          <button class="hover:text-primary flex items-center gap-1 font-medium transition py-8">
             A BRASIL SOCCER
             <svg class="w-3 h-3 mt-[2px]" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.29a.75.75 0 01-.02-1.08z" clip-rule="evenodd" />
             </svg>
           </button>
 
-          <!-- Dropdown -->
-          <div class="absolute left-0 mt-2 hidden group-hover:block bg-[#1E40AF] text-white rounded-md shadow-lg py-2 w-56 z-50">
-            <a href="sobre-nos.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">A Brasil Soccer</a>
-            <a href="locacao-e-mensalistas.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">Locação e Mensalistas</a>
-            <a href="campeonatos.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">Campeonatos</a>
-            <a href="escola-de-futebol.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">Escola de Futebol</a>
-            <a href="seja-um-anunciante.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">Seja um Anunciante</a>
+          <!-- Dropdown menu -->
+          <div class="absolute left-0 top-full hidden group-hover:block bg-[#1E40AF] text-white rounded-b-lg shadow-lg py-2 w-56 z-50 border-t-4 border-secondary">
+            <a href="sobre-nos.html" class="block px-4 py-3 hover:bg-secondary hover:text-black transition border-b border-white/10">A Brasil Soccer</a>
+            <a href="locacao-e-mensalistas.html" class="block px-4 py-3 hover:bg-secondary hover:text-black transition border-b border-white/10">Locação e Mensalistas</a>
+            <a href="campeonatos.html" class="block px-4 py-3 hover:bg-secondary hover:text-black transition border-b border-white/10">Campeonatos</a>
+            <a href="escola-de-futebol.html" class="block px-4 py-3 hover:bg-secondary hover:text-black transition">Escola de Futebol</a>
           </div>
         </div>
 
@@ -306,6 +305,14 @@
     }
   }
   </script>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/5541984039747" target="_blank" rel="nofollow noopener" class="fixed right-6 top-1/2 -translate-y-1/2 z-[60] group flex items-center" aria-label="Falar no WhatsApp">
+    <span class="bg-white text-gray-900 px-4 py-2 rounded-l-lg shadow-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none -mr-2 pr-6">WhatsApp</span>
+    <div class="bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(22,163,74,0.5)] transition-all duration-300 group-hover:scale-110 group-hover:bg-green-500 animate-pulse">
+      <i class="fab fa-whatsapp text-4xl"></i>
+    </div>
+  </a>
 
   <script>
     // Progressive enhancement

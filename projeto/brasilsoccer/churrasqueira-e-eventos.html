@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- SEO -->
-  <meta name="description" content="Área de churrasqueiras, bar com telões e espaço para eventos corporativos e aniversários. Estrutura completa ao lado das quadras na Brasil Soccer." />
+  <meta name="description" content="Área de churrasqueiras, bar e espaço para eventos corporativos e aniversários em Curitiba. Estrutura integrada às quadras na Brasil Soccer." />
   <link rel="canonical" href="https://brasilsoccer.com.br/churrasqueira-e-eventos" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Churrasqueira & Eventos | Brasil Soccer" />
@@ -31,7 +31,7 @@
     .hero{
       min-height:52vh;
       background:linear-gradient(rgba(6,106,49,.92),rgba(6,106,49,.82)),
-                 url('/fotos/churrasqueira-hero.jpg') center/cover no-repeat;
+                 url('fotos/churrasqueira.jpg') center/cover no-repeat;
     }
     .btn{padding:.8rem 1.6rem;border-radius:9999px;font-weight:700;transition:.3s}
     .btn-secondary{background:var(--secondary);color:#fff}.btn-secondary:hover{background:#e38b0e}
@@ -48,7 +48,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="h-20 flex items-center justify-between">
       <!-- LOGO -->
-      <a href="/" class="text-2xl font-bold text-primary">
+      <a href="index.html" class="text-2xl font-bold text-primary">
         <span class="text-secondary">BRASIL</span> SOCCER
       </a>
 
@@ -57,7 +57,7 @@
         <a href="index.html" class="hover:text-primary">Home</a>
 
         <!-- Dropdown principal -->
-        <div class="group relative">
+        <div class="group relative py-4">
           <button class="hover:text-primary flex items-center gap-1">
             A BRASIL SOCCER
             <svg class="w-3 h-3 mt-[2px]" fill="currentColor" viewBox="0 0 20 20">
@@ -66,18 +66,17 @@
           </button>
 
           <!-- Dropdown -->
-          <div class="absolute left-0 mt-2 hidden group-hover:block bg-[#1E40AF] text-white rounded-md shadow-lg py-2 w-56 z-50">
-            <a href="sobre-nos.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">A Brasil Soccer</a>
-            <a href="locacao-e-mensalistas.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">Locação e Mensalistas</a>
-            <a href="campeonatos.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">Campeonatos</a>
-            <a href="escola-de-futebol.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">Escola de Futebol</a>
-            <a href="seja-um-anunciante.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">Seja um Anunciante</a>
+          <div class="absolute left-0 top-full hidden group-hover:block bg-[#1E40AF] text-white rounded-md shadow-lg py-2 w-56 z-50 border-t-4 border-secondary">
+            <a href="sobre-nos.html" class="block px-4 py-2 hover:bg-secondary hover:text-black transition border-b border-white/10">A Brasil Soccer</a>
+            <a href="locacao-e-mensalistas.html" class="block px-4 py-2 hover:bg-secondary hover:text-black transition border-b border-white/10">Locação e Mensalistas</a>
+            <a href="campeonatos.html" class="block px-4 py-2 hover:bg-secondary hover:text-black transition border-b border-white/10">Campeonatos</a>
+            <a href="escola-de-futebol.html" class="block px-4 py-2 hover:bg-secondary hover:text-black transition">Escola de Futebol</a>
           </div>
         </div>
 
         <a href="quadras.html" class="hover:text-primary">Quadras</a>
-        <a href="churrasqueira-e-eventos.html" class="hover:text-primary">Churrasqueira & Eventos</a>
-        <a href="contato.html" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-emerald-800 transition">Contato</a>
+        <a href="churrasqueira-e-eventos.html" class="hover:text-primary font-bold text-primary">Churrasqueira & Eventos</a>
+        <a href="https://wa.me/5541984039747" target="_blank" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-emerald-800 transition font-bold">Contato</a>
       </div>
     </div>
   </div>
@@ -87,15 +86,17 @@
   <!-- HERO -->
   <header class="hero text-white flex items-center">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-      <p class="uppercase tracking-widest text-white/90 font-semibold mb-3">Churrasqueira & Eventos</p>
-      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+      <p class="uppercase tracking-widest text-white/90 font-semibold mb-3">Confraternizações</p>
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight uppercase italic">
         Futebol, <span class="text-secondary">churrasco</span> e bons momentos
       </h1>
-      <p class="mt-5 text-lg md:text-xl text-gray-100 max-w-3xl">
-        Espaços integrados às quadras, bar com telões e estrutura para receber seu time, sua família e sua empresa.
+      <p class="mt-5 text-lg md:text-xl text-gray-100 max-w-3xl leading-relaxed">
+        Espaços integrados às quadras, bar completo e estrutura pronta para receber seu time, sua família e sua empresa com total conforto.
       </p>
       <div class="mt-8 flex flex-col sm:flex-row gap-4">
-        <a href="#reservar" class="btn btn-secondary">Reservar espaço</a>
+        <a href="https://wa.me/5541984039747" target="_blank" class="btn btn-secondary flex items-center justify-center gap-2">
+          <i class="fab fa-whatsapp"></i> Reservar pelo WhatsApp
+        </a>
         <a href="#formatos" class="btn btn-ghost">Formatos de evento</a>
       </div>
     </div>
@@ -104,43 +105,44 @@
   <!-- BREADCRUMB -->
   <nav class="bg-gray-100 py-3 text-sm">
     <div class="max-w-7xl mx-auto px-4 flex items-center gap-2">
-      <a href="/" class="text-gray-600 hover:text-primary">Home</a>
+      <a href="index.html" class="text-gray-600 hover:text-primary">Home</a>
       <span class="text-gray-400">/</span>
       <span class="text-gray-900 font-medium">Churrasqueira & Eventos</span>
     </div>
   </nav>
 
   <!-- DIFERENCIAIS -->
-  <section id="diferenciais" class="py-14 bg-white">
+  <section id="diferenciais" class="py-14 bg-white text-center">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-10">
-        <h2 class="text-3xl md:text-4xl font-bold">Tudo para o seu evento acontecer sem stress</h2>
-        <p class="text-gray-600 mt-2">Estrutura pronta, equipe experiente e clima de estádio.</p>
+      <div class="max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold uppercase italic tracking-tighter">Sua Festa na Brasil Soccer</h2>
+        <div class="w-20 h-1 bg-secondary mx-auto mt-4 mb-6"></div>
+        <p class="text-gray-600 text-lg leading-relaxed">Estrutura pronta e ambiente agradável para o seu evento acontecer com sucesso.</p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-gray-50 rounded-xl p-7 shadow card-hover">
-          <div class="w-12 h-12 rounded-lg bg-primary text-white flex items-center justify-center mb-4">
-            <i class="fa-solid fa-fire-burner"></i>
+        <div class="bg-gray-50 rounded-2xl p-10 shadow-sm card-hover border-b-4 border-primary">
+          <div class="w-16 h-16 rounded-2xl bg-primary text-white flex items-center justify-center mb-6 mx-auto shadow-lg">
+            <i class="fa-solid fa-fire-burner text-2xl"></i>
           </div>
-          <h3 class="text-xl font-bold text-primary">6 churrasqueiras equipadas</h3>
-          <p class="text-gray-700 mt-2">Áreas cobertas, bancadas, pias e pontos elétricos. Próximas às quadras.</p>
+          <h3 class="text-xl font-black text-gray-900 uppercase">2 churrasqueiras</h3>
+          <p class="text-gray-600 mt-3">Áreas cobertas, integradas a um amplo espaço verde para convivência.</p>
         </div>
 
-        <div class="bg-gray-50 rounded-xl p-7 shadow card-hover">
-          <div class="w-12 h-12 rounded-lg bg-secondary text-primary flex items-center justify-center mb-4">
-            <i class="fa-solid fa-martini-glass-citrus"></i>
+        <div class="bg-gray-50 rounded-2xl p-10 shadow-sm card-hover border-b-4 border-secondary">
+          <div class="w-16 h-16 rounded-2xl bg-secondary text-white flex items-center justify-center mb-6 mx-auto shadow-lg">
+            <i class="fa-solid fa-beer-mug-empty text-2xl"></i>
           </div>
-          <h3 class="text-xl font-bold text-primary">Bar e telões</h3>
-          <p class="text-gray-700 mt-2">Transmissão dos principais jogos e cardápio pensado para grupos.</p>
+          <h3 class="text-xl font-black text-gray-900 uppercase">Bar Completo</h3>
+          <p class="text-gray-600 mt-3">Cardápio variado e bebidas geladas para acompanhar a resenha.</p>
         </div>
 
-        <div class="bg-gray-50 rounded-xl p-7 shadow card-hover">
-          <div class="w-12 h-12 rounded-lg bg-primary text-white flex items-center justify-center mb-4">
-            <i class="fa-solid fa-people-group"></i>
+        <div class="bg-gray-50 rounded-2xl p-10 shadow-sm card-hover border-b-4 border-primary">
+          <div class="w-16 h-16 rounded-2xl bg-primary text-white flex items-center justify-center mb-6 mx-auto shadow-lg">
+            <i class="fa-solid fa-people-group text-2xl"></i>
           </div>
-          <h3 class="text-xl font-bold text-primary">Até 100 pessoas</h3>
-          <p class="text-gray-700 mt-2">Recebemos aniversários, corporate days, encontros de equipes e torneios.</p>
+          <h3 class="text-xl font-black text-gray-900 uppercase">Até 100 pessoas</h3>
+          <p class="text-gray-600 mt-3">Espaço amplo e versátil para receber grandes grupos com conforto.</p>
         </div>
       </div>
     </div>
@@ -149,138 +151,78 @@
   <!-- FORMATOS -->
   <section id="formatos" class="py-16 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold">Formatos de evento</h2>
-        <p class="text-gray-600 mt-2">Escolha um roteiro e a gente cuida do resto.</p>
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold uppercase italic tracking-tighter text-gray-900">Formatos de Reserva</h2>
+        <p class="text-gray-600 mt-2 text-lg">Alugue nosso espaço para o seu momento especial.</p>
       </div>
 
       <div class="grid lg:grid-cols-2 gap-10">
-        <article class="bg-white rounded-2xl overflow-hidden shadow card-hover">
-          <img src="fotos/evento-aniversario.jpg" alt="Aniversário com futebol e churrasco" class="w-full h-60 object-cover" loading="lazy" decoding="async">
+        <article class="bg-white rounded-2xl overflow-hidden shadow-md card-hover group">
+          <img src="fotos/evento-aniversario.jpg" alt="Aniversários" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500" loading="lazy">
           <div class="p-8">
-            <h3 class="text-2xl font-bold text-primary">Aniversários & Famílias</h3>
-            <p class="text-gray-700 mt-2">Quadra + churrasqueira + área kids opcional. Perfeito para juntar todo mundo com bola rolando.</p>
-            <ul class="mt-4 text-gray-700 space-y-2">
-              <li><i class="fa fa-check text-primary mr-2"></i> Decoração simples (opcional)</li>
-              <li><i class="fa fa-check text-primary mr-2"></i> Som ambiente e telões</li>
-              <li><i class="fa fa-check text-primary mr-2"></i> Suporte de equipe durante o evento</li>
-            </ul>
+            <h3 class="text-2xl font-black text-primary uppercase mb-3 italic">Aniversários & Famílias</h3>
+            <p class="text-gray-600 text-lg leading-relaxed">Quadra + churrasqueira + ampla área verde. O cenário perfeito para reunir a família e amigos com muita bola rolando e diversão para todas as idades.</p>
           </div>
         </article>
 
-        <article class="bg-white rounded-2xl overflow-hidden shadow card-hover">
-          <img src="fotos/evento-corporativo.jpg" alt="Evento corporativo na Brasil Soccer" class="w-full h-60 object-cover" loading="lazy" decoding="async">
+        <article class="bg-white rounded-2xl overflow-hidden shadow-md card-hover group">
+          <img src="fotos/evento-corporativo.jpg" alt="Eventos Corporativos" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500" loading="lazy">
           <div class="p-8">
-            <h3 class="text-2xl font-bold text-primary">Corporativo & Equipes</h3>
-            <p class="text-gray-700 mt-2">Confraternização com jogos amistosos e premiação. Ótimo para integração e reconhecimento de times.</p>
-            <ul class="mt-4 text-gray-700 space-y-2">
-              <li><i class="fa fa-check text-primary mr-2"></i> Tabela de jogos e arbitragem (opcional)</li>
-              <li><i class="fa fa-check text-primary mr-2"></i> Espaço para discursos e brindes</li>
-              <li><i class="fa fa-check text-primary mr-2"></i> Apoio de som & mídia</li>
-            </ul>
+            <h3 class="text-2xl font-black text-primary uppercase mb-3 italic">Corporativo & Equipes</h3>
+            <p class="text-gray-600 text-lg leading-relaxed">Confraternização com jogos amistosos em um ambiente descontraído. Excelente opção para integração, dinâmicas de grupo e celebração de metas alcançadas.</p>
           </div>
         </article>
 
-        <article class="bg-white rounded-2xl overflow-hidden shadow card-hover">
-          <img src="fotos/noite-do-churrasco.jpg" alt="Noite do churrasco com música" class="w-full h-60 object-cover" loading="lazy" decoding="async">
+        <article class="bg-white rounded-2xl overflow-hidden shadow-md card-hover group">
+          <img src="fotos/noite-do-churrasco.jpg" alt="Noite do Churrasco" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500" loading="lazy">
           <div class="p-8">
-            <h3 class="text-2xl font-bold text-primary">Noite do Churrasco</h3>
-            <p class="text-gray-700 mt-2">Aquele pós-jogo com fogo na brasa, música e resenha. A casa fornece utensílios básicos.</p>
+            <h3 class="text-2xl font-black text-primary uppercase mb-3 italic">Amistosos & Resenha</h3>
+            <p class="text-gray-600 text-lg leading-relaxed">Aquele pós-jogo clássico com fogo na brasa e muita conversa. Nossa estrutura de churrasqueiras fica à disposição para o seu grupo após a partida.</p>
           </div>
         </article>
 
-        <article class="bg-white rounded-2xl overflow-hidden shadow card-hover">
-          <img src="fotos/torneio-patrocinado.jpg" alt="Torneio patrocinado com premiação" class="w-full h-60 object-cover" loading="lazy" decoding="async">
+        <article class="bg-white rounded-2xl overflow-hidden shadow-md card-hover group">
+          <img src="fotos/brasilsoccer-imagem.jpg" alt="Locação de Espaço" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500" loading="lazy">
           <div class="p-8">
-            <h3 class="text-2xl font-bold text-primary">Torneios & Premiações</h3>
-            <p class="text-gray-700 mt-2">Cotas para marcas, naming e conteúdo social. A gente organiza a festa do campeão.</p>
+            <h3 class="text-2xl font-black text-primary uppercase mb-3 italic">Locação de Espaço</h3>
+            <p class="text-gray-600 text-lg leading-relaxed">Precisa apenas da área verde ou das churrasqueiras? Fale com nossa equipe e consulte as condições para locação parcial da nossa infraestrutura.</p>
           </div>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- GALERIA -->
-  <section class="py-12 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-8">
-        <h2 class="text-3xl md:text-4xl font-bold">Um pouco do clima</h2>
-        <p class="text-gray-600 mt-2">Momentos que acontecem por aqui.</p>
-      </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        <img src="fotos/noite-do-churrasco.jpg" alt="Churrasqueira em uso" class="rounded-lg w-full h-44 object-cover">
-        <img src="fotos/bar-teloes.jpg" alt="Bar com telões" class="rounded-lg w-full h-44 object-cover">
-        <img src="fotos/restaurante.jpg" alt="Mesa de amigos" class="rounded-lg w-full h-44 object-cover">
-        <img src="fotos/eventos-time.jpg" alt="Confraternização corporativa" class="rounded-lg w-full h-44 object-cover">
       </div>
     </div>
   </section>
 
   <!-- REGRAS & DICAS -->
-  <section class="py-16 bg-gray-50">
+  <section class="py-16 bg-white border-t border-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-start">
       <div>
-        <h2 class="text-3xl md:text-4xl font-bold">Regras simples para tudo sair perfeito</h2>
+        <h2 class="text-3xl font-bold uppercase italic tracking-tighter">Regras da Casa</h2>
         <ul class="mt-6 space-y-4 text-gray-700">
-          <li class="flex"><i class="fa-solid fa-clock text-primary mr-3 mt-1"></i> Tolerância de chegada e saída para montar/desmontar.</li>
-          <li class="flex"><i class="fa-solid fa-bottle-water text-primary mr-3 mt-1"></i> Bebidas próprias: verifique disponibilidade e política da casa.</li>
-          <li class="flex"><i class="fa-solid fa-broom text-primary mr-3 mt-1"></i> Manter o espaço limpo; lixeiras e utensílios no local.</li>
-          <li class="flex"><i class="fa-solid fa-shield-heart text-primary mr-3 mt-1"></i> Segurança de crianças sempre sob supervisão de responsáveis.</li>
+          <li class="flex"><i class="fa-solid fa-clock text-primary mr-3 mt-1"></i> Respeite os horários de início e término da sua reserva.</li>
+          <li class="flex"><i class="fa-solid fa-bottle-water text-primary mr-3 mt-1"></i> Consulte nossa política para entrada de bebidas e alimentos.</li>
+          <li class="flex"><i class="fa-solid fa-broom text-primary mr-3 mt-1"></i> Ajude-nos a manter o espaço limpo para o próximo grupo.</li>
+          <li class="flex"><i class="fa-solid fa-shield-heart text-primary mr-3 mt-1"></i> Segurança de crianças é de total responsabilidade dos pais.</li>
         </ul>
       </div>
-      <div class="bg-white rounded-2xl p-8 shadow">
-        <h3 class="text-2xl font-bold text-primary">Dicas para um evento redondo</h3>
-        <ol class="list-decimal list-inside mt-4 text-gray-700 space-y-2">
-          <li>Defina o roteiro (jogo → churrasco → premiação).</li>
-          <li>Monte uma lista de convidados e comunique horários.</li>
-          <li>Combine playlist, telões e mensagens no placar.</li>
-          <li>Fotógrafo? Podemos indicar parceiros.</li>
-        </ol>
+      <div class="bg-gray-50 rounded-[2rem] p-10 shadow-inner border border-gray-100">
+        <h3 class="text-2xl font-bold text-primary italic uppercase">Dica Brasil Soccer</h3>
+        <p class="mt-4 text-gray-600 leading-relaxed text-lg italic">Organize sua lista de convidados com antecedência e fale com nossa equipe via WhatsApp para garantir que todas as suas necessidades de espaço sejam atendidas.</p>
       </div>
     </div>
   </section>
 
-  <!-- CTA RESERVA + FAQ -->
-  <section id="reservar" class="py-16 bg-primary text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12">
-      <div>
-        <h2 class="text-3xl md:text-4xl font-bold">Quer reservar um espaço?</h2>
-        <p class="mt-3 text-white/90">Fale com a nossa equipe e garanta a data do seu evento.</p>
-        <div class="mt-6 flex flex-col sm:flex-row gap-4">
-          <a href="https://wa.me/5541984039747?text=Ol%C3%A1%20Brasil%20Soccer!%20Quero%20reservar%20a%20churrasqueira%20para%20um%20evento."
-             target="_blank" rel="nofollow noopener"
-             class="bg-secondary hover:bg-orange-600 text-white font-bold py-3 px-7 rounded-full transition">
-            <i class="fab fa-whatsapp mr-2"></i>WhatsApp
-          </a>
-          <a href="/contato" class="border-2 border-white font-bold py-3 px-7 rounded-full hover:bg-white hover:text-primary-700 transition">
-            Falar com atendimento
-          </a>
-        </div>
-      </div>
-
-      <div>
-        <div class="bg-white/10 rounded-xl p-6 backdrop-blur">
-          <h3 class="text-2xl font-bold mb-4">Dúvidas frequentes</h3>
-          <div class="space-y-4">
-            <details class="bg-white/5 rounded-lg p-4">
-              <summary class="cursor-pointer font-semibold">Posso usar a churrasqueira sem jogar?</summary>
-              <p class="mt-2 text-white/90">Sim. A reserva do espaço é independente da quadra e podemos sugerir roteiros com ou sem partida.</p>
-            </details>
-            <details class="bg-white/5 rounded-lg p-4">
-              <summary class="cursor-pointer font-semibold">Vocês oferecem utensílios?</summary>
-              <p class="mt-2 text-white/90">A casa fornece grelha e itens básicos. Consulte opções adicionais com a equipe.</p>
-            </details>
-            <details class="bg-white/5 rounded-lg p-4">
-              <summary class="cursor-pointer font-semibold">O bar faz combos para grupos?</summary>
-              <p class="mt-2 text-white/90">Temos sugestões de porções e bebidas para turmas. Envie o tamanho do seu grupo para receber o cardápio.</p>
-            </details>
-          </div>
-        </div>
-      </div>
+  <!-- CTA RESERVA -->
+  <section id="reservar" class="py-20 bg-emerald-900 text-white text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-4xl md:text-5xl font-black mb-6 uppercase italic tracking-tighter">Quer reservar um espaço?</h2>
+      <p class="text-xl opacity-90 mb-10 leading-relaxed">Fale agora com a nossa equipe via WhatsApp e garanta a data para o seu jogo ou evento.</p>
+      <a href="https://wa.me/5541984039747" target="_blank" class="inline-flex items-center gap-3 bg-secondary text-white font-black py-5 px-12 rounded-2xl hover:bg-orange-600 transition shadow-2xl uppercase text-xl">
+        <i class="fab fa-whatsapp text-2xl"></i> Falar no WhatsApp
+      </a>
     </div>
   </section>
 
-  <!-- MAPA CURTO -->
+  <!-- MAPA -->
   <div class="h-80 w-full">
     <iframe title="Mapa Brasil Soccer" loading="lazy"
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.238040691633!2d-49.30282392434513!3d-25.4625506333666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce472f8f33f81%3A0x9e1bcd5b84794494!2sRua%20Jo%C3%A3o%20Bettega%2C%201250%20-%20Port%C3%A3o%2C%20Curitiba%20-%20PR%2C%2081050-030!5e0!3m2!1spt-BR!2sbr!4v1687206780422!5m2!1spt-BR!2sbr"
@@ -297,11 +239,11 @@
       <div>
         <h4 class="font-bold mb-3">Navegação</h4>
         <ul class="space-y-2 text-gray-300">
-          <li><a href="/" class="hover:text-white">Home</a></li>
-          <li><a href="/quem-somos" class="hover:text-white">Quem Somos</a></li>
-          <li><a href="/quadras" class="hover:text-white">Quadras</a></li>
-          <li><a href="/churrasqueira-e-eventos" class="hover:text-white">Churrasqueira & Eventos</a></li>
-          <li><a href="/contato" class="hover:text-white">Contato</a></li>
+          <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+          <li><a href="sobre-nos.html" class="hover:text-white transition">Quem Somos</a></li>
+          <li><a href="quadras.html" class="hover:text-white transition">Quadras</a></li>
+          <li><a href="churrasqueira-e-eventos.html" class="hover:text-white transition font-bold text-white">Churrasqueira & Eventos</a></li>
+          <li><a href="https://wa.me/5541984039747" class="hover:text-white transition">Contato</a></li>
         </ul>
       </div>
       <div>
@@ -314,6 +256,14 @@
     <div class="mt-8 border-t border-gray-700 pt-6 text-center text-gray-400 text-sm">&copy; 2025 Brasil Soccer. Todos os direitos reservados.</div>
   </footer>
 
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/5541984039747" target="_blank" rel="nofollow noopener" class="fixed right-6 top-1/2 -translate-y-1/2 z-[60] group flex items-center" aria-label="Falar no WhatsApp">
+    <span class="bg-white text-gray-900 px-4 py-2 rounded-l-lg shadow-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none -mr-2 pr-6">WhatsApp</span>
+    <div class="bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(22,163,74,0.5)] transition-all duration-300 group-hover:scale-110 group-hover:bg-green-500 animate-pulse">
+      <i class="fab fa-whatsapp text-4xl"></i>
+    </div>
+  </a>
+
   <!-- JSON-LD -->
   <script type="application/ld+json">
   {
@@ -325,8 +275,8 @@
     "telephone":"+55-41-98403-9747",
     "address":{"@type":"PostalAddress","streetAddress":"Rua João Bettega, 1250","addressLocality":"Curitiba","addressRegion":"PR","postalCode":"81050-030","addressCountry":"BR"},
     "amenityFeature":[
-      {"@type":"LocationFeatureSpecification","name":"6 churrasqueiras equipadas","value":true},
-      {"@type":"LocationFeatureSpecification","name":"Bar com telões","value":true},
+      {"@type":"LocationFeatureSpecification","name":"Churrasqueiras integradas à área verde","value":true},
+      {"@type":"LocationFeatureSpecification","name":"Bar completo","value":true},
       {"@type":"LocationFeatureSpecification","name":"Capacidade até 100 pessoas","value":true}
     ]
   }
@@ -334,11 +284,6 @@
 
   <!-- JS -->
   <script>
-    // menu mobile placeholder (igual aos demais arquivos)
-    document.getElementById('menuBtn')?.addEventListener('click', () => {
-      alert('Menu mobile: integrar o mesmo off-canvas usado nas outras páginas.');
-    });
-    // lazy/decoding nas imagens
     document.querySelectorAll('img').forEach(img => {
       img.loading = img.loading || 'lazy';
       img.decoding = img.decoding || 'async';

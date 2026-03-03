@@ -8,11 +8,11 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <meta name="description" content="Escola de futebol na Brasil Soccer: desenvolvimento técnico e social para crianças e jovens, com metodologia moderna e estrutura completa em Curitiba." />
+  <meta name="description" content="Escola de futebol na Brasil Soccer: desenvolvimento técnico e social para crianças e jovens em Curitiba. Matrículas abertas via WhatsApp." />
   <link rel="canonical" href="https://brasilsoccer.com.br/escola-de-futebol" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Escola de Futebol | Brasil Soccer" />
-  <meta property="og:description" content="Aulas por faixa etária, metodologia ativa e estrutura de primeira. Agende uma aula experimental." />
+  <meta property="og:description" content="Aulas por faixa etária, metodologia ativa e estrutura de primeira. Agende uma aula experimental pelo WhatsApp." />
   <meta property="og:url" content="https://brasilsoccer.com.br/escola-de-futebol" />
   <meta property="og:image" content="https://brasilsoccer.com.br/fotos/og-cover.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -22,22 +22,21 @@
     body{font-family:'Poppins',sans-serif}
     .bg-primary{background-color:var(--primary)} .text-primary{color:var(--primary)}
     .bg-secondary{background-color:var(--secondary)} .text-secondary{color:var(--secondary)}
-    .hero{min-height:55vh;background:linear-gradient(rgba(6,106,49,.88),rgba(6,106,49,.88)),url('/fotos/escola-hero.jpg') center/cover no-repeat}
+    .hero{min-height:55vh;background:linear-gradient(rgba(6,106,49,.88),rgba(6,106,49,.88)),url('fotos/escola-futebol.jpg') center/cover no-repeat}
     .btn{padding:.85rem 1.6rem;border-radius:9999px;font-weight:700;transition:.3s}
     .btn-secondary{background:var(--secondary);color:#fff}.btn-secondary:hover{background:#e38b0e}
-    .btn-ghost{border:2px solid #fff;color:#fff}.btn-ghost:hover{background:#fff;color:var(--primary-700)}
     .card-hover:hover{transform:translateY(-6px);box-shadow:0 20px 25px -5px rgba(0,0,0,.1),0 10px 10px -5px rgba(0,0,0,.04)}
     section[id]{scroll-margin-top:88px}
   </style>
 </head>
 <body class="bg-white text-gray-900">
 
-  <!-- NAV (ajuste links conforme seu roteamento) -->
+  <!-- NAV -->
 <nav class="fixed w-full bg-white/95 backdrop-blur shadow-md z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="h-20 flex items-center justify-between">
       <!-- LOGO -->
-      <a href="/" class="text-2xl font-bold text-primary">
+      <a href="index.html" class="text-2xl font-bold text-primary">
         <span class="text-secondary">BRASIL</span> SOCCER
       </a>
 
@@ -46,7 +45,7 @@
         <a href="index.html" class="hover:text-primary">Home</a>
 
         <!-- Dropdown principal -->
-        <div class="group relative">
+        <div class="group relative py-4">
           <button class="hover:text-primary flex items-center gap-1">
             A BRASIL SOCCER
             <svg class="w-3 h-3 mt-[2px]" fill="currentColor" viewBox="0 0 20 20">
@@ -55,18 +54,17 @@
           </button>
 
           <!-- Dropdown -->
-          <div class="absolute left-0 mt-2 hidden group-hover:block bg-[#1E40AF] text-white rounded-md shadow-lg py-2 w-56 z-50">
-            <a href="sobre-nos.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">A Brasil Soccer</a>
-            <a href="locacao-e-mensalistas.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">Locação e Mensalistas</a>
-            <a href="campeonatos.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">Campeonatos</a>
-            <a href="escola-de-futebol.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">Escola de Futebol</a>
-            <a href="seja-um-anunciante.html" class="block px-4 py-2 hover:bg-[#F9A01B] hover:text-black transition">Seja um Anunciante</a>
+          <div class="absolute left-0 top-full hidden group-hover:block bg-[#1E40AF] text-white rounded-md shadow-lg py-2 w-56 z-50 border-t-4 border-secondary">
+            <a href="sobre-nos.html" class="block px-4 py-2 hover:bg-secondary hover:text-black transition border-b border-white/10">A Brasil Soccer</a>
+            <a href="locacao-e-mensalistas.html" class="block px-4 py-2 hover:bg-secondary hover:text-black transition border-b border-white/10">Locação e Mensalistas</a>
+            <a href="campeonatos.html" class="block px-4 py-2 hover:bg-secondary hover:text-black transition border-b border-white/10">Campeonatos</a>
+            <a href="escola-de-futebol.html" class="block px-4 py-2 hover:bg-secondary hover:text-black transition">Escola de Futebol</a>
           </div>
         </div>
 
         <a href="quadras.html" class="hover:text-primary">Quadras</a>
         <a href="churrasqueira-e-eventos.html" class="hover:text-primary">Churrasqueira & Eventos</a>
-        <a href="contato.html" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-emerald-800 transition">Contato</a>
+        <a href="https://wa.me/5541984039747" target="_blank" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-emerald-800 transition font-bold">Contato</a>
       </div>
     </div>
   </div>
@@ -76,204 +74,120 @@
   <!-- HERO -->
   <header class="hero text-white flex items-center">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-      <p class="uppercase tracking-widest text-white/90 font-semibold mb-2">Escola de Futebol</p>
-      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Aprender, evoluir e se divertir <span class="text-secondary">com bola no pé</span></h1>
+      <p class="uppercase tracking-widest text-white/90 font-semibold mb-2 italic">Formação de Atletas</p>
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight uppercase italic">Escola de Futebol <span class="text-secondary">Brasil Soccer</span></h1>
       <p class="mt-5 text-lg md:text-xl text-gray-100 max-w-3xl">Turmas por faixa etária, metodologia ativa e estrutura completa para formar atletas e pessoas.</p>
-      <div class="mt-8 flex flex-col sm:flex-row gap-4">
-        <a href="#metodologia" class="btn btn-ghost">Método</a>
-        <a href="#interesse" class="btn btn-secondary">Aula experimental</a>
+      <div class="mt-8">
+        <a href="https://wa.me/5541984039747?text=Olá! Quero agendar uma aula experimental na Escola de Futebol." target="_blank" class="btn btn-secondary flex inline-flex items-center gap-3 shadow-xl transform hover:scale-105 transition">
+          <i class="fab fa-whatsapp text-2xl"></i> AGENDAR AULA EXPERIMENTAL
+        </a>
       </div>
     </div>
   </header>
 
-  <!-- Breadcrumb -->
-  <nav class="bg-gray-100 py-3 text-sm">
-    <div class="max-w-7xl mx-auto px-4 flex items-center gap-2">
-      <a href="/" class="text-gray-600 hover:text-primary">Home</a><span class="text-gray-400">/</span>
-      <span class="text-gray-900 font-medium">Escola de Futebol</span>
-    </div>
-  </nav>
-
   <!-- Sobre a escola -->
-  <section class="py-16 bg-white">
+  <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
       <div>
-        <h2 class="text-3xl md:text-4xl font-bold">Formação dentro e fora de campo</h2>
-        <p class="mt-4 text-gray-700">Trabalhamos fundamentos técnicos, coordenação motora, tomada de decisão e valores como respeito, disciplina e espírito de equipe.</p>
-        <ul class="mt-6 space-y-3 text-gray-700">
-          <li class="flex"><i class="fa-solid fa-futbol text-primary mr-3 mt-1"></i>Turmas dos 4 aos 17 anos (agrupadas por idade)</li>
-          <li class="flex"><i class="fa-solid fa-user-shield text-primary mr-3 mt-1"></i>Professores qualificados e ambiente seguro</li>
-          <li class="flex"><i class="fa-solid fa-clipboard-check text-primary mr-3 mt-1"></i>Relatos periódicos de desempenho</li>
-          <li class="flex"><i class="fa-solid fa-trophy text-primary mr-3 mt-1"></i>Amistosos e festivais internos ao longo do ano</li>
+        <h2 class="text-3xl md:text-4xl font-bold uppercase italic tracking-tighter">Formação dentro e fora de campo</h2>
+        <div class="w-20 h-1 bg-secondary mt-4 mb-6"></div>
+        <p class="mt-4 text-gray-700 text-lg leading-relaxed text-justify">Nossa escola foca no desenvolvimento integral do aluno. Trabalhamos fundamentos técnicos, coordenação motora, tomada de decisão e valores fundamentais como respeito, disciplina e espírito de equipe.</p>
+        <ul class="mt-8 space-y-4 text-gray-700">
+          <li class="flex items-center"><i class="fa-solid fa-check-circle text-primary mr-3 text-xl"></i><span>Turmas dos 4 aos 17 anos (agrupadas por idade)</span></li>
+          <li class="flex items-center"><i class="fa-solid fa-check-circle text-primary mr-3 text-xl"></i><span>Professores qualificados e ambiente seguro</span></li>
+          <li class="flex items-center"><i class="fa-solid fa-check-circle text-primary mr-3 text-xl"></i><span>Estrutura de ponta com quadras cobertas</span></li>
         </ul>
+        <a href="https://wa.me/5541984039747" target="_blank" class="mt-10 inline-flex items-center gap-2 bg-green-600 text-white font-black py-4 px-8 rounded-xl hover:bg-green-700 transition shadow-lg uppercase">
+          <i class="fab fa-whatsapp text-xl"></i> Consultar horários e vagas
+        </a>
       </div>
-      <div class="grid grid-cols-2 gap-4">
-        <img src="fotos/escola-aula.jpg" alt="Treino de fundamentos" class="rounded-xl shadow w-full h-48 object-cover" loading="lazy" decoding="async">
-        <img src="fotos/escola-kids.jpg" alt="Turma kids" class="rounded-xl shadow w-full h-48 object-cover" loading="lazy" decoding="async">
-        <img src="fotos/escola-jogos.jpg" alt="Jogo em quadra" class="rounded-xl shadow w-full h-48 object-cover" loading="lazy" decoding="async">
-        <img src="fotos/escola-time.jpg" alt="Equipe reunida" class="rounded-xl shadow w-full h-48 object-cover" loading="lazy" decoding="async">
+      <div class="bg-gray-100 p-4 rounded-[2.5rem]">
+        <img src="fotos/escola-futebol-cwb.jpg" alt="Treino Escola de Futebol" class="rounded-[2rem] shadow-2xl w-full h-full object-cover" loading="lazy">
       </div>
     </div>
   </section>
 
   <!-- Metodologia -->
-  <section id="metodologia" class="py-16 bg-gray-50">
+  <section id="metodologia" class="py-20 bg-gray-50 border-t border-b border-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold">Metodologia em 4 pilares</h2>
-        <p class="text-gray-600 mt-2">Conteúdo evolutivo que respeita o tempo de cada atleta.</p>
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold uppercase italic tracking-tighter">Metodologia em 4 pilares</h2>
+        <div class="w-20 h-1 bg-secondary mx-auto mt-4 mb-6"></div>
+        <p class="text-gray-600 text-lg">Conteúdo evolutivo que respeita o tempo e o desenvolvimento de cada atleta.</p>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="bg-white rounded-2xl p-6 shadow card-hover">
-          <div class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mb-3"><i class="fa-solid fa-shoe-prints"></i></div>
-          <h3 class="font-bold">Técnico</h3>
-          <p class="text-gray-700 mt-1">Condução, finalização, passe, domínio e drible.</p>
+        <div class="bg-white rounded-2xl p-8 shadow-sm border-b-4 border-primary card-hover text-center">
+          <div class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-6 mx-auto"><i class="fa-solid fa-shoe-prints text-2xl"></i></div>
+          <h3 class="font-black uppercase italic text-gray-900 mb-3">Técnico</h3>
+          <p class="text-gray-600">Foco em condução, finalização, passe, domínio e drible.</p>
         </div>
-        <div class="bg-white rounded-2xl p-6 shadow card-hover">
-          <div class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mb-3"><i class="fa-solid fa-dumbbell"></i></div>
-          <h3 class="font-bold">Motor</h3>
-          <p class="text-gray-700 mt-1">Coordenação, velocidade, agilidade e equilíbrio.</p>
+        <div class="bg-white rounded-2xl p-8 shadow-sm border-b-4 border-secondary card-hover text-center">
+          <div class="w-16 h-16 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center mb-6 mx-auto"><i class="fa-solid fa-dumbbell text-2xl"></i></div>
+          <h3 class="font-black uppercase italic text-gray-900 mb-3">Motor</h3>
+          <p class="text-gray-600">Desenvolvimento de coordenação, velocidade e equilíbrio.</p>
         </div>
-        <div class="bg-white rounded-2xl p-6 shadow card-hover">
-          <div class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mb-3"><i class="fa-solid fa-brain"></i></div>
-          <h3 class="font-bold">Cognitivo</h3>
-          <p class="text-gray-700 mt-1">Leitura de jogo, tomada de decisão e criatividade.</p>
+        <div class="bg-white rounded-2xl p-8 shadow-sm border-b-4 border-primary card-hover text-center">
+          <div class="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center mb-6 mx-auto"><i class="fa-solid fa-brain text-2xl"></i></div>
+          <h3 class="font-black uppercase italic text-gray-900 mb-3">Cognitivo</h3>
+          <p class="text-gray-600">Estímulo à leitura de jogo, tomada de decisão e criatividade.</p>
         </div>
-        <div class="bg-white rounded-2xl p-6 shadow card-hover">
-          <div class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mb-3"><i class="fa-solid fa-people-group"></i></div>
-          <h3 class="font-bold">Socioemocional</h3>
-          <p class="text-gray-700 mt-1">Trabalho em equipe, respeito e autoconfiança.</p>
+        <div class="bg-white rounded-2xl p-8 shadow-sm border-b-4 border-secondary card-hover text-center">
+          <div class="w-16 h-16 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center mb-6 mx-auto"><i class="fa-solid fa-people-group text-2xl"></i></div>
+          <h3 class="font-black uppercase italic text-gray-900 mb-3">Socioemocional</h3>
+          <p class="text-gray-600">Trabalho em equipe, respeito mútuo e autoconfiança.</p>
         </div>
+      </div>
+
+      <div class="mt-20 text-center">
+        <h3 class="text-2xl font-bold mb-6 italic uppercase">Estrutura que joga junto</h3>
+        <div class="flex flex-wrap justify-center gap-8 text-gray-700 font-medium">
+          <span class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> 3 Quadras Cobertas</span>
+          <span class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> Vestiários Próprios</span>
+          <span class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> Estacionamento Seguro</span>
+          <span class="flex items-center gap-2"><i class="fas fa-check text-primary"></i> Área Verde para Pais</span>
+        </div>
+        <a href="https://wa.me/5541984039747" target="_blank" class="mt-12 inline-block bg-secondary text-white font-black py-5 px-12 rounded-2xl hover:bg-orange-600 transition shadow-2xl uppercase text-lg">
+          <i class="fab fa-whatsapp mr-2 text-2xl"></i> QUERO MATRICULAR MEU FILHO
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Estrutura + Benefícios -->
-  <section class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
-      <div class="grid grid-cols-2 gap-4 order-2 lg:order-1">
-        <img src="fotos/quadra-futebol-curitiba.jpg" alt="Quadras de grama sintética" class="rounded-xl shadow w-full h-48 object-cover" loading="lazy">
-        <img src="fotos/escola-futebol-cwb.jpg" alt="Materiais e cones" class="rounded-xl shadow w-full h-48 object-cover" loading="lazy">
-        <img src="fotos/estacionamento.jpg" alt="Estacionamento amplo" class="rounded-xl shadow w-full h-48 object-cover" loading="lazy">
-        <img src="fotos/restaurante.jpg" alt="Área social e bar" class="rounded-xl shadow w-full h-48 object-cover" loading="lazy">
-      </div>
-      <div class="order-1 lg:order-2">
-        <h2 class="text-3xl md:text-4xl font-bold">Estrutura que joga junto</h2>
-        <ul class="mt-6 space-y-3 text-gray-700">
-          <li class="flex"><i class="fa-solid fa-check text-primary mr-3 mt-1"></i>5 quadras de grama sintética</li>
-          <li class="flex"><i class="fa-solid fa-check text-primary mr-3 mt-1"></i>Área social com bar e telões</li>
-          <li class="flex"><i class="fa-solid fa-check text-primary mr-3 mt-1"></i>Vestiários e estacionamento</li>
-          <li class="flex"><i class="fa-solid fa-check text-primary mr-3 mt-1"></i>Localização de fácil acesso</li>
-        </ul>
-        <a href="/contato" class="inline-block mt-6 bg-primary text-white px-6 py-3 rounded-full hover:bg-emerald-800 transition">Fale com a equipe</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interesse / Aula experimental -->
-  <section id="interesse" class="py-16 bg-primary text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-start">
-      <div>
-        <h2 class="text-3xl md:text-4xl font-bold">Quer conhecer a escola?</h2>
-        <p class="mt-3 text-white/90">Envie seus dados ou chame no WhatsApp. A agenda e as turmas variam ao longo do ano.</p>
-        <div class="mt-6 flex flex-wrap gap-4">
-          <a href="https://wa.me/5541984039747?text=Ol%C3%A1!%20Quero%20saber%20sobre%20a%20Escola%20de%20Futebol."
-             target="_blank" rel="nofollow noopener"
-             class="bg-secondary hover:bg-orange-600 text-white font-bold py-3 px-7 rounded-full transition">
-            <i class="fab fa-whatsapp mr-2"></i>WhatsApp
-          </a>
-          <a href="/contato" class="border-2 border-white font-bold py-3 px-7 rounded-full hover:bg-white hover:text-emerald-800 transition">
-            Outras formas de contato
-          </a>
-        </div>
-      </div>
-
-      <form class="bg-white/10 rounded-2xl p-6 backdrop-blur"
-            action="https://formsubmit.co/brasilsocceratendimento@gmail.com" method="POST">
-        <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
-        <input type="hidden" name="_captcha" value="false" />
-        <h3 class="text-2xl font-bold mb-4">Enviar interesse</h3>
-        <div class="grid sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block mb-1">Responsável</label>
-            <input required name="name" type="text" class="w-full px-4 py-3 rounded-lg bg-white text-gray-800" placeholder="Seu nome">
-          </div>
-          <div>
-            <label class="block mb-1">E-mail</label>
-            <input required name="email" type="email" class="w-full px-4 py-3 rounded-lg bg-white text-gray-800" placeholder="seu@email.com">
-          </div>
-        </div>
-        <div class="mt-4">
-          <label class="block mb-1">Idade do aluno</label>
-          <input name="idade" type="text" class="w-full px-4 py-3 rounded-lg bg-white text-gray-800" placeholder="Ex.: 9 anos">
-        </div>
-        <div class="mt-4">
-          <label class="block mb-1">Mensagem</label>
-          <textarea required name="message" rows="4" class="w-full px-4 py-3 rounded-lg bg-white text-gray-800" placeholder="Conte rapidamente o que você precisa."></textarea>
-        </div>
-        <button type="submit" class="mt-4 bg-secondary hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition">Enviar</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- FAQ enxuto -->
-  <section class="py-16 bg-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl md:text-4xl font-bold text-center">Perguntas frequentes</h2>
-      <div class="mt-10 grid md:grid-cols-2 gap-6">
-        <div class="p-6 rounded-2xl bg-gray-50">
-          <h3 class="font-semibold">Tem aula experimental?</h3>
-          <p class="text-gray-700 mt-2">Sim. Preencha o formulário acima ou chame no WhatsApp para verificar turmas e disponibilidade.</p>
-        </div>
-        <div class="p-6 rounded-2xl bg-gray-50">
-          <h3 class="font-semibold">Como funcionam as turmas?</h3>
-          <p class="text-gray-700 mt-2">São organizadas por faixa etária. Horários e vagas podem mudar conforme a temporada.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MAPA curto -->
-  <div class="h-80 w-full">
+  <!-- MAPA -->
+  <div class="h-80 w-full grayscale opacity-80">
     <iframe title="Mapa Brasil Soccer" loading="lazy"
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.238040691633!2d-49.30282392434513!3d-25.4625506333666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce472f8f33f81%3A0x9e1bcd5b84794494!2sRua%20Jo%C3%A3o%20Bettega%2C%201250%20-%20Port%C3%A3o%2C%20Curitiba%20-%20PR%2C%2081050-030!5e0!3m2!1spt-BR!2sbr!4v1687206780422!5m2!1spt-BR!2sbr"
       width="100%" height="100%" style="border:0;" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 
   <!-- FOOTER simples -->
-  <footer class="bg-gray-800 text-white py-10">
+  <footer class="bg-gray-800 text-white py-10 text-center md:text-left">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
-      <div><h3 class="text-2xl font-bold"><span class="text-primary">BRASIL</span> <span class="text-secondary">SOCCER</span></h3><p class="text-gray-400 mt-2">Escola de futebol com metodologia moderna.</p></div>
+      <div><h3 class="text-2xl font-bold"><span class="text-primary">BRASIL</span> <span class="text-secondary">SOCCER</span></h3><p class="text-gray-400 mt-2 text-sm italic">Onde o futuro do futebol começa com diversão e disciplina.</p></div>
       <div>
-        <h4 class="font-bold mb-3">Navegação</h4>
+        <h4 class="font-bold mb-3 uppercase text-xs tracking-widest text-white/50">Navegação</h4>
         <ul class="space-y-2 text-gray-300">
-          <li><a href="/" class="hover:text-white">Home</a></li>
-          <li><a href="/sobre-nos" class="hover:text-white">A Brasil Soccer</a></li>
-          <li><a href="/escola-de-futebol" class="hover:text-white">Escola de Futebol</a></li>
-          <li><a href="/contato" class="hover:text-white">Contato</a></li>
+          <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+          <li><a href="sobre-nos.html" class="hover:text-white transition">A Brasil Soccer</a></li>
+          <li><a href="escola-de-futebol.html" class="hover:text-white transition font-bold text-white">Escola de Futebol</a></li>
+          <li><a href="https://wa.me/5541984039747" class="hover:text-white transition">Contato</a></li>
         </ul>
       </div>
       <div>
-        <h4 class="font-bold mb-3">Fale com a gente</h4>
-        <a href="https://wa.me/5541984039747" class="inline-flex items-center gap-2 bg-secondary hover:bg-orange-600 text-white px-4 py-2 rounded-full transition"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <h4 class="font-bold mb-3 uppercase text-xs tracking-widest text-white/50">Atendimento</h4>
+        <a href="https://wa.me/5541984039747" target="_blank" class="inline-flex items-center gap-2 bg-secondary hover:bg-orange-600 text-white px-6 py-3 rounded-full transition font-bold shadow-lg uppercase text-sm"><i class="fab fa-whatsapp"></i> Falar no WhatsApp</a>
       </div>
     </div>
-    <div class="mt-8 border-t border-gray-700 pt-6 text-center text-gray-400 text-sm">&copy; 2025 Brasil Soccer. Todos os direitos reservados.</div>
+    <div class="mt-12 border-t border-white/5 pt-6 text-center text-gray-500 text-[10px] uppercase tracking-widest">&copy; 2025 Brasil Soccer. Todos os direitos reservados.</div>
   </footer>
 
-  <!-- JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"SportsClub",
-    "name":"Escola de Futebol – Brasil Soccer",
-    "url":"https://brasilsoccer.com.br/escola-de-futebol",
-    "image":"https://brasilsoccer.com.br/fotos/og-cover.jpg",
-    "address":{"@type":"PostalAddress","streetAddress":"Rua João Bettega, 1250","addressLocality":"Curitiba","addressRegion":"PR","postalCode":"81050-030","addressCountry":"BR"},
-    "telephone":"+55-41-98403-9747",
-    "knowsAbout":["iniciação esportiva","desenvolvimento técnico","turmas por idade"]
-  }
-  </script>
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/5541984039747" target="_blank" rel="nofollow noopener" class="fixed right-6 top-1/2 -translate-y-1/2 z-[60] group flex items-center" aria-label="Falar no WhatsApp">
+    <span class="bg-white text-gray-900 px-4 py-2 rounded-l-lg shadow-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none -mr-2 pr-6">WhatsApp</span>
+    <div class="bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-[0_10px_30px_rgba(22,163,74,0.5)] transition-all duration-300 group-hover:scale-110 group-hover:bg-green-500 animate-pulse">
+      <i class="fab fa-whatsapp text-4xl"></i>
+    </div>
+  </a>
 
   <script>
     document.querySelectorAll('img').forEach(img=>{img.loading=img.loading||'lazy';img.decoding=img.decoding||'async';});
