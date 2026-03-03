@@ -1,0 +1,1513 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proposta Comercial - Versátil Comunicação Visual (Paraná 399)</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --accent:#FF3E00;
+      --bg:#0A0A0A;
+      --surface:#141414;
+      --surface2:#101010;
+      --text:#FFFFFF;
+      --subtext:#A0A0A0;
+      --neon-blue:#00F0FF;
+      --neon-purple:#AD00FF;
+      --green:#22C55E;
+      --border:rgba(255,255,255,.08);
+      --shadow: 0 30px 70px rgba(0,0,0,.65);
+      --radius: 24px;
+    }
+
+    *{ margin:0; padding:0; box-sizing:border-box; font-family:'Space Grotesk', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    body{
+      background: var(--bg);
+      color: var(--text);
+      overflow-x:hidden;
+      padding-bottom:100px;
+    }
+
+    /* ======= BACKGROUND / AURORA ======= */
+    .bg-glow{
+      position:fixed; inset:0;
+      pointer-events:none;
+      z-index:-2;
+      background:
+        radial-gradient(circle at 10% 20%, rgba(255, 62, 0, .07) 0%, transparent 22%),
+        radial-gradient(circle at 85% 30%, rgba(0, 240, 255, .07) 0%, transparent 22%),
+        radial-gradient(circle at 50% 85%, rgba(173, 0, 255, .06) 0%, transparent 25%);
+      filter: blur(0px);
+    }
+    .bg-grid{
+      position:fixed; inset:-20%;
+      z-index:-1;
+      pointer-events:none;
+      background:
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size: 44px 44px;
+      transform: perspective(900px) rotateX(58deg) translateY(120px);
+      opacity:.12;
+      mask-image: radial-gradient(circle at 50% 60%, rgba(0,0,0,1) 0%, rgba(0,0,0,.4) 45%, rgba(0,0,0,0) 70%);
+    }
+
+    /* ======= LAYOUT ======= */
+    header{
+      padding: 72px 20px 36px;
+      text-align:center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .content-container{
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ======= LOGO / HERO ======= */
+    .brand-logo-container{
+      position:relative;
+      display:inline-block;
+      margin-bottom: 24px;
+      overflow:hidden;
+      border-radius: 14px;
+    }
+    .brand-logo{
+      max-height: 100px;
+      max-width: 100%;
+      display:block;
+      filter: drop-shadow(0 0 18px rgba(255,62,0,.35));
+      transition: transform .55s cubic-bezier(.175,.885,.32,1.275), filter .55s;
+    }
+    .brand-logo-container::after{
+      content:"";
+      position:absolute;
+      top:0; left:-150%;
+      width:50%; height:100%;
+      background: linear-gradient(to right, transparent, rgba(255,255,255,.32), transparent);
+      transform: skewX(-25deg);
+      animation: shimmer 3.2s infinite;
+      pointer-events:none;
+    }
+    @keyframes shimmer{ 0%{left:-150%} 26%{left:150%} 100%{left:150%} }
+    .brand-logo-container:hover .brand-logo{
+      transform: scale(1.07);
+      filter: drop-shadow(0 0 30px rgba(255,62,0,.55));
+    }
+
+    .logo-text{
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      color: var(--accent);
+      margin-bottom: 8px;
+      display:block;
+    }
+    h1{
+      font-size: clamp(2rem, 6vw, 3.45rem);
+      font-weight: 700;
+      line-height: 1.06;
+      margin-bottom: 14px;
+    }
+    .gradient-text{
+      background: linear-gradient(90deg, #fff, rgba(255,255,255,.58));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-sub{
+      color: var(--subtext);
+      margin-top: 14px;
+      line-height: 1.7;
+    }
+
+    /* ======= CARDS ======= */
+    .budget-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+      margin-top: 38px;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 38px;
+      position:relative;
+      box-shadow: 0 10px 28px rgba(0,0,0,.35);
+      transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+      display:flex;
+      flex-direction:column;
+      overflow:hidden;
+    }
+    .card::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(circle at 20% 20%, rgba(0,240,255,.13), transparent 40%),
+                  radial-gradient(circle at 80% 40%, rgba(173,0,255,.10), transparent 45%),
+                  radial-gradient(circle at 40% 90%, rgba(255,62,0,.12), transparent 48%);
+      opacity:.0;
+      transition: opacity .35s ease;
+      z-index:0;
+      filter: blur(12px);
+    }
+    .card > *{ position:relative; z-index:1; }
+
+    .card:hover{
+      transform: translateY(-10px);
+      border-color: rgba(255,62,0,.55);
+      box-shadow: var(--shadow);
+    }
+    .card:hover::before{ opacity:1; }
+
+    .highlight-card{
+      border-color: rgba(255,62,0,.60);
+      background: linear-gradient(145deg, rgba(255,62,0,.08) 0%, rgba(255,255,255,.02) 55%, rgba(173,0,255,.05) 100%);
+    }
+
+    .geo-tag{
+      display:inline-block;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      background: rgba(0,240,255,.10);
+      color: var(--neon-blue);
+      margin-bottom: 10px;
+      border: 1px solid rgba(0,240,255,.25);
+    }
+
+    .card-title{ font-size: 1.45rem; font-weight: 700; margin-bottom: 8px; }
+    .price-tag{ font-size: 2.45rem; font-weight: 700; color: var(--accent); margin: 18px 0; }
+    .price-tag span{ font-size: 1rem; color: var(--subtext); font-weight: 500; }
+
+    .features-list{ list-style:none; margin-bottom: 26px; flex-grow:1; }
+    .features-list li{
+      color: var(--subtext);
+      margin-bottom: 12px;
+      display:flex;
+      align-items:flex-start;
+      gap: 10px;
+      font-size:.95rem;
+      line-height:1.5;
+    }
+    .features-list li::before{
+      content:"✓";
+      color: var(--green);
+      font-weight: 800;
+      transform: translateY(1px);
+    }
+
+    .cta-btn{
+      display:block;
+      width:100%;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.12);
+      color: var(--text);
+      padding: 16px 18px;
+      border-radius: 16px;
+      cursor:pointer;
+      font-weight: 800;
+      text-align:center;
+      text-decoration:none;
+      transition: all .25s ease;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      position:relative;
+      overflow:hidden;
+    }
+    .cta-btn::after{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.20), transparent);
+      transform: translateX(-120%);
+      transition: transform .6s ease;
+    }
+    .card:hover .cta-btn{
+      background: var(--accent);
+      border-color: var(--accent);
+      color:#fff;
+    }
+    .card:hover .cta-btn::after{ transform: translateX(120%); }
+
+    /* ======= STATS ======= */
+    .stats-bar{
+      margin: 70px 0;
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 26px;
+      display:flex;
+      justify-content:space-around;
+      flex-wrap:wrap;
+      gap: 10px;
+    }
+    .stat-item{ text-align:center; padding: 12px 10px; min-width: 180px; }
+    .stat-value{
+      font-size: 2.7rem;
+      font-weight: 800;
+      background: linear-gradient(180deg, #fff, rgba(255,255,255,.45));
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      display:block;
+    }
+    .stat-label{
+      color: var(--accent);
+      text-transform:uppercase;
+      font-size:.78rem;
+      letter-spacing:2px;
+      margin-top: 8px;
+      display:block;
+    }
+
+    /* ======= TECH GRID ======= */
+    .tech-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 22px;
+      margin: 10px 0 70px;
+    }
+    .card-header{ display:flex; align-items:center; gap: 14px; margin-bottom: 18px; }
+    .icon-box{
+      width: 50px; height: 50px;
+      display:flex; align-items:center; justify-content:center;
+      border-radius: 14px;
+      font-size: 22px;
+      border: 1px solid rgba(255,255,255,.10);
+    }
+    .highlight-badge{
+      display:inline-block;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 5px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      border: 1px solid rgba(255,255,255,.10);
+    }
+    .badge-seo{ background: rgba(0,240,255,.10); color: var(--neon-blue); border-color: rgba(0,240,255,.22); }
+    .badge-perf{ background: rgba(34,197,94,.10); color: var(--green); border-color: rgba(34,197,94,.22); }
+    .badge-code{ background: rgba(173,0,255,.10); color: var(--neon-purple); border-color: rgba(173,0,255,.22); }
+
+    .tech-list{ list-style:none; }
+    .tech-list li{
+      color: var(--subtext);
+      margin-bottom: 14px;
+      line-height:1.65;
+      position:relative;
+      padding-left: 22px;
+      font-size:.95rem;
+    }
+    .tech-list li::before{
+      content:"▹";
+      color: var(--accent);
+      position:absolute;
+      left:0;
+      top:0;
+      font-weight: 900;
+    }
+    .tech-list li strong{
+      color:#fff;
+      display:block;
+      margin-bottom: 4px;
+    }
+
+    /* ======= SECTION TITLE ======= */
+    .section-title-box{
+      text-align:center;
+      margin: 88px 0 42px;
+    }
+    .section-tag{
+      display:inline-block;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size:.8rem;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom: 14px;
+      background: rgba(173,0,255,.10);
+      color: var(--neon-purple);
+      border: 1px solid rgba(173,0,255,.25);
+    }
+
+    /* ======= HOLOGRAPHIC DASHBOARD WRAP ======= */
+    .dash-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 22px;
+      margin-bottom: 18px;
+    }
+    .panel{
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      padding: 26px;
+      position:relative;
+      overflow:hidden;
+      box-shadow: 0 10px 28px rgba(0,0,0,.35);
+    }
+    .panel::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(circle at 15% 25%, rgba(0,240,255,.16), transparent 45%),
+        radial-gradient(circle at 85% 30%, rgba(173,0,255,.14), transparent 50%),
+        radial-gradient(circle at 55% 95%, rgba(255,62,0,.14), transparent 55%);
+      filter: blur(18px);
+      opacity:.65;
+      pointer-events:none;
+    }
+    .panel::after{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,.10), transparent);
+      transform: translateX(-120%) skewX(-18deg);
+      animation: holoSweep 5.5s infinite;
+      pointer-events:none;
+      opacity:.45;
+    }
+    @keyframes holoSweep{
+      0%{ transform: translateX(-120%) skewX(-18deg); }
+      30%{ transform: translateX(120%) skewX(-18deg); }
+      100%{ transform: translateX(120%) skewX(-18deg); }
+    }
+    .panel > *{ position:relative; z-index:1; }
+
+    .panel-head{
+      display:flex; align-items:flex-start; justify-content:space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .panel-title{
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing:.2px;
+    }
+    .panel-sub{
+      color: var(--subtext);
+      font-size: .9rem;
+      line-height:1.55;
+      margin-top: 6px;
+      max-width: 720px;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.03);
+      color: rgba(255,255,255,.82);
+      white-space:nowrap;
+    }
+    .pill i{
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 14px rgba(34,197,94,.55);
+      display:inline-block;
+    }
+
+    /* ======= COMBO CHART (SVG) ======= */
+    .combo-wrap{ margin-top: 12px; }
+    .combo-legend{
+      display:flex; gap: 14px; flex-wrap:wrap;
+      margin: 10px 0 0;
+      color: var(--subtext);
+      font-size: 12px;
+    }
+    .legend-item{ display:flex; align-items:center; gap: 8px; }
+    .swatch{
+      width: 12px; height: 12px; border-radius: 4px;
+      border: 1px solid rgba(255,255,255,.12);
+    }
+    .sw-accent{ background: rgba(255,62,0,.95); box-shadow: 0 0 14px rgba(255,62,0,.35); }
+    .sw-blue{ background: rgba(0,240,255,.95); box-shadow: 0 0 14px rgba(0,240,255,.35); }
+    .sw-purple{ background: rgba(173,0,255,.95); box-shadow: 0 0 14px rgba(173,0,255,.35); }
+
+    .combo-svg{
+      width: 100%;
+      height: 280px;
+      display:block;
+      border-radius: 18px;
+      background: rgba(0,0,0,.18);
+      border: 1px solid rgba(255,255,255,.08);
+      overflow:hidden;
+    }
+    .grid-line{ stroke: rgba(255,255,255,.08); stroke-width:1; }
+    .axis-text{ fill: rgba(255,255,255,.55); font-size: 11px; letter-spacing:.2px; }
+    .bar{
+      transform-origin: bottom;
+      transform: scaleY(0);
+      opacity:.95;
+      filter: drop-shadow(0 0 10px rgba(255,62,0,.25));
+    }
+    .bar.blue{ filter: drop-shadow(0 0 12px rgba(0,240,255,.18)); }
+    .bar.purple{ filter: drop-shadow(0 0 12px rgba(173,0,255,.18)); }
+
+    .line-path{
+      fill:none;
+      stroke: rgba(0,240,255,.95);
+      stroke-width: 3;
+      filter: drop-shadow(0 0 12px rgba(0,240,255,.25));
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 1200;
+      stroke-dashoffset: 1200;
+    }
+    .dotp{
+      opacity:0;
+      transform: scale(.6);
+      transform-origin: center;
+      filter: drop-shadow(0 0 10px rgba(0,240,255,.35));
+    }
+
+    /* ======= KPI MINI PANELS ======= */
+    .kpi-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 14px;
+    }
+    .kpi{
+      border-radius: 18px;
+      padding: 14px 14px 12px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(0,0,0,.16);
+      overflow:hidden;
+      position:relative;
+    }
+    .kpi::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(circle at 15% 25%, rgba(255,62,0,.18), transparent 55%),
+                  radial-gradient(circle at 85% 55%, rgba(0,240,255,.14), transparent 58%);
+      filter: blur(18px);
+      opacity:.55;
+      pointer-events:none;
+    }
+    .kpi > *{ position:relative; z-index:1; }
+    .kpi .label{ color: rgba(255,255,255,.62); font-size: 12px; letter-spacing:1px; text-transform:uppercase; }
+    .kpi .value{ font-size: 1.7rem; font-weight: 900; margin-top: 6px; }
+    .kpi .hint{ color: var(--subtext); font-size: 12px; margin-top: 4px; line-height: 1.35; }
+
+    /* ======= BAR PROGRESS (FIXED ANIMATION) ======= */
+    .graph-container{
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 30px;
+      margin-bottom: 24px;
+      position:relative;
+      overflow:hidden;
+    }
+    .graph-row{ margin-bottom: 22px; }
+    .graph-label{
+      display:flex;
+      justify-content:space-between;
+      margin-bottom: 10px;
+      font-size: .92rem;
+      color: var(--subtext);
+      gap: 16px;
+    }
+    .bar-bg{
+      width:100%;
+      height: 12px;
+      background: rgba(255,255,255,.06);
+      border-radius: 999px;
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,.06);
+    }
+    .bar-fill{
+      height: 100%;
+      width: 0%;              /* ✅ sem !important (isso quebrava o JS) */
+      border-radius: 999px;
+      transition: width 1.9s cubic-bezier(0.22, 1, 0.36, 1);
+      position:relative;
+      will-change: width;
+    }
+    .bar-fill::after{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent);
+      transform: translateX(-110%);
+      animation: shine 1.9s infinite;
+      opacity:.75;
+    }
+    @keyframes shine{ 100%{ transform: translateX(110%); } }
+
+    .fill-accent{ background: linear-gradient(90deg, rgba(255,62,0,.95), rgba(255,62,0,.45)); }
+    .fill-purple{ background: linear-gradient(90deg, rgba(173,0,255,.95), rgba(173,0,255,.45)); }
+    .fill-blue{ background: linear-gradient(90deg, rgba(0,240,255,.95), rgba(0,240,255,.45)); }
+    .fill-green{ background: linear-gradient(90deg, rgba(34,197,94,.95), rgba(34,197,94,.45)); }
+
+    /* ======= TERMINAL (FIXED: selector existed but was missing) ======= */
+    .terminal-window{
+      background: #0f0f0f;
+      border: 1px solid #333;
+      border-radius: 16px;
+      overflow:hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,.55);
+      margin-top: 22px;
+    }
+    .terminal-header{
+      background:#151515;
+      padding: 10px 14px;
+      display:flex;
+      align-items:center;
+      gap: 8px;
+      border-bottom: 1px solid #2b2b2b;
+    }
+    .dot{ width: 12px; height: 12px; border-radius: 50%; }
+    .red{ background:#ff5f56; } .yellow{ background:#ffbd2e; } .greenDot{ background:#27c93f; }
+    .terminal-title{ margin-left: 10px; color:#777; font-size:12px; letter-spacing:.2px; }
+
+    .terminal-body{
+      padding: 18px;
+      color: #00ff83;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+      font-size: .92rem;
+      line-height: 1.55;
+      max-height: 360px;
+      overflow:auto;
+    }
+    .cmd-line{
+      margin-bottom: 10px;
+      opacity:0;
+      transform: translateY(10px);
+      transition: all .45s ease;
+      white-space: pre-wrap;
+    }
+    .cmd-line.visible{ opacity:1; transform: translateY(0); }
+    .cmd-prompt{ color: #d0d0d0; }
+    .cmd-success{ color: var(--green); }
+    .cmd-warn{ color: var(--accent); }
+    .cmd-info{ color: var(--neon-blue); }
+
+    /* ======= LOCAL SEO BOX ======= */
+    .local-seo-box{
+      background: linear-gradient(145deg, rgba(255,255,255,.03) 0%, rgba(0,0,0,.08) 100%);
+      border: 1px dashed rgba(0,240,255,.25);
+      border-radius: 30px;
+      padding: 44px;
+      margin: 70px 0;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items:center;
+      overflow:hidden;
+      position:relative;
+    }
+    .local-seo-box::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(circle at 20% 20%, rgba(0,240,255,.18), transparent 45%),
+                  radial-gradient(circle at 85% 70%, rgba(255,62,0,.16), transparent 50%);
+      filter: blur(22px);
+      opacity:.55;
+      pointer-events:none;
+    }
+    .local-seo-box > *{ position:relative; z-index:1; }
+
+    .map-visual{
+      position:relative;
+      height: 320px;
+      background: rgba(255,255,255,.02);
+      border-radius: 20px;
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,.06);
+    }
+    .map-dot{
+      position:absolute;
+      width: 15px; height: 15px;
+      background: var(--accent);
+      border-radius:50%;
+      filter: drop-shadow(0 0 10px var(--accent));
+      animation: pulse-dot 2s infinite;
+    }
+    @keyframes pulse-dot{
+      0%{ transform: scale(1); opacity:1; box-shadow: 0 0 0 0 rgba(255,62,0,.65); }
+      70%{ transform: scale(1.2); opacity:.85; box-shadow: 0 0 0 22px rgba(255,62,0,0); }
+      100%{ transform: scale(1); opacity:1; box-shadow: 0 0 0 0 rgba(255,62,0,0); }
+    }
+
+    .search-preview{
+      background:#fff;
+      border-radius: 12px;
+      padding: 14px;
+      width: 82%;
+      position:absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      color:#333;
+      font-size:.82rem;
+      box-shadow: 0 14px 34px rgba(0,0,0,.55);
+    }
+    .search-bar-ui{
+      height: 26px;
+      background:#f1f3f4;
+      border-radius: 999px;
+      margin-bottom: 10px;
+      display:flex;
+      align-items:center;
+      padding: 0 10px;
+      font-weight: 700;
+      color:#555;
+    }
+    .result-item{ display:flex; gap: 10px; margin-top: 10px; }
+    .result-pin{ color: var(--accent); font-weight: 900; }
+
+    /* ======= COMPLIANCE GRID ======= */
+    .compliance-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 24px;
+    }
+    .compliance-item{
+      background: rgba(255,255,255,.03);
+      padding: 14px 16px;
+      border-radius: 14px;
+      display:flex;
+      align-items:flex-start;
+      gap: 12px;
+      border: 1px solid rgba(255,255,255,.06);
+      transition: .25s ease;
+    }
+    .compliance-item:hover{
+      background: rgba(255,255,255,.05);
+      border-color: rgba(255,62,0,.35);
+      transform: translateY(-2px);
+    }
+    .check-icon{ color: var(--green); font-size: 1.2rem; min-width: 22px; line-height: 1.2; }
+    .compliance-text{ font-size: .92rem; color: var(--subtext); }
+    .compliance-text strong{ color:#fff; display:block; margin-bottom: 2px; }
+
+    /* ======= REVEAL ======= */
+    .reveal-on-scroll{
+      opacity:0;
+      transform: translateY(26px);
+      transition: all .75s ease;
+    }
+    .reveal-on-scroll.active{
+      opacity:1;
+      transform: translateY(0);
+    }
+
+    /* ======= WATERMARK ======= */
+    .watermark{
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      width: 96px;
+      opacity: .14;
+      z-index: 9999;
+      pointer-events:none;
+      filter: grayscale(100%);
+    }
+
+    /* ======= MODAL ======= */
+    .contact-modal-overlay{
+      position:fixed; inset:0;
+      background: rgba(0,0,0,.86);
+      backdrop-filter: blur(8px);
+      z-index: 10000;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      opacity:0;
+      visibility:hidden;
+      transition: all .25s ease;
+    }
+    .contact-modal-overlay.active{
+      opacity:1;
+      visibility:visible;
+    }
+    .contact-modal{
+      background: #101010;
+      border: 1px solid rgba(255,255,255,.10);
+      padding: 46px;
+      border-radius: 30px;
+      max-width: 560px;
+      width: 92%;
+      position:relative;
+      transform: scale(.96);
+      transition: transform .25s cubic-bezier(.165,.84,.44,1);
+      box-shadow: 0 50px 110px rgba(0,0,0,.92);
+      overflow:hidden;
+    }
+    .contact-modal-overlay.active .contact-modal{ transform: scale(1); }
+    .contact-modal::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: linear-gradient(45deg, rgba(255,62,0,.9), transparent, rgba(173,0,255,.9));
+      opacity:.20;
+      filter: blur(22px);
+      z-index:0;
+    }
+    .contact-modal > *{ position:relative; z-index:1; }
+
+    .modal-close{
+      position:absolute;
+      top: 16px; right: 18px;
+      color: var(--subtext);
+      font-size: 2rem;
+      cursor:pointer;
+      transition: .2s ease;
+      line-height:1;
+    }
+    .modal-close:hover{ color:#fff; }
+
+    .contact-row{
+      display:flex;
+      align-items:flex-start;
+      gap: 16px;
+      margin-bottom: 16px;
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.06);
+      transition: .2s ease;
+    }
+    .contact-row:hover{
+      background: rgba(255,255,255,.05);
+      border-color: rgba(255,255,255,.10);
+      transform: translateY(-2px);
+    }
+    .contact-icon{
+      font-size: 1.9rem;
+      color: var(--accent);
+      background: rgba(255,62,0,.10);
+      padding: 10px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,62,0,.18);
+    }
+    .contact-info strong{ display:block; color:#fff; margin-bottom: 4px; font-size: 1.05rem; }
+    .contact-info a{
+      color: var(--subtext);
+      text-decoration:none;
+      transition: .2s ease;
+      display:block;
+      margin-bottom: 2px;
+    }
+    .contact-info a:hover{ color: var(--accent); padding-left: 5px; }
+
+    /* ======= RESPONSIVE ======= */
+    @media (max-width: 980px){
+      .dash-grid{ grid-template-columns: 1fr; }
+      .tech-grid{ grid-template-columns: 1fr; }
+      .local-seo-box{ grid-template-columns: 1fr; padding: 32px; }
+      .map-visual{ height: 220px; order:-1; }
+    }
+    @media (max-width: 700px){
+      .compliance-grid{ grid-template-columns: 1fr; }
+      .kpi-grid{ grid-template-columns: 1fr; }
+      .stats-bar{ flex-direction:column; }
+      header{ padding: 46px 15px 22px; }
+      .content-container{ padding: 0 15px; }
+      .card{ padding: 30px 20px; }
+      .watermark{ width: 52px; bottom: 10px; right: 10px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg-glow"></div>
+  <div class="bg-grid"></div>
+
+  <!-- Ajuste o arquivo se quiser -->
+  <img src="logo-b.png" alt="Empresarial Web" class="watermark">
+
+  <!-- CONTACT MODAL -->
+  <div class="contact-modal-overlay" id="contactModal" aria-hidden="true">
+    <div class="contact-modal" role="dialog" aria-modal="true" aria-label="Contato Comercial">
+      <span class="modal-close" onclick="closeModal()" aria-label="Fechar">×</span>
+
+      <h3 style="margin-bottom: 26px; text-align:center; font-size: 1.7rem;">
+        <span style="color: var(--accent);">Start</span> Your Project
+      </h3>
+
+      <div class="contact-row">
+        <div class="contact-icon">💻</div>
+        <div class="contact-info">
+          <strong>Felipe</strong>
+          <a href="tel:+5541999750085">41 99975-0085</a>
+          <a href="mailto:felipe@empresarialweb.com.br">felipe@empresarialweb.com.br</a>
+          <a href="mailto:felipeempresarialweb@gmail.com">felipeempresarialweb@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="contact-row" style="margin-bottom:0;">
+        <div class="contact-icon">📱</div>
+        <div class="contact-info">
+          <strong>Wagner</strong>
+          <a href="tel:+5541995709963">41 99570-9963</a>
+          <a href="mailto:wagner@empresarialweb.com.br">wagner@empresarialweb.com.br</a>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top: 18px; font-size:.8rem; color:#666; letter-spacing:1px; text-transform:uppercase;">
+        Atendimento Comercial • Empresarial Web
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="brand-logo-container">
+      <img src="logo-pedron.png" alt="Versátil Comunicação Visual" class="brand-logo">
+    </div>
+
+    <span class="logo-text">Soluções Digitais Premium</span>
+    <h1>Investimento em <br><span class="gradient-text">Presença e Autoridade</span></h1>
+    <p class="hero-sub">Proposta personalizada para Versátil Serviços em Comunicação Visual.</p>
+  </header>
+
+  <main class="content-container">
+    <div class="budget-grid">
+      <div class="card">
+        <div>
+          <span class="geo-tag">Conversão Rápida</span>
+          <h3 class="card-title">Landing Page Elite</h3>
+          <p style="color:var(--subtext); line-height:1.7;">Focada em captar clientes em busca de soluções imediatas no Paraná.</p>
+        </div>
+
+        <div class="price-tag">R$ 1.000 <span>/único</span></div>
+
+        <ul class="features-list">
+          <li>Página única de alta conversão</li>
+          <li>Design Responsivo (Celular/PC)</li>
+          <li>Botão de WhatsApp Flutuante</li>
+          <li>Galeria de Estruturas e Painéis</li>
+          <li>Foco em Conversão Regional PR</li>
+          <li>Hospedagem de alta performance</li>
+        </ul>
+
+        <a href="#" class="cta-btn">Selecionar Plano</a>
+      </div>
+
+      <div class="card highlight-card">
+        <div>
+          <span class="geo-tag" style="background: rgba(255,62,0,.10); color: var(--accent); border-color: rgba(255,62,0,.25);">Soberania Estadual</span>
+          <h3 class="card-title">Ecossistema Paraná 399</h3>
+          <p style="color:var(--subtext); line-height:1.7;">Soberania total nos resultados de busca em todas as 399 cidades do PR.</p>
+        </div>
+
+        <div class="price-tag">R$ 2.400 <span>/único</span></div>
+
+        <ul class="features-list">
+          <li><strong>399 Páginas de Geolocalização:</strong> Uma para cada cidade do PR.</li>
+          <li><strong>Cluster de Autoridade:</strong> Domínio estadual de busca.</li>
+          <li><strong>Páginas Rodoviárias:</strong> Conteúdo otimizado para buscas técnicas.</li>
+          <li>Catálogo completo de Projetos OOH e LED</li>
+          <li>Otimização Técnica de Velocidade (Core Web Vitals)</li>
+          <li>Certificado SSL e E-mails Profissionais</li>
+        </ul>
+
+        <a href="#" class="cta-btn" style="background: var(--accent); border-color: var(--accent);">Mais Escolhido</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="geo-tag" style="background: rgba(173,0,255,.10); color: var(--neon-purple); border-color: rgba(173,0,255,.25);">Topo do Google PR</span>
+          <h3 class="card-title">SEO Estadual</h3>
+          <p style="color:var(--subtext); line-height:1.7;">Manutenção da liderança e autoridade digital em todo o estado.</p>
+        </div>
+
+        <div class="price-tag">R$ 450 <span>/mensal</span></div>
+
+        <ul class="features-list">
+          <li style="color: var(--neon-blue);"><strong>Servidor de Hospedagem Avançado</strong></li>
+          <li style="color: var(--neon-blue);"><strong>E-mails Corporativos Ilimitados</strong></li>
+          <li style="color: var(--neon-blue);"><strong>Suporte Técnico Prioritário</strong></li>
+          <li>Pesquisa de palavras-chave (Estadual PR)</li>
+          <li>Otimização de Google Maps (Múltiplas áreas)</li>
+          <li>Produção de conteúdo para Blog/Projetos</li>
+          <li>Relatório mensal de posicionamento estadual</li>
+        </ul>
+
+        <a href="#saiba-mais-seo" class="cta-btn" style="background: rgba(173,0,255,.18); border-color: rgba(173,0,255,.35);">O que é isso?</a><br>
+        <a href="#" class="cta-btn">Contratar SEO</a>
+      </div>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat-item">
+        <span class="stat-value">399</span>
+        <span class="stat-label">Cidades no PR</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value">&lt; 1s</span>
+        <span class="stat-label">Carregamento</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value">SEO</span>
+        <span class="stat-label">Domínio Estadual</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-value">100%</span>
+        <span class="stat-label">Responsividade</span>
+      </div>
+    </div>
+
+    <!-- ======= FUTURISTIC DASHBOARD + HOLOGRAPHIC COMBO CHART ======= -->
+    <div class="reveal-on-scroll">
+      <div class="section-title-box">
+        <span class="section-tag">Dashboard de Expansão</span>
+        <h2>Radar de Impacto Estadual (MVP → Domínio PR)</h2>
+        <p style="color:var(--subtext); max-width: 760px; margin: 10px auto 0; line-height:1.7;">
+          Visual de “painel holográfico”: projeção de crescimento e autoridade para a Versátil em todo o Paraná.
+        </p>
+      </div>
+
+      <div class="dash-grid">
+        <div class="panel" id="comboPanel">
+          <div class="panel-head">
+            <div>
+              <div class="panel-title">Combo Chart Holográfico</div>
+              <div class="panel-sub">Projeção de crescimento por etapa (Setup → Conteúdo → 399 Cidades → Autoridade Estadual).</div>
+            </div>
+            <div class="pill"><i></i>Live Preview</div>
+          </div>
+
+          <div class="combo-wrap">
+            <svg class="combo-svg" viewBox="0 0 900 280" role="img" aria-label="Combo chart holográfico">
+              <!-- grid -->
+              <g>
+                <line class="grid-line" x1="60" y1="40" x2="860" y2="40"></line>
+                <line class="grid-line" x1="60" y1="90" x2="860" y2="90"></line>
+                <line class="grid-line" x1="60" y1="140" x2="860" y2="140"></line>
+                <line class="grid-line" x1="60" y1="190" x2="860" y2="190"></line>
+                <line class="grid-line" x1="60" y1="240" x2="860" y2="240"></line>
+              </g>
+
+              <!-- axis labels -->
+              <g>
+                <text class="axis-text" x="18" y="44">100</text>
+                <text class="axis-text" x="24" y="94">75</text>
+                <text class="axis-text" x="24" y="144">50</text>
+                <text class="axis-text" x="24" y="194">25</text>
+                <text class="axis-text" x="30" y="244">0</text>
+              </g>
+
+              <!-- bars group -->
+              <g id="bars">
+                <!-- Each bar has data-value (0-100). JS scales height. -->
+                <rect class="bar" data-color="accent" data-value="55" x="110" y="240" width="70" height="0" rx="10"></rect>
+                <rect class="bar blue" data-color="blue" data-value="72" x="260" y="240" width="70" height="0" rx="10"></rect>
+                <rect class="bar purple" data-color="purple" data-value="98" x="410" y="240" width="70" height="0" rx="10"></rect>
+                <rect class="bar" data-color="accent" data-value="92" x="560" y="240" width="70" height="0" rx="10"></rect>
+                <rect class="bar blue" data-color="blue" data-value="96" x="710" y="240" width="70" height="0" rx="10"></rect>
+              </g>
+
+              <!-- x labels -->
+              <g>
+                <text class="axis-text" x="110" y="268">Setup</text>
+                <text class="axis-text" x="246" y="268">Conteúdo</text>
+                <text class="axis-text" x="388" y="268">399 Cidades</text>
+                <text class="axis-text" x="535" y="268">Autoridade</text>
+                <text class="axis-text" x="686" y="268">Conversão</text>
+              </g>
+
+              <!-- line path (authority curve) -->
+              <path id="linePath" class="line-path" d=""></path>
+
+              <!-- dots -->
+              <g id="dots"></g>
+            </svg>
+
+            <div class="combo-legend">
+              <div class="legend-item"><span class="swatch sw-accent"></span>Captação (Barras)</div>
+              <div class="legend-item"><span class="swatch sw-blue"></span>Autoridade (Linha)</div>
+              <div class="legend-item"><span class="swatch sw-purple"></span>Conversão (Pontos)</div>
+            </div>
+          </div>
+
+          <div class="kpi-grid">
+            <div class="kpi">
+              <div class="label">Velocidade</div>
+              <div class="value">&lt; 1s</div>
+              <div class="hint">Stack leve + imagens WebP + lazy loading inteligente.</div>
+            </div>
+            <div class="kpi">
+              <div class="label">SEO Estadual</div>
+              <div class="value">399 Cidades</div>
+              <div class="hint">Pages por município + schema rodoviário + cluster estadual.</div>
+            </div>
+            <div class="kpi">
+              <div class="label">Conversão</div>
+              <div class="value">Alta</div>
+              <div class="hint">Mobile-first + WhatsApp + rotas de contato rápidas.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <div class="panel-title">Heatmap de Prioridades</div>
+              <div class="panel-sub">O que mais impacta o cliente estadual (Londrina / Maringá / Cascavel / Curitiba).</div>
+            </div>
+            <div class="pill"><i></i>Focus</div>
+          </div>
+
+          <div class="graph-container" style="margin:0; padding: 18px; border-radius: 20px;">
+            <div class="graph-row">
+              <div class="graph-label">
+                <span>WhatsApp (Ação Imediata)</span>
+                <span style="color:var(--green)">95%</span>
+              </div>
+              <div class="bar-bg"><div class="bar-fill fill-green" data-width="95%"></div></div>
+            </div>
+
+            <div class="graph-row">
+              <div class="graph-label">
+                <span>Projetos + Fotos (Confiança)</span>
+                <span style="color:var(--neon-blue)">88%</span>
+              </div>
+              <div class="bar-bg"><div class="bar-fill fill-blue" data-width="88%"></div></div>
+            </div>
+
+            <div class="graph-row">
+              <div class="graph-label">
+                <span>Geo Pages (Todas as 399 Cidades do PR)</span>
+                <span style="color:var(--neon-purple)">98%</span>
+              </div>
+              <div class="bar-bg"><div class="bar-fill fill-purple" data-width="98%"></div></div>
+            </div>
+
+            <div class="graph-row" style="margin-bottom:0;">
+              <div class="graph-label">
+                <span>Performance (Core Web Vitals)</span>
+                <span style="color:var(--accent)">92%</span>
+              </div>
+              <div class="bar-bg"><div class="bar-fill fill-accent" data-width="92%"></div></div>
+            </div>
+          </div>
+
+          <div style="margin-top: 14px; color: var(--subtext); font-size: .92rem; line-height: 1.6;">
+            Painel estratégico: foco total em converter o tráfego de todo o estado em orçamentos reais para a Versátil.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======= TECH BLOCKS ======= -->
+    <div class="tech-grid reveal-on-scroll">
+      <div class="card">
+        <div class="card-header">
+          <div class="icon-box" style="color: var(--neon-blue); background: rgba(0,240,255,.10); border-color: rgba(0,240,255,.18);">🔍</div>
+          <div>
+            <span class="highlight-badge badge-seo">Busca Estadual</span>
+            <h3 class="card-title">SEO & Estrutura</h3>
+          </div>
+        </div>
+        <ul class="tech-list">
+          <li><strong>Arquitetura 399 Cidades</strong>Estrutura dedicada para ranquear em cada município do Paraná, de Curitiba a Foz.</li>
+          <li><strong>Schema.org & Rich Snippets</strong>Dados estruturados focados em serviços de instalação OOH rodoviária e urbana em todo o PR.</li>
+          <li><strong>Sitemap Hiper-Otimizado</strong>Configurado para indexar rapidamente centenas de páginas geolocalizadas do estado.</li>
+          <li><strong>URLs Inteligentes</strong>Links descritivos facilitando o ranqueamento por termos regionais e serviços técnicos.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="icon-box" style="color: var(--green); background: rgba(34,197,94,.10); border-color: rgba(34,197,94,.18);">🚀</div>
+          <div>
+            <span class="highlight-badge badge-perf">Velocidade Extrema</span>
+            <h3 class="card-title">Performance Core</h3>
+          </div>
+        </div>
+        <ul class="tech-list">
+          <li><strong>Imagens Next-Gen (WebP)</strong>Exibição de painéis e estruturas com alta definição e carregamento instantâneo.</li>
+          <li><strong>Lazy Loading Inteligente</strong>Priorização de carregamento para quem busca serviços pelo celular em trânsito ou na obra.</li>
+          <li><strong>Minificação de Código</strong>Compactação avançada de arquivos para reduzir a latência em redes móveis estaduais.</li>
+          <li><strong>CDN Regional</strong>Distribuição de conteúdo para garantir velocidade em qualquer cidade do interior paranaense.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="icon-box" style="color: var(--neon-purple); background: rgba(173,0,255,.10); border-color: rgba(173,0,255,.18);">📱</div>
+          <div>
+            <span class="highlight-badge badge-code">UX/UI Design</span>
+            <h3 class="card-title">Experiência Mobile</h3>
+          </div>
+        </div>
+        <ul class="tech-list">
+          <li><strong>Interface de Campo</strong>Projetada para o cliente que precisa de contato rápido via WhatsApp em qualquer região do PR.</li>
+          <li><strong>Acessibilidade & ARIA</strong>Garantia de navegação fluida em diversos dispositivos e níveis de sinal de internet.</li>
+          <li><strong>Conversão em 1 Clique</strong>Botões estrategicamente posicionados para orçamentos rápidos de projetos OOH.</li>
+          <li><strong>Touch Optimization</strong>Menus e menus dimensionados para agilidade no atendimento regional e rodoviário.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="icon-box" style="color: var(--accent); background: rgba(255,62,0,.10); border-color: rgba(255,62,0,.18);">🛡️</div>
+          <div>
+            <span class="highlight-badge" style="background: rgba(255,62,0,.10); color: var(--accent); border-color: rgba(255,62,0,.22);">Segurança Total</span>
+            <h3 class="card-title">Infraestrutura</h3>
+          </div>
+        </div>
+        <ul class="tech-list">
+          <li><strong>Conexão Segura (SSL)</strong>Criptografia de ponta a ponta garantindo a integridade dos dados em todas as transações estaduais.</li>
+          <li><strong>Hospedagem Corporativa</strong>Servidores de alta disponibilidade configurados para suportar o tráfego massivo das 399 cidades.</li>
+          <li><strong>Compliance LGPD</strong>Total conformidade com a Lei Geral de Proteção de Dados para segurança jurídica e do cliente.</li>
+          <li><strong>Monitoramento 24/7</strong>Sistemas de alerta contínuo para garantir que seu site esteja sempre visível no Paraná.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- LOCAL SEO EXPLANATION -->
+    <div class="reveal-on-scroll" id="saiba-mais-seo">
+      <div class="local-seo-box">
+        <div>
+          <span class="section-tag" style="background: rgba(0,240,255,.10); color: var(--neon-blue); border-color: rgba(0,240,255,.22);">Estratégia 399 Cidades</span>
+          <h2 style="margin-bottom: 14px;">Domínio Estadual de Busca</h2>
+
+          <p style="color: var(--subtext); line-height: 1.8; margin-bottom: 14px;">
+            Quando alguém em Maringá busca por <strong>"painéis de led"</strong> ou um empresário em Cascavel procura <strong>"outdoor rodoviário"</strong>, o Google precisa entregar a <strong>Versátil</strong>.
+          </p>
+
+          <p style="color: var(--subtext); line-height: 1.8;">
+            Nossa estratégia de <strong>SEO Estadual</strong> cria uma rede de autoridade que cobre todos os 399 municípios do Paraná. Não é apenas estar online, é ser a referência técnica em cada canto do estado.
+          </p>
+
+          <div style="margin-top: 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+            <div>
+              <h4 style="color: var(--neon-blue); margin-bottom: 5px;">🗺️ Mapa PR</h4>
+              <p style="font-size: .86rem; color: var(--subtext); line-height: 1.5;">Aparecer nos resultados locais de todas as regiões (Norte, Sul, Oeste, Leste).</p>
+            </div>
+            <div>
+              <h4 style="color: var(--accent); margin-bottom: 5px;">🛣️ OOH Rodoviário</h4>
+              <p style="font-size: .86rem; color: var(--subtext); line-height: 1.5;">Otimizado para buscas por anúncios em rodovias estaduais.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-visual">
+          <div style="width:100%; height:100%; opacity:.10; background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;"></div>
+          <div class="map-dot" style="top: 44%; left: 46%;"></div>
+          <div class="map-dot" style="top: 20%; left: 30%; width: 8px; height: 8px; opacity: .55;"></div>
+          <div class="map-dot" style="top: 70%; left: 60%; width: 10px; height: 10px; opacity: .45;"></div>
+          <div class="map-dot" style="top: 10%; left: 80%; width: 12px; height: 12px; opacity: .65;"></div>
+
+          <div class="search-preview">
+            <div class="search-bar-ui">Painéis no Paraná</div>
+            <div class="result-item">
+              <span class="result-pin">1.</span>
+              <div>
+                <strong>Versátil Comunicação Visual</strong>
+                <div style="color:#fbbc05; font-size:10px;">★★★★★ (5.0)</div>
+              </div>
+            </div>
+            <div style="border-top:1px solid #eee; margin-top:10px; padding-top:10px; font-size:10px; color:#777;">
+              Atendimento em todo o Paraná • 399 Cidades
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPLIANCE -->
+    <div class="reveal-on-scroll" style="margin-top: 22px;">
+      <h2 style="text-align:center; margin-bottom: 18px; font-size: 2rem;">Protocolos e Padrões Técnicos</h2>
+      <div class="compliance-grid">
+        <div class="compliance-item"><div class="check-icon">✓</div><div class="compliance-text"><strong>HTML5 Semântico & ARIA</strong>Estrutura lógica e acessibilidade</div></div>
+        <div class="compliance-item"><div class="check-icon">✓</div><div class="compliance-text"><strong>CSS Modular e Responsivo</strong>Layout fluido e consistente</div></div>
+        <div class="compliance-item"><div class="check-icon">✓</div><div class="compliance-text"><strong>JavaScript Puro</strong>Sem dependências pesadas</div></div>
+        <div class="compliance-item"><div class="check-icon">✓</div><div class="compliance-text"><strong>Schema.org Estadual</strong>LocalBusiness + Rodoviário + LED</div></div>
+        <div class="compliance-item"><div class="check-icon">✓</div><div class="compliance-text"><strong>Sitemap PR 399</strong>Indexação de centenas de páginas</div></div>
+        <div class="compliance-item"><div class="check-icon">✓</div><div class="compliance-text"><strong>Imagens WebP</strong>Qualidade técnica com peso mínimo</div></div>
+        <div class="compliance-item"><div class="check-icon">✓</div><div class="compliance-text"><strong>SEO Estadual</strong>Todas as 399 cidades do PR</div></div>
+        <div class="compliance-item"><div class="check-icon">✓</div><div class="compliance-text"><strong>Linkagem Interna</strong>Cluster de autoridade por região</div></div>
+      </div>
+    </div>
+
+    <!-- PERFORMANCE GRAPHICS -->
+    <div class="reveal-on-scroll">
+      <div class="section-title-box">
+        <span class="section-tag">Análise Comparativa</span>
+        <h2>Versátil vs. Concorrência Estadual</h2>
+      </div>
+
+      <div class="graph-container">
+        <div class="graph-row">
+          <div class="graph-label">
+            <span>Capilaridade de Busca Projetada (Paraná)</span>
+            <span style="color: var(--green)">399 Cidades (Versátil)</span>
+          </div>
+          <div class="bar-bg"><div class="bar-fill fill-green" data-width="100%"></div></div>
+
+          <div class="graph-label" style="margin-top: 8px; font-size: .82rem; opacity: .7;">
+            <span>Média da Concorrência</span><span>Foco Local / Restrito</span>
+          </div>
+          <div class="bar-bg" style="height: 7px; background: rgba(255,255,255,.10);">
+            <div class="bar-fill" data-width="15%" style="background: rgba(255,255,255,.35);"></div>
+          </div>
+        </div>
+
+        <div class="graph-row">
+          <div class="graph-label">
+            <span>Pontuação SEO Projetada (Google PR)</span>
+            <span style="color: var(--neon-blue)">98/100</span>
+          </div>
+          <div class="bar-bg"><div class="bar-fill fill-blue" data-width="98%"></div></div>
+        </div>
+
+        <div class="graph-row" style="margin-bottom:0;">
+          <div class="graph-label">
+            <span>Taxa de Conversão de Leads Rodoviários</span>
+            <span style="color: var(--neon-purple)">Alta Performance</span>
+          </div>
+          <div class="bar-bg"><div class="bar-fill fill-purple" data-width="90%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TERMINAL -->
+    <div class="reveal-on-scroll">
+      <div class="section-title-box">
+        <span class="section-tag">Log de Expansão</span>
+        <h2>Núcleo Tecnológico Estadual</h2>
+        <p style="color: var(--subtext); max-width: 600px; margin: 10px auto 0; line-height:1.7;">
+          Execução de protocolos avançados para garantir a liderança da Versátil em todas as 399 cidades.
+        </p>
+      </div>
+
+      <div class="terminal-window" id="terminalWindow">
+        <div class="terminal-header">
+          <div class="dot red"></div>
+          <div class="dot yellow"></div>
+          <div class="dot greenDot"></div>
+          <div class="terminal-title">system_core_versatil_pr399.sh</div>
+        </div>
+        <div class="terminal-body" id="terminal-content"></div>
+      </div>
+    </div>
+
+    <section class="reveal-on-scroll" style="margin-top: 70px; text-align:center; padding: 34px; background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015)); border-radius: 30px; border: 1px solid rgba(255,255,255,.06);">
+      <h2 style="margin-bottom: 12px;">Por que investir agora na expansão estadual?</h2>
+      <p style="color: var(--subtext); max-width: 760px; margin: 0 auto; line-height: 1.7;">
+        A liderança no mercado de OOH e comunicação visual do Paraná pertence a quem domina a busca em todas as regiões.
+        Nossa solução garante que a <strong>Versátil Comunicação Visual</strong> seja a primeira escolha quando alguém precisar de grandes estruturas em qualquer uma das 399 cidades do estado.
+      </p>
+      <div style="margin-top: 18px;">
+        <a href="#" class="cta-btn" style="max-width: 340px; margin: 0 auto;">Quero dominar o PR</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    /* ============================================================
+       1) SCROLL REVEAL (IntersectionObserver)
+       2) BAR ANIMATIONS (fixed: no !important)
+       3) HOLOGRAPHIC COMBO CHART (SVG bars + line + dots)
+       4) TERMINAL TYPING
+       5) MODAL
+    ============================================================ */
+
+    // ---------- 1) Reveal + triggers ----------
+    const revealObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+
+        const el = entry.target;
+        el.classList.add('active');
+
+        // Trigger width bars inside this revealed block
+        el.querySelectorAll('.bar-fill[data-width]').forEach(bar => {
+          const w = bar.getAttribute('data-width');
+          requestAnimationFrame(() => { bar.style.width = w; });
+        });
+
+        // Trigger Combo Chart when its panel becomes visible
+        if (el.querySelector('#comboPanel')) {
+          animateComboChart();
+        }
+
+        // Trigger Terminal when visible
+        if (el.querySelector('#terminalWindow')) {
+          startTerminal();
+        }
+
+        obs.unobserve(el);
+      });
+    }, { threshold: 0.18, rootMargin: "0px 0px -40px 0px" });
+
+    document.querySelectorAll('.reveal-on-scroll').forEach(el => revealObserver.observe(el));
+
+    // ---------- 2) Combo Chart (SVG) ----------
+    let comboStarted = false;
+
+    function animateComboChart(){
+      if (comboStarted) return;
+      comboStarted = true;
+
+      const svg = document.querySelector('.combo-svg');
+      const bars = Array.from(svg.querySelectorAll('#bars rect.bar'));
+      const line = svg.querySelector('#linePath');
+      const dotsGroup = svg.querySelector('#dots');
+
+      // Layout constants
+      const baseY = 240;       // baseline
+      const topY = 40;         // chart top
+      const chartH = baseY - topY;
+
+      // Bar centers used for the line curve (match bars)
+      const centers = bars.map(r => ({
+        x: parseFloat(r.getAttribute('x')) + (parseFloat(r.getAttribute('width')) / 2),
+        v: parseFloat(r.getAttribute('data-value')) // 0..100
+      }));
+
+      // Apply bar gradients/colors
+      bars.forEach((r) => {
+        const c = r.getAttribute('data-color');
+        if (c === 'blue') r.setAttribute('fill', 'rgba(0,240,255,.92)');
+        else if (c === 'purple') r.setAttribute('fill', 'rgba(173,0,255,.92)');
+        else r.setAttribute('fill', 'rgba(255,62,0,.92)');
+      });
+
+      // Animate bars (CSS transform scaleY is unreliable in SVG in some browsers)
+      // We'll animate height + y manually.
+      bars.forEach((r, i) => {
+        const val = parseFloat(r.getAttribute('data-value')); // 0..100
+        const h = (val / 100) * chartH;
+        const targetY = baseY - h;
+
+        // Start state
+        r.setAttribute('y', baseY);
+        r.setAttribute('height', 0);
+
+        setTimeout(() => {
+          r.style.transition = "all 1200ms cubic-bezier(0.22,1,0.36,1)";
+          r.setAttribute('y', targetY);
+          r.setAttribute('height', h);
+        }, 140 + (i * 90));
+      });
+
+      // Build smooth-ish line path using quadratic curves
+      // Convert values to points (line slightly "above" bars: + a small lift)
+      const pts = centers.map(p => {
+        const y = baseY - ((p.v / 100) * chartH) - 8; // lift for style
+        return { x: p.x, y };
+      });
+
+      let d = "";
+      d += `M ${pts[0].x} ${pts[0].y}`;
+      for (let i = 1; i < pts.length; i++) {
+        const prev = pts[i - 1];
+        const cur = pts[i];
+        const cx = (prev.x + cur.x) / 2;
+        d += ` Q ${cx} ${prev.y} ${cur.x} ${cur.y}`;
+      }
+      line.setAttribute("d", d);
+
+      // Animate line draw
+      line.style.transition = "stroke-dashoffset 1400ms cubic-bezier(0.22,1,0.36,1)";
+      setTimeout(() => { line.style.strokeDashoffset = "0"; }, 420);
+
+      // Dots (conversion points)
+      pts.forEach((p, i) => {
+        const c = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        c.setAttribute("cx", p.x);
+        c.setAttribute("cy", p.y);
+        c.setAttribute("r", "6");
+        c.setAttribute("fill", "rgba(173,0,255,.95)");
+        c.setAttribute("stroke", "rgba(255,255,255,.35)");
+        c.setAttribute("stroke-width", "1");
+        c.classList.add("dotp");
+        dotsGroup.appendChild(c);
+
+        setTimeout(() => {
+          c.style.transition = "all 600ms cubic-bezier(0.22,1,0.36,1)";
+          c.style.opacity = "1";
+          c.style.transform = "scale(1)";
+        }, 800 + (i * 120));
+      });
+    }
+
+    // ---------- 3) Terminal Typing ----------
+    const terminalContent = document.getElementById('terminal-content');
+    const commands = [
+      { text: "> Initializing Versátil PR-399 System Protocol...", type: "cmd-prompt" },
+      { text: "✓ Loading HTML5 Semantic Core... [DONE]", type: "cmd-success" },
+      { text: "> Injecting Municipal Matrix (399 Cities)...", type: "cmd-info" },
+      { text: "✓ Stylesheets Minified & Optimized for State-Wide Access.", type: "cmd-success" },
+      { text: "> Configuring SEO Module (OOH & LED State Matrix):", type: "cmd-warn" },
+      { text: "  - Generating sitemap_pr_399.xml...", type: "cmd-info" },
+      { text: "  - Enabling geolocation crawlers for Londrina, Maringá, Cascavel...", type: "cmd-info" },
+      { text: "  - Schema.org 'LocalBusiness' expanded to State level.", type: "cmd-success" },
+      { text: "✓ SEO Framework Active. Domination Plan: PARANÁ.", type: "cmd-success" },
+      { text: "> Activating GEO Pages: 399 municipalities identified.", type: "cmd-info" },
+      { text: "✓ Local SEO Matrix Online. Paraná covered.", type: "cmd-success" },
+      { text: "> Optimizing Portfolio Media for Regional Load...", type: "cmd-info" },
+      { text: "  - Converting to WebP format...", type: "cmd-info" },
+      { text: "  - Lazy Loading strategy enabled for mobile obra access.", type: "cmd-success" },
+      { text: "> Security Check (SSL/LGPD)...", type: "cmd-warn" },
+      { text: "✓ Connection Encrypted. User Privacy Secured.", type: "cmd-success" },
+      { text: "> SYSTEM READY. DEPLOYMENT IMMINENT. DOMINATING PARANÁ MARKET.", type: "cmd-success", style: "font-weight:900; margin-top:10px;" }
+    ];
+
+    let cmdIndex = 0;
+    let terminalStarted = false;
+
+    function startTerminal(){
+      if (terminalStarted) return;
+      terminalStarted = true;
+
+      function tick(){
+        if (cmdIndex >= commands.length) return;
+
+        const cmd = commands[cmdIndex];
+        const div = document.createElement('div');
+        div.className = `cmd-line ${cmd.type}`;
+        if (cmd.style) div.style = cmd.style;
+        div.textContent = cmd.text;
+        terminalContent.appendChild(div);
+
+        // reveal
+        setTimeout(() => div.classList.add('visible'), 40);
+
+        cmdIndex++;
+        setTimeout(tick, 260);
+      }
+      tick();
+    }
+
+    // ---------- 4) Modal ----------
+    const modal = document.getElementById('contactModal');
+    const ctaButtons = document.querySelectorAll('.cta-btn');
+
+    ctaButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        // se for âncora de seção, deixa rolar normal
+        const href = btn.getAttribute('href') || "";
+        if (href.startsWith("#") && href.length > 1) return;
+
+        e.preventDefault();
+        openModal();
+      });
+    });
+
+    function openModal(){
+      modal.classList.add('active');
+      modal.setAttribute('aria-hidden', 'false');
+    }
+    function closeModal(){
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden', 'true');
+    }
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+
+    // ESC para fechar
+    window.addEventListener('keydown', (e) => { if (e.key === "Escape") closeModal(); });
+  </script>
+</body>
+</html>
