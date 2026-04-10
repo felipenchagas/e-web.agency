@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proposta Comercial - Assutef (Associação dos Servidores da UTFPR-CT)</title>
+<meta name="author" content="Assutef" />
+<meta name="dc.language" content="PT-BR" />
+<meta name="geo.region" content="BR-PR" />
+<meta name="geo.placename" content="Curitiba" />
+
+<meta name="description" content="Proposta de desenvolvimento de portal corporativo e sistema de gestão para a Assutef - Associação dos Servidores da UTFPR-CT." />
+
+<link rel="icon" type="image/png" href="favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --accent:#0055A4;
+      --bg:#0A0A0A;
+      --surface:#141414;
+      --surface2:#101010;
+      --text:#FFFFFF;
+      --subtext:#A0A0A0;
+      --neon-blue:#00F0FF;
+      --neon-purple:#AD00FF;
+      --green:#22C55E;
+      --border:rgba(255,255,255,.08);
+      --shadow: 0 30px 70px rgba(0,0,0,.65);
+      --radius: 24px;
+    }
+
+    /* Faixa Vertical Opcional */
+    .optional-ribbon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 42px;
+      background: #FFD700;
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+      letter-spacing: 4px;
+      font-size: 14px;
+      z-index: 10;
+    }
+
+    *{ margin:0; padding:0; box-sizing:border-box; font-family:'Space Grotesk', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    body{
+      background: var(--bg);
+      color: var(--text);
+      overflow-x:hidden;
+      padding-bottom:50px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* ======= BACKGROUND / AURORA ======= */
+    .bg-glow{
+      position:fixed; inset:0;
+      pointer-events:none;
+      z-index:-2;
+      background:
+        radial-gradient(circle at 10% 20%, rgba(0, 85, 164, .07) 0%, transparent 22%),
+        radial-gradient(circle at 85% 30%, rgba(0, 240, 255, .07) 0%, transparent 22%),
+        radial-gradient(circle at 50% 85%, rgba(173, 0, 255, .06) 0%, transparent 25%);
+      filter: blur(0px);
+    }
+    .bg-grid{
+      position:fixed; inset:-20%;
+      z-index:-1;
+      pointer-events:none;
+      background:
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size: 44px 44px;
+      transform: perspective(900px) rotateX(58deg) translateY(120px);
+      opacity:.12;
+      mask-image: radial-gradient(circle at 50% 60%, rgba(0,0,0,1) 0%, rgba(0,0,0,.4) 45%, rgba(0,0,0,0) 70%);
+    }
+
+    /* ======= LAYOUT ======= */
+    header{
+      padding: 60px 20px 30px;
+      text-align:center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .content-container{
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ======= LOGO / HERO ======= */
+    .brand-logo-container{
+      position:relative;
+      display:inline-block;
+      margin-bottom: 24px;
+      overflow:hidden;
+      border-radius: 14px;
+    }
+    .brand-logo{
+      max-height: 100px;
+      max-width: 100%;
+      display:block;
+      filter: drop-shadow(0 0 18px rgba(0,85,164,.35));
+    }
+    
+    .logo-text{
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      color: var(--accent);
+      margin-bottom: 8px;
+      display:block;
+    }
+    h1{
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.06;
+      margin-bottom: 14px;
+    }
+    .gradient-text{
+      background: linear-gradient(90deg, #fff, rgba(255,255,255,.58));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-sub{
+      color: var(--subtext);
+      margin-top: 14px;
+      line-height: 1.7;
+    }
+
+    /* ======= CARDS ======= */
+    .budget-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+      margin-top: 38px;
+      page-break-inside: avoid;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 38px;
+      position:relative;
+      box-shadow: 0 10px 28px rgba(0,0,0,.35);
+      display:flex;
+      flex-direction:column;
+      overflow:hidden;
+      page-break-inside: avoid;
+    }
+    
+    .highlight-card{
+      border-color: rgba(0,85,164,.60);
+      background: linear-gradient(145deg, rgba(0,85,164,.08) 0%, rgba(255,255,255,.02) 55%, rgba(173,0,255,.05) 100%);
+    }
+
+    .geo-tag{
+      display:inline-block;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      background: rgba(0,240,255,.10);
+      color: var(--neon-blue);
+      margin-bottom: 10px;
+      border: 1px solid rgba(0,240,255,.25);
+    }
+
+    .card-title{ font-size: 1.45rem; font-weight: 700; margin-bottom: 8px; }
+    .price-tag{ font-size: 2.45rem; font-weight: 700; color: var(--accent); margin: 18px 0; }
+    .price-tag span{ font-size: 1rem; color: var(--subtext); font-weight: 500; }
+
+    .features-list{ list-style:none; margin-bottom: 26px; flex-grow:1; }
+    .features-list li{
+      color: var(--subtext);
+      margin-bottom: 12px;
+      display:flex;
+      align-items:flex-start;
+      gap: 10px;
+      font-size:.95rem;
+      line-height:1.5;
+    }
+    .features-list li::before{
+      content:"✓";
+      color: var(--green);
+      font-weight: 800;
+      transform: translateY(1px);
+    }
+
+    .cta-btn{
+      display:block;
+      width:100%;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.12);
+      color: var(--text);
+      padding: 16px 18px;
+      border-radius: 16px;
+      text-align:center;
+      text-decoration:none;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      font-weight: 800;
+    }
+
+    /* ======= STATS ======= */
+    .stats-bar{
+      margin: 50px 0;
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 26px;
+      display:flex;
+      justify-content:space-around;
+      flex-wrap:wrap;
+      gap: 10px;
+      page-break-inside: avoid;
+    }
+    .stat-item{ text-align:center; padding: 12px 10px; min-width: 180px; }
+    .stat-value{
+      font-size: 2.7rem;
+      font-weight: 800;
+      color: #fff;
+      display:block;
+    }
+    .stat-label{
+      color: var(--accent);
+      text-transform:uppercase;
+      font-size:.78rem;
+      letter-spacing:2px;
+      margin-top: 8px;
+      display:block;
+    }
+
+    /* ======= TECH GRID ======= */
+    .tech-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 22px;
+      margin: 10px 0 50px;
+      page-break-inside: avoid;
+    }
+    .card-header{ display:flex; align-items:center; gap: 14px; margin-bottom: 18px; }
+    .icon-box{
+      width: 50px; height: 50px;
+      display:flex; align-items:center; justify-content:center;
+      border-radius: 14px;
+      font-size: 22px;
+      border: 1px solid rgba(255,255,255,.10);
+    }
+    .highlight-badge{
+      display:inline-block;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 5px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      border: 1px solid rgba(255,255,255,.10);
+    }
+    .badge-seo{ background: rgba(0,240,255,.10); color: var(--neon-blue); border-color: rgba(0,240,255,.22); }
+    .badge-perf{ background: rgba(34,197,94,.10); color: var(--green); border-color: rgba(34,197,94,.22); }
+    .badge-code{ background: rgba(173,0,255,.10); color: var(--neon-purple); border-color: rgba(173,0,255,.22); }
+
+    .tech-list{ list-style:none; }
+    .tech-list li{
+      color: var(--subtext);
+      margin-bottom: 14px;
+      line-height:1.65;
+      position:relative;
+      padding-left: 22px;
+      font-size:.95rem;
+    }
+    .tech-list li::before{
+      content:"▹";
+      color: var(--accent);
+      position:absolute;
+      left:0;
+      top:0;
+      font-weight: 900;
+    }
+    .tech-list li strong{
+      color:#fff;
+      display:block;
+      margin-bottom: 4px;
+    }
+
+    /* ======= SECTION TITLE ======= */
+    .section-title-box{
+      text-align:center;
+      margin: 60px 0 30px;
+      page-break-after: avoid;
+    }
+    .section-tag{
+      display:inline-block;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size:.8rem;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom: 14px;
+      background: rgba(173,0,255,.10);
+      color: var(--neon-purple);
+      border: 1px solid rgba(173,0,255,.25);
+    }
+
+    /* ======= HOLOGRAPHIC DASHBOARD WRAP ======= */
+    .dash-grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 22px;
+      margin-bottom: 18px;
+      page-break-inside: avoid;
+    }
+    .panel{
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      padding: 26px;
+      position:relative;
+      overflow:hidden;
+      box-shadow: 0 10px 28px rgba(0,0,0,.35);
+    }
+    .panel-head{
+      display:flex; align-items:flex-start; justify-content:space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .panel-title{
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing:.2px;
+    }
+    .panel-sub{
+      color: var(--subtext);
+      font-size: .9rem;
+      line-height:1.55;
+      margin-top: 6px;
+      max-width: 720px;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.03);
+      color: rgba(255,255,255,.82);
+      white-space:nowrap;
+    }
+    .pill i{
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--green);
+      display:inline-block;
+    }
+
+    /* ======= COMBO CHART (SVG) ======= */
+    .combo-wrap{ margin-top: 12px; }
+    .combo-legend{
+      display:flex; gap: 14px; flex-wrap:wrap;
+      margin: 10px 0 0;
+      color: var(--subtext);
+      font-size: 12px;
+    }
+    .legend-item{ display:flex; align-items:center; gap: 8px; }
+    .swatch{
+      width: 12px; height: 12px; border-radius: 4px;
+      border: 1px solid rgba(255,255,255,.12);
+    }
+    .sw-accent{ background: rgba(0,85,164,.95); }
+    .sw-blue{ background: rgba(0,240,255,.95); }
+    .sw-purple{ background: rgba(173,0,255,.95); }
+
+    .combo-svg{
+      width: 100%;
+      height: 280px;
+      display:block;
+      border-radius: 18px;
+      background: rgba(0,0,0,.18);
+      border: 1px solid rgba(255,255,255,.08);
+      overflow:hidden;
+    }
+    .grid-line{ stroke: rgba(255,255,255,.08); stroke-width:1; }
+    .axis-text{ fill: rgba(255,255,255,.55); font-size: 11px; letter-spacing:.2px; }
+    .bar{
+      transform-origin: bottom;
+      /* Static for PDF */
+      opacity:.95;
+    }
+    .bar.blue{ filter: drop-shadow(0 0 12px rgba(0,240,255,.18)); }
+    .bar.purple{ filter: drop-shadow(0 0 12px rgba(173,0,255,.18)); }
+
+    .line-path{
+      fill:none;
+      stroke: rgba(0,240,255,.95);
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .dotp{
+      opacity:1;
+      transform: scale(.6);
+      transform-origin: center;
+    }
+
+    /* ======= KPI MINI PANELS ======= */
+    .kpi-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 14px;
+    }
+    .kpi{
+      border-radius: 18px;
+      padding: 14px 14px 12px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(0,0,0,.16);
+      overflow:hidden;
+      position:relative;
+    }
+    .kpi .label{ color: rgba(255,255,255,.62); font-size: 12px; letter-spacing:1px; text-transform:uppercase; }
+    .kpi .value{ font-size: 1.7rem; font-weight: 900; margin-top: 6px; }
+    .kpi .hint{ color: var(--subtext); font-size: 12px; margin-top: 4px; line-height: 1.35; }
+
+    /* ======= BAR PROGRESS (STATIC FOR PDF) ======= */
+    .graph-container{
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 30px;
+      margin-bottom: 24px;
+      position:relative;
+      overflow:hidden;
+      page-break-inside: avoid;
+    }
+    .graph-row{ margin-bottom: 22px; }
+    .graph-label{
+      display:flex;
+      justify-content:space-between;
+      margin-bottom: 10px;
+      font-size: .92rem;
+      color: var(--subtext);
+      gap: 16px;
+    }
+    .bar-bg{
+      width:100%;
+      height: 12px;
+      background: rgba(255,255,255,.06);
+      border-radius: 999px;
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,.06);
+    }
+    .bar-fill{
+      height: 100%;
+      border-radius: 999px;
+      position:relative;
+    }
+    .fill-accent{ background: linear-gradient(90deg, rgba(0,85,164,.95), rgba(0,85,164,.45)); }
+    .fill-purple{ background: linear-gradient(90deg, rgba(173,0,255,.95), rgba(173,0,255,.45)); }
+    .fill-blue{ background: linear-gradient(90deg, rgba(0,240,255,.95), rgba(0,240,255,.45)); }
+    .fill-green{ background: linear-gradient(90deg, rgba(34,197,94,.95), rgba(34,197,94,.45)); }
+
+    /* ======= TERMINAL ======= */
+    .terminal-window{
+      background: #0f0f0f;
+      border: 1px solid #333;
+      border-radius: 16px;
+      overflow:hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,.55);
+      margin-top: 22px;
+      page-break-inside: avoid;
+    }
+    .terminal-header{
+      background:#151515;
+      padding: 10px 14px;
+      display:flex;
+      align-items:center;
+      gap: 8px;
+      border-bottom: 1px solid #2b2b2b;
+    }
+    .dot{ width: 12px; height: 12px; border-radius: 50%; }
+    .red{ background:#ff5f56; } .yellow{ background:#ffbd2e; } .greenDot{ background:#27c93f; }
+    .terminal-title{ margin-left: 10px; color:#777; font-size:12px; letter-spacing:.2px; }
+
+    .terminal-body{
+      padding: 18px;
+      color: #00ff83;
+      font-family: monospace;
+      font-size: .92rem;
+      line-height: 1.55;
+    }
+    .cmd-line{ margin-bottom: 10px; white-space: pre-wrap; }
+    .cmd-prompt{ color: #d0d0d0; }
+    .cmd-success{ color: var(--green); }
+    .cmd-warn{ color: var(--accent); }
+    .cmd-info{ color: var(--neon-blue); }
+
+    /* ======= LOCAL SEO BOX ======= */
+    .local-seo-box{
+      background: linear-gradient(145deg, rgba(255,255,255,.03) 0%, rgba(0,0,0,.08) 100%);
+      border: 1px dashed rgba(0,240,255,.25);
+      border-radius: 30px;
+      padding: 44px;
+      margin: 70px 0;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items:center;
+      overflow:hidden;
+      position:relative;
+      page-break-inside: avoid;
+    }
+    .map-visual{
+      position:relative;
+      height: 320px;
+      background: rgba(255,255,255,.02);
+      border-radius: 20px;
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,.06);
+    }
+    .map-dot{
+      position:absolute;
+      width: 15px; height: 15px;
+      background: var(--accent);
+      border-radius:50%;
+    }
+    .search-preview{
+      background:#fff;
+      border-radius: 12px;
+      padding: 14px;
+      width: 82%;
+      position:absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      color:#333;
+      font-size:.82rem;
+      box-shadow: 0 14px 34px rgba(0,0,0,.55);
+    }
+    .search-bar-ui{
+      height: 26px;
+      background:#f1f3f4;
+      border-radius: 999px;
+      margin-bottom: 10px;
+      display:flex;
+      align-items:center;
+      padding: 0 10px;
+      font-weight: 700;
+      color:#555;
+    }
+    .result-item{ display:flex; gap: 10px; margin-top: 10px; }
+    .result-pin{ color: var(--accent); font-weight: 900; }
+
+    /* ======= CONTACTS FOOTER (REPLACES MODAL) ======= */
+    .contacts-footer{
+      background: #151515;
+      border-top: 1px solid var(--border);
+      padding: 40px;
+      margin-top: 60px;
+      border-radius: 30px;
+      page-break-inside: avoid;
+    }
+    .contacts-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .contact-card{
+      background: rgba(255,255,255,.03);
+      padding: 20px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.06);
+    }
+    .contact-card strong{ display:block; color:#fff; font-size: 1.2rem; margin-bottom: 8px; }
+    .contact-card a{ display:block; color:var(--subtext); text-decoration:none; margin-bottom: 4px; }
+
+    /* Force all reveals visible */
+    .reveal-on-scroll{ opacity:1; transform:none; }
+
+  </style>
+</head>
+
+<body>
+  <div class="bg-glow"></div>
+  <div class="bg-grid"></div>
+
+  <header>
+    <div class="brand-logo-container">
+      <img src="logo-assutef.png" alt="Assutef" class="brand-logo">
+    </div>
+    <span class="logo-text">Soluções Digitais Institucionais</span>
+    <h1>Investimento em <br><span class="gradient-text">Eficiência e Presença Digital</span></h1>
+    <p class="hero-sub">Proposta personalizada para Assutef - Associação dos Servidores da UTFPR-CT.</p>
+  </header>
+
+  <main class="content-container">
+    <div class="budget-grid">
+      <div class="card">
+        <div>
+          <span class="geo-tag">Desenvolvimento Portal</span>
+          <h3 class="card-title">Portal Corporativo Moderno</h3>
+          <p style="color:var(--subtext); line-height:1.7;">Site institucional completo com foco na experiência do associado e agilidade na informação.</p>
+        </div>
+        <div class="price-tag">R$ 4.700 <span>/projeto</span></div>
+        <ul class="features-list">
+          <li>Layout exclusivo até aprovação final</li>
+          <li>Design Responsivo (Celular/PC)</li>
+          <li>Gestão de Notícias e Eventos</li>
+          <li>Central de Benefícios e Convênios</li>
+          <li>Área de Documentos e Transparência</li>
+          <li>Otimização SEO de alta performance</li>
+        </ul>
+      </div>
+
+      <div class="card highlight-card">
+        <div>
+          <span class="geo-tag" style="background: rgba(0,85,164,.10); color: var(--accent); border-color: rgba(0,85,164,.25);">Solução Integrada</span>
+          <h3 class="card-title">Portal + Sistema de Gestão</h3>
+          <p style="color:var(--subtext); line-height:1.7;">Ecossistema completo para gerir associados, dependentes e serviços com eficiência digital.</p>
+        </div>
+        <div class="price-tag">R$ 5.750 <span>/projeto</span></div>
+        <ul class="features-list">
+          <li><strong>Tudo do Portal Corporativo +</strong></li>
+          <li><strong>Sistema de Micro-Gestão:</strong> Controle administrativo</li>
+          <li><strong>Gestão de Membros:</strong> Cadastros e dependentes</li>
+          <li><strong>Dashboard de Indicadores:</strong> Visão estratégica</li>
+          <li><strong>Exportação de Relatórios:</strong> Dados organizados</li>
+          <li><strong>Segurança Avançada:</strong> Controle de acessos</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div>
+          <span class="geo-tag" style="background: rgba(173,0,255,.10); color: var(--neon-purple); border-color: rgba(173,0,255,.25);">Hospedagem & Suporte (Opcional)</span>
+          <h3 class="card-title">Manutenção Digital</h3>
+          <p style="color:var(--subtext); line-height:1.7;">Continuidade, segurança e suporte técnico para a plataforma da associação.</p>
+        </div>
+        <div class="price-tag">R$ 250 <span>/mensal</span></div>
+        <ul class="features-list">
+          <li style="color: var(--neon-blue);"><strong>Hospedagem Cloud Premium</strong></li>
+          <li style="color: var(--neon-blue);"><strong>E-mails Corporativos Ilimitados</strong></li>
+          <li style="color: var(--neon-blue);"><strong>Suporte Prioritário</strong></li>
+          <li>Backups diários e redundância</li>
+          <li>Monitoramento de segurança 24/7</li>
+          <li>Certificado SSL e Criptografia</li>
+          <li>Apoio na gestão de conteúdos</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat-item"><span class="stat-value">100%</span><span class="stat-label">Layout Exclusivo</span></div>
+      <div class="stat-item"><span class="stat-value">&lt; 1s</span><span class="stat-label">Carregamento</span></div>
+      <div class="stat-item"><span class="stat-value">Gestão</span><span class="stat-label">Eficiência Digital</span></div>
+      <div class="stat-item"><span class="stat-value">24/7</span><span class="stat-label">Disponibilidade</span></div>
+    </div>
+
+    <!-- DASHBOARD (STATIC) -->
+    <div class="reveal-on-scroll">
+      <div class="section-title-box">
+        <span class="section-tag">Dashboard de Impacto</span>
+        <h2>Projeção de Melhoria Operacional</h2>
+      </div>
+
+      <div class="dash-grid">
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <div class="panel-title">Agilidade no Atendimento</div>
+              <div class="panel-sub">Redução de tempo em processos manuais e burocráticos.</div>
+            </div>
+          </div>
+          <div class="combo-wrap">
+            <svg class="combo-svg" viewBox="0 0 900 280" role="img" aria-label="Combo chart holográfico">
+              <g><line class="grid-line" x1="60" y1="40" x2="860" y2="40"></line><line class="grid-line" x1="60" y1="90" x2="860" y2="90"></line><line class="grid-line" x1="60" y1="140" x2="860" y2="140"></line><line class="grid-line" x1="60" y1="190" x2="860" y2="190"></line><line class="grid-line" x1="60" y1="240" x2="860" y2="240"></line></g>
+              <g id="bars">
+                <rect class="bar" fill="rgba(0,85,164,.92)" x="110" y="130" width="70" height="110" rx="10"></rect>
+                <rect class="bar blue" fill="rgba(0,240,255,.92)" x="260" y="96" width="70" height="144" rx="10"></rect>
+                <rect class="bar purple" fill="rgba(173,0,255,.92)" x="410" y="72" width="70" height="168" rx="10"></rect>
+                <rect class="bar" fill="rgba(0,85,164,.92)" x="560" y="56" width="70" height="184" rx="10"></rect>
+                <rect class="bar blue" fill="rgba(0,240,255,.92)" x="710" y="48" width="70" height="192" rx="10"></rect>
+              </g>
+              <g><text class="axis-text" x="110" y="268">Atual</text><text class="axis-text" x="246" y="268">Implantação</text><text class="axis-text" x="388" y="268">Adoção</text><text class="axis-text" x="535" y="268">Maturidade</text><text class="axis-text" x="686" y="268">Excelência</text></g>
+              <path class="line-path" d="M 145 125 Q 220 100 295 90 Q 370 80 445 65 Q 520 50 595 48 Q 670 46 745 40" style="stroke-dashoffset: 0;"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <div><div class="panel-title">Prioridades Estratégicas</div></div>
+          </div>
+          <div class="graph-container" style="margin:0; padding: 18px; border-radius: 20px;">
+            <div class="graph-row">
+              <div class="graph-label"><span>Experiência do Associado</span><span style="color:var(--green)">98%</span></div>
+              <div class="bar-bg"><div class="bar-fill fill-green" style="width:98%"></div></div>
+            </div>
+            <div class="graph-row">
+              <div class="graph-label"><span>Segurança de Dados</span><span style="color:var(--neon-blue)">100%</span></div>
+              <div class="bar-bg"><div class="bar-fill fill-blue" style="width:100%"></div></div>
+            </div>
+            <div class="graph-row">
+              <div class="graph-label"><span>Facilidade de Gestão</span><span style="color:var(--neon-purple)">95%</span></div>
+              <div class="bar-bg"><div class="bar-fill fill-purple" style="width:95%"></div></div>
+            </div>
+            <div class="graph-row" style="margin-bottom:0;">
+              <div class="graph-label"><span>Performance do Portal</span><span style="color:var(--accent)">92%</span></div>
+              <div class="bar-bg"><div class="bar-fill fill-accent" style="width:92%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TECH GRID -->
+    <div class="tech-grid reveal-on-scroll">
+      <div class="card">
+        <div class="card-header">
+          <div class="icon-box" style="color: var(--neon-blue); background: rgba(0,240,255,.10);">🏛️</div>
+          <div><span class="highlight-badge badge-seo">Institucional</span><h3 class="card-title">Portal Moderno</h3></div>
+        </div>
+        <ul class="tech-list">
+          <li><strong>Identidade Visual</strong>Layout personalizado respeitando as cores e seriedade da Assutef.</li>
+          <li><strong>Central de Serviços</strong>Acesso rápido a convênios, jurídico, odonto e sede campestre.</li>
+          <li><strong>Comunicação Ágil</strong>Módulo de notícias e informativos para manter o associado atualizado.</li>
+          <li><strong>Responsividade Total</strong>Navegação fluida e rápida em qualquer smartphone ou tablet.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div class="icon-box" style="color: var(--green); background: rgba(34,197,94,.10);">⚙️</div>
+          <div><span class="highlight-badge badge-perf">Eficiência</span><h3 class="card-title">Micro-Gestão</h3></div>
+        </div>
+        <ul class="tech-list">
+          <li><strong>Gestão de Associados</strong>Base de dados organizada com controle de membros e dependentes.</li>
+          <li><strong>Automação Administrativa</strong>Redução de planilhas manuais e centralização de informações.</li>
+          <li><strong>Relatórios Gerenciais</strong>Extração de dados para auxiliar na tomada de decisão da diretoria.</li>
+          <li><strong>Integração de Dados</strong>Segurança e integridade no armazenamento das informações.</li>
+        </ul>
+      </div>
+      
+      <div class="card">
+        <div class="card-header">
+          <div class="icon-box" style="color: var(--neon-purple); background: rgba(173,0,255,.10); border-color: rgba(173,0,255,.18);">📱</div>
+          <div>
+            <span class="highlight-badge badge-code">Mobile First</span>
+            <h3 class="card-title">Acessibilidade</h3>
+          </div>
+        </div>
+        <ul class="tech-list">
+          <li><strong>Interface Intuitiva</strong>Focada na facilidade de uso para associados de todas as idades.</li>
+          <li><strong>Acessibilidade Web</strong>Garantia de que todos os membros consigam utilizar os serviços online.</li>
+          <li><strong>Conversão de Cadastro</strong>Facilidade para novos servidores solicitarem associação pelo site.</li>
+          <li><strong>Suporte Multicanal</strong>Integração com WhatsApp e canais oficiais de atendimento.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="icon-box" style="color: var(--accent); background: rgba(0,85,164,.10); border-color: rgba(0,85,164,.18);">🛡️</div>
+          <div>
+            <span class="highlight-badge" style="background: rgba(0,85,164,.10); color: var(--accent); border-color: rgba(0,85,164,.22);">Segurança Total</span>
+            <h3 class="card-title">Infraestrutura</h3>
+          </div>
+        </div>
+        <ul class="tech-list">
+          <li><strong>SSL e Criptografia</strong>Proteção de dados pessoais em conformidade com as melhores práticas.</li>
+          <li><strong>Compliance LGPD</strong>Total adequação jurídica no tratamento de dados dos associados.</li>
+          <li><strong>Hospedagem Corporativa</strong>Servidores de alta performance com 99.9% de uptime garantido.</li>
+          <li><strong>Backups Proativos</strong>Garantia de que os dados da associação estarão sempre seguros.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PERFORMANCE GRAPHICS -->
+    <div class="reveal-on-scroll">
+      <div class="section-title-box">
+        <span class="section-tag">Análise Técnica</span>
+        <h2>Excelência Digital: Assutef 4.0</h2>
+      </div>
+      <div class="graph-container">
+        <div class="graph-row">
+          <div class="graph-label"><span>Usabilidade do Associado</span><span style="color: var(--green)">Referência</span></div>
+          <div class="bar-bg"><div class="bar-fill fill-green" style="width:100%"></div></div>
+        </div>
+        <div class="graph-row">
+          <div class="graph-label"><span>Segurança e Privacidade (LGPD)</span><span style="color: var(--neon-blue)">100%</span></div>
+          <div class="bar-bg"><div class="bar-fill fill-blue" style="width:100%"></div></div>
+        </div>
+        <div class="graph-row">
+          <div class="graph-label"><span>Agilidade na Gestão de Dados</span><span style="color: var(--neon-purple)">Alta</span></div>
+          <div class="bar-bg"><div class="bar-fill fill-purple" style="width:94%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TERMINAL (STATIC) -->
+    <div class="reveal-on-scroll">
+      <div class="section-title-box">
+        <span class="section-tag">Log de Execução</span>
+        <h2>Núcleo de Modernização Tecnológica</h2>
+      </div>
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <div class="dot red"></div><div class="dot yellow"></div><div class="dot greenDot"></div>
+          <div class="terminal-title">assutef_system_init.sh</div>
+        </div>
+        <div class="terminal-body">
+          <div class="cmd-line">> Initializing Assutef Digital Transformation Protocol...</div>
+          <div class="cmd-line cmd-success">✓ Configuring Modern Web Architecture... [DONE]</div>
+          <div class="cmd-line cmd-info">> Deploying Micro-Management Module for Associates...</div>
+          <div class="cmd-line cmd-info">> Integrating Benefits & Services Layer...</div>
+          <div class="cmd-line cmd-success">✓ System Core Framework Active and Secured.</div>
+          <div class="cmd-line cmd-warn">> Security Check (SSL/LGPD/Backups)...</div>
+          <div class="cmd-line cmd-success" style="font-weight:900;">> SYSTEM READY. ASSOCIAÇÃO 4.0 OPERATIONAL.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT FOOTER -->
+    <section class="contacts-footer">
+      <h3 style="text-align:center; margin-bottom: 24px;">Atendimento Direto</h3>
+      <div class="contacts-grid">
+        <div class="contact-card">
+          <div class="contact-icon" style="margin-bottom:10px;">💼</div>
+          <strong>Felipe - Estratégia Digital</strong>
+          <a href="#">41 99975-0085</a>
+          <a href="#">felipe@empresarialweb.com.br</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon" style="margin-bottom:10px;">💻</div>
+          <strong>Suporte Técnico</strong>
+          <a href="#">Empresarial Web</a>
+          <a href="#">curitiba@empresarialweb.com.br</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
