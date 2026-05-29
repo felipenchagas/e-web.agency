@@ -775,9 +775,19 @@
       .task,.phase,.tr{grid-template-columns:1fr}
       .th,.td{border-right:0;border-bottom:1px solid var(--border)}
       .tr .td:last-child,.tr .th:last-child{border-bottom:0}
-      nav{align-items:stretch;flex-direction:column;padding:14px 0;gap:12px}
-      .navlinks{justify-content:flex-start;gap:6px}
-      .navlinks a{padding:8px 10px;font-size:12px}
+      nav{align-items:stretch;flex-direction:column;padding:12px 0;gap:10px}
+      .navlinks{
+        justify-content:flex-start;
+        flex-wrap:nowrap;
+        overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
+        width:100%;
+        padding:4px 0;
+        gap:6px;
+        scrollbar-width:none;
+      }
+      .navlinks::-webkit-scrollbar{display:none}
+      .navlinks a{padding:8px 12px;font-size:12px;white-space:nowrap}
       .section-head{align-items:flex-start;flex-direction:column}
       .hero{padding:40px 0 20px}
       .hero-card{min-height:auto;padding:20px}
