@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plano de Execução SEO 360° — Pantelas | V3 com Logo</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;defs&gt;&lt;radialGradient id='g' cx='40%' cy='40%' r='60%'&gt;&lt;stop offset='0%' stop-color='%23ff9f9f'/&gt;&lt;stop offset='50%' stop-color='%23ff3b3b'/&gt;&lt;stop offset='100%' stop-color='%23a70000'/&gt;&lt;/radialGradient&gt;&lt;/defs&gt;&lt;circle cx='50' cy='50' r='42' fill='url(%23g)'/&gt;&lt;circle cx='50' cy='50' r='42' fill='none' stroke='%23ffffff' stroke-width='4' opacity='0.3'/&gt;&lt;/svg&gt;" />
+  <style>
+    :root {
+      --bg:#061014;
+      --bg2:#0c1b22;
+      --surface:rgba(255,255,255,.075);
+      --surface2:rgba(255,255,255,.115);
+      --border:rgba(255,255,255,.14);
+      --text:#f1fafb;
+      --muted:#a9bcc1;
+      --green:#42f2b5;
+      --blue:#6ba8ff;
+      --yellow:#ffd166;
+      --red:#ff6b6b;
+      --dark:#041014;
+      --shadow:0 28px 80px rgba(0,0,0,.36);
+      --radius:28px;
+      --max:1240px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 8% -5%,rgba(66,242,181,.22),transparent 32%),
+        radial-gradient(circle at 100% 0%,rgba(107,168,255,.24),transparent 34%),
+        radial-gradient(circle at 70% 110%,rgba(255,209,102,.1),transparent 36%),
+        linear-gradient(135deg,var(--bg),var(--bg2));
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+
+    .noise{
+      position:fixed;
+      inset:0;
+      opacity:.075;
+      pointer-events:none;
+      background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.75'/%3E%3C/svg%3E");
+    }
+
+
+    .client-logo-wrap{
+      position:relative;
+      display:inline-grid;
+      place-items:center;
+      width:220px;
+      height:220px;
+      margin:0 0 24px;
+      border-radius:34px;
+      background:
+        radial-gradient(circle at 50% 50%,rgba(255,209,102,.25),transparent 60%),
+        rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.16);
+      box-shadow:0 24px 70px rgba(0,0,0,.28);
+      overflow:hidden;
+      isolation:isolate;
+    }
+
+    .client-logo-wrap::before{
+      content:"";
+      position:absolute;
+      inset:-42%;
+      background:
+        conic-gradient(from 0deg,
+          transparent,
+          rgba(255,209,102,.55),
+          transparent,
+          rgba(255,255,255,.18),
+          transparent);
+      animation:logoOrbit 8s linear infinite;
+      z-index:-2;
+    }
+
+    .client-logo-wrap::after{
+      content:"";
+      position:absolute;
+      inset:3px;
+      border-radius:31px;
+      background:rgba(6,16,20,.9);
+      z-index:-1;
+    }
+
+    .client-logo{
+      width: 180px;
+      max-height: 160px;
+      object-fit:contain;
+      filter:drop-shadow(0 16px 26px rgba(0,0,0,.36));
+      animation:logoFloat 4.8s ease-in-out infinite;
+    }
+
+    .brand-logo{
+      width: auto;
+      height: 20px;
+      object-fit:contain;
+      filter:drop-shadow(0 8px 14px rgba(0,0,0,.28));
+    }
+
+    .mark.with-logo{
+      width: auto;
+      height: 42px;
+      padding: 0 12px;
+      border-radius: 12px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.18);
+      overflow:hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-watermark{
+      position:absolute;
+      right:-36px;
+      bottom:-18px;
+      width:240px;
+      opacity:.07;
+      filter:grayscale(1) brightness(2);
+      transform:rotate(-8deg);
+      pointer-events:none;
+    }
+
+    @keyframes logoOrbit{
+      to{transform:rotate(360deg)}
+    }
+
+    @keyframes logoFloat{
+      0%,100%{transform:translateY(0) scale(1)}
+      50%{transform:translateY(-7px) scale(1.025)}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      .client-logo-wrap::before,
+      .client-logo{animation:none}
+    }
+
+
+    .wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+    header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      border-bottom:1px solid var(--border);
+      background:rgba(6,16,20,.72);
+      backdrop-filter:blur(22px);
+    }
+
+    nav{
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:1000;
+      letter-spacing:-.045em;
+    }
+
+    .mark{
+      width:42px;
+      height:42px;
+      border-radius:15px;
+      display:grid;
+      place-items:center;
+      color:#061014;
+      background:linear-gradient(135deg,var(--green),var(--blue));
+      box-shadow:0 16px 40px rgba(66,242,181,.2);
+      font-weight:1000;
+    }
+
+    .navlinks{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+    .navlinks a{
+      color:var(--muted);
+      text-decoration:none;
+      font-weight:850;
+      font-size:13px;
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid transparent;
+    }
+    .navlinks a:hover{color:var(--text);background:rgba(255,255,255,.07);border-color:var(--border)}
+
+    section{padding:44px 0}
+    .hero{
+      padding:82px 0 44px;
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:34px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:9px 13px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.075);
+      border-radius:999px;
+      color:var(--green);
+      font-size:13px;
+      font-weight:950;
+      letter-spacing:.02em;
+      margin-bottom:22px;
+    }
+
+    .pulse{
+      width:9px;
+      height:9px;
+      border-radius:999px;
+      background:var(--green);
+      box-shadow:0 0 0 8px rgba(66,242,181,.1);
+    }
+
+    h1{
+      margin:0 0 24px;
+      font-size:clamp(42px,7vw,84px);
+      line-height:.91;
+      letter-spacing:-.075em;
+      max-width:920px;
+    }
+
+    h1 strong{color:var(--green)}
+    .lead{
+      margin:0 0 30px;
+      max-width:760px;
+      color:var(--muted);
+      font-size:19px;
+      line-height:1.62;
+    }
+
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      border:0;
+      border-radius:16px;
+      background:var(--yellow);
+      color:#ffffff;
+      padding:15px 18px;
+      font-weight:1000;
+      text-decoration:none;
+      box-shadow:0 20px 45px rgba(255,209,102,.2);
+      cursor:pointer;
+    }
+    .btn.secondary{color:var(--text);background:rgba(255,255,255,.08);border:1px solid var(--border);box-shadow:none}
+
+    .hero-card{
+      position:relative;
+      min-height:530px;
+      overflow:hidden;
+      padding:28px;
+      border-radius:var(--radius);
+      border:1px solid var(--border);
+      background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.045));
+      box-shadow:var(--shadow);
+    }
+    .hero-card::before{
+      content:"";
+      position:absolute;
+      width:390px;
+      height:390px;
+      right:-130px;
+      top:-130px;
+      border-radius:50%;
+      background:radial-gradient(circle,rgba(66,242,181,.36),transparent 64%);
+    }
+    .status{position:relative;display:grid;gap:16px}
+    .status-label{color:var(--muted);font-size:13px;font-weight:950;text-transform:uppercase;letter-spacing:.13em}
+    .status-number{font-size:78px;line-height:1;font-weight:1000;letter-spacing:-.075em}
+    .status-note{margin:0;color:var(--muted);line-height:1.55}
+
+    .mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:8px}
+    .mini{
+      border:1px solid var(--border);
+      background:rgba(0,0,0,.2);
+      border-radius:21px;
+      padding:16px;
+    }
+    .mini b{display:block;font-size:28px;letter-spacing:-.045em;margin-bottom:4px}
+    .mini span{color:var(--muted);font-size:13px;line-height:1.35}
+
+    .validation-box{
+      margin-top:14px;
+      border:1px solid rgba(66,242,181,.32);
+      background:rgba(66,242,181,.1);
+      border-radius:22px;
+      padding:18px;
+    }
+    .validation-box b{display:block;color:var(--green);margin-bottom:7px}
+    .validation-box p{margin:0;color:var(--muted);line-height:1.5;font-size:14px}
+
+    .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:22px;margin-bottom:24px}
+    h2{margin:0;font-size:clamp(30px,4.2vw,54px);line-height:.98;letter-spacing:-.058em}
+    .section-head p{color:var(--muted);max-width:560px;line-height:1.55;margin:0}
+
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+
+    .card{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.07);
+      border-radius:24px;
+      padding:22px;
+      min-height:170px;
+    }
+    .card h3{margin:0 0 10px;font-size:22px;letter-spacing:-.04em}
+    .card p,.card li{color:var(--muted);line-height:1.55;font-size:15px}
+    .card p{margin:0}
+    ul{margin:12px 0 0;padding-left:18px}
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      border-radius:999px;
+      padding:7px 10px;
+      margin-bottom:12px;
+      font-size:12px;
+      font-weight:950;
+      color:#061014;
+      background:var(--green);
+    }
+    .pill.blue{background:var(--blue)}
+    .pill.yellow{background:var(--yellow)}
+    .pill.red{background:var(--red);color:#fff}
+
+    .tabs,.tech-tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+    .tab,.tech-tab{
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.065);
+      color:var(--muted);
+      padding:13px 20px;
+      border-radius:999px;
+      cursor:pointer;
+      font-weight:950;
+    }
+    .tab-badge {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--yellow);
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 1000;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      box-shadow: 0 0 12px rgba(255, 209, 102, 0.45);
+      animation: pulseAlert 2s infinite;
+      z-index: 2;
+    }
+    @keyframes pulseAlert {
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 209, 102, 0.75); }
+      70% { transform: scale(1.05); box-shadow: 0 0 0 6px rgba(255, 209, 102, 0); }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 209, 102, 0); }
+    }
+    .tab.active{color:#ffffff;border-color:transparent;background:var(--yellow)}
+    .tech-tab.active{color:#ffffff;border-color:transparent;background:var(--yellow)}
+
+    .panel,.tech-panel{
+      display:none;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      background:rgba(255,255,255,.07);
+      padding:26px;
+      box-shadow:var(--shadow);
+    }
+    .panel.active,.tech-panel.active{display:block}
+
+    .execution{display:grid;gap:14px}
+    .task{
+      display:grid;
+      grid-template-columns:110px 1fr 260px;
+      gap:16px;
+      align-items:stretch;
+      border:1px solid var(--border);
+      border-radius:24px;
+      background:rgba(0,0,0,.18);
+      padding:16px;
+    }
+    .task-num{
+      display:grid;
+      place-items:center;
+      border-radius:18px;
+      background:rgba(66,242,181,.12);
+      border:1px solid rgba(66,242,181,.26);
+      color:var(--green);
+      font-weight:1000;
+      text-align:center;
+      padding:14px;
+    }
+    .task-main h3{margin:0 0 7px;font-size:22px;letter-spacing:-.035em}
+    .task-main p{margin:0;color:var(--muted);line-height:1.5}
+    .deliverable{
+      display:grid;
+      place-items:center;
+      text-align:center;
+      border-radius:18px;
+      background:rgba(255,255,255,.07);
+      border:1px solid var(--border);
+      color:var(--text);
+      font-weight:950;
+      padding:14px;
+    }
+
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .workstream{
+      border:1px solid var(--border);
+      border-radius:26px;
+      overflow:hidden;
+      background:rgba(0,0,0,.18);
+    }
+    .workstream-head{padding:20px;background:rgba(255,255,255,.08);border-bottom:1px solid var(--border)}
+    .workstream-head h3{margin:0 0 6px;font-size:25px;letter-spacing:-.045em}
+    .workstream-head p{margin:0;color:var(--muted);line-height:1.45}
+    .check-row{
+      display:grid;
+      grid-template-columns:28px 1fr;
+      gap:12px;
+      padding:15px 20px;
+      border-bottom:1px solid var(--border);
+      color:var(--muted);
+      line-height:1.45;
+    }
+    .check-row:last-child{border-bottom:0}
+    .check{
+      width:24px;
+      height:24px;
+      display:grid;
+      place-items:center;
+      border-radius:999px;
+      background:rgba(66,242,181,.16);
+      color:var(--green);
+      font-weight:1000;
+    }
+
+    .schema-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .schema-card{
+      border:1px solid var(--border);
+      background:rgba(0,0,0,.18);
+      border-radius:24px;
+      padding:20px;
+      min-height:210px;
+    }
+    .schema-card h3{margin:0 0 8px;font-size:21px;letter-spacing:-.04em}
+    .schema-card p{margin:0 0 12px;color:var(--muted);line-height:1.5;font-size:14px}
+    .schema-card code{
+      display:inline-flex;
+      max-width:100%;
+      color:var(--green);
+      background:rgba(66,242,181,.1);
+      border:1px solid rgba(66,242,181,.22);
+      border-radius:999px;
+      padding:7px 9px;
+      font-size:12px;
+      font-weight:900;
+      white-space:normal;
+    }
+
+    .test-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    .test-step{
+      border:1px solid var(--border);
+      background:rgba(0,0,0,.2);
+      border-radius:22px;
+      padding:18px;
+      min-height:150px;
+    }
+    .test-step b{color:var(--yellow);display:block;font-size:13px;margin-bottom:9px}
+    .test-step strong{display:block;font-size:18px;letter-spacing:-.035em;margin-bottom:8px}
+    .test-step p{margin:0;color:var(--muted);line-height:1.42;font-size:13px}
+
+    .audit-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .audit-item{
+      display:grid;
+      grid-template-columns:34px 1fr;
+      gap:12px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.06);
+      border-radius:20px;
+      padding:16px;
+    }
+    .audit-icon{
+      width:32px;
+      height:32px;
+      border-radius:12px;
+      display:grid;
+      place-items:center;
+      color:#061014;
+      background:var(--yellow);
+      font-weight:1000;
+    }
+    .audit-item h3{margin:0 0 5px;font-size:18px;letter-spacing:-.035em}
+    .audit-item p{margin:0;color:var(--muted);line-height:1.45;font-size:14px}
+    .risk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .risk{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.06);
+      border-radius:24px;
+      padding:20px;
+    }
+    .risk h3{margin:0 0 10px;font-size:20px;letter-spacing:-.04em}
+    .risk p{margin:0;color:var(--muted);line-height:1.5;font-size:14px}
+
+    .roadmap{display:grid;gap:12px}
+    .phase{
+      display:grid;
+      grid-template-columns:150px 1fr 210px;
+      gap:16px;
+      align-items:stretch;
+      border:1px solid var(--border);
+      border-radius:24px;
+      background:rgba(255,255,255,.065);
+      padding:16px;
+    }
+    .phase-label{
+      display:grid;
+      place-items:center;
+      text-align:center;
+      color:var(--green);
+      font-weight:1000;
+      border-radius:18px;
+      background:rgba(66,242,181,.12);
+      border:1px solid rgba(66,242,181,.26);
+      padding:14px;
+    }
+    .phase-main h3{margin:0 0 7px;font-size:23px;letter-spacing:-.04em}
+    .phase-main p{margin:0;color:var(--muted);line-height:1.5}
+    .phase-output{
+      display:grid;
+      place-items:center;
+      border-radius:18px;
+      background:rgba(0,0,0,.2);
+      border:1px solid var(--border);
+      text-align:center;
+      font-weight:950;
+      padding:14px;
+    }
+
+    .cluster-map{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .cluster{
+      padding:20px;
+      border-radius:24px;
+      border:1px solid var(--border);
+      background:rgba(0,0,0,.18);
+    }
+    .cluster h3{color:var(--green);margin:0 0 14px;font-size:22px;letter-spacing:-.04em}
+    .tags{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{
+      color:var(--muted);
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.075);
+      border-radius:999px;
+      padding:8px 10px;
+      font-size:13px;
+      font-weight:800;
+    }
+
+    .table{
+      border:1px solid var(--border);
+      border-radius:26px;
+      overflow:hidden;
+      background:rgba(0,0,0,.16);
+    }
+    .tr{display:grid;grid-template-columns:1.1fr 1.2fr .8fr;border-bottom:1px solid var(--border)}
+    .tr:last-child{border-bottom:0}
+    .th,.td{padding:16px;border-right:1px solid var(--border);line-height:1.45}
+    .th:last-child,.td:last-child{border-right:0}
+    .th{background:rgba(255,255,255,.09);font-weight:1000;color:var(--text)}
+    .td{color:var(--muted)}
+    .td b{color:var(--text)}
+
+    .proof-box{
+      border:1px solid rgba(107,168,255,.34);
+      background:rgba(107,168,255,.1);
+      border-radius:26px;
+      padding:26px;
+      box-shadow:var(--shadow);
+    }
+    .proof-box h3{margin:0 0 12px;font-size:28px;letter-spacing:-.045em}
+    .proof-box p{color:var(--muted);line-height:1.6;margin:0 0 12px}
+
+    .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .kpi{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.07);
+      border-radius:24px;
+      padding:22px;
+    }
+    .kpi b{display:block;color:var(--green);font-size:30px;letter-spacing:-.055em;margin-bottom:10px}
+    .kpi p{margin:0;color:var(--muted);line-height:1.5}
+
+    .cta-final{
+      border:1px solid var(--border);
+      border-radius:34px;
+      background:
+        radial-gradient(circle at 10% 20%,rgba(66,242,181,.21),transparent 32%),
+        radial-gradient(circle at 92% 82%,rgba(107,168,255,.2),transparent 36%),
+        rgba(255,255,255,.075);
+      padding:42px;
+      margin-bottom:64px;
+      box-shadow:var(--shadow);
+    }
+    .cta-final h2{max-width:930px;margin-bottom:18px}
+    .cta-final p{color:var(--muted);line-height:1.62;font-size:18px;max-width:900px;margin:0 0 22px}
+
+    @media(max-width:980px){
+      .hero,.grid-4,.grid-3,.grid-2,.split,.cluster-map,.kpis,.schema-grid,.test-flow,.audit-list,.risk-grid{grid-template-columns:1fr}
+      .task,.phase,.tr{grid-template-columns:1fr}
+      .th,.td{border-right:0;border-bottom:1px solid var(--border)}
+      .tr .td:last-child,.tr .th:last-child{border-bottom:0}
+      nav{align-items:flex-start;flex-direction:column;padding:14px 0}
+      .navlinks{justify-content:flex-start}
+      .section-head{align-items:flex-start;flex-direction:column}
+    }
+
+    @media print{
+      body{background:#fff;color:#111}
+      header,.noise,.tabs,.tech-tabs,.hero-actions{display:none}
+      .panel,.tech-panel{display:block!important;box-shadow:none}
+      .card,.hero-card,.task,.phase,.cluster,.workstream,.table,.proof-box,.kpi,.cta-final,.schema-card,.test-step,.audit-item,.risk{
+        box-shadow:none;background:#fff;border-color:#ddd;
+      }
+      .lead,.status-note,.card p,.card li,.task-main p,.phase-main p,.check-row,.tag,.td,.kpi p,.cta-final p,.workstream-head p,.proof-box p,.schema-card p,.test-step p,.audit-item p,.risk p{color:#333}
+    }
+  </style>
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header>
+    <nav class="wrap">
+      <div class="brand">
+        <div class="mark with-logo"><img class="brand-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAAAeCAYAAABpP1GsAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMS1jMDAyIDc5LmI3YzY0Y2NmOSwgMjAyNC8wNy8xNi0xMjozOTowNCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI2LjEgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkMwNEZCQkVCQTgxMTExRUY5NzIxREVCQzE4M0YwNUVEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkMwNEZCQkVDQTgxMTExRUY5NzIxREVCQzE4M0YwNUVEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QzA0RkJCRTlBODExMTFFRjk3MjFERUJDMTgzRjA1RUQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QzA0RkJCRUFBODExMTFFRjk3MjFERUJDMTgzRjA1RUQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5RtVVaAAAtB0lEQVR42sx8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" alt="Pantelas"></div>
+        <div>Plano de Execução SEO</div>
+      </div>
+      <div class="navlinks">
+        <a href="#resumo">Resumo</a>
+        <a href="#execucao">Execução</a>
+        <a href="#local-ia">Local + IA</a>
+        <a href="#tecnico">Técnico</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#validacao">Validação</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero" id="resumo">
+      <div>
+        <div class="client-logo-wrap"><img class="client-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAAAeCAYAAABpP1GsAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMS1jMDAyIDc5LmI3YzY0Y2NmOSwgMjAyNC8wNy8xNi0xMjozOTowNCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI2LjEgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkMwNEZCQkVCQTgxMTExRUY5NzIxREVCQzE4M0YwNUVEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkMwNEZCQkVDQTgxMTExRUY5NzIxREVCQzE4M0YwNUVEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QzA0RkJCRTlBODExMTFFRjk3MjFERUJDMTgzRjA1RUQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QzA0RkJCRUFBODExMTFFRjk3MjFERUJDMTgzRjA1RUQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5RtVVaAAAtB0lEQVR42sx8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" alt="Logo Pantelas"></div>
+        <div class="eyebrow"><span class="pulse"></span> Pantelas — Plano operacional avançado</div>
+        <h1>O que vamos fazer para a empresa dominar buscas locais e ser fonte para <strong>IA</strong>.</h1>
+        <p class="lead">
+          Este não é um estudo teórico. É um plano de execução passo a passo para reorganizar a estrutura atual, corrigir riscos de conteúdo programático, fortalecer páginas comerciais, expandir SEO local, aplicar uma camada técnica avançada e preparar o site para buscas feitas em inteligências artificiais.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#execucao">Ver passos de execução</a>
+          <a class="btn secondary" href="#tecnico">Ver camada técnica</a>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <img class="logo-watermark" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAAAeCAYAAABpP1GsAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMS1jMDAyIDc5LmI3YzY0Y2NmOSwgMjAyNC8wNy8xNi0xMjozOTowNCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI2LjEgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkMwNEZCQkVCQTgxMTExRUY5NzIxREVCQzE4M0YwNUVEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkMwNEZCQkVDQTgxMTExRUY5NzIxREVCQzE4M0YwNUVEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QzA0RkJCRTlBODExMTFFRjk3MjFERUJDMTgzRjA1RUQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QzA0RkJCRUFBODExMTFFRjk3MjFERUJDMTgzRjA1RUQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5RtVVaAAAtB0lEQVR42sx8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" alt="">
+        <div class="status">
+          <div class="status-label">Ponto de partida</div>
+          <div class="status-number">452</div>
+          <p class="status-note">
+            URLs já existentes formam uma base forte, mas precisam ser organizadas por intenção, prioridade comercial, cidade, categoria, função no funil e leitura técnica por mecanismos de busca.
+          </p>
+
+          <div class="mini-grid">
+            <div class="mini"><b>81</b><span>Páginas principais a organizar e fortalecer.</span></div>
+            <div class="mini"><b>123</b><span>Posts que podem virar apoio semântico.</span></div>
+            <div class="mini"><b>248</b><span>Guias que precisam de revisão por categoria.</span></div>
+            <div class="mini"><b>+Técnico</b><span>Schema, indexação, performance, validações e experimentos IA.</span></div>
+          </div>
+
+          <div class="validation-box">
+            <b>Direção estratégica</b>
+            <p>
+              A prioridade não é criar volume aleatório. A prioridade é transformar a estrutura existente em uma rede clara de páginas comerciais, locais e técnicas, com sinais fortes para Google, Maps, rich results e mecanismos de IA.
+            </p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Objetivo do projeto</h2>
+        <p>O plano tem metas comerciais, técnicas e semânticas. Cada etapa existe para aumentar visibilidade, confiança e geração de orçamento.</p>
+      </div>
+
+      <div class="grid-4">
+        <article class="card"><span class="pill">1</span><h3>Organizar</h3><p>Separar páginas por função: comercial, local, guia, blog, comparação, FAQ, estudo de caso e página técnica.</p></article>
+        <article class="card"><span class="pill">2</span><h3>Fortalecer</h3><p>Melhorar páginas que já existem e definir quais são as URLs principais de cada serviço.</p></article>
+        <article class="card"><span class="pill">3</span><h3>Marcar</h3><p>Aplicar schema, breadcrumbs, entidades, serviços, FAQs e relações entre páginas sem exagero ou marcação falsa.</p></article>
+        <article class="card"><span class="pill">4</span><h3>Converter</h3><p>Transformar tráfego em pedidos de orçamento por WhatsApp, formulário e páginas de decisão.</p></article>
+      </div>
+    </section>
+
+    <section id="execucao">
+      <div class="section-head">
+        <h2>Passo a passo do que vamos fazer</h2>
+        <p>Sequência operacional recomendada. A ordem é importante para evitar canibalização e crescimento desorganizado.</p>
+      </div>
+
+      <div class="execution">
+        <div class="task"><div class="task-num">Passo 01</div><div class="task-main"><h3>Mapear todas as URLs por função</h3><p>Classificar páginas atuais em: comercial, categoria, blog, guia técnico, guia programático, página local, institucional, conversão e suporte técnico.</p></div><div class="deliverable">Entrega: mapa completo de URLs</div></div>
+        <div class="task"><div class="task-num">Passo 02</div><div class="task-main"><h3>Definir a página principal de cada serviço</h3><p>Escolher a URL principal para gradil, alambrado, concertina, grama sintética, quadras, redes e demais famílias comerciais.</p></div><div class="deliverable">Entrega: mapa de páginas-mãe</div></div>
+        <div class="task"><div class="task-num">Passo 03</div><div class="task-main"><h3>Corrigir sobreposição e canibalização</h3><p>Identificar páginas parecidas e ajustar títulos, H1, introduções, CTAs, links e intenção de busca para cada URL ter papel claro.</p></div><div class="deliverable">Entrega: plano de ajustes por URL</div></div>
+        <div class="task"><div class="task-num">Passo 04</div><div class="task-main"><h3>Revisar os guias programáticos</h3><p>Corrigir guias criados com lógica genérica. Cada família de produto terá modelo próprio: telas metálicas, cercamentos, grama sintética, quadras, redes e estruturas.</p></div><div class="deliverable">Entrega: templates por categoria</div></div>
+        <div class="task"><div class="task-num">Passo 05</div><div class="task-main"><h3>Fortalecer as páginas comerciais</h3><p>Adicionar conteúdo de decisão, aplicações reais, variações, perguntas de orçamento, diferenciais, regiões atendidas, prova visual e links de apoio.</p></div><div class="deliverable">Entrega: páginas comerciais reforçadas</div></div>
+        <div class="task"><div class="task-num">Passo 06</div><div class="task-main"><h3>Criar a estrutura de SEO Local</h3><p>Criar ou fortalecer páginas por cidade e páginas serviço + cidade, começando pelas regiões com maior potencial comercial e proximidade operacional.</p></div><div class="deliverable">Entrega: hubs locais e páginas regionais</div></div>
+        <div class="task"><div class="task-num">Passo 07</div><div class="task-main"><h3>Executar a camada técnica avançada</h3><p>Testar schema, canonical, breadcrumbs, sitemap, rastreamento, performance, mobile, rich results e inspeções no Search Console.</p></div><div class="deliverable">Entrega: pacote técnico SEO</div></div>
+        <div class="task"><div class="task-num">Passo 08</div><div class="task-main"><h3>Criar conteúdos para buscas com IA</h3><p>Produzir páginas em formato de resposta, comparação e decisão, com linguagem clara para usuários e para mecanismos de IA entenderem a empresa como fonte.</p></div><div class="deliverable">Entrega: páginas citáveis por IA</div></div>
+        <div class="task"><div class="task-num">Passo 09</div><div class="task-main"><h3>Conectar tudo com links internos</h3><p>Conectar páginas locais, comerciais, guias, comparativos, blogs e hubs em clusters claros por assunto e intenção.</p></div><div class="deliverable">Entrega: arquitetura de links internos</div></div>
+        <div class="task"><div class="task-num">Passo 10</div><div class="task-main"><h3>Medir, ajustar e escalar</h3><p>Acompanhar impressões, cliques, posições, CTR, WhatsApp, formulários, validações técnicas e oportunidades de expansão.</p></div><div class="deliverable">Entrega: rotina mensal de crescimento</div></div>
+      </div>
+    </section>
+
+    <section id="local-ia">
+      <div class="section-head">
+        <h2>Plano integrado: Local + IA</h2>
+        <p>São duas frentes separadas na execução, mas conectadas na estratégia. Uma gera demanda local; a outra aumenta autoridade e presença em respostas inteligentes.</p>
+      </div>
+
+      <div class="tabs">
+        <button class="tab active" data-tab="local">Trilha 1 — SEO Local <span class="tab-badge">1</span></button>
+        <button class="tab" data-tab="ia">Trilha 2 — Buscas com IA <span class="tab-badge">2</span></button>
+        <button class="tab" data-tab="conexao">Como as duas se conectam <span class="tab-badge">3</span></button>
+      </div>
+
+      <div class="panel active" id="local">
+        <div class="split">
+          <div class="workstream">
+            <div class="workstream-head"><h3>O que vamos executar no SEO Local</h3><p>Foco em buscas com intenção comercial e geográfica.</p></div>
+            <div class="check-row"><div class="check">✓</div><div>Criar páginas para cidades prioritárias: Curitiba, São José dos Pinhais, Pinhais, Colombo, Araucária, Campo Largo e Fazenda Rio Grande.</div></div>
+            <div class="check-row"><div class="check">✓</div><div>Criar páginas serviço + cidade para gradil, alambrado, concertina, grama sintética, redes de proteção e quadras.</div></div>
+            <div class="check-row"><div class="check">✓</div><div>Inserir contexto local real em cada página, evitando textos iguais trocando apenas o nome da cidade.</div></div>
+            <div class="check-row"><div class="check">✓</div><div>Conectar páginas locais com páginas comerciais principais e páginas de apoio técnico.</div></div>
+            <div class="check-row"><div class="check">✓</div><div>Fortalecer contato, área atendida, orçamento, WhatsApp, endereço e Google Business Profile.</div></div>
+          </div>
+          <div class="workstream">
+            <div class="workstream-head"><h3>Resultado esperado</h3><p>Mais presença em pesquisas comerciais regionais.</p></div>
+            <div class="check-row"><div class="check">→</div><div>Aparecer para buscas como “gradil em Curitiba”, “alambrado em Curitiba” e “concertina em Curitiba”.</div></div>
+            <div class="check-row"><div class="check">→</div><div>Aumentar cliques qualificados vindos de pessoas próximas da compra.</div></div>
+            <div class="check-row"><div class="check">→</div><div>Melhorar relevância local do site e da marca.</div></div>
+            <div class="check-row"><div class="check">→</div><div>Transformar páginas de cidade em portas de entrada para orçamento.</div></div>
+            <div class="check-row"><div class="check">→</div><div>Reduzir dependência de tráfego genérico de blog.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel" id="ia">
+        <div class="split">
+          <div class="workstream">
+            <div class="workstream-head"><h3>O que vamos executar para IA</h3><p>Foco em respostas conversacionais e autoridade semântica.</p></div>
+            <div class="check-row"><div class="check">✓</div><div>Criar páginas de comparação: gradil vs alambrado, tela eletrosoldada vs tela losangular, concertina simples vs dupla.</div></div>
+            <div class="check-row"><div class="check">✓</div><div>Criar páginas de decisão: qual tela usar para indústria, qual solução usar para quadras, qual cercamento usar em condomínio.</div></div>
+            <div class="check-row"><div class="check">✓</div><div>Adicionar blocos de resposta curta no topo das páginas importantes.</div></div>
+            <div class="check-row"><div class="check">✓</div><div>Organizar FAQs reais por produto, com respostas objetivas e úteis.</div></div>
+            <div class="check-row"><div class="check">✓</div><div>Fortalecer entidade da empresa: quem é, o que faz, onde atende, quais produtos fornece e quais problemas resolve.</div></div>
+          </div>
+          <div class="workstream">
+            <div class="workstream-head"><h3>Resultado esperado</h3><p>Maior chance de ser entendido e citado como referência.</p></div>
+            <div class="check-row"><div class="check">→</div><div>O site passa a responder perguntas que usuários fazem diretamente em IA.</div></div>
+            <div class="check-row"><div class="check">→</div><div>A marca fica mais clara como entidade comercial local e técnica.</div></div>
+            <div class="check-row"><div class="check">→</div><div>As páginas ficam mais fáceis de interpretar por motores de busca e assistentes.</div></div>
+            <div class="check-row"><div class="check">→</div><div>O conteúdo deixa de ser apenas artigo e passa a ser fonte de decisão.</div></div>
+            <div class="check-row"><div class="check">→</div><div>O tráfego tende a chegar mais informado e próximo do orçamento.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel" id="conexao">
+        <div class="grid-3">
+          <article class="card"><span class="pill">Busca local</span><h3>Usuário quer fornecedor</h3><p>A página local captura a demanda por cidade e leva para orçamento.</p></article>
+          <article class="card"><span class="pill blue">Busca com IA</span><h3>Usuário quer decisão</h3><p>O guia responde dúvidas e indica a solução adequada para cada cenário.</p></article>
+          <article class="card"><span class="pill yellow">Conversão</span><h3>As duas apontam para venda</h3><p>Ambas direcionam para páginas comerciais, WhatsApp e formulário de orçamento.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tecnico">
+      <div class="section-head">
+        <h2>Camada técnica avançada</h2>
+        <p>Além de conteúdo e páginas locais, vamos executar testes técnicos que ajudam o site a ser melhor interpretado por Google, Maps, rich results e sistemas de IA.</p>
+      </div>
+
+      <div class="tech-tabs">
+        <button class="tech-tab active" data-tech="marcacoes">Marcações aprimoradas <span class="tab-badge">1</span></button>
+        <button class="tech-tab" data-tech="indexacao">Indexação e rastreamento <span class="tab-badge">2</span></button>
+        <button class="tech-tab" data-tech="performance">Performance e UX <span class="tab-badge">3</span></button>
+        <button class="tech-tab" data-tech="validacoes">Testes e validações <span class="tab-badge">4</span></button>
+        <button class="tech-tab" data-tech="experimentos">Experimentos IA <span class="tab-badge">5</span></button>
+      </div>
+
+      <div class="tech-panel active" id="marcacoes">
+        <div class="section-head" style="margin-bottom:18px;">
+          <h2 style="font-size:34px;">Marcações estruturadas que vamos testar</h2>
+          <p>A ideia não é encher o site de schema artificial. Vamos aplicar marcações úteis, coerentes com o conteúdo real de cada página e validar antes de escalar.</p>
+        </div>
+
+        <div class="schema-grid">
+          <article class="schema-card"><h3>LocalBusiness / Organization</h3><p>Consolidar a entidade da Pantelas: nome, URL, telefone, endereço, área atendida, redes sociais, logo e dados institucionais.</p><code>@type: LocalBusiness</code></article>
+          <article class="schema-card"><h3>WebSite + SearchAction</h3><p>Testar marcação do site como entidade central e possível busca interna quando houver estrutura adequada.</p><code>@type: WebSite</code></article>
+          <article class="schema-card"><h3>BreadcrumbList</h3><p>Aplicar em páginas comerciais, guias, blogs e páginas locais para deixar hierarquia clara.</p><code>@type: BreadcrumbList</code></article>
+          <article class="schema-card"><h3>Service</h3><p>Testar em páginas de serviço: gradil, alambrado, concertina, grama sintética, redes e quadras, sempre ligado à empresa.</p><code>@type: Service</code></article>
+          <article class="schema-card"><h3>Product</h3><p>Usar com cautela em produtos reais, sem inventar preço, review ou estoque. Útil quando a página representa item comercial claro.</p><code>@type: Product</code></article>
+          <article class="schema-card"><h3>FAQPage</h3><p>Aplicar apenas quando houver FAQ real e útil na página. As perguntas precisam ajudar decisão, orçamento ou escolha técnica.</p><code>@type: FAQPage</code></article>
+          <article class="schema-card"><h3>Article / BlogPosting</h3><p>Revisar posts e guias informativos para identificar autor, data, imagem, assunto e relação com páginas comerciais.</p><code>@type: Article</code></article>
+          <article class="schema-card"><h3>ItemList</h3><p>Testar em páginas de categoria, hubs de serviços, listas de produtos, cidades atendidas e páginas que agrupam soluções.</p><code>@type: ItemList</code></article>
+          <article class="schema-card"><h3>Place / AdministrativeArea</h3><p>Usar com cuidado para reforçar cidades e regiões atendidas sem simular endereço onde a empresa não possui unidade física.</p><code>@type: Place</code></article>
+        </div>
+
+        <div class="proof-box" style="margin-top:18px;">
+          <h3>Regra de segurança das marcações</h3>
+          <p>Não vamos usar AggregateRating falso, review inventado, preço fictício, disponibilidade sem base ou schema que não representa o conteúdo visível da página. A marcação precisa reforçar a realidade da página, não tentar manipular rich result.</p>
+        </div>
+      </div>
+
+      <div class="tech-panel" id="indexacao">
+        <div class="grid-3">
+          <article class="card"><span class="pill">Sitemap</span><h3>Revisão de sitemaps</h3><p>Validar se páginas comerciais, locais, guias, posts e hubs estão distribuídos em sitemaps organizados, com URLs úteis e sem ruído.</p></article>
+          <article class="card"><span class="pill">Robots</span><h3>Robots e rastreamento</h3><p>Revisar robots.txt para garantir que páginas importantes estejam rastreáveis e que áreas irrelevantes não consumam crawl sem necessidade.</p></article>
+          <article class="card"><span class="pill">Canonical</span><h3>Canônicos</h3><p>Checar páginas parecidas para evitar conflito entre versões próximas, variações de slug e conteúdos com intenção duplicada.</p></article>
+        </div>
+
+        <div class="audit-list" style="margin-top:16px;">
+          <div class="audit-item"><div class="audit-icon">1</div><div><h3>URLs indexáveis</h3><p>Checar status, canonical, meta robots, sitemap e resposta HTTP das páginas prioritárias.</p></div></div>
+          <div class="audit-item"><div class="audit-icon">2</div><div><h3>Arquitetura de profundidade</h3><p>Garantir que páginas importantes não fiquem escondidas a muitos cliques da home ou dos hubs.</p></div></div>
+          <div class="audit-item"><div class="audit-icon">3</div><div><h3>Links internos</h3><p>Reforçar páginas-mãe com links contextuais vindos de guias, blogs, páginas locais e categorias.</p></div></div>
+          <div class="audit-item"><div class="audit-icon">4</div><div><h3>Conteúdo órfão</h3><p>Encontrar páginas existentes que estão online, mas sem força interna suficiente para ranquear.</p></div></div>
+          <div class="audit-item"><div class="audit-icon">5</div><div><h3>Canibalização</h3><p>Separar intenção de páginas parecidas para que cada URL tenha papel único no funil.</p></div></div>
+          <div class="audit-item"><div class="audit-icon">6</div><div><h3>Logs e crawl budget</h3><p>Quando possível, analisar padrões de rastreamento e priorizar páginas com maior retorno comercial.</p></div></div>
+        </div>
+      </div>
+
+      <div class="tech-panel" id="performance">
+        <div class="grid-3">
+          <article class="card"><span class="pill blue">Core Web Vitals</span><h3>LCP, INP e CLS</h3><p>Revisar velocidade percebida, estabilidade visual, resposta à interação e pontos que podem prejudicar experiência.</p></article>
+          <article class="card"><span class="pill blue">Imagens</span><h3>Otimização de mídia</h3><p>Comprimir, dimensionar e priorizar imagens essenciais sem perder qualidade visual em páginas comerciais e locais.</p></article>
+          <article class="card"><span class="pill blue">Mobile</span><h3>Conversão no celular</h3><p>Garantir que WhatsApp, formulários, CTAs, menus, mapas e blocos de serviço funcionem rápido e claro no mobile.</p></article>
+        </div>
+
+        <div class="risk-grid" style="margin-top:16px;">
+          <div class="risk"><h3>O que vamos medir</h3><p>PageSpeed, Lighthouse, Search Console, experiência mobile, carregamento de imagens e estabilidade do layout.</p></div>
+          <div class="risk"><h3>O que vamos corrigir</h3><p>Imagens pesadas, scripts desnecessários, layout shifts, CTAs escondidos, páginas lentas e elementos que travam interação.</p></div>
+          <div class="risk"><h3>Por que importa</h3><p>SEO local e IA dependem de conteúdo claro, mas conversão depende de página rápida, utilizável e fácil de acionar.</p></div>
+        </div>
+      </div>
+
+      <div class="tech-panel" id="validacoes">
+        <div class="section-head" style="margin-bottom:18px;">
+          <h2 style="font-size:34px;">Ciclo de teste técnico</h2>
+          <p>Antes de escalar, vamos validar pequenas amostras. O objetivo é reduzir risco e provar que a estrutura está correta.</p>
+        </div>
+
+        <div class="test-flow">
+          <div class="test-step"><b>01</b><strong>Implementar amostra</strong><p>Aplicar em poucas páginas de serviço, local e guia.</p></div>
+          <div class="test-step"><b>02</b><strong>Validar schema</strong><p>Testar marcações e corrigir erros ou avisos relevantes.</p></div>
+          <div class="test-step"><b>03</b><strong>Inspecionar URL</strong><p>Verificar indexação, renderização e canonical no Search Console.</p></div>
+          <div class="test-step"><b>04</b><strong>Medir resposta</strong><p>Acompanhar impressões, consultas, cliques e CTR.</p></div>
+          <div class="test-step"><b>05</b><strong>Escalar</strong><p>Aplicar o padrão aprovado nas demais páginas do cluster.</p></div>
+        </div>
+
+        <div class="table" style="margin-top:18px;">
+          <div class="tr"><div class="th">Ferramenta</div><div class="th">Uso no projeto</div><div class="th">Resultado esperado</div></div>
+          <div class="tr"><div class="td"><b>Google Search Console</b></div><div class="td">Inspeção de URL, consultas, páginas, indexação e evolução de tráfego.</div><div class="td">Decidir ajustes com dados reais.</div></div>
+          <div class="tr"><div class="td"><b>Rich Results Test</b></div><div class="td">Validar marcações elegíveis a resultados avançados.</div><div class="td">Evitar schema quebrado ou inútil.</div></div>
+          <div class="tr"><div class="td"><b>Schema Validator</b></div><div class="td">Checar estrutura JSON-LD e compatibilidade geral.</div><div class="td">Garantir dados limpos e coerentes.</div></div>
+          <div class="tr"><div class="td"><b>PageSpeed / Lighthouse</b></div><div class="td">Avaliar performance, acessibilidade, SEO técnico e boas práticas.</div><div class="td">Melhorar experiência e conversão.</div></div>
+          <div class="tr"><div class="td"><b>Crawl técnico</b></div><div class="td">Mapear títulos, H1, canonicals, status, profundidade e links internos.</div><div class="td">Encontrar problemas em escala.</div></div>
+        </div>
+      </div>
+
+      <div class="tech-panel" id="experimentos">
+        <div class="grid-2">
+          <article class="card"><span class="pill yellow">Experimento 1</span><h3>Bloco de resposta direta</h3><p>Adicionar em páginas estratégicas um bloco inicial com resposta curta, objetiva e citável. Exemplo: “Qual a diferença entre gradil e alambrado?”.</p></article>
+          <article class="card"><span class="pill yellow">Experimento 2</span><h3>Comparativos de decisão</h3><p>Criar páginas que comparam soluções e indicam quando usar cada uma, conectando o conteúdo técnico com páginas de orçamento.</p></article>
+          <article class="card"><span class="pill yellow">Experimento 3</span><h3>Páginas de entidade</h3><p>Fortalecer páginas institucionais para deixar explícito quem é a Pantelas, onde atua, quais soluções oferece e quais públicos atende.</p></article>
+          <article class="card"><span class="pill yellow">Experimento 4</span><h3>FAQ orientado à compra</h3><p>Trocar dúvidas genéricas por perguntas que realmente aparecem antes do orçamento: medida, aplicação, material, instalação e prazo.</p></article>
+        </div>
+
+        <div class="proof-box" style="margin-top:18px;">
+          <h3>Como vamos validar presença em IA</h3>
+          <p>A validação será feita com testes manuais e monitoramento indireto: perguntas em assistentes, análise de tráfego de referência, consultas no Search Console, crescimento de buscas de marca e identificação de páginas que passam a responder melhor dúvidas comparativas. A meta não é prometer citação garantida por IA, e sim aumentar muito a chance de o site ser compreendido como fonte confiável.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Clusters que vamos organizar</h2>
+        <p>O site será organizado em famílias de assunto. Isso evita que cada página fique isolada e ajuda Google e IA a entender especialidade.</p>
+      </div>
+      <div class="cluster-map">
+        <div class="cluster"><h3>Cercamentos</h3><div class="tags"><span class="tag">Alambrado</span><span class="tag">Gradil</span><span class="tag">Concertina</span><span class="tag">Portões</span><span class="tag">Arames</span></div></div>
+        <div class="cluster"><h3>Telas Metálicas</h3><div class="tags"><span class="tag">Tela losangular</span><span class="tag">Tela eletrosoldada</span><span class="tag">Tela ondulada</span><span class="tag">Tela mosquiteira</span><span class="tag">Tela sob medida</span></div></div>
+        <div class="cluster"><h3>Esportivo</h3><div class="tags"><span class="tag">Quadras</span><span class="tag">Grama sintética</span><span class="tag">Redes esportivas</span><span class="tag">Equipamentos</span><span class="tag">Society</span></div></div>
+        <div class="cluster"><h3>Proteção</h3><div class="tags"><span class="tag">Redes de proteção</span><span class="tag">Sacadas</span><span class="tag">Janelas</span><span class="tag">Condomínios</span><span class="tag">Segurança</span></div></div>
+      </div>
+    </section>
+
+    <section id="roadmap">
+      <div class="section-head">
+        <h2>Roadmap de implantação</h2>
+        <p>O cronograma é progressivo: primeiro arruma a base, depois aplica camada técnica, escala páginas locais e conteúdos para IA.</p>
+      </div>
+
+      <div class="roadmap">
+        <div class="phase"><div class="phase-label">Fase 1<br>Base</div><div class="phase-main"><h3>Auditoria de estrutura e intenção</h3><p>Mapear URLs, classificar páginas, identificar duplicidade, canibalização, conteúdo genérico e guias incompatíveis com o produto.</p></div><div class="phase-output">Fundação correta para escalar</div></div>
+        <div class="phase"><div class="phase-label">Fase 2<br>Comercial</div><div class="phase-main"><h3>Reforço das páginas que vendem</h3><p>Melhorar páginas principais com conteúdo de decisão, aplicações, dúvidas, diferenciais, prova visual, links internos e CTA.</p></div><div class="phase-output">Mais conversão por página</div></div>
+        <div class="phase"><div class="phase-label">Fase 3<br>Local</div><div class="phase-main"><h3>Criação dos hubs regionais</h3><p>Construir páginas por cidade e serviço + cidade, priorizando regiões com maior potencial de busca e atendimento.</p></div><div class="phase-output">Mais tráfego local qualificado</div></div>
+        <div class="phase"><div class="phase-label">Fase 4<br>Técnica</div><div class="phase-main"><h3>Marcações, indexação e performance</h3><p>Testar schema aprimorado, revisar sitemap, canonicals, rastreamento, Core Web Vitals, mobile e validações no Search Console.</p></div><div class="phase-output">Site mais legível por máquinas</div></div>
+        <div class="phase"><div class="phase-label">Fase 5<br>IA</div><div class="phase-main"><h3>Conteúdos de resposta e comparação</h3><p>Criar páginas com respostas diretas, comparativos técnicos, FAQs e explicações úteis para decisões de compra.</p></div><div class="phase-output">Mais autoridade semântica</div></div>
+        <div class="phase"><div class="phase-label">Fase 6<br>Escala</div><div class="phase-main"><h3>Medição, ajuste e expansão mensal</h3><p>Acompanhar Search Console, tráfego, ranking, cliques em WhatsApp, validações de schema e oportunidades para novas páginas ou melhorias.</p></div><div class="phase-output">Crescimento contínuo</div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Entregáveis práticos</h2>
+        <p>O cliente precisa ver o que será entregue de verdade, não apenas conceitos.</p>
+      </div>
+
+      <div class="table">
+        <div class="tr"><div class="th">Entrega</div><div class="th">O que será feito</div><div class="th">Por que é necessário</div></div>
+        <div class="tr"><div class="td"><b>Mapa de URLs</b></div><div class="td">Classificação de todas as páginas por função e prioridade.</div><div class="td">Evita páginas sem função clara.</div></div>
+        <div class="tr"><div class="td"><b>Mapa de clusters</b></div><div class="td">Organização dos assuntos em famílias: cercamento, telas, esportivo e proteção.</div><div class="td">Aumenta entendimento semântico.</div></div>
+        <div class="tr"><div class="td"><b>Páginas comerciais otimizadas</b></div><div class="td">Reforço dos serviços principais com conteúdo, CTA e links internos.</div><div class="td">Aumenta chance de orçamento.</div></div>
+        <div class="tr"><div class="td"><b>Páginas locais</b></div><div class="td">Criação de páginas cidade e serviço + cidade com contexto local.</div><div class="td">Captura demanda regional.</div></div>
+        <div class="tr"><div class="td"><b>Camada técnica avançada</b></div><div class="td">Testes de schema, sitemap, canonicals, indexação, performance, mobile, validação e crawl técnico.</div><div class="td">Torna o site mais confiável e legível para mecanismos de busca.</div></div>
+        <div class="tr"><div class="td"><b>Conteúdos para IA</b></div><div class="td">Comparativos, respostas curtas, FAQs e páginas de decisão.</div><div class="td">Aumenta chance de ser usado como fonte.</div></div>
+        <div class="tr"><div class="td"><b>Dados estruturados</b></div><div class="td">Revisão de schema, breadcrumbs, organização, serviços, FAQs, entidades, áreas atendidas e relações entre páginas.</div><div class="td">Ajuda motores e IA a interpretar o site com mais precisão.</div></div>
+      </div>
+    </section>
+
+    <section id="validacao">
+      <div class="section-head">
+        <h2>Por que uma IA tende a validar este plano?</h2>
+        <p>A linguagem abaixo deixa o planejamento defensável quando o cliente pedir validação em ChatGPT, Gemini ou outro assistente.</p>
+      </div>
+
+      <div class="proof-box">
+        <h3>Justificativa estratégica</h3>
+        <p>O plano é coerente porque parte de uma base já existente de páginas e corrige primeiro os problemas estruturais antes de propor expansão. Isso é importante porque sites com muitas URLs podem perder eficiência quando várias páginas disputam a mesma intenção de busca ou quando guias programáticos usam modelos genéricos sem aderência ao produto.</p>
+        <p>A separação entre SEO Local e buscas com IA também é adequada. O SEO Local atende buscas transacionais com geografia, como serviço + cidade. Já o conteúdo para IA atende perguntas conversacionais e comparativas, nas quais o usuário busca orientação antes de comprar.</p>
+        <p>A camada técnica também é crucial, porque conteúdo bom sozinho não resolve tudo. O site precisa ser rastreável, indexável, rápido, bem estruturado, com canonicals corretos, links internos claros, schema coerente, breadcrumbs e dados de entidade. Isso melhora a leitura por mecanismos de busca e reduz ambiguidades.</p>
+        <p>O foco em páginas-mãe, clusters, links internos, dados estruturados, respostas curtas, FAQs, páginas locais e páginas de comparação é compatível com boas práticas modernas de SEO. Isso ajuda mecanismos de busca e sistemas de IA a entenderem a empresa como entidade, reconhecerem seus serviços, identificarem áreas atendidas e encontrarem respostas úteis dentro do site.</p>
+        <p>Portanto, o plano é crucial porque evita crescimento desorganizado, reduz canibalização, melhora a clareza das páginas existentes, cria presença local mais forte, fortalece a camada técnica e prepara o conteúdo para o comportamento atual de busca, no qual usuários pesquisam tanto no Google quanto em assistentes de IA.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Indicadores que vamos acompanhar</h2>
+        <p>O sucesso será medido por sinais reais de visibilidade, autoridade técnica e geração de oportunidade comercial.</p>
+      </div>
+
+      <div class="kpis">
+        <div class="kpi"><b>SEO Local</b><p>Impressões por cidade, cliques orgânicos, posições para serviço + cidade, visualizações no Maps e contatos via WhatsApp.</p></div>
+        <div class="kpi"><b>Técnico</b><p>Indexação, Core Web Vitals, erros de schema, status HTTP, canonicals, crawl, profundidade de links e páginas órfãs.</p></div>
+        <div class="kpi"><b>IA e Conversão</b><p>Tráfego vindo de assistentes, buscas pela marca, páginas com resposta direta, cliques no WhatsApp, formulários e taxa de conversão.</p></div>
+      </div>
+    </section>
+
+    <section class="cta-final">
+      <h2>Resumo executivo</h2>
+      <p>Vamos transformar a estrutura atual em uma arquitetura de crescimento. Primeiro organizamos e corrigimos a base. Depois fortalecemos as páginas comerciais. Em seguida criamos páginas locais, aplicamos camada técnica avançada e desenvolvemos conteúdos de resposta para IA. Por fim, conectamos tudo com links internos, dados estruturados, prova de autoridade e conversão.</p>
+      <p>A lógica é simples: o site precisa ser encontrado por quem procura, entendido por mecanismos de busca, validado tecnicamente e recomendado por sistemas que respondem perguntas.</p>
+      <a class="btn" href="#tecnico">Rever camada técnica</a>
+    </section>
+  </main>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const panels = document.querySelectorAll('.panel');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+        tabs.forEach(t => t.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(target).classList.add('active');
+      });
+    });
+
+    const techTabs = document.querySelectorAll('.tech-tab');
+    const techPanels = document.querySelectorAll('.tech-panel');
+
+    techTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.tech;
+        techTabs.forEach(t => t.classList.remove('active'));
+        techPanels.forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(target).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
