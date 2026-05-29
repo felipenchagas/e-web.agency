@@ -187,7 +187,7 @@
       --green:#42f2b5;
       --blue:#6ba8ff;
       --yellow:#ffd166;
-      --red:#ff6b6b;
+      --red:#e31c19;
       --dark:#041014;
       --shadow:0 28px 80px rgba(0,0,0,.36);
       --radius:28px;
@@ -390,12 +390,13 @@
       gap:10px;
       border:0;
       border-radius:16px;
-      background:var(--yellow);
-      color:#061014;
+      background:var(--red);
+      color:#ffffff;
       padding:15px 18px;
-      font-weight:1000;
+      font-weight:800;
       text-decoration:none;
-      box-shadow:0 20px 45px rgba(255,209,102,.2);
+      box-shadow:0 20px 45px rgba(227,28,25,.24);
+      text-shadow:0 1.5px 3px rgba(0,0,0,0.38);
       cursor:pointer;
     }
     .btn.secondary{color:var(--text);background:rgba(255,255,255,.08);border:1px solid var(--border);box-shadow:none}
@@ -516,8 +517,8 @@
       70% { transform: scale(1.05); box-shadow: 0 0 0 6px rgba(255, 209, 102, 0); }
       100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 209, 102, 0); }
     }
-    .tab.active{color:#061014;border-color:transparent;background:var(--yellow)}
-    .tech-tab.active{color:#061014;border-color:transparent;background:var(--yellow)}
+    .tab.active{color:#ffffff;border-color:transparent;background:var(--red);text-shadow:0 1px 2px rgba(0,0,0,0.3);font-weight:800}
+    .tech-tab.active{color:#ffffff;border-color:transparent;background:var(--red);text-shadow:0 1px 2px rgba(0,0,0,0.3);font-weight:800}
 
     .panel,.tech-panel{
       display:none;
