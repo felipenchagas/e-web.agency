@@ -226,7 +226,7 @@
       position:relative;
       display:inline-grid;
       place-items:center;
-      width:500px;
+      width:min(500px, 100%);
       height:auto;
       margin:0 0 24px;
     }
@@ -775,9 +775,13 @@
       .task,.phase,.tr{grid-template-columns:1fr}
       .th,.td{border-right:0;border-bottom:1px solid var(--border)}
       .tr .td:last-child,.tr .th:last-child{border-bottom:0}
-      nav{align-items:flex-start;flex-direction:column;padding:14px 0}
-      .navlinks{justify-content:flex-start}
+      nav{align-items:stretch;flex-direction:column;padding:14px 0;gap:12px}
+      .navlinks{justify-content:flex-start;gap:6px}
+      .navlinks a{padding:8px 10px;font-size:12px}
       .section-head{align-items:flex-start;flex-direction:column}
+      .hero{padding:40px 0 20px}
+      .hero-card{min-height:auto;padding:20px}
+      .cta-final{padding:24px}
     }
 
     @media print{
